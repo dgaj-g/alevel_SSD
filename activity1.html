@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activity 1 — OOP Flashback</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;min-height:100vh;background:linear-gradient(135deg,#1a1a4e,#4a3b8f,#2d1b69);color:#fff;overflow-x:hidden}
+.container{max-width:800px;margin:0 auto;padding:30px 20px}
+a{color:#b794f6;text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Header */
+.act-header{text-align:center;margin-bottom:30px;animation:fadeIn .6s ease}
+.act-header .icon{font-size:48px;margin-bottom:8px}
+.act-header h1{font-size:1.8em;background:linear-gradient(90deg,#b794f6,#e0aaff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.act-header p{color:#c0b0e0;margin-top:6px}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-15px)}to{opacity:1;transform:translateY(0)}}
+
+/* Progress bar */
+.progress-bar{height:6px;background:rgba(255,255,255,.1);border-radius:3px;margin-bottom:30px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,#b794f6,#e0aaff);border-radius:3px;transition:width .5s ease;width:0%}
+
+/* Phase indicator */
+.phase-label{text-align:center;font-size:.85em;color:#a090c0;margin-bottom:20px;letter-spacing:1px;text-transform:uppercase}
+
+/* Screens */
+.screen{display:none;animation:fadeIn .5s ease}
+.screen.active{display:block}
+
+/* Welcome screen */
+.welcome-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:40px 30px;text-align:center}
+.welcome-card h2{font-size:1.5em;margin-bottom:15px;color:#e0d0ff}
+.welcome-card p{color:#b0a0d0;line-height:1.7;margin-bottom:20px;max-width:550px;margin-left:auto;margin-right:auto}
+.btn{display:inline-block;padding:12px 32px;border-radius:30px;font-size:1em;font-weight:700;cursor:pointer;border:none;transition:all .3s;letter-spacing:.5px}
+.btn-primary{background:linear-gradient(135deg,#6c5ce7,#a855f7);color:#fff}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(108,92,231,.4)}
+.btn-secondary{background:rgba(255,255,255,.1);color:#d0c0f0;border:1px solid rgba(255,255,255,.2)}
+.btn-secondary:hover{background:rgba(255,255,255,.15)}
+
+/* Pillars teach phase */
+.pillars-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:24px}
+@media(max-width:500px){.pillars-grid{grid-template-columns:1fr}}
+.pillar-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:20px;cursor:pointer;transition:all .3s;text-align:center}
+.pillar-card:hover{background:rgba(255,255,255,.08);transform:translateY(-2px)}
+.pillar-card.expanded{background:rgba(255,255,255,.1);border-color:rgba(183,148,246,.4)}
+.pillar-emoji{font-size:2.2em;margin-bottom:8px;display:block}
+.pillar-name{font-size:1.1em;font-weight:700;margin-bottom:4px}
+.pillar-card:nth-child(1) .pillar-name{color:#a78bfa}
+.pillar-card:nth-child(2) .pillar-name{color:#fbbf24}
+.pillar-card:nth-child(3) .pillar-name{color:#34d399}
+.pillar-card:nth-child(4) .pillar-name{color:#60a5fa}
+.pillar-details{display:none;text-align:left;margin-top:12px;font-size:.9em;line-height:1.6;color:#c0b0e0}
+.pillar-card.expanded .pillar-details{display:block;animation:fadeIn .3s ease}
+.pillar-details .analogy{background:rgba(255,255,255,.06);border-radius:8px;padding:10px;margin:8px 0;border-left:3px solid}
+.pillar-card:nth-child(1) .analogy{border-color:#a78bfa}
+.pillar-card:nth-child(2) .analogy{border-color:#fbbf24}
+.pillar-card:nth-child(3) .analogy{border-color:#34d399}
+.pillar-card:nth-child(4) .analogy{border-color:#60a5fa}
+.pillar-details code{background:rgba(0,0,0,.3);padding:2px 6px;border-radius:4px;font-family:'Courier New',monospace;font-size:.9em;color:#e0d0ff}
+.pillar-details .why{font-style:italic;color:#a090c0;margin-top:6px}
+.pillars-instruction{text-align:center;color:#a090c0;font-size:.9em;margin-bottom:16px}
+.pillars-continue{text-align:center;margin-top:20px;display:none}
+
+/* Matching game */
+.match-area{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+@media(max-width:600px){.match-area{flex-direction:column;align-items:center}}
+.match-col{display:flex;flex-direction:column;gap:10px;min-width:200px}
+.match-item{padding:12px 16px;border-radius:10px;font-size:.95em;cursor:grab;transition:all .3s;text-align:center;user-select:none}
+.match-item:active{cursor:grabbing}
+.match-concept{background:linear-gradient(135deg,rgba(108,92,231,.3),rgba(168,85,247,.3));border:2px solid rgba(183,148,246,.4);font-weight:700}
+.match-concept.dragging{opacity:.4}
+.match-concept.matched{opacity:.5;cursor:default}
+.match-def{background:rgba(255,255,255,.05);border:2px dashed rgba(255,255,255,.2);min-height:50px;font-size:.85em;color:#c0b0e0;line-height:1.4}
+.match-def.highlight{border-color:#b794f6;background:rgba(183,148,246,.1)}
+.match-def.correct{border-color:#2ecc71;background:rgba(46,204,113,.15);border-style:solid}
+.match-def.wrong{border-color:#e74c3c;background:rgba(231,76,60,.15);border-style:solid;animation:shake .4s}
+.match-def .matched-label{display:block;font-weight:700;color:#2ecc71;margin-bottom:4px;font-size:.95em}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.match-score{text-align:center;font-size:1.1em;margin-bottom:15px;color:#e0d0ff}
+
+/* Spot the pillar */
+.code-display{background:rgba(0,0,0,.4);border-radius:12px;padding:20px;margin-bottom:20px;font-family:'Courier New',monospace;font-size:1em;color:#e0d0ff;line-height:1.6;text-align:center;border:1px solid rgba(255,255,255,.1)}
+.pillar-btns{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:500px;margin:0 auto 20px}
+.pillar-btn{padding:14px;border-radius:10px;font-size:.95em;font-weight:600;cursor:pointer;border:2px solid rgba(255,255,255,.15);background:rgba(255,255,255,.05);color:#d0c0f0;transition:all .3s}
+.pillar-btn:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.3)}
+.pillar-btn.correct-choice{background:rgba(46,204,113,.2);border-color:#2ecc71;color:#2ecc71}
+.pillar-btn.wrong-choice{background:rgba(231,76,60,.2);border-color:#e74c3c;color:#e74c3c}
+.pillar-btn:disabled{cursor:default;opacity:.7}
+.explanation-box{background:rgba(255,255,255,.06);border-radius:10px;padding:14px 18px;margin-bottom:16px;font-size:.9em;line-height:1.5;color:#c0b0e0;display:none;border-left:3px solid #b794f6}
+.explanation-box.show{display:block;animation:fadeIn .3s}
+.question-counter{text-align:center;color:#a090c0;font-size:.85em;margin-bottom:12px}
+.streak-display{text-align:center;margin-bottom:12px}
+.streak-badge{display:inline-block;padding:4px 14px;border-radius:15px;font-size:.85em;font-weight:700;background:linear-gradient(135deg,#f59e0b,#ef4444);color:#fff;animation:pulse .6s}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* True/False */
+.tf-statement{background:rgba(255,255,255,.06);border-radius:12px;padding:24px;text-align:center;font-size:1.1em;line-height:1.5;margin-bottom:20px;border:1px solid rgba(255,255,255,.1);min-height:80px;display:flex;align-items:center;justify-content:center}
+.tf-btns{display:flex;gap:16px;justify-content:center;margin-bottom:16px}
+.tf-btn{padding:14px 40px;border-radius:12px;font-size:1.1em;font-weight:700;cursor:pointer;border:2px solid;transition:all .3s}
+.tf-true{background:rgba(46,204,113,.1);border-color:rgba(46,204,113,.4);color:#2ecc71}
+.tf-true:hover{background:rgba(46,204,113,.2)}
+.tf-false{background:rgba(231,76,60,.1);border-color:rgba(231,76,60,.4);color:#e74c3c}
+.tf-false:hover{background:rgba(231,76,60,.2)}
+.tf-btn.correct-choice{transform:scale(1.05)}
+.tf-btn.wrong-choice{opacity:.5}
+.tf-btn:disabled{cursor:default}
+
+/* Results screen */
+.results-card{background:rgba(255,255,255,.06);border-radius:16px;padding:30px;text-align:center;border:1px solid rgba(255,255,255,.12)}
+.results-score{font-size:3em;font-weight:800;margin:15px 0;background:linear-gradient(90deg,#b794f6,#e0aaff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.results-rank{font-size:1.3em;margin-bottom:20px;color:#e0d0ff}
+.results-rank .rank-emoji{font-size:1.5em;display:block;margin-bottom:5px}
+.results-breakdown{text-align:left;margin:20px 0;padding:16px;background:rgba(0,0,0,.2);border-radius:10px}
+.results-breakdown h3{margin-bottom:10px;color:#b794f6;font-size:1em}
+.result-item{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:.9em;color:#c0b0e0}
+.result-item .label{flex:1}
+.result-item .score-val{font-weight:700;color:#2ecc71}
+.results-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+
+/* Utility */
+.hidden{display:none!important}
+.text-center{text-align:center}
+.mt-16{margin-top:16px}
+.mb-16{margin-bottom:16px}
+</style>
+</head>
+<body>
+<div class="container">
+    <div style="margin-bottom:12px"><a href="index.html" style="color:#c0b0e0;font-size:.85em;text-decoration:none">← Back to Hub</a></div>
+    <div class="act-header">
+        <div class="icon">🧠</div>
+        <h1>OOP Flashback</h1>
+        <p>Lock in the four pillars before tackling the 2017 paper</p>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="phase-label" id="phaseLabel"></div>
+
+    <!-- Welcome Screen -->
+    <div class="screen active" id="welcomeScreen">
+        <div class="welcome-card">
+            <h2>🧠 Mission: OOP Refresher</h2>
+            <p>Before we decode the 2017 past paper, let's make sure the four pillars of Object Oriented Programming are fresh in your mind. You'll explore each concept visually, then face three rounds of challenges.</p>
+            <p style="color:#a090c0;font-size:.9em">⏱ Estimated time: 8–10 minutes</p>
+            <button class="btn btn-primary" onclick="startActivity()">Let's Go →</button>
+        </div>
+    </div>
+
+    <!-- Phase 1: Teach the pillars -->
+    <div class="screen" id="pillarsScreen">
+        <p class="pillars-instruction">Click each pillar to explore it. You must explore all four to continue.</p>
+        <div class="pillars-grid" id="pillarsGrid"></div>
+        <div class="pillars-continue" id="pillarsContinue">
+            <button class="btn btn-primary" onclick="startMatching()">I've got it — bring on Round 1 →</button>
+        </div>
+    </div>
+
+    <!-- Phase 2: Concept Matcher -->
+    <div class="screen" id="matchScreen">
+        <div class="match-score" id="matchScore">Drag each concept onto its definition</div>
+        <div class="match-area">
+            <div class="match-col" id="conceptsCol"></div>
+            <div class="match-col" id="defsCol"></div>
+        </div>
+        <div class="text-center" id="matchContinue" style="display:none">
+            <button class="btn btn-primary" onclick="startSpotPillar()">On to Round 2 →</button>
+        </div>
+    </div>
+
+    <!-- Phase 3: Spot the Pillar -->
+    <div class="screen" id="spotScreen">
+        <div class="question-counter" id="spotCounter"></div>
+        <div class="streak-display" id="streakDisplay"></div>
+        <div class="code-display" id="codeDisplay"></div>
+        <div class="pillar-btns" id="pillarBtns"></div>
+        <div class="explanation-box" id="spotExplanation"></div>
+        <div class="text-center" id="spotNext" style="display:none">
+            <button class="btn btn-secondary" onclick="nextSpotQuestion()">Next →</button>
+        </div>
+        <div class="text-center" id="spotContinue" style="display:none">
+            <button class="btn btn-primary" onclick="startTrueFalse()">Final Round →</button>
+        </div>
+    </div>
+
+    <!-- Phase 4: True / False -->
+    <div class="screen" id="tfScreen">
+        <div class="question-counter" id="tfCounter"></div>
+        <div class="streak-display" id="tfStreak"></div>
+        <div class="tf-statement" id="tfStatement"></div>
+        <div class="tf-btns" id="tfBtns">
+            <button class="tf-btn tf-true" onclick="answerTF(true)">✓ TRUE</button>
+            <button class="tf-btn tf-false" onclick="answerTF(false)">✗ FALSE</button>
+        </div>
+        <div class="explanation-box" id="tfExplanation"></div>
+        <div class="text-center" id="tfNext" style="display:none">
+            <button class="btn btn-secondary" onclick="nextTFQuestion()">Next →</button>
+        </div>
+        <div class="text-center" id="tfFinish" style="display:none">
+            <button class="btn btn-primary" onclick="showResults()">See Results →</button>
+        </div>
+    </div>
+
+    <!-- Results Screen -->
+    <div class="screen" id="resultsScreen">
+        <div class="results-card">
+            <div style="font-size:2.5em" id="resultsEmoji"></div>
+            <div class="results-score" id="resultsScore"></div>
+            <div class="results-rank" id="resultsRank"></div>
+            <div class="results-breakdown" id="resultsBreakdown"></div>
+            <div class="results-actions">
+                <a href="index.html" class="btn btn-secondary">← Back to Hub</a>
+                <a href="activity2.html" class="btn btn-primary">Activity 2: The Charity Scenario →</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// ========== DATA ==========
+const pillarsData = [
+    {
+        name: 'Abstraction',
+        emoji: '📐',
+        color: '#a78bfa',
+        definition: 'Hiding complex implementation details and only showing essential features. Abstract classes serve as blueprints that cannot be instantiated — only derived from.',
+        analogy: 'Like a blueprint — you can\'t live in a blueprint, but every house is built from one. You interact with the design, not the bricks and wiring.',
+        code: 'abstract class Employee { }',
+        codeExplain: 'Employee is abstract — you can\'t do <code>new Employee()</code>. You must create a ContractEmployee or FullTimeEmployee instead.',
+        why: 'Abstraction forces derived classes to provide their own implementations, ensuring the system is properly structured.'
+    },
+    {
+        name: 'Encapsulation',
+        emoji: '🔒',
+        color: '#fbbf24',
+        definition: 'Bundling data (fields) with the methods that operate on them, and restricting direct access using private fields and public properties.',
+        analogy: 'Like a vending machine — you press buttons on the outside, but the mechanism inside is completely hidden. You can\'t reach in and grab a drink directly.',
+        code: 'private string _salary;\npublic string Salary { get; set; }',
+        codeExplain: 'The field <code>_salary</code> is private (hidden). The only way to read or change it is through the <code>Salary</code> property (the public door).',
+        why: 'Encapsulation protects data from being changed in unexpected ways and allows validation in the SET.'
+    },
+    {
+        name: 'Inheritance',
+        emoji: '🌳',
+        color: '#34d399',
+        definition: 'A derived (child) class automatically receives fields, methods, and properties from a base (parent) class, allowing code reuse.',
+        analogy: 'Like a family tree — children inherit traits from parents. A ContractEmployee IS an Employee and gets all its fields and methods automatically.',
+        code: 'class ContractEmployee : Employee\n{ }',
+        codeExplain: 'The colon <code>:</code> means ContractEmployee inherits everything from Employee — fields, methods, properties. No need to rewrite them.',
+        why: 'Inheritance avoids duplicating code. Common fields go in the base class; specific fields go in derived classes.'
+    },
+    {
+        name: 'Polymorphism',
+        emoji: '🔄',
+        color: '#60a5fa',
+        definition: 'The ability to call the same method on different object types and get different behaviour, depending on which derived class the object belongs to.',
+        analogy: 'Like a universal remote — pressing "play" does different things depending on whether you\'re controlling a TV, DVD player, or speaker. Same button, different result.',
+        code: 'emps[x].WeeklyCost()',
+        codeExplain: 'When looping through an array of Employee objects, <code>WeeklyCost()</code> runs different code depending on whether the object is a ContractEmployee or FullTimeEmployee.',
+        why: 'Polymorphism lets you write one loop that handles all types — the correct version of each method runs automatically.'
+    }
+];
+
+const matchDefinitions = [
+    'A class that cannot be instantiated; it serves as a blueprint for derived classes to inherit from and must be extended.',
+    'Restricting direct access to an object\'s data by making fields private and providing public properties to read/write them.',
+    'A child class receiving fields, methods, and properties from a parent class automatically, allowing code reuse.',
+    'Calling the same method on different object types and getting different behaviour based on which derived class the object is.'
+];
+
+const spotQuestions = [
+    { code: 'private string _salary;', answer: 'Encapsulation', explain: 'The keyword <strong>private</strong> restricts direct access to this field. That\'s encapsulation — hiding the data so it can only be changed through a property.' },
+    { code: 'class ContractEmployee : Employee', answer: 'Inheritance', explain: 'The colon <strong>:</strong> means ContractEmployee inherits from Employee. It gets all of Employee\'s fields and methods automatically.' },
+    { code: 'abstract class Employee { }', answer: 'Abstraction', explain: 'The keyword <strong>abstract</strong> means you cannot create an Employee object — it\'s a blueprint only. Derived classes must be used instead.' },
+    { code: 'emps[x].DisplayOutput()\n// calls different code for each type', answer: 'Polymorphism', explain: 'The same method call <strong>DisplayOutput()</strong> produces different output depending on whether emps[x] is a ContractEmployee or FullTimeEmployee. That\'s polymorphism.' },
+    { code: ': base(forename, surname, employeeNo)', answer: 'Inheritance', explain: 'The <strong>base</strong> keyword passes values up to the parent class constructor. This is part of the inheritance mechanism — the derived class reuses the base class constructor.' },
+    { code: 'public override double WeeklyCost()\n{\n    return (NoOfHours * HourlyRate);\n}', answer: ['Polymorphism','Inheritance'], explain: 'The keyword <strong>override</strong> shows two pillars at once: <strong>Inheritance</strong> (the method is inherited from the base class) and <strong>Polymorphism</strong> (the derived class provides its own version). Both answers are correct!' }
+];
+
+const tfQuestions = [
+    { statement: 'An abstract class can be instantiated as an object.', answer: false, explain: 'An abstract class CANNOT be instantiated. It exists only as a blueprint for derived classes to inherit from.' },
+    { statement: 'A derived class can override a method marked as virtual in the base class.', answer: true, explain: 'Correct! The virtual keyword in the base class gives permission for derived classes to override that method with their own version.' },
+    { statement: 'Private fields can be accessed directly from a derived class.', answer: false, explain: 'Private fields are only accessible within the class they are declared in. Derived classes must use properties or the base keyword to interact with them.' },
+    { statement: 'Inheritance allows a derived class to reuse fields and methods from a base class.', answer: true, explain: 'Correct! That\'s the whole point of inheritance — avoiding code duplication by sharing common members through a base class.' },
+    { statement: 'Polymorphism means that the same method call can behave differently depending on the object type.', answer: true, explain: 'Correct! For example, calling WeeklyCost() on a ContractEmployee calculates hours × rate, while on a FullTimeEmployee it calculates salary ÷ 52.' },
+    { statement: 'An abstract method in a base class must have a body with code inside it.', answer: false, explain: 'Abstract methods have NO body — just a signature ending with a semicolon. The derived classes MUST provide the implementation.' },
+    { statement: 'A class can inherit from multiple base classes in C#.', answer: false, explain: 'C# does NOT support multiple inheritance. A class can only inherit from ONE base class. (Multiple interfaces can be implemented, but that\'s different.)' },
+    { statement: 'The base keyword is used to call the constructor of the parent class from a derived class.', answer: true, explain: 'Correct! For example, <code>: base(forename, surname)</code> passes values up to the parent class constructor to handle.' }
+];
+
+// ========== STATE ==========
+let pillarsExplored = new Set();
+let matchCorrect = 0;
+let spotIndex = 0, spotScore = 0, spotStreak = 0, spotMaxStreak = 0;
+let tfIndex = 0, tfScore = 0, tfStreak = 0, tfMaxStreak = 0;
+let draggedConcept = null;
+
+// Fisher-Yates shuffle
+function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+
+function setProgress(pct) {
+    document.getElementById('progressFill').style.width = pct + '%';
+}
+
+function showScreen(id) {
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+
+// ========== WELCOME ==========
+function startActivity() {
+    showScreen('pillarsScreen');
+    document.getElementById('phaseLabel').textContent = 'Phase 1 of 4 — Explore the Pillars';
+    setProgress(5);
+    buildPillars();
+}
+
+// ========== PHASE 1: PILLARS ==========
+function buildPillars() {
+    const grid = document.getElementById('pillarsGrid');
+    grid.innerHTML = '';
+    pillarsData.forEach((p, i) => {
+        const card = document.createElement('div');
+        card.className = 'pillar-card';
+        card.innerHTML = `
+            <span class="pillar-emoji">${p.emoji}</span>
+            <div class="pillar-name">${p.name}</div>
+            <div class="pillar-details">
+                <p>${p.definition}</p>
+                <div class="analogy">💡 <strong>Analogy:</strong> ${p.analogy}</div>
+                <p style="margin-top:10px"><strong>C# Example:</strong></p>
+                <div style="background:rgba(0,0,0,.3);border-radius:6px;padding:8px 12px;margin:6px 0;font-family:'Courier New',monospace;font-size:.85em;color:#e0d0ff;white-space:pre-wrap">${p.code}</div>
+                <p>${p.codeExplain}</p>
+                <p class="why">📌 <strong>Why it matters:</strong> ${p.why}</p>
+            </div>`;
+        card.onclick = () => {
+            card.classList.toggle('expanded');
+            if (card.classList.contains('expanded')) {
+                pillarsExplored.add(i);
+                if (pillarsExplored.size === 4) {
+                    document.getElementById('pillarsContinue').style.display = 'block';
+                }
+            }
+        };
+        grid.appendChild(card);
+    });
+}
+
+// ========== PHASE 2: MATCHING ==========
+function startMatching() {
+    showScreen('matchScreen');
+    document.getElementById('phaseLabel').textContent = 'Phase 2 of 4 — Concept Matcher';
+    setProgress(25);
+    buildMatchGame();
+}
+
+function buildMatchGame() {
+    const conceptsCol = document.getElementById('conceptsCol');
+    const defsCol = document.getElementById('defsCol');
+    conceptsCol.innerHTML = '';
+    defsCol.innerHTML = '';
+
+    const shuffledConcepts = shuffle([0, 1, 2, 3]);
+    const shuffledDefs = shuffle([0, 1, 2, 3]);
+
+    shuffledConcepts.forEach(i => {
+        const el = document.createElement('div');
+        el.className = 'match-item match-concept';
+        el.textContent = pillarsData[i].name;
+        el.draggable = true;
+        el.dataset.index = i;
+        el.addEventListener('dragstart', e => {
+            draggedConcept = i;
+            el.classList.add('dragging');
+        });
+        el.addEventListener('dragend', () => el.classList.remove('dragging'));
+        // Touch support
+        el.addEventListener('touchstart', e => { draggedConcept = i; el.classList.add('dragging'); }, {passive: true});
+        el.addEventListener('touchend', () => el.classList.remove('dragging'));
+        conceptsCol.appendChild(el);
+    });
+
+    shuffledDefs.forEach(i => {
+        const el = document.createElement('div');
+        el.className = 'match-item match-def';
+        el.textContent = matchDefinitions[i];
+        el.dataset.index = i;
+        el.addEventListener('dragover', e => { e.preventDefault(); el.classList.add('highlight'); });
+        el.addEventListener('dragleave', () => el.classList.remove('highlight'));
+        el.addEventListener('drop', e => {
+            e.preventDefault();
+            el.classList.remove('highlight');
+            handleMatch(draggedConcept, i, el);
+        });
+        // Touch: tap a concept then tap a definition
+        el.addEventListener('click', () => {
+            if (draggedConcept !== null) {
+                handleMatch(draggedConcept, i, el);
+            }
+        });
+        defsCol.appendChild(el);
+    });
+}
+
+function handleMatch(conceptIdx, defIdx, defEl) {
+    if (defEl.classList.contains('correct')) return;
+    const conceptEl = document.querySelector(`.match-concept[data-index="${conceptIdx}"]`);
+    if (!conceptEl || conceptEl.classList.contains('matched')) return;
+
+    if (conceptIdx === defIdx) {
+        defEl.classList.add('correct');
+        defEl.innerHTML = `<span class="matched-label">✓ ${pillarsData[conceptIdx].name}</span>${matchDefinitions[defIdx]}`;
+        conceptEl.classList.add('matched');
+        matchCorrect++;
+        document.getElementById('matchScore').textContent = `${matchCorrect}/4 matched correctly`;
+        if (matchCorrect === 4) {
+            document.getElementById('matchScore').innerHTML = '🎉 All 4 matched!';
+            document.getElementById('matchContinue').style.display = 'block';
+        }
+    } else {
+        defEl.classList.add('wrong');
+        setTimeout(() => defEl.classList.remove('wrong'), 600);
+    }
+    draggedConcept = null;
+}
+
+// ========== PHASE 3: SPOT THE PILLAR ==========
+let shuffledSpot;
+function startSpotPillar() {
+    showScreen('spotScreen');
+    document.getElementById('phaseLabel').textContent = 'Phase 3 of 4 — Spot the Pillar';
+    setProgress(50);
+    shuffledSpot = shuffle(spotQuestions);
+    spotIndex = 0;
+    spotScore = 0;
+    spotStreak = 0;
+    showSpotQuestion();
+}
+
+function showSpotQuestion() {
+    const q = shuffledSpot[spotIndex];
+    document.getElementById('spotCounter').textContent = `Question ${spotIndex + 1} of ${shuffledSpot.length}`;
+    document.getElementById('codeDisplay').textContent = q.code;
+    document.getElementById('spotExplanation').classList.remove('show');
+    document.getElementById('spotExplanation').innerHTML = '';
+    document.getElementById('spotNext').style.display = 'none';
+    document.getElementById('spotContinue').style.display = 'none';
+    updateStreak('streakDisplay', spotStreak);
+
+    const btns = document.getElementById('pillarBtns');
+    btns.innerHTML = '';
+    ['Abstraction', 'Encapsulation', 'Inheritance', 'Polymorphism'].forEach(name => {
+        const btn = document.createElement('button');
+        btn.className = 'pillar-btn';
+        btn.textContent = name;
+        btn.onclick = () => checkSpotAnswer(name, q);
+        btns.appendChild(btn);
+    });
+}
+
+function checkSpotAnswer(chosen, q) {
+    const isCorrect = Array.isArray(q.answer) ? q.answer.includes(chosen) : chosen === q.answer;
+    const isAccepted = (val) => Array.isArray(q.answer) ? q.answer.includes(val) : val === q.answer;
+    const btns = document.querySelectorAll('.pillar-btn');
+    btns.forEach(b => {
+        b.disabled = true;
+        if (isAccepted(b.textContent)) b.classList.add('correct-choice');
+        if (b.textContent === chosen && !isCorrect) b.classList.add('wrong-choice');
+    });
+    if (isCorrect) {
+        spotScore++;
+        spotStreak++;
+        if (spotStreak > spotMaxStreak) spotMaxStreak = spotStreak;
+    } else {
+        spotStreak = 0;
+    }
+    updateStreak('streakDisplay', spotStreak);
+    const exp = document.getElementById('spotExplanation');
+    exp.innerHTML = q.explain;
+    exp.classList.add('show');
+
+    if (spotIndex < shuffledSpot.length - 1) {
+        document.getElementById('spotNext').style.display = 'block';
+    } else {
+        document.getElementById('spotContinue').style.display = 'block';
+    }
+}
+
+function nextSpotQuestion() {
+    spotIndex++;
+    showSpotQuestion();
+}
+
+function updateStreak(elId, streak) {
+    const el = document.getElementById(elId);
+    if (streak >= 2) {
+        el.innerHTML = `<span class="streak-badge">🔥 ${streak} streak!</span>`;
+    } else {
+        el.innerHTML = '';
+    }
+}
+
+// ========== PHASE 4: TRUE/FALSE ==========
+let shuffledTF;
+function startTrueFalse() {
+    showScreen('tfScreen');
+    document.getElementById('phaseLabel').textContent = 'Phase 4 of 4 — True or False';
+    setProgress(75);
+    shuffledTF = shuffle(tfQuestions);
+    tfIndex = 0;
+    tfScore = 0;
+    tfStreak = 0;
+    showTFQuestion();
+}
+
+function showTFQuestion() {
+    const q = shuffledTF[tfIndex];
+    document.getElementById('tfCounter').textContent = `Question ${tfIndex + 1} of ${shuffledTF.length}`;
+    document.getElementById('tfStatement').textContent = q.statement;
+    document.getElementById('tfExplanation').classList.remove('show');
+    document.getElementById('tfExplanation').innerHTML = '';
+    document.getElementById('tfNext').style.display = 'none';
+    document.getElementById('tfFinish').style.display = 'none';
+    updateStreak('tfStreak', tfStreak);
+
+    const btns = document.querySelectorAll('.tf-btn');
+    btns.forEach(b => {
+        b.disabled = false;
+        b.classList.remove('correct-choice', 'wrong-choice');
+    });
+}
+
+function answerTF(chosen) {
+    const q = shuffledTF[tfIndex];
+    const btns = document.querySelectorAll('.tf-btn');
+    btns.forEach(b => b.disabled = true);
+
+    const trueBtn = document.querySelector('.tf-true');
+    const falseBtn = document.querySelector('.tf-false');
+
+    if (chosen === q.answer) {
+        tfScore++;
+        tfStreak++;
+        if (tfStreak > tfMaxStreak) tfMaxStreak = tfStreak;
+        (chosen ? trueBtn : falseBtn).classList.add('correct-choice');
+    } else {
+        tfStreak = 0;
+        (chosen ? trueBtn : falseBtn).classList.add('wrong-choice');
+        (q.answer ? trueBtn : falseBtn).classList.add('correct-choice');
+    }
+    updateStreak('tfStreak', tfStreak);
+
+    const exp = document.getElementById('tfExplanation');
+    exp.innerHTML = q.explain;
+    exp.classList.add('show');
+
+    if (tfIndex < shuffledTF.length - 1) {
+        document.getElementById('tfNext').style.display = 'block';
+    } else {
+        document.getElementById('tfFinish').style.display = 'block';
+    }
+}
+
+function nextTFQuestion() {
+    tfIndex++;
+    showTFQuestion();
+}
+
+// ========== RESULTS ==========
+function showResults() {
+    showScreen('resultsScreen');
+    document.getElementById('phaseLabel').textContent = 'Results';
+    setProgress(100);
+
+    const total = 4 + spotQuestions.length + tfQuestions.length;
+    const score = matchCorrect + spotScore + tfScore;
+    const pct = Math.round((score / total) * 100);
+
+    let rank, emoji;
+    if (pct >= 90) { rank = 'OOP Master'; emoji = '👑'; }
+    else if (pct >= 70) { rank = 'OOP Expert'; emoji = '🌟'; }
+    else if (pct >= 50) { rank = 'Apprentice'; emoji = '📚'; }
+    else { rank = 'Novice'; emoji = '🌱'; }
+
+    document.getElementById('resultsEmoji').textContent = emoji;
+    document.getElementById('resultsScore').textContent = `${score}/${total} (${pct}%)`;
+    document.getElementById('resultsRank').innerHTML = `<span class="rank-emoji">${emoji}</span>Rank: ${rank}`;
+
+    const maxStreak = Math.max(spotMaxStreak, tfMaxStreak);
+    document.getElementById('resultsBreakdown').innerHTML = `
+        <h3>Breakdown</h3>
+        <div class="result-item"><span class="label">Round 1 — Concept Matcher</span><span class="score-val">${matchCorrect}/4</span></div>
+        <div class="result-item"><span class="label">Round 2 — Spot the Pillar</span><span class="score-val">${spotScore}/${spotQuestions.length}</span></div>
+        <div class="result-item"><span class="label">Round 3 — True or False</span><span class="score-val">${tfScore}/${tfQuestions.length}</span></div>
+        <div class="result-item"><span class="label">Best Streak</span><span class="score-val">🔥 ${maxStreak}</span></div>
+    `;
+}
+</script>
+</body>
+</html>
