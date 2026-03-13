@@ -273,7 +273,7 @@ const spotQuestions = [
     { code: 'abstract class Employee { }', answer: 'Abstraction', explain: 'The keyword <strong>abstract</strong> means you cannot create an Employee object — it\'s a blueprint only. Derived classes must be used instead.' },
     { code: 'emps[x].DisplayOutput()\n// calls different code for each type', answer: 'Polymorphism', explain: 'The same method call <strong>DisplayOutput()</strong> produces different output depending on whether emps[x] is a ContractEmployee or FullTimeEmployee. That\'s polymorphism.' },
     { code: ': base(forename, surname, employeeNo)', answer: 'Inheritance', explain: 'The <strong>base</strong> keyword passes values up to the parent class constructor. This is part of the inheritance mechanism — the derived class reuses the base class constructor.' },
-    { code: 'public override double WeeklyCost()\n{\n    return (NoOfHours * HourlyRate);\n}', answer: 'Polymorphism', explain: 'The keyword <strong>override</strong> means this derived class is providing its own version of WeeklyCost(). When called polymorphically, THIS version runs instead of the base class version.' }
+    { code: 'public override double WeeklyCost()\n{\n    return (NoOfHours * HourlyRate);\n}', answer: ['Polymorphism','Inheritance'], explain: 'The keyword <strong>override</strong> shows two pillars at once: <strong>Inheritance</strong> (the method is inherited from the base class) and <strong>Polymorphism</strong> (the derived class provides its own version). Both answers are correct!' }
 ];
 
 const tfQuestions = [
@@ -465,13 +465,15 @@ function showSpotQuestion() {
 }
 
 function checkSpotAnswer(chosen, q) {
+    const isCorrect = Array.isArray(q.answer) ? q.answer.includes(chosen) : chosen === q.answer;
+    const isAccepted = (val) => Array.isArray(q.answer) ? q.answer.includes(val) : val === q.answer;
     const btns = document.querySelectorAll('.pillar-btn');
     btns.forEach(b => {
         b.disabled = true;
-        if (b.textContent === q.answer) b.classList.add('correct-choice');
-        if (b.textContent === chosen && chosen !== q.answer) b.classList.add('wrong-choice');
+        if (isAccepted(b.textContent)) b.classList.add('correct-choice');
+        if (b.textContent === chosen && !isCorrect) b.classList.add('wrong-choice');
     });
-    if (chosen === q.answer) {
+    if (isCorrect) {
         spotScore++;
         spotStreak++;
         if (spotStreak > spotMaxStreak) spotMaxStreak = spotStreak;
