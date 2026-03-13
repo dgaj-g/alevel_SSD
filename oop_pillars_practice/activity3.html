@@ -250,10 +250,10 @@ function startPartB(){
             <p>Remember from Activity 2: income = (ticketCharge − venueChargePerPerson) × noAttended + donation</p>
             <div class="note">💡 The return type is <code>double</code> because we're dealing with money. The method takes <strong>no parameters</strong> because it uses the Hosted object's own fields.</div>
         </div>
-        <p style="color:#c0a080;font-size:.9em;margin-bottom:8px">Drag the correct blocks into the code area (click a block, then click a slot):</p>
+        <p style="color:#c0a080;font-size:.9em;margin-bottom:8px">Drag blocks into the slots (or click to place):</p>
         <div class="blocks-area" id="bBlocks"></div>
         <div class="code-zone" id="bZone">
-            <span class="drop-slot" data-slot="0" onclick="placeBlock('b',0)"></span><br>
+            <span class="static">public</span> <span class="drop-slot" data-slot="0" onclick="placeBlock('b',0)"></span><br>
             <span class="static">{</span><br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="1" onclick="placeBlock('b',1)"></span><br>
             <span class="static">}</span>
@@ -268,10 +268,10 @@ function startPartB(){
         </div>
     `;
     const blocks=[
-        {id:'bh1',text:'public double HostedIncome()',correct:true,slot:0},
+        {id:'bh1',text:'double HostedIncome()',correct:true,slot:0},
         {id:'br1',text:'return (ticketCharge - venueChargePerPerson) * noAttended + donation;',correct:true,slot:1},
-        {id:'bd1',text:'public void HostedIncome()',correct:false},
-        {id:'bd2',text:'public int HostedIncome(double income)',correct:false},
+        {id:'bd1',text:'void HostedIncome()',correct:false},
+        {id:'bd2',text:'int HostedIncome(double income)',correct:false},
         {id:'bd3',text:'return ticketCharge * noAttended;',correct:false},
         {id:'bd4',text:'return ticketCharge - venueChargePerPerson + donation;',correct:false}
     ];
@@ -496,10 +496,10 @@ function showCStage(){
                     <p style="font-family:'Courier New',monospace;font-size:.85em;color:#e0d0c0">NoOfBoxes = noOfBoxes; <span style="color:#806040">// calls the Property</span></p>
                 </div>
             </div>
-            <p style="color:#c0a080;font-size:.9em;margin-bottom:8px">Build the constructor — click blocks then click slots:</p>
+            <p style="color:#c0a080;font-size:.9em;margin-bottom:8px">Build the constructor — drag blocks into the slots (or click to place):</p>
             <div class="blocks-area" id="cConBlocks"></div>
             <div class="code-zone" id="cConZone">
-                <span class="drop-slot" data-slot="cCon-0" onclick="placeBlock('cCon',0)"></span><br>
+                <span class="static">public</span> <span class="drop-slot" data-slot="cCon-0" onclick="placeBlock('cCon',0)"></span><br>
                 <span class="drop-slot" data-slot="cCon-1" onclick="placeBlock('cCon',1)"></span><br>
                 <span class="static">{</span><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="cCon-2" onclick="placeBlock('cCon',2)"></span><br>
@@ -570,7 +570,7 @@ function showCStage(){
 
                 <div class="mistake">⚠️ <strong>Common mistake:</strong> Students often forget the array initialisation in the SET, or try to create the array in the constructor instead. The mark scheme awards a specific mark for <code>arrayBoxAmount = new double[noOfBoxes]</code> being inside the SET.</div>
             </div>
-            <p style="color:#c0a080;font-size:.9em;margin-bottom:8px">Now build the property — click blocks then click slots:</p>
+            <p style="color:#c0a080;font-size:.9em;margin-bottom:8px">Build the property — drag blocks into the slots (or click to place):</p>
             <div class="blocks-area" id="cPropBlocks"></div>
             <div class="code-zone" id="cPropZone">
                 <span class="static">public int NoOfBoxes</span><br>
@@ -703,10 +703,10 @@ function startPartD(){
             </div>
             <div class="note">💡 Return type: <code>double</code> (money). Parameters: <strong>none</strong> — it uses the object's own array. You need a <code>for</code> loop with a running total.</div>
         </div>
-        <p style="color:#c0a080;font-size:.9em;margin-bottom:8px">Build the method — click blocks then click slots:</p>
+        <p style="color:#c0a080;font-size:.9em;margin-bottom:8px">Build the method — drag blocks into the slots (or click to place):</p>
         <div class="blocks-area" id="dBlocks"></div>
         <div class="code-zone" id="dZone">
-            <span class="drop-slot" data-slot="d-0" onclick="placeBlock('d',0)"></span><br>
+            <span class="static">public</span> <span class="drop-slot" data-slot="d-0" onclick="placeBlock('d',0)"></span><br>
             <span class="static">{</span><br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="d-1" onclick="placeBlock('d',1)"></span><br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="d-2" onclick="placeBlock('d',2)"></span><br>
@@ -727,12 +727,12 @@ function startPartD(){
         </div>
     `;
     const dBlocks=[
-        {id:'d0',text:'public double FlagDayIncome()',correct:true,slot:0},
+        {id:'d0',text:'double FlagDayIncome()',correct:true,slot:0},
         {id:'d1',text:'double total = 0.0;',correct:true,slot:1},
         {id:'d2',text:'for(int x = 0; x < arrayBoxAmount.Length; x++)',correct:true,slot:2},
         {id:'d3',text:'total += arrayBoxAmount[x];',correct:true,slot:3},
         {id:'d4',text:'return total;',correct:true,slot:4},
-        {id:'dd1',text:'public void FlagDayIncome()',correct:false},
+        {id:'dd1',text:'void FlagDayIncome()',correct:false},
         {id:'dd2',text:'for(int x = 0; x <= arrayBoxAmount.Length; x++)',correct:false},
         {id:'dd3',text:'total = arrayBoxAmount[x];',correct:false},
         {id:'dd4',text:'return arrayBoxAmount;',correct:false}
@@ -818,7 +818,7 @@ function showQ6Stage(){
     else if(q6Stage===1){
         setProgress(80);
         c.innerHTML=`
-            <p style="color:#c0a080;font-size:.9em;margin-bottom:8px">Build the BranchIncome method body — click blocks then click slots:</p>
+            <p style="color:#c0a080;font-size:.9em;margin-bottom:8px">Build the method body — drag blocks into the slots (or click to place):</p>
             <div class="blocks-area" id="q6Blocks"></div>
             <div class="code-zone" id="q6Zone">
                 <span class="drop-slot" data-slot="q6-0" onclick="placeBlock('q6',0)"></span><br>
