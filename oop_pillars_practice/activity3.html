@@ -388,7 +388,7 @@ function showCStage(){
         // Teach: class header
         c.innerHTML=`
             <div class="exam-q"><strong>Q5(c)</strong> Write the code for the derived class <strong>FlagDay</strong> giving: class header, field definitions, field constructor, GET and SET property for noOfBoxes only. <span class="marks-badge">[11 marks]</span></div>
-            <div class="teach-section">
+            <div id="cHeaderTeach" class="teach-section">
                 <h3>📖 Stage 1: The Class Header</h3>
                 <p>To create FlagDay as a <strong>derived class</strong> that inherits from Event, we use the colon <code>:</code> symbol.</p>
                 <div class="visual">
@@ -399,10 +399,13 @@ function showCStage(){
                     </div>
                     <p style="color:#c0a080;font-size:.85em;margin-top:8px">"FlagDay inherits from Event — it gets all 5 of Event's fields automatically"</p>
                 </div>
-                <p>The syntax is: <code>class FlagDay : Event</code></p>
+                <p>To inherit, the derived class name is followed by a colon and the base class name.</p>
+                <div class="text-center" style="margin-top:14px"><button class="btn btn-secondary" onclick="document.getElementById('cHeaderTeach').style.display='none';document.getElementById('cHeaderTest').style.display='block'">Got it — test me! →</button></div>
             </div>
-            <p style="color:#c0a080;font-size:.9em;margin-bottom:8px">Select the correct class header:</p>
-            <div class="blocks-area" id="cHeaderBlocks"></div>
+            <div id="cHeaderTest" style="display:none">
+                <p style="color:#c0a080;font-size:.9em;margin-bottom:8px">Select the correct class header:</p>
+                <div class="blocks-area" id="cHeaderBlocks"></div>
+            </div>
         `;
         const opts=[
             {text:'class FlagDay : Event',correct:true},
@@ -429,7 +432,7 @@ function showCStage(){
     else if(cStage===1){
         // Teach: fields
         c.innerHTML=`
-            <div class="teach-section">
+            <div id="cFieldTeach" class="teach-section">
                 <h3>📖 Stage 2: Field Definitions</h3>
                 <p>FlagDay has <strong>two private fields</strong> of its own:</p>
                 <div class="visual">
@@ -438,9 +441,12 @@ function showCStage(){
                 </div>
                 <div class="note">💡 Both are <strong>private</strong> — that's encapsulation. The only way to access them from outside is through properties.</div>
                 <p style="margin-top:10px">The <code>double[]</code> means "an array of doubles" — perfect for storing money amounts.</p>
+                <div class="text-center" style="margin-top:14px"><button class="btn btn-secondary" onclick="document.getElementById('cFieldTeach').style.display='none';document.getElementById('cFieldTest').style.display='block'">Got it — test me! →</button></div>
             </div>
-            <p style="color:#c0a080;font-size:.9em">Select the correct field declarations:</p>
-            <div id="cFieldPick"></div>
+            <div id="cFieldTest" style="display:none">
+                <p style="color:#c0a080;font-size:.9em">Select the <strong>two</strong> correct field declarations:</p>
+                <div id="cFieldPick"></div>
+            </div>
         `;
         const picks=[
             {text:'private int noOfBoxes;',correct:true},
