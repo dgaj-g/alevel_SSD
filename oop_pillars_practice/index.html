@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2017 Past Paper Decoder — OOP Concepts</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.stars {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+.star {
+    position: absolute;
+    width: 3px; height: 3px;
+    background: #fff;
+    border-radius: 50%;
+    animation: twinkle 3s infinite alternate;
+}
+@keyframes twinkle {
+    0% { opacity: 0.2; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.3); }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: fadeInDown 0.8s ease;
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.header-icon {
+    font-size: 64px;
+    margin-bottom: 15px;
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.header h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #f093fb, #f5576c, #4facfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.header p {
+    font-size: 1.1em;
+    color: #a0a0c0;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+.header .spec-badge {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 16px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    font-size: 0.85em;
+    color: #c0c0e0;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.flow-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 10px;
+}
+.flow-dot {
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    transition: background 0.3s;
+}
+.flow-dot.active { background: #4facfe; box-shadow: 0 0 10px #4facfe; }
+.flow-dash {
+    width: 40px; height: 2px;
+    background: rgba(255,255,255,0.2);
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    align-items: stretch;
+    background: rgba(255,255,255,0.06);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.1);
+    overflow: hidden;
+    animation: fadeInUp 0.6s ease both;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+}
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 1.8em;
+    font-weight: 800;
+    color: rgba(255,255,255,0.9);
+}
+.card:nth-child(1) .card-number { background: linear-gradient(135deg, #1a1a4e, #4a3b8f); }
+.card:nth-child(2) .card-number { background: linear-gradient(135deg, #0d3b3b, #1a7a5a); }
+.card:nth-child(3) .card-number { background: linear-gradient(135deg, #5a3200, #b86e00); }
+.card:nth-child(4) .card-number { background: linear-gradient(135deg, #4a0a0a, #1a1a5e); }
+
+.card-body {
+    flex: 1;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.card-icon { font-size: 1.8em; }
+.card-title {
+    font-size: 1.25em;
+    font-weight: 700;
+}
+.card:nth-child(1) .card-title { color: #b794f6; }
+.card:nth-child(2) .card-title { color: #68d391; }
+.card:nth-child(3) .card-title { color: #f6ad55; }
+.card:nth-child(4) .card-title { color: #fc8181; }
+
+.card-desc {
+    color: #b0b0d0;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+.card-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 6px;
+}
+.time-badge {
+    font-size: 0.8em;
+    padding: 3px 10px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.08);
+    color: #a0a0c0;
+}
+.concept-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+.concept-tag {
+    font-size: 0.7em;
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.tag-abstraction { background: rgba(167,139,250,0.2); color: #a78bfa; }
+.tag-encapsulation { background: rgba(251,191,36,0.2); color: #fbbf24; }
+.tag-inheritance { background: rgba(52,211,153,0.2); color: #34d399; }
+.tag-polymorphism { background: rgba(96,165,250,0.2); color: #60a5fa; }
+
+.card-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+    color: #fff;
+    transition: all 0.3s;
+    letter-spacing: 0.5px;
+}
+.card:nth-child(1) .card-action { background: linear-gradient(135deg, #4a3b8f, #6c5ce7); }
+.card:nth-child(2) .card-action { background: linear-gradient(135deg, #1a7a5a, #2ecc71); }
+.card:nth-child(3) .card-action { background: linear-gradient(135deg, #b86e00, #e67e22); }
+.card:nth-child(4) .card-action { background: linear-gradient(135deg, #8b1a1a, #c0392b); }
+.card-action:hover {
+    filter: brightness(1.2);
+    letter-spacing: 1.5px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    color: #606080;
+    font-size: 0.85em;
+}
+
+@media (max-width: 600px) {
+    .card { flex-direction: column; }
+    .card-number { min-width: unset; min-height: 40px; font-size: 1.3em; }
+    .card-action { min-width: unset; min-height: 50px; }
+    .header h1 { font-size: 1.6em; }
+    .container { padding: 20px 12px; }
+}
+</style>
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+
+<div class="container">
+    <div class="header">
+        <div class="header-icon">🔓</div>
+        <h1>2017 Past Paper Decoder</h1>
+        <p>Master the OOP concepts behind Questions 5 &amp; 6 of the 2017 CCEA AS SSD paper. Four activities that teach you the scenario, the concepts, and the code — step by step.</p>
+        <div class="spec-badge">CCEA AS Software Systems Development — 2017 Paper</div>
+    </div>
+
+    <div class="flow-line">
+        <div class="flow-dot active"></div>
+        <div class="flow-dash"></div>
+        <div class="flow-dot"></div>
+        <div class="flow-dash"></div>
+        <div class="flow-dot"></div>
+        <div class="flow-dash"></div>
+        <div class="flow-dot"></div>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <div class="card-number">1</div>
+            <div class="card-body">
+                <div class="card-top">
+                    <span class="card-icon">🧠</span>
+                    <span class="card-title">OOP Flashback</span>
+                </div>
+                <div class="card-desc">Quick refresher on the four pillars of OOP — visual analogies, code examples, and rapid-fire challenges to lock in the fundamentals.</div>
+                <div class="card-meta">
+                    <span class="time-badge">⏱ 8–10 min</span>
+                    <div class="concept-tags">
+                        <span class="concept-tag tag-abstraction">Abstraction</span>
+                        <span class="concept-tag tag-encapsulation">Encapsulation</span>
+                        <span class="concept-tag tag-inheritance">Inheritance</span>
+                        <span class="concept-tag tag-polymorphism">Polymorphism</span>
+                    </div>
+                </div>
+            </div>
+            <a href="activity1.html" class="card-action">PLAY →</a>
+        </div>
+
+        <div class="card">
+            <div class="card-number">2</div>
+            <div class="card-body">
+                <div class="card-top">
+                    <span class="card-icon">🏢</span>
+                    <span class="card-title">The Charity Scenario</span>
+                </div>
+                <div class="card-desc">Understand the real-world charity before touching any code. Animated explainers for Hosted events and Flag Days, interactive inheritance diagram, and why Event is abstract.</div>
+                <div class="card-meta">
+                    <span class="time-badge">⏱ 15–18 min</span>
+                    <div class="concept-tags">
+                        <span class="concept-tag tag-abstraction">Abstraction</span>
+                        <span class="concept-tag tag-inheritance">Inheritance</span>
+                    </div>
+                </div>
+            </div>
+            <a href="activity2.html" class="card-action">PLAY →</a>
+        </div>
+
+        <div class="card">
+            <div class="card-number">3</div>
+            <div class="card-body">
+                <div class="card-top">
+                    <span class="card-icon">🔨</span>
+                    <span class="card-title">Code Builder</span>
+                </div>
+                <div class="card-desc">For each exam question part, learn the concept visually first, then build the answer by dragging code blocks into place. Includes the full FlagDay class deep-dive.</div>
+                <div class="card-meta">
+                    <span class="time-badge">⏱ 25–30 min</span>
+                    <div class="concept-tags">
+                        <span class="concept-tag tag-abstraction">Abstraction</span>
+                        <span class="concept-tag tag-encapsulation">Encapsulation</span>
+                        <span class="concept-tag tag-inheritance">Inheritance</span>
+                        <span class="concept-tag tag-polymorphism">Polymorphism</span>
+                    </div>
+                </div>
+            </div>
+            <a href="activity3.html" class="card-action">PLAY →</a>
+        </div>
+
+        <div class="card">
+            <div class="card-number">4</div>
+            <div class="card-body">
+                <div class="card-top">
+                    <span class="card-icon">📝</span>
+                    <span class="card-title">Exam Mode</span>
+                </div>
+                <div class="card-desc">The same questions with blanks to fill in yourself — just like the real exam. Optional timer, instant marking, and full mark scheme comparison.</div>
+                <div class="card-meta">
+                    <span class="time-badge">⏱ 10–12 min</span>
+                    <div class="concept-tags">
+                        <span class="concept-tag tag-abstraction">Abstraction</span>
+                        <span class="concept-tag tag-encapsulation">Encapsulation</span>
+                        <span class="concept-tag tag-inheritance">Inheritance</span>
+                        <span class="concept-tag tag-polymorphism">Polymorphism</span>
+                    </div>
+                </div>
+            </div>
+            <a href="activity4.html" class="card-action">PLAY →</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        AS Software Systems Development — Booklet Six Past Paper Support<br>
+        Abstraction • Encapsulation • Inheritance • Polymorphism
+    </div>
+</div>
+
+<script>
+// Generate twinkling stars
+const starsEl = document.getElementById('stars');
+for (let i = 0; i < 80; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.left = Math.random() * 100 + '%';
+    star.style.top = Math.random() * 100 + '%';
+    star.style.animationDelay = (Math.random() * 3) + 's';
+    star.style.animationDuration = (2 + Math.random() * 3) + 's';
+    star.style.width = star.style.height = (1 + Math.random() * 3) + 'px';
+    starsEl.appendChild(star);
+}
+</script>
+</body>
+</html>

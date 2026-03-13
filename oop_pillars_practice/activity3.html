@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activity 3 — Code Builder</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;min-height:100vh;background:linear-gradient(135deg,#5a3200,#b86e00,#7a4400);color:#fff;overflow-x:hidden}
+.container{max-width:850px;margin:0 auto;padding:30px 20px}
+a{color:#f6ad55;text-decoration:none}a:hover{text-decoration:underline}
+
+.act-header{text-align:center;margin-bottom:20px;animation:fadeIn .6s ease}
+.act-header .icon{font-size:48px;margin-bottom:8px}
+.act-header h1{font-size:1.8em;background:linear-gradient(90deg,#f6ad55,#fbd38d);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.act-header p{color:#d4a574;margin-top:6px}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-15px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pop{0%{transform:scale(0)}60%{transform:scale(1.15)}100%{transform:scale(1)}}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+@keyframes confettiFall{0%{transform:translateY(-10px) rotate(0deg);opacity:1}100%{transform:translateY(60px) rotate(360deg);opacity:0}}
+@keyframes slideDown{from{max-height:0;opacity:0}to{max-height:600px;opacity:1}}
+
+.progress-bar{height:6px;background:rgba(255,255,255,.1);border-radius:3px;margin-bottom:20px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,#e67e22,#f6ad55);border-radius:3px;transition:width .5s;width:0%}
+.phase-label{text-align:center;font-size:.85em;color:#c09060;margin-bottom:18px;letter-spacing:1px;text-transform:uppercase}
+
+.screen{display:none;animation:fadeIn .4s ease}.screen.active{display:block}
+.btn{display:inline-block;padding:12px 30px;border-radius:30px;font-size:1em;font-weight:700;cursor:pointer;border:none;transition:all .3s}
+.btn-primary{background:linear-gradient(135deg,#b86e00,#e67e22);color:#fff}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(230,126,34,.4)}
+.btn-secondary{background:rgba(255,255,255,.1);color:#d4a574;border:1px solid rgba(255,255,255,.2)}.btn-secondary:hover{background:rgba(255,255,255,.15)}
+.btn-check{background:linear-gradient(135deg,#2ecc71,#27ae60);color:#fff}.btn-check:hover{box-shadow:0 4px 15px rgba(46,204,113,.4)}
+.text-center{text-align:center}
+
+.welcome-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:36px 28px;text-align:center}
+.welcome-card h2{font-size:1.4em;margin-bottom:14px;color:#fbd38d}
+.welcome-card p{color:#c09060;line-height:1.7;margin-bottom:14px;max-width:600px;margin-left:auto;margin-right:auto}
+
+/* Exam question display */
+.exam-q{background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:16px 20px;margin-bottom:16px;font-size:.95em;line-height:1.6;color:#e0d0c0}
+.exam-q strong{color:#f6ad55}
+.marks-badge{display:inline-block;background:rgba(246,173,85,.2);border:1px solid rgba(246,173,85,.4);color:#f6ad55;padding:3px 12px;border-radius:12px;font-weight:700;font-size:.85em;margin-left:8px}
+
+/* Teach section */
+.teach-section{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px;margin-bottom:16px}
+.teach-section h3{color:#fbd38d;margin-bottom:10px;font-size:1.05em}
+.teach-section p{color:#c0a080;line-height:1.7;font-size:.93em}
+.teach-section code{background:rgba(0,0,0,.3);padding:2px 6px;border-radius:4px;font-family:'Courier New',monospace;color:#fbd38d;font-size:.9em}
+.teach-section .visual{background:rgba(0,0,0,.2);border-radius:8px;padding:14px;margin:12px 0;text-align:center}
+.teach-section .note{background:rgba(246,173,85,.1);border-left:3px solid #e67e22;padding:10px 14px;border-radius:0 8px 8px 0;margin:10px 0;font-size:.9em;color:#d4a574}
+.teach-section .mistake{background:rgba(231,76,60,.1);border-left:3px solid #e74c3c;padding:10px 14px;border-radius:0 8px 8px 0;margin:10px 0;font-size:.9em;color:#e0a0a0}
+
+/* Array animation visual */
+.array-anim{display:flex;justify-content:center;gap:4px;flex-wrap:wrap;margin:12px 0}
+.arr-slot{width:68px;background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.12);border-radius:8px;padding:8px 4px;text-align:center;transition:all .6s}
+.arr-slot.filling{border-color:#2ecc71;background:rgba(46,204,113,.12);animation:pop .3s}
+.arr-slot .sidx{font-size:.7em;color:#806040;font-family:'Courier New',monospace}
+.arr-slot .sval{font-size:.8em;font-weight:700;color:#2ecc71;margin-top:3px;min-height:18px}
+
+/* Property visual */
+.prop-visual{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin:14px 0}
+.pv-box{padding:12px 18px;border-radius:10px;text-align:center;font-size:.85em}
+.pv-private{background:rgba(231,76,60,.15);border:1px solid rgba(231,76,60,.4);color:#e74c3c}
+.pv-wall{font-size:2em}
+.pv-public{background:rgba(46,204,113,.15);border:1px solid rgba(46,204,113,.4);color:#2ecc71}
+.pv-arrow{font-size:1.5em;color:#806040}
+
+/* Code dropzone */
+.code-zone{background:rgba(0,0,0,.35);border:2px dashed rgba(255,255,255,.2);border-radius:12px;padding:16px;margin:14px 0;min-height:80px;font-family:'Courier New',monospace;font-size:.88em;line-height:1.8;color:#e0d0c0}
+.code-zone .drop-slot{display:inline-block;min-width:80px;min-height:30px;background:rgba(255,255,255,.06);border:2px dashed rgba(246,173,85,.3);border-radius:6px;margin:3px 2px;padding:4px 8px;vertical-align:middle;transition:all .3s}
+.code-zone .drop-slot.highlight{border-color:#f6ad55;background:rgba(246,173,85,.1)}
+.code-zone .drop-slot.filled{border-style:solid;border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.08);cursor:pointer}
+.code-zone .drop-slot.correct{border-color:#2ecc71;background:rgba(46,204,113,.12)}
+.code-zone .drop-slot.wrong{border-color:#e74c3c;background:rgba(231,76,60,.12);animation:shake .4s}
+.code-zone .static{color:#806040}
+
+/* Draggable blocks */
+.blocks-area{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;justify-content:center}
+.drag-block{padding:8px 14px;background:rgba(246,173,85,.15);border:1px solid rgba(246,173,85,.4);border-radius:8px;font-family:'Courier New',monospace;font-size:.85em;color:#fbd38d;cursor:grab;user-select:none;transition:all .3s}
+.drag-block:active{cursor:grabbing;transform:scale(1.05)}
+.drag-block.used{opacity:.3;cursor:default;pointer-events:none}
+.drag-block.distractor{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.15);color:#c0a080}
+
+/* Mark scheme reveal */
+.mark-scheme{background:rgba(46,204,113,.08);border:1px solid rgba(46,204,113,.3);border-radius:12px;padding:16px 20px;margin:16px 0;display:none}
+.mark-scheme.show{display:block;animation:fadeInUp .4s}
+.mark-scheme h4{color:#2ecc71;margin-bottom:10px}
+.mark-point{display:flex;gap:8px;padding:5px 0;font-size:.9em;color:#b0d8c0;border-bottom:1px solid rgba(255,255,255,.05)}
+.mark-point .mp-mark{color:#2ecc71;font-weight:700;min-width:24px}
+
+/* Dropdown selects for part a */
+.dropdown-group{margin:12px 0}
+.dropdown-group label{display:block;color:#c0a080;font-size:.9em;margin-bottom:6px}
+.dropdown-group select{width:100%;padding:10px 14px;border-radius:8px;background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.2);color:#fbd38d;font-size:.9em;font-family:inherit;cursor:pointer;appearance:none;-webkit-appearance:none}
+.dropdown-group select option{background:#3a2200;color:#fbd38d}
+.dd-result{margin-top:6px;padding:6px 10px;border-radius:6px;font-size:.85em;display:none}
+.dd-result.correct{display:block;background:rgba(46,204,113,.15);color:#2ecc71}
+.dd-result.wrong{display:block;background:rgba(231,76,60,.15);color:#e74c3c}
+
+/* Score tracker */
+.score-tracker{display:flex;justify-content:center;gap:20px;margin-bottom:16px;flex-wrap:wrap}
+.st-item{background:rgba(0,0,0,.2);padding:6px 14px;border-radius:10px;font-size:.85em;color:#c0a080}
+.st-item strong{color:#f6ad55}
+
+/* Results */
+.results-card{background:rgba(255,255,255,.06);border-radius:16px;padding:30px;text-align:center;border:1px solid rgba(255,255,255,.12)}
+.results-score{font-size:2.8em;font-weight:800;color:#f6ad55;margin:10px 0}
+.results-rank .rank-emoji{font-size:2em;display:block;margin-bottom:5px}
+.results-breakdown{text-align:left;margin:20px 0;padding:16px;background:rgba(0,0,0,.2);border-radius:10px}
+.results-breakdown h4{color:#f6ad55;margin-bottom:8px}
+.rb-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:.9em;color:#c0a080}
+.rb-row .val{font-weight:700;color:#2ecc71}
+.results-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+
+/* Polymorphism visual */
+.poly-visual{background:rgba(0,0,0,.2);border-radius:12px;padding:16px;margin:12px 0}
+.pv-array{display:flex;gap:4px;flex-wrap:wrap;justify-content:center;margin:10px 0}
+.pv-cell{width:48px;height:48px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2em;border:2px solid rgba(255,255,255,.15)}
+.pv-hosted{background:rgba(251,191,36,.15);border-color:rgba(251,191,36,.4)}
+.pv-flagday{background:rgba(96,165,250,.15);border-color:rgba(96,165,250,.4)}
+.pv-empty{background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.08)}
+.cast-visual{text-align:center;margin:12px 0}
+.cast-before{display:inline-block;padding:8px 14px;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);font-family:'Courier New',monospace;font-size:.85em;color:#c0a080}
+.cast-arrow{font-size:1.3em;margin:0 12px;color:#806040}
+.cast-after{display:inline-block;padding:8px 14px;border-radius:8px;background:rgba(46,204,113,.12);border:1px solid rgba(46,204,113,.4);font-family:'Courier New',monospace;font-size:.85em;color:#2ecc71}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="act-header">
+        <div class="icon">🔨</div>
+        <h1>Code Builder</h1>
+        <p>Learn each concept, then build the answer</p>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="phase-label" id="phaseLabel"></div>
+    <div class="score-tracker" id="scoreTracker" style="display:none">
+        <div class="st-item">Marks: <strong id="marksDisplay">0</strong>/31</div>
+        <div class="st-item">Part: <strong id="partDisplay">—</strong></div>
+    </div>
+
+    <div class="screen active" id="welcomeScreen">
+        <div class="welcome-card">
+            <h2>🔨 Mission: Build the Answers</h2>
+            <p>For each part of the 2017 question, you'll first <strong>learn</strong> the concept with a visual explanation, then <strong>build</strong> the answer by selecting or dragging code. The mark scheme is revealed after each part.</p>
+            <p style="color:#a08060;font-size:.9em">⏱ Estimated time: 25–30 minutes</p>
+            <button class="btn btn-primary" onclick="startPartA()">Start Building →</button>
+        </div>
+    </div>
+
+    <!-- Main content area for all parts -->
+    <div class="screen" id="mainScreen">
+        <div id="contentArea"></div>
+        <div class="text-center" style="margin-top:16px" id="navArea"></div>
+    </div>
+
+    <!-- Results -->
+    <div class="screen" id="resultsScreen">
+        <div class="results-card" id="resultsCard"></div>
+    </div>
+</div>
+
+<script>
+let totalMarks = 0;
+const partScores = {a:0,b:0,c:0,d:0,q6:0};
+const partMax = {a:2,b:4,c:11,d:7,q6:7};
+
+function setProgress(p){document.getElementById('progressFill').style.width=p+'%'}
+function showScreen(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+function updateScore(){document.getElementById('marksDisplay').textContent=totalMarks}
+function showMain(){showScreen('mainScreen');document.getElementById('scoreTracker').style.display='flex'}
+
+// ===== PART A =====
+function startPartA(){
+    showMain();
+    document.getElementById('phaseLabel').textContent='Part (a) — Why is Event Abstract?';
+    document.getElementById('partDisplay').textContent='(a)';
+    setProgress(5);
+    const c=document.getElementById('contentArea');
+    c.innerHTML=`
+        <div class="exam-q"><strong>Q5(a)</strong> Explain the term in bold indicating why it has been applied to the class Event. <span class="marks-badge">[2 marks]</span></div>
+        <div class="teach-section">
+            <h3>📖 Quick Recap</h3>
+            <p>The class header is <code>abstract class Event</code>. You learned in Activity 2 what this means. Now pick the correct exam-style answers:</p>
+        </div>
+        <div class="dropdown-group">
+            <label>An abstract class means...</label>
+            <select id="ddA1" onchange="checkPartA()">
+                <option value="">— Select your answer —</option>
+                <option value="wrong1">It can only have one derived class</option>
+                <option value="correct">It cannot be instantiated as an object</option>
+                <option value="wrong2">It must contain at least 5 fields</option>
+                <option value="wrong3">It is automatically inherited by all classes</option>
+            </select>
+            <div class="dd-result" id="ddA1r"></div>
+        </div>
+        <div class="dropdown-group">
+            <label>This is applied to Event because...</label>
+            <select id="ddA2" onchange="checkPartA()">
+                <option value="">— Select your answer —</option>
+                <option value="wrong1">Event has too many fields to be instantiated</option>
+                <option value="wrong2">All classes must be abstract in C#</option>
+                <option value="correct">More data is required to describe specific event types, so they should be derived</option>
+                <option value="wrong3">It makes the program run faster</option>
+            </select>
+            <div class="dd-result" id="ddA2r"></div>
+        </div>
+        <div class="mark-scheme" id="msA">
+            <h4>✅ Mark Scheme — Part (a)</h4>
+            <div class="mark-point"><span class="mp-mark">[1]</span>Class cannot be instantiated as an object</div>
+            <div class="mark-point"><span class="mp-mark">[1]</span>More data about an event is required to describe specific types, so they should be derived</div>
+        </div>
+    `;
+    document.getElementById('navArea').innerHTML='';
+}
+let aChecked=[false,false];
+function checkPartA(){
+    const v1=document.getElementById('ddA1').value;
+    const v2=document.getElementById('ddA2').value;
+    const r1=document.getElementById('ddA1r');
+    const r2=document.getElementById('ddA2r');
+    if(v1&&!aChecked[0]){
+        aChecked[0]=true;
+        if(v1==='correct'){r1.className='dd-result correct';r1.textContent='✓ Correct! [1 mark]';partScores.a++;totalMarks++;updateScore()}
+        else{r1.className='dd-result wrong';r1.textContent='✗ Not quite. The answer is: cannot be instantiated as an object.'}
+    }
+    if(v2&&!aChecked[1]){
+        aChecked[1]=true;
+        if(v2==='correct'){r2.className='dd-result correct';r2.textContent='✓ Correct! [1 mark]';partScores.a++;totalMarks++;updateScore()}
+        else{r2.className='dd-result wrong';r2.textContent='✗ Not quite. The answer is: specific types need more data, so they should be derived.'}
+    }
+    if(aChecked[0]&&aChecked[1]){
+        document.getElementById('msA').classList.add('show');
+        document.getElementById('navArea').innerHTML=`<button class="btn btn-primary" onclick="startPartB()">Part (b): HostedIncome →</button>`;
+    }
+}
+
+// ===== PART B =====
+function startPartB(){
+    document.getElementById('phaseLabel').textContent='Part (b) — HostedIncome() Method';
+    document.getElementById('partDisplay').textContent='(b)';
+    setProgress(15);
+    aChecked=[false,false];
+    const c=document.getElementById('contentArea');
+    c.innerHTML=`
+        <div class="exam-q"><strong>Q5(b)</strong> Write the code for a method <strong>HostedIncome</strong> that will return the income generated from a Hosted Event.<br><br>Income is calculated as profit on a ticket, multiplied by noAttended, plus donations. Profit on a ticket = ticketCharge minus venueChargePerPerson. <span class="marks-badge">[4 marks]</span></div>
+        <div class="teach-section">
+            <h3>📖 Learn First</h3>
+            <p>Remember from Activity 2: income = (ticketCharge − venueChargePerPerson) × noAttended + donation</p>
+            <div class="note">💡 The return type is <code>double</code> because we're dealing with money. The method takes <strong>no parameters</strong> because it uses the Hosted object's own fields.</div>
+        </div>
+        <p style="color:#c0a080;font-size:.9em;margin-bottom:8px">Drag the correct blocks into the code area (click a block, then click a slot):</p>
+        <div class="blocks-area" id="bBlocks"></div>
+        <div class="code-zone" id="bZone">
+            <span class="drop-slot" data-slot="0" onclick="placeBlock('b',0)"></span><br>
+            <span class="static">{</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="1" onclick="placeBlock('b',1)"></span><br>
+            <span class="static">}</span>
+        </div>
+        <div class="text-center"><button class="btn btn-check" onclick="checkPartB()">Check Answer ✓</button></div>
+        <div class="mark-scheme" id="msB">
+            <h4>✅ Mark Scheme — Part (b)</h4>
+            <div class="mark-point"><span class="mp-mark">[1]</span>Correct header: public double, no parameters</div>
+            <div class="mark-point"><span class="mp-mark">[1]</span>Calculation of ticket profit (ticketCharge - venueChargePerPerson)</div>
+            <div class="mark-point"><span class="mp-mark">[1]</span>Addition of donation</div>
+            <div class="mark-point"><span class="mp-mark">[1]</span>Return keyword</div>
+        </div>
+    `;
+    const blocks=[
+        {id:'bh1',text:'public double HostedIncome()',correct:true,slot:0},
+        {id:'br1',text:'return (ticketCharge - venueChargePerPerson) * noAttended + donation;',correct:true,slot:1},
+        {id:'bd1',text:'public void HostedIncome()',correct:false},
+        {id:'bd2',text:'public int HostedIncome(double income)',correct:false},
+        {id:'bd3',text:'return ticketCharge * noAttended;',correct:false},
+        {id:'bd4',text:'return ticketCharge - venueChargePerPerson + donation;',correct:false}
+    ];
+    setupBlocks('b',blocks,'bBlocks');
+    document.getElementById('navArea').innerHTML='';
+    window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// Generic block system
+let selectedBlock=null;
+let blockSystems={};
+function setupBlocks(prefix,blocks,containerId){
+    const shuffled=shuffle(blocks);
+    blockSystems[prefix]={blocks,slots:{},correctMap:{}};
+    blocks.filter(b=>b.correct).forEach(b=>{blockSystems[prefix].correctMap[b.slot]=b.id});
+    const container=document.getElementById(containerId);
+    container.innerHTML='';
+    shuffled.forEach(b=>{
+        const el=document.createElement('div');
+        el.className='drag-block'+(b.correct?'':' distractor');
+        el.textContent=b.text;
+        el.dataset.id=b.id;
+        el.onclick=()=>selectBlock(prefix,b.id,el);
+        container.appendChild(el);
+    });
+}
+function selectBlock(prefix,id,el){
+    document.querySelectorAll('.drag-block').forEach(b=>b.style.outline='');
+    if(selectedBlock===id){selectedBlock=null;return}
+    selectedBlock=id;
+    el.style.outline='2px solid #f6ad55';
+}
+function placeBlock(prefix,slot){
+    if(!selectedBlock)return;
+    const sys=blockSystems[prefix];
+    const slotEl=document.querySelector(`#${prefix}Zone [data-slot="${slot}"]`)||document.querySelector(`[data-slot="${prefix}-${slot}"]`);
+    if(!slotEl)return;
+    const block=sys.blocks.find(b=>b.id===selectedBlock);
+    if(!block)return;
+    // Remove from previous slot if any
+    Object.keys(sys.slots).forEach(s=>{if(sys.slots[s]===selectedBlock){sys.slots[s]=null;const prev=document.querySelector(`[data-slot="${prefix}-${s}"]`)||document.querySelector(`#${prefix}Zone [data-slot="${s}"]`);if(prev){prev.textContent='';prev.classList.remove('filled')}}});
+    // Unuse previously placed block in this slot
+    if(sys.slots[slot]){
+        const prevBlock=document.querySelector(`[data-id="${sys.slots[slot]}"]`);
+        if(prevBlock)prevBlock.classList.remove('used');
+    }
+    sys.slots[slot]=selectedBlock;
+    slotEl.textContent=block.text;
+    slotEl.classList.add('filled');
+    const blockEl=document.querySelector(`[data-id="${selectedBlock}"]`);
+    if(blockEl){blockEl.classList.add('used');blockEl.style.outline=''}
+    selectedBlock=null;
+}
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+
+function checkPartB(){
+    const sys=blockSystems['b'];
+    let score=0;
+    [0,1].forEach(s=>{
+        const slotEl=document.querySelector(`#bZone [data-slot="${s}"]`);
+        if(sys.slots[s]===sys.correctMap[s]){slotEl.classList.add('correct');slotEl.classList.remove('wrong');score+=(s===0?1:3)}
+        else{slotEl.classList.add('wrong');slotEl.classList.remove('correct')}
+    });
+    partScores.b=score;totalMarks=partScores.a+score;updateScore();
+    document.getElementById('msB').classList.add('show');
+    document.getElementById('navArea').innerHTML=`<button class="btn btn-primary" onclick="startPartC()">Part (c): FlagDay Class →</button>`;
+}
+
+// ===== PART C — THE BIG ONE =====
+let cStage=0;
+function startPartC(){
+    document.getElementById('phaseLabel').textContent='Part (c) — FlagDay Derived Class';
+    document.getElementById('partDisplay').textContent='(c)';
+    setProgress(25);
+    cStage=0;
+    showCStage();
+}
+
+function showCStage(){
+    const c=document.getElementById('contentArea');
+    const nav=document.getElementById('navArea');
+    window.scrollTo({top:0,behavior:'smooth'});
+
+    if(cStage===0){
+        // Teach: class header
+        c.innerHTML=`
+            <div class="exam-q"><strong>Q5(c)</strong> Write the code for the derived class <strong>FlagDay</strong> giving: class header, field definitions, field constructor, GET and SET property for noOfBoxes only. <span class="marks-badge">[11 marks]</span></div>
+            <div class="teach-section">
+                <h3>📖 Stage 1: The Class Header</h3>
+                <p>To create FlagDay as a <strong>derived class</strong> that inherits from Event, we use the colon <code>:</code> symbol.</p>
+                <div class="visual">
+                    <div style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap">
+                        <div style="padding:10px 16px;border-radius:8px;background:rgba(96,165,250,.15);border:1px solid rgba(96,165,250,.4);font-family:'Courier New',monospace;color:#60a5fa">FlagDay</div>
+                        <div style="font-size:1.5em;color:#806040">:</div>
+                        <div style="padding:10px 16px;border-radius:8px;background:rgba(167,139,250,.15);border:1px solid rgba(167,139,250,.4);font-family:'Courier New',monospace;color:#a78bfa">Event</div>
+                    </div>
+                    <p style="color:#c0a080;font-size:.85em;margin-top:8px">"FlagDay inherits from Event — it gets all 5 of Event's fields automatically"</p>
+                </div>
+                <p>The syntax is: <code>class FlagDay : Event</code></p>
+            </div>
+            <p style="color:#c0a080;font-size:.9em;margin-bottom:8px">Select the correct class header:</p>
+            <div class="blocks-area" id="cHeaderBlocks"></div>
+        `;
+        const opts=[
+            {text:'class FlagDay : Event',correct:true},
+            {text:'class FlagDay',correct:false},
+            {text:'class Event : FlagDay',correct:false},
+            {text:'abstract class FlagDay : Event',correct:false}
+        ];
+        const area=document.getElementById('cHeaderBlocks');
+        area.innerHTML='';
+        shuffle(opts).forEach(o=>{
+            const el=document.createElement('div');
+            el.className='drag-block'+(o.correct?'':' distractor');
+            el.textContent=o.text;
+            el.style.cursor='pointer';
+            el.onclick=()=>{
+                area.querySelectorAll('.drag-block').forEach(b=>{b.style.border='';b.classList.remove('correct','wrong')});
+                if(o.correct){el.style.border='2px solid #2ecc71';el.classList.add('correct');partScores.c++;totalMarks++;updateScore();nav.innerHTML=`<button class="btn btn-secondary" onclick="cStage=1;showCStage()">Stage 2: Fields →</button>`}
+                else{el.style.border='2px solid #e74c3c';el.classList.add('wrong')}
+            };
+            area.appendChild(el);
+        });
+        nav.innerHTML='';
+    }
+    else if(cStage===1){
+        // Teach: fields
+        c.innerHTML=`
+            <div class="teach-section">
+                <h3>📖 Stage 2: Field Definitions</h3>
+                <p>FlagDay has <strong>two private fields</strong> of its own:</p>
+                <div class="visual">
+                    <p><code>private int noOfBoxes;</code> — how many volunteers went out with collection boxes</p>
+                    <p style="margin-top:8px"><code>private double[] arrayBoxAmount;</code> — an array storing how much each box collected</p>
+                </div>
+                <div class="note">💡 Both are <strong>private</strong> — that's encapsulation. The only way to access them from outside is through properties.</div>
+                <p style="margin-top:10px">The <code>double[]</code> means "an array of doubles" — perfect for storing money amounts.</p>
+            </div>
+            <p style="color:#c0a080;font-size:.9em">Select the correct field declarations:</p>
+            <div id="cFieldPick"></div>
+        `;
+        const picks=[
+            {text:'private int noOfBoxes;',correct:true},
+            {text:'private double[] arrayBoxAmount;',correct:true},
+            {text:'public int noOfBoxes;',correct:false},
+            {text:'private string[] arrayBoxAmount;',correct:false},
+            {text:'private double arrayBoxAmount;',correct:false}
+        ];
+        const area=document.getElementById('cFieldPick');
+        let picked=new Set();
+        shuffle(picks).forEach(p=>{
+            const el=document.createElement('div');
+            el.className='drag-block'+(p.correct?'':' distractor');
+            el.style.cursor='pointer';el.style.marginBottom='6px';el.style.display='block';
+            el.textContent=p.text;
+            el.onclick=()=>{
+                if(el.dataset.done)return;
+                el.dataset.done='1';
+                if(p.correct){
+                    el.style.border='2px solid #2ecc71';picked.add(p.text);
+                    partScores.c++;totalMarks++;updateScore();
+                    if(picked.size===2)nav.innerHTML=`<button class="btn btn-secondary" onclick="cStage=2;showCStage()">Stage 3: Constructor →</button>`;
+                }else{el.style.border='2px solid #e74c3c'}
+            };
+            area.appendChild(el);
+        });
+        nav.innerHTML='';
+    }
+    else if(cStage===2){
+        // Teach: constructor + base
+        c.innerHTML=`
+            <div class="teach-section">
+                <h3>📖 Stage 3: The Constructor + base Keyword</h3>
+                <p>When creating a FlagDay object, we need values for <strong>ALL fields</strong> — both Event's and FlagDay's own:</p>
+                <div class="visual">
+                    <p style="font-family:'Courier New',monospace;font-size:.85em;color:#e0d0c0">FlagDay(<span style="color:#a78bfa">int eventNo, Date eventDate, String branchName, int startTime, int endTime</span>, <span style="color:#60a5fa">int noOfBoxes</span>)</p>
+                    <p style="font-size:.8em;margin-top:6px"><span style="color:#a78bfa">Purple = Event's params (5)</span> &nbsp; <span style="color:#60a5fa">Blue = FlagDay's param (1)</span></p>
+                </div>
+                <p style="margin-top:10px"><strong>The problem:</strong> Event's fields are <em>private</em>. FlagDay can't assign them directly.</p>
+                <p><strong>The solution:</strong> Use the <code>base</code> keyword to pass Event's values <strong>up to Event's own constructor</strong>:</p>
+                <div class="visual">
+                    <p style="font-family:'Courier New',monospace;font-size:.85em;color:#e0d0c0">: <strong style="color:#f6ad55">base</strong>(eventNo, eventDate, branchName, startTime, endTime)</p>
+                    <p style="font-size:.8em;color:#c0a080;margin-top:4px">↑ This sends the 5 values UP to Event's constructor to handle</p>
+                </div>
+                <p style="margin-top:10px">Then in the body, we only deal with FlagDay's own field:</p>
+                <div class="visual">
+                    <p style="font-family:'Courier New',monospace;font-size:.85em;color:#e0d0c0">NoOfBoxes = noOfBoxes; <span style="color:#806040">// calls the Property</span></p>
+                </div>
+            </div>
+            <p style="color:#c0a080;font-size:.9em;margin-bottom:8px">Build the constructor — click blocks then click slots:</p>
+            <div class="blocks-area" id="cConBlocks"></div>
+            <div class="code-zone" id="cConZone">
+                <span class="drop-slot" data-slot="c-con0" onclick="placeBlock('cCon',0)"></span><br>
+                <span class="drop-slot" data-slot="c-con1" onclick="placeBlock('cCon',1)"></span><br>
+                <span class="static">{</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="c-con2" onclick="placeBlock('cCon',2)"></span><br>
+                <span class="static">}</span>
+            </div>
+            <div class="text-center"><button class="btn btn-check" onclick="checkCCon()">Check ✓</button></div>
+            <div class="mark-scheme" id="msCCon">
+                <h4>✅ Constructor Marks</h4>
+                <div class="mark-point"><span class="mp-mark">[1]</span>All relevant constructor parameters</div>
+                <div class="mark-point"><span class="mp-mark">[1]</span>base keyword present</div>
+                <div class="mark-point"><span class="mp-mark">[1]</span>Correct base fields passed</div>
+                <div class="mark-point"><span class="mp-mark">[2]</span>Calling property / passing noOfBoxes</div>
+            </div>
+        `;
+        const conBlocks=[
+            {id:'cc0',text:'FlagDay(int eventNo, Date eventDate, String branchName, int startTime, int endTime, int noOfBoxes)',correct:true,slot:0},
+            {id:'cc1',text:': base(eventNo, eventDate, branchName, startTime, endTime)',correct:true,slot:1},
+            {id:'cc2',text:'NoOfBoxes = noOfBoxes;',correct:true,slot:2},
+            {id:'ccd1',text:'FlagDay(int noOfBoxes)',correct:false},
+            {id:'ccd2',text:': base(noOfBoxes)',correct:false},
+            {id:'ccd3',text:'noOfBoxes = noOfBoxes;',correct:false}
+        ];
+        setupBlocks('cCon',conBlocks,'cConBlocks');
+        nav.innerHTML='';
+    }
+    else if(cStage===3){
+        // TEACH: Property + SET array initialisation — THE STICKING POINT
+        c.innerHTML=`
+            <div class="teach-section">
+                <h3>📖 Stage 4: The Property + Array Initialisation</h3>
+                <p style="color:#f6ad55;font-weight:700">⚠️ This is the part that trips everyone up. Let's go through it really carefully.</p>
+
+                <h3 style="margin-top:16px">Step 1 — What is a Property?</h3>
+                <p>A property is the <strong>public gateway</strong> to a private field. <code>GET</code> reads the value, <code>SET</code> changes it.</p>
+                <div class="prop-visual">
+                    <div class="pv-box pv-private">🔒 private<br><code>noOfBoxes</code></div>
+                    <div class="pv-wall">🧱</div>
+                    <div class="pv-box pv-public">🚪 public<br><code>NoOfBoxes</code><br><small>GET / SET</small></div>
+                </div>
+
+                <h3 style="margin-top:16px">Step 2 — The GET (simple)</h3>
+                <div class="visual">
+                    <p style="font-family:'Courier New',monospace;font-size:.9em;color:#e0d0c0">get { return noOfBoxes; }</p>
+                    <p style="font-size:.8em;color:#c0a080;margin-top:4px">Just returns the current value of the private field</p>
+                </div>
+
+                <h3 style="margin-top:16px;color:#f6ad55">Step 3 — The SET (the clever part)</h3>
+                <p>When someone sets the number of boxes, <strong>TWO things</strong> need to happen. Let's walk through it with <code>NoOfBoxes = 5</code>:</p>
+
+                <div class="visual">
+                    <p style="text-align:left;margin-bottom:10px;color:#c0a080"><strong>Line 1:</strong> <code>noOfBoxes = value;</code></p>
+                    <p style="text-align:left;color:#b0a080;font-size:.9em">Store the number 5 in the private field:</p>
+                    <div style="display:inline-block;padding:10px 20px;border-radius:8px;background:rgba(46,204,113,.12);border:1px solid rgba(46,204,113,.4);font-family:'Courier New',monospace;margin:8px 0">noOfBoxes = <strong style="color:#2ecc71;font-size:1.2em">5</strong></div>
+                </div>
+
+                <div class="visual" style="margin-top:12px">
+                    <p style="text-align:left;margin-bottom:10px;color:#c0a080"><strong>Line 2:</strong> <code>arrayBoxAmount = new double[noOfBoxes];</code></p>
+                    <p style="text-align:left;color:#b0a080;font-size:.9em">CREATE the array with exactly 5 empty slots — one for each collection box:</p>
+                    <div class="array-anim" id="setArrayDemo">
+                        ${[0,1,2,3,4].map(i=>`<div class="arr-slot" id="demoSlot${i}"><div class="sidx">[${i}]</div><div class="sval" id="demoVal${i}"></div></div>`).join('')}
+                    </div>
+                    <button class="btn btn-secondary" style="margin-top:8px;font-size:.85em" onclick="animateSetDemo()">▶ Animate this</button>
+                    <div id="setDemoNarration" style="margin-top:10px;font-size:.85em;color:#c0a080;min-height:40px"></div>
+                </div>
+
+                <div class="note" style="margin-top:12px">💡 <strong>Why is the array created inside the SET?</strong> Because we don't know how many boxes there are until someone TELLS us. The array size depends on noOfBoxes — so we create it the moment that value is set.</div>
+
+                <div class="mistake">⚠️ <strong>Common mistake:</strong> Students often forget the array initialisation in the SET, or try to create the array in the constructor instead. The mark scheme awards a specific mark for <code>arrayBoxAmount = new double[noOfBoxes]</code> being inside the SET.</div>
+            </div>
+            <p style="color:#c0a080;font-size:.9em;margin-bottom:8px">Now build the property — click blocks then click slots:</p>
+            <div class="blocks-area" id="cPropBlocks"></div>
+            <div class="code-zone" id="cPropZone">
+                <span class="static">public int NoOfBoxes</span><br>
+                <span class="static">{</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="c-prop0" onclick="placeBlock('cProp',0)"></span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="static">set</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="static">{</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="c-prop1" onclick="placeBlock('cProp',1)"></span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="c-prop2" onclick="placeBlock('cProp',2)"></span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="static">}</span><br>
+                <span class="static">}</span>
+            </div>
+            <div class="text-center"><button class="btn btn-check" onclick="checkCProp()">Check ✓</button></div>
+            <div class="mark-scheme" id="msCProp">
+                <h4>✅ Property Marks</h4>
+                <div class="mark-point"><span class="mp-mark">[1]</span>Property header (public int NoOfBoxes)</div>
+                <div class="mark-point"><span class="mp-mark">[1]</span>GET returns noOfBoxes</div>
+                <div class="mark-point"><span class="mp-mark">[1]</span>SET assigns noOfBoxes = value</div>
+                <div class="mark-point"><span class="mp-mark">[1]</span>Array instantiation: arrayBoxAmount = new double[noOfBoxes]</div>
+            </div>
+        `;
+        const propBlocks=[
+            {id:'cp0',text:'get { return noOfBoxes; }',correct:true,slot:0},
+            {id:'cp1',text:'noOfBoxes = value;',correct:true,slot:1},
+            {id:'cp2',text:'arrayBoxAmount = new double[noOfBoxes];',correct:true,slot:2},
+            {id:'cpd1',text:'get { return NoOfBoxes; }',correct:false},
+            {id:'cpd2',text:'noOfBoxes = noOfBoxes;',correct:false},
+            {id:'cpd3',text:'arrayBoxAmount = new double[];',correct:false}
+        ];
+        setupBlocks('cProp',propBlocks,'cPropBlocks');
+        nav.innerHTML='';
+    }
+    else if(cStage===4){
+        // Full view of part C
+        setProgress(50);
+        c.innerHTML=`
+            <div class="teach-section" style="border-color:rgba(46,204,113,.3)">
+                <h3 style="color:#2ecc71">🏗️ Complete FlagDay Class — All 11 Marks</h3>
+                <div class="code-zone" style="border-style:solid;border-color:rgba(46,204,113,.3)">
+<span style="color:#60a5fa">class FlagDay : Event</span> <span style="color:#806040">// [1] header with inheritance</span>
+{
+    <span style="color:#e74c3c">private</span> int noOfBoxes;             <span style="color:#806040">// [1] field</span>
+    <span style="color:#e74c3c">private</span> double[] arrayBoxAmount;   <span style="color:#806040">// [1] array field</span>
+
+    FlagDay(int eventNo, Date eventDate, String branchName,
+            int startTime, int endTime, int noOfBoxes)
+    : <span style="color:#f6ad55">base</span>(eventNo, eventDate, branchName, startTime, endTime) <span style="color:#806040">// [2] base</span>
+    {
+        NoOfBoxes = noOfBoxes; <span style="color:#806040">// [2] property call</span>
+    }
+
+    <span style="color:#2ecc71">public</span> int NoOfBoxes       <span style="color:#806040">// [1] property header</span>
+    {
+        get { return noOfBoxes; }  <span style="color:#806040">// [1] return</span>
+        set
+        {
+            noOfBoxes = value;     <span style="color:#806040">// [1] assignment</span>
+            arrayBoxAmount = new double[noOfBoxes]; <span style="color:#806040">// [1] array init</span>
+        }
+    }
+}</div>
+                <p style="color:#a0d8c0;font-size:.9em;margin-top:10px">Your score for Part (c): <strong>${partScores.c}/11</strong></p>
+            </div>`;
+        nav.innerHTML=`<button class="btn btn-primary" onclick="startPartD()">Part (d): FlagDayIncome →</button>`;
+    }
+}
+
+function animateSetDemo(){
+    const amounts=[45.20,67.80,32.50,51.00,23.90];
+    const narr=document.getElementById('setDemoNarration');
+    narr.textContent='Creating 5 empty slots...';
+    for(let i=0;i<5;i++){
+        setTimeout(()=>{
+            document.getElementById('demoSlot'+i).classList.add('filling');
+        },i*300);
+    }
+    setTimeout(()=>{narr.textContent='Now volunteers bring back their boxes and money is counted...'},1800);
+    for(let i=0;i<5;i++){
+        setTimeout(()=>{
+            document.getElementById('demoVal'+i).textContent='£'+amounts[i].toFixed(2);
+            document.getElementById('demoSlot'+i).style.borderColor='#f6ad55';
+        },2500+i*500);
+    }
+    setTimeout(()=>{narr.innerHTML='Total: £45.20 + £67.80 + £32.50 + £51.00 + £23.90 = <strong style="color:#2ecc71">£220.40</strong>'},5200);
+}
+
+function checkCCon(){
+    const sys=blockSystems['cCon'];
+    let score=0;
+    [0,1,2].forEach(s=>{
+        const slotEl=document.querySelector(`[data-slot="c-con${s}"]`);
+        if(sys.slots[s]===sys.correctMap[s]){slotEl.classList.add('correct');score+=(s===0?1:s===1?2:2)}
+        else{slotEl.classList.add('wrong')}
+    });
+    partScores.c+=score;totalMarks=partScores.a+partScores.b+partScores.c;updateScore();
+    document.getElementById('msCCon').classList.add('show');
+    document.getElementById('navArea').innerHTML=`<button class="btn btn-secondary" onclick="cStage=3;showCStage()">Stage 4: The Property (the tricky bit) →</button>`;
+}
+
+function checkCProp(){
+    const sys=blockSystems['cProp'];
+    let score=0;
+    [0,1,2].forEach(s=>{
+        const slotEl=document.querySelector(`[data-slot="c-prop${s}"]`);
+        if(sys.slots[s]===sys.correctMap[s]){slotEl.classList.add('correct');score++}
+        else{slotEl.classList.add('wrong')}
+    });
+    partScores.c+=score;totalMarks=partScores.a+partScores.b+partScores.c;updateScore();
+    document.getElementById('msCProp').classList.add('show');
+    document.getElementById('navArea').innerHTML=`<button class="btn btn-secondary" onclick="cStage=4;showCStage()">See the complete FlagDay class →</button>`;
+}
+
+// ===== PART D =====
+function startPartD(){
+    document.getElementById('phaseLabel').textContent='Part (d) — FlagDayIncome() Method';
+    document.getElementById('partDisplay').textContent='(d)';
+    setProgress(60);
+    const c=document.getElementById('contentArea');
+    c.innerHTML=`
+        <div class="exam-q"><strong>Q5(d)</strong> Write the code for the method <strong>FlagDayIncome()</strong> in the class FlagDay that will total up and return the income from the boxes for a Flag Day. <span class="marks-badge">[7 marks]</span></div>
+        <div class="teach-section">
+            <h3>📖 Learn First</h3>
+            <p>Remember: FlagDayIncome needs to <strong>loop through all the boxes</strong> and add up the money.</p>
+            <div class="visual">
+                <div class="array-anim">
+                    ${[45.20,67.80,32.50,51.00,23.90].map((v,i)=>`<div class="arr-slot filling"><div class="sidx">[${i}]</div><div class="sval">£${v.toFixed(2)}</div></div>`).join('')}
+                </div>
+                <p style="color:#c0a080;font-size:.85em;margin-top:8px">→ pointer moves through each slot → running total grows → return total</p>
+            </div>
+            <div class="note">💡 Return type: <code>double</code> (money). Parameters: <strong>none</strong> — it uses the object's own array. You need a <code>for</code> loop with a running total.</div>
+        </div>
+        <p style="color:#c0a080;font-size:.9em;margin-bottom:8px">Build the method — click blocks then click slots:</p>
+        <div class="blocks-area" id="dBlocks"></div>
+        <div class="code-zone" id="dZone">
+            <span class="drop-slot" data-slot="d-0" onclick="placeBlock('d',0)"></span><br>
+            <span class="static">{</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="d-1" onclick="placeBlock('d',1)"></span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="d-2" onclick="placeBlock('d',2)"></span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="d-3" onclick="placeBlock('d',3)"></span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="d-4" onclick="placeBlock('d',4)"></span><br>
+            <span class="static">}</span>
+        </div>
+        <div class="text-center"><button class="btn btn-check" onclick="checkPartD()">Check ✓</button></div>
+        <div class="mark-scheme" id="msD">
+            <h4>✅ Mark Scheme — Part (d)</h4>
+            <div class="mark-point"><span class="mp-mark">[1]</span>Header: return type double</div>
+            <div class="mark-point"><span class="mp-mark">[1]</span>No parameters</div>
+            <div class="mark-point"><span class="mp-mark">[1]</span>Initialisation of total to 0</div>
+            <div class="mark-point"><span class="mp-mark">[1]</span>For loop</div>
+            <div class="mark-point"><span class="mp-mark">[1]</span>Running total calculation</div>
+            <div class="mark-point"><span class="mp-mark">[1]</span>Correct array index</div>
+            <div class="mark-point"><span class="mp-mark">[1]</span>Return statement</div>
+        </div>
+    `;
+    const dBlocks=[
+        {id:'d0',text:'public double FlagDayIncome()',correct:true,slot:0},
+        {id:'d1',text:'double total = 0.0;',correct:true,slot:1},
+        {id:'d2',text:'for(int x = 0; x < arrayBoxAmount.Length; x++)',correct:true,slot:2},
+        {id:'d3',text:'total += arrayBoxAmount[x];',correct:true,slot:3},
+        {id:'d4',text:'return total;',correct:true,slot:4},
+        {id:'dd1',text:'public void FlagDayIncome()',correct:false},
+        {id:'dd2',text:'for(int x = 0; x <= arrayBoxAmount.Length; x++)',correct:false},
+        {id:'dd3',text:'total = arrayBoxAmount[x];',correct:false},
+        {id:'dd4',text:'return arrayBoxAmount;',correct:false}
+    ];
+    setupBlocks('d',dBlocks,'dBlocks');
+    document.getElementById('navArea').innerHTML='';
+    window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function checkPartD(){
+    const sys=blockSystems['d'];
+    let score=0;
+    [0,1,2,3,4].forEach(s=>{
+        const slotEl=document.querySelector(`[data-slot="d-${s}"]`);
+        if(sys.slots[s]===sys.correctMap[s]){slotEl.classList.add('correct');score++}
+        else{slotEl.classList.add('wrong')}
+    });
+    // Slot 0 correct = 2 marks (return type + no params), others 1 each
+    const realScore=((sys.slots[0]===sys.correctMap[0])?2:0)+((sys.slots[1]===sys.correctMap[1])?1:0)+((sys.slots[2]===sys.correctMap[2])?1:0)+((sys.slots[3]===sys.correctMap[3])?2:0)+((sys.slots[4]===sys.correctMap[4])?1:0);
+    partScores.d=realScore;totalMarks=partScores.a+partScores.b+partScores.c+realScore;updateScore();
+    document.getElementById('msD').classList.add('show');
+    document.getElementById('navArea').innerHTML=`<button class="btn btn-primary" onclick="startQ6()">Q6: BranchIncome — Polymorphism →</button>`;
+}
+
+// ===== Q6: POLYMORPHISM =====
+let q6Stage=0;
+function startQ6(){
+    document.getElementById('phaseLabel').textContent='Q6 — BranchIncome() — Polymorphism';
+    document.getElementById('partDisplay').textContent='Q6';
+    setProgress(72);
+    q6Stage=0;
+    showQ6Stage();
+}
+
+function showQ6Stage(){
+    const c=document.getElementById('contentArea');
+    const nav=document.getElementById('navArea');
+    window.scrollTo({top:0,behavior:'smooth'});
+
+    if(q6Stage===0){
+        c.innerHTML=`
+            <div class="exam-q"><strong>Q6</strong> Complete the body of the method that will return the total income for an individual fund-raising branch. Call the method HostedIncome or FlagDayIncome as appropriate.<br><br><code>public double BranchIncome(Event[] arrayEvent, String requiredBranch, int currentSize)</code> <span class="marks-badge">[7 marks]</span></div>
+            <div class="teach-section">
+                <h3>📖 The Polymorphism Challenge — Let's Break It Down</h3>
+                <h3 style="margin-top:12px">Step 1: The Mixed Array</h3>
+                <p>The charity stores up to 300 events in an array. But Event is <strong>abstract</strong> — you can't have plain Event objects. So what's actually in there?</p>
+                <div class="poly-visual">
+                    <p style="color:#c0a080;font-size:.85em;margin-bottom:6px">arrayEvent — a mix of Hosted and FlagDay objects:</p>
+                    <div class="pv-array">
+                        ${['🎭','📦','🎭','🎭','📦','🎭','📦','🎭'].map((e,i)=>`<div class="pv-cell ${e==='🎭'?'pv-hosted':'pv-flagday'}">${e}</div>`).join('')}
+                        <div class="pv-cell pv-empty">...</div>
+                    </div>
+                    <p style="font-size:.8em;color:#806040;margin-top:6px">🎭 = Hosted &nbsp; 📦 = FlagDay &nbsp; Currently 84 events stored (currentSize)</p>
+                </div>
+
+                <h3 style="margin-top:16px">Step 2: The Task</h3>
+                <p>Calculate total income for <strong>one specific branch</strong>. That means:</p>
+                <p>1. Loop through the 84 events (not 300!)<br>2. Check if each event belongs to our branch<br>3. If yes, calculate its income and add to total</p>
+
+                <h3 style="margin-top:16px">Step 3: The Type-Checking Problem</h3>
+                <p>Hosted events use <code>HostedIncome()</code> and FlagDay events use <code>FlagDayIncome()</code>. Since the array is of type Event, the compiler only sees each element as an Event — we need to <strong>check what type</strong> it actually is.</p>
+                <div class="visual">
+                    <p style="font-family:'Courier New',monospace;font-size:.9em;color:#e0d0c0">if (arrayEvent[x] <strong style="color:#f6ad55">is</strong> Hosted)</p>
+                    <p style="font-size:.8em;color:#c0a080;margin-top:4px">The "is" keyword checks the actual type of the object</p>
+                </div>
+
+                <h3 style="margin-top:16px;color:#f6ad55">Step 4: Casting</h3>
+                <p>Even after checking, we must <strong>tell C# to treat the object as its actual type</strong> — that's called <strong>casting</strong>:</p>
+                <div class="cast-visual">
+                    <span class="cast-before">arrayEvent[x]</span>
+                    <span class="cast-arrow">→</span>
+                    <span class="cast-after">((Hosted)arrayEvent[x]).HostedIncome()</span>
+                </div>
+                <p style="text-align:center;font-size:.85em;color:#c0a080;margin-top:6px">Without the cast, the compiler doesn't know HostedIncome() exists on an Event</p>
+                <div class="visual" style="margin-top:12px">
+                    <p style="font-family:'Courier New',monospace;font-size:.85em"><span style="color:#e74c3c">arrayEvent[x].HostedIncome()</span> <span style="color:#e74c3c">❌ ERROR</span></p>
+                    <p style="font-family:'Courier New',monospace;font-size:.85em;margin-top:6px"><span style="color:#2ecc71">((Hosted)arrayEvent[x]).HostedIncome()</span> <span style="color:#2ecc71">✅ WORKS</span></p>
+                </div>
+            </div>`;
+        nav.innerHTML=`<button class="btn btn-primary" onclick="q6Stage=1;showQ6Stage()">Now build the code →</button>`;
+    }
+    else if(q6Stage===1){
+        setProgress(80);
+        c.innerHTML=`
+            <p style="color:#c0a080;font-size:.9em;margin-bottom:8px">Build the BranchIncome method body — click blocks then click slots:</p>
+            <div class="blocks-area" id="q6Blocks"></div>
+            <div class="code-zone" id="q6Zone">
+                <span class="drop-slot" data-slot="q6-0" onclick="placeBlock('q6',0)"></span><br>
+                <span class="drop-slot" data-slot="q6-1" onclick="placeBlock('q6',1)"></span><br>
+                <span class="static">{</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="q6-2" onclick="placeBlock('q6',2)"></span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="static">{</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="q6-3" onclick="placeBlock('q6',3)"></span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="q6-4" onclick="placeBlock('q6',4)"></span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="static">else</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="q6-5" onclick="placeBlock('q6',5)"></span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="static">}</span><br>
+                <span class="static">}</span><br>
+                <span class="drop-slot" data-slot="q6-6" onclick="placeBlock('q6',6)"></span>
+            </div>
+            <div class="text-center"><button class="btn btn-check" onclick="checkQ6()">Check ✓</button></div>
+            <div class="mark-scheme" id="msQ6">
+                <h4>✅ Mark Scheme — Q6</h4>
+                <div class="mark-point"><span class="mp-mark">[1]</span>Initialisation of total</div>
+                <div class="mark-point"><span class="mp-mark">[1]</span>Loop using currentSize</div>
+                <div class="mark-point"><span class="mp-mark">[1]</span>Branch name comparison</div>
+                <div class="mark-point"><span class="mp-mark">[1]</span>Check of Event type (is keyword)</div>
+                <div class="mark-point"><span class="mp-mark">[1]</span>Total addition with casting</div>
+                <div class="mark-point"><span class="mp-mark">[1]</span>Income method call with array index</div>
+                <div class="mark-point"><span class="mp-mark">[1]</span>Return total</div>
+            </div>
+        `;
+        const q6Blocks=[
+            {id:'q60',text:'double total = 0.0;',correct:true,slot:0},
+            {id:'q61',text:'for(int x = 0; x < currentSize; x++)',correct:true,slot:1},
+            {id:'q62',text:'if(arrayEvent[x].BranchName.CompareTo(requiredBranch) == 0)',correct:true,slot:2},
+            {id:'q63',text:'if(arrayEvent[x] is Hosted)',correct:true,slot:3},
+            {id:'q64',text:'total += ((Hosted)arrayEvent[x]).HostedIncome();',correct:true,slot:4},
+            {id:'q65',text:'total += ((FlagDay)arrayEvent[x]).FlagDayIncome();',correct:true,slot:5},
+            {id:'q66',text:'return total;',correct:true,slot:6},
+            {id:'q6d1',text:'for(int x = 0; x < 300; x++)',correct:false},
+            {id:'q6d2',text:'if(arrayEvent[x] == requiredBranch)',correct:false},
+            {id:'q6d3',text:'total += arrayEvent[x].HostedIncome();',correct:false}
+        ];
+        setupBlocks('q6',q6Blocks,'q6Blocks');
+        nav.innerHTML='';
+    }
+}
+
+function checkQ6(){
+    const sys=blockSystems['q6'];
+    let score=0;
+    [0,1,2,3,4,5,6].forEach(s=>{
+        const slotEl=document.querySelector(`[data-slot="q6-${s}"]`);
+        if(sys.slots[s]===sys.correctMap[s]){slotEl.classList.add('correct');score++}
+        else{slotEl.classList.add('wrong')}
+    });
+    partScores.q6=score;totalMarks=partScores.a+partScores.b+partScores.c+partScores.d+score;updateScore();
+    document.getElementById('msQ6').classList.add('show');
+    document.getElementById('navArea').innerHTML=`<button class="btn btn-primary" onclick="showResults()">See Final Results →</button>`;
+}
+
+// ===== RESULTS =====
+function showResults(){
+    setProgress(100);
+    showScreen('resultsScreen');
+    document.getElementById('phaseLabel').textContent='Complete!';
+
+    let rank,emoji;
+    if(totalMarks>=28){rank='Chief Architect';emoji='👑'}
+    else if(totalMarks>=22){rank='Senior Developer';emoji='⭐'}
+    else if(totalMarks>=15){rank='Junior Developer';emoji='💻'}
+    else{rank='Trainee';emoji='🌱'}
+
+    document.getElementById('resultsCard').innerHTML=`
+        <div style="font-size:2.5em">${emoji}</div>
+        <div class="results-score">${totalMarks}/31</div>
+        <p style="color:#d4a574;font-size:1.1em;margin-bottom:5px">Rank: <strong>${rank}</strong></p>
+        <div class="results-breakdown">
+            <h4>Score Breakdown</h4>
+            <div class="rb-row"><span>Part (a) — Abstract definition</span><span class="val">${partScores.a}/${partMax.a}</span></div>
+            <div class="rb-row"><span>Part (b) — HostedIncome()</span><span class="val">${partScores.b}/${partMax.b}</span></div>
+            <div class="rb-row"><span>Part (c) — FlagDay class</span><span class="val">${partScores.c}/${partMax.c}</span></div>
+            <div class="rb-row"><span>Part (d) — FlagDayIncome()</span><span class="val">${partScores.d}/${partMax.d}</span></div>
+            <div class="rb-row"><span>Q6 — BranchIncome (polymorphism)</span><span class="val">${partScores.q6}/${partMax.q6}</span></div>
+        </div>
+        <div class="results-actions">
+            <a href="index.html" class="btn btn-secondary">← Back to Hub</a>
+            <a href="activity4.html" class="btn btn-primary">Activity 4: Exam Mode →</a>
+        </div>`;
+}
+</script>
+</body>
+</html>
