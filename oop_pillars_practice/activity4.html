@@ -73,6 +73,26 @@ a{color:#fc8181;text-decoration:none}a:hover{text-decoration:underline}
 /* Examiner tip */
 .examiner-tip{background:rgba(246,173,85,.08);border-left:3px solid #e67e22;padding:10px 14px;border-radius:0 8px 8px 0;margin-top:12px;font-size:.85em;color:#d4a574}
 
+/* Inheritance diagram reference */
+.diagram-toggle{text-align:center;margin-bottom:12px}
+.diagram-toggle button{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#c08080;padding:8px 18px;border-radius:20px;cursor:pointer;font-size:.85em;font-family:inherit;transition:all .3s}
+.diagram-toggle button:hover{background:rgba(255,255,255,.12);color:#feb2b2}
+.diagram-panel{display:none;background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px;margin-bottom:16px;animation:fadeInUp .3s}
+.diagram-panel.show{display:block}
+.diagram-panel h4{color:#feb2b2;margin-bottom:12px;font-size:.9em;text-align:center}
+.diagram-classes{display:flex;flex-direction:column;align-items:center;gap:8px}
+.diagram-class{border-radius:10px;padding:12px 16px;width:100%;max-width:380px;font-size:.82em;font-family:'Courier New',monospace}
+.diagram-class.abstract-class{background:rgba(167,139,250,.1);border:2px solid rgba(167,139,250,.4)}
+.diagram-class.derived-class{background:rgba(96,165,250,.08);border:1px solid rgba(96,165,250,.3)}
+.diagram-class .class-name{font-weight:700;margin-bottom:6px;font-size:.95em}
+.diagram-class .class-name.purple{color:#a78bfa}
+.diagram-class .class-name.blue{color:#60a5fa}
+.diagram-class .class-name.amber{color:#fbbf24}
+.diagram-class .field-list{color:#a08080;line-height:1.7}
+.diagram-arrow{color:#605060;font-size:1.2em;text-align:center}
+.diagram-derived-row{display:flex;gap:10px;width:100%;max-width:380px}
+.diagram-derived-row .diagram-class{flex:1}
+
 /* Results */
 .results-card{background:rgba(255,255,255,.06);border-radius:16px;padding:30px;text-align:center;border:1px solid rgba(255,255,255,.12)}
 .results-score{font-size:2.8em;font-weight:800;color:#fc8181;margin:10px 0}
@@ -88,6 +108,7 @@ a{color:#fc8181;text-decoration:none}a:hover{text-decoration:underline}
 </head>
 <body>
 <div class="container">
+    <div style="margin-bottom:12px"><a href="index.html" style="color:#a06060;font-size:.85em;text-decoration:none">← Back to Hub</a></div>
     <div class="act-header">
         <div class="icon">📝</div>
         <h1>Exam Mode</h1>
@@ -117,6 +138,43 @@ a{color:#fc8181;text-decoration:none}a:hover{text-decoration:underline}
             <div class="sb-item">Part: <strong id="currentPart">—</strong></div>
             <div class="sb-item">Marks: <strong id="marksDisplay">0</strong>/31</div>
         </div>
+        <div class="diagram-toggle"><button onclick="toggleDiagram()">📐 Show Inheritance Diagram</button></div>
+        <div class="diagram-panel" id="diagramPanel">
+            <h4>📐 Class Inheritance Diagram — Reference</h4>
+            <div class="diagram-classes">
+                <div class="diagram-class abstract-class">
+                    <div class="class-name purple">abstract class Event</div>
+                    <div class="field-list">
+                        int eventNo<br>
+                        Date eventDate<br>
+                        String branchName<br>
+                        int startTime<br>
+                        int endTime
+                    </div>
+                </div>
+                <div class="diagram-arrow">▼ inherits ▼</div>
+                <div class="diagram-derived-row">
+                    <div class="diagram-class derived-class">
+                        <div class="class-name amber">class Hosted : Event</div>
+                        <div class="field-list">
+                            double ticketCharge<br>
+                            double venueChargePerPerson<br>
+                            int noAttended<br>
+                            double donation<br>
+                            String eventType<br>
+                            String organiser
+                        </div>
+                    </div>
+                    <div class="diagram-class derived-class">
+                        <div class="class-name blue">class FlagDay : Event</div>
+                        <div class="field-list">
+                            int noOfBoxes<br>
+                            double[] arrayBoxAmount
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="examContent"></div>
         <div class="text-center" style="margin-top:16px" id="examNav"></div>
     </div>
@@ -136,6 +194,13 @@ const maxMarks={a:2,b:4,c:11,d:7,q6:7};
 function setProgress(p){document.getElementById('progressFill').style.width=p+'%'}
 function showScreen(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
 function updateMarks(){document.getElementById('marksDisplay').textContent=totalMarks}
+
+function toggleDiagram(){
+    const panel=document.getElementById('diagramPanel');
+    const btn=document.querySelector('.diagram-toggle button');
+    panel.classList.toggle('show');
+    btn.textContent=panel.classList.contains('show')?'📐 Hide Inheritance Diagram':'📐 Show Inheritance Diagram';
+}
 
 function startExam(){
     timerEnabled=document.getElementById('timerToggle').checked;

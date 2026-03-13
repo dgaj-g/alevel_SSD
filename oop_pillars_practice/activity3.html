@@ -79,7 +79,7 @@ a{color:#f6ad55;text-decoration:none}a:hover{text-decoration:underline}
 .drag-block{padding:8px 14px;background:rgba(246,173,85,.15);border:1px solid rgba(246,173,85,.4);border-radius:8px;font-family:'Courier New',monospace;font-size:.85em;color:#fbd38d;cursor:grab;user-select:none;transition:all .3s}
 .drag-block:active{cursor:grabbing;transform:scale(1.05)}
 .drag-block.used{opacity:.3;cursor:default;pointer-events:none}
-.drag-block.distractor{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.15);color:#c0a080}
+.drop-slot.drag-over{border-color:#f6ad55;background:rgba(246,173,85,.15)}
 
 /* Mark scheme reveal */
 .mark-scheme{background:rgba(46,204,113,.08);border:1px solid rgba(46,204,113,.3);border-radius:12px;padding:16px 20px;margin:16px 0;display:none}
@@ -127,6 +127,7 @@ a{color:#f6ad55;text-decoration:none}a:hover{text-decoration:underline}
 </head>
 <body>
 <div class="container">
+    <div style="margin-bottom:12px"><a href="index.html" style="color:#c09060;font-size:.85em;text-decoration:none">← Back to Hub</a></div>
     <div class="act-header">
         <div class="icon">🔨</div>
         <h1>Code Builder</h1>
@@ -275,6 +276,7 @@ function startPartB(){
         {id:'bd4',text:'return ticketCharge - venueChargePerPerson + donation;',correct:false}
     ];
     setupBlocks('b',blocks,'bBlocks');
+    initDropZones('b');
     document.getElementById('navArea').innerHTML='';
     window.scrollTo({top:0,behavior:'smooth'});
 }
@@ -290,9 +292,19 @@ function setupBlocks(prefix,blocks,containerId){
     container.innerHTML='';
     shuffled.forEach(b=>{
         const el=document.createElement('div');
-        el.className='drag-block'+(b.correct?'':' distractor');
+        el.className='drag-block';
         el.textContent=b.text;
         el.dataset.id=b.id;
+        el.draggable=true;
+        el.addEventListener('dragstart',e=>{
+            e.dataTransfer.setData('text/plain',b.id);
+            e.dataTransfer.effectAllowed='move';
+            selectedBlock=b.id;
+            el.style.opacity='0.5';
+        });
+        el.addEventListener('dragend',()=>{
+            el.style.opacity=el.classList.contains('used')?'0.3':'1';
+        });
         el.onclick=()=>selectBlock(prefix,b.id,el);
         container.appendChild(el);
     });
@@ -325,6 +337,24 @@ function placeBlock(prefix,slot){
     selectedBlock=null;
 }
 function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+
+function initDropZones(prefix){
+    const zone=document.getElementById(prefix+'Zone');
+    if(!zone)return;
+    zone.querySelectorAll('.drop-slot').forEach(slot=>{
+        slot.addEventListener('dragover',e=>{e.preventDefault();slot.classList.add('drag-over')});
+        slot.addEventListener('dragleave',()=>{slot.classList.remove('drag-over')});
+        slot.addEventListener('drop',e=>{
+            e.preventDefault();slot.classList.remove('drag-over');
+            const blockId=e.dataTransfer.getData('text/plain');
+            if(!blockId)return;
+            const sa=slot.dataset.slot;
+            const slotNum=parseInt(sa.includes('-')?sa.split('-').pop():sa);
+            selectedBlock=blockId;
+            placeBlock(prefix,slotNum);
+        });
+    });
+}
 
 function checkPartB(){
     const sys=blockSystems['b'];
@@ -384,7 +414,7 @@ function showCStage(){
         area.innerHTML='';
         shuffle(opts).forEach(o=>{
             const el=document.createElement('div');
-            el.className='drag-block'+(o.correct?'':' distractor');
+            el.className='drag-block';
             el.textContent=o.text;
             el.style.cursor='pointer';
             el.onclick=()=>{
@@ -423,7 +453,7 @@ function showCStage(){
         let picked=new Set();
         shuffle(picks).forEach(p=>{
             const el=document.createElement('div');
-            el.className='drag-block'+(p.correct?'':' distractor');
+            el.className='drag-block';
             el.style.cursor='pointer';el.style.marginBottom='6px';el.style.display='block';
             el.textContent=p.text;
             el.onclick=()=>{
@@ -463,10 +493,10 @@ function showCStage(){
             <p style="color:#c0a080;font-size:.9em;margin-bottom:8px">Build the constructor — click blocks then click slots:</p>
             <div class="blocks-area" id="cConBlocks"></div>
             <div class="code-zone" id="cConZone">
-                <span class="drop-slot" data-slot="c-con0" onclick="placeBlock('cCon',0)"></span><br>
-                <span class="drop-slot" data-slot="c-con1" onclick="placeBlock('cCon',1)"></span><br>
+                <span class="drop-slot" data-slot="cCon-0" onclick="placeBlock('cCon',0)"></span><br>
+                <span class="drop-slot" data-slot="cCon-1" onclick="placeBlock('cCon',1)"></span><br>
                 <span class="static">{</span><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="c-con2" onclick="placeBlock('cCon',2)"></span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="cCon-2" onclick="placeBlock('cCon',2)"></span><br>
                 <span class="static">}</span>
             </div>
             <div class="text-center"><button class="btn btn-check" onclick="checkCCon()">Check ✓</button></div>
@@ -487,6 +517,7 @@ function showCStage(){
             {id:'ccd3',text:'noOfBoxes = noOfBoxes;',correct:false}
         ];
         setupBlocks('cCon',conBlocks,'cConBlocks');
+        initDropZones('cCon');
         nav.innerHTML='';
     }
     else if(cStage===3){
@@ -538,11 +569,11 @@ function showCStage(){
             <div class="code-zone" id="cPropZone">
                 <span class="static">public int NoOfBoxes</span><br>
                 <span class="static">{</span><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="c-prop0" onclick="placeBlock('cProp',0)"></span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="cProp-0" onclick="placeBlock('cProp',0)"></span><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;<span class="static">set</span><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;<span class="static">{</span><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="c-prop1" onclick="placeBlock('cProp',1)"></span><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="c-prop2" onclick="placeBlock('cProp',2)"></span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="cProp-1" onclick="placeBlock('cProp',1)"></span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="drop-slot" data-slot="cProp-2" onclick="placeBlock('cProp',2)"></span><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;<span class="static">}</span><br>
                 <span class="static">}</span>
             </div>
@@ -564,6 +595,7 @@ function showCStage(){
             {id:'cpd3',text:'arrayBoxAmount = new double[];',correct:false}
         ];
         setupBlocks('cProp',propBlocks,'cPropBlocks');
+        initDropZones('cProp');
         nav.innerHTML='';
     }
     else if(cStage===4){
@@ -624,7 +656,7 @@ function checkCCon(){
     const sys=blockSystems['cCon'];
     let score=0;
     [0,1,2].forEach(s=>{
-        const slotEl=document.querySelector(`[data-slot="c-con${s}"]`);
+        const slotEl=document.querySelector(`[data-slot="cCon-${s}"]`);
         if(sys.slots[s]===sys.correctMap[s]){slotEl.classList.add('correct');score+=(s===0?1:s===1?2:2)}
         else{slotEl.classList.add('wrong')}
     });
@@ -637,7 +669,7 @@ function checkCProp(){
     const sys=blockSystems['cProp'];
     let score=0;
     [0,1,2].forEach(s=>{
-        const slotEl=document.querySelector(`[data-slot="c-prop${s}"]`);
+        const slotEl=document.querySelector(`[data-slot="cProp-${s}"]`);
         if(sys.slots[s]===sys.correctMap[s]){slotEl.classList.add('correct');score++}
         else{slotEl.classList.add('wrong')}
     });
@@ -700,6 +732,7 @@ function startPartD(){
         {id:'dd4',text:'return arrayBoxAmount;',correct:false}
     ];
     setupBlocks('d',dBlocks,'dBlocks');
+    initDropZones('d');
     document.getElementById('navArea').innerHTML='';
     window.scrollTo({top:0,behavior:'smooth'});
 }
@@ -820,6 +853,7 @@ function showQ6Stage(){
             {id:'q6d3',text:'total += arrayEvent[x].HostedIncome();',correct:false}
         ];
         setupBlocks('q6',q6Blocks,'q6Blocks');
+        initDropZones('q6');
         nav.innerHTML='';
     }
 }
