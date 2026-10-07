@@ -48,11 +48,11 @@ export async function runRounds(stage, api, rounds, opts = {}) {
     const res = await r.run(box, ctx);
     if (!res) return;
     score += res.score; max += res.max;
-    notes.push({ title: r.title, score: res.score, max: res.max });
+    notes.push({ title: r.title, score: res.score, max: res.max, label: res.label });
   }
   api.progress(rounds.length, rounds.length);
   const detail = notes.length > 1 ? h('table', { class: 'grid' },
-    h('tbody', null, notes.map((n) => h('tr', null, h('td', null, n.title), h('td', { class: 'c' }, `${n.score} / ${n.max}`))))) : null;
+    h('tbody', null, notes.map((n) => h('tr', null, h('td', null, n.title), h('td', { class: 'c' }, n.label || `${n.score} / ${n.max}`))))) : null;
   api.finish({ score, max, detail: opts.detail || detail });
 }
 
@@ -120,21 +120,25 @@ export function realResult(expect) {
   return con.el;
 }
 
-// A console that replays a run: ['out', text] · ['in', what was typed] · ['crash', exception, message].
+// A console that replays a run: ['out', text] · ['in', what was typed] · ['crash', exception, message] · ['sys', a note].
 export function transcript(ev, opts = {}) {
   const con = consolePanel(opts);
   playEvents(con, ev);
   return con;
 }
 export function playEvents(con, ev) {
+  let partial = false; // a prompt is waiting on its line
   for (const e of ev) {
-    if (e[0] === 'in') { con.write(e[1] || '', 'in'); con.print(); continue; }
+    if (e[0] === 'in') { con.write(e[1] || '', 'in'); con.print(); partial = false; continue; }
     if (e[0] === 'crash') {
       con.print(`Unhandled exception. System.${e[1]}: ${e[2]}`, 'err');
       con.print('(the program stops here)', 'sys');
+      partial = false;
       continue;
     }
+    if (e[0] === 'sys') { if (partial) con.print(); con.print(e[1], 'sys'); partial = false; continue; }
     const parts = e[1].split('\n');
     parts.forEach((p, i) => { if (i < parts.length - 1) con.print(p); else if (p) con.write(p); });
+    partial = parts[parts.length - 1] !== '' || (partial && parts.length === 1);
   }
 }

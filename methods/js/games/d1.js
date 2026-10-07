@@ -7,7 +7,7 @@ import { EN_BOARD, EN_TRAPS, EN_RUN, ES_BOARD, ES_TRAPS, ES_RUN, CALL_TASKS } fr
 
 const pad = (d) => '    '.repeat(d);
 
-function parsonsRound({ title, intro, rows, traps, run, runNote, closing }) {
+export function parsonsRound({ title, intro, rows, traps, run, runNote, closing }) {
   return {
     title,
     intro,
@@ -23,7 +23,7 @@ function parsonsRound({ title, intro, rows, traps, run, runNote, closing }) {
       const slots = [];
       const cboard = h('div', { class: 'codeboard' }, rows.map((r) => {
         if (!r.slot) return h('div', { class: 'crow' }, codeSpan(pad(r.d) + r.t));
-        const s = board.slot(h('div', { class: 'cslot' + (r.d > 1 ? ' d' + r.d : '') }));
+        const s = board.slot(h('div', { class: 'cslot d' + r.d }));
         slots.push(s);
         return s;
       }));
@@ -53,7 +53,7 @@ function parsonsRound({ title, intro, rows, traps, run, runNote, closing }) {
         placedTraps.forEach((tr) => box.append(h('div', { class: 'card mt' },
           h('p', { class: 'bigq', style: { margin: '0 0 6px' } }, icon('x'), ' ', codeInline(tr.t)),
           para(tr.why),
-          h('div', { class: 'mt-s' }, tr.expect.msgs ? realResult(tr.expect) : transcript(tr.ev).el))));
+          h('div', { class: 'mt-s' }, tr.ev ? transcript(tr.ev).el : realResult(tr.expect)))));
         box.append(h('div', { class: 'split mt' },
           h('div', null, para(runNote, 'note'), transcript(run.ev).el),
           explain(closing)));
