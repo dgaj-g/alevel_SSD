@@ -754,3 +754,5 @@ pre.mine.mono { font-family: var(--mono); font-size: 13.5px; white-space: pre; w
   .prac-prog .code pre, .code.tall pre { max-height: 60vh; }
 }
 @media (prefers-reduced-motion: reduce) { .code .ln.flash { animation: none; } }
+/* grid children never widen the page: wide code scrolls inside its own box */
+.split > *, .prac-prog { min-width: 0; }

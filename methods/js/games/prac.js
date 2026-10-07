@@ -323,7 +323,7 @@ function ownRound(O, title) {
       const mine = text
         ? h('div', { class: 'card' }, h('p', { class: 'note', style: { margin: '0 0 6px' } }, 'Your code'), h('pre', { class: 'mine mono' }, text))
         : h('div', { class: 'card' }, para('Put your paper answer beside you and check it against the list.', 'note'));
-      const model = h('div', { class: 'card model-card' }, h('p', { class: 'bigq', style: { margin: '0 0 8px' } }, 'Model answer'), codeBlock(O.model, { title: 'Model answer' }).el);
+      const model = h('div', { class: 'card model-card' }, h('p', { class: 'bigq', style: { margin: '0 0 8px' } }, 'Model answer'), codeBlock(O.model, { title: 'Program.cs' }).el);
       const list = h('div', { class: 'card' },
         h('p', { class: 'bigq', style: { margin: '0 0 4px' } }, 'Does your code have…'),
         text && O.points.some((p) => p.find) ? para('"Spotted" only means the words are there — you decide whether the code is right.', 'note') : null,
