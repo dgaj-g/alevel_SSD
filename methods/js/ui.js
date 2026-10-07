@@ -215,7 +215,7 @@ export function consolePanel(opts = {}) {
 // The Visual Studio "Error List" for programs that will not build.
 export function errorList(errors) {
   return h('div', { class: 'errlist' },
-    h('div', { class: 'bar' }, icon('x'), `Error List — ${errors.length} error${errors.length === 1 ? '' : 's'} · the program did not build`),
+    h('div', { class: 'bar' }, icon('x'), 'Error List · the program did not build'),
     errors.map(([code, msg]) => h('div', { class: 'e' }, icon('x'), h('span', { class: 'cs' }, code), h('span', null, msg))));
 }
 

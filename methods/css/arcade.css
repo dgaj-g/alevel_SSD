@@ -733,3 +733,24 @@ pre.mine.mono { font-family: var(--mono); font-size: 13.5px; white-space: pre; w
 .vrow2 .vcode { flex: 1 1 260px; min-width: 0; overflow-x: auto; font-size: 14.5px; white-space: pre; }
 .vres { padding: 0 4px 6px; }
 .callhead { display: grid; gap: 6px; }
+/* F — the practicals */
+.choice.mono { white-space: pre; overflow-x: auto; text-align: left; }
+.choice .nothing { font-family: var(--body); font-style: italic; color: var(--muted, #9AA4B2); }
+.fixv { display: grid; gap: 2px; }
+.fixl { display: block; }
+.code.tall pre { max-height: calc(100vh - 210px); overflow: auto; }
+.prac-build { grid-template-columns: 1fr 1.1fr; }
+.prac-prog { position: sticky; top: 74px; align-self: start; }
+.prac-prog .code pre { max-height: calc(100vh - 200px); overflow: auto; }
+.code .ln.gapln { background: rgba(251,191,36,.08); box-shadow: inset 3px 0 0 rgba(251,191,36,.55); }
+.code .ln.gapln .t { color: var(--amber); font-style: italic; opacity: .85; }
+.code .ln.gapfill { background: rgba(34,211,238,.08); box-shadow: inset 3px 0 0 var(--cyan); }
+.code .ln.flash { animation: flashfill .9s ease 1; }
+@keyframes flashfill { 0% { background: rgba(34,211,238,.45); } 100% { background: rgba(34,211,238,.08); } }
+.card.step .choices { margin-top: 4px; }
+@media (max-width: 760px) {
+  .prac-build { grid-template-columns: 1fr; }
+  .prac-prog { position: static; }
+  .prac-prog .code pre, .code.tall pre { max-height: 60vh; }
+}
+@media (prefers-reduced-motion: reduce) { .code .ln.flash { animation: none; } }
