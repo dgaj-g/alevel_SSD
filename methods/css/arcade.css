@@ -1,4 +1,5 @@
 /* Methods Arcade — neon arcade at night. Topic 3 accent: magenta. */
+[hidden] { display: none !important; }
 :root {
   --ink: #0B0716;
   --ink2: #120A22;
@@ -553,3 +554,40 @@ table.grid td.c, table.grid th.c { text-align: center; }
 .hdr .slot { min-width: 0; min-height: 50px; }
 .hdr .slot .chip { justify-content: center; }
 @media (max-width: 760px) { .hdr .seg { min-width: calc(50% - 10px); } .hdr .seg .tx { font-size: 16px; } }
+
+/* ---------- zone B ---------- */
+.statrow { display: flex; gap: 10px; flex-wrap: wrap; align-items: stretch; margin-bottom: 14px; }
+.statrow .combo { margin-left: auto; align-self: center; }
+.hlword { background: rgba(34,211,238,.18); outline: 2px solid var(--cyan); border-radius: 5px; padding: 1px 3px; margin: 0 1px; }
+.bigline { font-family: var(--mono); font-size: clamp(16px, 3.2vw, 22px); line-height: 1.6; background: #1E1E1E; border: 1px solid var(--line); border-radius: var(--r); padding: 22px 18px; overflow-x: auto; white-space: pre; text-align: center; }
+.bigline.flash-good { animation: flashgood .5s ease; }
+@keyframes flashgood { 30% { box-shadow: 0 0 0 4px rgba(163,230,53,.55); } }
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+.duo .btn { min-height: 64px; font-size: 20px; justify-content: center; }
+.duo .btn kbd { font-family: var(--mono); font-size: 12px; opacity: .65; border: 1px solid currentColor; border-radius: 5px; padding: 0 5px; margin-left: 6px; }
+.predict { display: grid; gap: 6px; }
+.predict .pl { display: flex; align-items: center; gap: 8px; }
+.predict .pl input { flex: 1; min-width: 0; background: transparent; border: 0; border-bottom: 1px dashed #5B5B5B; color: #E6E6E6; font: inherit; padding: 4px 2px; }
+.predict .pl input:focus { outline: none; border-bottom-color: var(--cyan); }
+.predict .pl .mk svg { width: 18px; height: 18px; }
+.predict .pl.right .mk { color: var(--good); }
+.predict .pl.wrong .mk { color: var(--bad); }
+.predict .pl .want { color: var(--good); font-size: 13px; white-space: nowrap; }
+.callline { font-family: var(--mono); font-size: clamp(15px, 2.8vw, 20px); line-height: 2.1; background: #1E1E1E; border: 1px solid var(--line); border-radius: var(--r); padding: 18px; overflow-x: auto; white-space: pre; }
+.callline .call { border-radius: 6px; padding: 3px 2px; cursor: pointer; outline: 1px dashed rgba(255,255,255,.28); outline-offset: 1px; }
+.callline .call:hover, .callline .call:focus-visible { outline: 2px solid var(--cyan); background: rgba(34,211,238,.12); }
+.callline .call.nope { animation: shake .35s ease; outline-color: var(--bad); }
+.callline .call.now { outline: 2px solid var(--amber); background: rgba(250,204,21,.14); cursor: default; }
+.callline .val { color: #B5CEA8; background: rgba(163,230,53,.16); border-radius: 6px; padding: 2px 4px; animation: pop .35s ease; }
+.callline.locked .call { cursor: default; outline-color: transparent; }
+.valrow { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 12px; }
+.valrow .field { max-width: 220px; }
+@media (max-width: 760px) { .duo .btn { min-height: 56px; font-size: 18px; } }
+.markline { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; }
+.markline > svg { width: 18px; height: 18px; flex: none; margin-top: 3px; }
+.markline p { margin: 0; }
+.markline.ok > svg { color: var(--good); }
+.markline.no > svg { color: var(--bad); }
+.markline.info > svg { color: var(--cyan); }
+.model { margin-top: 8px; padding: 8px 12px; border-radius: 10px; background: #1E1E1E; border: 1px solid var(--line); overflow-x: auto; white-space: nowrap; }
+.model > span:first-child { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--good); margin-bottom: 2px; font-family: var(--body); }
