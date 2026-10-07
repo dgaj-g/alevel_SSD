@@ -74,8 +74,8 @@ export function createBoard(opts = {}) {
     zoneOf,
     data(chip) { return chip.__data; },
     contents(zone) { return [...zone.querySelectorAll(':scope > .chip')]; },
-    lock() { locked = true; select(null); zones.forEach((z) => z.classList.remove('target', 'over')); zoneChips().forEach((c) => c.classList.add('locked')); },
-    unlock() { locked = false; zoneChips().forEach((c) => c.classList.remove('locked')); },
+    lock() { locked = true; select(null); zones.forEach((z) => { z.classList.remove('target', 'over'); if (z.__zone.tray) z.classList.add('static'); }); zoneChips().forEach((c) => c.classList.add('locked')); },
+    unlock() { locked = false; zones.forEach((z) => z.__zone.tray && z.classList.remove('static')); zoneChips().forEach((c) => c.classList.remove('locked')); },
     get locked() { return locked; },
     refresh,
   };

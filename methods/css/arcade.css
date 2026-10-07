@@ -639,3 +639,32 @@ table.grid td.c, table.grid th.c { text-align: center; }
   .trace input { width: 2.9em; font-size: 15px; }
   .trace td:first-child { font-size: 12.5px; white-space: normal; }
 }
+/* ---- zone D ---- */
+.scheme { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 0 14px; align-items: stretch; }
+.scheme .sc { display: flex; flex-direction: column; justify-content: center; background: #1E1E1E; border: solid #3C3C3C; border-width: 0 1px; padding: 3px 14px; font-size: 14px; line-height: 1.55; color: #D4D4D4; white-space: pre; overflow-x: auto; }
+.scheme .sc.first { border-top-width: 1px; border-radius: 12px 12px 0 0; padding-top: 10px; }
+.scheme .sc.last { border-bottom-width: 1px; border-radius: 0 0 12px 12px; padding-bottom: 10px; }
+.scheme .sslot { min-height: 46px; min-width: 0; margin: 4px 0; align-self: center; }
+.scheme .sslot .cwant { white-space: normal; font-family: var(--body); }
+.scheme .sgap { min-height: 1px; }
+.mrows { display: grid; gap: 6px; }
+.mrow { display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 6px 10px; border-radius: 10px; background: var(--panel2); border: 1px solid var(--line); }
+.mrow .mlabel { flex: 1 1 180px; min-width: 0; }
+.mrow .mlabel p { margin: 0; font-size: 15px; }
+.mrow .tog button { padding: 6px 10px; font-size: 14px; }
+.goal { display: grid; gap: 4px; }
+.goal .gl { display: flex; gap: 8px; align-items: flex-start; font-size: 15px; color: var(--muted); }
+.goal .gl svg { width: 18px; height: 18px; flex: none; margin-top: 2px; color: var(--dim); }
+.goal .gl.met { color: var(--text); }
+.goal .gl.met svg { color: var(--good); }
+.goal .gl.lost svg { color: var(--bad); }
+.typed { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.typed code { background: #1E1E1E; border: 1px solid #3C3C3C; border-radius: 6px; padding: 2px 6px; font-family: var(--mono); font-size: 14px; white-space: pre; }
+@media (max-width: 760px) {
+  .scheme { grid-template-columns: 1fr; gap: 0; }
+  .scheme .sslot { margin: 6px 0 12px; }
+  .scheme .sgap { display: none; }
+}
+@media (max-width: 760px) { .split.rev-m > :last-child { order: -1; } }
+.cwant { display: flex; gap: 6px; align-items: center; padding: 4px 10px 2px; font-size: 13.5px; white-space: pre; overflow-x: auto; }
+.cwant svg { width: 16px; height: 16px; color: var(--good); flex: none; }

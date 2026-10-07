@@ -119,3 +119,22 @@ export function realResult(expect) {
   outLines(expect.out).forEach((l) => con.print(l));
   return con.el;
 }
+
+// A console that replays a run: ['out', text] · ['in', what was typed] · ['crash', exception, message].
+export function transcript(ev, opts = {}) {
+  const con = consolePanel(opts);
+  playEvents(con, ev);
+  return con;
+}
+export function playEvents(con, ev) {
+  for (const e of ev) {
+    if (e[0] === 'in') { con.write(e[1] || '', 'in'); con.print(); continue; }
+    if (e[0] === 'crash') {
+      con.print(`Unhandled exception. System.${e[1]}: ${e[2]}`, 'err');
+      con.print('(the program stops here)', 'sys');
+      continue;
+    }
+    const parts = e[1].split('\n');
+    parts.forEach((p, i) => { if (i < parts.length - 1) con.print(p); else if (p) con.write(p); });
+  }
+}
