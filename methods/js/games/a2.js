@@ -34,7 +34,7 @@ export default {
             }));
             (pts === ADVANTAGES.length ? sfx.good : sfx.bad)();
             box.append(fb(pts === ADVANTAGES.length ? 'good' : 'bad', `${pts} of ${ADVANTAGES.length} sorted right.`),
-              whys.length ? explain(whys) : null,
+              whys.length ? explain(whys) : '',
               explain(['Any three of these five phrases: reuse of code — the same lines are written once and used wherever they are needed · structured design that simplifies the solution — a big problem broken into named jobs · several developers can work on different methods at once · faster development · simpler testing — each method can be tested on its own.',
                 'Write a phrase, not a word.']));
           }, 'Check', note);

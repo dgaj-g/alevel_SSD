@@ -97,7 +97,7 @@ export default {
             outLines(BOARD_OUT).forEach((l) => con.print(l));
             box.append(
               fb(full ? 'good' : 'bad', `${pts} of 10 gaps right.`, full ? 'Same output as before — the school\'s name now lives on one line.' : 'The ticks and crosses show which gaps are wrong. The fixed program prints this:'),
-              notes.size ? explain([...notes]) : null,
+              notes.size ? explain([...notes]) : '',
               h('div', { class: 'mt' }, con.el),
               explain(['A named block of code that does one job is a method. The block goes ABOVE Main, inside the class; the four calls go inside Main.']));
           }, 'Check', gapNote);
