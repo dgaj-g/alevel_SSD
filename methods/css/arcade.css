@@ -804,3 +804,37 @@ mark.spotm { background: rgba(251,191,36,.28); color: inherit; border-radius: 4p
   .flipcard .face .a { font-size: 18px; }
 }
 @media (prefers-reduced-motion: reduce) { .flipcard .inner { transition: none; } }
+
+/* ---------- H · Final Challenge ---------- */
+.hhud { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 14px; }
+.hhud .pill { font-size: 14px; font-weight: 700; background: var(--panel3); color: var(--muted); border-radius: 99px; padding: 4px 11px; }
+.hhud.intro { margin: 16px 0 0; }
+.hearts { display: inline-flex; gap: 4px; margin-right: 6px; }
+.heart { display: inline-flex; color: var(--dim); }
+.heart svg { width: 28px; height: 28px; }
+.heart.full { color: var(--mag); }
+.heart.full svg { fill: currentColor; filter: drop-shadow(0 0 6px rgba(244,114,182,.45)); }
+.heart.lost { animation: heartlost .6s ease; }
+@keyframes heartlost { 0% { transform: scale(1.35); color: var(--bad); } 60% { transform: scale(.85); } 100% { transform: scale(1); } }
+.olines { display: flex; flex-direction: column; font-family: var(--mono); font-size: 15px; text-align: left; white-space: pre; }
+.hstages { display: grid; gap: 12px; }
+.hst { display: flex; align-items: center; gap: 14px; }
+.hnum { flex: none; width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; font-family: var(--display); font-weight: 700; font-size: 19px; background: var(--mag-deep); color: #fff; }
+.hname { margin: 0; font-weight: 700; font-size: 18px; }
+.hst .note { margin: 2px 0 0; }
+.hclear { text-align: center; padding: 28px 20px; }
+.hclear h3 { font-family: var(--display); font-size: 28px; margin: 6px 0 10px; }
+.hclear p { margin: 6px 0; }
+.hbadge { display: inline-grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; background: var(--good-bg); color: var(--good); }
+.hbadge svg { width: 34px; height: 34px; }
+.hmissed { margin-top: 12px; }
+.hm { padding: 8px 0; border-top: 1px solid var(--line); }
+.hm .hmq { margin: 0 0 4px; font-weight: 700; font-size: 15px; }
+.hma { display: flex; align-items: flex-start; gap: 6px; color: var(--good); font-size: 15px; }
+.hma svg { flex: none; width: 17px; height: 17px; margin-top: 2px; }
+.hma .olines { color: var(--text); font-size: 14px; }
+@media (prefers-reduced-motion: reduce) { .heart.lost { animation: none; } }
+.hm .code.mini { margin: 4px 0 6px; font-size: 12.5px; }
+.hm .code.mini pre { padding: 6px 0; }
+.hm .code.mini .ln { min-height: 1.45em; }
+.hm .code.mini .ln .n { width: 30px; padding-right: 10px; }
