@@ -534,3 +534,22 @@ table.grid td.c, table.grid th.c { text-align: center; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* ---------- code board (slots inside code) ---------- */
+.codeboard { background: #1E1E1E; border: 1px solid #3C3C3C; border-radius: 12px; padding: 12px 14px; font-family: var(--mono); font-size: 14.5px; color: #D4D4D4; box-shadow: var(--shadow); overflow-x: auto; }
+.codeboard .crow { white-space: pre; min-height: 1.6em; line-height: 1.6; }
+.codeboard .cap { font-family: var(--body); font-size: 13px; color: #9A9A9A; margin: 8px 0 2px; }
+.codeboard .cap:first-child { margin-top: 0; }
+.codeboard .cslot { margin: 4px 0 4px 32px; min-height: 46px; min-width: 0; }
+.codeboard .cslot.d2 { margin-left: 64px; }
+.codeboard .cslot.d3 { margin-left: 96px; }
+.codeboard .chip { box-shadow: none; }
+@media (max-width: 760px) { .codeboard { font-size: 13px; padding: 10px; } .codeboard .cslot { margin-left: 14px; } .codeboard .cslot.d2 { margin-left: 26px; } .codeboard .cslot.d3 { margin-left: 38px; } }
+
+/* ---------- header anatomy ---------- */
+.hdr { display: flex; gap: 10px; flex-wrap: wrap; align-items: stretch; background: #1E1E1E; border: 1px solid #3C3C3C; padding: 14px; border-radius: 12px; }
+.hdr .seg { display: flex; flex-direction: column; gap: 10px; flex: 1 1 auto; min-width: 120px; }
+.hdr .seg .tx { font-family: var(--mono); font-size: 20px; padding: 6px 10px; border-bottom: 3px solid #555; text-align: center; white-space: pre; }
+.hdr .slot { min-width: 0; min-height: 50px; }
+.hdr .slot .chip { justify-content: center; }
+@media (max-width: 760px) { .hdr .seg { min-width: calc(50% - 10px); } .hdr .seg .tx { font-size: 16px; } }
