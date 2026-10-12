@@ -1,0 +1,9 @@
+{
+  "_note": "AS overrides of the A2 platform strings (DESIGN_SPEC 14.3). Every other string is A2's.",
+  "app.title": "AS Software Systems Development",
+  "staff.title": "AS Software Systems Development · Staff",
+  "staff.archived": "These attempts are kept in the AS SSD - Archive Sheet.",
+  "staff.act.archived": "Older answers kept in the AS SSD - Archive Sheet are not listed here.",
+  "cw.crumbHome": "AS SSD",
+  "home.cwSub": "Build your own game in Visual Studio 2019, one chapter at a time."
+}

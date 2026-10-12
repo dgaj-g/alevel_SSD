@@ -1,0 +1,11 @@
+T PASS — 10 checks, 0 failures
+PASS T1 open creates w: with o=1, f, l — {"k":"","o":1,"f":500000,"l":500000,"a":"","d":0,"c":0,"r":0}
+PASS T1 screen sets a — 6-9
+PASS T2 tick on sets bits, nothing else moves — k=9
+PASS T2 tick off clears that bit only — ["2-1.1"]
+PASS T3 copy and reveal count up — c=2 r=1
+PASS T4 done sets d to the minute — d=500005
+PASS T5 download counts D[file] — {"summit-ready-files.zip":2}
+PASS T6 unknown or unbuilt chapter, bad step, oversize payload, unknown file refused with bad-key — bad-key,bad-key,bad-key,bad-key,bad-key,bad-key,bad-key
+PASS T6 stored value length unchanged after the refusals — 291 → 291
+PASS T* each op touches the activity session (Last seen moves) — {"seen":500020,"last":[500020,500020,1,0]}

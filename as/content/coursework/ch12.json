@@ -1,0 +1,5190 @@
+{
+ "id": "12",
+ "n": 12,
+ "of": 20,
+ "title": "Build Knot Pairs, a memory game with cards made by code",
+ "kind": "a game chapter: build one game from each pair, and this pair is chapters 11 and 12",
+ "one": "You build Knot Pairs in your own project, exactly as it is in Summit Ready, and test it. Then you change it into a memory game on your own topic.",
+ "prev": {
+  "id": "11",
+  "n": 11,
+  "title": "Pack the Rucksack"
+ },
+ "next": {
+  "id": "13",
+  "n": 13,
+  "title": "Leave No Trace"
+ },
+ "stages": [
+  {
+   "title": "See what Knot Pairs does and how a round plays",
+   "screens": [
+    {
+     "title": "Look at a round of Knot Pairs, from the first card to the score",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know how a round of Knot Pairs plays and how it scores."
+      },
+      {
+       "p": "Knot Pairs is a memory game. It is on Slieve Lamagan, the second place on the Summit Ready map."
+      },
+      {
+       "p": "You build one game from each pair of game chapters. Knot Pairs is paired with Pack the Rucksack, so you build one of those two."
+      },
+      {
+       "p": "First you build Knot Pairs exactly as it is in Summit Ready. Then, in stage 5, you change it into a memory game on your own topic."
+      },
+      {
+       "p": "A round starts with 16 [[cards|0]] face down, in 4 rows of 4. Every card back shows a coiled rope on a blue square."
+      },
+      {
+       "p": "Turned over, 8 of the cards show a photo of a knot, and 8 show the name of a knot. Each knot has one photo card and one name card."
+      },
+      {
+       "p": "You click two cards to turn them over, and that uses one [[try|2]]. If the photo and the name are the same knot, you have found a [[pair|1]]."
+      },
+      {
+       "p": "A pair stays face up with a green border. The box on the right then says what that knot is for."
+      },
+      {
+       "p": "If the two cards are different knots, both stay face up for 0.9 seconds, so you can remember them. Then both turn face down again."
+      },
+      {
+       "screenshot": {
+        "img": "img/ch12-knots-playing.png",
+        "alt": "Knot Pairs part-way through a round, with 3 pairs found",
+        "w": 1002,
+        "h": 693,
+        "marks": [
+         {
+          "n": 1,
+          "x": 2.5,
+          "y": 14.1,
+          "w": 58.3,
+          "h": 84.3,
+          "say": "The 16 cards. The 6 cards with green borders are the 3 pairs found so far."
+         },
+         {
+          "n": 2,
+          "x": 64,
+          "y": 16.2,
+          "w": 10.6,
+          "h": 3,
+          "say": "Tries: 5 of 24. Each try uses up one of the 24 tries."
+         },
+         {
+          "n": 3,
+          "x": 64,
+          "y": 23.1,
+          "w": 31.9,
+          "h": 7,
+          "say": "The Rope strength bar. The bar gets shorter with every try."
+         },
+         {
+          "n": 4,
+          "x": 64,
+          "y": 32.9,
+          "w": 14.8,
+          "h": 3,
+          "say": "Pairs found: 3 of 8."
+         },
+         {
+          "n": 5,
+          "x": 64,
+          "y": 40.1,
+          "w": 32.9,
+          "h": 6.5,
+          "say": "The box that says what the last matched knot is for."
+         },
+         {
+          "n": 6,
+          "x": 67.3,
+          "y": 6.9,
+          "w": 7.7,
+          "h": 2.6,
+          "say": "Points: 30. Each pair is worth 10 points."
+         }
+        ],
+        "cap": "Part-way through a round: 5 tries used and 3 pairs found. The reef knot photo is face up on its own, because it is the first card of the next try."
+       }
+      },
+      {
+       "p": "You have 24 tries. If you have not found all 8 pairs by then, the rope snaps."
+      },
+      {
+       "screenshot": {
+        "img": "img/ch12-knots-snapped.png",
+        "alt": "Knot Pairs after the rope has snapped, with every card face up",
+        "w": 1002,
+        "h": 693,
+        "marks": [
+         {
+          "n": 1,
+          "x": 64,
+          "y": 16.2,
+          "w": 15.2,
+          "h": 3,
+          "say": "The rope snapped! in red, where the tries were."
+         },
+         {
+          "n": 2,
+          "x": 32.1,
+          "y": 14.1,
+          "w": 14,
+          "h": 20.2,
+          "say": "Every card that was not matched is now face up. A photo card also shows the knot's name in a dark strip."
+         },
+         {
+          "n": 3,
+          "x": 64,
+          "y": 40.1,
+          "w": 32.9,
+          "h": 9.7,
+          "say": "The box on the right says to study the knots, then press See my score."
+         },
+         {
+          "n": 4,
+          "x": 64,
+          "y": 92.6,
+          "w": 22,
+          "h": 6.3,
+          "say": "See my score opens the Round over box."
+         }
+        ],
+        "cap": "After the 24th try, the rope has snapped and the Rope strength bar is empty."
+       }
+      },
+      {
+       "screenshot": {
+        "img": "img/ch12-knots-roundover.png",
+        "alt": "The Round over box at the end of a round of Knot Pairs",
+        "w": 1002,
+        "h": 693,
+        "marks": [
+         {
+          "n": 1,
+          "x": 21,
+          "y": 29.9,
+          "w": 58.1,
+          "h": 3,
+          "say": "Your score out of 100 points."
+         },
+         {
+          "n": 2,
+          "x": 21,
+          "y": 34.6,
+          "w": 58.1,
+          "h": 10.6,
+          "say": "What went well: up to 3 lines."
+         },
+         {
+          "n": 3,
+          "x": 21,
+          "y": 46.5,
+          "w": 58.1,
+          "h": 13,
+          "say": "What went wrong: only 3 lines show. The last line counts the rest."
+         },
+         {
+          "n": 4,
+          "x": 64.1,
+          "y": 72.9,
+          "w": 14.9,
+          "h": 6.3,
+          "say": "Back to the map closes Knot Pairs."
+         }
+        ],
+        "cap": "The Round over box at the end of a round."
+       }
+      },
+      {
+       "p": "Each pair is worth 10 points, so 8 pairs are worth 80 points."
+      },
+      {
+       "p": "If you find all 8 pairs in 12 tries or fewer, you get 20 bonus points, so the best score is 100 points. In 13 to 16 tries, the bonus is 10 points."
+      },
+      {
+       "p": "When you find the last pair, the Round over box opens 1.2 seconds later. When the rope snaps, the Round over box opens when you click **See my score**."
+      },
+      {
+       "p": "Either way, the flag on Slieve Lamagan gets a tick on the map."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Check that your project is ready, and see the words this chapter uses",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know that your project has everything Knot Pairs needs."
+      },
+      {
+       "p": "Knot Pairs uses things you made in earlier chapters. Check that each one is in your project before you start."
+      },
+      {
+       "need": [
+        "Your Summit Ready project, with the practice game opening from the map (chapter 9).",
+        "The Files class that finds files, the Sound class that plays sounds and the Mix class that shuffles numbers (chapter 2).",
+        "The Data, Images and Sounds folders in your project's [[bin\\Debug|3]] folder, from `summit-ready-files.zip` (chapter 2). They already hold every file that Knot Pairs needs.",
+        "The line `// each game chapter adds its own case below this line` in `frmMap.cs` (chapter 8).",
+        "File name extensions turned on in File Explorer, so `knots.txt` shows as `knots.txt` and not as `knots` (chapter 2).",
+        "About 2 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
+       ]
+      },
+      {
+       "words": [
+        [
+         "card",
+         "One of the 16 squares you click in Knot Pairs. In the code, each card is a button.",
+         "1-1",
+         false
+        ],
+        [
+         "pair",
+         "The photo card and the name card of the same knot.",
+         "1-1",
+         false
+        ],
+        [
+         "try",
+         "Turning over two cards in Knot Pairs. This try is part of the game. It is not the C# word `try` from chapter 4.",
+         "1-1",
+         false
+        ],
+        [
+         "bin\\Debug",
+         "The folder inside your project where Visual Studio 2019 puts the program it builds. Summit Ready reads its data, pictures and sounds from there.",
+         "1-2",
+         false
+        ],
+        [
+         "zip file",
+         "One file with other files and folders packed inside it.",
+         "2-1",
+         false
+        ],
+        [
+         "property",
+         "A named value that an object carries, such as `Name` on a Knot. `{ get; set; }` lets other code read the value and change it.",
+         "2-2",
+         true
+        ],
+        [
+         "constructor",
+         "A method with the same name as its class. It runs once, when code makes a new object with `new`.",
+         "2-2",
+         true
+        ],
+        [
+         "static",
+         "A method marked `static` belongs to the class itself. You call it on the class name, as in `Knot.LoadAll()`.",
+         "2-2",
+         true
+        ],
+        [
+         "List",
+         "A list that grows as you add to it. `List<Knot>` is a list that holds Knot objects.",
+         "2-2",
+         true
+        ],
+        [
+         "continue",
+         "Inside a loop, `continue` skips the rest of this turn of the loop. The loop goes straight on to its next turn.",
+         "2-2",
+         true
+        ],
+        [
+         "lightning bolt",
+         "The button at the top of the Properties window that shows a control's events in place of its properties.",
+         "3-1",
+         false
+        ],
+        [
+         "field",
+         "A variable written at the top of the class, outside every method. Every method in the form can use it, and it keeps its value until the window closes.",
+         "4-4",
+         false
+        ],
+        [
+         "array",
+         "A row of values of the same type, kept together under one name and numbered from 0. `cards[0]` is the first card, and `cards[15]` is the 16th card.",
+         "4-4",
+         true
+        ],
+        [
+         "panel",
+         "A control that holds other controls. `pnlPlay` is the play area that holds the 16 cards.",
+         "4-6",
+         true
+        ],
+        [
+         "colour from red, green and blue",
+         "`Color.FromArgb(47, 111, 143)` mixes a colour from red, green and blue. Each number is from 0 to 255.",
+         "4-5",
+         true
+        ],
+        [
+         "remainder",
+         "`%` gives what is left over after dividing. `13 % 8` is 5, because 8 goes into 13 once with 5 left over.",
+         "4-6",
+         true
+        ],
+        [
+         "whole-number division",
+         "`/` between two whole numbers drops anything after the decimal point. `13 / 4` is 3, not 3.25.",
+         "4-6",
+         true
+        ],
+        [
+         "event",
+         "Something that happens to a control, such as a click on a button, or a Timer ticking.",
+         "4-6",
+         true
+        ],
+        [
+         "connect with +=",
+         "`+=` connects a method to an event in code. `card.Click += Card_Click;` means that a click on that card runs `Card_Click`.",
+         "4-6",
+         true
+        ],
+        [
+         "handler",
+         "The method that runs when an event happens. `Card_Click` is the handler for a click on any card.",
+         "4-6",
+         true
+        ],
+        [
+         "Controls.Add",
+         "Puts a control that code made onto a window or a panel. Until then, the control exists, but nobody can see it.",
+         "4-6",
+         true
+        ],
+        [
+         "sender",
+         "Every handler is given `sender`: the control that the event happened to, such as the card that was clicked.",
+         "4-1",
+         true
+        ],
+        [
+         "cast",
+         "A type in brackets in front of a value tells C# what the value really is. `(Button)sender` tells C# that `sender` is a button.",
+         "4-9",
+         true
+        ],
+        [
+         "or",
+         "`||` means or. The `if` is true when any one of its parts is true.",
+         "4-10",
+         true
+        ],
+        [
+         "and",
+         "`&&` means and. The `if` is true only when both of its parts are true.",
+         "4-1",
+         true
+        ],
+        [
+         "ProgressBar",
+         "A control that shows a bar. `prgRope` is the Rope strength bar, and its length is its Value out of its Maximum.",
+         "4-10",
+         true
+        ],
+        [
+         "ToLower",
+         "Gives a copy of some text in small letters. `\"Joins TWO ropes\".ToLower()` gives `\"joins two ropes\"`.",
+         "4-11",
+         true
+        ],
+        [
+         "Timer",
+         "A control that never shows on the window. Once started, it runs its Tick method every time its Interval runs out, until it is stopped.",
+         "4-12",
+         true
+        ],
+        [
+         "Interval",
+         "How long a Timer waits before each Tick, in thousandths of a second. 900 means 0.9 seconds.",
+         "3-5",
+         false
+        ],
+        [
+         "Tick",
+         "The event a Timer has. Its method runs every time the Timer's Interval runs out.",
+         "4-12",
+         true
+        ],
+        [
+         "Dock",
+         "A property that sticks a control to one edge of the control it sits on. `DockStyle.Bottom` sticks it along the bottom.",
+         "4-14",
+         true
+        ],
+        [
+         "red underline",
+         "The wavy red line Visual Studio 2019 draws under code it does not understand yet. Often it means a method you have not written yet.",
+         "2-2",
+         false
+        ]
+       ],
+       "intro": "You do not need to learn these words now. Where you first meet each one in the chapter, it has a dotted line under it. Hover over it or tap it to see what it means."
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "1"
+  },
+  {
+   "title": "Look at the list of knots, and add the Knot class that reads it",
+   "screens": [
+    {
+     "title": "Read knots.txt, the list of the 8 knots",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know what each line of `knots.txt` holds."
+      },
+      {
+       "p": "Knot Pairs gets its 8 knots from a text file, `knots.txt`. The file is already in your bin\\Debug\\Data folder, because `summit-ready-files.zip` put it there in chapter 2."
+      },
+      {
+       "p": "You do not type `knots.txt`. You read it here, so that the code in stage 4 makes sense."
+      },
+      {
+       "code": {
+        "id": "knots-txt",
+        "kind": "read",
+        "title": "knots.txt: the 8 knots, one on each line",
+        "lang": "txt",
+        "text": "knot-bowline.jpg|Bowline|Makes a loop that will not slip.\nknot-clove-hitch.jpg|Clove hitch|Ties a rope quickly to a post or rail.\nknot-double-fishermans.jpg|Double fisherman's|Joins two ropes so they will not pull apart.\nknot-figure-eight.jpg|Figure of eight|Ties a climber into the rope.\nknot-overhand.jpg|Overhand knot|Stops the end of a rope slipping through.\nknot-reef.jpg|Reef knot|Ties a sling or bandage flat.\nknot-round-turn.jpg|Round turn and two half hitches|Fixes a rope to a tree or a ring.\nknot-sheet-bend.jpg|Sheet bend|Joins two ropes of different thickness.",
+        "partLines": [
+         [
+          1,
+          1,
+          "The first knot",
+          "Each line is one knot, in 3 parts with a bar `|` between them. `knot-bowline.jpg` is the file name of the knot's photo, in the Images\\Knots folder. `Bowline` is the name that shows on the name card. The last part is what the knot is for. It shows in the box on the right after a match."
+         ],
+         [
+          2,
+          8,
+          "The other 7 knots",
+          "The other 7 lines have the same 3 parts, in the same order."
+         ]
+        ]
+       }
+      },
+      {
+       "p": "To type a bar `|`, hold Shift and press the key to the left of Z."
+      },
+      {
+       "box": {
+        "title": "If a file is missing or broken",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "Knot Pairs never crashes because a file is missing. This is what you see instead."
+         },
+         {
+          "p": "If `knots.txt` is missing, or has fewer than 8 good lines, no cards appear. The box on the right says **Knot Pairs needs 8 knots in Data\\knots.txt.**"
+         },
+         {
+          "p": "If a line of `knots.txt` does not have exactly 3 parts, Knot Pairs skips that line."
+         },
+         {
+          "p": "If a knot photo is missing, that knot's photo card shows a plain white square."
+         },
+         {
+          "p": "If `icon-rope-128.png` is missing, the card backs are plain blue squares."
+         },
+         {
+          "p": "If a sound is missing, that moment is silent, and the game carries on."
+         },
+         {
+          "p": "To put a missing file back, you download the [[zip file|4]] again and paste its folders into bin\\Debug. When Windows asks about the files you already have, you click **Skip these files**."
+         },
+         {
+          "p": "Skipping keeps every file you already have, including any file you changed. Only the missing files are copied in."
+         },
+         {
+          "steps": [
+           {
+            "do": "Click the download button below.",
+            "see": "Your browser shows that `summit-ready-files.zip` has downloaded.",
+            "download": {
+             "file": "summit-ready-files.zip",
+             "label": "Download summit-ready-files.zip",
+             "size": "8.2 MB"
+            },
+            "id": "2-1.1",
+            "n": 1
+           },
+           {
+            "do": "Press the Windows key and the E key together.",
+            "see": "File Explorer opens.",
+            "img": {
+             "missing": true,
+             "alt": "File Explorer open on Downloads, with the menu that opens on summit-ready-files.zip",
+             "w": 800,
+             "h": 450,
+             "marks": [
+              {
+               "n": 2,
+               "say": "Press the Windows key and the E key together."
+              },
+              {
+               "n": 3,
+               "say": "Click **Downloads** in the list down the left side of File Explorer."
+              },
+              {
+               "n": 4,
+               "say": "Right-click `summit-ready-files.zip`."
+              },
+              {
+               "n": 5,
+               "say": "Click **Extract All...** in the menu."
+              }
+             ]
+            },
+            "id": "2-1.2",
+            "n": 2
+           },
+           {
+            "do": "Click **Downloads** in the list down the left side of File Explorer.",
+            "see": "`summit-ready-files.zip` is in the list of files.",
+            "wrong": [
+             [
+              "There is also a file called `summit-ready-files (1).zip`",
+              "Your browser added (1) because you downloaded the zip file before, in chapter 2. Use the file that ends in (1), because it is the newest one."
+             ]
+            ],
+            "id": "2-1.3",
+            "n": 3
+           },
+           {
+            "do": "Right-click `summit-ready-files.zip`.",
+            "see": "A menu opens.",
+            "id": "2-1.4",
+            "n": 4
+           },
+           {
+            "do": "Click **Extract All...** in the menu.",
+            "see": "A window called Extract Compressed (Zipped) Folders opens.",
+            "wrong": [
+             [
+              "The menu has no **Extract All...**",
+              "Press Escape to close the menu. Double-click `summit-ready-files.zip`. Then click **Extract all** in the bar along the top of File Explorer."
+             ]
+            ],
+            "id": "2-1.5",
+            "n": 5
+           },
+           {
+            "do": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window.",
+            "see": "A new File Explorer window opens. It shows 3 folders, Data, Images and Sounds, and one file, `credits.txt`.",
+            "img": {
+             "missing": true,
+             "alt": "The Extract Compressed (Zipped) Folders window, with its Extract button",
+             "w": 640,
+             "h": 480,
+             "marks": [
+              {
+               "n": 6,
+               "say": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window."
+              }
+             ]
+            },
+            "id": "2-1.6",
+            "n": 6
+           },
+           {
+            "do": "Press Ctrl and A together.",
+            "see": "The 3 folders and `credits.txt` turn blue.",
+            "img": {
+             "missing": true,
+             "alt": "The unpacked folder, with Data, Images, Sounds and credits.txt highlighted",
+             "w": 800,
+             "h": 360,
+             "marks": [
+              {
+               "n": 7,
+               "say": "Press Ctrl and A together."
+              },
+              {
+               "n": 8,
+               "say": "Press Ctrl and C together."
+              }
+             ]
+            },
+            "id": "2-1.7",
+            "n": 7
+           },
+           {
+            "do": "Press Ctrl and C together.",
+            "see": "Nothing changes on the screen. That is normal: Windows has copied the 3 folders and `credits.txt`.",
+            "id": "2-1.8",
+            "n": 8
+           },
+           {
+            "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
+            "see": "Visual Studio 2019 comes to the front, with your project open.",
+            "img": {
+             "missing": true,
+             "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
+             "w": 800,
+             "h": 60,
+             "marks": [
+              {
+               "n": 9,
+               "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
+              }
+             ]
+            },
+            "id": "2-1.9",
+            "n": 9
+           },
+           {
+            "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+            "see": "A long menu opens.",
+            "img": {
+             "missing": true,
+             "alt": "Solution Explorer, with the menu that opens on the project line",
+             "w": 360,
+             "h": 420,
+             "marks": [
+              {
+               "n": 10,
+               "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+              },
+              {
+               "n": 11,
+               "say": "Click **Open Folder in File Explorer**, near the bottom of the menu."
+              }
+             ]
+            },
+            "id": "2-1.10",
+            "n": 10
+           },
+           {
+            "do": "Click **Open Folder in File Explorer**, near the bottom of the menu.",
+            "see": "File Explorer opens on your project's folder. You can see the bin and obj folders and your .cs files.",
+            "id": "2-1.11",
+            "n": 11
+           },
+           {
+            "do": "Double-click the **bin** folder.",
+            "see": "The bin folder holds a folder called Debug.",
+            "img": {
+             "missing": true,
+             "alt": "File Explorer on the project folder, with the bin folder",
+             "w": 640,
+             "h": 300,
+             "marks": [
+              {
+               "n": 12,
+               "say": "Double-click the **bin** folder."
+              }
+             ]
+            },
+            "id": "2-1.12",
+            "n": 12
+           },
+           {
+            "do": "Double-click the **Debug** folder.",
+            "see": "The Debug folder holds the Data, Images and Sounds folders, and your program, whose name ends in .exe.",
+            "img": {
+             "missing": true,
+             "alt": "File Explorer on the bin folder, with the Debug folder",
+             "w": 640,
+             "h": 300,
+             "marks": [
+              {
+               "n": 13,
+               "say": "Double-click the **Debug** folder."
+              }
+             ]
+            },
+            "id": "2-1.13",
+            "n": 13
+           },
+           {
+            "do": "Press Ctrl and V together.",
+            "see": "A window called Replace or Skip Files opens, because most of the files are already there.",
+            "img": {
+             "missing": true,
+             "alt": "The Replace or Skip Files window, with Skip these files",
+             "w": 640,
+             "h": 400,
+             "marks": [
+              {
+               "n": 14,
+               "say": "Press Ctrl and V together."
+              },
+              {
+               "n": 15,
+               "say": "Click **Skip these files**."
+              }
+             ]
+            },
+            "id": "2-1.14",
+            "n": 14
+           },
+           {
+            "do": "Click **Skip these files**.",
+            "see": "The window closes. Windows has copied in only the missing files.",
+            "id": "2-1.15",
+            "n": 15
+           }
+          ]
+         }
+        ]
+       }
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Add the Knot class, which reads knots.txt",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has a Knot class that reads all 8 knots from `knots.txt`."
+      },
+      {
+       "p": "The game needs the 8 knots before it can deal any cards. So you add a class called Knot, which holds one knot and reads the file."
+      },
+      {
+       "p": "One Knot object holds one line of `knots.txt`: the photo's file name, the name, and what the knot is for. The Knot class also has a method, `LoadAll`, that reads every line into a list of Knot objects."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
+         "see": "Visual Studio 2019 comes to the front, with your project open.",
+         "img": {
+          "missing": true,
+          "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
+           }
+          ]
+         },
+         "id": "2-2.1",
+         "n": 1
+        },
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "The project menu, with Add pointed at and Class... in the second menu",
+          "w": 640,
+          "h": 420,
+          "marks": [
+           {
+            "n": 2,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 3,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 4,
+            "say": "Click **Class...** at the bottom of the second menu."
+           }
+          ]
+         },
+         "id": "2-2.2",
+         "n": 2
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "2-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click **Class...** at the bottom of the second menu.",
+         "see": "The Add New Item window opens. Class is picked, and the Name box at the bottom says `Class1.cs`.",
+         "id": "2-2.4",
+         "n": 4
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "missing": true,
+          "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 6,
+            "say": "Type `Knot.cs`"
+           },
+           {
+            "n": 7,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "2-2.5",
+         "n": 5
+        },
+        {
+         "do": "Type `Knot.cs`",
+         "see": "The Name box shows `Knot.cs`.",
+         "id": "2-2.6",
+         "n": 6
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "`Knot.cs` opens in the code editor. At the top are 5 lines that start with `using`. Further down is `class Knot`, with an empty pair of curly brackets under it.",
+         "id": "2-2.7",
+         "n": 7
+        },
+        {
+         "do": "Click at the end of the line `using System.Threading.Tasks;`",
+         "see": "The flashing cursor is after the semicolon.",
+         "img": {
+          "missing": true,
+          "alt": "Knot.cs as Visual Studio 2019 makes it, with using System.IO; added",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 8,
+            "say": "Click at the end of the line `using System.Threading.Tasks;`"
+           },
+           {
+            "n": 9,
+            "say": "Press Enter."
+           },
+           {
+            "n": 10,
+            "say": "Type `using System.IO;`"
+           }
+          ]
+         },
+         "id": "2-2.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under `using System.Threading.Tasks;`.",
+         "id": "2-2.9",
+         "n": 9
+        },
+        {
+         "do": "Type `using System.IO;`",
+         "see": "The new line says `using System.IO;`. The Knot class needs this line, because it reads a file.",
+         "id": "2-2.10",
+         "n": 10
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "knot-class",
+        "kind": "type",
+        "title": "Knot.cs: the Knot class",
+        "lang": "cs",
+        "why": "You type the 3 properties, and the 3 lines that put a value into each one, because they are new. The rest reads a file the same way as `LoadAll` in chapter 3, so it comes in the copy.",
+        "text": "// One knot from knots.txt: its photo, its name and what it is for\nclass Knot\n{\n    public string Picture { get; set; }   // the photo's file name\n    public string Name { get; set; }      // the knot's name\n    public string Use { get; set; }       // what the knot is for\n\n    // Makes one Knot from a line of knots.txt, split at each |\n    public Knot(string[] parts)\n    {\n        Picture = parts[0];\n        Name = parts[1];\n        Use = parts[2];\n    }\n\n    // Reads every knot in knots.txt into a list\n    public static List<Knot> LoadAll()\n    {\n        List<Knot> knots = new List<Knot>();\n        string path = Files.Data(\"knots.txt\");\n        if (!File.Exists(path)) return knots;   // no file: an empty list\n        StreamReader reader = new StreamReader(path);\n        while (!reader.EndOfStream)\n        {\n            string line = reader.ReadLine();\n            string[] parts = line.Split('|');\n            if (parts.Length != 3) continue;    // skip a broken line\n            knots.Add(new Knot(parts));\n        }\n        reader.Close();\n        return knots;\n    }",
+        "partLines": [
+         [
+          2,
+          6,
+          "The class and its 3 properties",
+          "`class Knot` starts the class. Each property holds one part of a line of `knots.txt`. `Picture` holds the photo's file name. `Name` holds the knot's name. `Use` holds what the knot is for. `{ get; set; }` lets other code read each property and change it."
+         ],
+         [
+          9,
+          14,
+          "The constructor",
+          "This part is the constructor. It runs when code writes `new Knot(parts)`. `parts` is one line of `knots.txt`, already cut into 3 pieces at each bar. The constructor puts `parts[0]` into `Picture`, `parts[1]` into `Name` and `parts[2]` into `Use`."
+         ],
+         [
+          17,
+          21,
+          "The start of LoadAll",
+          "`static` means that you call LoadAll on the class itself, as `Knot.LoadAll()`. You do not need a Knot object first. LoadAll starts with an empty list. `Files.Data` from chapter 2 gives the full path of `knots.txt` in the Data folder. If `knots.txt` is not there, LoadAll hands back the empty list, so the game shows a message and does not crash."
+         ],
+         [
+          22,
+          29,
+          "Read every line",
+          "The StreamReader opens `knots.txt`. The loop goes round once for each line, until the end of the file. `Split('|')` cuts each line at each bar into `parts`. If a line does not have exactly 3 parts, `continue` skips it and the loop moves on to the next line. Every good line becomes a new Knot, and `knots.Add` puts it on the end of the list."
+         ],
+         [
+          30,
+          32,
+          "Close the file and hand back the list",
+          "`reader.Close()` closes `knots.txt`, so that other programs can open it again. `return knots;` hands the full list back to the code that called LoadAll."
+         ]
+        ],
+        "focusLines": [
+         [
+          4,
+          6
+         ],
+         [
+          11,
+          13
+         ]
+        ],
+        "typed": 6,
+        "wordMarks": [
+         [
+          4,
+          26,
+          39,
+          5
+         ],
+         [
+          9,
+          4,
+          16,
+          6
+         ],
+         [
+          17,
+          11,
+          17,
+          7
+         ],
+         [
+          17,
+          18,
+          28,
+          8
+         ],
+         [
+          27,
+          35,
+          43,
+          9
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Drag from the start of `class Knot` down to the end of the `}` two lines below it.",
+         "see": "`class Knot` and its empty `{` and `}` turn blue. The last `}` in the file stays white. That is right: the last `}` closes the namespace, and it must stay.",
+         "img": {
+          "missing": true,
+          "alt": "Knot.cs, with class Knot and its empty braces highlighted",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 11,
+            "say": "Drag from the start of `class Knot` down to the end of the `}` two lines below it."
+           },
+           {
+            "n": 13,
+            "say": "Press Ctrl and V together."
+           }
+          ]
+         },
+         "id": "2-2.11",
+         "n": 11
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "knot-class",
+         "id": "2-2.12",
+         "n": 12
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The Knot class appears in place of the blue lines. Two lines start with `// YOU TYPE THIS PART`, and your typing goes there.",
+         "id": "2-2.13",
+         "n": 13
+        },
+        {
+         "do": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it.",
+         "see": "The whole line turns blue.",
+         "img": {
+          "missing": true,
+          "alt": "Knot.cs, with the yellow lines typed in place of the two YOU TYPE THIS PART lines",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 14,
+            "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it."
+           },
+           {
+            "n": 15,
+            "say": "Type the 3 yellow lines that start with `public string`. Press Enter at the end of each line."
+           },
+           {
+            "n": 16,
+            "say": "Triple-click the other line that starts with `// YOU TYPE THIS PART`."
+           },
+           {
+            "n": 17,
+            "say": "Type the 3 yellow lines that start with `Picture`, `Name` and `Use`. Press Enter at the end of each line."
+           },
+           {
+            "n": 18,
+            "say": "Press Ctrl and S together."
+           }
+          ]
+         },
+         "id": "2-2.14",
+         "n": 14
+        },
+        {
+         "do": "Type the 3 yellow lines that start with `public string`. Press Enter at the end of each line.",
+         "see": "The 3 properties are where the `// YOU TYPE THIS PART` line was. A red underline may show while you type. This is normal: it goes when the line is finished.",
+         "id": "2-2.15",
+         "n": 15
+        },
+        {
+         "do": "Triple-click the other line that starts with `// YOU TYPE THIS PART`.",
+         "see": "The whole line turns blue.",
+         "id": "2-2.16",
+         "n": 16
+        },
+        {
+         "do": "Type the 3 yellow lines that start with `Picture`, `Name` and `Use`. Press Enter at the end of each line.",
+         "see": "No line in `Knot.cs` has a [[red underline|31]].",
+         "id": "2-2.17",
+         "n": 17
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `Knot.cs` on the tab at the top of the code editor disappears. Your Knot class is saved.",
+         "id": "2-2.18",
+         "n": 18
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "2"
+  },
+  {
+   "title": "Make the Knot Pairs form and set the form's controls",
+   "screens": [
+    {
+     "title": "Add the Knot Pairs form and set the form's properties",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has an empty Knot Pairs window, called frmKnots, at the right size and colour."
+      },
+      {
+       "p": "Knot Pairs needs its own window to play in. In Visual Studio 2019, a window is called a form."
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "The project menu, with Add pointed at and Form (Windows Forms)... in the second menu",
+          "w": 640,
+          "h": 420,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 2,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 3,
+            "say": "Click **Form (Windows Forms)...** in the second menu."
+           }
+          ]
+         },
+         "id": "3-1.1",
+         "n": 1
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "3-1.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Form (Windows Forms)...** in the second menu.",
+         "see": "The Add New Item window opens. Form (Windows Forms) is picked, and the Name box says `Form1.cs`.",
+         "id": "3-1.3",
+         "n": 3
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Form1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "missing": true,
+          "alt": "The Add New Item window, with Form (Windows Forms) picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "say": "Type `frmKnots.cs`"
+           },
+           {
+            "n": 6,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "3-1.4",
+         "n": 4
+        },
+        {
+         "do": "Type `frmKnots.cs`",
+         "see": "The Name box shows `frmKnots.cs`.",
+         "id": "3-1.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "A new empty form called frmKnots opens in the designer. `frmKnots.cs` appears in Solution Explorer.",
+         "id": "3-1.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "p": "Now set the form's properties in the Properties window, using the table below. Set **Font** first. If you change Font later, Visual Studio 2019 stretches the form to fit the new font, and its size (ClientSize) changes."
+      },
+      {
+       "controls": {
+        "props": [
+         "Font = Segoe UI, 11pt",
+         "Text = Summit Ready - Knot Pairs",
+         "ClientSize = 1000, 660",
+         "StartPosition = CenterScreen",
+         "FormBorderStyle = FixedSingle",
+         "MaximizeBox = False",
+         "BackColor = 243, 245, 242"
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "If you have forgotten how to set a property",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "Click the box beside the property's name in the Properties window. Type the new value, then press Enter."
+         },
+         {
+          "p": "For **Font**, click the box beside Font, then click the small button with 3 dots at the right of the box. Pick Segoe UI and size 11, then click **OK**."
+         },
+         {
+          "p": "For **BackColor**, type `243, 245, 242` in the box beside BackColor, then press Enter."
+         },
+         {
+          "p": "For **MaximizeBox**, click the arrow at the right of the box, then click **False**."
+         }
+        ]
+       }
+      },
+      {
+       "p": "Knot Pairs deals its cards when the window opens. The form's Load event runs once, right before the window first appears. So you make an empty Load method now, and you fill it in during stage 4."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the [[lightning bolt|10]] at the top of the Properties window.",
+         "see": "The Properties window now lists the form's events in place of its properties.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of frmKnots, with the lightning bolt, Load and the Properties button",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click the [[lightning bolt|10]] at the top of the Properties window."
+           },
+           {
+            "n": 8,
+            "say": "Double-click the empty box beside **Load**. Load comes after Leave, so scroll down the list a little if you cannot see it."
+           },
+           {
+            "n": 10,
+            "say": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window."
+           }
+          ]
+         },
+         "id": "3-1.7",
+         "n": 7
+        },
+        {
+         "do": "Double-click the empty box beside **Load**. Load comes after Leave, so scroll down the list a little if you cannot see it.",
+         "see": "The code editor opens `frmKnots.cs`, with a new empty method called `frmKnots_Load`. An empty method is normal here: you fill it in during stage 4.",
+         "id": "3-1.8",
+         "n": 8
+        },
+        {
+         "do": "Press Shift and F7 together.",
+         "see": "The designer shows frmKnots.",
+         "img": {
+          "missing": true,
+          "alt": "The designer showing frmKnots, with the frmKnots.cs [Design] tab",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Press Shift and F7 together."
+           }
+          ]
+         },
+         "id": "3-1.9",
+         "n": 9
+        },
+        {
+         "do": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists properties again.",
+         "id": "3-1.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Copy the dark header strip from frmPractice onto frmKnots",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmKnots has the same dark header strip as your practice game."
+      },
+      {
+       "p": "frmPractice from chapter 9 already has a dark strip along the top. The strip holds the title, the instruction, Points, the speaker picture and **Back to the map**."
+      },
+      {
+       "p": "You copy the strip, so that every game looks the same. The copied controls keep their names, such as `lblScore` and `btnBack`, and the chapter 9 code needs those names."
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `frmPractice.cs` in Solution Explorer.",
+         "see": "frmPractice opens in the designer.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with frmPractice.cs",
+          "w": 360,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Double-click `frmPractice.cs` in Solution Explorer."
+           }
+          ]
+         },
+         "id": "3-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click a dark part of the header strip that has no words on it.",
+         "see": "The Properties window shows pnlHeader at the top.",
+         "img": {
+          "missing": true,
+          "alt": "frmPractice in the designer, with the dark header strip picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 2,
+            "say": "Click a dark part of the header strip that has no words on it."
+           },
+           {
+            "n": 3,
+            "say": "Press Ctrl and C together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Properties window shows lblTitle or another name, not pnlHeader",
+           "You clicked a control on the strip. Click a dark part of the strip with no words on it."
+          ]
+         ],
+         "id": "3-2.2",
+         "n": 2
+        },
+        {
+         "do": "Press Ctrl and C together.",
+         "see": "Nothing changes on the screen. That is normal: Visual Studio 2019 has copied the control and everything on it.",
+         "id": "3-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click the **frmKnots.cs [Design]** tab at the top of the editor.",
+         "see": "The empty frmKnots form shows again.",
+         "img": {
+          "missing": true,
+          "alt": "The empty frmKnots form, with the frmKnots.cs [Design] tab and the title bar of frmKnots",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click the **frmKnots.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 5,
+            "say": "Click the title bar of frmKnots."
+           }
+          ]
+         },
+         "id": "3-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click the title bar of frmKnots.",
+         "see": "The Properties window shows frmKnots at the top. The form must be picked, because Visual Studio 2019 pastes onto whatever is picked.",
+         "id": "3-2.5",
+         "n": 5
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The dark header strip appears on frmKnots, with small white squares at its corners. The Properties window shows pnlHeader.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots with the pasted header strip, and the Location box in the Properties window",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 6,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 7,
+            "say": "Triple-click the box beside **Location** in the Properties window."
+           },
+           {
+            "n": 8,
+            "say": "Type `0, 0`"
+           },
+           {
+            "n": 9,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The pasted strip landed inside another control",
+           "Press Ctrl and Z together to undo the paste. Click the title bar of frmKnots, then press Ctrl and V together again."
+          ]
+         ],
+         "id": "3-2.6",
+         "n": 6
+        },
+        {
+         "do": "Triple-click the box beside **Location** in the Properties window.",
+         "see": "The numbers in the box turn blue.",
+         "wrong": [
+          [
+           "The old value is still in the box after you type",
+           "Click the box, then press Home. Hold Shift and press End, so the whole value turns blue. Type the new value, then press Enter."
+          ]
+         ],
+         "id": "3-2.7",
+         "n": 7
+        },
+        {
+         "do": "Type `0, 0`",
+         "see": "The box shows `0, 0`.",
+         "id": "3-2.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The strip moves to the top left corner of frmKnots and stretches right across the top.",
+         "id": "3-2.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Copy the Round over box from frmPractice onto frmKnots",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmKnots has the white Round over box that shows the score when a round ends."
+      },
+      {
+       "p": "frmPractice already has the Round over box. It is a panel called `pnlRoundOver`, and it stays hidden until a round ends. You copy it, the same way as the strip."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmPractice.cs [Design]** tab at the top of the editor.",
+         "see": "frmPractice shows again.",
+         "img": {
+          "missing": true,
+          "alt": "frmPractice in the designer, with the white Round over box picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the **frmPractice.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 2,
+            "say": "Click a white part of the Round over box that has no words on it."
+           },
+           {
+            "n": 3,
+            "say": "Press Ctrl and C together."
+           }
+          ]
+         },
+         "id": "3-3.1",
+         "n": 1
+        },
+        {
+         "do": "Click a white part of the Round over box that has no words on it.",
+         "see": "The Properties window shows pnlRoundOver at the top.",
+         "wrong": [
+          [
+           "You cannot see the white Round over box on frmPractice",
+           "Another control is covering it. Right-click the control that covers the box, then click **Send to Back**. The Round over box comes into view."
+          ]
+         ],
+         "id": "3-3.2",
+         "n": 2
+        },
+        {
+         "do": "Press Ctrl and C together.",
+         "see": "Nothing changes on the screen. That is normal: Visual Studio 2019 has copied the control and everything on it.",
+         "id": "3-3.3",
+         "n": 3
+        },
+        {
+         "do": "Click the **frmKnots.cs [Design]** tab at the top of the editor.",
+         "see": "frmKnots shows again, with the header strip.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots with the pasted Round over box in the middle",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click the **frmKnots.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 5,
+            "say": "Click the title bar of frmKnots."
+           },
+           {
+            "n": 6,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 7,
+            "say": "Triple-click the box beside **Location** in the Properties window."
+           },
+           {
+            "n": 8,
+            "say": "Type `180, 120`"
+           },
+           {
+            "n": 9,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "3-3.4",
+         "n": 4
+        },
+        {
+         "do": "Click the title bar of frmKnots.",
+         "see": "The Properties window shows frmKnots at the top.",
+         "id": "3-3.5",
+         "n": 5
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The white Round over box appears on frmKnots. The Properties window shows pnlRoundOver.",
+         "wrong": [
+          [
+           "The pasted box landed inside another control",
+           "Press Ctrl and Z together to undo the paste. Click the title bar of frmKnots, then press Ctrl and V together again."
+          ]
+         ],
+         "id": "3-3.6",
+         "n": 6
+        },
+        {
+         "do": "Triple-click the box beside **Location** in the Properties window.",
+         "see": "The numbers in the box turn blue.",
+         "id": "3-3.7",
+         "n": 7
+        },
+        {
+         "do": "Type `180, 120`",
+         "see": "The box shows `180, 120`.",
+         "id": "3-3.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The Round over box moves to the middle of frmKnots, below the header strip.",
+         "id": "3-3.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Change the title and the instruction on the header strip",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the header strip says Knot Pairs and tells the player what to do."
+      },
+      {
+       "p": "The copied strip still has the practice game's words. You change its title and its instruction for Knot Pairs."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the title at the left of the header strip.",
+         "see": "The Properties window shows lblTitle at the top.",
+         "img": {
+          "missing": true,
+          "alt": "The header strip on frmKnots, with lblTitle picked and its Text box in the Properties window",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the title at the left of the header strip."
+           },
+           {
+            "n": 2,
+            "say": "Triple-click the box beside **Text** in the Properties window."
+           },
+           {
+            "n": 3,
+            "say": "Type `Slieve Lamagan - Knot Pairs`"
+           },
+           {
+            "n": 4,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "3-4.1",
+         "n": 1
+        },
+        {
+         "do": "Triple-click the box beside **Text** in the Properties window.",
+         "see": "The title's words turn blue.",
+         "id": "3-4.2",
+         "n": 2
+        },
+        {
+         "do": "Type `Slieve Lamagan - Knot Pairs`",
+         "see": "The box shows `Slieve Lamagan - Knot Pairs`.",
+         "id": "3-4.3",
+         "n": 3
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The title on the header strip says **Slieve Lamagan - Knot Pairs**.",
+         "id": "3-4.4",
+         "n": 4
+        },
+        {
+         "do": "Click the instruction under the title.",
+         "see": "The Properties window shows lblInstruction at the top.",
+         "img": {
+          "missing": true,
+          "alt": "The header strip on frmKnots, with lblInstruction picked and its Text box in the Properties window",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Click the instruction under the title."
+           },
+           {
+            "n": 6,
+            "say": "Triple-click the box beside **Text** in the Properties window."
+           },
+           {
+            "n": 7,
+            "say": "Type `Turn over two cards at a time to match each knot to its name. You have 24 tries before the rope snaps.`"
+           },
+           {
+            "n": 8,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "3-4.5",
+         "n": 5
+        },
+        {
+         "do": "Triple-click the box beside **Text** in the Properties window.",
+         "see": "The instruction's words turn blue.",
+         "id": "3-4.6",
+         "n": 6
+        },
+        {
+         "do": "Type `Turn over two cards at a time to match each knot to its name. You have 24 tries before the rope snaps.`",
+         "see": "The box shows the new instruction.",
+         "id": "3-4.7",
+         "n": 7
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The instruction on the header strip shows the new words.",
+         "id": "3-4.8",
+         "n": 8
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Add the play area, the labels, the bar, the button and the two Timers",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmKnots has every control that Knot Pairs needs, except the 16 cards."
+      },
+      {
+       "p": "The code makes the 16 cards itself in stage 4, so you do not drop 16 buttons by hand."
+      },
+      {
+       "p": "Add the controls in the order of the table. pnlPlay goes first, because every other control except the two Timers sits on pnlPlay."
+      },
+      {
+       "p": "pnlPlay covers the Round over box in the designer. This is normal: the code brings the Round over box to the front when a round ends."
+      },
+      {
+       "p": "A Timer never shows on the window. When you drop a Timer on the form, it appears in the grey strip under the form. Its [[Interval|28]] is how long it waits, in thousandths of a second, so 900 is 0.9 seconds."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Panel",
+          "name": "pnlPlay",
+          "settings": [
+           "Location = 0, 56",
+           "Size = 1000, 604"
+          ],
+          "note": "Drop the Panel near the bottom left corner of frmKnots, outside the white Round over box.",
+          "then": "pnlPlay covers the Round over box."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblTries",
+          "settings": [
+           "Font = Segoe UI Semibold, 14pt",
+           "Location = 640, 24",
+           "Text = Tries: 0 of 24"
+          ],
+          "note": "Drop the Label on pnlPlay."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblRope",
+          "settings": [
+           "Location = 640, 72",
+           "ForeColor = 92, 107, 115",
+           "Text = Rope strength"
+          ],
+          "note": "Drop the Label on pnlPlay."
+         },
+         {
+          "toolbox": "ProgressBar",
+          "name": "prgRope",
+          "settings": [
+           "Location = 640, 98",
+           "Size = 320, 22",
+           "Maximum = 24",
+           "Value = 24"
+          ],
+          "note": "Drop the ProgressBar on pnlPlay.",
+          "then": "The bar is full."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblPairs",
+          "settings": [
+           "Location = 640, 140",
+           "Text = Pairs found: 0 of 8"
+          ],
+          "note": "Drop the Label on pnlPlay."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblUse",
+          "settings": [
+           "AutoSize = False",
+           "Location = 640, 190",
+           "Size = 330, 200",
+           "Font = Segoe UI, 12pt",
+           "Text = (empty)"
+          ],
+          "note": "Drop the Label on pnlPlay. To empty Text, delete the words in the box beside Text, then press Enter.",
+          "then": "lblUse shows as an empty space with no words."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnScore",
+          "settings": [
+           "Location = 640, 554",
+           "Size = 220, 44",
+           "Text = See my score",
+           "BackColor = 242, 183, 5",
+           "FlatStyle = Flat",
+           "Visible = False"
+          ],
+          "note": "Drop the Button on pnlPlay.",
+          "then": "btnScore still shows in the designer. Visible = False hides it only while the game runs."
+         },
+         {
+          "toolbox": "Timer",
+          "name": "tmrFlipBack",
+          "settings": [
+           "Interval = 900"
+          ],
+          "then": "tmrFlipBack sits in the grey strip under the form."
+         },
+         {
+          "toolbox": "Timer",
+          "name": "tmrDone",
+          "settings": [
+           "Interval = 1200"
+          ],
+          "then": "tmrDone sits in the grey strip under the form."
+         }
+        ],
+        "done": {
+         "see": "The dark header strip along the top of frmKnots. Under it, pnlPlay fills the rest of the form, with lblTries, lblRope, prgRope, lblPairs, lblUse and btnScore down its right-hand side. The left-hand side of pnlPlay stays empty, because the code puts the 16 cards there. tmrFlipBack and tmrDone sit in the grey strip under the form.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots in the designer with every control from the table on it, and the two Timers in the grey strip under the form",
+          "w": 800,
+          "h": 450,
+          "at": []
+         }
+        }
+       }
+      },
+      {
+       "box": {
+        "title": "How to find a control in the Toolbox",
+        "text": "The Toolbox is down the left side of Visual Studio 2019. Click the search box at the top of the Toolbox, then type the control's name, such as `ProgressBar`. The control shows in the list under the search box.",
+        "fold": true
+       }
+      }
+     ],
+     "id": "5"
+    }
+   ],
+   "id": "3"
+  },
+  {
+   "title": "Write the game code, one method at a time",
+   "screens": [
+    {
+     "title": "Copy the chapter 9 fields and methods into frmKnots.cs",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmKnots has the same score, Round over and Back to the map code as your practice game."
+      },
+      {
+       "p": "Every game form has the same 3 fields and the same 8 methods from chapter 9. You typed and tested them in frmPractice, so here you copy them."
+      },
+      {
+       "p": "Red underlines come and go as you work through this stage. This is normal: by the end of the stage, every red underline has gone."
+      },
+      {
+       "code": {
+        "id": "patfields",
+        "kind": "copy",
+        "title": "The game-form fields from chapter 9",
+        "lang": "cs",
+        "why": "The 3 fields are the same in every game form, and you typed them in chapter 9. Only the number in `gameNumber` changes. The places on the map are numbered from 0, so Knot Pairs, the second place, is number 1.",
+        "text": "// ---------- the game-form fields from chapter 9 ----------\nprivate int gameNumber = 1;      // Knot Pairs is place 1 (0 is first)\nprivate GameResult result;       // made when the round ends\nprivate bool finished = false;   // true once the result is kept",
+        "partLines": [
+         [
+          1,
+          4,
+          "The 3 game-form fields",
+          "`gameNumber` is the game's place number on the map. `result` holds the score and the feedback once the round ends. `finished` turns true once the result is kept."
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmKnots.cs** tab at the top of the editor, the one without [Design].",
+         "see": "The code of frmKnots shows, with `frmKnots_Load` near the bottom.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots.cs in the code editor, with the 3 pasted fields under the class line",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the **frmKnots.cs** tab at the top of the editor, the one without [Design]."
+           },
+           {
+            "n": 2,
+            "say": "Click at the end of the `{` under `public partial class frmKnots : Form`."
+           },
+           {
+            "n": 3,
+            "say": "Press Enter."
+           },
+           {
+            "n": 5,
+            "say": "Press Ctrl and V together."
+           }
+          ]
+         },
+         "id": "4-1.1",
+         "n": 1
+        },
+        {
+         "do": "Click at the end of the `{` under `public partial class frmKnots : Form`.",
+         "see": "The flashing cursor is after the `{`.",
+         "id": "4-1.2",
+         "n": 2
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the `{`.",
+         "id": "4-1.3",
+         "n": 3
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "patfields",
+         "id": "4-1.4",
+         "n": 4
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The 3 fields appear under the `{`, with a comment line above them that says they come from chapter 9.",
+         "id": "4-1.5",
+         "n": 5
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "patmethods",
+        "kind": "copy",
+        "title": "The game-form methods from chapter 9",
+        "lang": "cs",
+        "why": "The 8 methods are the same in every game form, and you typed and tested them in chapter 9. Only the question that FormClosing asks names Knot Pairs.",
+        "text": "// ---------- the game-form methods from chapter 9 ----------\n\n// Keeps the result on the map, even if the window is then closed\nprivate void KeepResult()\n{\n    Expedition.Finish(gameNumber, result);\n    finished = true;\n    lblScore.Text = \"Points: \" + result.Score;\n}\n\n// Fills in the Round over panel and brings it to the front\nprivate void ShowRoundOver()\n{\n    lblRoundScore.Text = \"You scored \" + result.Score\n        + \" out of 100 points.\";\n    lblWellList.Text = ListText(result.WentWell,\n        \"thing that went well\", \"things that went well\");\n    lblWrongList.Text = ListText(result.WentWrong,\n        \"thing that went wrong\", \"things that went wrong\");\n    if (result.Score >= 60) Sound.Play(\"win.wav\");\n    else Sound.Play(\"lose.wav\");\n    pnlRoundOver.Visible = true;\n    pnlRoundOver.BringToFront();\n}\n\n// Up to 3 lines from a list, then how many more there are\nprivate string ListText(List<string> lines, string one, string many)\n{\n    if (lines.Count == 0) return \"Nothing this time.\";\n    string text = \"\";\n    for (int i = 0; i < lines.Count && i < 3; i++)\n    {\n        text = text + \"- \" + lines[i] + Environment.NewLine;\n    }\n    int more = lines.Count - 3;\n    if (more == 1) text = text + \"And 1 more \" + one + \".\";\n    if (more > 1) text = text + \"And \" + more + \" more \" + many + \".\";\n    return text;\n}\n\n// Back to the map: closing the window runs FormClosing\nprivate void btnBack_Click(object sender, EventArgs e)\n{\n    this.Close();\n}\n\n// The Round over panel's Back to the map button\nprivate void btnDone_Click(object sender, EventArgs e)\n{\n    this.Close();\n}\n\n// Runs as the window closes, by Back, by Done or by the X\nprivate void frmKnots_FormClosing(object sender,\n    FormClosingEventArgs e)\n{\n    if (finished) return;    // a finished round closes at once\n    DialogResult answer = MessageBox.Show(\"Leave Knot Pairs? It will \"\n        + \"score nothing, but you can come back and climb it again.\",\n        \"Summit Ready\", MessageBoxButtons.YesNo);\n    if (answer == DialogResult.No) e.Cancel = true;   // stay\n}\n\n// Shows the speaker picture that matches the sound being on or off\nprivate void ShowSpeaker()\n{\n    string icon = \"icon-speaker-on-64.png\";\n    if (Sound.Muted) icon = \"icon-speaker-muted-64.png\";\n    picSound.Image = Files.Picture(\"Icons\", icon);\n}\n\n// The speaker picture turns the sound off, or back on\nprivate void picSound_Click(object sender, EventArgs e)\n{\n    Sound.Muted = !Sound.Muted;\n    ShowSpeaker();\n}",
+        "partLines": [
+         [
+          1,
+          9,
+          "KeepResult",
+          "KeepResult tells the map that the round has ended, and hands it the result. `finished` turns true, and Points shows the final score."
+         ],
+         [
+          12,
+          24,
+          "ShowRoundOver",
+          "ShowRoundOver fills in the Round over box and plays the win or lose sound. Then it shows the Round over box in front of everything else."
+         ],
+         [
+          27,
+          39,
+          "ListText",
+          "ListText makes the words for What went well or What went wrong. It gives up to 3 lines, then a line that counts the rest."
+         ],
+         [
+          42,
+          45,
+          "btnBack_Click",
+          "**Back to the map** on the header strip closes the window. Closing the window runs FormClosing."
+         ],
+         [
+          48,
+          51,
+          "btnDone_Click",
+          "**Back to the map** in the Round over box closes the window in the same way."
+         ],
+         [
+          54,
+          62,
+          "frmKnots_FormClosing",
+          "If the round is not finished, a message asks the player whether to leave. Clicking **No** sets `e.Cancel` to true, which keeps the window open."
+         ],
+         [
+          65,
+          70,
+          "ShowSpeaker",
+          "ShowSpeaker shows the speaker picture that matches the sound: on, or muted."
+         ],
+         [
+          73,
+          77,
+          "picSound_Click",
+          "Clicking the speaker picture turns the sound off, or back on. Then it shows the matching picture."
+         ]
+        ],
+        "wordMarks": [
+         [
+          42,
+          34,
+          40,
+          21
+         ],
+         [
+          31,
+          36,
+          38,
+          24
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmKnots_Load`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots.cs, with the 8 pasted methods under frmKnots_Load",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 6,
+            "say": "Click at the end of the `}` that closes `frmKnots_Load`."
+           },
+           {
+            "n": 7,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 9,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 10,
+            "say": "Press Ctrl and S together."
+           }
+          ]
+         },
+         "id": "4-1.6",
+         "n": 6
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-1.7",
+         "n": 7
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "patmethods",
+         "id": "4-1.8",
+         "n": 8
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The 8 methods appear under `frmKnots_Load`, with a comment line above them that says they come from chapter 9.",
+         "id": "4-1.9",
+         "n": 9
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `frmKnots.cs` on the tab at the top of the editor disappears.",
+         "id": "4-1.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Connect Back to the map and the Round over box's button to their methods",
+     "blocks": [
+      {
+       "p": "By the end of this screen, both **Back to the map** buttons on frmKnots close the window."
+      },
+      {
+       "p": "A pasted method does nothing until it is connected to an [[event|17]]. A pasted control keeps its name, but its events do not always come with it. So you check each event in the Properties window, and connect it."
+      },
+      {
+       "p": "You connect each event with the small arrow beside it. Do not double-click the box beside the event, because double-clicking makes a second, empty method."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Shift and F7 together.",
+         "see": "The designer shows frmKnots.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots in the designer, with Back to the map picked on the header strip",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Press Shift and F7 together."
+           },
+           {
+            "n": 2,
+            "say": "Click **Back to the map** on the header strip."
+           }
+          ]
+         },
+         "id": "4-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click **Back to the map** on the header strip.",
+         "see": "The Properties window shows btnBack at the top.",
+         "id": "4-2.2",
+         "n": 2
+        },
+        {
+         "do": "Click the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists the events of btnBack.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of btnBack, with the list open beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 3,
+            "say": "Click the lightning bolt at the top of the Properties window."
+           },
+           {
+            "n": 4,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 5,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 6,
+            "say": "Click `btnBack_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "wrong": [
+          [
+           "`btnBack_Click` is already in the box beside Click",
+           "The paste kept the event, so there is nothing to connect. Go on to btnDone."
+          ]
+         ],
+         "id": "4-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list drops down with the methods that can handle a click, including `btnBack_Click`.",
+         "id": "4-2.5",
+         "n": 5
+        },
+        {
+         "do": "Click `btnBack_Click` in the list.",
+         "see": "The box beside Click shows `btnBack_Click`.",
+         "wrong": [
+          [
+           "Visual Studio 2019 made a new method called `btnBack_Click_1`",
+           "You double-clicked the box. Click the arrow beside Click and pick `btnBack_Click`. Then, in `frmKnots.cs`, delete the empty method `btnBack_Click_1`, from its first line down to its `}`."
+          ]
+         ],
+         "id": "4-2.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "p": "The Round over box's **Back to the map** button is called btnDone. pnlPlay covers btnDone in the designer. So you pick btnDone from the list at the top of the Properties window."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the arrow at the right end of the box at the very top of the Properties window.",
+         "see": "A list of every control on frmKnots drops down.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window, with the list of every control open at the top",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click the arrow at the right end of the box at the very top of the Properties window."
+           },
+           {
+            "n": 8,
+            "say": "Click **btnDone** in the list."
+           }
+          ]
+         },
+         "id": "4-2.7",
+         "n": 7
+        },
+        {
+         "do": "Click **btnDone** in the list.",
+         "see": "The Properties window shows the events of btnDone.",
+         "id": "4-2.8",
+         "n": 8
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of btnDone, with btnDone_Click beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 10,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 11,
+            "say": "Click `btnDone_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-2.9",
+         "n": 9
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-2.10",
+         "n": 10
+        },
+        {
+         "do": "Click `btnDone_Click` in the list.",
+         "see": "The box beside Click shows `btnDone_Click`.",
+         "id": "4-2.11",
+         "n": 11
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Connect the speaker picture and the closing of the window, then build",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the speaker picture and the window's close button (the X) both work, and your project builds with no errors."
+      },
+      {
+       "p": "The speaker picture and the closing of the window need connecting too, in the same way."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the speaker picture on the header strip.",
+         "see": "The Properties window shows the events of picSound.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of picSound, with picSound_Click beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the speaker picture on the header strip."
+           },
+           {
+            "n": 2,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 3,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 4,
+            "say": "Click `picSound_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-3.1",
+         "n": 1
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-3.2",
+         "n": 2
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-3.3",
+         "n": 3
+        },
+        {
+         "do": "Click `picSound_Click` in the list.",
+         "see": "The box beside Click shows `picSound_Click`.",
+         "id": "4-3.4",
+         "n": 4
+        },
+        {
+         "do": "Click the title bar of frmKnots.",
+         "see": "The Properties window shows the events of frmKnots.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of frmKnots, with frmKnots_FormClosing beside FormClosing",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Click the title bar of frmKnots."
+           },
+           {
+            "n": 6,
+            "say": "Click the box beside **FormClosing**. Scroll down the list a little if you cannot see it."
+           },
+           {
+            "n": 7,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 8,
+            "say": "Click `frmKnots_FormClosing` in the list."
+           }
+          ]
+         },
+         "id": "4-3.5",
+         "n": 5
+        },
+        {
+         "do": "Click the box beside **FormClosing**. Scroll down the list a little if you cannot see it.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-3.6",
+         "n": 6
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "The list shows one method, `frmKnots_FormClosing`.",
+         "id": "4-3.7",
+         "n": 7
+        },
+        {
+         "do": "Click `frmKnots_FormClosing` in the list.",
+         "see": "The box beside FormClosing shows `frmKnots_FormClosing`.",
+         "id": "4-3.8",
+         "n": 8
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "missing": true,
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows errors",
+           "Double-click the first error in the Error List. Visual Studio 2019 jumps to the line with the error. Check that line letter by letter against the code in this chapter."
+          ]
+         ],
+         "id": "4-3.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Type the Knot Pairs fields",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmKnots has the variables that remember the cards, the tries and the pairs while a round plays."
+      },
+      {
+       "p": "These variables are called [[fields|11]]. They sit at the top of the class, outside every method, so every method in the form can use them."
+      },
+      {
+       "p": "Every field below is new in this chapter, so you type every one."
+      },
+      {
+       "code": {
+        "id": "fields",
+        "kind": "type",
+        "title": "The Knot Pairs fields",
+        "lang": "cs",
+        "text": "// ---------- Knot Pairs ----------\nprivate List<Knot> knots;                  // the knots in knots.txt\nprivate Button[] cards = new Button[16];   // the 16 cards\nprivate int[] knotOf = new int[16];        // each card's knot, 0 to 7\nprivate bool[] isPicture = new bool[16];   // true: photo, false: name\nprivate bool[] matched = new bool[16];     // true once in a pair\nprivate Image[] photos = new Image[8];     // one photo for each knot\nprivate Image rope;                        // the back of every card\n\nprivate int first = -1;          // the first card of a try, or -1\nprivate int second = -1;         // the second card of a wrong try\nprivate bool locked = false;     // true while a wrong pair shows\nprivate int tries = 0;           // tries used so far\nprivate int pairs = 0;           // pairs found so far\nprivate int maxTries = 24;       // the rope snaps after this many",
+        "partLines": [
+         [
+          2,
+          2,
+          "The list of knots",
+          "`knots` holds the knots that LoadAll reads from `knots.txt`. `frmKnots_Load` fills it when the window opens."
+         ],
+         [
+          3,
+          6,
+          "The 4 card arrays",
+          "`cards` is a row of 16 buttons kept together, one for each card. A row like this is called an array. `knotOf`, `isPicture` and `matched` are 3 more arrays, each with one value for each card."
+         ],
+         [
+          7,
+          8,
+          "The pictures",
+          "`photos` holds the 8 knot photos, one for each knot. `rope` holds the rope picture that every card back shows."
+         ],
+         [
+          10,
+          12,
+          "The state of a try",
+          "`first` holds the number of the first card of a try. `-1` means that no card is waiting yet. `second` holds the second card of a wrong try, so the Timer can turn it back over later. `locked` is true while a wrong pair is showing, so clicks on the cards do nothing."
+         ],
+         [
+          13,
+          15,
+          "The counts",
+          "`tries` counts the tries used, and `pairs` counts the pairs found. `maxTries` is how many tries the rope holds before it snaps."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          15
+         ]
+        ],
+        "typed": 13,
+        "wordMarks": [
+         [
+          2,
+          8,
+          18,
+          8
+         ],
+         [
+          3,
+          8,
+          16,
+          12
+         ]
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "What each card array holds, using card 5 as an example",
+        "blocks": [
+         {
+          "p": "`knotOf[5]` says which knot card 5 shows, from 0 to 7."
+         },
+         {
+          "p": "`isPicture[5]` is true if card 5 shows a photo, and false if card 5 shows a name."
+         },
+         {
+          "p": "`matched[5]` turns true once card 5 is in a pair."
+         },
+         {
+          "p": "`new bool[16]` starts all 16 values at false, and `new int[16]` starts all 16 values at 0."
+         }
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the line `private bool finished = false;   // true once the result is kept`",
+         "see": "The flashing cursor is at the end of the comment.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots.cs, with the Knot Pairs fields typed under the chapter 9 fields",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the line `private bool finished = false;   // true once the result is kept`"
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-4.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under that line. The flashing cursor is on the new empty line.",
+         "id": "4-4.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The 13 fields are under the chapter 9 fields. None of the 13 lines has a red underline.",
+         "id": "4-4.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Type ShowBack and ShowFace, which turn a card over",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmKnots can turn any card face down or face up."
+      },
+      {
+       "p": "Every card turns over many times in a round. So one method turns a card face down, and one method turns a card face up. The rest of the code uses these 2 methods."
+      },
+      {
+       "code": {
+        "id": "show",
+        "kind": "type",
+        "title": "ShowBack and ShowFace",
+        "lang": "cs",
+        "text": "// Turns card i face down: the rope picture on lough blue\nprivate void ShowBack(int i)\n{\n    cards[i].BackColor = Color.FromArgb(47, 111, 143);\n    cards[i].BackgroundImage = rope;\n    cards[i].Text = \"\";\n}\n\n// Turns card i face up: its knot's photo, or its knot's name\nprivate void ShowFace(int i)\n{\n    cards[i].BackColor = Color.White;\n    if (isPicture[i])\n    {\n        cards[i].BackgroundImage = photos[knotOf[i]];\n        cards[i].Text = \"\";\n    }\n    else\n    {\n        cards[i].BackgroundImage = null;\n        cards[i].Text = knots[knotOf[i]].Name;\n    }\n}",
+        "partLines": [
+         [
+          2,
+          7,
+          "ShowBack",
+          "ShowBack turns card number `i` face down. The card turns blue, made from red 47, green 111 and blue 143. The rope picture fills the card, and ShowBack empties the card's words."
+         ],
+         [
+          10,
+          12,
+          "The start of ShowFace",
+          "ShowFace turns card number `i` face up. First, the card turns white."
+         ],
+         [
+          13,
+          17,
+          "A photo card",
+          "When `isPicture[i]` is true, the card shows a photo. `knotOf[i]` is the knot's number, so `photos[knotOf[i]]` is the photo of that knot."
+         ],
+         [
+          18,
+          23,
+          "A name card",
+          "Otherwise the card shows no picture. Its words become the knot's name."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          23
+         ]
+        ],
+        "typed": 12,
+        "wordMarks": [
+         [
+          4,
+          25,
+          39,
+          14
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmKnots_Load`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots.cs, with ShowBack and ShowFace typed under frmKnots_Load",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `frmKnots_Load`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-5.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-5.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "ShowBack and ShowFace sit between `frmKnots_Load` and the comment line that says the game-form methods come from chapter 9.",
+         "id": "4-5.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**. The Error List may show warnings. This is normal for now.",
+         "img": {
+          "missing": true,
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows CS1022: Type or namespace definition, or end-of-file expected",
+           "The file has one `}` too many. Check that each method ends with one `}`. Then check that the `if` and the `else` in ShowFace each end with one `}`."
+          ],
+          [
+           "The Error List shows warnings, such as CS0414",
+           "A warning is not an error. CS0414 says that a field has a value but nothing uses it yet. The warnings go away as you write the rest of the code."
+          ]
+         ],
+         "id": "4-5.4",
+         "n": 4
+        }
+       ]
+      }
+     ],
+     "id": "5"
+    },
+    {
+     "title": "Type MakeCard, which makes one card in its row and column",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmKnots can make one card and put it in the right place on pnlPlay."
+      },
+      {
+       "p": "The 16 cards sit in 4 rows of 4 on pnlPlay. Each card is 140 pixels square, with a gap of 8 pixels. So each card starts 148 pixels after the card before it."
+      },
+      {
+       "p": "MakeCard works out a card's row and column from its number, using 2 kinds of sum. `i % 4` is the remainder after dividing `i` by 4. That remainder is the card's column, from 0 to 3."
+      },
+      {
+       "p": "`i / 4` is the card's row, from 0 to 3. Dividing 2 whole numbers in C# drops the remainder, so 6 / 4 gives 1. Rows and columns count from 0."
+      },
+      {
+       "screenshot": {
+        "img": "img/ch12-grid.png",
+        "w": 1000,
+        "h": 600,
+        "alt": "The 16 cards numbered 0 to 15 in 4 rows and 4 columns, with card 6 worked out",
+        "cap": "Card 6 goes in row 1, column 2, at x 320 and y 158."
+       }
+      },
+      {
+       "code": {
+        "id": "makecard",
+        "kind": "type",
+        "title": "MakeCard",
+        "lang": "cs",
+        "text": "// Makes card number i: a square button in its row and column\nprivate Button MakeCard(int i)\n{\n    Button card = new Button();\n    card.Size = new Size(140, 140);\n    card.Location = new Point(24 + (i % 4) * 148,\n        10 + (i / 4) * 148);\n    card.FlatStyle = FlatStyle.Flat;\n    card.BackgroundImageLayout = ImageLayout.Zoom;\n    card.Font = new Font(\"Segoe UI Semibold\", 12);\n    card.Click += Card_Click;      // every card runs Card_Click\n    pnlPlay.Controls.Add(card);    // put the card on the play area\n    return card;\n}",
+        "partLines": [
+         [
+          2,
+          5,
+          "A new Button",
+          "MakeCard makes a new Button called `card`. The card is 140 pixels wide and 140 pixels tall."
+         ],
+         [
+          6,
+          7,
+          "Where the card goes",
+          "The card's left edge is 24 pixels in, plus 148 pixels for each column. The card's top edge is 10 pixels down, plus 148 pixels for each row."
+         ],
+         [
+          8,
+          10,
+          "How the card looks",
+          "A flat style lets the border change colour later. `ImageLayout.Zoom` fits a picture inside the card without stretching it. The font is for the knot's name on a name card."
+         ],
+         [
+          11,
+          11,
+          "Connect the click",
+          "This line connects the card's Click event to the method Card_Click. `+=` adds Card_Click to the methods that run on a click. So every card runs the same method, Card_Click, when you click it."
+         ],
+         [
+          12,
+          14,
+          "Put the card on pnlPlay",
+          "`pnlPlay.Controls.Add(card)` puts the card on pnlPlay, so the card shows. `return card;` hands the new card back to the code that asked for it."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          14
+         ]
+        ],
+        "typed": 11,
+        "wordMarks": [
+         [
+          12,
+          4,
+          11,
+          13
+         ],
+         [
+          6,
+          38,
+          39,
+          15
+         ],
+         [
+          7,
+          16,
+          17,
+          16
+         ],
+         [
+          11,
+          9,
+          14,
+          17
+         ],
+         [
+          11,
+          15,
+          17,
+          18
+         ],
+         [
+          11,
+          18,
+          28,
+          19
+         ],
+         [
+          12,
+          12,
+          24,
+          20
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `ShowFace`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots.cs, with MakeCard typed under ShowFace",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `ShowFace`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-6.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-6.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "`Card_Click` has a red underline. This is normal, because you have not written Card_Click yet.",
+         "id": "4-6.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "6"
+    },
+    {
+     "title": "Type MakeCards, which deals the 16 cards in a random order",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmKnots can deal all 16 cards face down, in a different order every round."
+      },
+      {
+       "p": "A memory game is only fair if the cards move each round. `Mix.ShuffledNumbers(16)` from chapter 2 gives the numbers 0 to 15 in a random order."
+      },
+      {
+       "p": "Numbers 0 to 7 are the 8 photo cards. Numbers 8 to 15 are the 8 name cards. `% 8` turns 8 to 15 back into 0 to 7, so number 13 is the name card for knot 5."
+      },
+      {
+       "screenshot": {
+        "img": "img/ch12-deal.png",
+        "w": 1000,
+        "h": 500,
+        "alt": "One shuffled order of the numbers 0 to 15, with the knot number and photo or name for each card",
+        "cap": "One example deal. Each knot number comes up twice: once as a photo and once as a name."
+       }
+      },
+      {
+       "code": {
+        "id": "makecards",
+        "kind": "type",
+        "title": "MakeCards",
+        "lang": "cs",
+        "text": "// Makes the 16 cards, two for each knot, in a random order\nprivate void MakeCards()\n{\n    int[] order = Mix.ShuffledNumbers(16);   // 0 to 15, mixed up\n    for (int i = 0; i < 16; i++)\n    {\n        knotOf[i] = order[i] % 8;      // 8 to 15 become 0 to 7 again\n        isPicture[i] = order[i] < 8;   // 0 to 7 show the photo\n        cards[i] = MakeCard(i);\n        ShowBack(i);\n    }\n}",
+        "partLines": [
+         [
+          2,
+          4,
+          "A shuffled order",
+          "`order` holds the numbers 0 to 15 in a random order."
+         ],
+         [
+          5,
+          8,
+          "Which knot, photo or name",
+          "The loop runs once for each of the 16 cards. `knotOf[i]` becomes the card's knot, from 0 to 7. `isPicture[i]` becomes true for numbers below 8, so those cards show photos."
+         ],
+         [
+          9,
+          12,
+          "Make the card face down",
+          "MakeCard makes card `i` and puts it on pnlPlay. Then ShowBack turns it face down."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          12
+         ]
+        ],
+        "typed": 7,
+        "wordMarks": [
+         [
+          4,
+          4,
+          9,
+          12
+         ],
+         [
+          7,
+          29,
+          30,
+          15
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `MakeCard`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots.cs, with MakeCards typed under MakeCard",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `MakeCard`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-7.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-7.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "MakeCards sits under MakeCard. `Card_Click` still has a red underline, and that is still normal.",
+         "id": "4-7.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "7"
+    },
+    {
+     "title": "Fill in frmKnots_Load, which sets up the round when the window opens",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmKnots reads the knots, loads the pictures and deals the cards as the window opens."
+      },
+      {
+       "p": "frmKnots_Load is the empty method you made in stage 3. It runs once, right before the window first appears. You type the yellow lines inside it."
+      },
+      {
+       "code": {
+        "id": "load",
+        "kind": "type",
+        "title": "frmKnots_Load",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "private void frmKnots_Load(object sender, EventArgs e)\n{\n    // Runs once, right before the window first appears\n    ShowSpeaker();                 // the speaker picture, on or muted\n    knots = Knot.LoadAll();\n    if (knots.Count < 8)\n    {\n        lblUse.Text = \"Knot Pairs needs 8 knots in Data\\\\knots.txt. \"\n            + \"Check that the file has 8 lines, each with 3 parts.\";\n        return;\n    }\n    rope = Files.Picture(\"Icons\", \"icon-rope-128.png\");\n    for (int k = 0; k < 8; k++)\n    {\n        photos[k] = Files.Picture(\"Knots\", knots[k].Picture);\n    }\n    MakeCards();\n}",
+        "partLines": [
+         [
+          1,
+          4,
+          "Show the speaker",
+          "ShowSpeaker, from chapter 9, puts the right speaker picture on the header strip."
+         ],
+         [
+          5,
+          11,
+          "Read the knots",
+          "`Knot.LoadAll()` reads `knots.txt` and gives back a list, with one Knot for each line. `knots` keeps that list. `knots.Count` is how many knots it holds. With fewer than 8 knots there are not enough pairs, so lblUse shows a message. Then `return` stops frmKnots_Load early, so no cards appear. Inside quotes, `\\\\` stands for one backslash, so the message shows Data\\knots.txt."
+         ],
+         [
+          12,
+          16,
+          "Load the pictures",
+          "`Files.Picture` from chapter 2 loads a picture from a folder inside Images. The rope picture comes from Images\\Icons. The loop loads the 8 knot photos from Images\\Knots, using each knot's Picture file name."
+         ],
+         [
+          17,
+          18,
+          "Make the cards",
+          "`MakeCards()` makes and deals the 16 cards."
+         ]
+        ],
+        "focusLines": [
+         [
+          3,
+          17
+         ]
+        ],
+        "typed": 10,
+        "wordMarks": [
+         [
+          1,
+          34,
+          40,
+          21
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `{` on the line under `private void frmKnots_Load`.",
+         "see": "The flashing cursor is after the `{`.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots.cs, with the yellow lines typed inside frmKnots_Load",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `{` on the line under `private void frmKnots_Load`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-8.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens inside frmKnots_Load.",
+         "id": "4-8.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The yellow lines are inside frmKnots_Load. The only red underline left is under `Card_Click` in MakeCard.",
+         "id": "4-8.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "8"
+    },
+    {
+     "title": "Type CardNumber, which finds which card was clicked",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmKnots can tell which of the 16 cards the player clicked."
+      },
+      {
+       "p": "All 16 cards run the same method, Card_Click. So Card_Click needs a way to tell the cards apart. CardNumber gives back the number of the card that the player clicked."
+      },
+      {
+       "code": {
+        "id": "cardnumber",
+        "kind": "type",
+        "title": "CardNumber",
+        "lang": "cs",
+        "text": "// Finds the number, 0 to 15, of the card that was clicked\nprivate int CardNumber(object sender)\n{\n    Button clicked = (Button)sender;   // the card that was clicked\n    int number = 0;\n    for (int c = 0; c < 16; c++)\n    {\n        if (cards[c] == clicked) number = c;   // found it\n    }\n    return number;\n}",
+        "partLines": [
+         [
+          2,
+          4,
+          "Which Button was clicked",
+          "`sender` is the control that the player clicked. C# does not know it is a Button, because a click can come from any control. `(Button)sender` tells C# to treat it as a Button, so `clicked` can hold the card."
+         ],
+         [
+          5,
+          11,
+          "Find the card's number",
+          "The loop compares `clicked` with each of the 16 cards in turn. When `cards[c]` is the clicked card, `number` becomes `c`. `return number;` hands the card's number back."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          11
+         ]
+        ],
+        "typed": 6,
+        "wordMarks": [
+         [
+          2,
+          30,
+          36,
+          21
+         ],
+         [
+          4,
+          21,
+          29,
+          22
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `MakeCards`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots.cs, with CardNumber typed under MakeCards",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `MakeCards`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-9.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-9.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "CardNumber sits under MakeCards. `Card_Click` still has a red underline, and that is still normal.",
+         "id": "4-9.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "9"
+    },
+    {
+     "title": "Type Card_Click, which runs when any card is clicked",
+     "blocks": [
+      {
+       "p": "By the end of this screen, clicking a card turns it face up, and every 2 cards count as one try."
+      },
+      {
+       "p": "Card_Click is the heart of the game. It decides what a click does: nothing, the first card of a try, or the second card of a try."
+      },
+      {
+       "code": {
+        "id": "cardclick",
+        "kind": "type",
+        "title": "Card_Click",
+        "lang": "cs",
+        "text": "// Runs when any of the 16 cards is clicked\nprivate void Card_Click(object sender, EventArgs e)\n{\n    int i = CardNumber(sender);\n    if (locked || finished || matched[i] || i == first) return;\n    ShowFace(i);\n    Sound.Play(\"flip.wav\");\n    if (first == -1)\n    {\n        first = i;    // the first card of this try: wait for another\n        return;\n    }\n    tries++;\n    lblTries.Text = \"Tries: \" + tries + \" of \" + maxTries;\n    prgRope.Value = maxTries - tries;\n    if (knotOf[first] == knotOf[i]) Match(i);\n    else NoMatch(i);\n}",
+        "partLines": [
+         [
+          2,
+          4,
+          "Which card",
+          "Card_Click runs when the player clicks any card. `i` becomes the number of the clicked card."
+         ],
+         [
+          5,
+          5,
+          "Clicks that do nothing",
+          "`||` means or. `return` stops Card_Click, so the click does nothing. This happens when a wrong pair is still showing, or when the round is finished. It also happens when the card is already in a pair, or is already the first card of this try."
+         ],
+         [
+          6,
+          7,
+          "Turn the card over",
+          "The card turns face up, and the flip sound plays."
+         ],
+         [
+          8,
+          12,
+          "The first card of a try",
+          "When no card is waiting, the clicked card becomes the first card of the try. Then `return` stops Card_Click, to wait for the second card."
+         ],
+         [
+          13,
+          15,
+          "Count the try",
+          "A second card makes a try, so `tries` goes up by 1. The Tries label shows the new count. The Rope strength bar's Value becomes the tries left, so the bar gets shorter."
+         ],
+         [
+          16,
+          18,
+          "Pair or not",
+          "When the two cards show the same knot, Match runs. Otherwise NoMatch runs."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          18
+         ]
+        ],
+        "typed": 13,
+        "wordMarks": [
+         [
+          2,
+          13,
+          23,
+          19
+         ],
+         [
+          2,
+          31,
+          37,
+          21
+         ],
+         [
+          5,
+          15,
+          17,
+          23
+         ],
+         [
+          15,
+          4,
+          11,
+          25
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `CardNumber`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots.cs, with Card_Click typed under CardNumber",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `CardNumber`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-10.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-10.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The red underline under `Card_Click` in MakeCard has gone. `Match` and `NoMatch` now have red underlines. This is normal, because you have not written them yet.",
+         "id": "4-10.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "10"
+    },
+    {
+     "title": "Type Match, which keeps a pair face up",
+     "blocks": [
+      {
+       "p": "By the end of this screen, a matching pair stays face up with green borders, and the score goes up."
+      },
+      {
+       "p": "Match gives both cards of the pair a green border. The 2 lines for the second card repeat the 2 lines for the first card, so they come in the copy. You type the yellow lines into the 2 gaps around them."
+      },
+      {
+       "code": {
+        "id": "match",
+        "kind": "type",
+        "title": "Match",
+        "lang": "cs",
+        "why": "The 2 lines for `cards[i]` repeat the 2 lines for `cards[first]`, so those 2 lines come in the copy.",
+        "text": "// The two cards show the same knot: both stay face up\nprivate void Match(int i)\n{\n    Color moss = Color.FromArgb(62, 142, 65);\n    matched[first] = true;\n    matched[i] = true;\n    cards[first].FlatAppearance.BorderColor = moss;\n    cards[first].FlatAppearance.BorderSize = 4;\n    cards[i].FlatAppearance.BorderColor = moss;\n    cards[i].FlatAppearance.BorderSize = 4;\n    first = -1;\n    pairs++;\n    lblPairs.Text = \"Pairs found: \" + pairs + \" of 8\";\n    lblScore.Text = \"Points: \" + pairs * 10;\n    Knot k = knots[knotOf[i]];\n    lblUse.Text = k.Name + \": \" + k.Use.ToLower();\n    Sound.Play(\"match.wav\");\n    if (pairs == 8) AllMatched();\n    else if (tries == maxTries) RopeSnaps();\n}",
+        "partLines": [
+         [
+          2,
+          6,
+          "Mark the pair",
+          "Match runs when the two cards show the same knot. `first` is the first card, and `i` is the second card. `moss` is a green, made from red 62, green 142 and blue 65. Match marks both cards as matched."
+         ],
+         [
+          7,
+          10,
+          "Green borders",
+          "Both cards get a green border 4 pixels wide."
+         ],
+         [
+          11,
+          14,
+          "Count the pair",
+          "`first` goes back to -1, so the next click starts a new try. `pairs` goes up by 1. The Pairs found and Points labels show the new numbers. Each pair is worth 10 points."
+         ],
+         [
+          15,
+          17,
+          "Say what the knot is for",
+          "`k` is the matched knot. The box on the right shows the knot's name and what the knot is for. `ToLower()` makes every letter small, so the words read as one sentence after the colon. Then the match sound plays."
+         ],
+         [
+          18,
+          20,
+          "The end of a round",
+          "After the 8th pair, AllMatched ends the round. Otherwise, if this pair used the last try, the rope snaps."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          8
+         ],
+         [
+          11,
+          20
+         ]
+        ],
+        "typed": 15,
+        "wordMarks": [
+         [
+          4,
+          17,
+          31,
+          14
+         ],
+         [
+          16,
+          40,
+          47,
+          26
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `Card_Click`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots.cs, with Match pasted and typed under Card_Click",
+          "w": 800,
+          "h": 400,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `Card_Click`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 4,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 5,
+            "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it."
+           },
+           {
+            "n": 6,
+            "say": "Type the first group of yellow lines, from `// The two cards show the same knot` down to `cards[first].FlatAppearance.BorderSize = 4;`. Press Enter at the end of each line."
+           },
+           {
+            "n": 7,
+            "say": "Triple-click the line that starts with `// YOU TYPE THIS PART`."
+           },
+           {
+            "n": 8,
+            "say": "Type the second group of yellow lines, from `first = -1;` down to the `}` that closes Match."
+           }
+          ]
+         },
+         "id": "4-11.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-11.2",
+         "n": 2
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "match",
+         "id": "4-11.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "Match appears with 2 lines that start with `// YOU TYPE THIS PART`.",
+         "id": "4-11.4",
+         "n": 4
+        },
+        {
+         "do": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it.",
+         "see": "The whole line turns blue.",
+         "wrong": [
+          [
+           "The old `// YOU TYPE THIS PART` line is still there after you type",
+           "Click the old `// YOU TYPE THIS PART` line, then press Home. Hold Shift and press End, so the whole line turns blue. Press Delete."
+          ]
+         ],
+         "id": "4-11.5",
+         "n": 5
+        },
+        {
+         "do": "Type the first group of yellow lines, from `// The two cards show the same knot` down to `cards[first].FlatAppearance.BorderSize = 4;`. Press Enter at the end of each line.",
+         "see": "The first group of yellow lines is where the first `// YOU TYPE THIS PART` line was.",
+         "id": "4-11.6",
+         "n": 6
+        },
+        {
+         "do": "Triple-click the line that starts with `// YOU TYPE THIS PART`.",
+         "see": "The whole line turns blue.",
+         "id": "4-11.7",
+         "n": 7
+        },
+        {
+         "do": "Type the second group of yellow lines, from `first = -1;` down to the `}` that closes Match.",
+         "see": "`AllMatched` and `RopeSnaps` have red underlines. This is normal, because you have not written them yet.",
+         "id": "4-11.8",
+         "n": 8
+        }
+       ]
+      }
+     ],
+     "id": "11"
+    },
+    {
+     "title": "Type NoMatch and tmrFlipBack_Tick, which turn a wrong pair back over",
+     "blocks": [
+      {
+       "p": "By the end of this screen, a wrong pair shows for 0.9 seconds, then turns face down again."
+      },
+      {
+       "p": "A wrong pair stays face up for 0.9 seconds, so that the player can see both cards and remember them. The Timer tmrFlipBack does the waiting. Its Interval is 900, which is 900 thousandths of a second."
+      },
+      {
+       "code": {
+        "id": "nomatch",
+        "kind": "type",
+        "title": "NoMatch and tmrFlipBack_Tick",
+        "lang": "cs",
+        "text": "// The two cards are different knots: show them, then turn them back\nprivate void NoMatch(int i)\n{\n    Sound.Play(\"wrong.wav\");\n    second = i;\n    locked = true;          // no clicks count while the pair shows\n    tmrFlipBack.Start();    // its Tick runs in 0.9 seconds\n}\n\n// Runs 0.9 seconds after a wrong try: both cards turn back over\nprivate void tmrFlipBack_Tick(object sender, EventArgs e)\n{\n    tmrFlipBack.Stop();     // stop it, or it ticks again\n    ShowBack(first);\n    ShowBack(second);\n    first = -1;\n    second = -1;\n    locked = false;\n    if (tries == maxTries) RopeSnaps();\n}",
+        "partLines": [
+         [
+          2,
+          8,
+          "NoMatch",
+          "NoMatch plays the wrong sound. `second` keeps the second card's number for later. `locked` becomes true, so clicks on cards do nothing while the pair shows. `tmrFlipBack.Start()` starts the Timer."
+         ],
+         [
+          11,
+          13,
+          "Stop the Timer",
+          "tmrFlipBack_Tick runs when the Timer ticks, 0.9 seconds later. A Timer keeps ticking every 0.9 seconds until something stops it. So `tmrFlipBack.Stop()` stops it straight away."
+         ],
+         [
+          14,
+          18,
+          "Turn both cards back",
+          "Both cards turn face down. `first` and `second` go back to -1, and `locked` becomes false, so the next click starts a new try."
+         ],
+         [
+          19,
+          20,
+          "The last try",
+          "If the wrong try was the last try, the rope snaps."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          20
+         ]
+        ],
+        "typed": 13,
+        "wordMarks": [
+         [
+          11,
+          37,
+          43,
+          21
+         ],
+         [
+          7,
+          4,
+          15,
+          27
+         ],
+         [
+          11,
+          13,
+          29,
+          29
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `Match`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots.cs, with NoMatch and tmrFlipBack_Tick typed under Match",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `Match`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-12.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-12.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The red underline under `NoMatch` in Card_Click has gone.",
+         "id": "4-12.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "12"
+    },
+    {
+     "title": "Type RopeSnaps, which ends a round when every try is used up",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the round ends when the last try is gone, and the player sees every knot they missed."
+      },
+      {
+       "p": "A round that ends without all 8 pairs should still teach something. So RopeSnaps turns every missed card face up, with its name."
+      },
+      {
+       "code": {
+        "id": "ropesnaps",
+        "kind": "type",
+        "title": "RopeSnaps",
+        "lang": "cs",
+        "text": "// Every try is used up: the rope snaps\nprivate void RopeSnaps()\n{\n    lblTries.Text = \"The rope snapped!\";\n    lblTries.ForeColor = Color.FromArgb(178, 58, 46);\n    Sound.Play(\"lose.wav\");\n    for (int i = 0; i < 16; i++)\n    {\n        if (matched[i]) continue;   // matched cards stay as they are\n        ShowFace(i);\n        if (isPicture[i]) AddNameStrip(i);\n    }\n    lblUse.Text = \"Every knot you did not match is now face up with \"\n        + \"its name. Study them, then press See my score.\";\n    RecordResult();\n    btnScore.Visible = true;\n}",
+        "partLines": [
+         [
+          2,
+          6,
+          "The rope snapped!",
+          "The Tries label says **The rope snapped!** in red, made from red 178, green 58 and blue 46. The lose sound plays."
+         ],
+         [
+          7,
+          12,
+          "Show every missed knot",
+          "The loop goes through all 16 cards. `continue` skips a matched card, because a matched card is already face up. Every other card turns face up. A photo card also gets a name strip, so the player learns each missed knot."
+         ],
+         [
+          13,
+          17,
+          "What to do next",
+          "The box on the right says what to do next. RecordResult works out the score and keeps the result. Then the See my score button appears."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          17
+         ]
+        ],
+        "typed": 12,
+        "wordMarks": [
+         [
+          9,
+          24,
+          32,
+          9
+         ],
+         [
+          5,
+          25,
+          39,
+          14
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `tmrFlipBack_Tick`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots.cs, with RopeSnaps typed under tmrFlipBack_Tick",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `tmrFlipBack_Tick`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-13.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-13.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "`AddNameStrip` and `RecordResult` have red underlines. This is normal, because you have not written them yet.",
+         "id": "4-13.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "13"
+    },
+    {
+     "title": "Type AddNameStrip, which puts a knot's name on a photo card",
+     "blocks": [
+      {
+       "p": "By the end of this screen, a missed photo card shows the knot's name in a dark strip along its bottom."
+      },
+      {
+       "p": "A photo on its own does not tell the player which knot it is. A name strip does."
+      },
+      {
+       "code": {
+        "id": "namestrip",
+        "kind": "type",
+        "title": "AddNameStrip",
+        "lang": "cs",
+        "text": "// Puts the knot's name in a dark strip along the bottom of card i\nprivate void AddNameStrip(int i)\n{\n    Label strip = new Label();\n    strip.Text = knots[knotOf[i]].Name;\n    strip.Dock = DockStyle.Bottom;\n    strip.Height = 28;\n    strip.BackColor = Color.FromArgb(38, 50, 56);\n    strip.ForeColor = Color.White;\n    strip.TextAlign = ContentAlignment.MiddleCenter;\n    cards[i].Controls.Add(strip);\n}",
+        "partLines": [
+         [
+          2,
+          5,
+          "A new Label",
+          "AddNameStrip makes a new Label called `strip`. The strip's words are the knot's name."
+         ],
+         [
+          6,
+          7,
+          "Along the bottom",
+          "`DockStyle.Bottom` sticks the strip along the bottom of the card. The strip is 28 pixels tall."
+         ],
+         [
+          8,
+          10,
+          "How the strip looks",
+          "The strip is dark grey, with white words in its middle."
+         ],
+         [
+          11,
+          12,
+          "Put the strip on the card",
+          "`cards[i].Controls.Add(strip)` puts the strip on the card itself, so the strip sits inside the card."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          12
+         ]
+        ],
+        "typed": 9,
+        "wordMarks": [
+         [
+          8,
+          22,
+          36,
+          14
+         ],
+         [
+          11,
+          13,
+          25,
+          20
+         ],
+         [
+          6,
+          10,
+          14,
+          30
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `RopeSnaps`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots.cs, with AddNameStrip typed under RopeSnaps",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `RopeSnaps`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-14.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-14.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The red underline under `AddNameStrip` in RopeSnaps has gone.",
+         "id": "4-14.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "14"
+    },
+    {
+     "title": "Type RecordResult, which works out the score",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmKnots works out the score at the end of a round, with a bonus for a quick finish."
+      },
+      {
+       "p": "The map needs a score for every game. Knot Pairs gives 10 points for each pair, and a bonus for finding all 8 pairs in few tries."
+      },
+      {
+       "code": {
+        "id": "record",
+        "kind": "type",
+        "title": "RecordResult",
+        "lang": "cs",
+        "text": "// Works out the score, adds the feedback, then keeps the result\nprivate void RecordResult()\n{\n    int bonus = 0;\n    if (pairs == 8 && tries <= 12) bonus = 20;\n    else if (pairs == 8 && tries <= 16) bonus = 10;\n    result = new GameResult(\"Knot Pairs\", pairs * 10 + bonus);\n    AddFeedback();\n    KeepResult();\n}",
+        "partLines": [
+         [
+          2,
+          6,
+          "The bonus",
+          "`bonus` starts at 0. `&&` means and. All 8 pairs in 12 tries or fewer earn a bonus of 20 points. All 8 pairs in 13 to 16 tries earn a bonus of 10 points."
+         ],
+         [
+          7,
+          7,
+          "The result",
+          "`new GameResult` from chapter 9 makes the result, with the game's name and the score. The score is 10 points for each pair, plus the bonus."
+         ],
+         [
+          8,
+          10,
+          "Feedback, then keep",
+          "AddFeedback writes what went well and what went wrong. KeepResult, from chapter 9, keeps the result for the map."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          10
+         ]
+        ],
+        "typed": 7,
+        "wordMarks": [
+         [
+          5,
+          19,
+          21,
+          24
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `AddNameStrip`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots.cs, with RecordResult typed under AddNameStrip",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `AddNameStrip`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-15.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-15.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "`AddFeedback` has a red underline. This is normal, because you have not written AddFeedback yet.",
+         "id": "4-15.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "15"
+    },
+    {
+     "title": "Type AddFeedback, which writes what went well and what went wrong",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the Round over box can list what went well and what went wrong, knot by knot."
+      },
+      {
+       "p": "A score on its own does not help the player get better. AddFeedback names each knot they matched, and each knot they missed."
+      },
+      {
+       "code": {
+        "id": "feedback",
+        "kind": "type",
+        "title": "AddFeedback",
+        "lang": "cs",
+        "text": "// Writes what went well and what went wrong into the result\nprivate void AddFeedback()\n{\n    if (pairs == 8)\n    {\n        result.WentWell.Add(\"You matched them all in \" + tries\n            + \" tries.\");\n    }\n    for (int k = 0; k < 8; k++)\n    {\n        if (KnotMatched(k))\n        {\n            result.WentWell.Add(\"You matched the \"\n                + knots[k].Name + \".\");\n        }\n        else\n        {\n            result.WentWrong.Add(\"You did not match the \"\n                + knots[k].Name + \".\");\n        }\n    }\n    if (pairs == 8 && tries > 12)\n    {\n        result.WentWrong.Add(\"You took \" + tries + \" tries. Twelve \"\n            + \"or fewer earns the full bonus.\");\n    }\n}",
+        "partLines": [
+         [
+          2,
+          8,
+          "All 8 pairs",
+          "When the player finds all 8 pairs, the first line of What went well says how many tries they took."
+         ],
+         [
+          9,
+          17,
+          "A matched knot",
+          "The loop goes through the 8 knots, numbered 0 to 7. KnotMatched says whether knot `k` was matched. A matched knot adds a line to What went well."
+         ],
+         [
+          18,
+          21,
+          "A missed knot",
+          "After `else`, a knot that was not matched adds a line to What went wrong."
+         ],
+         [
+          22,
+          27,
+          "The full bonus",
+          "When all 8 pairs took more than 12 tries, What went wrong says how to earn the full bonus."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          27
+         ]
+        ],
+        "typed": 14,
+        "wordMarks": [
+         [
+          22,
+          19,
+          21,
+          24
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `RecordResult`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots.cs, with AddFeedback typed under RecordResult",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `RecordResult`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-16.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-16.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "`KnotMatched` has a red underline. This is normal, because you have not written KnotMatched yet.",
+         "id": "4-16.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "16"
+    },
+    {
+     "title": "Type KnotMatched, which says whether a knot was matched",
+     "blocks": [
+      {
+       "p": "By the end of this screen, AddFeedback can ask whether any knot was matched."
+      },
+      {
+       "p": "AddFeedback needs a yes or no for each knot. KnotMatched gives back true for yes, or false for no."
+      },
+      {
+       "code": {
+        "id": "knotmatched",
+        "kind": "type",
+        "title": "KnotMatched",
+        "lang": "cs",
+        "text": "// True when the two cards of knot k have been matched\nprivate bool KnotMatched(int k)\n{\n    for (int i = 0; i < 16; i++)\n    {\n        if (knotOf[i] == k && matched[i]) return true;\n    }\n    return false;\n}",
+        "partLines": [
+         [
+          2,
+          9,
+          "Look at every card",
+          "KnotMatched looks at all 16 cards. A matched card that shows knot `k` means knot `k` was matched. So KnotMatched gives back true at once. If the loop ends without finding one, KnotMatched gives back false."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          9
+         ]
+        ],
+        "typed": 4,
+        "wordMarks": [
+         [
+          6,
+          27,
+          29,
+          24
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `AddFeedback`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots.cs, with KnotMatched typed under AddFeedback",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `AddFeedback`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-17.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-17.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The red underline under `KnotMatched` in AddFeedback has gone.",
+         "id": "4-17.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "17"
+    },
+    {
+     "title": "Type AllMatched and the two methods that open the Round over box, then build",
+     "blocks": [
+      {
+       "p": "By the end of this screen, every method in Knot Pairs is written, and your project builds with no errors."
+      },
+      {
+       "p": "After the last pair, the player needs a moment to see it before the Round over box covers the cards. The Timer tmrDone gives them 1.2 seconds."
+      },
+      {
+       "code": {
+        "id": "allmatched",
+        "kind": "type",
+        "title": "AllMatched, tmrDone_Tick and btnScore_Click",
+        "lang": "cs",
+        "text": "// All 8 pairs are found: keep the result, then wait 1.2 seconds\nprivate void AllMatched()\n{\n    RecordResult();\n    tmrDone.Start();        // its Tick runs in 1.2 seconds\n}\n\n// Runs 1.2 seconds after the last pair: the Round over panel opens\nprivate void tmrDone_Tick(object sender, EventArgs e)\n{\n    tmrDone.Stop();\n    ShowRoundOver();\n}\n\n// The button that shows after the rope snaps\nprivate void btnScore_Click(object sender, EventArgs e)\n{\n    ShowRoundOver();\n}",
+        "partLines": [
+         [
+          2,
+          6,
+          "AllMatched",
+          "RecordResult keeps the result at once. Then tmrDone waits 1.2 seconds, so the player sees the last pair before the Round over box opens."
+         ],
+         [
+          9,
+          13,
+          "tmrDone_Tick",
+          "tmrDone_Tick stops the Timer, then shows the Round over box."
+         ],
+         [
+          16,
+          19,
+          "btnScore_Click",
+          "btnScore_Click shows the Round over box when the player clicks See my score."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          19
+         ]
+        ],
+        "typed": 8,
+        "wordMarks": [
+         [
+          9,
+          33,
+          39,
+          21
+         ],
+         [
+          5,
+          4,
+          11,
+          27
+         ],
+         [
+          9,
+          13,
+          25,
+          29
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `KnotMatched`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots.cs, with AllMatched, tmrDone_Tick and btnScore_Click typed under KnotMatched",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `KnotMatched`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-18.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-18.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "No line in frmKnots.cs has a red underline.",
+         "id": "4-18.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "missing": true,
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows CS0103: The name 'RopeSnaps' does not exist in the current context",
+           "A method's name is spelt one way where you wrote the method, and another way where the code uses it. Check that RopeSnaps is spelt the same in Match, in tmrFlipBack_Tick and in the first line of RopeSnaps. Capital letters count."
+          ]
+         ],
+         "id": "4-18.4",
+         "n": 4
+        }
+       ]
+      }
+     ],
+     "id": "18"
+    },
+    {
+     "title": "Connect the two Timers and See my score to their methods",
+     "blocks": [
+      {
+       "p": "By the end of this screen, wrong pairs turn back over, and the Round over box opens at the end of a round."
+      },
+      {
+       "p": "tmrFlipBack_Tick, tmrDone_Tick and btnScore_Click are written, but nothing runs them yet. A Timer runs its method through its Tick event, so you connect each Tick event to its method."
+      },
+      {
+       "p": "The two Timers do not show on the form. They sit in the grey strip under the form. You connect each one with the small arrow beside its event, as you did for Back to the map."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Shift and F7 together.",
+         "see": "The designer shows frmKnots.",
+         "img": {
+          "missing": true,
+          "alt": "frmKnots in the designer, with tmrFlipBack picked in the grey strip under the form, and the Properties window showing the Tick event of tmrFlipBack",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Press Shift and F7 together."
+           },
+           {
+            "n": 2,
+            "say": "Click **tmrFlipBack** in the grey strip under frmKnots."
+           },
+           {
+            "n": 3,
+            "say": "Click the lightning bolt at the top of the Properties window."
+           },
+           {
+            "n": 4,
+            "say": "Click the box beside **Tick**."
+           },
+           {
+            "n": 5,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 6,
+            "say": "Click `tmrFlipBack_Tick` in the list."
+           }
+          ]
+         },
+         "id": "4-19.1",
+         "n": 1
+        },
+        {
+         "do": "Click **tmrFlipBack** in the grey strip under frmKnots.",
+         "see": "The Properties window shows tmrFlipBack at the top.",
+         "id": "4-19.2",
+         "n": 2
+        },
+        {
+         "do": "Click the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists one event, Tick.",
+         "id": "4-19.3",
+         "n": 3
+        },
+        {
+         "do": "Click the box beside **Tick**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-19.4",
+         "n": 4
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-19.5",
+         "n": 5
+        },
+        {
+         "do": "Click `tmrFlipBack_Tick` in the list.",
+         "see": "The box beside Tick shows `tmrFlipBack_Tick`.",
+         "id": "4-19.6",
+         "n": 6
+        },
+        {
+         "do": "Click **tmrDone** in the grey strip under frmKnots.",
+         "see": "The Properties window shows tmrDone at the top, and still lists events. tmrDone has one event, Tick.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the Tick event of tmrDone, with tmrDone_Tick beside Tick",
+          "w": 360,
+          "h": 300,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click **tmrDone** in the grey strip under frmKnots."
+           },
+           {
+            "n": 8,
+            "say": "Click the box beside **Tick**."
+           },
+           {
+            "n": 9,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 10,
+            "say": "Click `tmrDone_Tick` in the list."
+           }
+          ]
+         },
+         "id": "4-19.7",
+         "n": 7
+        },
+        {
+         "do": "Click the box beside **Tick**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-19.8",
+         "n": 8
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-19.9",
+         "n": 9
+        },
+        {
+         "do": "Click `tmrDone_Tick` in the list.",
+         "see": "The box beside Tick shows `tmrDone_Tick`.",
+         "id": "4-19.10",
+         "n": 10
+        },
+        {
+         "do": "Click **See my score** on pnlPlay.",
+         "see": "The Properties window lists the events of btnScore.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of btnScore, with btnScore_Click beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 11,
+            "say": "Click **See my score** on pnlPlay."
+           },
+           {
+            "n": 12,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 13,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 14,
+            "say": "Click `btnScore_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-19.11",
+         "n": 11
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-19.12",
+         "n": 12
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-19.13",
+         "n": 13
+        },
+        {
+         "do": "Click `btnScore_Click` in the list.",
+         "see": "The box beside Click shows `btnScore_Click`.",
+         "id": "4-19.14",
+         "n": 14
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "missing": true,
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 15,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "id": "4-19.15",
+         "n": 15
+        }
+       ]
+      }
+     ],
+     "id": "19"
+    },
+    {
+     "title": "Open Knot Pairs from the map and play a round",
+     "blocks": [
+      {
+       "p": "By the end of this screen, place number 1 on your map opens Knot Pairs, and you have played a whole round."
+      },
+      {
+       "p": "Your map opens each game with a list of cases in frmMap.cs, one case for each place. Knot Pairs is place number 1, so its case says `case 1:`."
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `frmMap.cs` in Solution Explorer.",
+         "see": "frmMap opens in the designer.",
+         "img": {
+          "missing": true,
+          "alt": "Visual Studio 2019 with frmMap.cs in the code editor, the search box open, the new case line typed, and frmMap.cs picked in Solution Explorer on the right",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Double-click `frmMap.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "say": "Press F7."
+           },
+           {
+            "n": 3,
+            "say": "Press Ctrl and F together."
+           },
+           {
+            "n": 4,
+            "say": "Type `each game chapter adds`"
+           },
+           {
+            "n": 5,
+            "say": "Press Escape."
+           },
+           {
+            "n": 6,
+            "say": "Press End."
+           },
+           {
+            "n": 7,
+            "say": "Press Enter."
+           },
+           {
+            "n": 8,
+            "say": "Type `case 1: game = new frmKnots(); break;`"
+           }
+          ]
+         },
+         "id": "4-20.1",
+         "n": 1
+        },
+        {
+         "do": "Press F7.",
+         "see": "The code of frmMap shows.",
+         "id": "4-20.2",
+         "n": 2
+        },
+        {
+         "do": "Press Ctrl and F together.",
+         "see": "A small search box opens at the top right of the code.",
+         "id": "4-20.3",
+         "n": 3
+        },
+        {
+         "do": "Type `each game chapter adds`",
+         "see": "The line `// each game chapter adds its own case below this line` is highlighted.",
+         "id": "4-20.4",
+         "n": 4
+        },
+        {
+         "do": "Press Escape.",
+         "see": "The search box closes. The words you searched for stay highlighted.",
+         "id": "4-20.5",
+         "n": 5
+        },
+        {
+         "do": "Press End.",
+         "see": "The flashing cursor moves to the end of the comment line.",
+         "id": "4-20.6",
+         "n": 6
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the comment line.",
+         "id": "4-20.7",
+         "n": 7
+        },
+        {
+         "do": "Type `case 1: game = new frmKnots(); break;`",
+         "see": "The new line says `case 1: game = new frmKnots(); break;`.",
+         "wrong": [
+          [
+           "The Error List shows CS0152: The switch statement contains multiple cases with the label value '1'",
+           "Your map already uses place number 1 for another game. Change the 1 in the new case line to a place number that your map does not use yet. Then change `gameNumber` in frmKnots.cs to the same number."
+          ]
+         ],
+         "id": "4-20.8",
+         "n": 8
+        },
+        {
+         "do": "Press F5.",
+         "see": "Your game starts and shows the login window.",
+         "img": {
+          "missing": true,
+          "alt": "The login window of your game, with a player's name and password typed in",
+          "w": 640,
+          "h": 400,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Press F5."
+           },
+           {
+            "n": 10,
+            "say": "Log in with a player you registered in chapter 5."
+           }
+          ]
+         },
+         "id": "4-20.9",
+         "n": 9
+        },
+        {
+         "do": "Log in with a player you registered in chapter 5.",
+         "see": "The Welcome screen opens.",
+         "id": "4-20.10",
+         "n": 10
+        },
+        {
+         "do": "Click **Start the expedition**.",
+         "see": "The map opens.",
+         "img": {
+          "missing": true,
+          "alt": "The Welcome screen of your game, with the Start the expedition button",
+          "w": 640,
+          "h": 400,
+          "marks": [
+           {
+            "n": 11,
+            "say": "Click **Start the expedition**."
+           }
+          ]
+         },
+         "id": "4-20.11",
+         "n": 11
+        },
+        {
+         "do": "Click place number 1 on the map, the second place.",
+         "see": "Knot Pairs opens, with 16 rope cards face down.",
+         "img": {
+          "missing": true,
+          "alt": "The map, with place number 1 picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 12,
+            "say": "Click place number 1 on the map, the second place."
+           }
+          ]
+         },
+         "id": "4-20.12",
+         "n": 12
+        },
+        {
+         "do": "Play a whole round.",
+         "see": "The round ends with the Round over box.",
+         "img": {
+          "img": "img/ch12-knots-playing.png",
+          "alt": "Knot Pairs part-way through a round",
+          "w": 1002,
+          "h": 693,
+          "marks": [
+           {
+            "n": 13,
+            "x": 2.5,
+            "y": 14.1,
+            "w": 58.3,
+            "h": 84.3,
+            "say": "Play a whole round."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "No cards appear, and the box on the right says **Knot Pairs needs 8 knots**",
+           "Knot Pairs cannot find 8 good lines in `knots.txt`. Check that the Data folder inside bin\\Debug holds `knots.txt`. Then check that `knots.txt` has 8 lines, each with 3 parts split by a bar `|`."
+          ],
+          [
+           "A face-up photo card is a plain white square",
+           "Either the photo is missing from the Knots folder inside bin\\Debug\\Images, or `knots.txt` spells the photo's file name differently. Compare the two names letter by letter."
+          ],
+          [
+           "There is no sound when you click a card",
+           "Check that the speaker picture on the header strip is not muted. Then check that the Sounds folder inside bin\\Debug holds `flip.wav`, `wrong.wav`, `match.wav`, `win.wav` and `lose.wav`."
+          ],
+          [
+           "A different game opens, or nothing opens, when you click place number 1",
+           "Check the new line in frmMap.cs. It must say `case 1:` and `new frmKnots()`."
+          ]
+         ],
+         "id": "4-20.13",
+         "n": 13
+        }
+       ]
+      }
+     ],
+     "id": "20"
+    },
+    {
+     "title": "Your turn: make the rope hold 20 tries",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have changed how many tries the rope holds, and tested it, on your own."
+      },
+      {
+       "p": "The rope holds 24 tries. Change Knot Pairs so that the rope holds 20 tries."
+      },
+      {
+       "code": {
+        "id": "turn-rope",
+        "kind": "turn",
+        "title": "Make the rope hold 20 tries",
+        "lang": "cs",
+        "text": "private int maxTries = 20;       // the rope snaps after this many",
+        "task": [
+         "Change `maxTries` in frmKnots.cs from 24 to 20.",
+         "Change the Value of prgRope to 20 in the Properties window.",
+         "Change the Maximum of prgRope to 20.",
+         "Change the Text of lblTries to `Tries: 0 of 20`.",
+         "Change the Text of lblInstruction so that the instruction says 20 tries."
+        ],
+        "test": "Press F5, open Knot Pairs from the map, and make 20 wrong tries on purpose.",
+        "expect": "When the 20th try turns back over, the Tries label says **The rope snapped!** and the Rope strength bar is empty.",
+        "hint": "5 things say 24: one in the code and four in the Properties window."
+       }
+      },
+      {
+       "p": "When the test passes, change all 5 things back to 24, because Knot Pairs is meant to give 24 tries. Change the Maximum of prgRope back before the Value. The Value can never be bigger than the Maximum."
+      }
+     ],
+     "id": "21"
+    },
+    {
+     "title": "Check that Knot Pairs works",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that every part of Knot Pairs works, including the clicks it must refuse."
+      },
+      {
+       "p": "Run each test with F5. Tick each test when it passes. The 2 tests marked as clicks to refuse must do nothing, and that counts as a pass."
+      },
+      {
+       "check": [
+        {
+         "what": "Turn over the photo card and the name card of the same knot.",
+         "expect": "allowed",
+         "how": "Both cards stay face up with green borders. Pairs found goes up by 1, and the box on the right says what the knot is for.",
+         "must": "Must happen",
+         "fix": "Check Match against the yellow lines on the screen Type Match, one line at a time.",
+         "id": "4-22.t1"
+        },
+        {
+         "what": "Turn over two cards of different knots.",
+         "expect": "allowed",
+         "how": "Both cards show for about 1 second, then both cards turn face down. Tries goes up by 1.",
+         "must": "Must happen",
+         "fix": "Check NoMatch and tmrFlipBack_Tick against their yellow lines. Then click tmrFlipBack in the grey strip under frmKnots, and check 2 things in the Properties window. Interval is 900, and the events list shows `tmrFlipBack_Tick` beside Tick.",
+         "id": "4-22.t2"
+        },
+        {
+         "what": "Click the same card twice.",
+         "expect": "control",
+         "how": "Start a new round. Click one card, then click the same card again. The Tries label must still say **Tries: 0 of 24**.",
+         "fix": "Check the first `if` line in Card_Click. The line must end with `|| i == first) return;`. Without `i == first`, clicking the first card again counts as the second card.",
+         "id": "4-22.t3"
+        },
+        {
+         "what": "Click a third card while a wrong pair is showing.",
+         "expect": "control",
+         "how": "Turn over two different knots, then click a third card straight away. The third card must stay face down.",
+         "fix": "Check that NoMatch has the line `locked = true;`. Then check that the first `if` line in Card_Click starts with `if (locked ||`.",
+         "id": "4-22.t4"
+        },
+        {
+         "what": "Use up all 24 tries.",
+         "expect": "allowed",
+         "how": "After the 24th try, the Tries label says **The rope snapped!** in red. Every unmatched card is face up, and See my score appears.",
+         "must": "Must happen",
+         "fix": "Check RopeSnaps against its yellow lines. Then check that tmrFlipBack_Tick ends with `if (tries == maxTries) RopeSnaps();`.",
+         "id": "4-22.t5"
+        },
+        {
+         "what": "Find 3 pairs, then let the rope snap, then click See my score.",
+         "expect": "allowed",
+         "how": "The Round over box says **You scored 30 out of 100 points.**",
+         "must": "Must happen",
+         "fix": "Check the line in RecordResult that starts `result = new GameResult`. The score part must be `pairs * 10 + bonus`.",
+         "id": "4-22.t6"
+        },
+        {
+         "what": "Click Back to the map in the middle of a round, then click No.",
+         "expect": "allowed",
+         "how": "The question **Leave Knot Pairs?** appears. After No, Knot Pairs stays open.",
+         "must": "Must happen",
+         "fix": "Click the form itself, open the events list in the Properties window, and check that FormClosing shows `frmKnots_FormClosing`.",
+         "id": "4-22.t7"
+        },
+        {
+         "what": "Finish a round, then click Back to the map.",
+         "expect": "allowed",
+         "how": "The map shows again, and the flag on place number 1 shows a tick.",
+         "must": "Must happen",
+         "fix": "Check that the first field at the top of frmKnots is `private int gameNumber = 1;`. Then check that frmMap opens Knot Pairs for `case 1:`.",
+         "id": "4-22.t8"
+        }
+       ]
+      }
+     ],
+     "id": "22"
+    }
+   ],
+   "id": "4"
+  },
+  {
+   "title": "Change Knot Pairs into a game on your own topic",
+   "screens": [
+    {
+     "title": "Choose your own pairs, and 2 more things to change",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have chosen your own 8 pairs, and 2 more things to change."
+      },
+      {
+       "p": "Your own game keeps the Knot Pairs code, but uses your own topic. Each pair is a picture and a name, so any topic with 8 pairs like that works."
+      },
+      {
+       "box": {
+        "title": "3 topics that work",
+        "blocks": [
+         {
+          "p": "History: a photo of an event, the event's name, and the year of the event."
+         },
+         {
+          "p": "Chemistry: a photo of an element, the element's symbol, and what the element is used for."
+         },
+         {
+          "p": "Biology: a picture of a part of the body, the part's name, and the part's job."
+         }
+        ]
+       }
+      },
+      {
+       "p": "Change at least 2 more things as well, so that your game plays differently from Knot Pairs. For example, change the number of tries, the points for a pair, the bonus rules, the colours or the size of the cards."
+      },
+      {
+       "p": "Every picture and sound you use must be free to use. Each one gets a line in `credits.txt`, saying who made it, its licence and a link."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Rename the Knot class and the Knot Pairs form",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your class and your form have names that fit your topic."
+      },
+      {
+       "p": "A class called Knot in a game about elements would confuse anyone who reads your code. Visual Studio 2019 can rename a file, and every use of its class, in one go."
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click `Knot.cs` in Solution Explorer.",
+         "see": "A menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the right-click menu of Knot.cs open",
+          "w": 360,
+          "h": 420,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Right-click `Knot.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "say": "Click **Rename**."
+           }
+          ]
+         },
+         "id": "5-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click **Rename**.",
+         "see": "The name `Knot.cs` becomes a box that you can type in.",
+         "id": "5-2.2",
+         "n": 2
+        },
+        {
+         "do": "Type your class's new name, such as `Element.cs`",
+         "see": "The box shows the new name.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the name Knot.cs turned into a box and Element.cs typed in it",
+          "w": 360,
+          "h": 200,
+          "marks": [
+           {
+            "n": 3,
+            "say": "Type your class's new name, such as `Element.cs`"
+           },
+           {
+            "n": 4,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "5-2.3",
+         "n": 3
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A message asks: You are renaming a file. Would you also like to perform a rename in this project of all references to the code element 'Knot'?",
+         "id": "5-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click **Yes**.",
+         "see": "Every use of the class Knot in your code changes to the new name. For example, `List<Knot>` becomes `List<Element>`.",
+         "img": {
+          "missing": true,
+          "alt": "The message that asks whether to rename every use of Knot",
+          "w": 480,
+          "h": 200,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Click **Yes**."
+           }
+          ]
+         },
+         "id": "5-2.5",
+         "n": 5
+        },
+        {
+         "do": "Right-click `frmKnots.cs` in Solution Explorer.",
+         "see": "A menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the right-click menu of frmKnots.cs open",
+          "w": 360,
+          "h": 420,
+          "marks": [
+           {
+            "n": 6,
+            "say": "Right-click `frmKnots.cs` in Solution Explorer."
+           },
+           {
+            "n": 7,
+            "say": "Click **Rename**."
+           }
+          ]
+         },
+         "id": "5-2.6",
+         "n": 6
+        },
+        {
+         "do": "Click **Rename**.",
+         "see": "The name `frmKnots.cs` becomes a box that you can type in.",
+         "id": "5-2.7",
+         "n": 7
+        },
+        {
+         "do": "Type your form's new name, such as `frmElements.cs`",
+         "see": "The box shows the new name.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the name frmKnots.cs turned into a box and frmElements.cs typed in it",
+          "w": 360,
+          "h": 200,
+          "marks": [
+           {
+            "n": 8,
+            "say": "Type your form's new name, such as `frmElements.cs`"
+           },
+           {
+            "n": 9,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "5-2.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The same message asks about every use of 'frmKnots'.",
+         "id": "5-2.9",
+         "n": 9
+        },
+        {
+         "do": "Click **Yes**.",
+         "see": "Every use of the class frmKnots changes to the new name, including the case line in frmMap.cs.",
+         "img": {
+          "missing": true,
+          "alt": "The message that asks whether to rename every use of frmKnots",
+          "w": 480,
+          "h": 200,
+          "marks": [
+           {
+            "n": 10,
+            "say": "Click **Yes**."
+           }
+          ]
+         },
+         "id": "5-2.10",
+         "n": 10
+        }
+       ]
+      },
+      {
+       "p": "Method names such as `KnotMatched` and `frmKnots_Load` keep their old names, and so do field names such as `knots`. This is normal, and the old names still work. Rename them only if you want to."
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Put your own data file and pictures into bin\\Debug",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your game reads your own data file and shows your own pictures."
+      },
+      {
+       "p": "Your own files go in the same folders as the Summit Ready files, inside bin\\Debug. Your data file goes in Data, your pictures go in a folder inside Images, and any new sounds go in Sounds."
+      },
+      {
+       "code": {
+        "id": "turn-data",
+        "kind": "turn",
+        "title": "Use your own data file and pictures",
+        "lang": "cs",
+        "text": "string path = Files.Data(\"elements.txt\");\nphotos[k] = Files.Picture(\"Elements\", knots[k].Picture);",
+        "task": [
+         "Make a text file with 8 lines. Each line has 3 parts split by a bar `|`: the picture's file name, the name, and what the name means or does.",
+         "Save the text file in the Data folder inside bin\\Debug, with your own name, such as `elements.txt`.",
+         "Change `knots.txt` in LoadAll to the name of your text file.",
+         "Make a folder for your 8 pictures inside bin\\Debug\\Images, such as Elements, and put your 8 pictures in the folder.",
+         "Change `\"Knots\"` in frmKnots_Load to the name of your folder.",
+         "Put a picture for the card backs in the Icons folder inside bin\\Debug\\Images. Then change `icon-rope-128.png` in frmKnots_Load to the picture's file name.",
+         "Add a line to `credits.txt` for each new picture and each new sound."
+        ],
+        "test": "Press F5 and open your game from the map.",
+        "expect": "16 cards show your own card back. Turning cards over shows your own pictures and names.",
+        "hint": "LoadAll is the only method that opens the text file. frmKnots_Load is the only method that opens the picture folder."
+       }
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Change the words on the screen to fit your topic",
+     "blocks": [
+      {
+       "p": "By the end of this screen, every word on the screen and in the Round over box fits your topic."
+      },
+      {
+       "p": "A player of your game should never read about knots or ropes, unless your topic is knots. The words are in 2 places: the Properties window, and the messages in the code."
+      },
+      {
+       "code": {
+        "id": "turn-words",
+        "kind": "turn",
+        "title": "Change every word about knots and ropes",
+        "lang": "cs",
+        "text": "lblTries.Text = \"Out of tries!\";\nresult = new GameResult(\"Element Pairs\", pairs * 10 + bonus);",
+        "task": [
+         "Change the Text of lblTitle and of lblInstruction.",
+         "Change the Text of the form itself, which shows in the title bar of the window.",
+         "Change the Text of lblRope, which says **Rope strength**.",
+         "Change the message in frmKnots_Load that says **Knot Pairs needs 8 knots**.",
+         "Change the 2 messages in RopeSnaps.",
+         "Change the messages in AddFeedback.",
+         "Change the question in FormClosing.",
+         "Change the game's name, `\"Knot Pairs\"`, in RecordResult."
+        ],
+        "test": "Play a round to the end, and read every word on the screen and in the Round over box.",
+        "expect": "No word on the screen is about knots or ropes, unless your topic is knots.",
+        "hint": "Press Ctrl and F together, then type `Knot` to find every word still about knots. Do the same for `rope`."
+       }
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Test your game, and keep the evidence",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that your own game works, and you have the evidence for your coursework."
+      },
+      {
+       "p": "Run each test with F5 on your own game. Tick each test when it passes. The 2 tests marked as clicks to refuse must do nothing, and that counts as a pass."
+      },
+      {
+       "check": [
+        {
+         "what": "Turn over the picture card and the name card of the same pair.",
+         "expect": "allowed",
+         "how": "Both cards stay face up with green borders, and Pairs found goes up by 1.",
+         "must": "Must happen",
+         "id": "5-5.t1"
+        },
+        {
+         "what": "Turn over two cards that are not a pair.",
+         "expect": "allowed",
+         "how": "Both cards show for about 1 second, then both cards turn face down.",
+         "must": "Must happen",
+         "id": "5-5.t2"
+        },
+        {
+         "what": "Click the same card twice.",
+         "expect": "control",
+         "how": "Start a new round. Click one card, then click the same card again. The Tries label must not change.",
+         "id": "5-5.t3"
+        },
+        {
+         "what": "Click a third card while a wrong pair is showing.",
+         "expect": "control",
+         "how": "The third card must stay face down.",
+         "id": "5-5.t4"
+        },
+        {
+         "what": "Use up every try.",
+         "expect": "allowed",
+         "how": "The message you wrote for running out of tries shows. Every unmatched card is face up, and See my score appears.",
+         "must": "Must happen",
+         "id": "5-5.t5"
+        },
+        {
+         "what": "Finish a round, then go back to the map.",
+         "expect": "allowed",
+         "how": "The flag on your game's place shows a tick.",
+         "must": "Must happen",
+         "id": "5-5.t6"
+        }
+       ]
+      },
+      {
+       "p": "Every test passed in Knot Pairs. So if a test fails now, the fault is in something you changed in this stage. Look back over your changes one at a time, starting with the last one."
+      },
+      {
+       "box": {
+        "title": "Evidence to keep",
+        "blocks": [
+         {
+          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
+         },
+         {
+          "p": "Paste each screenshot into your testing document, under the test it shows."
+         },
+         {
+          "p": "Keep your data file and your `credits.txt` with your project."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "5"
+    }
+   ],
+   "id": "5"
+  }
+ ],
+ "glossary": [
+  [
+   "card",
+   "One of the 16 squares you click in Knot Pairs. In the code, each card is a button."
+  ],
+  [
+   "pair",
+   "The photo card and the name card of the same knot."
+  ],
+  [
+   "try",
+   "Turning over two cards in Knot Pairs. This try is part of the game. It is not the C# word `try` from chapter 4."
+  ],
+  [
+   "bin\\Debug",
+   "The folder inside your project where Visual Studio 2019 puts the program it builds. Summit Ready reads its data, pictures and sounds from there."
+  ],
+  [
+   "zip file",
+   "One file with other files and folders packed inside it."
+  ],
+  [
+   "property",
+   "A named value that an object carries, such as `Name` on a Knot. `{ get; set; }` lets other code read the value and change it."
+  ],
+  [
+   "constructor",
+   "A method with the same name as its class. It runs once, when code makes a new object with `new`."
+  ],
+  [
+   "static",
+   "A method marked `static` belongs to the class itself. You call it on the class name, as in `Knot.LoadAll()`."
+  ],
+  [
+   "List",
+   "A list that grows as you add to it. `List<Knot>` is a list that holds Knot objects."
+  ],
+  [
+   "continue",
+   "Inside a loop, `continue` skips the rest of this turn of the loop. The loop goes straight on to its next turn."
+  ],
+  [
+   "lightning bolt",
+   "The button at the top of the Properties window that shows a control's events in place of its properties."
+  ],
+  [
+   "field",
+   "A variable written at the top of the class, outside every method. Every method in the form can use it, and it keeps its value until the window closes."
+  ],
+  [
+   "array",
+   "A row of values of the same type, kept together under one name and numbered from 0. `cards[0]` is the first card, and `cards[15]` is the 16th card."
+  ],
+  [
+   "panel",
+   "A control that holds other controls. `pnlPlay` is the play area that holds the 16 cards."
+  ],
+  [
+   "colour from red, green and blue",
+   "`Color.FromArgb(47, 111, 143)` mixes a colour from red, green and blue. Each number is from 0 to 255."
+  ],
+  [
+   "remainder",
+   "`%` gives what is left over after dividing. `13 % 8` is 5, because 8 goes into 13 once with 5 left over."
+  ],
+  [
+   "whole-number division",
+   "`/` between two whole numbers drops anything after the decimal point. `13 / 4` is 3, not 3.25."
+  ],
+  [
+   "event",
+   "Something that happens to a control, such as a click on a button, or a Timer ticking."
+  ],
+  [
+   "connect with +=",
+   "`+=` connects a method to an event in code. `card.Click += Card_Click;` means that a click on that card runs `Card_Click`."
+  ],
+  [
+   "handler",
+   "The method that runs when an event happens. `Card_Click` is the handler for a click on any card."
+  ],
+  [
+   "Controls.Add",
+   "Puts a control that code made onto a window or a panel. Until then, the control exists, but nobody can see it."
+  ],
+  [
+   "sender",
+   "Every handler is given `sender`: the control that the event happened to, such as the card that was clicked."
+  ],
+  [
+   "cast",
+   "A type in brackets in front of a value tells C# what the value really is. `(Button)sender` tells C# that `sender` is a button."
+  ],
+  [
+   "or",
+   "`||` means or. The `if` is true when any one of its parts is true."
+  ],
+  [
+   "and",
+   "`&&` means and. The `if` is true only when both of its parts are true."
+  ],
+  [
+   "ProgressBar",
+   "A control that shows a bar. `prgRope` is the Rope strength bar, and its length is its Value out of its Maximum."
+  ],
+  [
+   "ToLower",
+   "Gives a copy of some text in small letters. `\"Joins TWO ropes\".ToLower()` gives `\"joins two ropes\"`."
+  ],
+  [
+   "Timer",
+   "A control that never shows on the window. Once started, it runs its Tick method every time its Interval runs out, until it is stopped."
+  ],
+  [
+   "Interval",
+   "How long a Timer waits before each Tick, in thousandths of a second. 900 means 0.9 seconds."
+  ],
+  [
+   "Tick",
+   "The event a Timer has. Its method runs every time the Timer's Interval runs out."
+  ],
+  [
+   "Dock",
+   "A property that sticks a control to one edge of the control it sits on. `DockStyle.Bottom` sticks it along the bottom."
+  ],
+  [
+   "red underline",
+   "The wavy red line Visual Studio 2019 draws under code it does not understand yet. Often it means a method you have not written yet."
+  ]
+ ]
+}
