@@ -4,7 +4,8 @@ CCEA AS Software Systems Development: the coursework guide (build a game in Visu
 
 ## Links
 - Landing page: https://dgaj-g.github.io/alevel_SSD/as/
-- Pupils and staff: the Apps Script link on the landing page (project "OLS AS SSD Platform"). Add ?class=<class name> for a class made on the staff page.
+- Pupils: https://script.google.com/a/macros/c2ken.net/s/AKfycbzoi3hgcvUb8-9lkX5wOby5isPFYl5AX867aVUxiHNhKFPVgsr3kLxhrA9NLRsqOaW_GA/exec?class=L6-26-27 (the 2026-27 L6 class; swap in any class made on the staff page). Add #cw to open the coursework guide.
+- Staff: the same link without ?class= (Apps Script project "OLS AS SSD Platform").
 - The staff passcode is a Script Property Damien sets himself. It is never in this repo.
 
 ## Folders

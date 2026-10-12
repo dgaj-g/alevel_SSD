@@ -138,6 +138,7 @@ const css = style + '\n/* ---- cw.css: the coursework guide ---- */\n' + cwcss;
 let tpl = need(path.join(A2, 'server', 'Code.gs.template'));
 tpl = swap('Code.gs.template', tpl, "SpreadsheetApp.create('A2 SSD - Archive')", "SpreadsheetApp.create('AS SSD - Archive')");
 tpl = tpl.replace(/OLS A2 SSD Platform/g, 'OLS AS SSD Platform');
+tpl = tpl.replace(/"A2 SSD - Archive"/g, '"AS SSD - Archive"');
 const BUILD = CONTENT.BUILD + '-' + hashOf(css + index + scripts.map((s) => s[1]).join('\n') + tpl + JSON.stringify(CWMETA)).slice(0, 8);
 const salt = crypto.randomBytes(16).toString('hex');
 const hash = crypto.createHash('sha256').update(salt + crypto.randomBytes(32).toString('hex'), 'utf8').digest('hex');
