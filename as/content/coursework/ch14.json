@@ -1,0 +1,4600 @@
+{
+ "id": "14",
+ "n": 14,
+ "of": 20,
+ "title": "Build Read the Sky, a picture quiz against the clock",
+ "kind": "a game chapter: build one game from each pair, and this pair is chapters 14 and 17",
+ "one": "You build Read the Sky in your own project, exactly as it is in Summit Ready, and test it. Then you change it into a timed picture quiz on your own topic.",
+ "prev": {
+  "id": "13",
+  "n": 13,
+  "title": "Leave No Trace"
+ },
+ "next": {
+  "id": "15",
+  "n": 15,
+  "title": "Whiteout"
+ },
+ "stages": [
+  {
+   "title": "See what Read the Sky does and how a round plays",
+   "screens": [
+    {
+     "title": "Look at a round of Read the Sky, from the first question to the score",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know how a round of Read the Sky plays and how it scores."
+      },
+      {
+       "p": "Read the Sky is a picture quiz against the clock. It is on Slieve Commedagh, the fourth place on the Summit Ready map."
+      },
+      {
+       "p": "You build one game from each pair of game chapters. Read the Sky is paired with Route Timer, so you build one of those two."
+      },
+      {
+       "p": "First you build Read the Sky exactly as it is in Summit Ready. Then, in stage 5, you change it into a timed picture quiz on your own topic."
+      },
+      {
+       "p": "A round has 10 questions. Each question shows a photo of the sky and asks what it means for a walk in the hills."
+      },
+      {
+       "p": "There are 3 answers down the right-hand side, and only one of them is right. The [[time bar|0]] above them gives you 10 seconds to pick one."
+      },
+      {
+       "screenshot": {
+        "img": "img/ch00-sky.png",
+        "alt": "Read the Sky at the first question, with the time bar part-way down",
+        "w": 803,
+        "h": 549,
+        "marks": [
+         {
+          "n": 1,
+          "x": 2,
+          "y": 13,
+          "w": 62,
+          "h": 4.5,
+          "say": "The question about the photo."
+         },
+         {
+          "n": 2,
+          "x": 2,
+          "y": 22.5,
+          "w": 62,
+          "h": 58.5,
+          "say": "The photo of the sky."
+         },
+         {
+          "n": 3,
+          "x": 66,
+          "y": 13.5,
+          "w": 25,
+          "h": 4.5,
+          "say": "Question 1 of 10."
+         },
+         {
+          "n": 4,
+          "x": 65.5,
+          "y": 18.5,
+          "w": 32.5,
+          "h": 7.5,
+          "say": "The time bar. It gets shorter every tenth of a second."
+         },
+         {
+          "n": 5,
+          "x": 65.5,
+          "y": 29.5,
+          "w": 32.5,
+          "h": 32,
+          "say": "The 3 answers, in a different order every time."
+         },
+         {
+          "n": 6,
+          "x": 63.5,
+          "y": 5.5,
+          "w": 8.5,
+          "h": 3.5,
+          "say": "Points: 0. Points shows your score when the round ends."
+         }
+        ],
+        "cap": "The first question of a round. The time bar has about 7 seconds left."
+       }
+      },
+      {
+       "p": "When you click an answer, the right answer turns green. If you picked a wrong answer, your answer turns red. The box under the photo then says why the right answer is right."
+      },
+      {
+       "screenshot": {
+        "missing": true,
+        "alt": "Read the Sky after a wrong answer, with the picked answer red, the right answer green and the reason under the photo",
+        "w": 803,
+        "h": 549,
+        "at": [],
+        "cap": "After a wrong answer. The words under the photo start with **Not quite.**"
+       }
+      },
+      {
+       "p": "If the time bar runs out before you click, the question counts as wrong. The right answer turns green, and the words under the photo start with **Time is up.**"
+      },
+      {
+       "screenshot": {
+        "missing": true,
+        "alt": "Read the Sky after the time bar has run out, with the right answer green",
+        "w": 803,
+        "h": 549,
+        "at": [],
+        "cap": "The time bar ran out. The question counts as wrong."
+       }
+      },
+      {
+       "p": "Then **Next question** appears at the bottom right. You read the reason, and click Next question when you are ready."
+      },
+      {
+       "p": "Each right answer is worth 10 points, so the best score is 100 points."
+      },
+      {
+       "p": "After the 10th question, the button says **See my score**. It opens the Round over box, and the flag on Slieve Commedagh gets a tick on the map."
+      },
+      {
+       "screenshot": {
+        "missing": true,
+        "alt": "The Round over box at the end of a round of Read the Sky",
+        "w": 803,
+        "h": 549,
+        "at": [],
+        "cap": "The Round over box at the end of a round."
+       }
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Check that your project is ready, and see the words this chapter uses",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know that your project has everything Read the Sky needs."
+      },
+      {
+       "p": "Read the Sky uses things you made in earlier chapters. Check that each one is in your project before you start."
+      },
+      {
+       "need": [
+        "Your Summit Ready project, with the practice game opening from the map (chapter 9).",
+        "The Files class that finds files, the Sound class that plays sounds and the Mix class that shuffles numbers (chapter 2).",
+        "The Data, Images and Sounds folders in your project's [[bin\\Debug|1]] folder, from `summit-ready-files.zip` (chapter 2). They already hold every file that Read the Sky needs.",
+        "The line `// each game chapter adds its own case below this line` in `frmMap.cs` (chapter 8).",
+        "File name extensions turned on in File Explorer, so `sky.txt` shows as `sky.txt` and not as `sky` (chapter 2).",
+        "About 2 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
+       ]
+      },
+      {
+       "words": [
+        [
+         "time bar",
+         "The green bar on the right of Read the Sky. It starts full and gets shorter until the time is up.",
+         "1-1",
+         false
+        ],
+        [
+         "bin\\Debug",
+         "The folder inside your project where Visual Studio 2019 puts the program it builds. Summit Ready reads its data, pictures and sounds from there.",
+         "1-2",
+         false
+        ],
+        [
+         "zip file",
+         "One file with other files and folders packed inside it.",
+         "2-1",
+         false
+        ],
+        [
+         "property",
+         "A named value that an object carries, such as `Question` on a SkyQuestion. `{ get; set; }` lets other code read the value and change it.",
+         "2-2",
+         true
+        ],
+        [
+         "constructor",
+         "A method with the same name as its class. It runs once, when code makes a new object with `new`.",
+         "2-2",
+         true
+        ],
+        [
+         "static",
+         "A method marked `static` belongs to the class itself. You call it on the class name, as in `SkyQuestion.LoadAll()`.",
+         "2-2",
+         true
+        ],
+        [
+         "List",
+         "A list that grows as you add to it. `List<SkyQuestion>` is a list that holds SkyQuestion objects.",
+         "2-2",
+         true
+        ],
+        [
+         "continue",
+         "Inside a loop, `continue` skips the rest of this turn of the loop. The loop goes straight on to its next turn.",
+         "2-2",
+         true
+        ],
+        [
+         "array",
+         "A row of values of the same type, kept together under one name and numbered from 0. `answers[0]` is the first answer button, and `answers[2]` is the third.",
+         "2-2",
+         true
+        ],
+        [
+         "Convert.ToInt32",
+         "Turns text into a whole number. `Convert.ToInt32(\"2\")` gives the number 2.",
+         "2-2",
+         true
+        ],
+        [
+         "lightning bolt",
+         "The button at the top of the Properties window that shows a control's events in place of its properties.",
+         "3-1",
+         false
+        ],
+        [
+         "field",
+         "A variable written at the top of the class, outside every method. Every method in the form can use it, and it keeps its value until the window closes.",
+         "4-4",
+         false
+        ],
+        [
+         "panel",
+         "A control that holds other controls. `pnlPlay` is the play area that holds the photo, the time bar and the answers.",
+         "3-5",
+         false
+        ],
+        [
+         "PictureBox",
+         "A control that shows a picture. `picSky` shows the photo of the sky.",
+         "4-6",
+         true
+        ],
+        [
+         "ProgressBar",
+         "A control that shows a bar. `prgTime` is the time bar, and its length is its Value out of its Maximum.",
+         "4-6",
+         true
+        ],
+        [
+         "Timer",
+         "A control that never shows on the window. Once started, it runs its Tick method every time its Interval runs out, until it is stopped.",
+         "4-6",
+         true
+        ],
+        [
+         "Interval",
+         "How long a Timer waits before each Tick, in thousandths of a second. 100 means 0.1 seconds.",
+         "3-5",
+         false
+        ],
+        [
+         "Tick",
+         "The event a Timer has. Its method runs every time the Timer's Interval runs out.",
+         "4-7",
+         true
+        ],
+        [
+         "event",
+         "Something that happens to a control, such as a click on a button, or a Timer ticking.",
+         "4-2",
+         false
+        ],
+        [
+         "handler",
+         "The method that runs when an event happens. `Answer_Click` is the handler for a click on any of the 3 answer buttons.",
+         "4-7",
+         true
+        ],
+        [
+         "sender",
+         "Every handler is given `sender`: the control that the event happened to, such as the answer button that was clicked.",
+         "4-1",
+         true
+        ],
+        [
+         "colour from red, green and blue",
+         "`Color.FromArgb(62, 142, 65)` mixes a colour from red, green and blue. Each number is from 0 to 255.",
+         "4-6",
+         true
+        ],
+        [
+         "Cursor",
+         "The mouse pointer's shape over a control. `Cursors.Hand` is a pointing hand, and `Cursors.Default` is the normal arrow.",
+         "4-6",
+         true
+        ],
+        [
+         "count up with ++",
+         "`++` adds 1 to a whole number. `right++` means right becomes one more than it was.",
+         "4-1",
+         true
+        ],
+        [
+         "count down with --",
+         "`--` takes 1 away from a whole number. `timeLeft--` means timeLeft becomes one less.",
+         "4-7",
+         true
+        ],
+        [
+         "or",
+         "`||` means or. The `if` is true when any one of its parts is true.",
+         "4-7",
+         true
+        ],
+        [
+         "and",
+         "`&&` means and. The `if` is true only when both of its parts are true.",
+         "4-1",
+         true
+        ],
+        [
+         "not equal",
+         "`!=` means is not equal to. `picked != -1` is true when picked is any number except -1.",
+         "2-2",
+         true
+        ],
+        [
+         "Substring",
+         "Gives part of some text. `Substring(0, 1)` gives the first letter, and `Substring(1)` gives everything after the first letter.",
+         "4-9",
+         true
+        ],
+        [
+         "ToLower",
+         "Gives a copy of some text in small letters. `\"Hill fog\".ToLower()` gives `\"hill fog\"`.",
+         "4-9",
+         true
+        ],
+        [
+         "AddRange",
+         "Adds every item of one list to the end of another list in one go.",
+         "4-9",
+         true
+        ],
+        [
+         "red underline",
+         "The wavy red line Visual Studio 2019 draws under code it does not understand yet. Often it means a method you have not written yet.",
+         "2-2",
+         false
+        ]
+       ],
+       "intro": "You do not need to learn these words now. Where you first meet each one in the chapter, it has a dotted line under it. Hover over it or tap it to see what it means."
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "1"
+  },
+  {
+   "title": "Look at the list of questions, and add the SkyQuestion class that reads it",
+   "screens": [
+    {
+     "title": "Read sky.txt, the list of the 12 questions",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know what each line of `sky.txt` holds."
+      },
+      {
+       "p": "Read the Sky gets its questions from a text file, `sky.txt`. The file is already in your bin\\Debug\\Data folder, because `summit-ready-files.zip` put it there in chapter 2."
+      },
+      {
+       "p": "The file has 12 questions, and each round uses 10 of them in a random order. So no two rounds are the same."
+      },
+      {
+       "p": "You do not type `sky.txt`. You read it here, so that the code in stage 4 makes sense."
+      },
+      {
+       "code": {
+        "id": "c14-sky-txt",
+        "kind": "read",
+        "title": "sky.txt: the 12 questions, one on each line",
+        "lang": "txt",
+        "text": "sky-cumulonimbus.jpg|Thunderstorm cloud|This cloud is growing tall over the ridge. What should your group do?|Get off the high ground now|Stop for lunch on the summit|Put on sun cream|1|A tall cloud with a flat top brings thunder and lightning. High ground is the most dangerous place to be.\nsky-cumulus-fair.jpg|Fair-weather cloud|Small white puffy clouds are drifting over the hills in the morning. What do they usually mean?|A storm within the hour|A fine day, but keep checking the sky|Snow is on the way|2|Small puffy clouds with flat bottoms are fair-weather clouds. If they grow tall in the afternoon, think again.\nsky-cumulus-towering.jpg|Growing cloud|By early afternoon the small puffy clouds have grown much taller. What does this warn you about?|A clear, calm evening|Frost tonight|Showers or a storm later in the day|3|Puffy clouds that keep growing taller can turn into showers or a thunderstorm. Plan to be off the tops early.\nsky-lenticular.jpg|Lens-shaped cloud|A smooth, lens-shaped cloud is sitting over the summit. What does it warn you about?|Strong winds high up|A warm, still day|Fog in the valleys|1|A lens-shaped cloud forms when strong wind blows over a mountain. The ridges will be very windy.\nsky-hill-fog.jpg|Hill fog|Cloud has come down and hidden the summit you are heading for. What should you do?|Follow the person in front|Walk on a compass bearing|Walk faster to get through it|2|In hill fog you cannot see landmarks. A compass bearing keeps you on the right line.\nsky-red-sunset.jpg|Red sky at night|The sky is red at sunset the evening before your walk. What does the old saying tell you?|Heavy rain tomorrow|Snow tomorrow|Fine weather tomorrow|3|A red sky at night often means dry air is coming, so the next day is often fine.\nsky-mackerel.jpg|Mackerel sky|The sky is covered in small ripples of cloud, like fish scales. What does this often mean?|The weather is about to change|It will be hot all week|There will be no wind|1|A mackerel sky often comes before a change in the weather, sometimes rain within a day.\nsky-cirrus.jpg|Mares' tails|Thin, wispy streaks of cloud are high in the sky. What might come next?|Thunder in the next hour|Rain within a day or so|Clear skies for a week|2|Mares' tails are high ice clouds. They often arrive ahead of a band of rain.\nsky-rain.jpg|Heavy rain|A dark curtain of rain is moving towards you across the valley. What should you do?|Wait until you are wet|Take your coat off|Put your waterproofs on now|3|Put your waterproofs on before the rain arrives. Getting wet and then cold on a hill is dangerous.\nsky-rainbow.jpg|Rainbow|A rainbow appears over the valley. What does it tell you?|Showers are about|The rain has stopped for the day|Snow is coming|1|A rainbow needs sun and rain at the same time. Showers are near, so keep your coat handy.\nsky-halo.jpg|Ring round the sun|There is a ring of light round the sun. What does it often mean?|A heatwave is starting|Rain is on the way|The wind will drop|2|A ring round the sun is made by high ice cloud. It often means rain is coming within a day.\nsky-lightning.jpg|Lightning|You see lightning and hear thunder a few seconds later. Where should your group go?|Under the one tall tree|Onto the summit to watch it|Down off the ridge, away from the top|3|Lightning strikes the highest points. Get off summits and ridges, and never shelter under a lone tree.",
+        "partLines": [
+         [
+          1,
+          1,
+          "The first question",
+          "Each line is one question, in 8 parts with a bar `|` between them. Part 1, `sky-cumulonimbus.jpg`, is the file name of the photo, in the Images\\Sky folder. Part 2, `Thunderstorm cloud`, is a short name for the sky. The feedback at the end of the round uses it. Part 3 is the question. Parts 4, 5 and 6 are the 3 answers. Part 7 is the number of the right answer, 1, 2 or 3. Here it is 1, so `Get off the high ground now` is right. Part 8 is the reason, which shows under the photo after an answer."
+         ],
+         [
+          2,
+          12,
+          "The other 11 questions",
+          "The other 11 lines have the same 8 parts, in the same order."
+         ]
+        ]
+       }
+      },
+      {
+       "p": "To type a bar `|`, hold Shift and press the key to the left of Z."
+      },
+      {
+       "box": {
+        "title": "If a file is missing or broken",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "Read the Sky never crashes because a file is missing. This is what you see instead."
+         },
+         {
+          "p": "If `sky.txt` is missing, or has fewer than 10 good lines, no question appears. The words above the photo say **Read the Sky needs 10 questions in Data\\sky.txt, each with 8 parts.**"
+         },
+         {
+          "p": "If a line of `sky.txt` does not have exactly 8 parts, Read the Sky skips that line."
+         },
+         {
+          "p": "If a sky photo is missing, that question shows an empty white box in place of the photo."
+         },
+         {
+          "p": "If a sound is missing, that moment is silent, and the game carries on."
+         },
+         {
+          "p": "To put a missing file back, you download the [[zip file|2]] again and paste its folders into bin\\Debug. When Windows asks about the files you already have, you click **Skip these files**."
+         },
+         {
+          "p": "Skipping keeps every file you already have, including any file you changed. Only the missing files are copied in."
+         },
+         {
+          "steps": [
+           {
+            "do": "Click the download button below.",
+            "see": "Your browser shows that `summit-ready-files.zip` has downloaded.",
+            "download": {
+             "file": "summit-ready-files.zip",
+             "label": "Download summit-ready-files.zip",
+             "size": "7.8 MB"
+            },
+            "id": "2-1.1",
+            "n": 1
+           },
+           {
+            "do": "Press the Windows key and the E key together.",
+            "see": "File Explorer opens.",
+            "img": {
+             "missing": true,
+             "alt": "File Explorer open on Downloads, with the menu that opens on summit-ready-files.zip",
+             "w": 800,
+             "h": 450,
+             "marks": [
+              {
+               "n": 2,
+               "say": "Press the Windows key and the E key together."
+              },
+              {
+               "n": 3,
+               "say": "Click **Downloads** in the list down the left side of File Explorer."
+              },
+              {
+               "n": 4,
+               "say": "Right-click `summit-ready-files.zip`."
+              },
+              {
+               "n": 5,
+               "say": "Click **Extract All...** in the menu."
+              }
+             ]
+            },
+            "id": "2-1.2",
+            "n": 2
+           },
+           {
+            "do": "Click **Downloads** in the list down the left side of File Explorer.",
+            "see": "`summit-ready-files.zip` is in the list of files.",
+            "wrong": [
+             [
+              "There is also a file called `summit-ready-files (1).zip`",
+              "Your browser added (1) because you downloaded the zip file before, in chapter 2. Use the file that ends in (1), because it is the newest one."
+             ]
+            ],
+            "id": "2-1.3",
+            "n": 3
+           },
+           {
+            "do": "Right-click `summit-ready-files.zip`.",
+            "see": "A menu opens.",
+            "id": "2-1.4",
+            "n": 4
+           },
+           {
+            "do": "Click **Extract All...** in the menu.",
+            "see": "A window called Extract Compressed (Zipped) Folders opens.",
+            "wrong": [
+             [
+              "The menu has no **Extract All...**",
+              "Press Escape to close the menu. Double-click `summit-ready-files.zip`. Then click **Extract all** in the bar along the top of File Explorer."
+             ]
+            ],
+            "id": "2-1.5",
+            "n": 5
+           },
+           {
+            "do": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window.",
+            "see": "A new File Explorer window opens. It shows 3 folders, Data, Images and Sounds, and one file, `credits.txt`.",
+            "img": {
+             "missing": true,
+             "alt": "The Extract Compressed (Zipped) Folders window, with its Extract button",
+             "w": 640,
+             "h": 480,
+             "marks": [
+              {
+               "n": 6,
+               "say": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window."
+              }
+             ]
+            },
+            "id": "2-1.6",
+            "n": 6
+           },
+           {
+            "do": "Press Ctrl and A together.",
+            "see": "The 3 folders and `credits.txt` turn blue.",
+            "img": {
+             "missing": true,
+             "alt": "The unpacked folder, with Data, Images, Sounds and credits.txt highlighted",
+             "w": 800,
+             "h": 360,
+             "marks": [
+              {
+               "n": 7,
+               "say": "Press Ctrl and A together."
+              },
+              {
+               "n": 8,
+               "say": "Press Ctrl and C together."
+              }
+             ]
+            },
+            "id": "2-1.7",
+            "n": 7
+           },
+           {
+            "do": "Press Ctrl and C together.",
+            "see": "Nothing changes on the screen. That is normal: Windows has copied the 3 folders and `credits.txt`.",
+            "id": "2-1.8",
+            "n": 8
+           },
+           {
+            "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
+            "see": "Visual Studio 2019 comes to the front, with your project open.",
+            "img": {
+             "missing": true,
+             "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
+             "w": 800,
+             "h": 60,
+             "marks": [
+              {
+               "n": 9,
+               "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
+              }
+             ]
+            },
+            "id": "2-1.9",
+            "n": 9
+           },
+           {
+            "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+            "see": "A long menu opens.",
+            "img": {
+             "missing": true,
+             "alt": "Solution Explorer, with the menu that opens on the project line",
+             "w": 360,
+             "h": 420,
+             "marks": [
+              {
+               "n": 10,
+               "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+              },
+              {
+               "n": 11,
+               "say": "Click **Open Folder in File Explorer**, near the bottom of the menu."
+              }
+             ]
+            },
+            "id": "2-1.10",
+            "n": 10
+           },
+           {
+            "do": "Click **Open Folder in File Explorer**, near the bottom of the menu.",
+            "see": "File Explorer opens on your project's folder. You can see the bin and obj folders and your .cs files.",
+            "id": "2-1.11",
+            "n": 11
+           },
+           {
+            "do": "Double-click the **bin** folder.",
+            "see": "The bin folder holds a folder called Debug.",
+            "img": {
+             "missing": true,
+             "alt": "File Explorer on the project folder, with the bin folder",
+             "w": 640,
+             "h": 300,
+             "marks": [
+              {
+               "n": 12,
+               "say": "Double-click the **bin** folder."
+              }
+             ]
+            },
+            "id": "2-1.12",
+            "n": 12
+           },
+           {
+            "do": "Double-click the **Debug** folder.",
+            "see": "The Debug folder holds the Data, Images and Sounds folders, and your program, whose name ends in .exe.",
+            "img": {
+             "missing": true,
+             "alt": "File Explorer on the bin folder, with the Debug folder",
+             "w": 640,
+             "h": 300,
+             "marks": [
+              {
+               "n": 13,
+               "say": "Double-click the **Debug** folder."
+              }
+             ]
+            },
+            "id": "2-1.13",
+            "n": 13
+           },
+           {
+            "do": "Press Ctrl and V together.",
+            "see": "A window called Replace or Skip Files opens, because most of the files are already there.",
+            "img": {
+             "missing": true,
+             "alt": "The Replace or Skip Files window, with Skip these files",
+             "w": 640,
+             "h": 400,
+             "marks": [
+              {
+               "n": 14,
+               "say": "Press Ctrl and V together."
+              },
+              {
+               "n": 15,
+               "say": "Click **Skip these files**."
+              }
+             ]
+            },
+            "id": "2-1.14",
+            "n": 14
+           },
+           {
+            "do": "Click **Skip these files**.",
+            "see": "The window closes. Windows has copied in only the missing files.",
+            "id": "2-1.15",
+            "n": 15
+           }
+          ]
+         }
+        ]
+       }
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Add the SkyQuestion class, which reads sky.txt",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has a SkyQuestion class that reads every question from `sky.txt`."
+      },
+      {
+       "p": "The game needs its questions before it can show the first photo. So you add a class called SkyQuestion, which holds one question and reads the file."
+      },
+      {
+       "p": "One SkyQuestion object holds one line of `sky.txt`. The SkyQuestion class also has a method, `LoadAll`, that reads every line into a list of SkyQuestion objects."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
+         "see": "Visual Studio 2019 comes to the front, with your project open.",
+         "img": {
+          "missing": true,
+          "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
+           }
+          ]
+         },
+         "id": "2-2.1",
+         "n": 1
+        },
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "The project menu, with Add pointed at and Class in the second menu",
+          "w": 640,
+          "h": 420,
+          "marks": [
+           {
+            "n": 2,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 3,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 4,
+            "say": "Click **Class...** at the bottom of the second menu."
+           }
+          ]
+         },
+         "id": "2-2.2",
+         "n": 2
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "2-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click **Class...** at the bottom of the second menu.",
+         "see": "The Add New Item window opens. Class is picked, and the Name box at the bottom says `Class1.cs`.",
+         "id": "2-2.4",
+         "n": 4
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "missing": true,
+          "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 6,
+            "say": "Type `SkyQuestion.cs`"
+           },
+           {
+            "n": 7,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "2-2.5",
+         "n": 5
+        },
+        {
+         "do": "Type `SkyQuestion.cs`",
+         "see": "The Name box shows `SkyQuestion.cs`.",
+         "id": "2-2.6",
+         "n": 6
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "`SkyQuestion.cs` opens in the code editor. At the top are 5 lines that start with `using`. Further down is `class SkyQuestion`, with an empty pair of curly brackets under it.",
+         "id": "2-2.7",
+         "n": 7
+        },
+        {
+         "do": "Click at the end of the line `using System.Threading.Tasks;`",
+         "see": "The flashing cursor is after the semicolon.",
+         "img": {
+          "missing": true,
+          "alt": "SkyQuestion.cs as Visual Studio 2019 makes it, with using System.IO; added",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 8,
+            "say": "Click at the end of the line `using System.Threading.Tasks;`"
+           },
+           {
+            "n": 9,
+            "say": "Press Enter."
+           },
+           {
+            "n": 10,
+            "say": "Type `using System.IO;`"
+           }
+          ]
+         },
+         "id": "2-2.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under `using System.Threading.Tasks;`.",
+         "id": "2-2.9",
+         "n": 9
+        },
+        {
+         "do": "Type `using System.IO;`",
+         "see": "The new line says `using System.IO;`. The SkyQuestion class needs this line, because it reads a file.",
+         "id": "2-2.10",
+         "n": 10
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c14-question-class",
+        "kind": "type",
+        "title": "SkyQuestion.cs: the SkyQuestion class",
+        "lang": "cs",
+        "why": "You type the 6 properties, and the 6 lines that put a value into each one, because they are new. The rest reads a file the same way as `LoadAll` in chapter 3, so it comes in the copy.",
+        "text": "// One question from sky.txt: a sky photo, its question and three answers\nclass SkyQuestion\n{\n    public string Picture { get; set; }       // the photo's file name\n    public string Name { get; set; }          // like Thunderstorm cloud\n    public string Question { get; set; }      // the question\n    public string[] Answers { get; set; }     // the three answers\n    public int Right { get; set; }            // the right answer, 0 to 2\n    public string Explanation { get; set; }   // why it is right\n\n    // Makes one SkyQuestion from a line of sky.txt, split at each |\n    public SkyQuestion(string[] parts)\n    {\n        Picture = parts[0];\n        Name = parts[1];\n        Question = parts[2];\n        Answers = new string[] { parts[3], parts[4], parts[5] };\n        Right = Convert.ToInt32(parts[6]) - 1;\n        Explanation = parts[7];\n    }\n\n    // Reads every question in sky.txt into a list\n    public static List<SkyQuestion> LoadAll()\n    {\n        List<SkyQuestion> questions = new List<SkyQuestion>();\n        string path = Files.Data(\"sky.txt\");\n        if (!File.Exists(path)) return questions; // no file: empty list\n        StreamReader reader = new StreamReader(path);\n        while (!reader.EndOfStream)\n        {\n            string line = reader.ReadLine();\n            string[] parts = line.Split('|');\n            if (parts.Length != 8) continue;    // skip a broken line\n            questions.Add(new SkyQuestion(parts));\n        }\n        reader.Close();\n        return questions;\n    }\n}",
+        "partLines": [
+         [
+          2,
+          9,
+          "The class and its 6 properties",
+          "`class SkyQuestion` starts the class. Each property holds one part of a line of `sky.txt`. `Answers` is an array of 3 strings, one for each answer. `Right` is a whole number, so it is an `int`. `{ get; set; }` lets other code read each property and change it."
+         ],
+         [
+          12,
+          16,
+          "The constructor",
+          "This part is the constructor. It runs when code writes `new SkyQuestion(parts)`. `parts` is one line of `sky.txt`, already cut into 8 pieces at each bar. The first 3 pieces go into `Picture`, `Name` and `Question`."
+         ],
+         [
+          17,
+          17,
+          "The 3 answers",
+          "`new string[] { parts[3], parts[4], parts[5] }` makes an array from the 3 answers, in the order they are in the file."
+         ],
+         [
+          18,
+          18,
+          "The number of the right answer",
+          "`parts[6]` is text, such as `\"1\"`. `Convert.ToInt32` turns it into the number 1. The file counts the answers from 1, but an array counts from 0. So `- 1` turns 1, 2 or 3 into 0, 1 or 2."
+         ],
+         [
+          19,
+          20,
+          "The reason",
+          "`Explanation` holds the reason that shows under the photo after an answer."
+         ],
+         [
+          23,
+          27,
+          "The start of LoadAll",
+          "`static` means that you call LoadAll on the class itself, as `SkyQuestion.LoadAll()`. LoadAll starts with an empty list. `Files.Data` from chapter 2 gives the full path of `sky.txt` in the Data folder. If `sky.txt` is not there, LoadAll hands back the empty list, so the game shows a message and does not crash."
+         ],
+         [
+          28,
+          35,
+          "Read every line",
+          "The StreamReader opens `sky.txt`. The loop goes round once for each line, until the end of the file. `Split('|')` cuts each line at each bar into `parts`. If a line does not have exactly 8 parts, `continue` skips it. Every good line becomes a new SkyQuestion, and `questions.Add` puts it on the end of the list."
+         ],
+         [
+          36,
+          39,
+          "Close the file and hand back the list",
+          "`reader.Close()` closes `sky.txt`, so that other programs can open it again. `return questions;` hands the full list back to the code that called LoadAll."
+         ]
+        ],
+        "focusLines": [
+         [
+          4,
+          9
+         ],
+         [
+          14,
+          19
+         ]
+        ],
+        "typed": 12,
+        "wordMarks": [
+         [
+          4,
+          26,
+          39,
+          3
+         ],
+         [
+          12,
+          4,
+          23,
+          4
+         ],
+         [
+          23,
+          11,
+          17,
+          5
+         ],
+         [
+          23,
+          18,
+          35,
+          6
+         ],
+         [
+          33,
+          35,
+          43,
+          7
+         ],
+         [
+          7,
+          11,
+          19,
+          8
+         ],
+         [
+          18,
+          16,
+          31,
+          9
+         ],
+         [
+          33,
+          29,
+          31,
+          27
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Drag from the start of `class SkyQuestion` down to the end of the `}` two lines below it.",
+         "see": "`class SkyQuestion` and its empty `{` and `}` turn blue. The last `}` in the file stays white. That is right: the last `}` closes the namespace, and it must stay.",
+         "img": {
+          "missing": true,
+          "alt": "SkyQuestion.cs, with class SkyQuestion and its empty braces highlighted",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 11,
+            "say": "Drag from the start of `class SkyQuestion` down to the end of the `}` two lines below it."
+           },
+           {
+            "n": 13,
+            "say": "Press Ctrl and V together."
+           }
+          ]
+         },
+         "id": "2-2.11",
+         "n": 11
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c14-question-class",
+         "id": "2-2.12",
+         "n": 12
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The SkyQuestion class appears in place of the blue lines. Two lines start with `// YOU TYPE THIS PART`, and your typing goes there.",
+         "id": "2-2.13",
+         "n": 13
+        },
+        {
+         "do": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it.",
+         "see": "The whole line turns blue.",
+         "img": {
+          "missing": true,
+          "alt": "SkyQuestion.cs, with the yellow lines typed in place of the two YOU TYPE THIS PART lines",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 14,
+            "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it."
+           },
+           {
+            "n": 15,
+            "say": "Type the 6 yellow lines that start with `public`. Press Enter at the end of each line."
+           },
+           {
+            "n": 16,
+            "say": "Triple-click the other line that starts with `// YOU TYPE THIS PART`."
+           },
+           {
+            "n": 17,
+            "say": "Type the 6 yellow lines from `Picture = parts[0];` down to `Explanation = parts[7];`. Press Enter at the end of each line."
+           },
+           {
+            "n": 18,
+            "say": "Press Ctrl and S together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The old `// YOU TYPE THIS PART` line is still there after you type",
+           "Click the old `// YOU TYPE THIS PART` line, then press Home. Hold Shift and press End, so the whole line turns blue. Press Delete."
+          ]
+         ],
+         "id": "2-2.14",
+         "n": 14
+        },
+        {
+         "do": "Type the 6 yellow lines that start with `public`. Press Enter at the end of each line.",
+         "see": "The 6 properties are where the `// YOU TYPE THIS PART` line was. A red underline may show while you type. This is normal: it goes when the line is finished.",
+         "id": "2-2.15",
+         "n": 15
+        },
+        {
+         "do": "Triple-click the other line that starts with `// YOU TYPE THIS PART`.",
+         "see": "The whole line turns blue.",
+         "id": "2-2.16",
+         "n": 16
+        },
+        {
+         "do": "Type the 6 yellow lines from `Picture = parts[0];` down to `Explanation = parts[7];`. Press Enter at the end of each line.",
+         "see": "No line in `SkyQuestion.cs` has a [[red underline|31]].",
+         "id": "2-2.17",
+         "n": 17
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `SkyQuestion.cs` on the tab at the top of the code editor disappears. Your SkyQuestion class is saved.",
+         "id": "2-2.18",
+         "n": 18
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "2"
+  },
+  {
+   "title": "Make the Read the Sky form and set the form's controls",
+   "screens": [
+    {
+     "title": "Add the Read the Sky form and set the form's properties",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has an empty Read the Sky window, called frmSky, at the right size and colour."
+      },
+      {
+       "p": "Read the Sky needs its own window to play in. In Visual Studio 2019, a window is called a form."
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "The project menu, with Add pointed at and Form (Windows Forms) in the second menu",
+          "w": 640,
+          "h": 420,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 2,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 3,
+            "say": "Click **Form (Windows Forms)...** in the second menu."
+           }
+          ]
+         },
+         "id": "3-1.1",
+         "n": 1
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "3-1.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Form (Windows Forms)...** in the second menu.",
+         "see": "The Add New Item window opens. Form (Windows Forms) is picked, and the Name box says `Form1.cs`.",
+         "id": "3-1.3",
+         "n": 3
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Form1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "missing": true,
+          "alt": "The Add New Item window, with Form (Windows Forms) picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "say": "Type `frmSky.cs`"
+           },
+           {
+            "n": 6,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "3-1.4",
+         "n": 4
+        },
+        {
+         "do": "Type `frmSky.cs`",
+         "see": "The Name box shows `frmSky.cs`.",
+         "id": "3-1.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "A new empty form called frmSky opens in the designer. `frmSky.cs` appears in Solution Explorer.",
+         "id": "3-1.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "p": "Now set the form's properties in the Properties window, using the table below. Set **Font** first. If you change Font later, Visual Studio 2019 stretches the form to fit the new font, and its size (ClientSize) changes."
+      },
+      {
+       "controls": {
+        "props": [
+         "Font = Segoe UI, 11pt",
+         "Text = Summit Ready - Read the Sky",
+         "ClientSize = 1000, 660",
+         "StartPosition = CenterScreen",
+         "FormBorderStyle = FixedSingle",
+         "MaximizeBox = False",
+         "BackColor = 243, 245, 242"
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "If you have forgotten how to set a property",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "Click the box beside the property's name in the Properties window. Type the new value, then press Enter."
+         },
+         {
+          "p": "For **Font**, click the box beside Font, then click the small button with 3 dots at the right of the box. Pick Segoe UI and size 11, then click **OK**."
+         },
+         {
+          "p": "For **BackColor**, type `243, 245, 242` in the box beside BackColor, then press Enter."
+         },
+         {
+          "p": "For **MaximizeBox**, click the arrow at the right of the box, then click **False**."
+         }
+        ]
+       }
+      },
+      {
+       "p": "Read the Sky reads its questions when the window opens. The form's Load event runs once, right before the window first appears. So you make an empty Load method now, and you fill it in during stage 4."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the [[lightning bolt|10]] at the top of the Properties window.",
+         "see": "The Properties window now lists the form's events in place of its properties.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of frmSky, with the lightning bolt, Load and the Properties button",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click the [[lightning bolt|10]] at the top of the Properties window."
+           },
+           {
+            "n": 8,
+            "say": "Double-click the empty box beside **Load**. Load comes after Leave, so scroll down the list a little if you cannot see it."
+           },
+           {
+            "n": 10,
+            "say": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window."
+           }
+          ]
+         },
+         "id": "3-1.7",
+         "n": 7
+        },
+        {
+         "do": "Double-click the empty box beside **Load**. Load comes after Leave, so scroll down the list a little if you cannot see it.",
+         "see": "The code editor opens `frmSky.cs`, with a new empty method called `frmSky_Load`. An empty method is normal here: you fill it in during stage 4.",
+         "id": "3-1.8",
+         "n": 8
+        },
+        {
+         "do": "Press Shift and F7 together, to go back from the code to the designer.",
+         "see": "The designer shows frmSky.",
+         "img": {
+          "missing": true,
+          "alt": "The designer showing frmSky, with the frmSky.cs [Design] tab",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Press Shift and F7 together, to go back from the code to the designer."
+           }
+          ]
+         },
+         "id": "3-1.9",
+         "n": 9
+        },
+        {
+         "do": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists properties again.",
+         "id": "3-1.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Copy the dark header strip from frmPractice onto frmSky",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmSky has the same dark header strip as your practice game."
+      },
+      {
+       "p": "frmPractice from chapter 9 already has a dark strip along the top. The strip holds the title, the instruction, Points, the speaker picture and **Back to the map**."
+      },
+      {
+       "p": "You copy the strip, so that every game looks the same. The copied controls keep their names, such as `lblScore` and `btnBack`, and the chapter 9 code needs those names."
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `frmPractice.cs` in Solution Explorer.",
+         "see": "frmPractice opens in the designer.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with frmPractice.cs",
+          "w": 360,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Double-click `frmPractice.cs` in Solution Explorer."
+           }
+          ]
+         },
+         "id": "3-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click a dark part of the header strip that has no words on it.",
+         "see": "The Properties window shows pnlHeader at the top.",
+         "img": {
+          "missing": true,
+          "alt": "frmPractice in the designer, with the dark header strip picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 2,
+            "say": "Click a dark part of the header strip that has no words on it."
+           },
+           {
+            "n": 3,
+            "say": "Press Ctrl and C together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Properties window shows lblTitle or another name, not pnlHeader",
+           "You clicked a control on the strip. Click a dark part of the strip with no words on it."
+          ]
+         ],
+         "id": "3-2.2",
+         "n": 2
+        },
+        {
+         "do": "Press Ctrl and C together.",
+         "see": "Nothing changes on the screen. That is normal: Visual Studio 2019 has copied the control and everything on it.",
+         "id": "3-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click the **frmSky.cs [Design]** tab at the top of the editor.",
+         "see": "The empty frmSky form shows again.",
+         "img": {
+          "missing": true,
+          "alt": "The empty frmSky form, with the frmSky.cs [Design] tab and the title bar of frmSky",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click the **frmSky.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 5,
+            "say": "Click the title bar of frmSky."
+           }
+          ]
+         },
+         "id": "3-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click the title bar of frmSky.",
+         "see": "The Properties window shows frmSky at the top. The form must be picked, because Visual Studio 2019 pastes onto whatever is picked.",
+         "id": "3-2.5",
+         "n": 5
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The dark header strip appears on frmSky, with small white squares at its corners. The Properties window shows pnlHeader.",
+         "img": {
+          "missing": true,
+          "alt": "frmSky with the pasted header strip, and the Location box in the Properties window",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 6,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 7,
+            "say": "Triple-click the box beside **Location** in the Properties window."
+           },
+           {
+            "n": 8,
+            "say": "Type `0, 0`"
+           },
+           {
+            "n": 9,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The pasted strip landed inside another control",
+           "Press Ctrl and Z together to undo the paste. Click the title bar of frmSky, then press Ctrl and V together again."
+          ]
+         ],
+         "id": "3-2.6",
+         "n": 6
+        },
+        {
+         "do": "Triple-click the box beside **Location** in the Properties window.",
+         "see": "The numbers in the box turn blue.",
+         "wrong": [
+          [
+           "The old value is still in the box after you type",
+           "Click the box, then press Home. Hold Shift and press End, so the whole value turns blue. Type the new value, then press Enter."
+          ]
+         ],
+         "id": "3-2.7",
+         "n": 7
+        },
+        {
+         "do": "Type `0, 0`",
+         "see": "The box shows `0, 0`.",
+         "id": "3-2.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The strip moves to the top left corner of frmSky and stretches right across the top.",
+         "id": "3-2.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Copy the Round over box from frmPractice onto frmSky",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmSky has the white Round over box that shows the score when a round ends."
+      },
+      {
+       "p": "frmPractice already has the Round over box. It is a panel called `pnlRoundOver`, and it stays hidden until a round ends. You copy it, the same way as the strip."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmPractice.cs [Design]** tab at the top of the editor.",
+         "see": "frmPractice shows again.",
+         "img": {
+          "missing": true,
+          "alt": "frmPractice in the designer, with the white Round over box picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the **frmPractice.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 2,
+            "say": "Click a white part of the Round over box that has no words on it."
+           },
+           {
+            "n": 3,
+            "say": "Press Ctrl and C together."
+           }
+          ]
+         },
+         "id": "3-3.1",
+         "n": 1
+        },
+        {
+         "do": "Click a white part of the Round over box that has no words on it.",
+         "see": "The Properties window shows pnlRoundOver at the top.",
+         "wrong": [
+          [
+           "You cannot see the white Round over box on frmPractice",
+           "Another control is covering it. Right-click the control that covers the box, then click **Send to Back**. The Round over box comes into view."
+          ]
+         ],
+         "id": "3-3.2",
+         "n": 2
+        },
+        {
+         "do": "Press Ctrl and C together.",
+         "see": "Nothing changes on the screen. That is normal: Visual Studio 2019 has copied the control and everything on it.",
+         "id": "3-3.3",
+         "n": 3
+        },
+        {
+         "do": "Click the **frmSky.cs [Design]** tab at the top of the editor.",
+         "see": "frmSky shows again, with the header strip.",
+         "img": {
+          "missing": true,
+          "alt": "frmSky with the pasted Round over box in the middle",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click the **frmSky.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 5,
+            "say": "Click the title bar of frmSky."
+           },
+           {
+            "n": 6,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 7,
+            "say": "Triple-click the box beside **Location** in the Properties window."
+           },
+           {
+            "n": 8,
+            "say": "Type `180, 120`"
+           },
+           {
+            "n": 9,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "3-3.4",
+         "n": 4
+        },
+        {
+         "do": "Click the title bar of frmSky.",
+         "see": "The Properties window shows frmSky at the top.",
+         "id": "3-3.5",
+         "n": 5
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The white Round over box appears on frmSky. The Properties window shows pnlRoundOver.",
+         "wrong": [
+          [
+           "The pasted box landed inside another control",
+           "Press Ctrl and Z together to undo the paste. Click the title bar of frmSky, then press Ctrl and V together again."
+          ]
+         ],
+         "id": "3-3.6",
+         "n": 6
+        },
+        {
+         "do": "Triple-click the box beside **Location** in the Properties window.",
+         "see": "The numbers in the box turn blue.",
+         "id": "3-3.7",
+         "n": 7
+        },
+        {
+         "do": "Type `180, 120`",
+         "see": "The box shows `180, 120`.",
+         "id": "3-3.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The Round over box moves to the middle of frmSky, below the header strip.",
+         "id": "3-3.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Change the title and the instruction on the header strip",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the header strip says Read the Sky and tells the player what to do."
+      },
+      {
+       "p": "The copied strip still has the practice game's words. You change its title and its instruction for Read the Sky."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the title at the left of the header strip.",
+         "see": "The Properties window shows lblTitle at the top.",
+         "img": {
+          "missing": true,
+          "alt": "The header strip on frmSky, with lblTitle picked and its Text box in the Properties window",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the title at the left of the header strip."
+           },
+           {
+            "n": 2,
+            "say": "Triple-click the box beside **Text** in the Properties window."
+           },
+           {
+            "n": 3,
+            "say": "Type `Slieve Commedagh - Read the Sky`"
+           },
+           {
+            "n": 4,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "3-4.1",
+         "n": 1
+        },
+        {
+         "do": "Triple-click the box beside **Text** in the Properties window.",
+         "see": "The title's words turn blue.",
+         "id": "3-4.2",
+         "n": 2
+        },
+        {
+         "do": "Type `Slieve Commedagh - Read the Sky`",
+         "see": "The box shows `Slieve Commedagh - Read the Sky`.",
+         "id": "3-4.3",
+         "n": 3
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The title on the header strip says **Slieve Commedagh - Read the Sky**.",
+         "id": "3-4.4",
+         "n": 4
+        },
+        {
+         "do": "Click the instruction under the title.",
+         "see": "The Properties window shows lblInstruction at the top.",
+         "img": {
+          "missing": true,
+          "alt": "The header strip on frmSky, with lblInstruction picked and its Text box in the Properties window",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Click the instruction under the title."
+           },
+           {
+            "n": 6,
+            "say": "Triple-click the box beside **Text** in the Properties window."
+           },
+           {
+            "n": 7,
+            "say": "Type `Look at the sky and pick the best answer before the time bar runs out. There are 10 questions.`"
+           },
+           {
+            "n": 8,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "3-4.5",
+         "n": 5
+        },
+        {
+         "do": "Triple-click the box beside **Text** in the Properties window.",
+         "see": "The instruction's words turn blue.",
+         "id": "3-4.6",
+         "n": 6
+        },
+        {
+         "do": "Type `Look at the sky and pick the best answer before the time bar runs out. There are 10 questions.`",
+         "see": "The box shows the new instruction.",
+         "id": "3-4.7",
+         "n": 7
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The instruction on the header strip shows the new words.",
+         "id": "3-4.8",
+         "n": 8
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Add the play area, the photo, the labels, the time bar, the buttons and the Timer",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmSky has every control that Read the Sky needs."
+      },
+      {
+       "p": "Add the controls in the order of the table. The first control, pnlPlay, is a [[panel|12]]: a control that holds other controls. Every other control except the Timer sits on pnlPlay, so pnlPlay goes first."
+      },
+      {
+       "p": "pnlPlay covers the Round over box in the designer. This is normal: the code brings the Round over box to the front when a round ends."
+      },
+      {
+       "p": "The 3 answer buttons have no words yet, because the code puts a new answer on each one for every question."
+      },
+      {
+       "p": "A Timer never shows on the window. When you drop a Timer on the form, it appears in the grey strip under the form. Its [[Interval|16]] is how long it waits, in thousandths of a second, so 100 is 0.1 seconds."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Panel",
+          "name": "pnlPlay",
+          "settings": [
+           "Location = 0, 56",
+           "Size = 1000, 604"
+          ],
+          "note": "Drag the Panel from the Toolbox onto frmSky, near the bottom left corner and outside the white Round over box.",
+          "then": "pnlPlay covers the Round over box."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblQuestion",
+          "settings": [
+           "AutoSize = False",
+           "Location = 20, 8",
+           "Size = 620, 58",
+           "Font = Segoe UI Semibold, 12pt",
+           "ForeColor = 38, 50, 56",
+           "Text = (empty)"
+          ],
+          "note": "Drop the Label on pnlPlay. To empty Text, delete the words in the box beside Text, then press Enter.",
+          "then": "lblQuestion shows as an empty space with no words."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picSky",
+          "settings": [
+           "Location = 20, 70",
+           "Size = 620, 400",
+           "BackColor = 255, 255, 255",
+           "SizeMode = Zoom",
+           "BorderStyle = FixedSingle"
+          ],
+          "note": "Drop the PictureBox on pnlPlay.",
+          "then": "picSky is a white box with a thin border."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblExplain",
+          "settings": [
+           "AutoSize = False",
+           "Location = 20, 480",
+           "Size = 620, 116",
+           "ForeColor = 38, 50, 56",
+           "Text = (empty)"
+          ],
+          "note": "Drop the Label on pnlPlay, under picSky."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblCount",
+          "settings": [
+           "AutoSize = False",
+           "Location = 660, 8",
+           "Size = 320, 32",
+           "Font = Segoe UI Semibold, 14pt",
+           "ForeColor = 38, 50, 56",
+           "Text = Question 1 of 10"
+          ],
+          "note": "Drop the Label on pnlPlay."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblTimeHead",
+          "settings": [
+           "AutoSize = False",
+           "Location = 660, 46",
+           "Size = 320, 22",
+           "Font = Segoe UI, 9.5pt",
+           "ForeColor = 92, 107, 115",
+           "Text = Time left to answer this question:"
+          ],
+          "note": "Drop the Label on pnlPlay."
+         },
+         {
+          "toolbox": "ProgressBar",
+          "name": "prgTime",
+          "settings": [
+           "Location = 660, 70",
+           "Size = 320, 22",
+           "Maximum = 100",
+           "Value = 100"
+          ],
+          "note": "Drop the ProgressBar on pnlPlay.",
+          "then": "The bar is full."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnAnswer1",
+          "settings": [
+           "Location = 660, 120",
+           "Size = 320, 64",
+           "Text = (empty)",
+           "BackColor = 255, 255, 255",
+           "ForeColor = 38, 50, 56",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderColor = 38, 50, 56",
+           "Cursor = Hand"
+          ],
+          "note": "Drop the Button on pnlPlay.",
+          "then": "btnAnswer1 is a white box with a thin dark border and no words."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnAnswer2",
+          "settings": [
+           "Location = 660, 196",
+           "Size = 320, 64",
+           "Text = (empty)",
+           "BackColor = 255, 255, 255",
+           "ForeColor = 38, 50, 56",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderColor = 38, 50, 56",
+           "Cursor = Hand"
+          ],
+          "note": "Drop the Button on pnlPlay."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnAnswer3",
+          "settings": [
+           "Location = 660, 272",
+           "Size = 320, 64",
+           "Text = (empty)",
+           "BackColor = 255, 255, 255",
+           "ForeColor = 38, 50, 56",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderColor = 38, 50, 56",
+           "Cursor = Hand"
+          ],
+          "note": "Drop the Button on pnlPlay."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnNext",
+          "settings": [
+           "Location = 660, 548",
+           "Size = 320, 48",
+           "Text = Next question",
+           "BackColor = 242, 183, 5",
+           "Font = Segoe UI Semibold, 11pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderSize = 0",
+           "Visible = False"
+          ],
+          "note": "Drop the Button on pnlPlay.",
+          "then": "btnNext still shows in the designer. Visible = False hides it only while the game runs."
+         },
+         {
+          "toolbox": "Timer",
+          "name": "tmrQuestion",
+          "settings": [
+           "Interval = 100"
+          ],
+          "then": "tmrQuestion sits in the grey strip under the form."
+         }
+        ],
+        "done": {
+         "see": "The dark header strip along the top of frmSky. Under it, pnlPlay fills the rest of the form. Down its left-hand side are lblQuestion, the white picSky box and lblExplain. Down its right-hand side are lblCount, lblTimeHead, prgTime, the 3 answer buttons and btnNext. The Timer tmrQuestion sits in the grey strip under the form.",
+         "img": {
+          "missing": true,
+          "alt": "frmSky in the designer with every control from the table on it, and the Timer in the grey strip under the form",
+          "w": 800,
+          "h": 450,
+          "at": []
+         }
+        }
+       }
+      },
+      {
+       "box": {
+        "title": "How to find a control in the Toolbox",
+        "text": "The Toolbox is down the left side of Visual Studio 2019. Click the search box at the top of the Toolbox, then type the control's name, such as `ProgressBar`. The control shows in the list under the search box.",
+        "fold": true
+       }
+      },
+      {
+       "box": {
+        "title": "How to set FlatAppearance and Cursor",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "**FlatAppearance** has a small arrow at its left in the Properties window. Click the arrow, and BorderColor and BorderSize show under it."
+         },
+         {
+          "p": "For **Cursor**, click the arrow at the right of the box, then click **Hand** in the list."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "5"
+    }
+   ],
+   "id": "3"
+  },
+  {
+   "title": "Write the game code, one method at a time",
+   "screens": [
+    {
+     "title": "Copy the chapter 9 fields and methods into frmSky.cs",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmSky has the same score, Round over and Back to the map code as your practice game."
+      },
+      {
+       "p": "Every game form has the same 3 fields and the same 8 methods from chapter 9. You typed and tested them in frmPractice, so here you copy them."
+      },
+      {
+       "p": "Red underlines come and go as you work through this stage. This is normal: by the end of the stage, every red underline has gone."
+      },
+      {
+       "code": {
+        "id": "c14-patfields",
+        "kind": "copy",
+        "title": "The game-form fields from chapter 9",
+        "lang": "cs",
+        "taught": "09",
+        "why": "The 3 fields are the same in every game form, and you typed them in chapter 9. Only the number in `gameNumber` changes. The places on the map are numbered from 0, so Read the Sky, the fourth place, is number 3.",
+        "text": "// ---------- the game-form fields from chapter 9 ----------\nprivate int gameNumber = 3;      // Read the Sky is place 3\nprivate GameResult result;       // made when the round ends\nprivate bool finished = false;   // true once the result is kept",
+        "partLines": [
+         [
+          1,
+          4,
+          "The 3 game-form fields",
+          "`gameNumber` is the game's place number on the map. `result` holds the score and the feedback once the round ends. `finished` turns true once the result is kept."
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmSky.cs** tab at the top of the editor, the one without [Design].",
+         "see": "The code of frmSky shows, with `frmSky_Load` near the bottom.",
+         "img": {
+          "missing": true,
+          "alt": "frmSky.cs in the code editor, with the 3 pasted fields under the class line",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the **frmSky.cs** tab at the top of the editor, the one without [Design]."
+           },
+           {
+            "n": 2,
+            "say": "Click at the end of the `{` under `public partial class frmSky : Form`."
+           },
+           {
+            "n": 3,
+            "say": "Press Enter."
+           },
+           {
+            "n": 5,
+            "say": "Press Ctrl and V together."
+           }
+          ]
+         },
+         "id": "4-1.1",
+         "n": 1
+        },
+        {
+         "do": "Click at the end of the `{` under `public partial class frmSky : Form`.",
+         "see": "The flashing cursor is after the `{`.",
+         "id": "4-1.2",
+         "n": 2
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the `{`.",
+         "id": "4-1.3",
+         "n": 3
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c14-patfields",
+         "id": "4-1.4",
+         "n": 4
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The 3 fields appear under the `{`, with a comment line above them that says they come from chapter 9.",
+         "id": "4-1.5",
+         "n": 5
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c14-patmethods",
+        "kind": "copy",
+        "title": "The game-form methods from chapter 9",
+        "lang": "cs",
+        "taught": "09",
+        "why": "The 8 methods are the same in every game form, and you typed and tested them in chapter 9. Only the question that FormClosing asks names Read the Sky.",
+        "text": "// ---------- the game-form methods from chapter 9 ----------\n\n// Keeps the result on the map, even if the window is then closed\nprivate void KeepResult()\n{\n    Expedition.Finish(gameNumber, result);\n    finished = true;\n    lblScore.Text = \"Points: \" + result.Score;\n}\n\n// Fills in the Round over panel and brings it to the front\nprivate void ShowRoundOver()\n{\n    lblRoundScore.Text = \"You scored \" + result.Score\n        + \" out of 100 points.\";\n    lblWellList.Text = ListText(result.WentWell,\n        \"thing that went well\", \"things that went well\");\n    lblWrongList.Text = ListText(result.WentWrong,\n        \"thing that went wrong\", \"things that went wrong\");\n    if (result.Score >= 60) Sound.Play(\"win.wav\");\n    else Sound.Play(\"lose.wav\");\n    pnlRoundOver.Visible = true;\n    pnlRoundOver.BringToFront();\n}\n\n// Up to 3 lines from a list, then how many more there are\nprivate string ListText(List<string> lines, string one, string many)\n{\n    if (lines.Count == 0) return \"Nothing this time.\";\n    string text = \"\";\n    for (int i = 0; i < lines.Count && i < 3; i++)\n    {\n        text = text + \"- \" + lines[i] + Environment.NewLine;\n    }\n    int more = lines.Count - 3;\n    if (more == 1) text = text + \"And 1 more \" + one + \".\";\n    if (more > 1) text = text + \"And \" + more + \" more \" + many + \".\";\n    return text;\n}\n\n// Back to the map: closing the window runs FormClosing\nprivate void btnBack_Click(object sender, EventArgs e)\n{\n    this.Close();\n}\n\n// The Round over panel's Back to the map button\nprivate void btnDone_Click(object sender, EventArgs e)\n{\n    this.Close();\n}\n\n// Runs as the window closes, by Back, by Done or by the X\nprivate void frmSky_FormClosing(object sender,\n    FormClosingEventArgs e)\n{\n    if (finished) return;    // a finished round closes at once\n    DialogResult answer = MessageBox.Show(\"Leave Read the Sky? It \"\n        + \"will score nothing, but you can come back and climb it \"\n        + \"again.\", \"Summit Ready\", MessageBoxButtons.YesNo);\n    if (answer == DialogResult.No) e.Cancel = true;   // stay\n}\n\n// Shows the speaker picture that matches the sound being on or off\nprivate void ShowSpeaker()\n{\n    string icon = \"icon-speaker-on-64.png\";\n    if (Sound.Muted) icon = \"icon-speaker-muted-64.png\";\n    picSound.Image = Files.Picture(\"Icons\", icon);\n}\n\n// The speaker picture turns the sound off, or back on\nprivate void picSound_Click(object sender, EventArgs e)\n{\n    Sound.Muted = !Sound.Muted;\n    ShowSpeaker();\n}",
+        "partLines": [
+         [
+          1,
+          9,
+          "KeepResult",
+          "KeepResult tells the map that the round has ended, and hands it the result. `finished` turns true, and Points shows the final score."
+         ],
+         [
+          12,
+          24,
+          "ShowRoundOver",
+          "ShowRoundOver fills in the Round over box and plays the win or lose sound. Then it shows the Round over box in front of everything else."
+         ],
+         [
+          27,
+          39,
+          "ListText",
+          "ListText makes the words for What went well or What went wrong. It gives up to 3 lines, then a line that counts the rest."
+         ],
+         [
+          42,
+          45,
+          "btnBack_Click",
+          "**Back to the map** on the header strip closes the window. Closing the window runs FormClosing."
+         ],
+         [
+          48,
+          51,
+          "btnDone_Click",
+          "**Back to the map** in the Round over box closes the window in the same way."
+         ],
+         [
+          54,
+          62,
+          "frmSky_FormClosing",
+          "If the round is not finished, a message asks the player whether to leave. Clicking **No** sets `e.Cancel` to true, which keeps the window open."
+         ],
+         [
+          65,
+          70,
+          "ShowSpeaker",
+          "ShowSpeaker shows the speaker picture that matches the sound: on, or muted."
+         ],
+         [
+          73,
+          77,
+          "picSound_Click",
+          "Clicking the speaker picture turns the sound off, or back on. Then it shows the matching picture."
+         ]
+        ],
+        "wordMarks": [
+         [
+          42,
+          34,
+          40,
+          20
+         ],
+         [
+          31,
+          47,
+          49,
+          23
+         ],
+         [
+          31,
+          36,
+          38,
+          26
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmSky_Load`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmSky.cs, with the 8 pasted methods under frmSky_Load",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 6,
+            "say": "Click at the end of the `}` that closes `frmSky_Load`."
+           },
+           {
+            "n": 7,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 9,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 10,
+            "say": "Press Ctrl and S together."
+           }
+          ]
+         },
+         "id": "4-1.6",
+         "n": 6
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-1.7",
+         "n": 7
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c14-patmethods",
+         "id": "4-1.8",
+         "n": 8
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The 8 methods appear under `frmSky_Load`, with a comment line above them that says they come from chapter 9.",
+         "id": "4-1.9",
+         "n": 9
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `frmSky.cs` on the tab at the top of the editor disappears.",
+         "id": "4-1.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Connect Back to the map and the Round over box's button to their methods",
+     "blocks": [
+      {
+       "p": "By the end of this screen, both **Back to the map** buttons on frmSky close the window."
+      },
+      {
+       "p": "A pasted method does nothing until it is connected to an [[event|18]]. A pasted control keeps its name, but its events do not always come with it. So you check each event in the Properties window, and connect it."
+      },
+      {
+       "p": "You connect each event with the small arrow beside it. Do not double-click the box beside the event, because double-clicking makes a second, empty method."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Shift and F7 together, to go back from the code to the designer.",
+         "see": "The designer shows frmSky.",
+         "img": {
+          "missing": true,
+          "alt": "frmSky in the designer, with Back to the map picked on the header strip",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Press Shift and F7 together, to go back from the code to the designer."
+           },
+           {
+            "n": 2,
+            "say": "Click **Back to the map** on the header strip."
+           }
+          ]
+         },
+         "id": "4-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click **Back to the map** on the header strip.",
+         "see": "The Properties window shows btnBack at the top.",
+         "id": "4-2.2",
+         "n": 2
+        },
+        {
+         "do": "Click the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists the events of btnBack.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of btnBack, with the list open beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 3,
+            "say": "Click the lightning bolt at the top of the Properties window."
+           },
+           {
+            "n": 4,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 5,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 6,
+            "say": "Click `btnBack_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "wrong": [
+          [
+           "`btnBack_Click` is already in the box beside Click",
+           "The paste kept the event, so there is nothing to connect. Go on to btnDone."
+          ]
+         ],
+         "id": "4-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list drops down with the methods that can handle a click, including `btnBack_Click`.",
+         "id": "4-2.5",
+         "n": 5
+        },
+        {
+         "do": "Click `btnBack_Click` in the list.",
+         "see": "The box beside Click shows `btnBack_Click`.",
+         "wrong": [
+          [
+           "Visual Studio 2019 made a new method called `btnBack_Click_1`",
+           "You double-clicked the box. Click the arrow beside Click and pick `btnBack_Click`. Then, in `frmSky.cs`, delete the empty method `btnBack_Click_1`, from its first line down to its `}`."
+          ]
+         ],
+         "id": "4-2.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "p": "The Round over box's **Back to the map** button is called btnDone. pnlPlay covers btnDone in the designer. So you pick btnDone from the list at the top of the Properties window."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the arrow at the right end of the box at the very top of the Properties window.",
+         "see": "A list of every control on frmSky drops down.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window, with the list of every control open at the top",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click the arrow at the right end of the box at the very top of the Properties window."
+           },
+           {
+            "n": 8,
+            "say": "Click **btnDone** in the list."
+           }
+          ]
+         },
+         "id": "4-2.7",
+         "n": 7
+        },
+        {
+         "do": "Click **btnDone** in the list.",
+         "see": "The Properties window shows the events of btnDone.",
+         "id": "4-2.8",
+         "n": 8
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of btnDone, with btnDone_Click beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 10,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 11,
+            "say": "Click `btnDone_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-2.9",
+         "n": 9
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-2.10",
+         "n": 10
+        },
+        {
+         "do": "Click `btnDone_Click` in the list.",
+         "see": "The box beside Click shows `btnDone_Click`.",
+         "id": "4-2.11",
+         "n": 11
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Connect the speaker picture and the closing of the window, then build",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the speaker picture and the window's close button (the X) both work, and your project builds with no errors."
+      },
+      {
+       "p": "The speaker picture and the closing of the window need connecting too, in the same way."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the speaker picture on the header strip.",
+         "see": "The Properties window shows the events of picSound.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of picSound, with picSound_Click beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the speaker picture on the header strip."
+           },
+           {
+            "n": 2,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 3,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 4,
+            "say": "Click `picSound_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-3.1",
+         "n": 1
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-3.2",
+         "n": 2
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-3.3",
+         "n": 3
+        },
+        {
+         "do": "Click `picSound_Click` in the list.",
+         "see": "The box beside Click shows `picSound_Click`.",
+         "id": "4-3.4",
+         "n": 4
+        },
+        {
+         "do": "Click the title bar of frmSky.",
+         "see": "The Properties window shows the events of frmSky.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of frmSky, with frmSky_FormClosing beside FormClosing",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Click the title bar of frmSky."
+           },
+           {
+            "n": 6,
+            "say": "Click the box beside **FormClosing**. Scroll down the list a little if you cannot see it."
+           },
+           {
+            "n": 7,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 8,
+            "say": "Click `frmSky_FormClosing` in the list."
+           }
+          ]
+         },
+         "id": "4-3.5",
+         "n": 5
+        },
+        {
+         "do": "Click the box beside **FormClosing**. Scroll down the list a little if you cannot see it.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-3.6",
+         "n": 6
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "The list shows one method, `frmSky_FormClosing`.",
+         "id": "4-3.7",
+         "n": 7
+        },
+        {
+         "do": "Click `frmSky_FormClosing` in the list.",
+         "see": "The box beside FormClosing shows `frmSky_FormClosing`.",
+         "id": "4-3.8",
+         "n": 8
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "missing": true,
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows errors",
+           "Double-click the first error in the Error List. Visual Studio 2019 jumps to the line with the error. Check that line letter by letter against the code in this chapter."
+          ]
+         ],
+         "id": "4-3.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Type the Read the Sky fields",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmSky has the variables that remember the questions, the time and the score while a round plays."
+      },
+      {
+       "p": "These variables are called [[fields|11]]. They sit at the top of the class, outside every method, so every method in the form can use them."
+      },
+      {
+       "p": "Every field below is new in this chapter, so you type every one."
+      },
+      {
+       "code": {
+        "id": "c14-fields",
+        "kind": "type",
+        "title": "The Read the Sky fields",
+        "lang": "cs",
+        "text": "// ---------- Read the Sky ----------\nprivate List<SkyQuestion> questions;   // every question in sky.txt\nprivate int[] order;                   // the questions, mixed up\nprivate int number = 0;                // this question, 0 to 9\nprivate Button[] answers;              // the three answer buttons\nprivate int[] answerOf = new int[3];   // the answer on each button\nprivate bool answered = false;         // true once this one is done\nprivate int timeLeft = 100;            // tenths of a second\nprivate int right = 0;                 // right answers so far\nprivate List<string> wellLines = new List<string>();\nprivate List<string> wrongLines = new List<string>();",
+        "partLines": [
+         [
+          2,
+          4,
+          "The questions",
+          "`questions` holds every question that LoadAll reads from `sky.txt`. `order` holds the question numbers in a random order. `number` counts the questions in this round, from 0 to 9."
+         ],
+         [
+          5,
+          6,
+          "The answer buttons",
+          "`answers` is an array that keeps the 3 answer buttons together, so a loop can reach each one. `answerOf` says which of the 3 answers in the file is on each button. `new int[3]` starts all 3 values at 0."
+         ],
+         [
+          7,
+          9,
+          "The state of a question",
+          "`answered` turns true once the player answers, or the time runs out. `timeLeft` counts tenths of a second, so 100 is 10 seconds. `right` counts the right answers."
+         ],
+         [
+          10,
+          11,
+          "The feedback",
+          "`wellLines` and `wrongLines` collect the lines for What went well and What went wrong, one line for each question."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          11
+         ]
+        ],
+        "typed": 10,
+        "wordMarks": [
+         [
+          2,
+          8,
+          25,
+          6
+         ],
+         [
+          3,
+          8,
+          13,
+          8
+         ]
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "What answerOf holds, using one question as an example",
+        "blocks": [
+         {
+          "p": "The file lists the 3 answers in one order. The buttons show them in a mixed order, so the right answer is not always at the top."
+         },
+         {
+          "p": "If `answerOf[0]` is 2, the top button shows the third answer in the file."
+         },
+         {
+          "p": "When the player clicks the top button, the code checks whether `answerOf[0]` is the right answer's number."
+         }
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the line `private bool finished = false;   // true once the result is kept`",
+         "see": "The flashing cursor is at the end of the comment.",
+         "img": {
+          "missing": true,
+          "alt": "frmSky.cs, with the Read the Sky fields typed under the chapter 9 fields",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the line `private bool finished = false;   // true once the result is kept`"
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-4.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under that line. The flashing cursor is on the new empty line.",
+         "id": "4-4.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The 10 fields are under the chapter 9 fields. None of the 10 lines has a red underline.",
+         "id": "4-4.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Fill in frmSky_Load, which sets up the round when the window opens",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmSky reads the questions and mixes their order as the window opens."
+      },
+      {
+       "p": "frmSky_Load is the empty method you made in stage 3. It runs once, right before the window first appears. You type the yellow lines inside it."
+      },
+      {
+       "code": {
+        "id": "c14-load",
+        "kind": "type",
+        "title": "frmSky_Load",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "private void frmSky_Load(object sender, EventArgs e)\n{\n    // Runs once, right before the window first appears\n    ShowSpeaker();\n    answers = new Button[] { btnAnswer1, btnAnswer2, btnAnswer3 };\n    questions = SkyQuestion.LoadAll();\n    if (questions.Count < 10)\n    {\n        lblQuestion.Text = \"Read the Sky needs 10 questions in \"\n            + \"Data\\\\sky.txt, each with 8 parts.\";\n        return;\n    }\n    order = Mix.ShuffledNumbers(questions.Count);\n    ShowQuestion();\n}",
+        "partLines": [
+         [
+          1,
+          4,
+          "Show the speaker",
+          "ShowSpeaker, from chapter 9, puts the right speaker picture on the header strip."
+         ],
+         [
+          5,
+          5,
+          "Keep the 3 buttons together",
+          "This line makes the array `answers` from the 3 buttons you dropped on pnlPlay. From now on, `answers[0]` is btnAnswer1, `answers[1]` is btnAnswer2 and `answers[2]` is btnAnswer3."
+         ],
+         [
+          6,
+          12,
+          "Read the questions",
+          "`SkyQuestion.LoadAll()` reads `sky.txt` and gives back a list, with one SkyQuestion for each line. A round needs 10 questions. With fewer than 10, lblQuestion shows a message, and `return` stops frmSky_Load early. Inside quotes, `\\\\` stands for one backslash, so the message shows Data\\sky.txt."
+         ],
+         [
+          13,
+          15,
+          "Mix the order, then show the first question",
+          "`Mix.ShuffledNumbers` from chapter 2 gives the question numbers in a random order. Then ShowQuestion puts the first question on the screen."
+         ]
+        ],
+        "focusLines": [
+         [
+          3,
+          14
+         ]
+        ],
+        "typed": 9,
+        "wordMarks": [
+         [
+          5,
+          18,
+          26,
+          8
+         ],
+         [
+          1,
+          32,
+          38,
+          20
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `{` on the line under `private void frmSky_Load`.",
+         "see": "The flashing cursor is after the `{`.",
+         "img": {
+          "missing": true,
+          "alt": "frmSky.cs, with the yellow lines typed inside frmSky_Load",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `{` on the line under `private void frmSky_Load`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-5.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens inside frmSky_Load.",
+         "id": "4-5.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The yellow lines are inside frmSky_Load. `ShowQuestion` has a red underline. This is normal, because you have not written ShowQuestion yet.",
+         "id": "4-5.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "5"
+    },
+    {
+     "title": "Type ShowQuestion, which puts a question on the screen and starts the clock",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmSky can show any question, with its photo, its 3 answers and a full time bar."
+      },
+      {
+       "p": "Every one of the 10 questions starts the same way, so one method does it. ShowQuestion runs at the start of the round, and again after each click on Next question."
+      },
+      {
+       "p": "The 3 lines that set each button's colours and pointer put back the look you gave the buttons in stage 3. They come in the copy, and you type the yellow lines into the 2 gaps around them."
+      },
+      {
+       "code": {
+        "id": "c14-showquestion",
+        "kind": "type",
+        "title": "ShowQuestion",
+        "lang": "cs",
+        "why": "The 3 lines inside the loop that set BackColor, ForeColor and Cursor match the settings from stage 3, so they come in the copy.",
+        "text": "// Puts question number on the screen and starts the time bar\nprivate void ShowQuestion()\n{\n    SkyQuestion q = questions[order[number]];\n    lblCount.Text = \"Question \" + (number + 1) + \" of 10\";\n    lblQuestion.Text = q.Question;\n    picSky.Image = Files.Picture(\"Sky\", q.Picture);\n    lblExplain.Text = \"\";\n    int[] mixed = Mix.ShuffledNumbers(3);\n    for (int i = 0; i < 3; i++)\n    {\n        answerOf[i] = mixed[i];\n        answers[i].Text = q.Answers[mixed[i]];\n        answers[i].BackColor = Color.White;\n        answers[i].ForeColor = Color.FromArgb(38, 50, 56);\n        answers[i].Cursor = Cursors.Hand;\n    }\n    answered = false;\n    btnNext.Visible = false;\n    timeLeft = 100;\n    prgTime.Value = 100;\n    tmrQuestion.Start();\n}",
+        "partLines": [
+         [
+          2,
+          8,
+          "The question and its photo",
+          "`q` is this question: `order[number]` picks it from the mixed order. lblCount shows the question's place in the round. `number + 1` is in brackets so that it is worked out first. `Files.Picture` from chapter 2 loads the photo from the Images\\Sky folder. lblExplain is emptied, ready for the next reason."
+         ],
+         [
+          9,
+          17,
+          "The 3 answers in a mixed order",
+          "`mixed` holds 0, 1 and 2 in a random order. The loop goes once round for each button. `answerOf[i]` remembers which answer from the file is on button `i`, and the button shows that answer. Then the button turns white again, with dark words and a pointing hand."
+         ],
+         [
+          18,
+          23,
+          "Start the clock",
+          "`answered` goes back to false, so the buttons can be clicked. Next question hides. `timeLeft` and the time bar go back to 100, which is full. `tmrQuestion.Start()` starts the Timer."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          13
+         ],
+         [
+          18,
+          23
+         ]
+        ],
+        "typed": 15,
+        "wordMarks": [
+         [
+          9,
+          4,
+          9,
+          8
+         ],
+         [
+          7,
+          4,
+          10,
+          13
+         ],
+         [
+          21,
+          4,
+          11,
+          14
+         ],
+         [
+          22,
+          4,
+          15,
+          15
+         ],
+         [
+          15,
+          31,
+          45,
+          21
+         ],
+         [
+          16,
+          28,
+          40,
+          22
+         ],
+         [
+          10,
+          28,
+          30,
+          23
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmSky_Load`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmSky.cs, with ShowQuestion pasted and typed under frmSky_Load",
+          "w": 800,
+          "h": 400,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `frmSky_Load`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 4,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 5,
+            "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it."
+           },
+           {
+            "n": 6,
+            "say": "Type the first group of yellow lines, from `// Puts question number on the screen` down to `answers[i].Text = q.Answers[mixed[i]];`. Press Enter at the end of each line."
+           },
+           {
+            "n": 7,
+            "say": "Triple-click the line that starts with `// YOU TYPE THIS PART`."
+           },
+           {
+            "n": 8,
+            "say": "Type the second group of yellow lines, from `answered = false;` down to the `}` that closes ShowQuestion."
+           }
+          ]
+         },
+         "id": "4-6.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-6.2",
+         "n": 2
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c14-showquestion",
+         "id": "4-6.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "ShowQuestion appears with 2 lines that start with `// YOU TYPE THIS PART`.",
+         "id": "4-6.4",
+         "n": 4
+        },
+        {
+         "do": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it.",
+         "see": "The whole line turns blue.",
+         "wrong": [
+          [
+           "The old `// YOU TYPE THIS PART` line is still there after you type",
+           "Click the old `// YOU TYPE THIS PART` line, then press Home. Hold Shift and press End, so the whole line turns blue. Press Delete."
+          ]
+         ],
+         "id": "4-6.5",
+         "n": 5
+        },
+        {
+         "do": "Type the first group of yellow lines, from `// Puts question number on the screen` down to `answers[i].Text = q.Answers[mixed[i]];`. Press Enter at the end of each line.",
+         "see": "The first group of yellow lines is where the first `// YOU TYPE THIS PART` line was.",
+         "id": "4-6.6",
+         "n": 6
+        },
+        {
+         "do": "Triple-click the line that starts with `// YOU TYPE THIS PART`.",
+         "see": "The whole line turns blue.",
+         "id": "4-6.7",
+         "n": 7
+        },
+        {
+         "do": "Type the second group of yellow lines, from `answered = false;` down to the `}` that closes ShowQuestion.",
+         "see": "The red underline under `ShowQuestion` in frmSky_Load has gone.",
+         "id": "4-6.8",
+         "n": 8
+        }
+       ]
+      }
+     ],
+     "id": "6"
+    },
+    {
+     "title": "Type tmrQuestion_Tick and Answer_Click, the clock and the clicks",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the time bar counts down, and a click on any answer button is caught."
+      },
+      {
+       "p": "The [[Timer|15]] tmrQuestion ticks every 0.1 seconds. Each tick takes 1 off `timeLeft`, so 100 ticks are 10 seconds."
+      },
+      {
+       "p": "All 3 answer buttons run one method, Answer_Click. So Answer_Click needs a way to tell which button was clicked."
+      },
+      {
+       "code": {
+        "id": "c14-tick",
+        "kind": "type",
+        "title": "tmrQuestion_Tick and Answer_Click",
+        "lang": "cs",
+        "text": "// Every 0.1 seconds the time bar goes down by 1\nprivate void tmrQuestion_Tick(object sender, EventArgs e)\n{\n    timeLeft--;\n    prgTime.Value = timeLeft;\n    if (timeLeft == 30 || timeLeft == 20 || timeLeft == 10)\n    {\n        Sound.Play(\"tick.wav\");    // the last 3 seconds\n    }\n    if (timeLeft == 0) Answer(-1);  // time is up: counts as wrong\n}\n\n// One of the three answer buttons was clicked\nprivate void Answer_Click(object sender, EventArgs e)\n{\n    if (answered) return;          // this question is done already\n    for (int i = 0; i < 3; i++)\n    {\n        if (sender == answers[i]) Answer(i);\n    }\n}",
+        "partLines": [
+         [
+          2,
+          5,
+          "One tick less",
+          "tmrQuestion_Tick runs every time the Timer ticks. `timeLeft--` takes 1 off `timeLeft`, and the time bar's Value follows it, so the bar gets shorter."
+         ],
+         [
+          6,
+          9,
+          "The last 3 seconds",
+          "`||` means or. At 3 seconds, 2 seconds and 1 second left, the tick sound plays."
+         ],
+         [
+          10,
+          11,
+          "Time is up",
+          "When `timeLeft` reaches 0, Answer runs with -1. No button is number -1, so -1 means that no answer was picked."
+         ],
+         [
+          14,
+          16,
+          "Only one answer",
+          "Answer_Click runs when the player clicks any of the 3 answer buttons. If this question is already answered, `return` stops it, so the click does nothing."
+         ],
+         [
+          17,
+          21,
+          "Which button",
+          "`sender` is the button that the player clicked. The loop compares it with each answer button in turn. When they match, Answer runs with the button's number, 0, 1 or 2."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          21
+         ]
+        ],
+        "typed": 10,
+        "wordMarks": [
+         [
+          5,
+          4,
+          11,
+          14
+         ],
+         [
+          2,
+          13,
+          29,
+          17
+         ],
+         [
+          14,
+          13,
+          25,
+          19
+         ],
+         [
+          2,
+          37,
+          43,
+          20
+         ],
+         [
+          17,
+          28,
+          30,
+          23
+         ],
+         [
+          4,
+          12,
+          14,
+          24
+         ],
+         [
+          6,
+          23,
+          25,
+          25
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `ShowQuestion`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmSky.cs, with tmrQuestion_Tick and Answer_Click typed under ShowQuestion",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `ShowQuestion`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-7.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-7.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "`Answer` has a red underline. This is normal, because you have not written Answer yet.",
+         "id": "4-7.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "7"
+    },
+    {
+     "title": "Type Answer, which marks the answer and says why",
+     "blocks": [
+      {
+       "p": "By the end of this screen, an answer turns the right button green, a wrong pick red, and shows the reason."
+      },
+      {
+       "p": "Answer is the heart of the game, and it is long. So you type it in 2 parts. The first part stops part-way through Answer, and the second part carries on from there."
+      },
+      {
+       "p": "Answer runs for a click and for a time-out. `picked` is the number of the clicked button, or -1 when the time ran out."
+      },
+      {
+       "code": {
+        "id": "c14-answer-1",
+        "kind": "type",
+        "title": "Answer, part 1: colour the buttons",
+        "lang": "cs",
+        "text": "// Marks the answer on button picked (-1 when the time ran out)\nprivate void Answer(int picked)\n{\n    tmrQuestion.Stop();\n    answered = true;\n    SkyQuestion q = questions[order[number]];\n    for (int i = 0; i < 3; i++)\n    {\n        answers[i].Cursor = Cursors.Default;\n        if (answerOf[i] == q.Right)\n        {\n            answers[i].BackColor = Color.FromArgb(62, 142, 65);\n            answers[i].ForeColor = Color.White;\n        }\n        else if (i == picked)\n        {\n            answers[i].BackColor = Color.FromArgb(178, 58, 46);\n            answers[i].ForeColor = Color.White;\n        }\n    }\n    string best = q.Answers[q.Right];\n    string name = FirstLower(q.Name);",
+        "partLines": [
+         [
+          2,
+          6,
+          "Stop the clock",
+          "Answer stops the Timer at once, so the time bar stops. `answered` turns true, so Answer_Click ignores any more clicks. `q` is this question."
+         ],
+         [
+          7,
+          14,
+          "The right answer goes green",
+          "The loop looks at each of the 3 buttons. Each button gets the normal arrow pointer, because it cannot be clicked now. If the button holds the right answer, it turns green, made from red 62, green 142 and blue 65, with white words."
+         ],
+         [
+          15,
+          20,
+          "A wrong pick goes red",
+          "Otherwise, if this is the button the player picked, it was wrong. It turns red, made from red 178, green 58 and blue 46."
+         ],
+         [
+          21,
+          22,
+          "The words for the reason",
+          "`best` is the words of the right answer. `name` is the sky's short name with a small first letter, such as `hill fog`. FirstLower makes it, and you write FirstLower on the next screen."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          22
+         ]
+        ],
+        "typed": 14,
+        "wordMarks": [
+         [
+          4,
+          4,
+          15,
+          15
+         ],
+         [
+          12,
+          35,
+          49,
+          21
+         ],
+         [
+          9,
+          28,
+          43,
+          22
+         ],
+         [
+          7,
+          28,
+          30,
+          23
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `Answer_Click`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmSky.cs, with the first part of Answer typed under Answer_Click",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `Answer_Click`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-8.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-8.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The first part of Answer is under Answer_Click. `FirstLower` has a red underline. Answer has no `}` at its end yet, so more red underlines show further down. This is normal.",
+         "id": "4-8.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "p": "The second part of Answer checks whether the answer was right. The lines for a wrong click repeat the lines for a time-out with **Not quite.** in place of **Time is up.**, so they come in the copy."
+      },
+      {
+       "code": {
+        "id": "c14-answer-2",
+        "kind": "type",
+        "title": "Answer, part 2: the reason and the score",
+        "lang": "cs",
+        "why": "The 4 lines after the second `else` repeat the 4 lines before it with different words, so they come in the copy.",
+        "text": "    if (picked != -1 && answerOf[picked] == q.Right)\n    {\n        right++;\n        lblExplain.Text = \"Correct. \" + q.Explanation;\n        wellLines.Add(\"You read the \" + name + \" right.\");\n        Sound.Play(\"correct.wav\");\n    }\n    else\n    {\n        if (picked == -1)\n        {\n            lblExplain.Text = \"Time is up. The best answer is: \"\n                + best + \". \" + q.Explanation;\n        }\n        else\n        {\n            lblExplain.Text = \"Not quite. The best answer is: \"\n                + best + \". \" + q.Explanation;\n        }\n        wrongLines.Add(\"You missed the \" + name + \" question.\");\n        Sound.Play(\"wrong.wav\");\n    }\n    if (number == 9)\n    {\n        btnNext.Text = \"See my score\";\n        RecordResult();\n    }\n    btnNext.Visible = true;\n}",
+        "partLines": [
+         [
+          1,
+          7,
+          "A right answer",
+          "`!=` means is not equal to, and `&&` means and. So the answer is right when a button was picked and that button holds the right answer. `right++` adds 1 to the right answers. lblExplain shows **Correct.** and the reason. A line goes into What went well, and the correct sound plays."
+         ],
+         [
+          8,
+          14,
+          "Time is up",
+          "After `else`, the answer was wrong. If `picked` is -1, the time ran out. lblExplain says so, then gives the best answer and the reason."
+         ],
+         [
+          15,
+          19,
+          "Not quite",
+          "Otherwise the player picked a wrong button. lblExplain starts with **Not quite.** instead."
+         ],
+         [
+          20,
+          22,
+          "Count the miss",
+          "Either way, a line goes into What went wrong, and the wrong sound plays."
+         ],
+         [
+          23,
+          29,
+          "The last question",
+          "Question number 9 is the 10th question, because `number` counts from 0. For that question the Next question button says **See my score**. RecordResult keeps the result first, then the button shows."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          13
+         ],
+         [
+          20,
+          29
+         ]
+        ],
+        "typed": 15,
+        "wordMarks": [
+         [
+          1,
+          21,
+          23,
+          26
+         ],
+         [
+          1,
+          15,
+          17,
+          27
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the line `string name = FirstLower(q.Name);`",
+         "see": "The flashing cursor is after the semicolon.",
+         "img": {
+          "missing": true,
+          "alt": "frmSky.cs, with the second part of Answer pasted and typed",
+          "w": 800,
+          "h": 400,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click at the end of the line `string name = FirstLower(q.Name);`"
+           },
+           {
+            "n": 5,
+            "say": "Press Enter."
+           },
+           {
+            "n": 6,
+            "say": "Click the copy button below."
+           },
+           {
+            "n": 7,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 8,
+            "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it."
+           },
+           {
+            "n": 9,
+            "say": "Type the first group of yellow lines, from `if (picked != -1 && answerOf[picked] == q.Right)` down to the first `+ best + \". \" + q.Explanation;`. Press Enter at the end of each line."
+           },
+           {
+            "n": 10,
+            "say": "Triple-click the line that starts with `// YOU TYPE THIS PART`."
+           },
+           {
+            "n": 11,
+            "say": "Type the second group of yellow lines, from `wrongLines.Add` down to the `}` that closes Answer."
+           }
+          ]
+         },
+         "id": "4-8.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under `string name = FirstLower(q.Name);`.",
+         "id": "4-8.5",
+         "n": 5
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c14-answer-2",
+         "id": "4-8.6",
+         "n": 6
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The second part of Answer appears with 2 lines that start with `// YOU TYPE THIS PART`.",
+         "id": "4-8.7",
+         "n": 7
+        },
+        {
+         "do": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it.",
+         "see": "The whole line turns blue.",
+         "wrong": [
+          [
+           "The old `// YOU TYPE THIS PART` line is still there after you type",
+           "Click the old `// YOU TYPE THIS PART` line, then press Home. Hold Shift and press End, so the whole line turns blue. Press Delete."
+          ]
+         ],
+         "id": "4-8.8",
+         "n": 8
+        },
+        {
+         "do": "Type the first group of yellow lines, from `if (picked != -1 && answerOf[picked] == q.Right)` down to the first `+ best + \". \" + q.Explanation;`. Press Enter at the end of each line.",
+         "see": "The first group of yellow lines is where the first `// YOU TYPE THIS PART` line was.",
+         "id": "4-8.9",
+         "n": 9
+        },
+        {
+         "do": "Triple-click the line that starts with `// YOU TYPE THIS PART`.",
+         "see": "The whole line turns blue.",
+         "id": "4-8.10",
+         "n": 10
+        },
+        {
+         "do": "Type the second group of yellow lines, from `wrongLines.Add` down to the `}` that closes Answer.",
+         "see": "`FirstLower` and `RecordResult` have red underlines. This is normal, because you have not written them yet.",
+         "wrong": [
+          [
+           "Every method under Answer has a red underline",
+           "Answer has one `}` too few, or one too many. Count the `{` and `}` in Answer against the code above. Visual Studio 2019 sometimes adds a `}` by itself when you type a `{`."
+          ]
+         ],
+         "id": "4-8.11",
+         "n": 11
+        }
+       ]
+      }
+     ],
+     "id": "8"
+    },
+    {
+     "title": "Type FirstLower, btnNext_Click and RecordResult, then build",
+     "blocks": [
+      {
+       "p": "By the end of this screen, every method in Read the Sky is written, and your project builds with no errors."
+      },
+      {
+       "p": "The feedback reads better with a small first letter. An example is **You missed the hill fog question.** FirstLower makes that small letter. btnNext_Click moves on, and RecordResult works out the score."
+      },
+      {
+       "code": {
+        "id": "c14-record",
+        "kind": "type",
+        "title": "FirstLower, btnNext_Click and RecordResult",
+        "lang": "cs",
+        "text": "// The name with a small first letter, so it reads in a sentence\nprivate string FirstLower(string name)\n{\n    return name.Substring(0, 1).ToLower() + name.Substring(1);\n}\n\n// Next question, or See my score after question 10\nprivate void btnNext_Click(object sender, EventArgs e)\n{\n    if (number == 9)\n    {\n        ShowRoundOver();\n        return;\n    }\n    number++;\n    ShowQuestion();\n}\n\n// Works out the score, adds the feedback, then keeps the result\nprivate void RecordResult()\n{\n    int score = right * 10;\n    result = new GameResult(\"Read the Sky\", score);\n    result.WentWell.AddRange(wellLines);\n    result.WentWrong.AddRange(wrongLines);\n    KeepResult();\n}",
+        "partLines": [
+         [
+          2,
+          5,
+          "FirstLower",
+          "`name.Substring(0, 1)` is the first letter, and `ToLower()` makes it small. `name.Substring(1)` is everything after the first letter. `+` joins the two back together."
+         ],
+         [
+          8,
+          14,
+          "After the last question",
+          "btnNext_Click runs when the player clicks Next question. After the 10th question the button says See my score, so it shows the Round over box and stops."
+         ],
+         [
+          15,
+          17,
+          "The next question",
+          "Otherwise `number` goes up by 1, and ShowQuestion shows the next question."
+         ],
+         [
+          20,
+          27,
+          "RecordResult",
+          "Each right answer is worth 10 points. `new GameResult` from chapter 9 makes the result, with the game's name and the score. `AddRange` adds all the lines in `wellLines` and `wrongLines` to the result in one go. KeepResult, from chapter 9, keeps the result for the map."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          27
+         ]
+        ],
+        "typed": 14,
+        "wordMarks": [
+         [
+          8,
+          34,
+          40,
+          20
+         ],
+         [
+          15,
+          10,
+          12,
+          23
+         ],
+         [
+          4,
+          16,
+          25,
+          28
+         ],
+         [
+          4,
+          32,
+          39,
+          29
+         ],
+         [
+          24,
+          20,
+          28,
+          30
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `Answer`. It is the `}` under `btnNext.Visible = true;`",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmSky.cs, with FirstLower, btnNext_Click and RecordResult typed under Answer",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `Answer`. It is the `}` under `btnNext.Visible = true;`"
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-9.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-9.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "No line in frmSky.cs has a red underline.",
+         "id": "4-9.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "missing": true,
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows CS0103: The name 'FirstLower' does not exist in the current context",
+           "A method's name is spelt one way where you wrote the method, and another way where the code uses it. Check that FirstLower is spelt the same in Answer and in the first line of FirstLower. Capital letters count."
+          ],
+          [
+           "The Error List shows warnings, such as CS0414",
+           "A warning is not an error. The warnings go away once every method is connected."
+          ]
+         ],
+         "id": "4-9.4",
+         "n": 4
+        }
+       ]
+      }
+     ],
+     "id": "9"
+    },
+    {
+     "title": "Connect the Timer, the 3 answer buttons and Next question to their methods",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the time bar moves, the answer buttons answer, and Next question moves on."
+      },
+      {
+       "p": "tmrQuestion_Tick, Answer_Click and btnNext_Click are written, but nothing runs them yet. A Timer runs its method through its [[Tick|17]] event, so you connect the Tick event to its method."
+      },
+      {
+       "p": "All 3 answer buttons connect to the same method, Answer_Click. That is why Answer_Click uses `sender` to find out which button was clicked."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Shift and F7 together, to go back from the code to the designer.",
+         "see": "The designer shows frmSky.",
+         "img": {
+          "missing": true,
+          "alt": "frmSky in the designer, with tmrQuestion picked in the grey strip under the form, and the Properties window showing the Tick event of tmrQuestion",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Press Shift and F7 together, to go back from the code to the designer."
+           },
+           {
+            "n": 2,
+            "say": "Click **tmrQuestion** in the grey strip under frmSky."
+           },
+           {
+            "n": 3,
+            "say": "Click the lightning bolt at the top of the Properties window."
+           },
+           {
+            "n": 4,
+            "say": "Click the box beside **Tick**."
+           },
+           {
+            "n": 5,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 6,
+            "say": "Click `tmrQuestion_Tick` in the list."
+           }
+          ]
+         },
+         "id": "4-10.1",
+         "n": 1
+        },
+        {
+         "do": "Click **tmrQuestion** in the grey strip under frmSky.",
+         "see": "The Properties window shows tmrQuestion at the top.",
+         "id": "4-10.2",
+         "n": 2
+        },
+        {
+         "do": "Click the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists one event, Tick.",
+         "id": "4-10.3",
+         "n": 3
+        },
+        {
+         "do": "Click the box beside **Tick**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-10.4",
+         "n": 4
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-10.5",
+         "n": 5
+        },
+        {
+         "do": "Click `tmrQuestion_Tick` in the list.",
+         "see": "The box beside Tick shows `tmrQuestion_Tick`.",
+         "id": "4-10.6",
+         "n": 6
+        },
+        {
+         "do": "Click the top answer button, btnAnswer1, on pnlPlay.",
+         "see": "The Properties window lists the events of btnAnswer1.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of btnAnswer1, with Answer_Click beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click the top answer button, btnAnswer1, on pnlPlay."
+           },
+           {
+            "n": 8,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 9,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 10,
+            "say": "Click `Answer_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-10.7",
+         "n": 7
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-10.8",
+         "n": 8
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-10.9",
+         "n": 9
+        },
+        {
+         "do": "Click `Answer_Click` in the list.",
+         "see": "The box beside Click shows `Answer_Click`.",
+         "id": "4-10.10",
+         "n": 10
+        },
+        {
+         "do": "Click the middle answer button, btnAnswer2.",
+         "see": "The Properties window lists the events of btnAnswer2.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of btnAnswer2, with Answer_Click beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 11,
+            "say": "Click the middle answer button, btnAnswer2."
+           },
+           {
+            "n": 12,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 13,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 14,
+            "say": "Click `Answer_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-10.11",
+         "n": 11
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-10.12",
+         "n": 12
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-10.13",
+         "n": 13
+        },
+        {
+         "do": "Click `Answer_Click` in the list.",
+         "see": "The box beside Click shows `Answer_Click`.",
+         "id": "4-10.14",
+         "n": 14
+        },
+        {
+         "do": "Click the bottom answer button, btnAnswer3.",
+         "see": "The Properties window lists the events of btnAnswer3.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of btnAnswer3, with Answer_Click beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 15,
+            "say": "Click the bottom answer button, btnAnswer3."
+           },
+           {
+            "n": 16,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 17,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 18,
+            "say": "Click `Answer_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-10.15",
+         "n": 15
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-10.16",
+         "n": 16
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-10.17",
+         "n": 17
+        },
+        {
+         "do": "Click `Answer_Click` in the list.",
+         "see": "The box beside Click shows `Answer_Click`.",
+         "id": "4-10.18",
+         "n": 18
+        },
+        {
+         "do": "Click **Next question** on pnlPlay.",
+         "see": "The Properties window lists the events of btnNext.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of btnNext, with btnNext_Click beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 19,
+            "say": "Click **Next question** on pnlPlay."
+           },
+           {
+            "n": 20,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 21,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 22,
+            "say": "Click `btnNext_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-10.19",
+         "n": 19
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-10.20",
+         "n": 20
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-10.21",
+         "n": 21
+        },
+        {
+         "do": "Click `btnNext_Click` in the list.",
+         "see": "The box beside Click shows `btnNext_Click`.",
+         "id": "4-10.22",
+         "n": 22
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "missing": true,
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 23,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "id": "4-10.23",
+         "n": 23
+        }
+       ]
+      }
+     ],
+     "id": "10"
+    },
+    {
+     "title": "Open Read the Sky from the map and play a round",
+     "blocks": [
+      {
+       "p": "By the end of this screen, place number 3 on your map opens Read the Sky, and you have played a whole round."
+      },
+      {
+       "p": "Your map opens each game with a list of cases in frmMap.cs, one case for each place. Read the Sky is place number 3, so its case says `case 3:`."
+      },
+      {
+       "code": {
+        "id": "c14-map",
+        "kind": "type",
+        "title": "The case line for Read the Sky in frmMap.cs",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "case 3: game = new frmSky(); break;",
+        "partLines": [
+         [
+          1,
+          1,
+          "Open Read the Sky",
+          "When the player clicks place number 3, `game` becomes a new frmSky window. `break;` ends this case. The map then opens the window."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          1
+         ]
+        ],
+        "typed": 1
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `frmMap.cs` in Solution Explorer.",
+         "see": "frmMap opens in the designer.",
+         "img": {
+          "missing": true,
+          "alt": "Visual Studio 2019 with frmMap.cs in the code editor. The search box is open and the new case line is typed. frmMap.cs is picked in Solution Explorer on the right",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Double-click `frmMap.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "say": "Press F7."
+           },
+           {
+            "n": 3,
+            "say": "Press Ctrl and F together."
+           },
+           {
+            "n": 4,
+            "say": "Type `each game chapter adds`"
+           },
+           {
+            "n": 5,
+            "say": "Press Escape."
+           },
+           {
+            "n": 6,
+            "say": "Press End."
+           },
+           {
+            "n": 7,
+            "say": "Press Enter."
+           },
+           {
+            "n": 8,
+            "say": "Type the yellow line from the code above."
+           }
+          ]
+         },
+         "id": "4-11.1",
+         "n": 1
+        },
+        {
+         "do": "Press F7.",
+         "see": "The code of frmMap shows.",
+         "id": "4-11.2",
+         "n": 2
+        },
+        {
+         "do": "Press Ctrl and F together.",
+         "see": "A small search box opens at the top right of the code.",
+         "id": "4-11.3",
+         "n": 3
+        },
+        {
+         "do": "Type `each game chapter adds`",
+         "see": "The line `// each game chapter adds its own case below this line` is highlighted.",
+         "id": "4-11.4",
+         "n": 4
+        },
+        {
+         "do": "Press Escape.",
+         "see": "The search box closes. The words you searched for stay highlighted.",
+         "id": "4-11.5",
+         "n": 5
+        },
+        {
+         "do": "Press End.",
+         "see": "The flashing cursor moves to the end of the comment line.",
+         "id": "4-11.6",
+         "n": 6
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the comment line.",
+         "id": "4-11.7",
+         "n": 7
+        },
+        {
+         "do": "Type the yellow line from the code above.",
+         "see": "The new line says `case 3: game = new frmSky(); break;`.",
+         "wrong": [
+          [
+           "The Error List shows CS0152: The switch statement contains multiple cases with the label value '3'",
+           "Your map already uses place number 3 for another game. Change the 3 in the new case line to a place number that your map does not use yet. Then change `gameNumber` in frmSky.cs to the same number."
+          ]
+         ],
+         "id": "4-11.8",
+         "n": 8
+        },
+        {
+         "do": "Press F5.",
+         "see": "Your game starts and shows the login window.",
+         "img": {
+          "missing": true,
+          "alt": "The login window of your game, with a player's name and password typed in",
+          "w": 640,
+          "h": 400,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Press F5."
+           },
+           {
+            "n": 10,
+            "say": "Log in with a player you registered in chapter 5."
+           }
+          ]
+         },
+         "id": "4-11.9",
+         "n": 9
+        },
+        {
+         "do": "Log in with a player you registered in chapter 5.",
+         "see": "The Welcome screen opens.",
+         "id": "4-11.10",
+         "n": 10
+        },
+        {
+         "do": "Click **Start the expedition**.",
+         "see": "The map opens.",
+         "img": {
+          "missing": true,
+          "alt": "The Welcome screen of your game, with the Start the expedition button",
+          "w": 640,
+          "h": 400,
+          "marks": [
+           {
+            "n": 11,
+            "say": "Click **Start the expedition**."
+           }
+          ]
+         },
+         "id": "4-11.11",
+         "n": 11
+        },
+        {
+         "do": "Click place number 3 on the map, the fourth place.",
+         "see": "Read the Sky opens, with a sky photo, a question, 3 answers and a time bar that is getting shorter.",
+         "img": {
+          "missing": true,
+          "alt": "The map, with place number 3 picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 12,
+            "say": "Click place number 3 on the map, the fourth place."
+           }
+          ]
+         },
+         "id": "4-11.12",
+         "n": 12
+        },
+        {
+         "do": "Play a whole round.",
+         "see": "After the 10th question, See my score opens the Round over box.",
+         "img": {
+          "img": "img/ch00-sky.png",
+          "alt": "Read the Sky at the first question",
+          "w": 803,
+          "h": 549,
+          "marks": [
+           {
+            "n": 13,
+            "x": 65.5,
+            "y": 29.5,
+            "w": 32.5,
+            "h": 32,
+            "say": "Play a whole round."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "No photo appears, and the words above the photo say **Read the Sky needs 10 questions**",
+           "Read the Sky cannot find 10 good lines in `sky.txt`. Check that the Data folder inside bin\\Debug holds `sky.txt`. Then check that `sky.txt` has at least 10 lines, each with 8 parts split by a bar `|`."
+          ],
+          [
+           "The photo is an empty white box",
+           "Either the photo is missing from the Sky folder inside bin\\Debug\\Images, or `sky.txt` spells the photo's file name differently. Compare the two names letter by letter."
+          ],
+          [
+           "The time bar stays full",
+           "tmrQuestion is not connected. Click tmrQuestion in the grey strip under frmSky, and check that the events list shows `tmrQuestion_Tick` beside Tick."
+          ],
+          [
+           "Nothing happens when you click an answer",
+           "That answer button is not connected. Check that the events list of each answer button shows `Answer_Click` beside Click."
+          ],
+          [
+           "A different game opens, or nothing opens, when you click place number 3",
+           "Check the new line in frmMap.cs. It must say `case 3:` and `new frmSky()`."
+          ]
+         ],
+         "id": "4-11.13",
+         "n": 13
+        }
+       ]
+      }
+     ],
+     "id": "11"
+    },
+    {
+     "title": "Your turn: give the player 15 seconds for each question",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have changed how long the time bar lasts, and tested it, on your own."
+      },
+      {
+       "p": "The time bar lasts 10 seconds. Change Read the Sky so that the time bar lasts 15 seconds."
+      },
+      {
+       "code": {
+        "id": "c14-turn-time",
+        "kind": "turn",
+        "title": "Give the player 15 seconds",
+        "lang": "cs",
+        "text": "timeLeft = 150;\nprgTime.Value = 150;",
+        "task": [
+         "Change the field `timeLeft` at the top of frmSky.cs from 100 to 150.",
+         "Change the 2 lines in ShowQuestion that set `timeLeft` and `prgTime.Value` from 100 to 150.",
+         "Change the Maximum of prgTime to 150 in the Properties window.",
+         "Change the Value of prgTime to 150."
+        ],
+        "test": "Press F5, open Read the Sky from the map, and wait without clicking an answer.",
+        "expect": "The time bar takes about 15 seconds to run out. The tick sound still plays for the last 3 seconds, then the words under the photo start with **Time is up.**",
+        "hint": "5 things say 100: three in the code and two in the Properties window. Change the Maximum before the Value, because the Value can never be bigger than the Maximum."
+       }
+      },
+      {
+       "p": "When the test passes, change all 5 things back to 100, because Read the Sky is meant to give 10 seconds. Change the Value of prgTime back before the Maximum this time."
+      }
+     ],
+     "id": "12"
+    },
+    {
+     "title": "Check that Read the Sky works",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that every part of Read the Sky works, including the clicks it must refuse."
+      },
+      {
+       "p": "Run each test with F5. Tick each test when it passes. The 2 tests marked as clicks to refuse must do nothing, and that counts as a pass."
+      },
+      {
+       "check": [
+        {
+         "what": "Click the right answer.",
+         "expect": "allowed",
+         "how": "The button turns green, and the words under the photo start with **Correct.** Next question appears.",
+         "must": "Must happen",
+         "fix": "Check the second part of Answer against its yellow lines. The `if` line must end with `answerOf[picked] == q.Right)`.",
+         "id": "4-13.t1"
+        },
+        {
+         "what": "Click a wrong answer.",
+         "expect": "allowed",
+         "how": "Your button turns red, the right answer turns green, and the words under the photo start with **Not quite.**",
+         "must": "Must happen",
+         "fix": "Check the first part of Answer against its yellow lines, one line at a time.",
+         "id": "4-13.t2"
+        },
+        {
+         "what": "Wait without clicking until the time bar runs out.",
+         "expect": "allowed",
+         "how": "The tick sound plays 3 times near the end. Then the right answer turns green, and the words start with **Time is up.**",
+         "must": "Must happen",
+         "fix": "Check tmrQuestion_Tick against its yellow lines. Then click tmrQuestion in the grey strip under frmSky, and check 2 things in the Properties window. Interval is 100, and the events list shows `tmrQuestion_Tick` beside Tick.",
+         "id": "4-13.t3"
+        },
+        {
+         "what": "Click a second answer after the first one.",
+         "expect": "control",
+         "how": "Click a wrong answer, then click the right answer straight away. The right answer must stay green and the wrong one red. The words under the photo must still start with **Not quite.**",
+         "fix": "Check that Answer_Click starts with `if (answered) return;`. Then check that Answer sets `answered = true;`.",
+         "id": "4-13.t4"
+        },
+        {
+         "what": "Click an answer after the time is up.",
+         "expect": "control",
+         "how": "Let the time bar run out, then click any answer. Nothing must change.",
+         "fix": "Check that tmrQuestion_Tick ends with `if (timeLeft == 0) Answer(-1);`, and that Answer sets `answered = true;`.",
+         "id": "4-13.t5"
+        },
+        {
+         "what": "Get 3 questions right, then play to the end and click See my score.",
+         "expect": "allowed",
+         "how": "The Round over box says **You scored 30 out of 100 points.**",
+         "must": "Must happen",
+         "fix": "Check the line in RecordResult that starts `int score`. It must be `right * 10`.",
+         "id": "4-13.t6"
+        },
+        {
+         "what": "Click Back to the map in the middle of a round, then click No.",
+         "expect": "allowed",
+         "how": "The question **Leave Read the Sky?** appears. After No, Read the Sky stays open.",
+         "must": "Must happen",
+         "fix": "Click the form itself, open the events list in the Properties window, and check that FormClosing shows `frmSky_FormClosing`.",
+         "id": "4-13.t7"
+        },
+        {
+         "what": "Finish a round, then click Back to the map.",
+         "expect": "allowed",
+         "how": "The map shows again, and the flag on place number 3 shows a tick.",
+         "must": "Must happen",
+         "fix": "Check that the first field at the top of frmSky is `private int gameNumber = 3;`. Then check that frmMap opens Read the Sky for `case 3:`.",
+         "id": "4-13.t8"
+        }
+       ]
+      }
+     ],
+     "id": "13"
+    }
+   ],
+   "id": "4"
+  },
+  {
+   "title": "Change Read the Sky into a game on your own topic",
+   "screens": [
+    {
+     "title": "Choose your own questions, and 2 more things to change",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have chosen your own questions, and 2 more things to change."
+      },
+      {
+       "p": "Your own game keeps the Read the Sky code, but uses your own topic. Each question is a picture, a question about it, 3 answers and a reason, so any topic with pictures like that works."
+      },
+      {
+       "box": {
+        "title": "3 topics that work",
+        "blocks": [
+         {
+          "p": "Geography: a photo of a landform, what made it, 3 answers and why the right one is right."
+         },
+         {
+          "p": "Art: a painting, who painted it, 3 painters to pick from and a fact about the right one."
+         },
+         {
+          "p": "Road safety: a photo of a road sign, what to do, 3 answers and what the sign means."
+         }
+        ]
+       }
+      },
+      {
+       "p": "You need at least 10 questions, because a round uses 10. More than 10 is better, so the rounds differ."
+      },
+      {
+       "p": "Change at least 2 more things as well, so that your game plays differently from Read the Sky. For example, change the time for each question, the points for a right answer, the number of questions or the colours."
+      },
+      {
+       "p": "Every picture and sound you use must be free to use. Each one gets a line in `credits.txt`, saying who made it, its licence and a link."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Rename the SkyQuestion class and the Read the Sky form",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your class and your form have names that fit your topic."
+      },
+      {
+       "p": "A class called SkyQuestion in a game about road signs would confuse anyone who reads your code. Visual Studio 2019 can rename a file, and every use of its class, in one go."
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click `SkyQuestion.cs` in Solution Explorer.",
+         "see": "A menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the right-click menu of SkyQuestion.cs open",
+          "w": 360,
+          "h": 420,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Right-click `SkyQuestion.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "say": "Click **Rename**."
+           }
+          ]
+         },
+         "id": "5-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click **Rename**.",
+         "see": "The name `SkyQuestion.cs` becomes a box that you can type in.",
+         "id": "5-2.2",
+         "n": 2
+        },
+        {
+         "do": "Type your class's new name, such as `SignQuestion.cs`",
+         "see": "The box shows the new name.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the name SkyQuestion.cs turned into a box and SignQuestion.cs typed in it",
+          "w": 360,
+          "h": 200,
+          "marks": [
+           {
+            "n": 3,
+            "say": "Type your class's new name, such as `SignQuestion.cs`"
+           },
+           {
+            "n": 4,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "5-2.3",
+         "n": 3
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A message asks: You are renaming a file. Would you also like to perform a rename in this project of all references to the code element 'SkyQuestion'?",
+         "id": "5-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click **Yes**.",
+         "see": "Every use of the class SkyQuestion in your code changes to the new name. For example, `List<SkyQuestion>` becomes `List<SignQuestion>`.",
+         "img": {
+          "missing": true,
+          "alt": "The message that asks whether to rename every use of SkyQuestion",
+          "w": 480,
+          "h": 200,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Click **Yes**."
+           }
+          ]
+         },
+         "id": "5-2.5",
+         "n": 5
+        },
+        {
+         "do": "Right-click `frmSky.cs` in Solution Explorer.",
+         "see": "A menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the right-click menu of frmSky.cs open",
+          "w": 360,
+          "h": 420,
+          "marks": [
+           {
+            "n": 6,
+            "say": "Right-click `frmSky.cs` in Solution Explorer."
+           },
+           {
+            "n": 7,
+            "say": "Click **Rename**."
+           }
+          ]
+         },
+         "id": "5-2.6",
+         "n": 6
+        },
+        {
+         "do": "Click **Rename**.",
+         "see": "The name `frmSky.cs` becomes a box that you can type in.",
+         "id": "5-2.7",
+         "n": 7
+        },
+        {
+         "do": "Type your form's new name, such as `frmSigns.cs`",
+         "see": "The box shows the new name.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the name frmSky.cs turned into a box and frmSigns.cs typed in it",
+          "w": 360,
+          "h": 200,
+          "marks": [
+           {
+            "n": 8,
+            "say": "Type your form's new name, such as `frmSigns.cs`"
+           },
+           {
+            "n": 9,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "5-2.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The same message asks about every use of 'frmSky'.",
+         "id": "5-2.9",
+         "n": 9
+        },
+        {
+         "do": "Click **Yes**.",
+         "see": "Every use of the class frmSky changes to the new name, including the line in `frmMap.cs` that opens your game.",
+         "img": {
+          "missing": true,
+          "alt": "The message that asks whether to rename every use of frmSky",
+          "w": 480,
+          "h": 200,
+          "marks": [
+           {
+            "n": 10,
+            "say": "Click **Yes**."
+           }
+          ]
+         },
+         "id": "5-2.10",
+         "n": 10
+        }
+       ]
+      },
+      {
+       "p": "Names such as `picSky`, `frmSky_Load` and `tmrQuestion` keep their old names. This is normal, and the old names still work. Rename them only if you want to."
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Put your own data file and pictures into bin\\Debug",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your game reads your own data file and shows your own pictures."
+      },
+      {
+       "p": "Your own files go in the same folders as the Summit Ready files, inside bin\\Debug. Your data file goes in Data, your pictures go in a folder inside Images, and any new sounds go in Sounds."
+      },
+      {
+       "code": {
+        "id": "c14-turn-data",
+        "kind": "turn",
+        "title": "Use your own data file and pictures",
+        "lang": "cs",
+        "text": "string path = Files.Data(\"signs.txt\");\npicSky.Image = Files.Picture(\"Signs\", q.Picture);",
+        "task": [
+         "Open Notepad and make a text file with at least 10 lines. Each line has 8 parts split by a bar `|`, in the same order as `sky.txt`.",
+         "Save the text file in the Data folder inside bin\\Debug, with your own name, such as `signs.txt`.",
+         "Change `sky.txt` in LoadAll to the name of your text file.",
+         "Make a folder for your pictures inside bin\\Debug\\Images, such as Signs, and put your pictures in the folder.",
+         "Change `\"Sky\"` in ShowQuestion to the name of your folder.",
+         "Add a line to `credits.txt` for each new picture and each new sound."
+        ],
+        "test": "Press F5 and open your game from the map.",
+        "expect": "The first question shows your own picture, your own question and your own 3 answers.",
+        "hint": "LoadAll is the only method that opens the text file. ShowQuestion is the only method that opens the picture folder."
+       }
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Change the words on the screen to fit your topic",
+     "blocks": [
+      {
+       "p": "By the end of this screen, every word on the screen and in the Round over box fits your topic."
+      },
+      {
+       "p": "A player of your game should never read about the sky, unless your topic is the weather. The words are in 2 places: the Properties window, and the messages in the code."
+      },
+      {
+       "code": {
+        "id": "c14-turn-words",
+        "kind": "turn",
+        "title": "Change every word about the sky",
+        "lang": "cs",
+        "text": "wellLines.Add(\"You knew the \" + name + \" sign.\");\nresult = new GameResult(\"Sign Quiz\", score);",
+        "task": [
+         "Change the Text of lblTitle and of lblInstruction.",
+         "Change the Text of the form itself, which shows in the title bar of the window.",
+         "Change the message in frmSky_Load that says **Read the Sky needs 10 questions**.",
+         "Change the 2 lines in Answer that add to `wellLines` and `wrongLines`.",
+         "Change the question in the FormClosing method, the code that runs when the player closes the window.",
+         "Change the game's name, `\"Read the Sky\"`, in RecordResult."
+        ],
+        "test": "Play a round to the end, and read every word on the screen and in the Round over box.",
+        "expect": "No word on the screen is about the sky, unless your topic is the weather.",
+        "hint": "Press Ctrl and F together, then type `Sky` to find every word still about the sky. Do the same for `read the`."
+       }
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Test your game, and keep the evidence",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that your own game works, and you have the evidence for your coursework."
+      },
+      {
+       "p": "Run each test with F5 on your own game. Tick each test when it passes. For the 2 tests marked must be refused, nothing should happen, and that counts as a pass."
+      },
+      {
+       "check": [
+        {
+         "what": "Click the right answer.",
+         "expect": "allowed",
+         "how": "The button turns green, and your reason shows, starting with **Correct.**",
+         "must": "Must happen",
+         "id": "5-5.t1"
+        },
+        {
+         "what": "Click a wrong answer.",
+         "expect": "allowed",
+         "how": "Your button turns red, the right answer turns green, and your reason shows.",
+         "must": "Must happen",
+         "id": "5-5.t2"
+        },
+        {
+         "what": "Wait until the time bar runs out.",
+         "expect": "allowed",
+         "how": "The right answer turns green, and the words start with **Time is up.**",
+         "must": "Must happen",
+         "id": "5-5.t3"
+        },
+        {
+         "what": "Click a second answer after the first one.",
+         "expect": "control",
+         "how": "Nothing must change: the colours and the words stay as they were after the first answer.",
+         "id": "5-5.t4"
+        },
+        {
+         "what": "Click an answer after the time is up.",
+         "expect": "control",
+         "how": "Nothing must change.",
+         "id": "5-5.t5"
+        },
+        {
+         "what": "Finish a round, then go back to the map.",
+         "expect": "allowed",
+         "how": "The flag on your game's place shows a tick.",
+         "must": "Must happen",
+         "id": "5-5.t6"
+        }
+       ]
+      },
+      {
+       "p": "Every test passed in Read the Sky. So if a test fails now, the fault is in something you changed in this stage. Look back over your changes one at a time, starting with the last one."
+      },
+      {
+       "box": {
+        "title": "Evidence to keep",
+        "blocks": [
+         {
+          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
+         },
+         {
+          "p": "Paste each screenshot into your testing document, under the test it shows."
+         },
+         {
+          "p": "Keep your data file and your `credits.txt` with your project."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "5"
+    }
+   ],
+   "id": "5"
+  }
+ ],
+ "glossary": [
+  [
+   "time bar",
+   "The green bar on the right of Read the Sky. It starts full and gets shorter until the time is up."
+  ],
+  [
+   "bin\\Debug",
+   "The folder inside your project where Visual Studio 2019 puts the program it builds. Summit Ready reads its data, pictures and sounds from there."
+  ],
+  [
+   "zip file",
+   "One file with other files and folders packed inside it."
+  ],
+  [
+   "property",
+   "A named value that an object carries, such as `Question` on a SkyQuestion. `{ get; set; }` lets other code read the value and change it."
+  ],
+  [
+   "constructor",
+   "A method with the same name as its class. It runs once, when code makes a new object with `new`."
+  ],
+  [
+   "static",
+   "A method marked `static` belongs to the class itself. You call it on the class name, as in `SkyQuestion.LoadAll()`."
+  ],
+  [
+   "List",
+   "A list that grows as you add to it. `List<SkyQuestion>` is a list that holds SkyQuestion objects."
+  ],
+  [
+   "continue",
+   "Inside a loop, `continue` skips the rest of this turn of the loop. The loop goes straight on to its next turn."
+  ],
+  [
+   "array",
+   "A row of values of the same type, kept together under one name and numbered from 0. `answers[0]` is the first answer button, and `answers[2]` is the third."
+  ],
+  [
+   "Convert.ToInt32",
+   "Turns text into a whole number. `Convert.ToInt32(\"2\")` gives the number 2."
+  ],
+  [
+   "lightning bolt",
+   "The button at the top of the Properties window that shows a control's events in place of its properties."
+  ],
+  [
+   "field",
+   "A variable written at the top of the class, outside every method. Every method in the form can use it, and it keeps its value until the window closes."
+  ],
+  [
+   "panel",
+   "A control that holds other controls. `pnlPlay` is the play area that holds the photo, the time bar and the answers."
+  ],
+  [
+   "PictureBox",
+   "A control that shows a picture. `picSky` shows the photo of the sky."
+  ],
+  [
+   "ProgressBar",
+   "A control that shows a bar. `prgTime` is the time bar, and its length is its Value out of its Maximum."
+  ],
+  [
+   "Timer",
+   "A control that never shows on the window. Once started, it runs its Tick method every time its Interval runs out, until it is stopped."
+  ],
+  [
+   "Interval",
+   "How long a Timer waits before each Tick, in thousandths of a second. 100 means 0.1 seconds."
+  ],
+  [
+   "Tick",
+   "The event a Timer has. Its method runs every time the Timer's Interval runs out."
+  ],
+  [
+   "event",
+   "Something that happens to a control, such as a click on a button, or a Timer ticking."
+  ],
+  [
+   "handler",
+   "The method that runs when an event happens. `Answer_Click` is the handler for a click on any of the 3 answer buttons."
+  ],
+  [
+   "sender",
+   "Every handler is given `sender`: the control that the event happened to, such as the answer button that was clicked."
+  ],
+  [
+   "colour from red, green and blue",
+   "`Color.FromArgb(62, 142, 65)` mixes a colour from red, green and blue. Each number is from 0 to 255."
+  ],
+  [
+   "Cursor",
+   "The mouse pointer's shape over a control. `Cursors.Hand` is a pointing hand, and `Cursors.Default` is the normal arrow."
+  ],
+  [
+   "count up with ++",
+   "`++` adds 1 to a whole number. `right++` means right becomes one more than it was."
+  ],
+  [
+   "count down with --",
+   "`--` takes 1 away from a whole number. `timeLeft--` means timeLeft becomes one less."
+  ],
+  [
+   "or",
+   "`||` means or. The `if` is true when any one of its parts is true."
+  ],
+  [
+   "and",
+   "`&&` means and. The `if` is true only when both of its parts are true."
+  ],
+  [
+   "not equal",
+   "`!=` means is not equal to. `picked != -1` is true when picked is any number except -1."
+  ],
+  [
+   "Substring",
+   "Gives part of some text. `Substring(0, 1)` gives the first letter, and `Substring(1)` gives everything after the first letter."
+  ],
+  [
+   "ToLower",
+   "Gives a copy of some text in small letters. `\"Hill fog\".ToLower()` gives `\"hill fog\"`."
+  ],
+  [
+   "AddRange",
+   "Adds every item of one list to the end of another list in one go."
+  ],
+  [
+   "red underline",
+   "The wavy red line Visual Studio 2019 draws under code it does not understand yet. Often it means a method you have not written yet."
+  ]
+ ]
+}

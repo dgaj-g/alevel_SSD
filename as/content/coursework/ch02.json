@@ -1,0 +1,3014 @@
+{
+ "id": "02",
+ "n": 2,
+ "of": 20,
+ "title": "Set up Visual Studio 2019, the game's files and its first 3 classes",
+ "kind": "a core chapter: every game you build later stands on chapters 2 to 10",
+ "one": "You make your project in Visual Studio 2019 and put every picture, sound and data file where the game can find it. Then you add the 3 small classes that every game uses, and a menu bar.",
+ "prev": {
+  "id": "01",
+  "n": 1,
+  "title": "Plan your game"
+ },
+ "next": {
+  "id": "03",
+  "n": 3,
+  "title": "Players in a text file"
+ },
+ "stages": [
+  {
+   "title": "Get ready, and make the project",
+   "screens": [
+    {
+     "title": "See what this chapter makes, and the words it uses",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know what your project looks like at the end of this chapter."
+      },
+      {
+       "p": "Every later chapter adds to the project you make here. So this chapter sets up the things that every form and every game needs."
+      },
+      {
+       "p": "At the end of this chapter, your project has 5 things in it."
+      },
+      {
+       "box": {
+        "title": "What you make in this chapter",
+        "blocks": [
+         {
+          "p": "A Windows Forms [[project|6]] called SummitReady, or your own game's name."
+         },
+         {
+          "p": "One window, frmLogin, with a menu bar along the top. Chapter 6 turns it into the log in window."
+         },
+         {
+          "p": "The Data, Images and Sounds folders, and `credits.txt`, in the [[bin\\Debug|11]] folder."
+         },
+         {
+          "p": "3 small classes: Files finds files, Sound plays sounds, and Mix shuffles numbers."
+         },
+         {
+          "p": "A plan for your own pictures and sounds, and a line in `credits.txt` for each one."
+         }
+        ]
+       }
+      },
+      {
+       "need": [
+        "Your plan, with your topic and the forms you want (chapter 1).",
+        "A computer with Visual Studio 2019 on it, and your school sign-in (chapter 0).",
+        "About 2 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
+       ]
+      },
+      {
+       "words": [
+        [
+         "Random",
+         "Gives numbers by chance. `random.Next` asks it for one whole number.",
+         "3-3",
+         true
+        ],
+        [
+         "return",
+         "`return` hands a value back to the code that called the method, and ends the method there.",
+         "3-1",
+         true
+        ],
+        [
+         "count up with ++",
+         "`++` adds 1 to a whole number. `i++` means i becomes one more than it was.",
+         "3-3",
+         true
+        ],
+        [
+         "count down with --",
+         "`--` takes 1 away from a whole number. `i--` means i becomes one less than it was.",
+         "3-3",
+         true
+        ],
+        [
+         "not",
+         "`!` in front of a true or false value turns it the other way. `!File.Exists(path)` is true when the file is missing.",
+         "3-1",
+         true
+        ],
+        [
+         "random number",
+         "A whole number picked by chance. `random.Next(i + 1)` gives one from 0 up to i.",
+         "3-3",
+         true
+        ],
+        [
+         "project",
+         "Everything Visual Studio 2019 needs to build one program: its forms, its classes and its settings.",
+         "1-1",
+         false
+        ],
+        [
+         "file name extension",
+         "The letters after the last dot in a file's name, such as `.txt` or `.zip`. They tell you what kind of file it is.",
+         "1-2",
+         false
+        ],
+        [
+         "form",
+         "A window in your program. Visual Studio 2019 shows a form in the designer, where you drag controls onto it.",
+         "1-4",
+         false
+        ],
+        [
+         "Solution Explorer",
+         "The list on the right of Visual Studio 2019 that shows every file in your project.",
+         "1-3",
+         false
+        ],
+        [
+         "Properties window",
+         "The list under Solution Explorer that shows the settings of whatever you have clicked.",
+         "1-3",
+         false
+        ],
+        [
+         "bin\\Debug",
+         "The folder inside your project where Visual Studio 2019 puts the program it builds. Summit Ready reads its data, pictures and sounds from there.",
+         "1-1",
+         false
+        ],
+        [
+         "zip file",
+         "One file with other files and folders packed inside it.",
+         "2-1",
+         false
+        ],
+        [
+         "build",
+         "Visual Studio 2019 turns your code into a program you can run. If any line is wrong, the build stops and lists the error.",
+         "1-5",
+         false
+        ],
+        [
+         "class",
+         "A named group of methods and values, kept in its own `.cs` file.",
+         "3-1",
+         false
+        ],
+        [
+         "static",
+         "A `static` class or method belongs to the class itself, so every form shares one copy. You use it by writing the class name, as in `Files.Data(\"kit.txt\")`.",
+         "3-1",
+         true
+        ],
+        [
+         "method",
+         "A named set of lines that does one job. Code runs the lines by writing the method's name.",
+         "3-3",
+         false
+        ],
+        [
+         "Path.Combine",
+         "Joins folder names and a file name into one path (the full address of a file), with the right slashes between them.",
+         "3-1",
+         true
+        ],
+        [
+         "null",
+         "Nothing at all. `Picture` gives back `null` when the picture file is missing.",
+         "3-1",
+         true
+        ],
+        [
+         "field",
+         "A named box that holds a value, written at the top of the class, outside every method. Every method in the class can use it.",
+         "3-2",
+         true
+        ],
+        [
+         "bool",
+         "A value that is only ever true or false. `Muted` is a `bool`.",
+         "3-2",
+         true
+        ],
+        [
+         "or",
+         "`||` means or. The `if` is true when any one of its parts is true.",
+         "3-2",
+         true
+        ],
+        [
+         "array",
+         "A row of values of the same type, kept together under one name and numbered from 0. `numbers[0]` is the first number.",
+         "3-3",
+         true
+        ],
+        [
+         "switch",
+         "Picks one `case` to run, by the value in its brackets. `default` runs when no case matches.",
+         "3-4",
+         true
+        ],
+        [
+         "MenuStrip",
+         "A control that puts a menu bar along the top of a form, such as File and Help.",
+         "4-1",
+         false
+        ],
+        [
+         "event",
+         "Something that happens to a control, such as a click on a menu item.",
+         "4-2",
+         false
+        ],
+        [
+         "event handler",
+         "The method that runs when something happens to a control, such as a click on a menu item. `mnuExit_Click` runs when the player clicks Exit.",
+         "4-2",
+         true
+        ],
+        [
+         "sender",
+         "Every event handler is given `sender`: the control that the event happened to.",
+         "4-2",
+         true
+        ],
+        [
+         "MessageBox",
+         "A small window with a message and an OK button. `MessageBox.Show` opens one.",
+         "4-2",
+         true
+        ],
+        [
+         "licence",
+         "The rules that say how you may use a picture or a sound that somebody else made.",
+         "2-2",
+         false
+        ],
+        [
+         "red underline",
+         "The wavy red line Visual Studio 2019 draws under code it does not understand yet.",
+         "3-1",
+         false
+        ]
+       ],
+       "intro": "You do not need to learn these words now. Where you first meet each one in the chapter, it has a dotted line under it. Hover over it or tap it to see what it means."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Turn on file name extensions in File Explorer",
+     "blocks": [
+      {
+       "p": "By the end of this screen, File Explorer shows the end of every file name, such as `.txt` and `.zip`."
+      },
+      {
+       "p": "Every chapter names files with their [[file name extension|7]], such as `players.txt`. Windows hides those endings at first, so `players.txt` shows as `players`. You turn them on once, here."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press the Windows key and the E key together.",
+         "see": "File Explorer opens.",
+         "img": {
+          "missing": true,
+          "alt": "File Explorer, with the View tab open and the File name extensions box ticked",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Press the Windows key and the E key together."
+           },
+           {
+            "n": 2,
+            "say": "Click **View** in the bar along the top of File Explorer."
+           },
+           {
+            "n": 3,
+            "say": "Click the box beside **File name extensions**, so that it shows a tick."
+           },
+           {
+            "n": 4,
+            "say": "Click the cross at the top right of File Explorer."
+           }
+          ]
+         },
+         "id": "1-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click **View** in the bar along the top of File Explorer.",
+         "see": "A row of buttons and boxes opens under View.",
+         "id": "1-2.2",
+         "n": 2
+        },
+        {
+         "do": "Click the box beside **File name extensions**, so that it shows a tick.",
+         "see": "The box shows a tick. Files now show their endings, such as `.txt` and `.zip`.",
+         "wrong": [
+          [
+           "Clicking View opens a menu, and there is no File name extensions box",
+           "Your computer has Windows 11. Point at **Show** in the menu, then click **File name extensions**, so that it shows a tick."
+          ]
+         ],
+         "id": "1-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click the cross at the top right of File Explorer.",
+         "see": "File Explorer closes. The setting is kept.",
+         "id": "1-2.4",
+         "n": 4
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Make a new Windows Forms project",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have a new project in Visual Studio 2019, with one empty form."
+      },
+      {
+       "p": "A [[project|6]] holds every form and class of your game. Summit Ready is a Windows Forms App, so it runs as windows with buttons, boxes and pictures."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press the Windows key.",
+         "see": "The Start menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "The Start menu, with Visual Studio 2019 at the top of the list",
+          "w": 640,
+          "h": 480,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Press the Windows key."
+           },
+           {
+            "n": 2,
+            "say": "Type `Visual Studio 2019`"
+           },
+           {
+            "n": 3,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "1-3.1",
+         "n": 1
+        },
+        {
+         "do": "Type `Visual Studio 2019`",
+         "see": "Visual Studio 2019 is at the top of the list.",
+         "id": "1-3.2",
+         "n": 2
+        },
+        {
+         "do": "Press Enter.",
+         "see": "After a few seconds, a window opens with **Create a new project** on the right. The first start can take a minute. This is normal.",
+         "id": "1-3.3",
+         "n": 3
+        },
+        {
+         "do": "Click **Create a new project**.",
+         "see": "The Create a new project window opens, with a search box at the top.",
+         "img": {
+          "missing": true,
+          "alt": "The Create a new project window, with Windows Forms App (.NET Framework) picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click **Create a new project**."
+           },
+           {
+            "n": 5,
+            "say": "Click the search box at the top of the window."
+           },
+           {
+            "n": 6,
+            "say": "Type `Windows Forms App`"
+           },
+           {
+            "n": 7,
+            "say": "Click **Windows Forms App (.NET Framework)**, the one with **C#** under its name."
+           }
+          ]
+         },
+         "id": "1-3.4",
+         "n": 4
+        },
+        {
+         "do": "Click the search box at the top of the window.",
+         "see": "The flashing cursor is in the search box.",
+         "id": "1-3.5",
+         "n": 5
+        },
+        {
+         "do": "Type `Windows Forms App`",
+         "see": "The list shows only Windows Forms templates, which are ready-made starting points for a project.",
+         "id": "1-3.6",
+         "n": 6
+        },
+        {
+         "do": "Click **Windows Forms App (.NET Framework)**, the one with **C#** under its name.",
+         "see": "The template turns blue.",
+         "wrong": [
+          [
+           "There are two Windows Forms templates, and you are not sure which one",
+           "Pick the one whose name ends in **(.NET Framework)**, with **C#** under it. The other one does not have .NET Framework 4.7.2."
+          ]
+         ],
+         "id": "1-3.7",
+         "n": 7
+        },
+        {
+         "do": "Click **Next**.",
+         "see": "The Configure your new project window opens.",
+         "img": {
+          "missing": true,
+          "alt": "The Configure your new project window, with the Project name box and the Framework box",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 8,
+            "say": "Click **Next**."
+           },
+           {
+            "n": 9,
+            "say": "Triple-click the Project name box."
+           },
+           {
+            "n": 10,
+            "say": "Type `SummitReady`"
+           },
+           {
+            "n": 11,
+            "say": "Click the arrow at the right of the Framework box."
+           },
+           {
+            "n": 12,
+            "say": "Click **.NET Framework 4.7.2**."
+           }
+          ]
+         },
+         "id": "1-3.8",
+         "n": 8
+        },
+        {
+         "do": "Triple-click the Project name box.",
+         "see": "The name in the box turns blue, so what you type next replaces it.",
+         "id": "1-3.9",
+         "n": 9
+        },
+        {
+         "do": "Type `SummitReady`",
+         "see": "The Project name box and the Solution name box both show `SummitReady`. You can type your own game's name, but with no spaces in it.",
+         "id": "1-3.10",
+         "n": 10
+        },
+        {
+         "do": "Click the arrow at the right of the Framework box.",
+         "see": "A list of .NET Framework versions opens.",
+         "id": "1-3.11",
+         "n": 11
+        },
+        {
+         "do": "Click **.NET Framework 4.7.2**.",
+         "see": "The Framework box shows `.NET Framework 4.7.2`.",
+         "wrong": [
+          [
+           "4.7.2 is not in the list",
+           "Ask your teacher. Every school computer with Visual Studio 2019 has 4.7.2, so it may be a different computer."
+          ]
+         ],
+         "id": "1-3.12",
+         "n": 12
+        },
+        {
+         "do": "Click **Create**.",
+         "see": "After a few seconds, your project opens. The designer in the middle shows an empty form called Form1.",
+         "img": {
+          "missing": true,
+          "alt": "Visual Studio 2019 with the new project open: the designer, Solution Explorer and the Properties window",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 13,
+            "say": "Click **Create**."
+           }
+          ]
+         },
+         "id": "1-3.13",
+         "n": 13
+        }
+       ]
+      },
+      {
+       "p": "Leave the Location box as it is, unless your teacher has given you a folder to use."
+      },
+      {
+       "p": "[[Solution Explorer|9]] is the list on the right. It shows every file in your project. The [[Properties window|10]] is under it, and shows the settings of whatever you click."
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Rename Form1 to frmLogin, and set its properties",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your form is called frmLogin, and it is the size and colour of every Summit Ready window."
+      },
+      {
+       "p": "Every control and [[form|8]] in Summit Ready has a name that starts with what it is. Form names start with frm, so Form1 becomes frmLogin."
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click `Form1.cs` in Solution Explorer.",
+         "see": "A long menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the menu that opens on Form1.cs and Rename in it",
+          "w": 360,
+          "h": 420,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Right-click `Form1.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "say": "Click **Rename** in the menu."
+           },
+           {
+            "n": 3,
+            "say": "Type `frmLogin`"
+           }
+          ]
+         },
+         "id": "1-4.1",
+         "n": 1
+        },
+        {
+         "do": "Click **Rename** in the menu.",
+         "see": "The word Form1 turns blue in Solution Explorer. The `.cs` after it stays white.",
+         "id": "1-4.2",
+         "n": 2
+        },
+        {
+         "do": "Type `frmLogin`",
+         "see": "The name in Solution Explorer shows `frmLogin` while you type.",
+         "id": "1-4.3",
+         "n": 3
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A message asks whether to change the name Form1 everywhere in your code.",
+         "img": {
+          "missing": true,
+          "alt": "The message that asks whether to rename all references to Form1, with its Yes button",
+          "w": 640,
+          "h": 240,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Press Enter."
+           },
+           {
+            "n": 5,
+            "say": "Click **Yes**."
+           }
+          ]
+         },
+         "id": "1-4.4",
+         "n": 4
+        },
+        {
+         "do": "Click **Yes**.",
+         "see": "Solution Explorer shows `frmLogin.cs`. The tab above the designer says **frmLogin.cs [Design]**.",
+         "wrong": [
+          [
+           "Solution Explorer shows `frmLogin` with no `.cs` at the end",
+           "Right-click `frmLogin`, click **Rename**, and type `frmLogin.cs`. Then press Enter."
+          ]
+         ],
+         "id": "1-4.5",
+         "n": 5
+        },
+        {
+         "do": "Click the title bar of the form in the designer.",
+         "see": "The Properties window shows frmLogin at the top.",
+         "img": {
+          "missing": true,
+          "alt": "The designer with frmLogin picked, and the Font box in the Properties window",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 6,
+            "say": "Click the title bar of the form in the designer."
+           }
+          ]
+         },
+         "id": "1-4.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "p": "Now set the form's settings in the Properties window, using the table below. Set **Font** first, because changing Font later makes Visual Studio 2019 resize the form."
+      },
+      {
+       "controls": {
+        "props": [
+         "Font = Segoe UI, 11pt",
+         "Text = Summit Ready - Log in",
+         "ClientSize = 1000, 660",
+         "StartPosition = CenterScreen",
+         "FormBorderStyle = FixedSingle",
+         "MaximizeBox = False",
+         "BackColor = 243, 245, 242"
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "How to set a property",
+        "blocks": [
+         {
+          "p": "Click the box beside the property's name in the Properties window. Type the new value, then press Enter."
+         },
+         {
+          "p": "For **Font**, click the box beside Font, then click the small button with 3 dots at the right of the box. Pick Segoe UI and size 11, then click **OK**."
+         },
+         {
+          "p": "For **BackColor**, type `243, 245, 242` in the box beside BackColor, then press Enter."
+         },
+         {
+          "p": "For **StartPosition**, **FormBorderStyle** and **MaximizeBox**, click the arrow at the right of the box, then click the value in the list."
+         }
+        ]
+       }
+      },
+      {
+       "p": "FixedSingle and MaximizeBox = False stop the player making the window bigger. Every Summit Ready window is 1000 by 660, so nothing on it can be pushed out of place."
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Build and run the empty program",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has built once, so its bin\\Debug folder is there for the next stage."
+      },
+      {
+       "p": "Visual Studio 2019 makes the bin\\Debug folder the first time it builds your project. To [[build|13]] means to turn your code into a program you can run."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "missing": true,
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "id": "1-5.1",
+         "n": 1
+        },
+        {
+         "do": "Press F5.",
+         "see": "Your program runs. An empty window opens in the middle of the screen, with **Summit Ready - Log in** in its title bar.",
+         "img": {
+          "missing": true,
+          "alt": "The empty frmLogin window running, with Summit Ready - Log in in its title bar",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 2,
+            "say": "Press F5."
+           },
+           {
+            "n": 3,
+            "say": "Click the cross at the top right of the Summit Ready - Log in window."
+           }
+          ]
+         },
+         "id": "1-5.2",
+         "n": 2
+        },
+        {
+         "do": "Click the cross at the top right of the Summit Ready - Log in window.",
+         "see": "The window closes, and Visual Studio 2019 comes back.",
+         "id": "1-5.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "p": "The window is empty. This is normal: chapter 6 puts the log in boxes and buttons on it."
+      }
+     ],
+     "id": "5"
+    }
+   ],
+   "id": "1"
+  },
+  {
+   "title": "Put every picture, sound and data file into bin\\Debug",
+   "screens": [
+    {
+     "title": "Download summit-ready-files.zip and paste its folders into bin\\Debug",
+     "blocks": [
+      {
+       "p": "By the end of this screen, every picture, sound and data file that Summit Ready uses is in your bin\\Debug folder."
+      },
+      {
+       "p": "Summit Ready reads its pictures, sounds and data files while it runs. It looks for them in the bin\\Debug folder, beside the program that Visual Studio 2019 builds."
+      },
+      {
+       "p": "They all come in one [[zip file|12]], `summit-ready-files.zip`. You download it once, here, and every later chapter finds its files already in place."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the download button below.",
+         "see": "Your browser shows that `summit-ready-files.zip` has downloaded.",
+         "download": {
+          "file": "summit-ready-files.zip",
+          "label": "Download summit-ready-files.zip",
+          "size": "7.8 MB"
+         },
+         "id": "2-1.1",
+         "n": 1
+        },
+        {
+         "do": "Press the Windows key and the E key together.",
+         "see": "File Explorer opens.",
+         "img": {
+          "missing": true,
+          "alt": "File Explorer open on Downloads, with the menu that opens on summit-ready-files.zip",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 2,
+            "say": "Press the Windows key and the E key together."
+           },
+           {
+            "n": 3,
+            "say": "Click **Downloads** in the list down the left side of File Explorer."
+           },
+           {
+            "n": 4,
+            "say": "Right-click `summit-ready-files.zip`."
+           },
+           {
+            "n": 5,
+            "say": "Click **Extract All...** in the menu."
+           }
+          ]
+         },
+         "id": "2-1.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Downloads** in the list down the left side of File Explorer.",
+         "see": "`summit-ready-files.zip` is in the list of files.",
+         "wrong": [
+          [
+           "There is also a file called `summit-ready-files (1).zip`",
+           "Your browser added (1) because you downloaded the zip file before. Use the file that ends in (1), because it is the newest one."
+          ]
+         ],
+         "id": "2-1.3",
+         "n": 3
+        },
+        {
+         "do": "Right-click `summit-ready-files.zip`.",
+         "see": "A menu opens.",
+         "id": "2-1.4",
+         "n": 4
+        },
+        {
+         "do": "Click **Extract All...** in the menu.",
+         "see": "A window called Extract Compressed (Zipped) Folders opens.",
+         "wrong": [
+          [
+           "The menu has no **Extract All...**",
+           "Press Escape to close the menu. Double-click `summit-ready-files.zip`. Then click **Extract all** in the bar along the top of File Explorer."
+          ]
+         ],
+         "id": "2-1.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window.",
+         "see": "A new File Explorer window opens. It shows 3 folders, Data, Images and Sounds, and one file, `credits.txt`.",
+         "img": {
+          "missing": true,
+          "alt": "The Extract Compressed (Zipped) Folders window, with its Extract button",
+          "w": 640,
+          "h": 480,
+          "marks": [
+           {
+            "n": 6,
+            "say": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window."
+           }
+          ]
+         },
+         "id": "2-1.6",
+         "n": 6
+        },
+        {
+         "do": "Press Ctrl and A together, to pick every folder and file in this window.",
+         "see": "The 3 folders and `credits.txt` turn blue.",
+         "img": {
+          "missing": true,
+          "alt": "The unpacked folder, with Data, Images, Sounds and credits.txt highlighted",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Press Ctrl and A together, to pick every folder and file in this window."
+           },
+           {
+            "n": 8,
+            "say": "Press Ctrl and C together."
+           }
+          ]
+         },
+         "id": "2-1.7",
+         "n": 7
+        },
+        {
+         "do": "Press Ctrl and C together.",
+         "see": "Nothing changes on the screen. That is normal: Windows has copied the 3 folders and `credits.txt`.",
+         "id": "2-1.8",
+         "n": 8
+        },
+        {
+         "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
+         "see": "Visual Studio 2019 comes to the front, with your project open.",
+         "img": {
+          "missing": true,
+          "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
+           }
+          ]
+         },
+         "id": "2-1.9",
+         "n": 9
+        },
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the menu that opens on the project line",
+          "w": 360,
+          "h": 420,
+          "marks": [
+           {
+            "n": 10,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 11,
+            "say": "Click **Open Folder in File Explorer**, near the bottom of the menu."
+           }
+          ]
+         },
+         "id": "2-1.10",
+         "n": 10
+        },
+        {
+         "do": "Click **Open Folder in File Explorer**, near the bottom of the menu.",
+         "see": "File Explorer opens on your project's folder. You can see the bin and obj folders and your .cs files.",
+         "id": "2-1.11",
+         "n": 11
+        },
+        {
+         "do": "Double-click the **bin** folder.",
+         "see": "The bin folder holds a folder called Debug.",
+         "img": {
+          "missing": true,
+          "alt": "File Explorer on the project folder, with the bin folder",
+          "w": 640,
+          "h": 300,
+          "marks": [
+           {
+            "n": 12,
+            "say": "Double-click the **bin** folder."
+           }
+          ]
+         },
+         "id": "2-1.12",
+         "n": 12
+        },
+        {
+         "do": "Double-click the **Debug** folder.",
+         "see": "The Debug folder holds your program, `SummitReady.exe`, and 2 or 3 other files that Visual Studio 2019 made.",
+         "img": {
+          "missing": true,
+          "alt": "File Explorer on the bin folder, with the Debug folder",
+          "w": 640,
+          "h": 300,
+          "marks": [
+           {
+            "n": 13,
+            "say": "Double-click the **Debug** folder."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "There is no Debug folder inside bin",
+           "Your project has not built yet. Go back to Visual Studio 2019 and press Ctrl, Shift and B together. Then look in the bin folder again."
+          ]
+         ],
+         "id": "2-1.13",
+         "n": 13
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The Data, Images and Sounds folders and `credits.txt` appear in the Debug folder, beside `SummitReady.exe`.",
+         "img": {
+          "missing": true,
+          "alt": "The Debug folder after the paste, with Data, Images, Sounds and credits.txt beside SummitReady.exe",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 14,
+            "say": "Press Ctrl and V together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The folders appeared somewhere else",
+           "Check the bar along the top of File Explorer. It must end in **bin > Debug**. If it does not, press Ctrl and Z together to undo the paste, then open bin, then Debug."
+          ]
+         ],
+         "id": "2-1.14",
+         "n": 14
+        }
+       ]
+      },
+      {
+       "p": "If your project has your own game's name, your program is called that name with `.exe` on the end."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Look inside the Data, Images and Sounds folders",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know what each of the 3 folders holds, and where your own files will go."
+      },
+      {
+       "p": "Every chapter after this one reads files from these 3 folders. So look inside each one now, while File Explorer is open on bin\\Debug."
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click the **Data** folder.",
+         "see": "The Data folder holds 9 text files, such as `players.txt`, `knots.txt` and `words.txt`.",
+         "img": {
+          "missing": true,
+          "alt": "The Data folder, with its 9 text files",
+          "w": 640,
+          "h": 360,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Double-click the **Data** folder."
+           },
+           {
+            "n": 2,
+            "say": "Click the back arrow at the top left of File Explorer."
+           }
+          ]
+         },
+         "id": "2-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click the back arrow at the top left of File Explorer.",
+         "see": "File Explorer shows the Debug folder again.",
+         "id": "2-2.2",
+         "n": 2
+        },
+        {
+         "do": "Double-click the **Images** folder.",
+         "see": "The Images folder holds 9 folders, such as Avatars, Icons and Knots, and 3 pictures.",
+         "img": {
+          "missing": true,
+          "alt": "The Images folder, with its 9 folders and 3 pictures",
+          "w": 640,
+          "h": 360,
+          "marks": [
+           {
+            "n": 3,
+            "say": "Double-click the **Images** folder."
+           },
+           {
+            "n": 4,
+            "say": "Click the back arrow at the top left of File Explorer."
+           }
+          ]
+         },
+         "id": "2-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click the back arrow at the top left of File Explorer.",
+         "see": "File Explorer shows the Debug folder again.",
+         "id": "2-2.4",
+         "n": 4
+        },
+        {
+         "do": "Double-click the **Sounds** folder.",
+         "see": "The Sounds folder holds 26 sounds, such as `click.wav`, `correct.wav` and `curlew.wav`.",
+         "img": {
+          "missing": true,
+          "alt": "The Sounds folder, with its 26 .wav files",
+          "w": 640,
+          "h": 360,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Double-click the **Sounds** folder."
+           },
+           {
+            "n": 6,
+            "say": "Click the back arrow at the top left of File Explorer."
+           }
+          ]
+         },
+         "id": "2-2.5",
+         "n": 5
+        },
+        {
+         "do": "Click the back arrow at the top left of File Explorer.",
+         "see": "File Explorer shows the Debug folder again.",
+         "id": "2-2.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "box": {
+        "title": "What each folder holds",
+        "blocks": [
+         {
+          "p": "**Data** holds the text files. Each line of a text file is one thing, such as one player or one knot, with a bar `|` between its parts. Chapter 3 reads the first one, `players.txt`."
+         },
+         {
+          "p": "**Images** holds the pictures, in one folder for each kind of picture. The 8 avatars are in Avatars, and the 8 knot photos are in Knots."
+         },
+         {
+          "p": "**Sounds** holds every sound, as a `.wav` file."
+         },
+         {
+          "p": "`credits.txt` says who made each picture and sound, and the [[licence|29]] that lets you use it. Stage 5 of this chapter shows you how to read it."
+         }
+        ]
+       }
+      },
+      {
+       "p": "Every name is in small letters, with the kind of thing first, such as `avatar-fox.png` and `knot-bowline.jpg`. Name your own files the same way, so you can always tell what a file holds from its name."
+      },
+      {
+       "p": "Never put a file anywhere else. The code looks only in these 3 folders."
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "2"
+  },
+  {
+   "title": "Add Files, Sound and Mix, the 3 classes every game uses",
+   "screens": [
+    {
+     "title": "Add the Files class, which finds a file in bin\\Debug",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has a Files class that gives the full path of any file in bin\\Debug."
+      },
+      {
+       "p": "Every game opens files from the Data, Images and Sounds folders. So one [[class|14]], Files, finds them all, and no form ever spells out a folder for itself."
+      },
+      {
+       "p": "Files.cs needs 3 extra `using` lines, because it uses pictures, files and the program's own folder. You add them first."
+      },
+      {
+       "code": {
+        "id": "c02-files-using",
+        "kind": "type",
+        "title": "The 3 using lines for Files.cs",
+        "lang": "cs",
+        "text": "using System.Drawing;\nusing System.IO;\nusing System.Windows.Forms;",
+        "noCopy": true,
+        "partLines": [
+         [
+          1,
+          3,
+          "The 3 using lines",
+          "`System.Drawing` has pictures in it. `System.IO` has files and paths. `System.Windows.Forms` knows which folder the program is running from."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          3
+         ]
+        ],
+        "typed": 3
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "The project menu, with Add pointed at and Class in the second menu",
+          "w": 640,
+          "h": 420,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 2,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 3,
+            "say": "Click **Class...** at the bottom of the second menu."
+           }
+          ]
+         },
+         "id": "3-1.1",
+         "n": 1
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "3-1.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Class...** at the bottom of the second menu.",
+         "see": "The Add New Item window opens. Class is picked, and the Name box at the bottom says `Class1.cs`.",
+         "id": "3-1.3",
+         "n": 3
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "missing": true,
+          "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "say": "Type `Files.cs`"
+           },
+           {
+            "n": 6,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "3-1.4",
+         "n": 4
+        },
+        {
+         "do": "Type `Files.cs`",
+         "see": "The Name box shows `Files.cs`.",
+         "id": "3-1.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "`Files.cs` opens in the code editor. At the top are 5 lines that start with `using`. Further down is `class Files`, with an empty pair of curly brackets under it.",
+         "id": "3-1.6",
+         "n": 6
+        },
+        {
+         "do": "Click at the end of the line `using System.Threading.Tasks;`",
+         "see": "The flashing cursor is after the semicolon.",
+         "img": {
+          "missing": true,
+          "alt": "Files.cs as Visual Studio 2019 makes it, with the new using lines added",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click at the end of the line `using System.Threading.Tasks;`"
+           },
+           {
+            "n": 8,
+            "say": "Press Enter."
+           },
+           {
+            "n": 9,
+            "say": "Type the 3 yellow lines. Press Enter at the end of each line, but not after the last one."
+           }
+          ]
+         },
+         "id": "3-1.7",
+         "n": 7
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under `using System.Threading.Tasks;`.",
+         "id": "3-1.8",
+         "n": 8
+        },
+        {
+         "do": "Type the 3 yellow lines. Press Enter at the end of each line, but not after the last one.",
+         "see": "The 3 new lines are under `using System.Threading.Tasks;`. They are grey for now. This is normal: they turn blue once the class uses them.",
+         "id": "3-1.9",
+         "n": 9
+        }
+       ]
+      },
+      {
+       "p": "Now type the class. It is the first class you type, so every line is yellow."
+      },
+      {
+       "code": {
+        "id": "c02-files",
+        "kind": "type",
+        "title": "Files.cs: the Files class",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// Builds the full path to a file inside bin\\Debug (chapter 2)\nstatic class Files\n{\n    // The path to a file in the Data folder\n    public static string Data(string fileName)\n    {\n        return Path.Combine(Application.StartupPath, \"Data\", fileName);\n    }\n\n    // The path to a picture in one of the Images folders\n    public static string Image(string folder, string fileName)\n    {\n        return Path.Combine(Application.StartupPath, \"Images\", folder,\n            fileName);\n    }\n\n    // The path to a sound in the Sounds folder\n    public static string Sound(string fileName)\n    {\n        return Path.Combine(Application.StartupPath, \"Sounds\", fileName);\n    }\n\n    // Loads a picture, or gives null when the file is missing\n    public static Image Picture(string folder, string fileName)\n    {\n        string path = Image(folder, fileName);\n        if (!File.Exists(path)) return null;\n        return System.Drawing.Image.FromFile(path);\n    }\n}",
+        "partLines": [
+         [
+          1,
+          3,
+          "The class",
+          "The comment says what the class is for. `static` means every form shares one copy, so you never make your own. You call its methods on the class name, as in `Files.Data(\"players.txt\")`."
+         ],
+         [
+          4,
+          8,
+          "Data",
+          "`Application.StartupPath` is the folder the program runs from, which is bin\\Debug. `Path.Combine` joins folder names with the right slashes. So `Files.Data(\"players.txt\")` gives the full path to `players.txt` in the Data folder."
+         ],
+         [
+          10,
+          15,
+          "Image",
+          "Image does the same for a picture, but it also needs the folder inside Images, such as Avatars. The line is long, so it carries on onto a second line. C# reads the 2 lines as one, up to the `;`."
+         ],
+         [
+          17,
+          21,
+          "Sound",
+          "Sound gives the full path to a sound in the Sounds folder."
+         ],
+         [
+          23,
+          30,
+          "Picture",
+          "Picture loads a picture so a form can show it. First it finds the path with Image. If the file is not there, it gives back `null`, which means nothing, so the game shows no picture and carries on. Otherwise `Image.FromFile` loads the picture."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          30
+         ]
+        ],
+        "typed": 12,
+        "wordMarks": [
+         [
+          7,
+          8,
+          14,
+          1
+         ],
+         [
+          27,
+          12,
+          24,
+          4
+         ],
+         [
+          2,
+          0,
+          6,
+          15
+         ],
+         [
+          7,
+          15,
+          27,
+          17
+         ],
+         [
+          27,
+          39,
+          43,
+          18
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Drag from the start of `class Files` down to the end of the `}` two lines below it.",
+         "see": "`class Files` and its empty `{` and `}` turn blue. The last `}` in the file stays white. It closes the namespace, the group that holds your classes, so keep it.",
+         "img": {
+          "missing": true,
+          "alt": "Files.cs, with class Files and its empty braces highlighted",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 10,
+            "say": "Drag from the start of `class Files` down to the end of the `}` two lines below it."
+           },
+           {
+            "n": 11,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "3-1.10",
+         "n": 10
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The Files class is where `class Files` was. No line has a [[red underline|30]].",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of the class",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your class ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "3-1.11",
+         "n": 11
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `Files.cs` on the tab at the top of the code editor disappears.",
+         "img": {
+          "missing": true,
+          "alt": "The Files.cs tab with no star, and Build succeeded in the bottom left corner",
+          "w": 800,
+          "h": 200,
+          "marks": [
+           {
+            "n": 12,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 13,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "id": "3-1.12",
+         "n": 12
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "3-1.13",
+         "n": 13
+        }
+       ]
+      },
+      {
+       "p": "Picture gives back `null` when a file is missing, so a missing picture never crashes the game. You see why that matters when you test your own pictures."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Add the Sound class, which plays a sound",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has a Sound class that plays any `.wav` file from the Sounds folder."
+      },
+      {
+       "p": "Many games play a sound when the player clicks, wins or loses. The Sound class plays one sound at a time, and a player can turn every sound off."
+      },
+      {
+       "code": {
+        "id": "c02-sound-using",
+        "kind": "type",
+        "title": "The 2 using lines for Sound.cs",
+        "lang": "cs",
+        "text": "using System.IO;\nusing System.Media;",
+        "noCopy": true,
+        "partLines": [
+         [
+          1,
+          2,
+          "The 2 using lines",
+          "`System.IO` checks that the sound file is there. `System.Media` has the SoundPlayer, which plays a `.wav` file."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          2
+         ]
+        ],
+        "typed": 2
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "The project menu, with Add pointed at and Class in the second menu",
+          "w": 640,
+          "h": 420,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 2,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 3,
+            "say": "Click **Class...** at the bottom of the second menu."
+           }
+          ]
+         },
+         "id": "3-2.1",
+         "n": 1
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "3-2.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Class...** at the bottom of the second menu.",
+         "see": "The Add New Item window opens. Class is picked, and the Name box at the bottom says `Class1.cs`.",
+         "id": "3-2.3",
+         "n": 3
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "missing": true,
+          "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "say": "Type `Sound.cs`"
+           },
+           {
+            "n": 6,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "3-2.4",
+         "n": 4
+        },
+        {
+         "do": "Type `Sound.cs`",
+         "see": "The Name box shows `Sound.cs`.",
+         "id": "3-2.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "`Sound.cs` opens in the code editor. At the top are 5 lines that start with `using`. Further down is `class Sound`, with an empty pair of curly brackets under it.",
+         "id": "3-2.6",
+         "n": 6
+        },
+        {
+         "do": "Click at the end of the line `using System.Threading.Tasks;`",
+         "see": "The flashing cursor is after the semicolon.",
+         "img": {
+          "missing": true,
+          "alt": "Sound.cs as Visual Studio 2019 makes it, with the new using lines added",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click at the end of the line `using System.Threading.Tasks;`"
+           },
+           {
+            "n": 8,
+            "say": "Press Enter."
+           },
+           {
+            "n": 9,
+            "say": "Type the 2 yellow lines. Press Enter at the end of the first line only."
+           }
+          ]
+         },
+         "id": "3-2.7",
+         "n": 7
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under `using System.Threading.Tasks;`.",
+         "id": "3-2.8",
+         "n": 8
+        },
+        {
+         "do": "Type the 2 yellow lines. Press Enter at the end of the first line only.",
+         "see": "The 2 new lines are under `using System.Threading.Tasks;`.",
+         "id": "3-2.9",
+         "n": 9
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c02-sound",
+        "kind": "type",
+        "title": "Sound.cs: the Sound class",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// Plays the game's sounds (chapter 2)\nstatic class Sound\n{\n    public static bool Muted = false;\n    private static SoundPlayer player = new SoundPlayer();\n\n    // Plays one .wav file from the Sounds folder\n    public static void Play(string fileName)\n    {\n        string path = Files.Sound(fileName);\n        if (Muted || !File.Exists(path)) return;\n        player.SoundLocation = path;\n        player.Play();\n    }\n}",
+        "partLines": [
+         [
+          1,
+          3,
+          "The class",
+          "Sound is `static`, like Files, so every form shares one Sound class."
+         ],
+         [
+          4,
+          5,
+          "The 2 fields",
+          "A [[field|19]] is a variable at the top of the class, outside every method. `Muted` is true when the player has turned the sound off. Every form can read it and change it. `player` is the one SoundPlayer that plays every sound."
+         ],
+         [
+          7,
+          11,
+          "Find the sound, or stop",
+          "`Files.Sound` gives the full path to the sound. If the sound is muted, or the file is not there, `return` stops the method, so nothing plays and nothing crashes."
+         ],
+         [
+          12,
+          15,
+          "Play it",
+          "`SoundLocation` tells the SoundPlayer which file to play. `Play` starts it. A new sound stops any sound that is still playing."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          15
+         ]
+        ],
+        "typed": 8,
+        "wordMarks": [
+         [
+          11,
+          41,
+          47,
+          1
+         ],
+         [
+          11,
+          21,
+          33,
+          4
+         ],
+         [
+          2,
+          0,
+          6,
+          15
+         ],
+         [
+          4,
+          4,
+          28,
+          19
+         ],
+         [
+          4,
+          18,
+          22,
+          20
+         ],
+         [
+          11,
+          18,
+          20,
+          21
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Drag from the start of `class Sound` down to the end of the `}` two lines below it.",
+         "see": "`class Sound` and its empty `{` and `}` turn blue. The last `}` in the file stays white. It closes the namespace, the group that holds your classes, so keep it.",
+         "img": {
+          "missing": true,
+          "alt": "Sound.cs, with class Sound and its empty braces highlighted",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 10,
+            "say": "Drag from the start of `class Sound` down to the end of the `}` two lines below it."
+           },
+           {
+            "n": 11,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "3-2.10",
+         "n": 10
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The Sound class is where `class Sound` was. No line has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of the class",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your class ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "3-2.11",
+         "n": 11
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `Sound.cs` on the tab at the top of the code editor disappears.",
+         "img": {
+          "missing": true,
+          "alt": "The Sound.cs tab with no star, and Build succeeded in the bottom left corner",
+          "w": 800,
+          "h": 200,
+          "marks": [
+           {
+            "n": 12,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 13,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "id": "3-2.12",
+         "n": 12
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "3-2.13",
+         "n": 13
+        }
+       ]
+      },
+      {
+       "p": "Sound needs Files, because it calls `Files.Sound`. That is why you typed Files first."
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Add the Mix class, and its method that shuffles numbers",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has a Mix class that puts numbers in a random order."
+      },
+      {
+       "p": "Games shuffle their cards and questions, so each round comes in a different order. Mix does the shuffling, in one [[method|16]] that every game uses."
+      },
+      {
+       "p": "Mix.cs needs no extra `using` line. The `using System;` line that is already there has Random in it."
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "The project menu, with Add pointed at and Class in the second menu",
+          "w": 640,
+          "h": 420,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 2,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 3,
+            "say": "Click **Class...** at the bottom of the second menu."
+           }
+          ]
+         },
+         "id": "3-3.1",
+         "n": 1
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "3-3.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Class...** at the bottom of the second menu.",
+         "see": "The Add New Item window opens. Class is picked, and the Name box at the bottom says `Class1.cs`.",
+         "id": "3-3.3",
+         "n": 3
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "missing": true,
+          "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "say": "Type `Mix.cs`"
+           },
+           {
+            "n": 6,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "3-3.4",
+         "n": 4
+        },
+        {
+         "do": "Type `Mix.cs`",
+         "see": "The Name box shows `Mix.cs`.",
+         "id": "3-3.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "`Mix.cs` opens in the code editor, with `class Mix` and an empty pair of curly brackets.",
+         "id": "3-3.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c02-mix",
+        "kind": "type",
+        "title": "Mix.cs: the Mix class and ShuffledNumbers",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// Random orders and place names (chapter 2)\nstatic class Mix\n{\n    private static Random random = new Random();\n\n    // Gives the numbers 0 to count - 1 in a random order\n    public static int[] ShuffledNumbers(int count)\n    {\n        int[] numbers = new int[count];\n        for (int i = 0; i < count; i++) numbers[i] = i;\n        for (int i = count - 1; i > 0; i--)\n        {\n            int j = random.Next(i + 1);\n            int keep = numbers[i];\n            numbers[i] = numbers[j];\n            numbers[j] = keep;\n        }\n        return numbers;\n    }",
+        "partLines": [
+         [
+          1,
+          4,
+          "The class and its Random",
+          "`random` is a [[field|19]] that makes random numbers. The class keeps only one, so two shuffles close together never give the same order."
+         ],
+         [
+          6,
+          10,
+          "Start with the numbers in order",
+          "`int[]` is an [[array|22]]: a row of whole numbers, numbered from 0. The first loop, a few lines that repeat, fills it with 0, 1, 2 and so on, up to `count - 1`."
+         ],
+         [
+          11,
+          17,
+          "Shuffle them",
+          "The second loop starts at the last number and works back to the front. `random.Next(i + 1)` picks a place `j` from 0 to `i`. The 3 lines after it swap the numbers in places `i` and `j`. `keep` holds one number while the other one moves."
+         ],
+         [
+          18,
+          19,
+          "Hand them back",
+          "`return numbers;` hands the shuffled numbers back. `Mix.ShuffledNumbers(4)` might give 2, 0, 3, 1."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          19
+         ]
+        ],
+        "typed": 11,
+        "wordMarks": [
+         [
+          4,
+          19,
+          25,
+          0
+         ],
+         [
+          18,
+          8,
+          14,
+          1
+         ],
+         [
+          10,
+          36,
+          38,
+          2
+         ],
+         [
+          11,
+          40,
+          42,
+          3
+         ],
+         [
+          13,
+          20,
+          31,
+          5
+         ],
+         [
+          2,
+          0,
+          6,
+          15
+         ],
+         [
+          4,
+          4,
+          25,
+          19
+         ],
+         [
+          7,
+          18,
+          23,
+          22
+         ]
+        ]
+       }
+      },
+      {
+       "p": "This time, the `}` that closes the class stays where it is. The next screen adds a second method above it."
+      },
+      {
+       "steps": [
+        {
+         "do": "Drag from the start of `class Mix` down to the end of the `{` under it.",
+         "see": "`class Mix` and the `{` under it turn blue. The 2 `}` under them stay white. The first closes the class. The last closes the namespace, the group that holds your classes.",
+         "img": {
+          "missing": true,
+          "alt": "Mix.cs, with class Mix and the { under it highlighted",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Drag from the start of `class Mix` down to the end of the `{` under it."
+           },
+           {
+            "n": 8,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "3-3.7",
+         "n": 7
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The yellow lines are where `class Mix` was. The `}` that closes the class is under them.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of the class",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your class ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "3-3.8",
+         "n": 8
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `Mix.cs` on the tab at the top of the code editor disappears.",
+         "img": {
+          "missing": true,
+          "alt": "The Mix.cs tab with no star, and Build succeeded in the bottom left corner",
+          "w": 800,
+          "h": 200,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 10,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "id": "3-3.9",
+         "n": 9
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "3-3.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Type Ordinal, which turns 3 into 3rd",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the Mix class can turn a place number into words such as 1st, 2nd and 3rd."
+      },
+      {
+       "p": "The Top 10 board says a player came 3rd, not 3. Ordinal makes that ending for any number."
+      },
+      {
+       "code": {
+        "id": "c02-ordinal",
+        "kind": "type",
+        "title": "Ordinal",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// 1 becomes \"1st\", 2 becomes \"2nd\", and so on\npublic static string Ordinal(int n)\n{\n    switch (n)\n    {\n        case 1: return \"1st\";\n        case 2: return \"2nd\";\n        case 3: return \"3rd\";\n        default: return n + \"th\";\n    }\n}",
+        "partLines": [
+         [
+          1,
+          5,
+          "Look at the number",
+          "`switch (n)` picks one `case` by the value of `n`."
+         ],
+         [
+          6,
+          11,
+          "One ending for each case",
+          "1, 2 and 3 each have their own ending. `default` is for every other number, so 4 gives \"4th\" and 10 gives \"10th\". Each `return` hands the words back and ends the method."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          11
+         ]
+        ],
+        "typed": 6,
+        "wordMarks": [
+         [
+          6,
+          16,
+          22,
+          1
+         ],
+         [
+          2,
+          7,
+          13,
+          15
+         ],
+         [
+          4,
+          4,
+          10,
+          23
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `ShuffledNumbers`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "Mix.cs, with Ordinal typed under ShuffledNumbers",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `ShuffledNumbers`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 4,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 5,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "id": "3-4.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "3-4.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "Ordinal is under ShuffledNumbers, inside the class. No line has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of the class",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your class ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "3-4.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `Mix.cs` on the tab disappears.",
+         "id": "3-4.4",
+         "n": 4
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "3-4.5",
+         "n": 5
+        }
+       ]
+      },
+      {
+       "p": "11, 12 and 13 come out as 11th, 12th and 13th, which is right. 21 comes out as 21th. This is fine for Summit Ready, because the board only goes up to 10."
+      }
+     ],
+     "id": "4"
+    }
+   ],
+   "id": "3"
+  },
+  {
+   "title": "Add a menu bar to frmLogin",
+   "screens": [
+    {
+     "title": "Put a menu bar with File and Help on frmLogin",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmLogin has a white menu bar along the top, with File and Help."
+      },
+      {
+       "p": "A menu bar gives the player a way out of the game, and a way to read how to play. The control for a menu bar is a [[MenuStrip|24]]."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmLogin.cs [Design]** tab at the top of the editor.",
+         "see": "The designer shows frmLogin.",
+         "img": {
+          "missing": true,
+          "alt": "The Toolbox, with MenuStrip in the Menus & Toolbars group",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the **frmLogin.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 2,
+            "say": "Click **Toolbox** on the left edge of Visual Studio 2019."
+           },
+           {
+            "n": 3,
+            "say": "Double-click **MenuStrip** in the Menus & Toolbars group."
+           }
+          ]
+         },
+         "id": "4-1.1",
+         "n": 1
+        },
+        {
+         "do": "Click **Toolbox** on the left edge of Visual Studio 2019.",
+         "see": "The Toolbox opens.",
+         "id": "4-1.2",
+         "n": 2
+        },
+        {
+         "do": "Double-click **MenuStrip** in the Menus & Toolbars group.",
+         "see": "An empty menu bar appears along the top of frmLogin, with a box that says **Type Here**. menuStrip1 sits in the grey strip under the form.",
+         "wrong": [
+          [
+           "You cannot find MenuStrip",
+           "Click the search box at the top of the Toolbox and type `MenuStrip`."
+          ]
+         ],
+         "id": "4-1.3",
+         "n": 3
+        },
+        {
+         "do": "Click **menuStrip1** in the grey strip under the form.",
+         "see": "The Properties window shows menuStrip1 at the top.",
+         "img": {
+          "missing": true,
+          "alt": "menuStrip1 picked, with the (Name) box in the Properties window",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click **menuStrip1** in the grey strip under the form."
+           },
+           {
+            "n": 5,
+            "say": "Triple-click the box beside **(Name)**, at the top of the Properties window."
+           },
+           {
+            "n": 6,
+            "say": "Type `mnuMain`, then press Enter."
+           }
+          ]
+         },
+         "id": "4-1.4",
+         "n": 4
+        },
+        {
+         "do": "Triple-click the box beside **(Name)**, at the top of the Properties window.",
+         "see": "The name turns blue.",
+         "wrong": [
+          [
+           "The old value is still in the box after you type",
+           "Click the box, then press Home. Hold Shift and press End, so the whole value turns blue. Type the new value, then press Enter."
+          ]
+         ],
+         "id": "4-1.5",
+         "n": 5
+        },
+        {
+         "do": "Type `mnuMain`, then press Enter.",
+         "see": "The Properties window shows mnuMain at the top.",
+         "id": "4-1.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "p": "Set 2 more properties of mnuMain, with the table below. They make the bar white, with smaller words than the form."
+      },
+      {
+       "controls": {
+        "props": [
+         "BackColor = 255, 255, 255",
+         "Font = Segoe UI, 9pt"
+        ]
+       }
+      },
+      {
+       "p": "Now type the menu items. Each item you type opens a new **Type Here** box beside it or under it."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click **Type Here** on the menu bar.",
+         "see": "The box turns into a place to type.",
+         "img": {
+          "missing": true,
+          "alt": "The menu bar with File typed, and the Type Here boxes beside it and under it",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click **Type Here** on the menu bar."
+           },
+           {
+            "n": 8,
+            "say": "Type `File`, then press Enter."
+           },
+           {
+            "n": 9,
+            "say": "Type `Exit`, then press Enter."
+           }
+          ]
+         },
+         "id": "4-1.7",
+         "n": 7
+        },
+        {
+         "do": "Type `File`, then press Enter.",
+         "see": "File is on the menu bar. A **Type Here** box is under it.",
+         "id": "4-1.8",
+         "n": 8
+        },
+        {
+         "do": "Type `Exit`, then press Enter.",
+         "see": "Exit is under File.",
+         "id": "4-1.9",
+         "n": 9
+        },
+        {
+         "do": "Click the **Type Here** box to the right of File.",
+         "see": "The box turns into a place to type.",
+         "img": {
+          "missing": true,
+          "alt": "The menu bar with Help open, and How to play and About Summit Ready under it",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 10,
+            "say": "Click the **Type Here** box to the right of File."
+           },
+           {
+            "n": 11,
+            "say": "Type `Help`, then press Enter."
+           },
+           {
+            "n": 12,
+            "say": "Type `How to play`, then press Enter."
+           },
+           {
+            "n": 13,
+            "say": "Type `About Summit Ready`, then press Enter."
+           }
+          ]
+         },
+         "id": "4-1.10",
+         "n": 10
+        },
+        {
+         "do": "Type `Help`, then press Enter.",
+         "see": "Help is on the menu bar, beside File. A **Type Here** box is under it.",
+         "id": "4-1.11",
+         "n": 11
+        },
+        {
+         "do": "Type `How to play`, then press Enter.",
+         "see": "How to play is under Help.",
+         "id": "4-1.12",
+         "n": 12
+        },
+        {
+         "do": "Type `About Summit Ready`, then press Enter.",
+         "see": "About Summit Ready is under How to play.",
+         "id": "4-1.13",
+         "n": 13
+        }
+       ]
+      },
+      {
+       "p": "Every menu item needs a name that starts with mnu, so that your code can tell them apart. Click each item, then change its (Name) in the Properties window, using the table below."
+      },
+      {
+       "controls": {
+        "props": [
+         "File: (Name) = mnuFile",
+         "Exit: (Name) = mnuExit",
+         "Help: (Name) = mnuHelp",
+         "How to play: (Name) = mnuHow",
+         "About Summit Ready: (Name) = mnuAbout"
+        ]
+       }
+      },
+      {
+       "p": "To click Exit, How to play or About Summit Ready, click File or Help first, so its list opens. Name every item before the next screen, because Visual Studio 2019 uses the name for the method it makes."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Type the 3 menu methods",
+     "blocks": [
+      {
+       "p": "By the end of this screen, File then Exit closes the game, and the 2 Help items each show a message."
+      },
+      {
+       "p": "A click on a menu item is an [[event|25]]. The method that runs when it happens is its [[event handler|26]]. Double-clicking the item makes an empty one for you."
+      },
+      {
+       "code": {
+        "id": "c02-menu-exit",
+        "kind": "type",
+        "title": "mnuExit_Click",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// File, then Exit\nprivate void mnuExit_Click(object sender, EventArgs e)\n{\n    Application.Exit();\n}",
+        "partLines": [
+         [
+          1,
+          5,
+          "Exit",
+          "The comment is a note for people, and the computer ignores it. Here it says which menu item runs this method. `sender` is the control that was clicked, which here is Exit. `Application.Exit()` closes every window, so the program ends."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          5
+         ]
+        ],
+        "typed": 2,
+        "wordMarks": [
+         [
+          2,
+          13,
+          26,
+          26
+         ],
+         [
+          2,
+          34,
+          40,
+          27
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click **File** on the menu bar of frmLogin, then double-click **Exit**.",
+         "see": "The code editor opens `frmLogin.cs`, with a new empty method called `mnuExit_Click`.",
+         "img": {
+          "missing": true,
+          "alt": "frmLogin.cs, with the comment and the yellow line typed in mnuExit_Click",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click **File** on the menu bar of frmLogin, then double-click **Exit**."
+           },
+           {
+            "n": 2,
+            "say": "Click on the line `private void mnuExit_Click(object sender, EventArgs e)`, then press Home."
+           },
+           {
+            "n": 3,
+            "say": "Press Enter, then press the Up arrow key."
+           },
+           {
+            "n": 4,
+            "say": "Type the yellow comment line `// File, then Exit`"
+           },
+           {
+            "n": 5,
+            "say": "Click at the end of the `{` under `private void mnuExit_Click`."
+           },
+           {
+            "n": 6,
+            "say": "Press Enter, then type the yellow line `Application.Exit();`"
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The new method is called `exitToolStripMenuItem_Click`",
+           "You double-clicked before you named Exit. Press Ctrl and Z together, go back to the designer, and name Exit `mnuExit`. Then double-click it again."
+          ]
+         ],
+         "id": "4-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click on the line `private void mnuExit_Click(object sender, EventArgs e)`, then press Home.",
+         "see": "The flashing cursor is at the start of `private`.",
+         "id": "4-2.2",
+         "n": 2
+        },
+        {
+         "do": "Press Enter, then press the Up arrow key.",
+         "see": "The method moves down one line. The flashing cursor is on the new empty line above it.",
+         "id": "4-2.3",
+         "n": 3
+        },
+        {
+         "do": "Type the yellow comment line `// File, then Exit`",
+         "see": "The comment is green, above the method.",
+         "id": "4-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click at the end of the `{` under `private void mnuExit_Click`.",
+         "see": "The flashing cursor is after the `{`.",
+         "id": "4-2.5",
+         "n": 5
+        },
+        {
+         "do": "Press Enter, then type the yellow line `Application.Exit();`",
+         "see": "The line is inside mnuExit_Click.",
+         "id": "4-2.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "p": "The 2 Help methods are the same shape. Each one shows a [[MessageBox|28]]: the first words are the message, and the last words are the title of the box."
+      },
+      {
+       "code": {
+        "id": "c02-menu-how",
+        "kind": "type",
+        "title": "mnuHow_Click",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// Help, then How to play\nprivate void mnuHow_Click(object sender, EventArgs e)\n{\n    MessageBox.Show(\"Log in, then press Start the expedition. Climb \"\n        + \"the eight summits in any order. Each summit is a \"\n        + \"different game worth up to 100 points. When you finish, \"\n        + \"you see what went well and what went wrong in each game, \"\n        + \"and whether you made the Top 10.\", \"How to play\");\n}",
+        "partLines": [
+         [
+          1,
+          9,
+          "How to play",
+          "`MessageBox.Show` opens a small window with an OK button. The message is long, so it is split into pieces joined by `+`, one piece on each line. Keep the space at the end of each piece, or two words run together. `\"How to play\"` is the title of the box."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          9
+         ]
+        ],
+        "typed": 6,
+        "wordMarks": [
+         [
+          4,
+          4,
+          19,
+          28
+         ]
+        ]
+       }
+      },
+      {
+       "code": {
+        "id": "c02-menu-about",
+        "kind": "type",
+        "title": "mnuAbout_Click",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// Help, then About Summit Ready\nprivate void mnuAbout_Click(object sender, EventArgs e)\n{\n    MessageBox.Show(\"Summit Ready is a teaching example for AS \"\n        + \"Software Systems Development. Pictures come from \"\n        + \"OpenMoji, Wikimedia Commons and OpenTopoMap. Sounds come \"\n        + \"from Kenney and Wikimedia Commons. Every credit is in \"\n        + \"credits.txt beside the program.\", \"About Summit Ready\");\n}",
+        "partLines": [
+         [
+          1,
+          9,
+          "About Summit Ready",
+          "About Summit Ready says what the program is, and where the pictures and sounds come from. Your own game's About message names the places your own pictures and sounds came from."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          9
+         ]
+        ],
+        "typed": 6
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmLogin.cs [Design]** tab, click **Help**, then double-click **How to play**.",
+         "see": "The code editor shows a new empty method called `mnuHow_Click`, under mnuExit_Click.",
+         "img": {
+          "missing": true,
+          "alt": "frmLogin.cs, with mnuHow_Click and mnuAbout_Click typed",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click the **frmLogin.cs [Design]** tab, click **Help**, then double-click **How to play**."
+           },
+           {
+            "n": 8,
+            "say": "Type the comment above `mnuHow_Click`, and the yellow lines inside it, the same way as for Exit."
+           },
+           {
+            "n": 9,
+            "say": "Click the **frmLogin.cs [Design]** tab, click **Help**, then double-click **About Summit Ready**."
+           },
+           {
+            "n": 10,
+            "say": "Type the comment above `mnuAbout_Click`, and the yellow lines inside it."
+           },
+           {
+            "n": 11,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 12,
+            "say": "Press Ctrl, Shift and B together, to check your code has no mistakes."
+           }
+          ]
+         },
+         "id": "4-2.7",
+         "n": 7
+        },
+        {
+         "do": "Type the comment above `mnuHow_Click`, and the yellow lines inside it, the same way as for Exit.",
+         "see": "mnuHow_Click matches the yellow lines.",
+         "id": "4-2.8",
+         "n": 8
+        },
+        {
+         "do": "Click the **frmLogin.cs [Design]** tab, click **Help**, then double-click **About Summit Ready**.",
+         "see": "The code editor shows a new empty method called `mnuAbout_Click`, under mnuHow_Click.",
+         "id": "4-2.9",
+         "n": 9
+        },
+        {
+         "do": "Type the comment above `mnuAbout_Click`, and the yellow lines inside it.",
+         "see": "mnuAbout_Click matches the yellow lines. No line has a red underline.",
+         "wrong": [
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "4-2.10",
+         "n": 10
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `frmLogin.cs` on the tab disappears.",
+         "id": "4-2.11",
+         "n": 11
+        },
+        {
+         "do": "Press Ctrl, Shift and B together, to check your code has no mistakes.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "4-2.12",
+         "n": 12
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "turn-about",
+        "kind": "turn",
+        "title": "Make the About message name your own game",
+        "lang": "cs",
+        "text": "MessageBox.Show(\"Summit Ready is a teaching example for AS \"",
+        "task": [
+         "Change the message in mnuAbout_Click so that it names your own game and its topic.",
+         "Keep the last sentence, which says that the credits are in `credits.txt`.",
+         "Change the title of the box, `\"About Summit Ready\"`, so it says About, then your own game's name.",
+         "In the Properties window, change the Text of the About Summit Ready menu item to match the new title."
+        ],
+        "test": "Press F5, then click Help and your new About item.",
+        "expect": "A box with your new title names your own game, and says where its credits are.",
+        "hint": "Each piece of the message is in its own pair of double quotes, with a `+` between the pieces."
+       }
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "4"
+  },
+  {
+   "title": "Find pictures and sounds for your own game, and credit them",
+   "screens": [
+    {
+     "title": "Read credits.txt, the list of who made each picture and sound",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know what each part of a line in `credits.txt` means."
+      },
+      {
+       "p": "Every picture and sound in Summit Ready was made by somebody else. Each one has a [[licence|29]] that lets you use it, as long as you say who made it. Saying so is called a credit."
+      },
+      {
+       "p": "`credits.txt` holds one line for each picture and sound. These are its heading line and 3 of its credits."
+      },
+      {
+       "code": {
+        "id": "c02-credits",
+        "kind": "read",
+        "title": "credits.txt: the heading line and 3 of its credits",
+        "lang": "txt",
+        "text": "file|what it shows|who made it|licence|where it came from\navatar-badger.png|badger [1F9A1]|OpenMoji (HfG Schwäbisch Gmünd)|CC BY-SA 4.0|https://raw.githubusercontent.com/hfg-gmuend/openmoji/master/color/618x618/1F9A1.png\nclick.wav|button click|Kenney (kenney.nl)|CC0 1.0|https://kenney.nl/assets/ui-audio\nknot-bowline.jpg|Bowline|USCG PTC Developer|CC BY-SA 4.0|https://commons.wikimedia.org/wiki/File:Knot-bowline-ABoK_1010-USCG.jpg",
+        "partLines": [
+         [
+          1,
+          1,
+          "The heading line",
+          "The first line names the 5 parts. Like every data file, the parts have a bar `|` between them."
+         ],
+         [
+          2,
+          2,
+          "A picture",
+          "The file name, what it shows, who made it, its licence, and the web page it came from. OpenMoji made the badger. CC BY-SA 4.0 means you may use it if you credit OpenMoji."
+         ],
+         [
+          3,
+          3,
+          "A sound",
+          "Kenney made the click. CC0 means anyone may use it for anything, but you still credit it."
+         ],
+         [
+          4,
+          4,
+          "A photo",
+          "The bowline photo comes from Wikimedia Commons. Its page there names the person who took it, and the licence."
+         ]
+        ]
+       }
+      },
+      {
+       "p": "The licences you may use are CC0, CC BY, CC BY-SA and public domain. A picture or sound with any other licence, or with no licence, stays out of your game."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Find your own pictures and sounds, and add a credit for each one",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know where to find pictures and sounds you may use, and how to credit them."
+      },
+      {
+       "p": "Your game is on your own topic, so it needs some pictures and sounds of its own. These 3 websites have thousands, and every one has a licence you may use."
+      },
+      {
+       "box": {
+        "title": "3 places to look",
+        "blocks": [
+         {
+          "p": "**OpenMoji**, at openmoji.org, has bright emoji pictures. They make good avatars (small pictures that stand for a player) and icons. Every picture is CC BY-SA 4.0, and its page shows its code number."
+         },
+         {
+          "p": "**Wikimedia Commons**, at commons.wikimedia.org, has photos of almost anything: places, animals, elements, buildings. Each photo's page names its author and its licence, under Licensing."
+         },
+         {
+          "p": "**Kenney**, at kenney.nl, has game sounds and game pictures. Everything there is CC0."
+         }
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "5 rules for your own files",
+        "blocks": [
+         {
+          "p": "Pictures are `.png` or `.jpg` files. Sounds are `.wav` files, because the game's sound player, SoundPlayer, plays only `.wav`."
+         },
+         {
+          "p": "Name each file in small letters, with its kind first and no spaces, such as `avatar-otter.png`."
+         },
+         {
+          "p": "Put each picture in the right folder inside bin\\Debug\\Images, and each sound in bin\\Debug\\Sounds."
+         },
+         {
+          "p": "Add a line to `credits.txt` for each file, with the 5 parts in the same order as the other lines."
+         },
+         {
+          "p": "Keep the web page address of every file as you download it. You need it for the credit."
+         }
+        ]
+       }
+      },
+      {
+       "p": "A credit line for your own otter avatar from OpenMoji looks like this one."
+      },
+      {
+       "code": {
+        "id": "c02-own-credit",
+        "kind": "read",
+        "title": "A credit line for your own picture",
+        "lang": "txt",
+        "text": "avatar-otter.png|otter [1F9A6]|OpenMoji (HfG Schwäbisch Gmünd)|CC BY-SA 4.0|https://openmoji.org/library/emoji-1F9A6/",
+        "partLines": [
+         [
+          1,
+          1,
+          "One credit line",
+          "The file name, what it shows, who made it, the licence, and the web page. Type a bar `|` with Shift and the key to the left of Z."
+         ]
+        ]
+       }
+      },
+      {
+       "p": "To add a line, right-click `credits.txt` in bin\\Debug and choose Open with, then Notepad. Click at the end of the last line, press Enter, and type your line. Press Ctrl and S together to save."
+      },
+      {
+       "p": "Your own files go in later, as you build each game. Make a list now of the pictures and sounds your plan needs, and the website where you will look for each one."
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Check that your project is ready for chapter 3",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will have tested that your project, its files and its menu all work."
+      },
+      {
+       "p": "Run each test with F5. Tick each test when it passes. In the 2 tests about the window size, the window must not change, and that counts as a pass."
+      },
+      {
+       "check": [
+        {
+         "what": "Press F5.",
+         "expect": "allowed",
+         "how": "A window opens in the middle of the screen, with **Summit Ready - Log in** in its title bar and a white menu bar with File and Help.",
+         "must": "Must happen",
+         "fix": "Check the Text, StartPosition and BackColor of frmLogin against the table on the screen Rename Form1 to frmLogin.",
+         "id": "5-3.t1"
+        },
+        {
+         "what": "Click Help, then How to play.",
+         "expect": "allowed",
+         "how": "A box with the title **How to play** says how a game of Summit Ready goes. Click **OK** to close it.",
+         "must": "Must happen",
+         "fix": "Click How to play in the designer. Click the lightning bolt at the top of the Properties window, and check that Click shows `mnuHow_Click`.",
+         "id": "5-3.t2"
+        },
+        {
+         "what": "Click Help, then About Summit Ready.",
+         "expect": "allowed",
+         "how": "A box with the title **About Summit Ready** says where the pictures and sounds come from.",
+         "must": "Must happen",
+         "fix": "Check mnuAbout_Click against its yellow lines, one line at a time.",
+         "id": "5-3.t3"
+        },
+        {
+         "what": "Drag the bottom right corner of the window outwards.",
+         "expect": "control",
+         "how": "The window must stay the same size.",
+         "fix": "Click frmLogin in the designer, then in the Properties window set FormBorderStyle to FixedSingle.",
+         "id": "5-3.t4"
+        },
+        {
+         "what": "Double-click the title bar of the window.",
+         "expect": "control",
+         "how": "The window must not grow to fill the screen.",
+         "fix": "Click frmLogin in the designer, then in the Properties window set MaximizeBox to False.",
+         "id": "5-3.t5"
+        },
+        {
+         "what": "Click File, then Exit.",
+         "expect": "allowed",
+         "how": "The window closes, and Visual Studio 2019 comes back.",
+         "must": "Must happen",
+         "fix": "Check that mnuExit_Click holds the line `Application.Exit();`.",
+         "id": "5-3.t6"
+        },
+        {
+         "what": "Open your project's bin\\Debug folder in File Explorer.",
+         "expect": "allowed",
+         "how": "It holds the Data, Images and Sounds folders, `credits.txt` and your program.",
+         "must": "Must happen",
+         "fix": "Do the steps on the screen Download summit-ready-files.zip again.",
+         "id": "5-3.t7"
+        }
+       ]
+      },
+      {
+       "p": "Files, Sound and Mix are the 3 classes you typed. They show nothing on the screen yet. **Build succeeded** tells you they are typed correctly, and later chapters use them."
+      },
+      {
+       "box": {
+        "title": "Evidence to keep",
+        "blocks": [
+         {
+          "p": "Take a screenshot of the menu bar with Help open, and of each message box. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
+         },
+         {
+          "p": "Take a screenshot of Solution Explorer, showing `frmLogin.cs`, `Files.cs`, `Sound.cs` and `Mix.cs`."
+         },
+         {
+          "p": "Paste each screenshot into your testing document. Keep your list of the pictures and sounds you plan to find."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "3"
+    }
+   ],
+   "id": "5"
+  }
+ ],
+ "glossary": [
+  [
+   "Random",
+   "Gives numbers by chance. `random.Next` asks it for one whole number."
+  ],
+  [
+   "return",
+   "`return` hands a value back to the code that called the method, and ends the method there."
+  ],
+  [
+   "count up with ++",
+   "`++` adds 1 to a whole number. `i++` means i becomes one more than it was."
+  ],
+  [
+   "count down with --",
+   "`--` takes 1 away from a whole number. `i--` means i becomes one less than it was."
+  ],
+  [
+   "not",
+   "`!` in front of a true or false value turns it the other way. `!File.Exists(path)` is true when the file is missing."
+  ],
+  [
+   "random number",
+   "A whole number picked by chance. `random.Next(i + 1)` gives one from 0 up to i."
+  ],
+  [
+   "project",
+   "Everything Visual Studio 2019 needs to build one program: its forms, its classes and its settings."
+  ],
+  [
+   "file name extension",
+   "The letters after the last dot in a file's name, such as `.txt` or `.zip`. They tell you what kind of file it is."
+  ],
+  [
+   "form",
+   "A window in your program. Visual Studio 2019 shows a form in the designer, where you drag controls onto it."
+  ],
+  [
+   "Solution Explorer",
+   "The list on the right of Visual Studio 2019 that shows every file in your project."
+  ],
+  [
+   "Properties window",
+   "The list under Solution Explorer that shows the settings of whatever you have clicked."
+  ],
+  [
+   "bin\\Debug",
+   "The folder inside your project where Visual Studio 2019 puts the program it builds. Summit Ready reads its data, pictures and sounds from there."
+  ],
+  [
+   "zip file",
+   "One file with other files and folders packed inside it."
+  ],
+  [
+   "build",
+   "Visual Studio 2019 turns your code into a program you can run. If any line is wrong, the build stops and lists the error."
+  ],
+  [
+   "class",
+   "A named group of methods and values, kept in its own `.cs` file."
+  ],
+  [
+   "static",
+   "A `static` class or method belongs to the class itself, so every form shares one copy. You use it by writing the class name, as in `Files.Data(\"kit.txt\")`."
+  ],
+  [
+   "method",
+   "A named set of lines that does one job. Code runs the lines by writing the method's name."
+  ],
+  [
+   "Path.Combine",
+   "Joins folder names and a file name into one path (the full address of a file), with the right slashes between them."
+  ],
+  [
+   "null",
+   "Nothing at all. `Picture` gives back `null` when the picture file is missing."
+  ],
+  [
+   "field",
+   "A named box that holds a value, written at the top of the class, outside every method. Every method in the class can use it."
+  ],
+  [
+   "bool",
+   "A value that is only ever true or false. `Muted` is a `bool`."
+  ],
+  [
+   "or",
+   "`||` means or. The `if` is true when any one of its parts is true."
+  ],
+  [
+   "array",
+   "A row of values of the same type, kept together under one name and numbered from 0. `numbers[0]` is the first number."
+  ],
+  [
+   "switch",
+   "Picks one `case` to run, by the value in its brackets. `default` runs when no case matches."
+  ],
+  [
+   "MenuStrip",
+   "A control that puts a menu bar along the top of a form, such as File and Help."
+  ],
+  [
+   "event",
+   "Something that happens to a control, such as a click on a menu item."
+  ],
+  [
+   "event handler",
+   "The method that runs when something happens to a control, such as a click on a menu item. `mnuExit_Click` runs when the player clicks Exit."
+  ],
+  [
+   "sender",
+   "Every event handler is given `sender`: the control that the event happened to."
+  ],
+  [
+   "MessageBox",
+   "A small window with a message and an OK button. `MessageBox.Show` opens one."
+  ],
+  [
+   "licence",
+   "The rules that say how you may use a picture or a sound that somebody else made."
+  ],
+  [
+   "red underline",
+   "The wavy red line Visual Studio 2019 draws under code it does not understand yet."
+  ]
+ ]
+}

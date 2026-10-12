@@ -1,0 +1,5333 @@
+{
+ "id": "13",
+ "n": 13,
+ "of": 20,
+ "title": "Build Leave No Trace, an arcade game played with the keyboard",
+ "kind": "a game chapter: build one game from each pair, and this pair is chapters 13 and 15",
+ "one": "You build Leave No Trace in your own project, exactly as it is in Summit Ready, and test it. Then you change it into an arcade game on your own topic.",
+ "prev": {
+  "id": "12",
+  "n": 12,
+  "title": "Knot Pairs"
+ },
+ "next": {
+  "id": "14",
+  "n": 14,
+  "title": "Read the Sky"
+ },
+ "stages": [
+  {
+   "title": "See what Leave No Trace does and how a round plays",
+   "screens": [
+    {
+     "title": "Look at a round of Leave No Trace, from Start walking to the score",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know how a round of Leave No Trace plays and how it scores."
+      },
+      {
+       "p": "Leave No Trace is an arcade game that you play with the keyboard. It is on Slieve Meelmore, the third place on the Summit Ready map."
+      },
+      {
+       "p": "You build one game from each pair of game chapters. Leave No Trace is paired with Whiteout, so you build one of those two."
+      },
+      {
+       "p": "First you build Leave No Trace exactly as it is in Summit Ready. Then, in stage 5, you change it into an arcade game on your own topic."
+      },
+      {
+       "p": "A round starts in a green field on the hill. Your own avatar stands at the left. 8 pieces of litter lie at random places, and 3 sheep wander about."
+      },
+      {
+       "screenshot": {
+        "img": "img/ch00-litter.jpg",
+        "alt": "Leave No Trace before the round starts, with the avatar, the litter, the sheep and Start walking",
+        "w": 803,
+        "h": 549,
+        "marks": [
+         {
+          "n": 1,
+          "x": 3.5,
+          "y": 52.8,
+          "w": 4.5,
+          "h": 7.3,
+          "say": "Your avatar: the picture you chose when you registered."
+         },
+         {
+          "n": 2,
+          "x": 39.9,
+          "y": 52.3,
+          "w": 20,
+          "h": 8.2,
+          "say": "Start walking starts the round."
+         },
+         {
+          "n": 3,
+          "x": 62.6,
+          "y": 13.7,
+          "w": 35.8,
+          "h": 10,
+          "say": "The dark strip shows the litter picked up and the time left."
+         },
+         {
+          "n": 4,
+          "x": 87.8,
+          "y": 16.8,
+          "w": 9.6,
+          "h": 3.6,
+          "say": "The 3 hearts are your lives."
+         },
+         {
+          "n": 5,
+          "x": 63.5,
+          "y": 59,
+          "w": 5.4,
+          "h": 6.6,
+          "say": "A sheep. Keep away from the sheep."
+         },
+         {
+          "n": 6,
+          "x": 24.8,
+          "y": 64.3,
+          "w": 2.9,
+          "h": 4,
+          "say": "A piece of litter: an apple core."
+         }
+        ],
+        "cap": "Leave No Trace before you press Start walking."
+       }
+      },
+      {
+       "p": "You press **Start walking**. Then you walk your avatar with the arrow keys, or with W, A, S and D. Walking onto a piece of litter picks it up."
+      },
+      {
+       "p": "If a sheep touches you, it knocks you over and one heart turns grey. For 1.5 seconds after that, your avatar flashes and no sheep can knock you over again."
+      },
+      {
+       "p": "The round ends when you pick up all 8 pieces, when a sheep knocks you over 3 times, or when the 45 seconds run out."
+      },
+      {
+       "p": "Each piece of litter scores 10 points. If you pick up all 8, the seconds left are added on, up to 20 more. So all 8 with 30 seconds left scores 100 points, and 5 pieces scores 50 points."
+      },
+      {
+       "screenshot": {
+        "missing": true,
+        "alt": "The Round over box at the end of a round of Leave No Trace",
+        "w": 1002,
+        "h": 693,
+        "at": [],
+        "cap": "The Round over box at the end of a round."
+       }
+      },
+      {
+       "p": "A moment after the round ends, the Round over box opens. Then the flag on Slieve Meelmore gets a tick on the map."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Check that your project is ready, and see the words this chapter uses",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know that your project has everything Leave No Trace needs."
+      },
+      {
+       "p": "Leave No Trace uses things you made in earlier chapters. Check that each one is in your project before you start."
+      },
+      {
+       "need": [
+        "Your Summit Ready project, with the practice game opening from the map (chapter 9).",
+        "The Files class that finds files and the Sound class that plays sounds (chapter 2).",
+        "The Data, Images and Sounds folders in your project's [[bin\\Debug|1]] folder, from `summit-ready-files.zip` (chapter 2). They already hold every file that Leave No Trace needs.",
+        "A player who has chosen an avatar, so that Leave No Trace can show the avatar (chapter 5).",
+        "The line `// each game chapter adds its own case below this line` in `frmMap.cs` (chapter 8).",
+        "File name extensions turned on in File Explorer, so `field.jpg` shows as `field.jpg` and not as `field` (chapter 2).",
+        "About 2 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
+       ]
+      },
+      {
+       "words": [
+        [
+         "Height",
+         "How tall a control is, in pixels.",
+         "4-6",
+         true
+        ],
+        [
+         "bin\\Debug",
+         "The folder inside your project where Visual Studio 2019 puts the program it builds. Summit Ready reads its data, pictures and sounds from there.",
+         "1-2",
+         false
+        ],
+        [
+         "zip file",
+         "One file with other files and folders packed inside it.",
+         "2-1",
+         false
+        ],
+        [
+         "lightning bolt",
+         "The button at the top of the Properties window that shows a control's events in place of its properties.",
+         "3-1",
+         false
+        ],
+        [
+         "field",
+         "A variable written at the top of the class, outside every method. Every method in the form can use it, and it keeps its value until the window closes.",
+         "4-4",
+         false
+        ],
+        [
+         "array",
+         "A row of values of the same type, kept together under one name and numbered from 0. `sheep[0]` is the first sheep, and `sheep[2]` is the third.",
+         "4-4",
+         true
+        ],
+        [
+         "panel",
+         "A control that holds other controls. `pnlField` is the panel that holds the avatar, the litter and the sheep.",
+         "4-5",
+         true
+        ],
+        [
+         "PictureBox",
+         "A control that shows a picture. The avatar, each piece of litter, each sheep and each heart is a PictureBox.",
+         "4-4",
+         true
+        ],
+        [
+         "KeyPreview",
+         "A property of a form. When it is True, the form hears every key press first, before any control on it.",
+         "3-1",
+         false
+        ],
+        [
+         "DoubleBuffered",
+         "A property of a form. When it is True, the form draws each picture off the screen first, then shows it all at once, so nothing flickers.",
+         "3-1",
+         false
+        ],
+        [
+         "KeyDown",
+         "The event that happens the moment a key is pressed down.",
+         "4-9",
+         true
+        ],
+        [
+         "KeyUp",
+         "The event that happens the moment a key is let go.",
+         "4-9",
+         true
+        ],
+        [
+         "KeyCode",
+         "Which key was pressed. `Keys.Up` is the up arrow, and `Keys.W` is the W key.",
+         "4-9",
+         true
+        ],
+        [
+         "bool",
+         "A value that is either true or false. `goUp` is a bool: true while the up arrow is held down.",
+         "4-1",
+         true
+        ],
+        [
+         "Timer",
+         "A control that never shows on the window. Once started, it runs its Tick method every time its Interval runs out, until it is stopped.",
+         "4-8",
+         true
+        ],
+        [
+         "Interval",
+         "How long a Timer waits before each Tick, in thousandths of a second. 20 means 0.02 seconds.",
+         "3-5",
+         false
+        ],
+        [
+         "Tick",
+         "The event a Timer has. Its method runs every time the Timer's Interval runs out.",
+         "4-10",
+         true
+        ],
+        [
+         "game loop",
+         "A Timer that runs every few thousandths of a second and moves everything a little each time. `tmrGame` is the game loop of Leave No Trace.",
+         "4-10",
+         false
+        ],
+        [
+         "Random",
+         "Gives numbers by chance. `random.Next(0, 10)` gives a whole number from 0 up to 9.",
+         "4-4",
+         true
+        ],
+        [
+         "Math.Abs",
+         "Gives a number without its minus sign. `Math.Abs(-5)` gives 5. It tells you how far apart two numbers are.",
+         "4-6",
+         true
+        ],
+        [
+         "Point",
+         "A place on a window or a panel: how far across, X, and how far down, Y.",
+         "4-6",
+         true
+        ],
+        [
+         "Bounds",
+         "The rectangle that a control fills on its panel: where it is, and how big.",
+         "4-12",
+         true
+        ],
+        [
+         "IntersectsWith",
+         "Asks whether two rectangles overlap. It is true when the avatar touches a sheep or a piece of litter.",
+         "4-12",
+         true
+        ],
+        [
+         "Visible",
+         "Whether a control shows. A control with Visible false is hidden.",
+         "4-1",
+         true
+        ],
+        [
+         "Enabled",
+         "Whether a control can be used. A button with Enabled false is greyed out, and clicking it does nothing.",
+         "4-8",
+         true
+        ],
+        [
+         "Transparent",
+         "`Color.Transparent` lets whatever is behind a control show through it.",
+         "4-6",
+         true
+        ],
+        [
+         "count up with ++",
+         "`got++` adds 1 to `got`. `safeTicks--` takes 1 away from `safeTicks`.",
+         "4-1",
+         true
+        ],
+        [
+         "change with += and -=",
+         "`picPlayer.Top -= 6` takes 6 away from Top, so the avatar moves 6 pixels up. `+= 6` adds 6.",
+         "4-10",
+         true
+        ],
+        [
+         "remainder",
+         "`%` gives what is left over after a division. `13 % 10` is 3.",
+         "4-6",
+         true
+        ],
+        [
+         "or",
+         "`||` means or. The `if` is true when any one of its parts is true.",
+         "4-6",
+         true
+        ],
+        [
+         "and",
+         "`&&` means and. The `if` is true only when every one of its parts is true.",
+         "4-1",
+         true
+        ],
+        [
+         "not",
+         "`!` means not. `!goUp` is true when `goUp` is false.",
+         "4-9",
+         true
+        ],
+        [
+         "foreach",
+         "`foreach` runs a loop once for each thing in an array, such as each sheep in `sheep`.",
+         "4-5",
+         true
+        ],
+        [
+         "while",
+         "`while` runs a loop again and again, for as long as its test is true.",
+         "4-6",
+         true
+        ],
+        [
+         "BringToFront",
+         "Puts a control in front of every other control on the same panel.",
+         "4-1",
+         true
+        ],
+        [
+         "red underline",
+         "The wavy red line Visual Studio 2019 draws under code it does not understand yet. Often it means a method you have not written yet.",
+         "4-1",
+         false
+        ]
+       ],
+       "intro": "You do not need to learn these words now. Where you first meet each one in the chapter, it has a dotted line under it. Hover over it or tap it to see what it means."
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "1"
+  },
+  {
+   "title": "Look at the pictures and sounds that Leave No Trace uses",
+   "screens": [
+    {
+     "title": "Read the list of pictures and sounds that Leave No Trace uses",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know which files Leave No Trace needs, and where each one is."
+      },
+      {
+       "p": "Leave No Trace has no data file and no data class. It needs pictures and sounds. They are already in your bin\\Debug folder, because `summit-ready-files.zip` put them there in chapter 2."
+      },
+      {
+       "p": "You do not type this list. You read it here, so that the code in stage 4 makes sense."
+      },
+      {
+       "code": {
+        "id": "c13-files",
+        "kind": "read",
+        "title": "The files that Leave No Trace uses, inside bin\\Debug",
+        "lang": "txt",
+        "text": "Images\\field.jpg\nImages\\Avatars\\avatar-fox.png\nImages\\Litter\\litter-beverage-box.png\nImages\\Litter\\litter-canned-food.png\nImages\\Litter\\litter-cup-with-straw.png\nImages\\Litter\\litter-newspaper.png\nImages\\Litter\\litter-red-apple.png\nImages\\Litter\\litter-shopping-bags.png\nImages\\Litter\\litter-sweet.png\nImages\\Litter\\sheep.png\nImages\\Icons\\icon-heart-64.png\nSounds\\pickup.wav\nSounds\\bump.wav\nSounds\\win.wav\nSounds\\lose.wav",
+        "partLines": [
+         [
+          1,
+          1,
+          "The field",
+          "The picture of a green field on the hill, behind everything else."
+         ],
+         [
+          2,
+          2,
+          "The avatar",
+          "The avatar that the player chose when they registered. The fox is one of the 8 avatars."
+         ],
+         [
+          3,
+          9,
+          "The 7 litter pictures",
+          "The code lists these 7 file names. It needs 8 pieces, so the first picture is used twice."
+         ],
+         [
+          10,
+          10,
+          "The sheep",
+          "All 3 sheep use the same picture."
+         ],
+         [
+          11,
+          11,
+          "The heart",
+          "The 3 hearts use this picture. A lost life shows a faded copy, which the code makes itself."
+         ],
+         [
+          12,
+          13,
+          "The sounds during play",
+          "`pickup.wav` plays when you pick up a piece of litter. `bump.wav` plays when a sheep knocks you over."
+         ],
+         [
+          14,
+          15,
+          "The sounds at the end",
+          "The Round over box plays `win.wav` for 60 points or more, and `lose.wav` for less."
+         ]
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "If a file is missing",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "Leave No Trace never crashes because of a missing picture or sound. This is what you see instead."
+         },
+         {
+          "p": "If `field.jpg` is missing, the field is plain light green."
+         },
+         {
+          "p": "If a litter picture or `sheep.png` is missing, that piece or that sheep is invisible, but it is still there. You can still pick up an invisible piece, and an invisible sheep can still knock you over."
+         },
+         {
+          "p": "If `icon-heart-64.png` is missing, no hearts show."
+         },
+         {
+          "p": "If a sound is missing, that moment is silent, and the game carries on."
+         },
+         {
+          "p": "To put a missing file back, you download the [[zip file|2]] again and paste its folders into bin\\Debug. When Windows asks about the files you already have, you click **Skip these files**."
+         },
+         {
+          "p": "Skipping keeps every file you already have, including any file you changed. Only the missing files are copied in."
+         },
+         {
+          "steps": [
+           {
+            "do": "Click the download button below.",
+            "see": "Your browser shows that `summit-ready-files.zip` has downloaded.",
+            "download": {
+             "file": "summit-ready-files.zip",
+             "label": "Download summit-ready-files.zip",
+             "size": "7.8 MB"
+            },
+            "id": "2-1.1",
+            "n": 1
+           },
+           {
+            "do": "Press the Windows key and the E key together.",
+            "see": "File Explorer opens.",
+            "img": {
+             "missing": true,
+             "alt": "File Explorer open on Downloads, with the menu that opens on summit-ready-files.zip",
+             "w": 800,
+             "h": 450,
+             "marks": [
+              {
+               "n": 2,
+               "say": "Press the Windows key and the E key together."
+              },
+              {
+               "n": 3,
+               "say": "Click **Downloads** in the list down the left side of File Explorer."
+              },
+              {
+               "n": 4,
+               "say": "Right-click `summit-ready-files.zip`."
+              },
+              {
+               "n": 5,
+               "say": "Click **Extract All...** in the menu."
+              }
+             ]
+            },
+            "id": "2-1.2",
+            "n": 2
+           },
+           {
+            "do": "Click **Downloads** in the list down the left side of File Explorer.",
+            "see": "`summit-ready-files.zip` is in the list of files.",
+            "wrong": [
+             [
+              "There is also a file called `summit-ready-files (1).zip`",
+              "Your browser added (1) because you downloaded the zip file before, in chapter 2. Use the file that ends in (1), because it is the newest one."
+             ]
+            ],
+            "id": "2-1.3",
+            "n": 3
+           },
+           {
+            "do": "Right-click `summit-ready-files.zip`.",
+            "see": "A menu opens.",
+            "id": "2-1.4",
+            "n": 4
+           },
+           {
+            "do": "Click **Extract All...** in the menu.",
+            "see": "A window called Extract Compressed (Zipped) Folders opens.",
+            "wrong": [
+             [
+              "The menu has no **Extract All...**",
+              "Press Escape to close the menu. Double-click `summit-ready-files.zip`. Then click **Extract all** in the bar along the top of File Explorer."
+             ]
+            ],
+            "id": "2-1.5",
+            "n": 5
+           },
+           {
+            "do": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window.",
+            "see": "A new File Explorer window opens. It shows 3 folders, Data, Images and Sounds, and one file, `credits.txt`.",
+            "img": {
+             "missing": true,
+             "alt": "The Extract Compressed (Zipped) Folders window, with its Extract button",
+             "w": 640,
+             "h": 480,
+             "marks": [
+              {
+               "n": 6,
+               "say": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window."
+              }
+             ]
+            },
+            "id": "2-1.6",
+            "n": 6
+           },
+           {
+            "do": "Press Ctrl and A together.",
+            "see": "The 3 folders and `credits.txt` turn blue.",
+            "img": {
+             "missing": true,
+             "alt": "The unpacked folder, with Data, Images, Sounds and credits.txt highlighted",
+             "w": 800,
+             "h": 360,
+             "marks": [
+              {
+               "n": 7,
+               "say": "Press Ctrl and A together."
+              },
+              {
+               "n": 8,
+               "say": "Press Ctrl and C together."
+              }
+             ]
+            },
+            "id": "2-1.7",
+            "n": 7
+           },
+           {
+            "do": "Press Ctrl and C together.",
+            "see": "Nothing changes on the screen. That is normal: Windows has copied the 3 folders and `credits.txt`.",
+            "id": "2-1.8",
+            "n": 8
+           },
+           {
+            "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
+            "see": "Visual Studio 2019 comes to the front, with your project open.",
+            "img": {
+             "missing": true,
+             "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
+             "w": 800,
+             "h": 60,
+             "marks": [
+              {
+               "n": 9,
+               "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
+              }
+             ]
+            },
+            "id": "2-1.9",
+            "n": 9
+           },
+           {
+            "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+            "see": "A long menu opens.",
+            "img": {
+             "missing": true,
+             "alt": "Solution Explorer, with the menu that opens on the project line",
+             "w": 360,
+             "h": 420,
+             "marks": [
+              {
+               "n": 10,
+               "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+              },
+              {
+               "n": 11,
+               "say": "Click **Open Folder in File Explorer**, near the bottom of the menu."
+              }
+             ]
+            },
+            "id": "2-1.10",
+            "n": 10
+           },
+           {
+            "do": "Click **Open Folder in File Explorer**, near the bottom of the menu.",
+            "see": "File Explorer opens on your project's folder. You can see the bin and obj folders and your .cs files.",
+            "id": "2-1.11",
+            "n": 11
+           },
+           {
+            "do": "Double-click the **bin** folder.",
+            "see": "The bin folder holds a folder called Debug.",
+            "img": {
+             "missing": true,
+             "alt": "File Explorer on the project folder, with the bin folder",
+             "w": 640,
+             "h": 300,
+             "marks": [
+              {
+               "n": 12,
+               "say": "Double-click the **bin** folder."
+              }
+             ]
+            },
+            "id": "2-1.12",
+            "n": 12
+           },
+           {
+            "do": "Double-click the **Debug** folder.",
+            "see": "The Debug folder holds the Data, Images and Sounds folders, and your program, whose name ends in .exe.",
+            "img": {
+             "missing": true,
+             "alt": "File Explorer on the bin folder, with the Debug folder",
+             "w": 640,
+             "h": 300,
+             "marks": [
+              {
+               "n": 13,
+               "say": "Double-click the **Debug** folder."
+              }
+             ]
+            },
+            "id": "2-1.13",
+            "n": 13
+           },
+           {
+            "do": "Press Ctrl and V together.",
+            "see": "A window called Replace or Skip Files opens, because most of the files are already there.",
+            "img": {
+             "missing": true,
+             "alt": "The Replace or Skip Files window, with Skip these files",
+             "w": 640,
+             "h": 400,
+             "marks": [
+              {
+               "n": 14,
+               "say": "Press Ctrl and V together."
+              },
+              {
+               "n": 15,
+               "say": "Click **Skip these files**."
+              }
+             ]
+            },
+            "id": "2-1.14",
+            "n": 14
+           },
+           {
+            "do": "Click **Skip these files**.",
+            "see": "The window closes. Windows has copied in only the missing files.",
+            "id": "2-1.15",
+            "n": 15
+           }
+          ]
+         }
+        ]
+       }
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Find the litter pictures in your bin\\Debug folder",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will have seen the litter pictures and the sheep in your own project's folder."
+      },
+      {
+       "p": "In stage 5 you put your own pictures in a folder like this one, so it helps to know where it is."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
+         "see": "Visual Studio 2019 comes to the front, with your project open.",
+         "img": {
+          "missing": true,
+          "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
+           }
+          ]
+         },
+         "id": "2-2.1",
+         "n": 1
+        },
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the menu that opens on the project line",
+          "w": 360,
+          "h": 420,
+          "marks": [
+           {
+            "n": 2,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 3,
+            "say": "Click **Open Folder in File Explorer**, near the bottom of the menu."
+           }
+          ]
+         },
+         "id": "2-2.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Open Folder in File Explorer**, near the bottom of the menu.",
+         "see": "File Explorer opens on your project's folder. You can see the bin and obj folders and your .cs files.",
+         "id": "2-2.3",
+         "n": 3
+        },
+        {
+         "do": "Double-click the **bin** folder.",
+         "see": "The bin folder holds a folder called Debug.",
+         "img": {
+          "missing": true,
+          "alt": "File Explorer on the project folder, with the bin folder",
+          "w": 640,
+          "h": 300,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Double-click the **bin** folder."
+           }
+          ]
+         },
+         "id": "2-2.4",
+         "n": 4
+        },
+        {
+         "do": "Double-click the **Debug** folder.",
+         "see": "The Debug folder holds the Data, Images and Sounds folders.",
+         "img": {
+          "missing": true,
+          "alt": "File Explorer on the bin folder, with the Debug folder",
+          "w": 640,
+          "h": 300,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Double-click the **Debug** folder."
+           }
+          ]
+         },
+         "id": "2-2.5",
+         "n": 5
+        },
+        {
+         "do": "Double-click the **Images** folder.",
+         "see": "The Images folder holds `field.jpg` and some folders, including Avatars, Icons and Litter.",
+         "img": {
+          "missing": true,
+          "alt": "File Explorer on the Images folder, with field.jpg and the Litter folder",
+          "w": 640,
+          "h": 300,
+          "marks": [
+           {
+            "n": 6,
+            "say": "Double-click the **Images** folder."
+           },
+           {
+            "n": 7,
+            "say": "Double-click the **Litter** folder."
+           }
+          ]
+         },
+         "id": "2-2.6",
+         "n": 6
+        },
+        {
+         "do": "Double-click the **Litter** folder.",
+         "see": "The Litter folder holds 8 pictures: the 7 pieces of litter, and `sheep.png`.",
+         "wrong": [
+          [
+           "There is no Litter folder",
+           "Open the fold-out **If a file is missing** on the screen before this one, and follow its steps to put the missing files back."
+          ]
+         ],
+         "id": "2-2.7",
+         "n": 7
+        },
+        {
+         "do": "Close File Explorer with the X at its top right corner.",
+         "see": "Visual Studio 2019 shows again.",
+         "img": {
+          "missing": true,
+          "alt": "File Explorer on the Litter folder, with its X at the top right",
+          "w": 640,
+          "h": 300,
+          "marks": [
+           {
+            "n": 8,
+            "say": "Close File Explorer with the X at its top right corner."
+           }
+          ]
+         },
+         "id": "2-2.8",
+         "n": 8
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "2"
+  },
+  {
+   "title": "Make the Leave No Trace form and set the form's controls",
+   "screens": [
+    {
+     "title": "Add the Leave No Trace form and set the form's properties",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has an empty Leave No Trace window, called frmLitter, at the right size and colour."
+      },
+      {
+       "p": "Leave No Trace needs its own window to play in. In Visual Studio 2019, a window is called a form."
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "The project menu, with Add pointed at and Form (Windows Forms) in the second menu",
+          "w": 640,
+          "h": 420,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 2,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 3,
+            "say": "Click **Form (Windows Forms)...** in the second menu."
+           }
+          ]
+         },
+         "id": "3-1.1",
+         "n": 1
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "3-1.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Form (Windows Forms)...** in the second menu.",
+         "see": "The Add New Item window opens. Form (Windows Forms) is picked, and the Name box says `Form1.cs`.",
+         "id": "3-1.3",
+         "n": 3
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Form1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "missing": true,
+          "alt": "The Add New Item window, with Form (Windows Forms) picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "say": "Type `frmLitter.cs`"
+           },
+           {
+            "n": 6,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "3-1.4",
+         "n": 4
+        },
+        {
+         "do": "Type `frmLitter.cs`",
+         "see": "The Name box shows `frmLitter.cs`.",
+         "id": "3-1.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "A new empty form called frmLitter opens in the designer. `frmLitter.cs` appears in Solution Explorer.",
+         "id": "3-1.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "p": "Now set the form's properties in the Properties window, using the table below. Set **Font** first. If you change Font later, Visual Studio 2019 stretches the form to fit the new font, and its size (ClientSize) changes."
+      },
+      {
+       "p": "Leave No Trace needs 2 properties that the other games do not. [[KeyPreview|8]] True lets the form hear the arrow keys. [[DoubleBuffered|9]] True draws each picture off the screen first, so nothing flickers as the sheep move."
+      },
+      {
+       "controls": {
+        "props": [
+         "Font = Segoe UI, 11pt",
+         "Text = Summit Ready - Leave No Trace",
+         "ClientSize = 1000, 660",
+         "StartPosition = CenterScreen",
+         "FormBorderStyle = FixedSingle",
+         "MaximizeBox = False",
+         "BackColor = 243, 245, 242",
+         "KeyPreview = True",
+         "DoubleBuffered = True"
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "If you have forgotten how to set a property",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "Click the box beside the property's name in the Properties window. Type the new value, then press Enter."
+         },
+         {
+          "p": "For **Font**, click the box beside Font, then click the small button with 3 dots at the right of the box. Pick Segoe UI and size 11, then click **OK**."
+         },
+         {
+          "p": "For **BackColor**, type `243, 245, 242` in the box beside BackColor, then press Enter."
+         },
+         {
+          "p": "For **MaximizeBox**, **KeyPreview** and **DoubleBuffered**, click the arrow at the right of the box, then click **False** or **True**."
+         }
+        ]
+       }
+      },
+      {
+       "p": "Leave No Trace places the litter and the sheep when the window opens. The form's Load event runs once, right before the window first appears. So you make an empty Load method now, and you fill it in during stage 4."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the [[lightning bolt|3]] at the top of the Properties window.",
+         "see": "The Properties window now lists the form's events in place of its properties.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of frmLitter, with the lightning bolt, Load and the Properties button",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click the [[lightning bolt|3]] at the top of the Properties window."
+           },
+           {
+            "n": 8,
+            "say": "Double-click the empty box beside **Load**. The events are in A to Z order, so scroll down a little if you cannot see it."
+           },
+           {
+            "n": 10,
+            "say": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window."
+           }
+          ]
+         },
+         "id": "3-1.7",
+         "n": 7
+        },
+        {
+         "do": "Double-click the empty box beside **Load**. The events are in A to Z order, so scroll down a little if you cannot see it.",
+         "see": "The code editor opens `frmLitter.cs`, with a new empty method called `frmLitter_Load`. An empty method is normal here: you fill it in during stage 4.",
+         "id": "3-1.8",
+         "n": 8
+        },
+        {
+         "do": "Press Shift and F7 together.",
+         "see": "The designer shows frmLitter.",
+         "img": {
+          "missing": true,
+          "alt": "The designer showing frmLitter, with the frmLitter.cs [Design] tab",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Press Shift and F7 together."
+           }
+          ]
+         },
+         "id": "3-1.9",
+         "n": 9
+        },
+        {
+         "do": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists properties again.",
+         "id": "3-1.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Copy the dark header strip from frmPractice onto frmLitter",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmLitter has the same dark header strip as your practice game."
+      },
+      {
+       "p": "frmPractice from chapter 9 already has a dark strip along the top. The strip holds the title, the instruction, Points, the speaker picture and **Back to the map**."
+      },
+      {
+       "p": "You copy the strip, so that every game looks the same. The copied controls keep their names, such as `lblScore` and `btnBack`, and the chapter 9 code needs those names."
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `frmPractice.cs` in Solution Explorer.",
+         "see": "frmPractice opens in the designer.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with frmPractice.cs",
+          "w": 360,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Double-click `frmPractice.cs` in Solution Explorer."
+           }
+          ]
+         },
+         "id": "3-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click a dark part of the header strip that has no words on it.",
+         "see": "The Properties window shows pnlHeader at the top.",
+         "img": {
+          "missing": true,
+          "alt": "frmPractice in the designer, with the dark header strip picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 2,
+            "say": "Click a dark part of the header strip that has no words on it."
+           },
+           {
+            "n": 3,
+            "say": "Press Ctrl and C together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Properties window shows lblTitle or another name, not pnlHeader",
+           "You clicked a control on the strip. Click a dark part of the strip with no words on it."
+          ]
+         ],
+         "id": "3-2.2",
+         "n": 2
+        },
+        {
+         "do": "Press Ctrl and C together.",
+         "see": "Nothing changes on the screen. That is normal: Visual Studio 2019 has copied the control and everything on it.",
+         "id": "3-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click the **frmLitter.cs [Design]** tab at the top of the editor.",
+         "see": "The empty frmLitter form shows again.",
+         "img": {
+          "missing": true,
+          "alt": "The empty frmLitter form, with the frmLitter.cs [Design] tab and the title bar of frmLitter",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click the **frmLitter.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 5,
+            "say": "Click the title bar of frmLitter."
+           }
+          ]
+         },
+         "id": "3-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click the title bar of frmLitter.",
+         "see": "The Properties window shows frmLitter at the top. The form must be picked, because Visual Studio 2019 pastes onto whatever is picked.",
+         "id": "3-2.5",
+         "n": 5
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The dark header strip appears on frmLitter, with small white squares at its corners. The Properties window shows pnlHeader.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter with the pasted header strip, and the Location box in the Properties window",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 6,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 7,
+            "say": "Triple-click the box beside **Location** in the Properties window."
+           },
+           {
+            "n": 8,
+            "say": "Type `0, 0`"
+           },
+           {
+            "n": 9,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The pasted strip landed inside another control",
+           "Press Ctrl and Z together to undo the paste. Click the title bar of frmLitter, then press Ctrl and V together again."
+          ]
+         ],
+         "id": "3-2.6",
+         "n": 6
+        },
+        {
+         "do": "Triple-click the box beside **Location** in the Properties window.",
+         "see": "The numbers in the box turn blue.",
+         "wrong": [
+          [
+           "The old value is still in the box after you type",
+           "Click the box, then press Home. Hold Shift and press End, so the whole value turns blue. Type the new value, then press Enter."
+          ]
+         ],
+         "id": "3-2.7",
+         "n": 7
+        },
+        {
+         "do": "Type `0, 0`",
+         "see": "The box shows `0, 0`.",
+         "id": "3-2.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The strip moves to the top left corner of frmLitter and stretches right across the top.",
+         "id": "3-2.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Copy the Round over box from frmPractice onto frmLitter",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmLitter has the white Round over box that shows the score when a round ends."
+      },
+      {
+       "p": "frmPractice already has the Round over box. It is a panel called `pnlRoundOver`, and it stays hidden until a round ends. You copy it, the same way as the strip."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmPractice.cs [Design]** tab at the top of the editor.",
+         "see": "frmPractice shows again.",
+         "img": {
+          "missing": true,
+          "alt": "frmPractice in the designer, with the white Round over box picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the **frmPractice.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 2,
+            "say": "Click a white part of the Round over box that has no words on it."
+           },
+           {
+            "n": 3,
+            "say": "Press Ctrl and C together."
+           }
+          ]
+         },
+         "id": "3-3.1",
+         "n": 1
+        },
+        {
+         "do": "Click a white part of the Round over box that has no words on it.",
+         "see": "The Properties window shows pnlRoundOver at the top.",
+         "wrong": [
+          [
+           "You cannot see the white Round over box on frmPractice",
+           "Another control is covering it. Right-click the control that covers the box, then click **Send to Back**. The Round over box comes into view."
+          ]
+         ],
+         "id": "3-3.2",
+         "n": 2
+        },
+        {
+         "do": "Press Ctrl and C together.",
+         "see": "Nothing changes on the screen. That is normal: Visual Studio 2019 has copied the control and everything on it.",
+         "id": "3-3.3",
+         "n": 3
+        },
+        {
+         "do": "Click the **frmLitter.cs [Design]** tab at the top of the editor.",
+         "see": "frmLitter shows again, with the header strip.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter with the pasted Round over box in the middle",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click the **frmLitter.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 5,
+            "say": "Click the title bar of frmLitter."
+           },
+           {
+            "n": 6,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 7,
+            "say": "Triple-click the box beside **Location** in the Properties window."
+           },
+           {
+            "n": 8,
+            "say": "Type `180, 120`"
+           },
+           {
+            "n": 9,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "3-3.4",
+         "n": 4
+        },
+        {
+         "do": "Click the title bar of frmLitter.",
+         "see": "The Properties window shows frmLitter at the top.",
+         "id": "3-3.5",
+         "n": 5
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The white Round over box appears on frmLitter. The Properties window shows pnlRoundOver.",
+         "wrong": [
+          [
+           "The pasted box landed inside another control",
+           "Press Ctrl and Z together to undo the paste. Click the title bar of frmLitter, then press Ctrl and V together again."
+          ]
+         ],
+         "id": "3-3.6",
+         "n": 6
+        },
+        {
+         "do": "Triple-click the box beside **Location** in the Properties window.",
+         "see": "The numbers in the box turn blue.",
+         "id": "3-3.7",
+         "n": 7
+        },
+        {
+         "do": "Type `180, 120`",
+         "see": "The box shows `180, 120`.",
+         "id": "3-3.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The Round over box moves to the middle of frmLitter, below the header strip.",
+         "id": "3-3.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Change the title and the instruction on the header strip",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the header strip says Leave No Trace and tells the player what to do."
+      },
+      {
+       "p": "The copied strip still has the practice game's words. You change its title and its instruction for Leave No Trace."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the title at the left of the header strip.",
+         "see": "The Properties window shows lblTitle at the top.",
+         "img": {
+          "missing": true,
+          "alt": "The header strip on frmLitter, with lblTitle picked and its Text box in the Properties window",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the title at the left of the header strip."
+           },
+           {
+            "n": 2,
+            "say": "Triple-click the box beside **Text** in the Properties window."
+           },
+           {
+            "n": 3,
+            "say": "Type `Slieve Meelmore - Leave No Trace`"
+           },
+           {
+            "n": 4,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "3-4.1",
+         "n": 1
+        },
+        {
+         "do": "Triple-click the box beside **Text** in the Properties window.",
+         "see": "The title's words turn blue.",
+         "id": "3-4.2",
+         "n": 2
+        },
+        {
+         "do": "Type `Slieve Meelmore - Leave No Trace`",
+         "see": "The box shows `Slieve Meelmore - Leave No Trace`.",
+         "id": "3-4.3",
+         "n": 3
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The title on the header strip says **Slieve Meelmore - Leave No Trace**.",
+         "id": "3-4.4",
+         "n": 4
+        },
+        {
+         "do": "Click the instruction under the title.",
+         "see": "The Properties window shows lblInstruction at the top.",
+         "img": {
+          "missing": true,
+          "alt": "The header strip on frmLitter, with lblInstruction picked and its Text box in the Properties window",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Click the instruction under the title."
+           },
+           {
+            "n": 6,
+            "say": "Triple-click the box beside **Text** in the Properties window."
+           },
+           {
+            "n": 7,
+            "say": "Type `Use the arrow keys to walk your avatar and pick up all 8 pieces of litter. Keep away from the sheep.`"
+           },
+           {
+            "n": 8,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "3-4.5",
+         "n": 5
+        },
+        {
+         "do": "Triple-click the box beside **Text** in the Properties window.",
+         "see": "The instruction's words turn blue.",
+         "id": "3-4.6",
+         "n": 6
+        },
+        {
+         "do": "Type `Use the arrow keys to walk your avatar and pick up all 8 pieces of litter. Keep away from the sheep.`",
+         "see": "The box shows the new instruction.",
+         "id": "3-4.7",
+         "n": 7
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The instruction on the header strip shows the new words.",
+         "id": "3-4.8",
+         "n": 8
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Add the play area, the field, the strip, the button, the avatar and the 3 Timers",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmLitter has every control that Leave No Trace needs, except the litter and the sheep."
+      },
+      {
+       "p": "The code makes the 8 pieces of litter and the 3 sheep itself in stage 4, so you do not drop them by hand."
+      },
+      {
+       "p": "Add the controls in the order of the table. pnlPlay goes first. It is a [[panel|6]], and pnlField sits on it. The strip, the button and the avatar sit on pnlField."
+      },
+      {
+       "p": "pnlPlay covers the Round over box in the designer. This is normal: the code brings the Round over box to the front when a round ends."
+      },
+      {
+       "p": "A Timer never shows on the window. When you drop a Timer on the form, it appears in the grey strip under the form. Its [[Interval|15]] is how long it waits, in thousandths of a second, so 20 is 0.02 seconds."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Panel",
+          "name": "pnlPlay",
+          "settings": [
+           "Location = 0, 56",
+           "Size = 1000, 604"
+          ],
+          "note": "Drop the Panel near the bottom left corner of frmLitter, outside the white Round over box.",
+          "then": "pnlPlay covers the Round over box."
+         },
+         {
+          "toolbox": "Panel",
+          "name": "pnlField",
+          "settings": [
+           "Location = 12, 8",
+           "Size = 976, 588",
+           "BackColor = 227, 241, 228",
+           "BackgroundImageLayout = Stretch"
+          ],
+          "note": "Drop the Panel on pnlPlay.",
+          "then": "pnlField fills nearly all of pnlPlay, in light green. The code puts the picture of the field on it."
+         },
+         {
+          "toolbox": "Panel",
+          "name": "pnlStrip",
+          "settings": [
+           "Location = 616, 0",
+           "Size = 360, 72",
+           "BackColor = 38, 50, 56"
+          ],
+          "note": "Drop the Panel on pnlField, near its top right corner.",
+          "then": "A small dark strip sits in the top right corner of pnlField."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblGot",
+          "settings": [
+           "AutoSize = False",
+           "Location = 10, 6",
+           "Size = 240, 28",
+           "Font = Segoe UI Semibold, 11pt",
+           "ForeColor = 255, 255, 255",
+           "Text = Litter picked up: 0 of 8"
+          ],
+          "note": "Drop the Label on pnlStrip."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblTime",
+          "settings": [
+           "AutoSize = False",
+           "Location = 10, 38",
+           "Size = 240, 28",
+           "Font = Segoe UI Semibold, 11pt",
+           "ForeColor = 255, 255, 255",
+           "Text = Seconds left: 45"
+          ],
+          "note": "Drop the Label on pnlStrip."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picHeart1",
+          "settings": [
+           "Location = 250, 20",
+           "Size = 32, 32",
+           "SizeMode = Zoom"
+          ],
+          "note": "Drop the PictureBox on pnlStrip."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picHeart2",
+          "settings": [
+           "Location = 284, 20",
+           "Size = 32, 32",
+           "SizeMode = Zoom"
+          ],
+          "note": "Drop the PictureBox on pnlStrip."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picHeart3",
+          "settings": [
+           "Location = 318, 20",
+           "Size = 32, 32",
+           "SizeMode = Zoom"
+          ],
+          "note": "Drop the PictureBox on pnlStrip.",
+          "then": "The 3 hearts sit in a row at the right of the dark strip. They stay empty until the code gives them the heart."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnGo",
+          "settings": [
+           "Location = 388, 266",
+           "Size = 200, 56",
+           "Text = Start walking",
+           "Font = Segoe UI Semibold, 11pt",
+           "BackColor = 242, 183, 5",
+           "ForeColor = 38, 50, 56",
+           "FlatStyle = Flat"
+          ],
+          "note": "Drop the Button on pnlField, in the middle."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picPlayer",
+          "settings": [
+           "Location = 16, 266",
+           "Size = 56, 56",
+           "SizeMode = Zoom",
+           "BackColor = Transparent"
+          ],
+          "note": "Drop the PictureBox on pnlField, near its left edge. Then type `Transparent` in the box beside BackColor and press Enter, so no box shows behind the avatar.",
+          "then": "picPlayer stays empty until the code gives it the player's avatar."
+         },
+         {
+          "toolbox": "Timer",
+          "name": "tmrGame",
+          "settings": [
+           "Interval = 20"
+          ],
+          "then": "tmrGame sits in the grey strip under the form."
+         },
+         {
+          "toolbox": "Timer",
+          "name": "tmrClock",
+          "settings": [
+           "Interval = 1000"
+          ],
+          "then": "tmrClock sits in the grey strip under the form."
+         },
+         {
+          "toolbox": "Timer",
+          "name": "tmrDone",
+          "settings": [
+           "Interval = 900"
+          ],
+          "then": "tmrDone sits in the grey strip under the form."
+         }
+        ],
+        "done": {
+         "see": "The dark header strip along the top of frmLitter. Under it, a light green field fills the window. A small dark strip sits in its top right corner, with the 2 labels and 3 empty hearts. Start walking is in the middle, and the empty avatar box is at the left. The 3 Timers sit in the grey strip under the form.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter in the designer with every control from the table on it, and the 3 Timers in the grey strip under the form",
+          "w": 800,
+          "h": 450,
+          "at": []
+         }
+        }
+       }
+      },
+      {
+       "box": {
+        "title": "How to find a control in the Toolbox",
+        "text": "The Toolbox is down the left side of Visual Studio 2019. Click the search box at the top of the Toolbox, then type the control's name, such as `PictureBox`. The control shows in the list under the search box.",
+        "fold": true
+       }
+      }
+     ],
+     "id": "5"
+    }
+   ],
+   "id": "3"
+  },
+  {
+   "title": "Write the game code, one method at a time",
+   "screens": [
+    {
+     "title": "Copy the chapter 9 fields and methods into frmLitter.cs",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmLitter has the same score, Round over and Back to the map code as your practice game."
+      },
+      {
+       "p": "Every game form has the same 3 fields and the same 8 methods from chapter 9. You typed and tested them in frmPractice, so here you copy them."
+      },
+      {
+       "p": "A [[red underline|35]] comes and goes as you work through this stage. This is normal: by the end of the stage, every red underline has gone."
+      },
+      {
+       "code": {
+        "id": "c13-patfields",
+        "kind": "copy",
+        "title": "The game-form fields from chapter 9",
+        "lang": "cs",
+        "taught": "09",
+        "why": "The 3 fields are the same in every game form, and you typed them in chapter 9. Only the number in `gameNumber` changes. The places on the map are numbered from 0, so Leave No Trace, the third place, is number 2.",
+        "text": "// ---------- the game-form fields from chapter 9 ----------\nprivate int gameNumber = 2;      // Leave No Trace is place 2\nprivate GameResult result;       // made when the round ends\nprivate bool finished = false;   // true once the result is kept",
+        "partLines": [
+         [
+          1,
+          4,
+          "The 3 game-form fields",
+          "`gameNumber` is the game's place number on the map. `result` holds the score and the feedback once the round ends. `finished` turns true once the result is kept."
+         ]
+        ],
+        "wordMarks": [
+         [
+          4,
+          8,
+          12,
+          13
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmLitter.cs** tab at the top of the editor, the one without [Design].",
+         "see": "The code of frmLitter shows, with `frmLitter_Load` near the bottom.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter.cs in the code editor, with the 3 pasted fields under the class line",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the **frmLitter.cs** tab at the top of the editor, the one without [Design]."
+           },
+           {
+            "n": 2,
+            "say": "Click at the end of the `{` under `public partial class frmLitter : Form`."
+           },
+           {
+            "n": 3,
+            "say": "Press Enter."
+           },
+           {
+            "n": 5,
+            "say": "Press Ctrl and V together."
+           }
+          ]
+         },
+         "id": "4-1.1",
+         "n": 1
+        },
+        {
+         "do": "Click at the end of the `{` under `public partial class frmLitter : Form`.",
+         "see": "The flashing cursor is after the `{`.",
+         "id": "4-1.2",
+         "n": 2
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the `{`.",
+         "id": "4-1.3",
+         "n": 3
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c13-patfields",
+         "id": "4-1.4",
+         "n": 4
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The 3 fields appear under the `{`, with a comment line above them that says they come from chapter 9.",
+         "id": "4-1.5",
+         "n": 5
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c13-patmethods",
+        "kind": "copy",
+        "title": "The game-form methods from chapter 9",
+        "lang": "cs",
+        "taught": "09",
+        "why": "The 8 methods are the same in every game form, and you typed and tested them in chapter 9. Only the question asked when the window closes names Leave No Trace.",
+        "text": "// ---------- the game-form methods from chapter 9 ----------\n\n// Keeps the result on the map, even if the window is then closed\nprivate void KeepResult()\n{\n    Expedition.Finish(gameNumber, result);\n    finished = true;\n    lblScore.Text = \"Points: \" + result.Score;\n}\n\n// Fills in the Round over panel and brings it to the front\nprivate void ShowRoundOver()\n{\n    lblRoundScore.Text = \"You scored \" + result.Score\n        + \" out of 100 points.\";\n    lblWellList.Text = ListText(result.WentWell,\n        \"thing that went well\", \"things that went well\");\n    lblWrongList.Text = ListText(result.WentWrong,\n        \"thing that went wrong\", \"things that went wrong\");\n    if (result.Score >= 60) Sound.Play(\"win.wav\");\n    else Sound.Play(\"lose.wav\");\n    pnlRoundOver.Visible = true;\n    pnlRoundOver.BringToFront();\n}\n\n// Up to 3 lines from a list, then how many more there are\nprivate string ListText(List<string> lines, string one, string many)\n{\n    if (lines.Count == 0) return \"Nothing this time.\";\n    string text = \"\";\n    for (int i = 0; i < lines.Count && i < 3; i++)\n    {\n        text = text + \"- \" + lines[i] + Environment.NewLine;\n    }\n    int more = lines.Count - 3;\n    if (more == 1) text = text + \"And 1 more \" + one + \".\";\n    if (more > 1) text = text + \"And \" + more + \" more \" + many + \".\";\n    return text;\n}\n\n// Back to the map: closing the window runs FormClosing\nprivate void btnBack_Click(object sender, EventArgs e)\n{\n    this.Close();\n}\n\n// The Round over panel's Back to the map button\nprivate void btnDone_Click(object sender, EventArgs e)\n{\n    this.Close();\n}\n\n// Runs as the window closes, by Back, by Done or by the X\nprivate void frmLitter_FormClosing(object sender,\n    FormClosingEventArgs e)\n{\n    if (finished) return;    // a finished round closes at once\n    DialogResult answer = MessageBox.Show(\"Leave Leave No Trace? It \"\n        + \"will score nothing, but you can come back and climb it \"\n        + \"again.\", \"Summit Ready\", MessageBoxButtons.YesNo);\n    if (answer == DialogResult.No) e.Cancel = true;   // stay\n}\n\n// Shows the speaker picture that matches the sound being on or off\nprivate void ShowSpeaker()\n{\n    string icon = \"icon-speaker-on-64.png\";\n    if (Sound.Muted) icon = \"icon-speaker-muted-64.png\";\n    picSound.Image = Files.Picture(\"Icons\", icon);\n}\n\n// The speaker picture turns the sound off, or back on\nprivate void picSound_Click(object sender, EventArgs e)\n{\n    Sound.Muted = !Sound.Muted;\n    ShowSpeaker();\n}",
+        "partLines": [
+         [
+          1,
+          9,
+          "KeepResult",
+          "KeepResult tells the map that the round has ended, and hands it the result. `finished` turns true, and Points shows the final score."
+         ],
+         [
+          12,
+          24,
+          "ShowRoundOver",
+          "ShowRoundOver fills in the Round over box and plays the win or lose sound. Then it shows the Round over box in front of everything else."
+         ],
+         [
+          27,
+          39,
+          "ListText",
+          "ListText makes the words for What went well or What went wrong. It gives up to 3 lines, then a line that counts the rest."
+         ],
+         [
+          42,
+          45,
+          "btnBack_Click",
+          "**Back to the map** on the header strip closes the window. Closing the window runs FormClosing."
+         ],
+         [
+          48,
+          51,
+          "btnDone_Click",
+          "**Back to the map** in the Round over box closes the window in the same way."
+         ],
+         [
+          54,
+          62,
+          "frmLitter_FormClosing",
+          "If the round is not finished, a message asks the player whether to leave. Clicking **No** sets `e.Cancel` to true, which keeps the window open."
+         ],
+         [
+          65,
+          70,
+          "ShowSpeaker",
+          "ShowSpeaker shows the speaker picture that matches the sound: on, or muted."
+         ],
+         [
+          73,
+          77,
+          "picSound_Click",
+          "Clicking the speaker picture turns the sound off, or back on. Then it shows the matching picture."
+         ]
+        ],
+        "wordMarks": [
+         [
+          22,
+          17,
+          24,
+          23
+         ],
+         [
+          31,
+          47,
+          49,
+          26
+         ],
+         [
+          31,
+          36,
+          38,
+          30
+         ],
+         [
+          23,
+          17,
+          29,
+          34
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmLitter_Load`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter.cs, with the 8 pasted methods under frmLitter_Load",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 6,
+            "say": "Click at the end of the `}` that closes `frmLitter_Load`."
+           },
+           {
+            "n": 7,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 9,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 10,
+            "say": "Press Ctrl and S together."
+           }
+          ]
+         },
+         "id": "4-1.6",
+         "n": 6
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-1.7",
+         "n": 7
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c13-patmethods",
+         "id": "4-1.8",
+         "n": 8
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The 8 methods appear under `frmLitter_Load`, with a comment line above them that says they come from chapter 9.",
+         "id": "4-1.9",
+         "n": 9
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `frmLitter.cs` on the tab at the top of the editor disappears.",
+         "id": "4-1.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Connect Back to the map and the Round over box's button to their methods",
+     "blocks": [
+      {
+       "p": "By the end of this screen, both **Back to the map** buttons on frmLitter close the window."
+      },
+      {
+       "p": "A pasted method does nothing until you connect it to an event, such as a click. A pasted control keeps its name, but its events may not come with it. So you check each event in the Properties window, and connect it."
+      },
+      {
+       "p": "You connect each event with the small arrow beside it. Do not double-click the box beside the event, because double-clicking makes a second, empty method."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Shift and F7 together.",
+         "see": "The designer shows frmLitter.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter in the designer, with Back to the map picked on the header strip",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Press Shift and F7 together."
+           },
+           {
+            "n": 2,
+            "say": "Click **Back to the map** on the header strip."
+           }
+          ]
+         },
+         "id": "4-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click **Back to the map** on the header strip.",
+         "see": "The Properties window shows btnBack at the top.",
+         "id": "4-2.2",
+         "n": 2
+        },
+        {
+         "do": "Click the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists the events of btnBack.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of btnBack, with the list open beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 3,
+            "say": "Click the lightning bolt at the top of the Properties window."
+           },
+           {
+            "n": 4,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 5,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 6,
+            "say": "Click `btnBack_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "wrong": [
+          [
+           "`btnBack_Click` is already in the box beside Click",
+           "The paste kept the event, so there is nothing to connect. Go on to btnDone."
+          ]
+         ],
+         "id": "4-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list drops down with the methods that can handle a click, including `btnBack_Click`.",
+         "id": "4-2.5",
+         "n": 5
+        },
+        {
+         "do": "Click `btnBack_Click` in the list.",
+         "see": "The box beside Click shows `btnBack_Click`.",
+         "wrong": [
+          [
+           "Visual Studio 2019 made a new method called `btnBack_Click_1`",
+           "You double-clicked the box. Click the arrow beside Click and pick `btnBack_Click`. Then, in `frmLitter.cs`, delete the empty method `btnBack_Click_1`, from its first line down to its `}`."
+          ]
+         ],
+         "id": "4-2.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "p": "The Round over box's **Back to the map** button is called btnDone. pnlPlay covers btnDone in the designer. So you pick btnDone from the list at the top of the Properties window."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the arrow at the right end of the box at the very top of the Properties window.",
+         "see": "A list of every control on frmLitter drops down.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window, with the list of every control open at the top",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click the arrow at the right end of the box at the very top of the Properties window."
+           },
+           {
+            "n": 8,
+            "say": "Click **btnDone** in the list."
+           }
+          ]
+         },
+         "id": "4-2.7",
+         "n": 7
+        },
+        {
+         "do": "Click **btnDone** in the list.",
+         "see": "The Properties window shows the events of btnDone.",
+         "id": "4-2.8",
+         "n": 8
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of btnDone, with btnDone_Click beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 10,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 11,
+            "say": "Click `btnDone_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-2.9",
+         "n": 9
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-2.10",
+         "n": 10
+        },
+        {
+         "do": "Click `btnDone_Click` in the list.",
+         "see": "The box beside Click shows `btnDone_Click`.",
+         "id": "4-2.11",
+         "n": 11
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Connect the speaker picture and the closing of the window, then build",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the speaker picture and the window's close button (the X) both work, and your project builds with no errors."
+      },
+      {
+       "p": "The speaker picture and the closing of the window need connecting too, in the same way."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the speaker picture on the header strip.",
+         "see": "The Properties window shows the events of picSound.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of picSound, with picSound_Click beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the speaker picture on the header strip."
+           },
+           {
+            "n": 2,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 3,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 4,
+            "say": "Click `picSound_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-3.1",
+         "n": 1
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-3.2",
+         "n": 2
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-3.3",
+         "n": 3
+        },
+        {
+         "do": "Click `picSound_Click` in the list.",
+         "see": "The box beside Click shows `picSound_Click`.",
+         "id": "4-3.4",
+         "n": 4
+        },
+        {
+         "do": "Click the title bar of frmLitter.",
+         "see": "The Properties window shows the events of frmLitter.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of frmLitter, with frmLitter_FormClosing beside FormClosing",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Click the title bar of frmLitter."
+           },
+           {
+            "n": 6,
+            "say": "Click the box beside **FormClosing**. Scroll down the list a little if you cannot see it."
+           },
+           {
+            "n": 7,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 8,
+            "say": "Click `frmLitter_FormClosing` in the list."
+           }
+          ]
+         },
+         "id": "4-3.5",
+         "n": 5
+        },
+        {
+         "do": "Click the box beside **FormClosing**. Scroll down the list a little if you cannot see it.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-3.6",
+         "n": 6
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "The list shows one method, `frmLitter_FormClosing`.",
+         "id": "4-3.7",
+         "n": 7
+        },
+        {
+         "do": "Click `frmLitter_FormClosing` in the list.",
+         "see": "The box beside FormClosing shows `frmLitter_FormClosing`.",
+         "id": "4-3.8",
+         "n": 8
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "missing": true,
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows errors",
+           "Double-click the first error in the Error List. Visual Studio 2019 jumps to the line with the error. Check that line letter by letter against the code in this chapter."
+          ]
+         ],
+         "id": "4-3.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Type the Leave No Trace fields",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmLitter has the variables that remember the litter, the sheep and the hearts. They also remember the keys held down, the score and the time."
+      },
+      {
+       "p": "These variables are called [[fields|4]]. They sit at the top of the class, outside every method, so every method in the form can use them."
+      },
+      {
+       "p": "Every field below is new in this chapter, so you type them all. They come in 2 blocks, one for the litter, sheep and hearts, and one for the keys, score and time."
+      },
+      {
+       "code": {
+        "id": "c13-fields-things",
+        "kind": "type",
+        "title": "The fields for the litter, the sheep and the hearts",
+        "lang": "cs",
+        "text": "// ---------- Leave No Trace ----------\nprivate string[] litterFiles = { \"litter-beverage-box.png\",\n    \"litter-canned-food.png\", \"litter-cup-with-straw.png\",\n    \"litter-newspaper.png\", \"litter-red-apple.png\",\n    \"litter-shopping-bags.png\", \"litter-sweet.png\" };\nprivate PictureBox[] litter = new PictureBox[8];\nprivate PictureBox[] sheep = new PictureBox[3];\nprivate int[] dx = { 3, -2, 2 };     // each sheep's step across\nprivate int[] dy = { 2, 3, -3 };     // each sheep's step down\nprivate PictureBox[] hearts = new PictureBox[3];\nprivate Image heart;\nprivate Image greyHeart;             // a faded copy of the heart",
+        "partLines": [
+         [
+          2,
+          5,
+          "The litter pictures",
+          "`litterFiles` is an array of 7 file names, one for each litter picture in the Litter folder. The `{ }` after the `=` fill the array straight away."
+         ],
+         [
+          6,
+          7,
+          "The litter and the sheep",
+          "`litter` has room for 8 PictureBoxes, and `sheep` for 3. The code fills them when the window opens."
+         ],
+         [
+          8,
+          9,
+          "How each sheep moves",
+          "Every 0.02 seconds, each sheep moves `dx` pixels across and `dy` pixels down. The first sheep moves 3 across and 2 down each time. A minus number moves left, or up."
+         ],
+         [
+          10,
+          12,
+          "The hearts",
+          "`hearts` holds the 3 heart PictureBoxes. `heart` is the heart picture, and `greyHeart` is a faded copy for a lost life."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          12
+         ]
+        ],
+        "typed": 11,
+        "wordMarks": [
+         [
+          2,
+          8,
+          16,
+          5
+         ],
+         [
+          6,
+          8,
+          18,
+          7
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the line `private bool finished = false;   // true once the result is kept`",
+         "see": "The flashing cursor is at the end of the comment.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter.cs, with the first block of Leave No Trace fields typed under the chapter 9 fields",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the line `private bool finished = false;   // true once the result is kept`"
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-4.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under that line. The flashing cursor is on the new empty line.",
+         "id": "4-4.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The fields are under the chapter 9 fields, with the comment line above them. No line has a red underline.",
+         "id": "4-4.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c13-fields-play",
+        "kind": "type",
+        "title": "The fields for the play",
+        "lang": "cs",
+        "text": "private bool goUp, goDown, goLeft, goRight;   // keys held down\nprivate int got = 0;                 // litter picked up\nprivate int bumps = 0;               // times a sheep knocked you over\nprivate int secondsLeft = 45;\nprivate int safeTicks = 0;           // 75 ticks of 20 ms is 1.5 s\nprivate Random random = new Random();",
+        "partLines": [
+         [
+          1,
+          1,
+          "The keys held down",
+          "One line makes 4 bool fields. Each one is true while its arrow key is held down."
+         ],
+         [
+          2,
+          4,
+          "The score and the time",
+          "`got` counts the litter picked up, and `bumps` counts the times a sheep knocked you over. `secondsLeft` starts at 45."
+         ],
+         [
+          5,
+          6,
+          "Safety, and chance",
+          "`safeTicks` counts down the safe time after a bump. 75 ticks of 0.02 seconds is 1.5 seconds. `random` gives the numbers by chance that place the litter."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          6
+         ]
+        ],
+        "typed": 6,
+        "wordMarks": [
+         [
+          1,
+          8,
+          12,
+          13
+         ],
+         [
+          6,
+          8,
+          14,
+          18
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under `private Image greyHeart;`.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter.cs, with the second block of Leave No Trace fields typed",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 5,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-4.4",
+         "n": 4
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The 6 new lines are under the first block of fields. No line has a red underline.",
+         "id": "4-4.5",
+         "n": 5
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Fill in frmLitter_Load, which sets up the field when the window opens",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmLitter shows the field, the avatar and the 3 hearts as the window opens."
+      },
+      {
+       "p": "frmLitter_Load is the empty method you made in stage 3. It runs once, right before the window first appears. You type the yellow lines inside it now."
+      },
+      {
+       "code": {
+        "id": "c13-load",
+        "kind": "type",
+        "title": "frmLitter_Load",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "private void frmLitter_Load(object sender, EventArgs e)\n{\n    // Runs once, right before the window first appears\n    ShowSpeaker();\n    pnlField.BackgroundImage = Files.Picture(\"\", \"field.jpg\");\n    picPlayer.Image = Files.Picture(\"Avatars\",\n        Expedition.CurrentPlayer.Avatar);\n    heart = Files.Picture(\"Icons\", \"icon-heart-64.png\");\n    if (heart != null)\n    {\n        greyHeart = ToolStripRenderer.CreateDisabledImage(heart);\n    }\n    hearts[0] = picHeart1;\n    hearts[1] = picHeart2;\n    hearts[2] = picHeart3;\n    foreach (PictureBox h in hearts) h.Image = heart;\n    PlaceLitter();\n    PlaceSheep();\n    btnGo.BringToFront();\n}",
+        "partLines": [
+         [
+          1,
+          7,
+          "The speaker, the field and the avatar",
+          "ShowSpeaker, from chapter 9, puts the right speaker picture on the header strip. `Files.Picture` from chapter 2 loads `field.jpg` as the picture behind pnlField. `Expedition.CurrentPlayer` is the player who logged in, so picPlayer shows their own avatar."
+         ],
+         [
+          8,
+          12,
+          "The heart and the grey heart",
+          "`heart` holds the heart picture. If the picture is there, `CreateDisabledImage` makes a faded copy of it. The `if` stops a crash when the heart picture is missing."
+         ],
+         [
+          13,
+          16,
+          "The 3 hearts",
+          "The 3 heart PictureBoxes go into the `hearts` array, so the code can reach them by number. `foreach` gives each one the heart picture."
+         ],
+         [
+          17,
+          20,
+          "Litter, sheep and the button",
+          "PlaceLitter and PlaceSheep put the litter and the sheep in the field. You write them on the next 2 screens. `BringToFront` keeps Start walking in front of any litter or sheep."
+         ]
+        ],
+        "focusLines": [
+         [
+          3,
+          19
+         ]
+        ],
+        "typed": 14,
+        "wordMarks": [
+         [
+          5,
+          4,
+          12,
+          6
+         ],
+         [
+          16,
+          13,
+          23,
+          7
+         ],
+         [
+          16,
+          4,
+          11,
+          32
+         ],
+         [
+          19,
+          10,
+          22,
+          34
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `{` on the line under `private void frmLitter_Load`.",
+         "see": "The flashing cursor is after the `{`.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter.cs, with the yellow lines typed inside frmLitter_Load",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `{` on the line under `private void frmLitter_Load`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-5.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens inside frmLitter_Load.",
+         "id": "4-5.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The yellow lines are inside frmLitter_Load. `PlaceLitter` and `PlaceSheep` have red underlines. This is normal, because you have not written them yet.",
+         "id": "4-5.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "5"
+    },
+    {
+     "title": "Type PlaceLitter, which scatters 8 pieces of litter",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmLitter scatters 8 pieces of litter at random places in the field. None is right beside the avatar or under the dark strip."
+      },
+      {
+       "p": "A piece of litter right beside the start would be too easy, and one under the dark strip could not be seen. So the code picks a random place, and picks again until the place is fair."
+      },
+      {
+       "code": {
+        "id": "c13-placelitter",
+        "kind": "type",
+        "title": "PlaceLitter",
+        "lang": "cs",
+        "why": "You type the loop that finds a fair place, because it is new. The other lines make a PictureBox and set its properties, like the ones you set in stage 3. So they come in the copy.",
+        "text": "// 8 pieces of litter at random places, away from the start point\nprivate void PlaceLitter()\n{\n    Point start = picPlayer.Location;\n    for (int i = 0; i < 8; i++)\n    {\n        PictureBox piece = new PictureBox();\n        piece.Size = new Size(40, 40);\n        piece.SizeMode = PictureBoxSizeMode.Zoom;\n        piece.BackColor = Color.Transparent;\n        piece.Image = Files.Picture(\"Litter\", litterFiles[i % 7]);\n        int x = 0;\n        int y = 0;\n        bool tooClose = true;\n        while (tooClose)\n        {\n            x = random.Next(0, pnlField.Width - 40);\n            y = random.Next(0, pnlField.Height - 40);\n            int across = Math.Abs(x - start.X);\n            int down = Math.Abs(y - start.Y);\n            bool underStrip = x > pnlStrip.Left - 40\n                && y < pnlStrip.Bottom;\n            tooClose = (across < 120 && down < 120) || underStrip;\n        }\n        piece.Location = new Point(x, y);\n        litter[i] = piece;\n        pnlField.Controls.Add(piece);\n    }\n}",
+        "partLines": [
+         [
+          2,
+          6,
+          "The start point, and 8 turns",
+          "`start` is where the avatar stands. The `for` loop runs 8 times, once for each piece."
+         ],
+         [
+          7,
+          11,
+          "A new piece of litter",
+          "Each piece is a new PictureBox, 40 pixels square, with a Transparent background. `i % 7` is the remainder after dividing by 7, so the 8th piece uses the first picture again."
+         ],
+         [
+          12,
+          14,
+          "Get ready to look",
+          "`x` and `y` will hold the place. `tooClose` starts as true, so the loop below runs at least once."
+         ],
+         [
+          15,
+          18,
+          "A random place",
+          "`random.Next` gives a number by chance, anywhere across or down the field. The 40 keeps the whole piece inside the field."
+         ],
+         [
+          19,
+          20,
+          "How far from the start",
+          "`Math.Abs` gives the distance without a minus sign, so `across` and `down` say how far the place is from the start."
+         ],
+         [
+          21,
+          22,
+          "Under the dark strip",
+          "`underStrip` is true when the place is under the dark strip in the top right corner."
+         ],
+         [
+          23,
+          24,
+          "Fair or not",
+          "The place is too close when it is within 120 pixels of the start both across and down. It is unfair under the strip too. If so, the `while` loop goes round again and picks a new place."
+         ],
+         [
+          25,
+          29,
+          "Put the piece down",
+          "The piece goes to the fair place. It is kept in the `litter` array, and `pnlField.Controls.Add` puts it in the field."
+         ]
+        ],
+        "focusLines": [
+         [
+          12,
+          23
+         ]
+        ],
+        "typed": 11,
+        "wordMarks": [
+         [
+          18,
+          40,
+          46,
+          0
+         ],
+         [
+          17,
+          31,
+          39,
+          6
+         ],
+         [
+          7,
+          8,
+          18,
+          7
+         ],
+         [
+          14,
+          8,
+          12,
+          13
+         ],
+         [
+          17,
+          16,
+          27,
+          18
+         ],
+         [
+          19,
+          25,
+          33,
+          19
+         ],
+         [
+          4,
+          4,
+          9,
+          20
+         ],
+         [
+          10,
+          32,
+          43,
+          25
+         ],
+         [
+          5,
+          28,
+          30,
+          26
+         ],
+         [
+          11,
+          60,
+          61,
+          28
+         ],
+         [
+          23,
+          52,
+          54,
+          29
+         ],
+         [
+          22,
+          16,
+          18,
+          30
+         ],
+         [
+          15,
+          8,
+          13,
+          33
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmLitter_Load`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter.cs, with PlaceLitter pasted under frmLitter_Load and the yellow lines typed in it",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `frmLitter_Load`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 4,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 5,
+            "say": "Triple-click the line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it."
+           },
+           {
+            "n": 6,
+            "say": "Type the yellow lines, from `int x = 0;` down to the line that starts `tooClose = (across`. Press Enter at the end of each line."
+           }
+          ]
+         },
+         "id": "4-6.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-6.2",
+         "n": 2
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c13-placelitter",
+         "id": "4-6.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "PlaceLitter appears under frmLitter_Load. One line starts with `// YOU TYPE THIS PART`, and your typing goes there.",
+         "id": "4-6.4",
+         "n": 4
+        },
+        {
+         "do": "Triple-click the line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it.",
+         "see": "The whole line turns blue.",
+         "wrong": [
+          [
+           "The old `// YOU TYPE THIS PART` line is still there after you type",
+           "Click the old `// YOU TYPE THIS PART` line, then press Home. Hold Shift and press End, so the whole line turns blue. Press Delete."
+          ]
+         ],
+         "id": "4-6.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines, from `int x = 0;` down to the line that starts `tooClose = (across`. Press Enter at the end of each line.",
+         "see": "The `while` loop sits between `piece.Image` and `piece.Location`. No line in PlaceLitter has a red underline.",
+         "id": "4-6.6",
+         "n": 6
+        }
+       ]
+      }
+     ],
+     "id": "6"
+    },
+    {
+     "title": "Type PlaceSheep, which puts 3 sheep in the field",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmLitter puts 3 sheep in the field, each in a different part of it."
+      },
+      {
+       "p": "The sheep do not start at random places. Each one has its own start, so they spread out over the field."
+      },
+      {
+       "code": {
+        "id": "c13-placesheep",
+        "kind": "type",
+        "title": "PlaceSheep",
+        "lang": "cs",
+        "text": "// 3 sheep, each starting in a different part of the field\nprivate void PlaceSheep()\n{\n    Point[] starts = { new Point(300, 90), new Point(620, 300),\n        new Point(820, 460) };\n    for (int i = 0; i < 3; i++)\n    {\n        PictureBox one = new PictureBox();\n        one.Size = new Size(64, 64);\n        one.SizeMode = PictureBoxSizeMode.Zoom;\n        one.BackColor = Color.Transparent;\n        one.Image = Files.Picture(\"Litter\", \"sheep.png\");\n        one.Location = starts[i];\n        sheep[i] = one;\n        pnlField.Controls.Add(one);\n    }\n}",
+        "partLines": [
+         [
+          2,
+          5,
+          "The 3 starts",
+          "`starts` is an array of 3 Points, one start for each sheep."
+         ],
+         [
+          6,
+          12,
+          "A new sheep",
+          "The loop runs 3 times. Each sheep is a new PictureBox, 64 pixels square, with the sheep picture."
+         ],
+         [
+          13,
+          17,
+          "Put the sheep down",
+          "Each sheep goes to its start, is kept in the `sheep` array, and is put in the field."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          17
+         ]
+        ],
+        "typed": 12,
+        "wordMarks": [
+         [
+          4,
+          4,
+          11,
+          5
+         ],
+         [
+          15,
+          8,
+          16,
+          6
+         ],
+         [
+          8,
+          8,
+          18,
+          7
+         ],
+         [
+          4,
+          4,
+          9,
+          20
+         ],
+         [
+          11,
+          30,
+          41,
+          25
+         ],
+         [
+          6,
+          28,
+          30,
+          26
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `PlaceLitter`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter.cs, with PlaceSheep typed under PlaceLitter",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `PlaceLitter`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-7.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-7.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "PlaceSheep sits under PlaceLitter. The red underlines in frmLitter_Load have gone.",
+         "id": "4-7.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "7"
+    },
+    {
+     "title": "Type btnGo_Click, which starts the round",
+     "blocks": [
+      {
+       "p": "By the end of this screen, Start walking hides itself and starts the 2 Timers that run the round."
+      },
+      {
+       "p": "A button that is selected (it has the focus) takes the arrow keys for itself, to move between buttons. So Start walking hides, and Back to the map turns off, while the round runs."
+      },
+      {
+       "code": {
+        "id": "c13-go",
+        "kind": "type",
+        "title": "btnGo_Click",
+        "lang": "cs",
+        "text": "// Start walking: the button hides, so no button takes the arrows\nprivate void btnGo_Click(object sender, EventArgs e)\n{\n    btnGo.Visible = false;\n    btnBack.Enabled = false;\n    this.Focus();\n    tmrGame.Start();\n    tmrClock.Start();\n}",
+        "partLines": [
+         [
+          2,
+          5,
+          "No button to take the keys",
+          "Start walking hides. Back to the map is greyed out, so it cannot take the arrow keys either."
+         ],
+         [
+          6,
+          6,
+          "The form listens",
+          "`this.Focus()` gives the focus to the form itself, so the form hears every key."
+         ],
+         [
+          7,
+          9,
+          "Start the Timers",
+          "`tmrGame` is the game loop: it moves everything every 0.02 seconds. `tmrClock` counts down once a second."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          9
+         ]
+        ],
+        "typed": 6,
+        "wordMarks": [
+         [
+          7,
+          4,
+          11,
+          14
+         ],
+         [
+          4,
+          10,
+          17,
+          23
+         ],
+         [
+          5,
+          12,
+          19,
+          24
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `PlaceSheep`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter.cs, with btnGo_Click typed under PlaceSheep",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `PlaceSheep`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-8.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-8.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "btnGo_Click sits under PlaceSheep.",
+         "id": "4-8.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "8"
+    },
+    {
+     "title": "Type frmLitter_KeyDown and frmLitter_KeyUp, which read the arrow keys",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmLitter knows which arrow keys are held down at every moment."
+      },
+      {
+       "p": "Holding a key down does not move the avatar by itself. KeyDown sets a bool to true when a key goes down, and KeyUp sets it back to false when the key is let go. The game loop then moves the avatar for each bool that is true."
+      },
+      {
+       "code": {
+        "id": "c13-keys",
+        "kind": "type",
+        "title": "frmLitter_KeyDown and frmLitter_KeyUp",
+        "lang": "cs",
+        "text": "// A key pressed: the arrows or W A S D set a flag\nprivate void frmLitter_KeyDown(object sender, KeyEventArgs e)\n{\n    // A quick tap still moves one step, even between two ticks\n    bool wasStill = !goUp && !goDown && !goLeft && !goRight;\n    if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W) goUp = true;\n    if (e.KeyCode == Keys.Down || e.KeyCode == Keys.S) goDown = true;\n    if (e.KeyCode == Keys.Left || e.KeyCode == Keys.A) goLeft = true;\n    if (e.KeyCode == Keys.Right || e.KeyCode == Keys.D) goRight = true;\n    if (wasStill && tmrGame.Enabled) MovePlayer();\n}\n\n// A key let go: its flag is cleared\nprivate void frmLitter_KeyUp(object sender, KeyEventArgs e)\n{\n    if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W) goUp = false;\n    if (e.KeyCode == Keys.Down || e.KeyCode == Keys.S) goDown = false;\n    if (e.KeyCode == Keys.Left || e.KeyCode == Keys.A) goLeft = false;\n    if (e.KeyCode == Keys.Right || e.KeyCode == Keys.D)\n    {\n        goRight = false;\n    }\n}",
+        "partLines": [
+         [
+          2,
+          5,
+          "Standing still?",
+          "`wasStill` is true when no key was held down before this one. `!` means not, and `&&` means and."
+         ],
+         [
+          6,
+          9,
+          "Which key",
+          "`e.KeyCode` is the key that went down. `||` means or, so the up arrow or W sets `goUp`. The other 3 lines do the same for down, left and right."
+         ],
+         [
+          10,
+          11,
+          "A quick tap",
+          "A quick tap can start and end between 2 ticks of the game loop. So a key pressed from standing still moves the avatar one step at once, while the round runs."
+         ],
+         [
+          14,
+          23,
+          "A key let go",
+          "KeyUp runs when a key is let go. It sets that key's bool back to false, so the avatar stops."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          23
+         ]
+        ],
+        "typed": 13,
+        "wordMarks": [
+         [
+          2,
+          13,
+          30,
+          10
+         ],
+         [
+          14,
+          13,
+          28,
+          11
+         ],
+         [
+          6,
+          10,
+          17,
+          12
+         ],
+         [
+          5,
+          4,
+          8,
+          13
+         ],
+         [
+          10,
+          20,
+          27,
+          14
+         ],
+         [
+          10,
+          28,
+          35,
+          24
+         ],
+         [
+          6,
+          29,
+          31,
+          29
+         ],
+         [
+          5,
+          26,
+          28,
+          30
+         ],
+         [
+          5,
+          20,
+          25,
+          31
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `btnGo_Click`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter.cs, with frmLitter_KeyDown and frmLitter_KeyUp typed under btnGo_Click",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `btnGo_Click`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-9.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-9.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "`MovePlayer` has a red underline. This is normal, because you have not written MovePlayer yet.",
+         "id": "4-9.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "9"
+    },
+    {
+     "title": "Type tmrGame_Tick and MovePlayer, the game loop and the walking",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmLitter has a game loop that moves the avatar 6 pixels at a time, inside the field."
+      },
+      {
+       "p": "tmrGame ticks every 0.02 seconds, which is 50 times a second. Each tick does 4 small jobs, so everything seems to move smoothly. tmrGame is the [[game loop|17]]."
+      },
+      {
+       "code": {
+        "id": "c13-tick",
+        "kind": "type",
+        "title": "tmrGame_Tick and MovePlayer",
+        "lang": "cs",
+        "text": "// Every 20 ms: move the player, move the sheep, check for hits\nprivate void tmrGame_Tick(object sender, EventArgs e)\n{\n    MovePlayer();\n    MoveSheep();\n    CheckLitter();\n    CheckSheep();\n}\n\n// Moves the player 6 px for each key held, kept inside the field\nprivate void MovePlayer()\n{\n    if (goUp && picPlayer.Top > 0) picPlayer.Top -= 6;\n    if (goDown && picPlayer.Bottom < pnlField.Height)\n    {\n        picPlayer.Top += 6;\n    }\n    if (goLeft && picPlayer.Left > 0) picPlayer.Left -= 6;\n    if (goRight && picPlayer.Right < pnlField.Width)\n    {\n        picPlayer.Left += 6;\n    }\n}",
+        "partLines": [
+         [
+          2,
+          8,
+          "The game loop",
+          "Every tick moves the avatar and the sheep, then checks for litter and for sheep. You write the other 3 methods on the next screens."
+         ],
+         [
+          11,
+          13,
+          "Up",
+          "If up is held and the avatar is not at the top edge, `-= 6` moves it 6 pixels up."
+         ],
+         [
+          14,
+          17,
+          "Down",
+          "If down is held and the avatar's bottom is inside the field, `+= 6` moves it 6 pixels down."
+         ],
+         [
+          18,
+          18,
+          "Left",
+          "Left works in the same way as up, with Left in place of Top."
+         ],
+         [
+          19,
+          23,
+          "Right",
+          "Right works in the same way as down, with Right and Width in place of Bottom and Height."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          23
+         ]
+        ],
+        "typed": 12,
+        "wordMarks": [
+         [
+          14,
+          46,
+          52,
+          0
+         ],
+         [
+          14,
+          37,
+          45,
+          6
+         ],
+         [
+          2,
+          13,
+          25,
+          16
+         ],
+         [
+          13,
+          49,
+          51,
+          27
+         ],
+         [
+          13,
+          13,
+          15,
+          30
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmLitter_KeyUp`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter.cs, with tmrGame_Tick and MovePlayer typed under frmLitter_KeyUp",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `frmLitter_KeyUp`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-10.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-10.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "`MoveSheep`, `CheckLitter` and `CheckSheep` have red underlines. This is normal, because you have not written them yet.",
+         "id": "4-10.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "10"
+    },
+    {
+     "title": "Type MoveSheep, which moves the sheep and turns them at the edges",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the 3 sheep wander across the field and turn round at its edges."
+      },
+      {
+       "p": "Each sheep moves a few pixels across and down on every tick. At an edge, the step flips to the other way."
+      },
+      {
+       "code": {
+        "id": "c13-movesheep",
+        "kind": "type",
+        "title": "MoveSheep",
+        "lang": "cs",
+        "text": "// Moves each sheep; a sheep turns round at an edge\nprivate void MoveSheep()\n{\n    for (int i = 0; i < 3; i++)\n    {\n        sheep[i].Left += dx[i];\n        sheep[i].Top += dy[i];\n        if (sheep[i].Left < 0 || sheep[i].Right > pnlField.Width)\n        {\n            dx[i] = -dx[i];\n        }\n        if (sheep[i].Top < 0 || sheep[i].Bottom > pnlField.Height)\n        {\n            dy[i] = -dy[i];\n        }\n    }\n}",
+        "partLines": [
+         [
+          2,
+          7,
+          "Move each sheep",
+          "The loop runs once for each of the 3 sheep. Each sheep moves `dx` pixels across and `dy` pixels down."
+         ],
+         [
+          8,
+          11,
+          "Turn at the sides",
+          "If the sheep has gone past the left or right edge, `-dx[i]` flips its step, so it walks back the other way."
+         ],
+         [
+          12,
+          17,
+          "Turn at the top and bottom",
+          "The top and bottom edges work in the same way, with `dy`."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          17
+         ]
+        ],
+        "typed": 8,
+        "wordMarks": [
+         [
+          12,
+          59,
+          65,
+          0
+         ],
+         [
+          8,
+          50,
+          58,
+          6
+         ],
+         [
+          4,
+          28,
+          30,
+          26
+         ],
+         [
+          8,
+          30,
+          32,
+          29
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `MovePlayer`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter.cs, with MoveSheep typed under MovePlayer",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `MovePlayer`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-11.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-11.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The red underline under `MoveSheep` in tmrGame_Tick has gone.",
+         "id": "4-11.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "11"
+    },
+    {
+     "title": "Type CheckLitter, which picks up litter the avatar touches",
+     "blocks": [
+      {
+       "p": "By the end of this screen, walking onto a piece of litter picks it up and counts it."
+      },
+      {
+       "p": "Every control has [[Bounds|21]]: the rectangle it fills. Two controls touch when their rectangles overlap."
+      },
+      {
+       "code": {
+        "id": "c13-checklitter",
+        "kind": "type",
+        "title": "CheckLitter",
+        "lang": "cs",
+        "text": "// Touching a piece of litter picks it up\nprivate void CheckLitter()\n{\n    foreach (PictureBox piece in litter)\n    {\n        if (piece.Visible\n            && picPlayer.Bounds.IntersectsWith(piece.Bounds))\n        {\n            piece.Visible = false;\n            got++;\n            lblGot.Text = \"Litter picked up: \" + got + \" of 8\";\n            Sound.Play(\"pickup.wav\");\n            if (got == 8) EndRound();\n        }\n    }\n}",
+        "partLines": [
+         [
+          2,
+          8,
+          "Touching a piece",
+          "`foreach` goes through the 8 pieces. A piece counts only while it is still Visible, and only when the avatar's rectangle overlaps it."
+         ],
+         [
+          9,
+          12,
+          "Pick it up",
+          "The piece hides, `got++` adds 1 to the count, the dark strip shows the new count, and the pickup sound plays."
+         ],
+         [
+          13,
+          16,
+          "All 8",
+          "With all 8 picked up, EndRound ends the round. You write EndRound soon."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          16
+         ]
+        ],
+        "typed": 9,
+        "wordMarks": [
+         [
+          4,
+          13,
+          23,
+          7
+         ],
+         [
+          7,
+          25,
+          31,
+          21
+         ],
+         [
+          7,
+          32,
+          46,
+          22
+         ],
+         [
+          6,
+          18,
+          25,
+          23
+         ],
+         [
+          10,
+          15,
+          17,
+          26
+         ],
+         [
+          7,
+          12,
+          14,
+          30
+         ],
+         [
+          4,
+          4,
+          11,
+          32
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `MoveSheep`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter.cs, with CheckLitter typed under MoveSheep",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `MoveSheep`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-12.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-12.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "`EndRound` has a red underline. This is normal, because you have not written EndRound yet.",
+         "id": "4-12.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "12"
+    },
+    {
+     "title": "Type CheckSheep, which loses a life when a sheep touches the avatar",
+     "blocks": [
+      {
+       "p": "By the end of this screen, a sheep that touches the avatar greys a heart, and the avatar flashes for 1.5 seconds."
+      },
+      {
+       "p": "Without the safe time, a sheep would take all 3 lives in less than a second. It touches the avatar on many ticks in a row."
+      },
+      {
+       "code": {
+        "id": "c13-checksheep",
+        "kind": "type",
+        "title": "CheckSheep",
+        "lang": "cs",
+        "text": "// Touching a sheep loses a life, then 1.5 seconds of safety\nprivate void CheckSheep()\n{\n    if (finished) return;\n    if (safeTicks > 0)\n    {\n        safeTicks--;\n        picPlayer.Visible = safeTicks % 10 < 5 || safeTicks == 0;\n        return;\n    }\n    foreach (PictureBox one in sheep)\n    {\n        if (picPlayer.Bounds.IntersectsWith(one.Bounds))\n        {\n            hearts[bumps].Image = greyHeart;\n            bumps++;\n            Sound.Play(\"bump.wav\");\n            safeTicks = 75;\n            if (bumps == 3) EndRound();\n            return;\n        }\n    }\n}",
+        "partLines": [
+         [
+          2,
+          4,
+          "Not after the end",
+          "Once the round has finished, `return` stops CheckSheep at once."
+         ],
+         [
+          5,
+          10,
+          "The safe time",
+          "While `safeTicks` is above 0, `safeTicks--` takes 1 away on each tick, and no sheep can knock you over. `safeTicks % 10 < 5` is true for 5 ticks, then false for 5, so the avatar flashes."
+         ],
+         [
+          11,
+          17,
+          "Knocked over",
+          "If any sheep touches the avatar, the next heart turns grey, `bumps` goes up by 1, and the bump sound plays."
+         ],
+         [
+          18,
+          23,
+          "Safe for 1.5 seconds",
+          "75 ticks of 0.02 seconds is 1.5 seconds of safety. After 3 bumps, EndRound ends the round. `return` stops the method, so one tick can only take one life."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          23
+         ]
+        ],
+        "typed": 14,
+        "wordMarks": [
+         [
+          11,
+          13,
+          23,
+          7
+         ],
+         [
+          13,
+          22,
+          28,
+          21
+         ],
+         [
+          13,
+          29,
+          43,
+          22
+         ],
+         [
+          8,
+          18,
+          25,
+          23
+         ],
+         [
+          7,
+          17,
+          19,
+          26
+         ],
+         [
+          8,
+          38,
+          39,
+          28
+         ],
+         [
+          8,
+          47,
+          49,
+          29
+         ],
+         [
+          11,
+          4,
+          11,
+          32
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `CheckLitter`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter.cs, with CheckSheep typed under CheckLitter",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `CheckLitter`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-13.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-13.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The red underline under `CheckSheep` in tmrGame_Tick has gone.",
+         "id": "4-13.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "13"
+    },
+    {
+     "title": "Type tmrClock_Tick and EndRound, the clock and the end of the round",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the clock counts down from 45, and the round ends once, whatever ends it."
+      },
+      {
+       "p": "3 things can end the round: all 8 pieces, 3 bumps, or the clock reaching 0. EndRound must work only the first time, even if 2 of them happen on the same tick."
+      },
+      {
+       "code": {
+        "id": "c13-clock",
+        "kind": "type",
+        "title": "tmrClock_Tick and EndRound",
+        "lang": "cs",
+        "text": "// Every second: one less second; at 0 the round ends\nprivate void tmrClock_Tick(object sender, EventArgs e)\n{\n    secondsLeft--;\n    lblTime.Text = \"Seconds left: \" + secondsLeft;\n    if (secondsLeft == 0) EndRound();\n}\n\n// Stops the play, keeps the result, then waits 0.9 seconds\nprivate void EndRound()\n{\n    if (finished) return;          // the round can only end once\n    tmrGame.Stop();\n    tmrClock.Stop();\n    picPlayer.Visible = true;\n    btnBack.Enabled = true;\n    RecordResult();\n    tmrDone.Start();\n}",
+        "partLines": [
+         [
+          2,
+          7,
+          "The clock",
+          "Once a second, `secondsLeft--` takes 1 away, and the dark strip shows the time left. At 0, the round ends."
+         ],
+         [
+          10,
+          12,
+          "Only once",
+          "Once the result is kept, `finished` is true, so a second call to EndRound stops at once."
+         ],
+         [
+          13,
+          16,
+          "Stop the play",
+          "Both Timers stop. The avatar shows, even if it was flashing, and Back to the map works again."
+         ],
+         [
+          17,
+          19,
+          "Keep the result, then wait",
+          "RecordResult keeps the result. `tmrDone` waits 0.9 seconds, so the player sees the last moment before the Round over box."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          19
+         ]
+        ],
+        "typed": 12,
+        "wordMarks": [
+         [
+          13,
+          4,
+          11,
+          14
+         ],
+         [
+          2,
+          13,
+          26,
+          16
+         ],
+         [
+          15,
+          14,
+          21,
+          23
+         ],
+         [
+          16,
+          12,
+          19,
+          24
+         ],
+         [
+          4,
+          15,
+          17,
+          26
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `CheckSheep`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter.cs, with tmrClock_Tick and EndRound typed under CheckSheep",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `CheckSheep`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-14.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-14.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The red underlines under `EndRound` have gone. `RecordResult` has a red underline, and that is normal.",
+         "id": "4-14.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "14"
+    },
+    {
+     "title": "Type tmrDone_Tick and RecordResult, which open the Round over box and work out the score",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmLitter works out the score and opens the Round over box 0.9 seconds after the end."
+      },
+      {
+       "p": "The map needs a score out of 100 for every game. 8 pieces at 10 points each make 80. The time bonus, up to 20, makes the last 20."
+      },
+      {
+       "code": {
+        "id": "c13-record",
+        "kind": "type",
+        "title": "tmrDone_Tick and RecordResult",
+        "lang": "cs",
+        "text": "// Runs 0.9 seconds after the end: the Round over panel opens\nprivate void tmrDone_Tick(object sender, EventArgs e)\n{\n    tmrDone.Stop();\n    ShowRoundOver();\n}\n\n// Works out the score, adds the feedback, then keeps the result\nprivate void RecordResult()\n{\n    int bonus = 0;\n    if (got == 8) bonus = secondsLeft;\n    if (bonus > 20) bonus = 20;\n    result = new GameResult(\"Leave No Trace\", got * 10 + bonus);\n    AddFeedback();\n    KeepResult();\n}",
+        "partLines": [
+         [
+          2,
+          6,
+          "Open the Round over box",
+          "tmrDone ticks once, 0.9 seconds after the end. It stops itself, so it ticks only once, then ShowRoundOver opens the Round over box."
+         ],
+         [
+          9,
+          13,
+          "The bonus",
+          "The bonus is 0, unless all 8 pieces were picked up. Then it is the seconds left, but never more than 20."
+         ],
+         [
+          14,
+          17,
+          "The score",
+          "`got * 10 + bonus` is the score. `new GameResult` from chapter 9 makes the result. AddFeedback writes the feedback, and KeepResult keeps the result for the map."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          17
+         ]
+        ],
+        "typed": 10,
+        "wordMarks": [
+         [
+          4,
+          4,
+          11,
+          14
+         ],
+         [
+          2,
+          13,
+          25,
+          16
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `EndRound`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter.cs, with tmrDone_Tick and RecordResult typed under EndRound",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `EndRound`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-15.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-15.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "`AddFeedback` has a red underline. This is normal, because you have not written AddFeedback yet.",
+         "id": "4-15.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "15"
+    },
+    {
+     "title": "Type AddFeedback, which writes what went well",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmLitter writes what went well into the result."
+      },
+      {
+       "p": "AddFeedback is long, so you type it in 2 parts. This screen has what went well. The next screen adds what went wrong."
+      },
+      {
+       "code": {
+        "id": "c13-feedback",
+        "kind": "type",
+        "title": "AddFeedback",
+        "lang": "cs",
+        "text": "// Writes what went well and what went wrong into the result\nprivate void AddFeedback()\n{\n    if (got == 8)\n    {\n        result.WentWell.Add(\"You picked up all 8 pieces of litter.\");\n        result.WentWell.Add(\"Seconds to spare: \" + secondsLeft + \".\");\n    }\n    else if (got > 0)\n    {\n        result.WentWell.Add(\"You picked up \" + Pieces(got)\n            + \" of litter.\");\n    }\n    if (bumps == 0) result.WentWell.Add(\"No sheep knocked you over.\");\n}",
+        "partLines": [
+         [
+          2,
+          8,
+          "All 8",
+          "With all 8 picked up, 2 lines go under What went well: all 8, and the seconds to spare."
+         ],
+         [
+          9,
+          13,
+          "Some",
+          "`else if` runs only when the first `if` was false. With some litter picked up, one line says how many. Pieces gives the number with the right word. You write Pieces on the next screen."
+         ],
+         [
+          14,
+          15,
+          "No bumps",
+          "If no sheep knocked you over, that goes under What went well too."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          15
+         ]
+        ],
+        "typed": 8
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `RecordResult`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter.cs, with AddFeedback typed under RecordResult",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `RecordResult`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-16.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-16.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "`Pieces` has a red underline. This is normal, because you have not written Pieces yet.",
+         "id": "4-16.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "16"
+    },
+    {
+     "title": "Add what went wrong to AddFeedback, type Pieces, then build",
+     "blocks": [
+      {
+       "p": "By the end of this screen, every method in Leave No Trace is written, and your project builds with no errors."
+      },
+      {
+       "p": "What went wrong goes after the line about no sheep, at the end of AddFeedback."
+      },
+      {
+       "code": {
+        "id": "c13-feedback-wrong",
+        "kind": "type",
+        "title": "AddFeedback, with what went wrong",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// Writes what went well and what went wrong into the result\nprivate void AddFeedback()\n{\n    if (got == 8)\n    {\n        result.WentWell.Add(\"You picked up all 8 pieces of litter.\");\n        result.WentWell.Add(\"Seconds to spare: \" + secondsLeft + \".\");\n    }\n    else if (got > 0)\n    {\n        result.WentWell.Add(\"You picked up \" + Pieces(got)\n            + \" of litter.\");\n    }\n    if (bumps == 0) result.WentWell.Add(\"No sheep knocked you over.\");\n    if (bumps == 3)\n    {\n        result.WentWrong.Add(\"A sheep knocked you over three times.\");\n    }\n    else if (got < 8)\n    {\n        result.WentWrong.Add(\"Time ran out before the hill was \"\n            + \"clean.\");\n    }\n    if (got < 8)\n    {\n        result.WentWrong.Add(\"You left \" + Pieces(8 - got)\n            + \" of litter on the hill.\");\n    }\n    if (bumps == 1)\n    {\n        result.WentWrong.Add(\"A sheep knocked you over once.\");\n    }\n    if (bumps == 2)\n    {\n        result.WentWrong.Add(\"A sheep knocked you over 2 times.\");\n    }\n}",
+        "partLines": [
+         [
+          2,
+          14,
+          "The lines you typed before",
+          "These lines write what went well, as you typed them on the last screen."
+         ],
+         [
+          15,
+          23,
+          "Why the round ended",
+          "After 3 bumps, What went wrong says so. Otherwise, if litter was left, the time ran out."
+         ],
+         [
+          24,
+          28,
+          "Litter left",
+          "If any litter was left, What went wrong says how many pieces."
+         ],
+         [
+          29,
+          37,
+          "One or 2 bumps",
+          "One bump or 2 bumps each get their own line. 3 bumps were already said above."
+         ]
+        ],
+        "focusLines": [
+         [
+          15,
+          35
+         ]
+        ],
+        "typed": 12
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the line `if (bumps == 0) result.WentWell.Add(\"No sheep knocked you over.\");` in AddFeedback.",
+         "see": "The flashing cursor is after the semicolon.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter.cs, with the yellow lines typed at the end of AddFeedback",
+          "w": 800,
+          "h": 400,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the line `if (bumps == 0) result.WentWell.Add(\"No sheep knocked you over.\");` in AddFeedback."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-17.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under that line.",
+         "id": "4-17.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The yellow lines are at the end of AddFeedback, before its last `}`.",
+         "id": "4-17.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "p": "Pieces gives a number with the right word after it: **1 piece**, but **3 pieces**."
+      },
+      {
+       "code": {
+        "id": "c13-pieces",
+        "kind": "type",
+        "title": "Pieces",
+        "lang": "cs",
+        "text": "// \"1 piece\" or \"3 pieces\", so the number always has its thing\nprivate string Pieces(int count)\n{\n    if (count == 1) return \"1 piece\";\n    return count + \" pieces\";\n}",
+        "partLines": [
+         [
+          2,
+          6,
+          "One or more",
+          "If `count` is 1, Pieces gives back **1 piece**. Otherwise it gives back the number and **pieces**."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          6
+         ]
+        ],
+        "typed": 3
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `AddFeedback`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter.cs, with Pieces typed under AddFeedback",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click at the end of the `}` that closes `AddFeedback`."
+           },
+           {
+            "n": 5,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 6,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-17.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-17.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "No line in frmLitter.cs has a red underline.",
+         "id": "4-17.6",
+         "n": 6
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "missing": true,
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows CS0103: The name 'EndRound' does not exist in the current context",
+           "A method's name is spelt one way where you wrote the method, and another way where the code uses it. Check that EndRound is spelt the same everywhere. Capital letters count."
+          ],
+          [
+           "The Error List shows CS0103: The name 'Expedition' does not exist in the current context",
+           "Check that `Expedition.cs` from chapter 6 is in Solution Explorer."
+          ]
+         ],
+         "id": "4-17.7",
+         "n": 7
+        }
+       ]
+      }
+     ],
+     "id": "17"
+    },
+    {
+     "title": "Connect Start walking, the keys and the 3 Timers to their methods",
+     "blocks": [
+      {
+       "p": "By the end of this screen, Start walking, the arrow keys and the 3 Timers all run their methods."
+      },
+      {
+       "p": "btnGo_Click, the 2 key methods and the 3 Tick methods are written, but nothing runs them yet. You connect each event to its method, as you did for Back to the map."
+      },
+      {
+       "p": "The 3 Timers do not show on the form. They sit in the grey strip under the form."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Shift and F7 together.",
+         "see": "The designer shows frmLitter.",
+         "img": {
+          "missing": true,
+          "alt": "frmLitter in the designer, with Start walking picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Press Shift and F7 together."
+           }
+          ]
+         },
+         "id": "4-18.1",
+         "n": 1
+        },
+        {
+         "do": "Click **Start walking** in the middle of the field.",
+         "see": "The Properties window shows btnGo at the top.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of btnGo, with btnGo_Click beside Click",
+          "w": 360,
+          "h": 300,
+          "marks": [
+           {
+            "n": 2,
+            "say": "Click **Start walking** in the middle of the field."
+           },
+           {
+            "n": 3,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 4,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 5,
+            "say": "Click `btnGo_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-18.2",
+         "n": 2
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-18.3",
+         "n": 3
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-18.4",
+         "n": 4
+        },
+        {
+         "do": "Click `btnGo_Click` in the list.",
+         "see": "The box beside Click shows `btnGo_Click`.",
+         "id": "4-18.5",
+         "n": 5
+        },
+        {
+         "do": "Click **tmrGame** in the grey strip under frmLitter.",
+         "see": "The Properties window shows tmrGame at the top.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of tmrGame, with tmrGame_Tick beside Tick",
+          "w": 360,
+          "h": 300,
+          "marks": [
+           {
+            "n": 6,
+            "say": "Click **tmrGame** in the grey strip under frmLitter."
+           },
+           {
+            "n": 7,
+            "say": "Click the box beside **Tick**."
+           },
+           {
+            "n": 8,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 9,
+            "say": "Click `tmrGame_Tick` in the list."
+           }
+          ]
+         },
+         "id": "4-18.6",
+         "n": 6
+        },
+        {
+         "do": "Click the box beside **Tick**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-18.7",
+         "n": 7
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-18.8",
+         "n": 8
+        },
+        {
+         "do": "Click `tmrGame_Tick` in the list.",
+         "see": "The box beside Tick shows `tmrGame_Tick`.",
+         "id": "4-18.9",
+         "n": 9
+        },
+        {
+         "do": "Click **tmrClock** in the grey strip under frmLitter.",
+         "see": "The Properties window shows tmrClock at the top.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of tmrClock, with tmrClock_Tick beside Tick",
+          "w": 360,
+          "h": 300,
+          "marks": [
+           {
+            "n": 10,
+            "say": "Click **tmrClock** in the grey strip under frmLitter."
+           },
+           {
+            "n": 11,
+            "say": "Click the box beside **Tick**."
+           },
+           {
+            "n": 12,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 13,
+            "say": "Click `tmrClock_Tick` in the list."
+           }
+          ]
+         },
+         "id": "4-18.10",
+         "n": 10
+        },
+        {
+         "do": "Click the box beside **Tick**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-18.11",
+         "n": 11
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-18.12",
+         "n": 12
+        },
+        {
+         "do": "Click `tmrClock_Tick` in the list.",
+         "see": "The box beside Tick shows `tmrClock_Tick`.",
+         "id": "4-18.13",
+         "n": 13
+        },
+        {
+         "do": "Click **tmrDone** in the grey strip under frmLitter.",
+         "see": "The Properties window shows tmrDone at the top.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of tmrDone, with tmrDone_Tick beside Tick",
+          "w": 360,
+          "h": 300,
+          "marks": [
+           {
+            "n": 14,
+            "say": "Click **tmrDone** in the grey strip under frmLitter."
+           },
+           {
+            "n": 15,
+            "say": "Click the box beside **Tick**."
+           },
+           {
+            "n": 16,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 17,
+            "say": "Click `tmrDone_Tick` in the list."
+           }
+          ]
+         },
+         "id": "4-18.14",
+         "n": 14
+        },
+        {
+         "do": "Click the box beside **Tick**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-18.15",
+         "n": 15
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-18.16",
+         "n": 16
+        },
+        {
+         "do": "Click `tmrDone_Tick` in the list.",
+         "see": "The box beside Tick shows `tmrDone_Tick`.",
+         "id": "4-18.17",
+         "n": 17
+        },
+        {
+         "do": "Click the title bar of frmLitter.",
+         "see": "The Properties window shows frmLitter at the top.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of frmLitter, with frmLitter_KeyDown beside KeyDown",
+          "w": 360,
+          "h": 300,
+          "marks": [
+           {
+            "n": 18,
+            "say": "Click the title bar of frmLitter."
+           },
+           {
+            "n": 19,
+            "say": "Click the box beside **KeyDown**."
+           },
+           {
+            "n": 20,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 21,
+            "say": "Click `frmLitter_KeyDown` in the list."
+           }
+          ]
+         },
+         "id": "4-18.18",
+         "n": 18
+        },
+        {
+         "do": "Click the box beside **KeyDown**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-18.19",
+         "n": 19
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-18.20",
+         "n": 20
+        },
+        {
+         "do": "Click `frmLitter_KeyDown` in the list.",
+         "see": "The box beside KeyDown shows `frmLitter_KeyDown`.",
+         "id": "4-18.21",
+         "n": 21
+        },
+        {
+         "do": "Click the box beside **KeyUp**, 2 lines below KeyDown.",
+         "see": "A small arrow appears at the right end of the box.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of frmLitter, with frmLitter_KeyUp beside KeyUp",
+          "w": 360,
+          "h": 300,
+          "marks": [
+           {
+            "n": 22,
+            "say": "Click the box beside **KeyUp**, 2 lines below KeyDown."
+           },
+           {
+            "n": 23,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 24,
+            "say": "Click `frmLitter_KeyUp` in the list."
+           }
+          ]
+         },
+         "id": "4-18.22",
+         "n": 22
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-18.23",
+         "n": 23
+        },
+        {
+         "do": "Click `frmLitter_KeyUp` in the list.",
+         "see": "The box beside KeyUp shows `frmLitter_KeyUp`.",
+         "id": "4-18.24",
+         "n": 24
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "missing": true,
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 25,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "id": "4-18.25",
+         "n": 25
+        }
+       ]
+      }
+     ],
+     "id": "18"
+    },
+    {
+     "title": "Open Leave No Trace from the map and play a round",
+     "blocks": [
+      {
+       "p": "By the end of this screen, place number 2 on your map opens Leave No Trace, and you have played a whole round."
+      },
+      {
+       "p": "Your map opens each game with a list of cases in frmMap.cs, one case for each place. Leave No Trace is place number 2, so its case says `case 2:`."
+      },
+      {
+       "code": {
+        "id": "c13-map",
+        "kind": "type",
+        "title": "The case line for Leave No Trace in frmMap.cs",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "case 2: game = new frmLitter(); break;",
+        "partLines": [
+         [
+          1,
+          1,
+          "Open Leave No Trace",
+          "When the player clicks place number 2, `game` becomes a new frmLitter window. `break;` ends this case. The map then opens the window."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          1
+         ]
+        ],
+        "typed": 1
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `frmMap.cs` in Solution Explorer.",
+         "see": "frmMap opens in the designer.",
+         "img": {
+          "missing": true,
+          "alt": "Visual Studio 2019 with frmMap.cs in the code editor. The search box is open and the new case line is typed. frmMap.cs is picked in Solution Explorer on the right",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Double-click `frmMap.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "say": "Press F7."
+           },
+           {
+            "n": 3,
+            "say": "Press Ctrl and F together."
+           },
+           {
+            "n": 4,
+            "say": "Type `each game chapter adds`"
+           },
+           {
+            "n": 5,
+            "say": "Press Escape."
+           },
+           {
+            "n": 6,
+            "say": "Press End."
+           },
+           {
+            "n": 7,
+            "say": "Press Enter."
+           },
+           {
+            "n": 8,
+            "say": "Type `case 2: game = new frmLitter(); break;`"
+           }
+          ]
+         },
+         "id": "4-19.1",
+         "n": 1
+        },
+        {
+         "do": "Press F7.",
+         "see": "The code of frmMap shows.",
+         "id": "4-19.2",
+         "n": 2
+        },
+        {
+         "do": "Press Ctrl and F together.",
+         "see": "A small search box opens at the top right of the code.",
+         "id": "4-19.3",
+         "n": 3
+        },
+        {
+         "do": "Type `each game chapter adds`",
+         "see": "The line `// each game chapter adds its own case below this line` is highlighted.",
+         "id": "4-19.4",
+         "n": 4
+        },
+        {
+         "do": "Press Escape.",
+         "see": "The search box closes. The words you searched for stay highlighted.",
+         "id": "4-19.5",
+         "n": 5
+        },
+        {
+         "do": "Press End.",
+         "see": "The flashing cursor moves to the end of the comment line.",
+         "id": "4-19.6",
+         "n": 6
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the comment line.",
+         "id": "4-19.7",
+         "n": 7
+        },
+        {
+         "do": "Type `case 2: game = new frmLitter(); break;`",
+         "see": "The new line says `case 2: game = new frmLitter(); break;`.",
+         "wrong": [
+          [
+           "The Error List shows CS0152: The switch statement contains multiple cases with the label value '2'",
+           "Your map already uses place number 2 for another game. Change the 2 in the new case line to a place number that your map does not use yet. Then change `gameNumber` in frmLitter.cs to the same number."
+          ]
+         ],
+         "id": "4-19.8",
+         "n": 8
+        },
+        {
+         "do": "Press F5.",
+         "see": "Your game starts and shows the login window.",
+         "img": {
+          "missing": true,
+          "alt": "The login window of your game, with a player's name and password typed in",
+          "w": 640,
+          "h": 400,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Press F5."
+           },
+           {
+            "n": 10,
+            "say": "Log in with a player you registered in chapter 5."
+           }
+          ]
+         },
+         "id": "4-19.9",
+         "n": 9
+        },
+        {
+         "do": "Log in with a player you registered in chapter 5.",
+         "see": "The Welcome screen opens.",
+         "id": "4-19.10",
+         "n": 10
+        },
+        {
+         "do": "Click **Start the expedition**.",
+         "see": "The map opens.",
+         "img": {
+          "missing": true,
+          "alt": "The Welcome screen of your game, with the Start the expedition button",
+          "w": 640,
+          "h": 400,
+          "marks": [
+           {
+            "n": 11,
+            "say": "Click **Start the expedition**."
+           }
+          ]
+         },
+         "id": "4-19.11",
+         "n": 11
+        },
+        {
+         "do": "Click place number 2 on the map, the third place.",
+         "see": "Leave No Trace opens, with your avatar, 8 pieces of litter, 3 sheep and Start walking.",
+         "img": {
+          "missing": true,
+          "alt": "The map, with place number 2 picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 12,
+            "say": "Click place number 2 on the map, the third place."
+           }
+          ]
+         },
+         "id": "4-19.12",
+         "n": 12
+        },
+        {
+         "do": "Play a round: click **Start walking**, then use the arrow keys to pick up the litter until the round ends.",
+         "see": "A moment after the round ends, the Round over box opens.",
+         "img": {
+          "img": "img/ch00-litter.jpg",
+          "alt": "Leave No Trace before Start walking",
+          "w": 803,
+          "h": 549,
+          "marks": [
+           {
+            "n": 13,
+            "x": 2,
+            "y": 13.7,
+            "w": 96,
+            "h": 84,
+            "say": "Play a round: click **Start walking**, then use the arrow keys to pick up the litter until the round ends."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "My avatar will not move",
+           "A control has the focus and is taking the arrow keys. Check that btnGo_Click hides btnGo and greys out btnBack. Then check that KeyPreview is True on frmLitter, and that KeyDown and KeyUp are connected."
+          ],
+          [
+           "The sheep do not move, and the clock does not count down",
+           "Check that the Tick events of tmrGame and tmrClock are connected. Then check that btnGo_Click starts both Timers."
+          ],
+          [
+           "Everything flickers as the sheep move",
+           "Click the title bar of frmLitter, and set DoubleBuffered to True in the Properties window."
+          ],
+          [
+           "There is no field picture, or no hearts",
+           "Check that the Images folder inside bin\\Debug holds `field.jpg`, and that the Icons folder inside it holds `icon-heart-64.png`."
+          ],
+          [
+           "A different game opens, or nothing opens, when you click place number 2",
+           "Check the new line in frmMap.cs. It must say `case 2:` and `new frmLitter()`."
+          ]
+         ],
+         "id": "4-19.13",
+         "n": 13
+        }
+       ]
+      }
+     ],
+     "id": "19"
+    },
+    {
+     "title": "Your turn: give the player 60 seconds",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have changed how long a round lasts, and tested it, on your own."
+      },
+      {
+       "p": "A round of Leave No Trace lasts 45 seconds. Change it so that a round lasts 60 seconds."
+      },
+      {
+       "code": {
+        "id": "c13-turn-time",
+        "kind": "turn",
+        "title": "Give the player 60 seconds",
+        "lang": "cs",
+        "text": "private int secondsLeft = 60;",
+        "task": [
+         "Find the field `secondsLeft` at the top of frmLitter.cs, and change 45 to 60.",
+         "In the designer, change the Text of lblTime so that it says `Seconds left: 60`."
+        ],
+        "test": "Press F5, open Leave No Trace from the map, and look at the dark strip. Then press Start walking.",
+        "expect": "Before the round starts, the dark strip says **Seconds left: 60**. After Start walking, it counts down from 60.",
+        "hint": "Only one line in frmLitter.cs says `secondsLeft = 45`."
+       }
+      },
+      {
+       "p": "When the test passes, change 60 back to 45 in both places, because Leave No Trace is meant to last 45 seconds."
+      }
+     ],
+     "id": "20"
+    },
+    {
+     "title": "Check that Leave No Trace works",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that every part of Leave No Trace works, including the moves it must refuse."
+      },
+      {
+       "p": "Run each test with F5. Tick each test when it passes. The 4 tests marked as moves to refuse must do nothing, and that counts as a pass."
+      },
+      {
+       "check": [
+        {
+         "what": "Press the arrow keys before you press Start walking.",
+         "expect": "control",
+         "how": "Open Leave No Trace from the map and press each arrow key. The avatar must not move, and the clock must not start.",
+         "fix": "Check the last line of frmLitter_KeyDown. It must test `tmrGame.Enabled`. Then check that only btnGo_Click starts tmrGame.",
+         "id": "4-21.t1"
+        },
+        {
+         "what": "Press Start walking, then walk with the arrow keys, and with W, A, S and D.",
+         "expect": "allowed",
+         "how": "Start walking disappears, the clock counts down, and the avatar walks with both sets of keys.",
+         "must": "Must happen",
+         "fix": "Check btnGo_Click, frmLitter_KeyDown and frmLitter_KeyUp against their yellow lines. Then check that KeyPreview is True on frmLitter.",
+         "id": "4-21.t2"
+        },
+        {
+         "what": "Walk the avatar into each edge of the field.",
+         "expect": "control",
+         "how": "Hold an arrow key until the avatar reaches the edge. The avatar must stop at the edge, and must never leave the field.",
+         "fix": "Check each `if` in MovePlayer. Each one must test an edge as well as its key.",
+         "id": "4-21.t3"
+        },
+        {
+         "what": "Click Back to the map while you are walking.",
+         "expect": "control",
+         "how": "Back to the map must be greyed out, and clicking it must do nothing.",
+         "fix": "Check the line `btnBack.Enabled = false;` in btnGo_Click.",
+         "id": "4-21.t4"
+        },
+        {
+         "what": "Walk onto a piece of litter.",
+         "expect": "allowed",
+         "how": "The piece disappears, the pickup sound plays, and the dark strip says **Litter picked up: 1 of 8**.",
+         "must": "Must happen",
+         "fix": "Check CheckLitter against its yellow lines. Then check that tmrGame_Tick calls CheckLitter.",
+         "id": "4-21.t5"
+        },
+        {
+         "what": "Walk into a sheep, then stay beside it.",
+         "expect": "control",
+         "how": "One heart turns grey and the avatar flashes. For 1.5 seconds, the sheep must not grey a second heart.",
+         "fix": "Check the line `safeTicks = 75;` in CheckSheep, and the `if (safeTicks > 0)` part above it.",
+         "id": "4-21.t6"
+        },
+        {
+         "what": "Pick up all 8 pieces with 30 or more seconds left.",
+         "expect": "allowed",
+         "how": "A moment later, the Round over box says **You scored 100 out of 100 points.**",
+         "must": "Must happen",
+         "fix": "Check RecordResult. The bonus must be the seconds left, but never more than 20.",
+         "id": "4-21.t7"
+        },
+        {
+         "what": "Let a sheep knock you over 3 times.",
+         "expect": "allowed",
+         "how": "The round ends, and What went wrong says **A sheep knocked you over three times.**",
+         "must": "Must happen",
+         "fix": "Check the line `if (bumps == 3) EndRound();` in CheckSheep, then the `if (bumps == 3)` part of AddFeedback.",
+         "id": "4-21.t8"
+        },
+        {
+         "what": "Stand still and let the clock run out.",
+         "expect": "allowed",
+         "how": "The round ends at 0 seconds, and What went wrong says **Time ran out before the hill was clean.**",
+         "must": "Must happen",
+         "fix": "Check tmrClock_Tick. Then check that the Tick event of tmrClock shows `tmrClock_Tick`.",
+         "id": "4-21.t9"
+        },
+        {
+         "what": "Click Back to the map before you press Start walking, then click No.",
+         "expect": "allowed",
+         "how": "The question **Leave Leave No Trace?** appears. After No, Leave No Trace stays open.",
+         "must": "Must happen",
+         "fix": "Click the form itself, open the events list in the Properties window, and check that FormClosing shows `frmLitter_FormClosing`.",
+         "id": "4-21.t10"
+        },
+        {
+         "what": "Finish a round, then click Back to the map.",
+         "expect": "allowed",
+         "how": "The map shows again, and the flag on place number 2 shows a tick.",
+         "must": "Must happen",
+         "fix": "Check that the first field at the top of frmLitter is `private int gameNumber = 2;`. Then check that frmMap opens Leave No Trace for `case 2:`.",
+         "id": "4-21.t11"
+        }
+       ]
+      }
+     ],
+     "id": "21"
+    }
+   ],
+   "id": "4"
+  },
+  {
+   "title": "Change Leave No Trace into a game on your own topic",
+   "screens": [
+    {
+     "title": "Choose your own things to collect and to dodge, and 2 more things to change",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have chosen your own topic, and 2 more things to change."
+      },
+      {
+       "p": "Your own game keeps the Leave No Trace code, but uses your own pictures. It needs a background, 7 things to collect, one thing to dodge, and a picture for a life. Any topic like that works."
+      },
+      {
+       "box": {
+        "title": "3 topics that work",
+        "blocks": [
+         {
+          "p": "A beach clean: collect rubbish on the sand, and dodge the crabs."
+         },
+         {
+          "p": "A space walk: collect the stars, and dodge the rocks flying through space."
+         },
+         {
+          "p": "An orchard: collect the apples, and dodge the wasps."
+         }
+        ]
+       }
+      },
+      {
+       "p": "Change at least 2 more things as well, so that your game plays differently from Leave No Trace. For example, change the number of lives, the speed of the dodgers, the safe time or the bonus."
+      },
+      {
+       "p": "Every picture and sound you use must be free to use. Each one gets a line in `credits.txt`, saying who made it, its licence and a link."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Rename the Leave No Trace form",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your form has a name that fits your topic."
+      },
+      {
+       "p": "A form called `frmLitter` in a game about space would confuse anyone who reads your code. Visual Studio 2019 can rename the file and every place that uses it in one go."
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click `frmLitter.cs` in Solution Explorer.",
+         "see": "A menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the right-click menu of frmLitter.cs open",
+          "w": 360,
+          "h": 420,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Right-click `frmLitter.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "say": "Click **Rename**."
+           }
+          ]
+         },
+         "id": "5-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click **Rename**.",
+         "see": "The name `frmLitter.cs` becomes a box that you can type in.",
+         "id": "5-2.2",
+         "n": 2
+        },
+        {
+         "do": "Type your form's new name, such as `frmSpaceWalk.cs`",
+         "see": "The box shows the new name.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the name frmLitter.cs turned into a box and frmSpaceWalk.cs typed in it",
+          "w": 360,
+          "h": 200,
+          "marks": [
+           {
+            "n": 3,
+            "say": "Type your form's new name, such as `frmSpaceWalk.cs`"
+           },
+           {
+            "n": 4,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "5-2.3",
+         "n": 3
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A message asks: You are renaming a file. Would you also like to perform a rename in this project of all references to the code element 'frmLitter'?",
+         "id": "5-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click **Yes**.",
+         "see": "Every place that used `frmLitter` now uses the new name, including the line in `frmMap.cs` that opens your game.",
+         "img": {
+          "missing": true,
+          "alt": "The message that asks whether to rename every use of frmLitter",
+          "w": 480,
+          "h": 200,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Click **Yes**."
+           }
+          ]
+         },
+         "id": "5-2.5",
+         "n": 5
+        }
+       ]
+      },
+      {
+       "p": "Method and field names such as `frmLitter_Load`, `litter` and `sheep` keep their old names. This is normal, and the old names still work. Rename them only if you want to."
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Put your own pictures and sounds into bin\\Debug",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your game shows your own background and your own pictures."
+      },
+      {
+       "p": "Your own files go in the same folders as the Summit Ready files, inside bin\\Debug. Your pictures go in a folder inside Images, and any new sounds go in Sounds."
+      },
+      {
+       "code": {
+        "id": "c13-turn-files",
+        "kind": "turn",
+        "title": "Use your own pictures",
+        "lang": "cs",
+        "text": "piece.Image = Files.Picture(\"Space\", litterFiles[i % 7]);\none.Image = Files.Picture(\"Space\", \"rock.png\");",
+        "task": [
+         "Make a folder for your pictures inside bin\\Debug\\Images, such as Space.",
+         "Put 7 pictures of things to collect in the folder, and one picture of the thing to dodge.",
+         "Change the 7 file names in the `litterFiles` field to the names of your 7 pictures.",
+         "Change `\"Litter\"` in PlaceLitter and in PlaceSheep to the name of your folder.",
+         "Change `\"sheep.png\"` in PlaceSheep to the name of your picture of the thing to dodge.",
+         "Put a background picture in bin\\Debug\\Images. Then change `\"field.jpg\"` in frmLitter_Load to its name.",
+         "Add a line to `credits.txt` for each new picture and each new sound."
+        ],
+        "test": "Press F5, open your game from the map, and press Start walking.",
+        "expect": "Your own background shows, with your own things to collect and your own thing to dodge.",
+        "hint": "If a picture does not show, look in PlaceLitter and PlaceSheep first. They are the only methods that open the pictures folder."
+       }
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Change the words on the screen to fit your topic",
+     "blocks": [
+      {
+       "p": "By the end of this screen, every word on the screen and in the Round over box fits your topic."
+      },
+      {
+       "p": "A player of your game should never read about litter or sheep, unless your topic is litter. The words are in 2 places: the Properties window, and the messages in the code."
+      },
+      {
+       "code": {
+        "id": "c13-turn-words",
+        "kind": "turn",
+        "title": "Change every word about litter and sheep",
+        "lang": "cs",
+        "text": "lblGot.Text = \"Stars collected: \" + got + \" of 8\";\nresult = new GameResult(\"Space Walk\", got * 10 + bonus);",
+        "task": [
+         "Change the Text of lblTitle and of lblInstruction.",
+         "Change the Text of the form itself, which shows in the title bar of the window.",
+         "Change the Text of lblGot and btnGo.",
+         "Change the line in CheckLitter that writes to lblGot.",
+         "Change the lines in AddFeedback, and the words in Pieces.",
+         "Change the question in FormClosing.",
+         "Change the game's name, `\"Leave No Trace\"`, in RecordResult."
+        ],
+        "test": "Play a round to the end, and read every word on the screen and in the Round over box.",
+        "expect": "No word on the screen is about litter or sheep, unless your topic is litter.",
+        "hint": "Press Ctrl and F together, then type `litter` to find every word still about litter. Do the same for `sheep` and `hill`."
+       }
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Test your game, and keep the evidence",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that your own game works, and you have the evidence for your coursework."
+      },
+      {
+       "p": "Run each test with F5 on your own game. Tick each test when it passes. If a test says must be refused, the game must do nothing, and that counts as a pass."
+      },
+      {
+       "check": [
+        {
+         "what": "Press the arrow keys before you press the start button.",
+         "expect": "control",
+         "how": "Nothing may move, and the clock must not start.",
+         "id": "5-5.t1"
+        },
+        {
+         "what": "Press the start button, then walk with the arrow keys.",
+         "expect": "allowed",
+         "how": "The avatar walks, and the clock counts down.",
+         "must": "Must happen",
+         "id": "5-5.t2"
+        },
+        {
+         "what": "Walk onto a thing to collect.",
+         "expect": "allowed",
+         "how": "It disappears, and the count on the dark strip goes up by 1.",
+         "must": "Must happen",
+         "id": "5-5.t3"
+        },
+        {
+         "what": "Walk into a thing to dodge, then stay beside it.",
+         "expect": "control",
+         "how": "Only one life may be lost before the safe time ends.",
+         "id": "5-5.t4"
+        },
+        {
+         "what": "Walk the avatar into each edge of the field.",
+         "expect": "control",
+         "how": "The avatar must stop at the edge.",
+         "id": "5-5.t5"
+        },
+        {
+         "what": "Finish a round, then go back to the map.",
+         "expect": "allowed",
+         "how": "The flag for your game on the map shows a tick.",
+         "must": "Must happen",
+         "id": "5-5.t6"
+        }
+       ]
+      },
+      {
+       "p": "Every test passed in Leave No Trace. So if a test fails now, the fault is in something you changed in this stage. Look back over your changes one at a time, starting with the last one."
+      },
+      {
+       "box": {
+        "title": "Evidence to keep",
+        "blocks": [
+         {
+          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
+         },
+         {
+          "p": "Paste each screenshot into your testing document, under the test it shows."
+         },
+         {
+          "p": "Keep your `credits.txt` with your project."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "5"
+    }
+   ],
+   "id": "5"
+  }
+ ],
+ "glossary": [
+  [
+   "Height",
+   "How tall a control is, in pixels."
+  ],
+  [
+   "bin\\Debug",
+   "The folder inside your project where Visual Studio 2019 puts the program it builds. Summit Ready reads its data, pictures and sounds from there."
+  ],
+  [
+   "zip file",
+   "One file with other files and folders packed inside it."
+  ],
+  [
+   "lightning bolt",
+   "The button at the top of the Properties window that shows a control's events in place of its properties."
+  ],
+  [
+   "field",
+   "A variable written at the top of the class, outside every method. Every method in the form can use it, and it keeps its value until the window closes."
+  ],
+  [
+   "array",
+   "A row of values of the same type, kept together under one name and numbered from 0. `sheep[0]` is the first sheep, and `sheep[2]` is the third."
+  ],
+  [
+   "panel",
+   "A control that holds other controls. `pnlField` is the panel that holds the avatar, the litter and the sheep."
+  ],
+  [
+   "PictureBox",
+   "A control that shows a picture. The avatar, each piece of litter, each sheep and each heart is a PictureBox."
+  ],
+  [
+   "KeyPreview",
+   "A property of a form. When it is True, the form hears every key press first, before any control on it."
+  ],
+  [
+   "DoubleBuffered",
+   "A property of a form. When it is True, the form draws each picture off the screen first, then shows it all at once, so nothing flickers."
+  ],
+  [
+   "KeyDown",
+   "The event that happens the moment a key is pressed down."
+  ],
+  [
+   "KeyUp",
+   "The event that happens the moment a key is let go."
+  ],
+  [
+   "KeyCode",
+   "Which key was pressed. `Keys.Up` is the up arrow, and `Keys.W` is the W key."
+  ],
+  [
+   "bool",
+   "A value that is either true or false. `goUp` is a bool: true while the up arrow is held down."
+  ],
+  [
+   "Timer",
+   "A control that never shows on the window. Once started, it runs its Tick method every time its Interval runs out, until it is stopped."
+  ],
+  [
+   "Interval",
+   "How long a Timer waits before each Tick, in thousandths of a second. 20 means 0.02 seconds."
+  ],
+  [
+   "Tick",
+   "The event a Timer has. Its method runs every time the Timer's Interval runs out."
+  ],
+  [
+   "game loop",
+   "A Timer that runs every few thousandths of a second and moves everything a little each time. `tmrGame` is the game loop of Leave No Trace."
+  ],
+  [
+   "Random",
+   "Gives numbers by chance. `random.Next(0, 10)` gives a whole number from 0 up to 9."
+  ],
+  [
+   "Math.Abs",
+   "Gives a number without its minus sign. `Math.Abs(-5)` gives 5. It tells you how far apart two numbers are."
+  ],
+  [
+   "Point",
+   "A place on a window or a panel: how far across, X, and how far down, Y."
+  ],
+  [
+   "Bounds",
+   "The rectangle that a control fills on its panel: where it is, and how big."
+  ],
+  [
+   "IntersectsWith",
+   "Asks whether two rectangles overlap. It is true when the avatar touches a sheep or a piece of litter."
+  ],
+  [
+   "Visible",
+   "Whether a control shows. A control with Visible false is hidden."
+  ],
+  [
+   "Enabled",
+   "Whether a control can be used. A button with Enabled false is greyed out, and clicking it does nothing."
+  ],
+  [
+   "Transparent",
+   "`Color.Transparent` lets whatever is behind a control show through it."
+  ],
+  [
+   "count up with ++",
+   "`got++` adds 1 to `got`. `safeTicks--` takes 1 away from `safeTicks`."
+  ],
+  [
+   "change with += and -=",
+   "`picPlayer.Top -= 6` takes 6 away from Top, so the avatar moves 6 pixels up. `+= 6` adds 6."
+  ],
+  [
+   "remainder",
+   "`%` gives what is left over after a division. `13 % 10` is 3."
+  ],
+  [
+   "or",
+   "`||` means or. The `if` is true when any one of its parts is true."
+  ],
+  [
+   "and",
+   "`&&` means and. The `if` is true only when every one of its parts is true."
+  ],
+  [
+   "not",
+   "`!` means not. `!goUp` is true when `goUp` is false."
+  ],
+  [
+   "foreach",
+   "`foreach` runs a loop once for each thing in an array, such as each sheep in `sheep`."
+  ],
+  [
+   "while",
+   "`while` runs a loop again and again, for as long as its test is true."
+  ],
+  [
+   "BringToFront",
+   "Puts a control in front of every other control on the same panel."
+  ],
+  [
+   "red underline",
+   "The wavy red line Visual Studio 2019 draws under code it does not understand yet. Often it means a method you have not written yet."
+  ]
+ ]
+}

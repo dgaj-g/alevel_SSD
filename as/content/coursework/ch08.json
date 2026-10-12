@@ -1,0 +1,3180 @@
+{
+ "id": "08",
+ "n": 8,
+ "of": 20,
+ "title": "The map",
+ "kind": "a build chapter: the map that every game opens from",
+ "one": "You build the map of the Mournes, with a card and a flag for each of the 8 summits. The player climbs the summits in any order, sees a tick on each one, and can finish or leave.",
+ "prev": {
+  "id": "07",
+  "n": 7,
+  "title": "Scores, the Welcome window and the Top 10"
+ },
+ "next": {
+  "id": "09",
+  "n": 9,
+  "title": "The shape of every game"
+ },
+ "stages": [
+  {
+   "title": "See what the map does",
+   "screens": [
+    {
+     "title": "Look at the map, from the first click to the finish",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know what the map shows and what each part of it does."
+      },
+      {
+       "p": "**Start the expedition** on the Welcome window opens the map. The map is the middle of Summit Ready: every game opens from it, and every game comes back to it."
+      },
+      {
+       "screenshot": {
+        "missing": true,
+        "w": 1000,
+        "h": 660,
+        "alt": "The map window, with the Mournes map on the left and 8 summit cards down the right",
+        "cap": "The map at the start of an expedition. No summit is climbed yet."
+       }
+      },
+      {
+       "p": "The map of the Mournes fills the left side. A small flag sits on each of the 8 summits."
+      },
+      {
+       "p": "Down the right side is a card for each summit. Each card shows a photo, the summit's name, its height and its game."
+      },
+      {
+       "p": "The player clicks a card or a flag to climb that summit. The summit's game opens, and the map hides."
+      },
+      {
+       "p": "The player climbs the summits in any order. When a game ends, the map comes back. That summit's flag turns into a tick, and its card turns green with the points scored."
+      },
+      {
+       "p": "The dark strip along the top shows the points so far, out of 800 points. It also has the speaker picture and **Back to the welcome screen**."
+      },
+      {
+       "p": "**Finish the expedition** ends the climb early. If summits are left, a message asks first, because those summits score 0 points."
+      },
+      {
+       "p": "In this chapter, no game opens yet. Chapter 9 builds a practice game, and each game chapter adds one more game to the map."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Check that your project is ready, and see the words this chapter uses",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know that your project has everything the map needs."
+      },
+      {
+       "p": "The map uses things you made in earlier chapters. Check that each one is in your project before you start."
+      },
+      {
+       "need": [
+        "Your project, with the Log in window that opens the Welcome window (chapter 6).",
+        "The Expedition class, with `CurrentPlayer` in it (chapter 6).",
+        "The Welcome window, with the gold **Start the expedition** button and the Game menu (chapter 7).",
+        "The Files class, the Sound class and the Data, Images and Sounds folders in bin\\Debug (chapter 2).",
+        "About 2 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
+       ]
+      },
+      {
+       "words": [
+        [
+         "Cursor",
+         "The pointer the mouse shows over a control. `Cursors.Hand` is the pointing hand.",
+         "4-2",
+         true
+        ],
+        [
+         "Point",
+         "A place on a window or a panel: how far across, X, and how far down, Y.",
+         "4-2",
+         true
+        ],
+        [
+         "place number",
+         "The number of a summit on the map, from 0 to 7. Slieve Binnian is place 0, and Slieve Donard is place 7.",
+         "2-2",
+         false
+        ],
+        [
+         "static",
+         "A field or method marked `static` belongs to the class itself. Every window reads the same `Expedition.Done`, with no object made first.",
+         "2-2",
+         true
+        ],
+        [
+         "array",
+         "A row of values of the same type, kept together under one name and numbered from 0. `Done[0]` is the first summit, and `Done[7]` is the 8th summit.",
+         "2-2",
+         true
+        ],
+        [
+         "null",
+         "Nothing at all. A variable that holds `null` does not hold an object yet.",
+         "2-3",
+         true
+        ],
+        [
+         "connect with +=",
+         "`+=` connects a method to an event in code. `card.Click += Summit_Click;` means that a click on that card runs `Summit_Click`.",
+         "4-2",
+         true
+        ],
+        [
+         "Controls.Add",
+         "Puts a control that code made onto a window. Until then, the control exists, but nobody can see it.",
+         "4-2",
+         true
+        ],
+        [
+         "Tag",
+         "A spare property that every control has. The map keeps each card's place number in its Tag.",
+         "4-2",
+         true
+        ],
+        [
+         "Bitmap",
+         "A picture held in memory. `new Bitmap(photo, new Size(72, 48))` makes a small copy of a photo.",
+         "4-2",
+         true
+        ],
+        [
+         "Environment.NewLine",
+         "Starts a new line inside some text, like pressing Enter.",
+         "4-4",
+         true
+        ],
+        [
+         "cast",
+         "A type in brackets in front of a value tells C# what the value really is. `(Control)sender` tells C# that `sender` is a control.",
+         "4-5",
+         true
+        ],
+        [
+         "sender",
+         "Every event method is given `sender`: the control that the event happened to.",
+         "4-1",
+         true
+        ],
+        [
+         "and",
+         "`&&` means and. The `if` is true only when both of its parts are true.",
+         "4-5",
+         true
+        ],
+        [
+         "or",
+         "`||` means or. The `if` is true when any one of its parts is true.",
+         "4-7",
+         true
+        ],
+        [
+         "switch",
+         "Picks one `case` to run, using the value in the brackets. `switch (i)` runs the case whose number matches `i`.",
+         "4-5",
+         true
+        ],
+        [
+         "ShowDialog",
+         "Opens a window and waits. The code after `ShowDialog()` runs only when that window closes.",
+         "4-5",
+         true
+        ],
+        [
+         "Cancel",
+         "`e.Cancel = true` stops a window from closing. It goes in FormClosing, the code that runs as a window starts to close.",
+         "4-7",
+         true
+        ]
+       ],
+       "intro": "You do not need to learn these words now. Where you first meet each one in the chapter, it has a dotted line under it. Hover over it or tap it to see what it means."
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "1"
+  },
+  {
+   "title": "Add GameResult, and the rest of the Expedition class",
+   "screens": [
+    {
+     "title": "Add the GameResult class",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has a GameResult class that holds a game's name and its score."
+      },
+      {
+       "p": "When a game ends, it hands the map a GameResult. The map keeps one for each summit climbed. Chapter 9 adds the lines of feedback to it."
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "The project menu, with Add pointed at and Class in the second menu",
+          "w": 640,
+          "h": 420,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 2,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 3,
+            "say": "Click **Class...** in the second menu."
+           },
+           {
+            "n": 4,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "say": "Type `GameResult.cs`"
+           },
+           {
+            "n": 6,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "2-1.1",
+         "n": 1
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "2-1.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Class...** in the second menu.",
+         "see": "The Add New Item window opens, and the Name box says `Class1.cs`.",
+         "id": "2-1.3",
+         "n": 3
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "id": "2-1.4",
+         "n": 4
+        },
+        {
+         "do": "Type `GameResult.cs`",
+         "see": "The Name box shows `GameResult.cs`.",
+         "id": "2-1.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "`GameResult.cs` opens, and it is in Solution Explorer.",
+         "id": "2-1.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c08-result",
+        "kind": "type",
+        "title": "GameResult.cs: the GameResult class, for now",
+        "lang": "cs",
+        "text": "class GameResult\n{\n    public string GameName { get; set; }\n    public int Score { get; set; }\n\n    public GameResult(string gameName, int score)\n    {\n        GameName = gameName;\n        Score = score;\n    }\n}",
+        "noCopy": true,
+        "partLines": [
+         [
+          1,
+          4,
+          "The 2 properties",
+          "`GameName` holds the game's name. `Score` holds its score, out of 100 points."
+         ],
+         [
+          6,
+          11,
+          "The constructor",
+          "The constructor is the code that sets up a new GameResult. It runs when a game writes `new GameResult(\"Knot Pairs\", 70)`, and puts the name and score into the 2 properties."
+         ]
+        ],
+        "focusLines": [
+         [
+          3,
+          9
+         ]
+        ],
+        "typed": 5
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `{` under `class GameResult`.",
+         "see": "The flashing cursor is after the `{`.",
+         "img": {
+          "missing": true,
+          "alt": "GameResult.cs, with the 2 properties and the constructor typed",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click at the end of the `{` under `class GameResult`."
+           },
+           {
+            "n": 8,
+            "say": "Press Enter."
+           },
+           {
+            "n": 9,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 10,
+            "say": "Press Ctrl and S together."
+           }
+          ]
+         },
+         "id": "2-1.7",
+         "n": 7
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the `{`.",
+         "id": "2-1.8",
+         "n": 8
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "No line in `GameResult.cs` has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "2-1.9",
+         "n": 9
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after the file's name on the tab at the top of the editor disappears.",
+         "id": "2-1.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Type the summits, the heights and the games into Expedition",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the Expedition class knows the 8 summits, and what is climbed so far."
+      },
+      {
+       "p": "Every window needs the same 8 summits, so they live in Expedition, the class you started in chapter 6. Each list is an [[array|4]], numbered from 0 in [[place number|2]] order."
+      },
+      {
+       "code": {
+        "id": "c08-exp-a",
+        "kind": "type",
+        "title": "Expedition.cs: the summits and the climb so far",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// The climb in progress, shared by every form (chapter 8)\nstatic class Expedition\n{\n    public static Player CurrentPlayer;   // who is logged in\n\n    // The eight summits, their heights and their games, in place order\n    public static string[] Summits = { \"Slieve Binnian\", \"Slieve Lamagan\",\n        \"Slieve Meelmore\", \"Slieve Commedagh\", \"Slieve Bearnagh\",\n        \"Chimney Rock Mountain\", \"Slieve Muck\", \"Slieve Donard\" };\n    public static int[] Heights = { 746, 702, 680, 767, 739, 656, 670,\n        850 };\n    public static string[] Games = { \"Pack the Rucksack\", \"Knot Pairs\",\n        \"Leave No Trace\", \"Read the Sky\", \"Whiteout\", \"Grid Ref Rescue\",\n        \"Route Timer\", \"Listen Out\" };\n\n    public static bool[] Done = new bool[8];\n    public static GameResult[] Results = new GameResult[8];",
+        "partLines": [
+         [
+          1,
+          4,
+          "The class from chapter 6",
+          "You typed `CurrentPlayer` in chapter 6. The comment above the class says what the class is for."
+         ],
+         [
+          7,
+          9,
+          "The 8 summits",
+          "`Summits` holds the 8 names, in place order. `Summits[0]` is Slieve Binnian."
+         ],
+         [
+          10,
+          11,
+          "The heights",
+          "`Heights` holds each summit's height in metres, in the same order."
+         ],
+         [
+          12,
+          14,
+          "The games",
+          "`Games` holds the name of each summit's game, in the same order."
+         ],
+         [
+          16,
+          17,
+          "What is climbed so far",
+          "`Done[i]` turns true when summit `i` is climbed. `Results[i]` keeps that summit's GameResult. `new bool[8]` starts all 8 values at false."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          1
+         ],
+         [
+          6,
+          17
+         ]
+        ],
+        "typed": 10,
+        "wordMarks": [
+         [
+          2,
+          0,
+          6,
+          3
+         ],
+         [
+          7,
+          18,
+          26,
+          4
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `Expedition.cs` in Solution Explorer.",
+         "see": "Expedition.cs opens in the code editor.",
+         "img": {
+          "missing": true,
+          "alt": "Expedition.cs, with the comment above the class and the arrays typed",
+          "w": 800,
+          "h": 400,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Double-click `Expedition.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "say": "Click at the end of the `{` under `namespace SummitReady`."
+           },
+           {
+            "n": 3,
+            "say": "Press Enter."
+           },
+           {
+            "n": 4,
+            "say": "Type the yellow comment line that starts `// The climb in progress`."
+           },
+           {
+            "n": 5,
+            "say": "Click at the end of the line `public static Player CurrentPlayer;   // who is logged in`"
+           },
+           {
+            "n": 6,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 7,
+            "say": "Type the rest of the yellow lines."
+           },
+           {
+            "n": 8,
+            "say": "Press Ctrl and S together."
+           }
+          ]
+         },
+         "id": "2-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click at the end of the `{` under `namespace SummitReady`.",
+         "see": "The flashing cursor is after the `{`.",
+         "id": "2-2.2",
+         "n": 2
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens above `static class Expedition`.",
+         "id": "2-2.3",
+         "n": 3
+        },
+        {
+         "do": "Type the yellow comment line that starts `// The climb in progress`.",
+         "see": "The comment sits above `static class Expedition`.",
+         "id": "2-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click at the end of the line `public static Player CurrentPlayer;   // who is logged in`",
+         "see": "The flashing cursor is at the end of the comment.",
+         "id": "2-2.5",
+         "n": 5
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under that line.",
+         "id": "2-2.6",
+         "n": 6
+        },
+        {
+         "do": "Type the rest of the yellow lines.",
+         "see": "`GameResult` in the last line has no red underline, because you added the class on the last screen.",
+         "id": "2-2.7",
+         "n": 7
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after the file's name on the tab at the top of the editor disappears.",
+         "id": "2-2.8",
+         "n": 8
+        }
+       ]
+      },
+      {
+       "p": "A long list can go over more than one line. C# reads on until the `;`, so the line breaks do not matter."
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Type Start, Finish, Total and DoneCount",
+     "blocks": [
+      {
+       "p": "By the end of this screen, Expedition can start a climb, keep a result, add up the points and count the summits."
+      },
+      {
+       "p": "The map and every game call these 4 methods, so they live in Expedition with the arrays."
+      },
+      {
+       "code": {
+        "id": "c08-exp-b",
+        "kind": "type",
+        "title": "Start and Finish",
+        "lang": "cs",
+        "text": "// Starts a new climb: nothing done, no results\npublic static void Start(Player p)\n{\n    CurrentPlayer = p;\n    for (int i = 0; i < 8; i++)\n    {\n        Done[i] = false;\n        Results[i] = null;\n    }\n}\n\n// Keeps the result of one game and ticks its summit\npublic static void Finish(int game, GameResult result)\n{\n    Results[game] = result;\n    Done[game] = true;\n}",
+        "partLines": [
+         [
+          2,
+          10,
+          "Start",
+          "Start runs when the player clicks **Start the expedition**. It keeps the player, then sets every summit back to not climbed, with no result."
+         ],
+         [
+          13,
+          17,
+          "Finish",
+          "A game calls Finish when its round ends. It keeps the result and ticks that summit."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          17
+         ]
+        ],
+        "typed": 8,
+        "wordMarks": [
+         [
+          2,
+          7,
+          13,
+          3
+         ],
+         [
+          8,
+          21,
+          25,
+          5
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the line `public static GameResult[] Results = new GameResult[8];`",
+         "see": "The flashing cursor is after the `;`.",
+         "img": {
+          "missing": true,
+          "alt": "Expedition.cs, with Start and Finish typed under the arrays",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the line `public static GameResult[] Results = new GameResult[8];`"
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "2-3.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under that line.",
+         "id": "2-3.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "Start and Finish sit under the arrays.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "2-3.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c08-exp-c",
+        "kind": "type",
+        "title": "Total and DoneCount",
+        "lang": "cs",
+        "text": "// The points from every summit climbed so far\npublic static int Total()\n{\n    int total = 0;\n    for (int i = 0; i < 8; i++)\n    {\n        if (Done[i]) total = total + Results[i].Score;\n    }\n    return total;\n}\n\n// How many summits have been climbed\npublic static int DoneCount()\n{\n    int count = 0;\n    for (int i = 0; i < 8; i++)\n    {\n        if (Done[i]) count++;\n    }\n    return count;\n}",
+        "partLines": [
+         [
+          2,
+          10,
+          "Total",
+          "Total adds up the score of every summit climbed so far. A summit not climbed has no result, so it is skipped."
+         ],
+         [
+          13,
+          21,
+          "DoneCount",
+          "DoneCount counts the summits climbed so far, from 0 to 8."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          21
+         ]
+        ],
+        "typed": 10
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `Finish`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "Expedition.cs, with Total and DoneCount typed under Finish",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click at the end of the `}` that closes `Finish`."
+           },
+           {
+            "n": 5,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 6,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 7,
+            "say": "Press Ctrl, Shift and B together. This builds your project, which checks your code for mistakes."
+           }
+          ]
+         },
+         "id": "2-3.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "2-3.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "Total and DoneCount sit under Finish.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "2-3.6",
+         "n": 6
+        },
+        {
+         "do": "Press Ctrl, Shift and B together. This builds your project, which checks your code for mistakes.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "wrong": [
+          [
+           "The Error List shows errors",
+           "Double-click the first error in the Error List. Visual Studio 2019 jumps to the line with the error. Check that line letter by letter against the code in this chapter."
+          ]
+         ],
+         "id": "2-3.7",
+         "n": 7
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    }
+   ],
+   "id": "2"
+  },
+  {
+   "title": "Make the map form and set its controls",
+   "screens": [
+    {
+     "title": "Add the map form and set its properties",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has an empty map window, called frmMap, at the right size and colour."
+      },
+      {
+       "p": "The map is a window of its own, so it needs a new form, the same as the Welcome window in chapter 7."
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "The project menu, with Add pointed at and Form (Windows Forms) in the second menu",
+          "w": 640,
+          "h": 420,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 2,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 3,
+            "say": "Click **Form (Windows Forms)...** in the second menu."
+           },
+           {
+            "n": 4,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "say": "Type `frmMap.cs`"
+           },
+           {
+            "n": 6,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "3-1.1",
+         "n": 1
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "3-1.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Form (Windows Forms)...** in the second menu.",
+         "see": "The Add New Item window opens, and the Name box says `Form1.cs`.",
+         "id": "3-1.3",
+         "n": 3
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Form1.cs` turns blue, so what you type next replaces it.",
+         "id": "3-1.4",
+         "n": 4
+        },
+        {
+         "do": "Type `frmMap.cs`",
+         "see": "The Name box shows `frmMap.cs`.",
+         "id": "3-1.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "`frmMap.cs` opens, and it is in Solution Explorer.",
+         "id": "3-1.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "p": "Set the form's properties with the table below. Set **Font** first. If you change Font later, the form stretches and its size changes."
+      },
+      {
+       "controls": {
+        "props": [
+         "Font = Segoe UI, 11pt",
+         "Text = Summit Ready - Your expedition",
+         "ClientSize = 1000, 660",
+         "StartPosition = CenterScreen",
+         "FormBorderStyle = FixedSingle",
+         "MaximizeBox = False",
+         "BackColor = 243, 245, 242",
+         "ForeColor = 38, 50, 56"
+        ]
+       }
+      },
+      {
+       "p": "The map puts its cards and flags on the screen when the window opens. So you make an empty Load method now, and fill it in during stage 4."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists the form's events in place of its properties.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of frmMap, with the lightning bolt, Load and the Properties button",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click the lightning bolt at the top of the Properties window."
+           },
+           {
+            "n": 8,
+            "say": "Double-click the empty box beside **Load**. Scroll down the list a little if you cannot see it."
+           },
+           {
+            "n": 10,
+            "say": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window."
+           }
+          ]
+         },
+         "id": "3-1.7",
+         "n": 7
+        },
+        {
+         "do": "Double-click the empty box beside **Load**. Scroll down the list a little if you cannot see it.",
+         "see": "The code editor opens `frmMap.cs`, with a new empty method called `frmMap_Load`.",
+         "id": "3-1.8",
+         "n": 8
+        },
+        {
+         "do": "Press Shift and F7 together, to go back from the code to the designer.",
+         "see": "The designer shows frmMap.",
+         "img": {
+          "missing": true,
+          "alt": "The designer showing frmMap",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Press Shift and F7 together, to go back from the code to the designer."
+           }
+          ]
+         },
+         "id": "3-1.9",
+         "n": 9
+        },
+        {
+         "do": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists properties again.",
+         "id": "3-1.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Add the header strip, the map picture and the Finish button",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmMap has every control that you place by hand."
+      },
+      {
+       "p": "The code makes the 8 cards and the 8 flags itself in stage 4, so you do not drop them by hand."
+      },
+      {
+       "p": "Add the controls in the order of the table. pnlHeader goes first, because 5 of the controls sit on it."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Panel",
+          "name": "pnlHeader",
+          "settings": [
+           "Location = 0, 0",
+           "Size = 1000, 56",
+           "BackColor = 38, 50, 56"
+          ],
+          "note": "Drop the Panel near the top of frmMap.",
+          "then": "A dark strip runs along the top of frmMap."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblTitle",
+          "settings": [
+           "AutoSize = False",
+           "Location = 16, 6",
+           "Size = 400, 28",
+           "Font = Segoe UI Semibold, 15pt",
+           "ForeColor = 255, 255, 255",
+           "Text = Your expedition"
+          ],
+          "note": "Drop the Label on pnlHeader."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblInstruction",
+          "settings": [
+           "AutoSize = False",
+           "Location = 18, 33",
+           "Size = 700, 20",
+           "Font = Segoe UI, 10pt",
+           "ForeColor = 207, 216, 220",
+           "Text = Click a summit to climb it. You can climb them in any order."
+          ],
+          "note": "Drop the Label on pnlHeader."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblScore",
+          "settings": [
+           "AutoSize = False",
+           "Location = 430, 8",
+           "Size = 286, 24",
+           "Font = Segoe UI Semibold, 12pt",
+           "ForeColor = 255, 255, 255",
+           "TextAlign = MiddleRight",
+           "Text = Points so far: 0 of 800"
+          ],
+          "note": "Drop the Label on pnlHeader."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picSound",
+          "settings": [
+           "Location = 728, 12",
+           "Size = 32, 32",
+           "SizeMode = Zoom",
+           "Cursor = Hand"
+          ],
+          "note": "Drop the PictureBox on pnlHeader."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnBack",
+          "settings": [
+           "Location = 770, 6",
+           "Size = 220, 44",
+           "Text = Back to the welcome screen",
+           "BackColor = 38, 50, 56",
+           "ForeColor = 255, 255, 255",
+           "Font = Segoe UI Semibold, 11pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderSize = 1",
+           "FlatAppearance BorderColor = 255, 255, 255",
+           "Cursor = Hand"
+          ],
+          "note": "Drop the Button on pnlHeader. FlatAppearance has a small arrow beside it. Click the arrow to see BorderSize and BorderColor."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picMap",
+          "settings": [
+           "Location = 12, 58",
+           "Size = 600, 600",
+           "SizeMode = Normal"
+          ],
+          "note": "Drop the PictureBox on frmMap, below the strip."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnFinish",
+          "settings": [
+           "Location = 628, 604",
+           "Size = 360, 44",
+           "Text = Finish the expedition",
+           "BackColor = 242, 183, 5",
+           "ForeColor = 38, 50, 56",
+           "Font = Segoe UI Semibold, 11pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderSize = 0",
+           "Cursor = Hand"
+          ],
+          "note": "Drop the Button on frmMap, below the strip.",
+          "then": "The gold button sits in the bottom right corner of frmMap."
+         }
+        ],
+        "done": {
+         "see": "The dark strip along the top of frmMap holds the title, the instruction, the points, an empty picture box and **Back to the welcome screen**. Under it, a large empty picture box fills the left side. The right side stays empty above the gold Finish button, because the code puts the 8 cards there.",
+         "img": {
+          "missing": true,
+          "alt": "frmMap in the designer with every control from the table on it",
+          "w": 800,
+          "h": 450,
+          "at": []
+         }
+        }
+       }
+      },
+      {
+       "box": {
+        "title": "How to find a control in the Toolbox",
+        "text": "The Toolbox is down the left side of Visual Studio 2019. Click the search box at the top of the Toolbox, then type the control's name, such as `PictureBox`. The control shows in the list under the search box.",
+        "fold": true
+       }
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "3"
+  },
+  {
+   "title": "Write the map code, one method at a time",
+   "screens": [
+    {
+     "title": "Type the map's fields and fill in frmMap_Load",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmMap has the variables it needs, and a Load method that sets up the map."
+      },
+      {
+       "p": "Each flag sits on its summit, so the map needs the position of each summit on the map picture. It also keeps the 8 cards and the 8 flags in 2 arrays, so other methods can change them."
+      },
+      {
+       "code": {
+        "id": "c08-m-fields",
+        "kind": "type",
+        "title": "The map's fields",
+        "lang": "cs",
+        "text": "// Where each summit's flag sits on the 600 by 600 map, in pixels\nprivate int[] flagX = { 300, 354, 215, 456, 258, 564, 72, 522 };\nprivate int[] flagY = { 516, 360, 199, 204, 234, 378, 420, 264 };\nprivate string[] photoNames = { \"summit-binnian.jpg\",\n    \"summit-lamagan.jpg\", \"summit-meelmore.jpg\",\n    \"summit-commedagh.jpg\", \"summit-bearnagh.jpg\",\n    \"summit-chimney-rock.jpg\", \"summit-muck.jpg\",\n    \"summit-donard.jpg\" };\n\nprivate Button[] cards = new Button[8];\nprivate PictureBox[] flags = new PictureBox[8];\nprivate bool saved = false;    // true once the score is saved",
+        "partLines": [
+         [
+          2,
+          3,
+          "Where the flags go",
+          "`flagX[i]` is how far across the map summit `i` is, and `flagY[i]` is how far down it is."
+         ],
+         [
+          4,
+          8,
+          "The summit photos",
+          "The file name of each summit's photo, in the Images\\Summits folder."
+         ],
+         [
+          10,
+          12,
+          "The cards, the flags and saved",
+          "`cards` and `flags` keep the controls that the code makes. `saved` turns true once the score is saved, in chapter 10."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          12
+         ]
+        ],
+        "typed": 10,
+        "wordMarks": [
+         [
+          2,
+          8,
+          13,
+          4
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Press F7.",
+         "see": "The code of frmMap shows in the code editor.",
+         "img": {
+          "missing": true,
+          "alt": "frmMap.cs, with the fields typed under the class line",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Press F7."
+           },
+           {
+            "n": 2,
+            "say": "Click at the end of the `{` under `public partial class frmMap : Form`."
+           },
+           {
+            "n": 3,
+            "say": "Press Enter."
+           },
+           {
+            "n": 4,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-1.1",
+         "n": 1
+        },
+        {
+         "do": "Click at the end of the `{` under `public partial class frmMap : Form`.",
+         "see": "The flashing cursor is after the `{`.",
+         "id": "4-1.2",
+         "n": 2
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the `{`.",
+         "id": "4-1.3",
+         "n": 3
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The fields are under the `{`. No line has a red underline.",
+         "id": "4-1.4",
+         "n": 4
+        }
+       ]
+      },
+      {
+       "p": "frmMap_Load is the empty method you made in stage 3. It runs once, right before the window first appears."
+      },
+      {
+       "code": {
+        "id": "c08-m-load",
+        "kind": "type",
+        "title": "frmMap_Load",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// Puts the map, the cards and the flags on the screen\nprivate void frmMap_Load(object sender, EventArgs e)\n{\n    ShowSpeaker();\n    picMap.Image = Files.Picture(\"Map\", \"mournes-grid-600.png\");\n    for (int i = 0; i < 8; i++)\n    {\n        MakeCard(i);\n        MakeFlag(i);\n    }\n    ShowProgress();\n}",
+        "partLines": [
+         [
+          2,
+          5,
+          "The speaker and the map",
+          "ShowSpeaker shows the right speaker picture. You type it later on. `Files.Picture` from chapter 2 loads the map picture from the Images\\Map folder."
+         ],
+         [
+          6,
+          12,
+          "The cards and the flags",
+          "The loop makes one card and one flag for each of the 8 summits. Then ShowProgress writes the points, and each card's words."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          1
+         ],
+         [
+          4,
+          11
+         ]
+        ],
+        "typed": 6,
+        "wordMarks": [
+         [
+          2,
+          32,
+          38,
+          12
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click before the word `private` in the line `private void frmMap_Load(object sender, EventArgs e)`.",
+         "see": "The flashing cursor is before `private`.",
+         "img": {
+          "missing": true,
+          "alt": "frmMap.cs, with the comment above frmMap_Load and its lines typed",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Click before the word `private` in the line `private void frmMap_Load(object sender, EventArgs e)`."
+           },
+           {
+            "n": 6,
+            "say": "Press Enter."
+           },
+           {
+            "n": 7,
+            "say": "Press the Up arrow key."
+           },
+           {
+            "n": 8,
+            "say": "Type the yellow comment line."
+           },
+           {
+            "n": 9,
+            "say": "Click at the end of the `{` under `private void frmMap_Load(object sender, EventArgs e)`."
+           },
+           {
+            "n": 10,
+            "say": "Press Enter."
+           },
+           {
+            "n": 11,
+            "say": "Type the rest of the yellow lines."
+           }
+          ]
+         },
+         "id": "4-1.5",
+         "n": 5
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The method moves down one line.",
+         "id": "4-1.6",
+         "n": 6
+        },
+        {
+         "do": "Press the Up arrow key.",
+         "see": "The flashing cursor is on the new empty line above `private void frmMap_Load`.",
+         "id": "4-1.7",
+         "n": 7
+        },
+        {
+         "do": "Type the yellow comment line.",
+         "see": "The comment sits above `private void frmMap_Load`.",
+         "id": "4-1.8",
+         "n": 8
+        },
+        {
+         "do": "Click at the end of the `{` under `private void frmMap_Load(object sender, EventArgs e)`.",
+         "see": "The flashing cursor is after the `{`.",
+         "id": "4-1.9",
+         "n": 9
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens inside the method.",
+         "id": "4-1.10",
+         "n": 10
+        },
+        {
+         "do": "Type the rest of the yellow lines.",
+         "see": "`ShowSpeaker`, `MakeCard`, `MakeFlag` and `ShowProgress` have red underlines. This is normal, because you have not written those methods yet.",
+         "id": "4-1.11",
+         "n": 11
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Make each summit card with code",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmMap can make one summit card and put it on the window."
+      },
+      {
+       "p": "8 cards are all the same apart from their words and photo, so a method makes them. Each card is a Button, made with `new Button()`, then put on the window with [[Controls.Add|7]]."
+      },
+      {
+       "p": "Each card is 58 pixels tall, and the cards start 62 pixels apart. So card `i` starts at 64 + `i` * 62 pixels down."
+      },
+      {
+       "code": {
+        "id": "c08-m-card",
+        "kind": "type",
+        "title": "MakeCard",
+        "lang": "cs",
+        "why": "The 8 lines in the middle set how the card looks. You set the same things in the Properties window before, so the copy already has them.",
+        "text": "// One summit card down the right: photo, name, height and game\nprivate void MakeCard(int i)\n{\n    Button card = new Button();\n    card.Location = new Point(628, 64 + i * 62);\n    card.Size = new Size(360, 58);\n    card.FlatStyle = FlatStyle.Flat;\n    card.FlatAppearance.BorderColor = Color.FromArgb(92, 107, 115);\n    card.BackColor = Color.White;\n    card.Font = new Font(\"Segoe UI\", 10);\n    card.TextAlign = ContentAlignment.MiddleLeft;\n    card.ImageAlign = ContentAlignment.MiddleLeft;\n    card.TextImageRelation = TextImageRelation.ImageBeforeText;\n    card.Cursor = Cursors.Hand;\n    Image photo = Files.Picture(\"Summits\", photoNames[i]);\n    if (photo != null) card.Image = new Bitmap(photo, new Size(72, 48));\n    card.Tag = i;                  // the summit's place number\n    card.Click += Summit_Click;\n    cards[i] = card;\n    this.Controls.Add(card);\n}",
+        "partLines": [
+         [
+          2,
+          6,
+          "A new Button",
+          "MakeCard makes a new Button called `card`, puts it at its place down the right side and sets its size."
+         ],
+         [
+          7,
+          14,
+          "How the card looks",
+          "These lines set properties, as a table row does. They set a flat style, a grey border, a white background, the font, the photo on the left and the hand pointer."
+         ],
+         [
+          15,
+          16,
+          "The photo",
+          "The photo is loaded, and a small 72 by 48 pixel [[Bitmap|9]] copy of it goes on the card. If the photo is missing, the card has no picture, and the game carries on."
+         ],
+         [
+          17,
+          18,
+          "The Tag and the click",
+          "The card's [[Tag|8]] keeps its place number. `+=` connects the card's Click to Summit_Click."
+         ],
+         [
+          19,
+          21,
+          "Keep it and show it",
+          "`cards[i]` keeps the card, so ShowProgress can change it. `this.Controls.Add(card)` puts the card on the window."
+         ]
+        ],
+        "focusLines": [
+         [
+          4,
+          6
+         ],
+         [
+          15,
+          20
+         ]
+        ],
+        "typed": 9,
+        "wordMarks": [
+         [
+          14,
+          18,
+          30,
+          0
+         ],
+         [
+          5,
+          24,
+          29,
+          1
+         ],
+         [
+          16,
+          17,
+          21,
+          5
+         ],
+         [
+          18,
+          15,
+          17,
+          6
+         ],
+         [
+          20,
+          9,
+          21,
+          7
+         ],
+         [
+          17,
+          8,
+          12,
+          8
+         ],
+         [
+          16,
+          40,
+          46,
+          9
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmMap_Load`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmMap.cs, with MakeCard pasted and its 2 gaps typed",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `frmMap_Load`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 4,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 5,
+            "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`."
+           },
+           {
+            "n": 6,
+            "say": "Type the yellow lines that replace the blue line. Do the same for the other `// YOU TYPE THIS PART` line."
+           }
+          ]
+         },
+         "id": "4-2.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-2.2",
+         "n": 2
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c08-m-card",
+         "id": "4-2.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "MakeCard appears, with 2 lines that start with `// YOU TYPE THIS PART`.",
+         "id": "4-2.4",
+         "n": 4
+        },
+        {
+         "do": "Triple-click the first line that starts with `// YOU TYPE THIS PART`.",
+         "see": "The whole line turns blue.",
+         "id": "4-2.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines that replace the blue line. Do the same for the other `// YOU TYPE THIS PART` line.",
+         "see": "MakeCard is complete. `Summit_Click` has a red underline. That is normal for now.",
+         "wrong": [
+          [
+           "The `// YOU TYPE THIS PART` line is still there after you type",
+           "Click the old `// YOU TYPE THIS PART` line, then press Home. Hold Shift and press End, so the whole line turns blue. Press Delete."
+          ]
+         ],
+         "id": "4-2.6",
+         "n": 6
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Make each flag on the map with code",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmMap can make one flag and put it on its summit."
+      },
+      {
+       "p": "A flag is a small PictureBox. Its Parent is picMap, so the flag sits on top of the map picture. Its BackColor is transparent, so the map shows around the flag."
+      },
+      {
+       "p": "The flag is 32 pixels square. Taking 16 pixels off `flagX[i]` and `flagY[i]` puts the middle of the flag on the summit."
+      },
+      {
+       "code": {
+        "id": "c08-m-flag",
+        "kind": "type",
+        "title": "MakeFlag",
+        "lang": "cs",
+        "why": "The other lines make a control in the same way as MakeCard, which you typed on the last screen.",
+        "text": "// One flag on the map, on top of the summit\nprivate void MakeFlag(int i)\n{\n    PictureBox flag = new PictureBox();\n    flag.Size = new Size(32, 32);\n    flag.SizeMode = PictureBoxSizeMode.Zoom;\n    flag.BackColor = Color.Transparent;\n    // so the see-through parts of the flag show the map\n    flag.Parent = picMap;\n    flag.Location = new Point(flagX[i] - 16, flagY[i] - 16);\n    flag.Cursor = Cursors.Hand;\n    flag.Tag = i;\n    flag.Click += Summit_Click;\n    flags[i] = flag;\n}",
+        "partLines": [
+         [
+          2,
+          6,
+          "A new PictureBox",
+          "MakeFlag makes a new PictureBox called `flag`, 32 pixels square, that fits its picture inside it."
+         ],
+         [
+          7,
+          10,
+          "On top of the map",
+          "A transparent background shows the map through the flag. `flag.Parent = picMap` puts the flag on the map picture, and Location puts it on the summit."
+         ],
+         [
+          11,
+          15,
+          "The pointer, the Tag and the click",
+          "The same as a card: the hand pointer, the place number in the Tag, and a click that runs Summit_Click."
+         ]
+        ],
+        "focusLines": [
+         [
+          7,
+          10
+         ]
+        ],
+        "typed": 3,
+        "wordMarks": [
+         [
+          11,
+          18,
+          30,
+          0
+         ],
+         [
+          10,
+          24,
+          29,
+          1
+         ],
+         [
+          13,
+          15,
+          17,
+          6
+         ],
+         [
+          12,
+          8,
+          12,
+          8
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `MakeCard`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmMap.cs, with MakeFlag pasted and its gap typed",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `MakeCard`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 4,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 5,
+            "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`."
+           },
+           {
+            "n": 6,
+            "say": "Type the yellow lines that replace the blue line."
+           }
+          ]
+         },
+         "id": "4-3.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-3.2",
+         "n": 2
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c08-m-flag",
+         "id": "4-3.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "MakeFlag appears, with 1 line that starts with `// YOU TYPE THIS PART`.",
+         "id": "4-3.4",
+         "n": 4
+        },
+        {
+         "do": "Triple-click the first line that starts with `// YOU TYPE THIS PART`.",
+         "see": "The whole line turns blue.",
+         "id": "4-3.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines that replace the blue line.",
+         "see": "MakeFlag is complete.",
+         "wrong": [
+          [
+           "The `// YOU TYPE THIS PART` line is still there after you type",
+           "Click the old `// YOU TYPE THIS PART` line, then press Home. Hold Shift and press End, so the whole line turns blue. Press Delete."
+          ]
+         ],
+         "id": "4-3.6",
+         "n": 6
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Show the points and the ticks with ShowProgress",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmMap can show the points so far, and which summits are climbed."
+      },
+      {
+       "p": "ShowProgress runs when the map opens, and again each time a game closes. A climbed summit gets a green card that cannot be clicked, and a tick in place of its flag."
+      },
+      {
+       "p": "[[Environment.NewLine|10]] starts a new line on the card, so each card has 2 lines of words."
+      },
+      {
+       "code": {
+        "id": "c08-m-progress",
+        "kind": "type",
+        "title": "ShowProgress",
+        "lang": "cs",
+        "why": "The loop is the same 8-summit loop as in frmMap_Load. The picture lines load an icon with `Files.Picture`, as frmMap_Load does for the map.",
+        "text": "// Shows the points so far, and which summits are climbed\nprivate void ShowProgress()\n{\n    lblScore.Text = \"Points so far: \" + Expedition.Total()\n        + \" of 800\";\n    for (int i = 0; i < 8; i++)\n    {\n        string top = Expedition.Summits[i] + \" · \"\n            + Expedition.Heights[i] + \" m\";\n        if (Expedition.Done[i])\n        {\n            cards[i].Text = top + Environment.NewLine + \"Climbed: \"\n                + Expedition.Results[i].Score + \" points\";\n            cards[i].Enabled = false;\n            cards[i].BackColor = Color.FromArgb(227, 241, 228);\n            flags[i].Image = Files.Picture(\"Icons\",\n                \"icon-check-64.png\");\n            flags[i].Cursor = Cursors.Default;\n        }\n        else\n        {\n            cards[i].Text = top + Environment.NewLine\n                + Expedition.Games[i];\n            flags[i].Image = Files.Picture(\"Icons\",\n                \"icon-flag-64.png\");\n        }\n    }\n}",
+        "partLines": [
+         [
+          2,
+          5,
+          "The points so far",
+          "lblScore shows the total from `Expedition.Total()`, out of 800 points."
+         ],
+         [
+          6,
+          9,
+          "The top line of each card",
+          "`top` is the summit's name and height, such as Slieve Binnian · 746 m."
+         ],
+         [
+          10,
+          19,
+          "A climbed summit",
+          "The second line says the points scored. The card stops working and turns pale green. The flag turns into a tick, with the normal arrow pointer."
+         ],
+         [
+          20,
+          28,
+          "A summit still to climb",
+          "The second line names the summit's game, and the flag picture shows."
+         ]
+        ],
+        "focusLines": [
+         [
+          4,
+          5
+         ],
+         [
+          10,
+          14
+         ],
+         [
+          20,
+          23
+         ]
+        ],
+        "typed": 9,
+        "wordMarks": [
+         [
+          12,
+          34,
+          53,
+          10
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `MakeFlag`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmMap.cs, with ShowProgress pasted and its 3 gaps typed",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `MakeFlag`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 4,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 5,
+            "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`."
+           },
+           {
+            "n": 6,
+            "say": "Type the yellow lines that replace the blue line. Do the same for each of the other 2 `// YOU TYPE THIS PART` lines."
+           }
+          ]
+         },
+         "id": "4-4.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-4.2",
+         "n": 2
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c08-m-progress",
+         "id": "4-4.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "ShowProgress appears, with 3 lines that start with `// YOU TYPE THIS PART`.",
+         "id": "4-4.4",
+         "n": 4
+        },
+        {
+         "do": "Triple-click the first line that starts with `// YOU TYPE THIS PART`.",
+         "see": "The whole line turns blue.",
+         "id": "4-4.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines that replace the blue line. Do the same for each of the other 2 `// YOU TYPE THIS PART` lines.",
+         "see": "ShowProgress is complete. The red underline under `ShowProgress` in frmMap_Load has gone.",
+         "wrong": [
+          [
+           "The `// YOU TYPE THIS PART` line is still there after you type",
+           "Click the old `// YOU TYPE THIS PART` line, then press Home. Hold Shift and press End, so the whole line turns blue. Press Delete."
+          ]
+         ],
+         "id": "4-4.6",
+         "n": 6
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Open a summit's game when its card or flag is clicked",
+     "blocks": [
+      {
+       "p": "By the end of this screen, a click on a card or a flag runs OpenGame with that summit's place number."
+      },
+      {
+       "p": "Every card and every flag runs the same method, Summit_Click. `sender` is the control that was clicked, and its Tag says which summit it is."
+      },
+      {
+       "code": {
+        "id": "c08-m-click",
+        "kind": "type",
+        "title": "Summit_Click",
+        "lang": "cs",
+        "text": "// A card or a flag was clicked: its Tag is the summit's number\nprivate void Summit_Click(object sender, EventArgs e)\n{\n    Control clicked = (Control)sender;\n    int i = (int)clicked.Tag;\n    if (Expedition.Done[i]) return;   // climbed already\n    OpenGame(i);\n}",
+        "partLines": [
+         [
+          2,
+          8,
+          "Which summit",
+          "`(Control)sender` is a [[cast|11]]: a card is a Button and a flag is a PictureBox, and both are controls. `(int)` turns the Tag back into a number. A summit already climbed does nothing."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          8
+         ]
+        ],
+        "typed": 5,
+        "wordMarks": [
+         [
+          5,
+          24,
+          28,
+          8
+         ],
+         [
+          4,
+          22,
+          31,
+          11
+         ],
+         [
+          2,
+          33,
+          39,
+          12
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `ShowProgress`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmMap.cs, with Summit_Click typed under ShowProgress",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `ShowProgress`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-5.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-5.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "Summit_Click sits under ShowProgress. `OpenGame` has a red underline for now.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "4-5.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "p": "OpenGame has 3 parts. The first part checks the sound for Listen Out, the game at place 7, because that game needs sound. Then it starts a [[switch|15]] that picks the game."
+      },
+      {
+       "p": "The switch has no cases yet. Each game chapter adds its own `case` line under the comment line, so keep that comment exactly as it is."
+      },
+      {
+       "code": {
+        "id": "c08-m-open-a",
+        "kind": "type",
+        "title": "OpenGame: the sound check and the switch",
+        "lang": "cs",
+        "text": "// Opens the game for summit i, then comes back to the map\nprivate void OpenGame(int i)\n{\n    if (i == 7 && Sound.Muted)\n    {\n        DialogResult answer = MessageBox.Show(\"Listen Out needs \"\n            + \"sound. Turn the sound on?\", \"Summit Ready\",\n            MessageBoxButtons.YesNo);\n        if (answer == DialogResult.No) return;\n        Sound.Muted = false;\n        ShowSpeaker();\n    }\n    Form game = null;\n    switch (i)\n    {\n        // each game chapter adds its own case below this line",
+        "partLines": [
+         [
+          2,
+          12,
+          "Listen Out needs sound",
+          "`&&` means both parts must be true: the place is 7, and the sound is off. Then a message asks the player to turn the sound on. If the player clicks No, the map stays as it is."
+         ],
+         [
+          13,
+          16,
+          "The switch",
+          "`game` starts as `null`, so it holds no window yet. The switch sets it to the game for place `i`."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          16
+         ]
+        ],
+        "typed": 10,
+        "wordMarks": [
+         [
+          13,
+          16,
+          20,
+          5
+         ],
+         [
+          4,
+          15,
+          17,
+          13
+         ],
+         [
+          14,
+          4,
+          10,
+          15
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `Summit_Click`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmMap.cs, with the first part of OpenGame typed",
+          "w": 800,
+          "h": 400,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click at the end of the `}` that closes `Summit_Click`."
+           },
+           {
+            "n": 5,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 6,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-5.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-5.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The comment line sits inside the switch. Visual Studio 2019 has added a `}` under it, which closes the switch.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "4-5.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "p": "The last part opens the game and waits. [[ShowDialog|16]] keeps the map hidden until the game window closes. Then the map shows again with the new tick."
+      },
+      {
+       "code": {
+        "id": "c08-m-open-b",
+        "kind": "type",
+        "title": "OpenGame: open the game, then come back",
+        "lang": "cs",
+        "text": "    if (game == null) return;      // this game is not built yet\n    this.Hide();\n    game.ShowDialog();\n    this.Show();\n    ShowSpeaker();                 // the game may have changed it\n    ShowProgress();\n    if (Expedition.DoneCount() == 8)\n    {\n        MessageBox.Show(\"You have climbed all eight summits. Press \"\n            + \"OK to see how you did.\", \"Summit Ready\");\n        OpenFeedback();\n    }\n}",
+        "partLines": [
+         [
+          1,
+          3,
+          "Open the game",
+          "If no case matched, there is no game for that summit yet, so nothing opens. Otherwise the map hides and the game opens."
+         ],
+         [
+          4,
+          6,
+          "Back on the map",
+          "The map shows again. The game may have changed the sound, so the speaker picture is checked. ShowProgress puts the new tick on the map."
+         ],
+         [
+          7,
+          13,
+          "All 8 climbed",
+          "When all 8 summits are climbed, a message says so, and OpenFeedback shows how it went."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          13
+         ]
+        ],
+        "typed": 10,
+        "wordMarks": [
+         [
+          3,
+          9,
+          19,
+          16
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` under the line `// each game chapter adds its own case below this line`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmMap.cs, with the end of OpenGame typed under the switch",
+          "w": 800,
+          "h": 400,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click at the end of the `}` under the line `// each game chapter adds its own case below this line`."
+           },
+           {
+            "n": 8,
+            "say": "Press Enter."
+           },
+           {
+            "n": 9,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-5.7",
+         "n": 7
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the `}`.",
+         "id": "4-5.8",
+         "n": 8
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "OpenGame is complete. `OpenFeedback` has a red underline for now.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "4-5.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "5"
+    },
+    {
+     "title": "Finish the expedition, and show the total for now",
+     "blocks": [
+      {
+       "p": "By the end of this screen, **Finish the expedition** checks how many summits are climbed, then shows the total."
+      },
+      {
+       "p": "A player who has climbed nothing cannot finish. A player with summits left is asked first, because the summits not climbed score 0 points."
+      },
+      {
+       "code": {
+        "id": "c08-m-finish",
+        "kind": "type",
+        "title": "btnFinish_Click",
+        "lang": "cs",
+        "text": "// Finish the expedition: asks first if summits are left\nprivate void btnFinish_Click(object sender, EventArgs e)\n{\n    int done = Expedition.DoneCount();\n    if (done == 0)\n    {\n        MessageBox.Show(\"Climb at least one summit first. Click a \"\n            + \"summit on the map to start.\", \"Summit Ready\");\n        return;\n    }\n    if (done < 8)\n    {\n        DialogResult answer = MessageBox.Show(\"You have climbed \"\n            + done + \" of the 8 summits. Finish now? The summits \"\n            + \"you have not climbed score 0.\", \"Summit Ready\",\n            MessageBoxButtons.YesNo);\n        if (answer == DialogResult.No) return;\n    }\n    OpenFeedback();\n}",
+        "partLines": [
+         [
+          2,
+          10,
+          "Nothing climbed",
+          "With 0 summits climbed, a message says to climb one first, and `return` stops the method."
+         ],
+         [
+          11,
+          18,
+          "Summits left",
+          "With 1 to 7 summits climbed, a message with Yes and No buttons asks first. If the player clicks No, the method stops."
+         ],
+         [
+          19,
+          20,
+          "Finish",
+          "Otherwise OpenFeedback shows how it went."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          20
+         ]
+        ],
+        "typed": 13,
+        "wordMarks": [
+         [
+          2,
+          36,
+          42,
+          12
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `OpenGame`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmMap.cs, with btnFinish_Click typed under OpenGame",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `OpenGame`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-6.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-6.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "btnFinish_Click sits under OpenGame.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "4-6.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "p": "Chapter 10 makes the feedback window. For now, OpenFeedback shows the total in a message."
+      },
+      {
+       "code": {
+        "id": "c08-m-feedback",
+        "kind": "type",
+        "title": "OpenFeedback, for now",
+        "lang": "cs",
+        "text": "// Shows the total for now (chapter 10 adds the feedback window)\nprivate void OpenFeedback()\n{\n    MessageBox.Show(\"You scored \" + Expedition.Total()\n        + \" out of 800 points.\", \"Summit Ready\");\n}",
+        "noCopy": true,
+        "partLines": [
+         [
+          2,
+          6,
+          "The total",
+          "A message shows the total. Chapter 10 replaces this method."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          6
+         ]
+        ],
+        "typed": 3
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `btnFinish_Click`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmMap.cs, with OpenFeedback typed under btnFinish_Click",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click at the end of the `}` that closes `btnFinish_Click`."
+           },
+           {
+            "n": 5,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 6,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-6.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-6.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "OpenFeedback sits under btnFinish_Click. The red underline under `OpenFeedback` has gone.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "4-6.6",
+         "n": 6
+        }
+       ]
+      }
+     ],
+     "id": "6"
+    },
+    {
+     "title": "Type Back, the closing question and the speaker picture",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the map can close, ask before points are lost, and turn the sound on and off."
+      },
+      {
+       "p": "**Back to the welcome screen** closes the map. Closing the window, by Back or by the X, runs FormClosing. If summits are climbed and not saved, FormClosing asks first."
+      },
+      {
+       "code": {
+        "id": "c08-m-close",
+        "kind": "type",
+        "title": "btnBack_Click and frmMap_FormClosing",
+        "lang": "cs",
+        "text": "// Back to the welcome screen: closing the map runs FormClosing\nprivate void btnBack_Click(object sender, EventArgs e)\n{\n    this.Close();\n}\n\n// Runs as the map closes, by Back or by the X\nprivate void frmMap_FormClosing(object sender, FormClosingEventArgs e)\n{\n    if (saved || Expedition.DoneCount() == 0) return;\n    DialogResult answer = MessageBox.Show(\"Leave the expedition? The \"\n        + \"points from this climb will be lost.\", \"Summit Ready\",\n        MessageBoxButtons.YesNo);\n    if (answer == DialogResult.No) e.Cancel = true;   // stay\n}",
+        "partLines": [
+         [
+          2,
+          5,
+          "Back",
+          "`this.Close()` closes the map, which runs FormClosing."
+         ],
+         [
+          8,
+          15,
+          "Ask before points are lost",
+          "`||` means or: if the score is saved, or nothing is climbed, the map closes at once. Otherwise a message asks. If the player clicks No, `e.Cancel` is set to true, which keeps the map open."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          15
+         ]
+        ],
+        "typed": 8,
+        "wordMarks": [
+         [
+          2,
+          34,
+          40,
+          12
+         ],
+         [
+          10,
+          14,
+          16,
+          14
+         ],
+         [
+          14,
+          35,
+          43,
+          17
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `OpenFeedback`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmMap.cs, with btnBack_Click and frmMap_FormClosing typed",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `OpenFeedback`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-7.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-7.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "btnBack_Click and frmMap_FormClosing sit under OpenFeedback.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "4-7.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "p": "The speaker picture shows whether the sound is on. Clicking it turns the sound off, or back on. Every game window has the same 2 methods, so chapter 9 copies them from here."
+      },
+      {
+       "code": {
+        "id": "c08-m-speaker",
+        "kind": "type",
+        "title": "ShowSpeaker and picSound_Click",
+        "lang": "cs",
+        "text": "// Shows the speaker picture that matches the sound being on or off\nprivate void ShowSpeaker()\n{\n    string icon = \"icon-speaker-on-64.png\";\n    if (Sound.Muted) icon = \"icon-speaker-muted-64.png\";\n    picSound.Image = Files.Picture(\"Icons\", icon);\n}\n\n// The speaker picture turns the sound off, or back on\nprivate void picSound_Click(object sender, EventArgs e)\n{\n    Sound.Muted = !Sound.Muted;\n    ShowSpeaker();\n}",
+        "partLines": [
+         [
+          2,
+          7,
+          "ShowSpeaker",
+          "The picture starts as the speaker that is on. If the sound is muted, it changes to the muted speaker."
+         ],
+         [
+          10,
+          14,
+          "picSound_Click",
+          "`!` turns true into false and false into true. Then ShowSpeaker shows the matching picture."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          14
+         ]
+        ],
+        "typed": 7
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmMap_FormClosing`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmMap.cs, with ShowSpeaker and picSound_Click typed",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click at the end of the `}` that closes `frmMap_FormClosing`."
+           },
+           {
+            "n": 5,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 6,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-7.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-7.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "ShowSpeaker and picSound_Click sit at the bottom of the class. No line in frmMap.cs has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "4-7.6",
+         "n": 6
+        }
+       ]
+      }
+     ],
+     "id": "7"
+    },
+    {
+     "title": "Connect the map's events, then build",
+     "blocks": [
+      {
+       "p": "By the end of this screen, every button on the map runs its method, and your project builds."
+      },
+      {
+       "p": "Connect each event in the table to its method. Click the control, click the lightning bolt, then pick the method from the list beside the event."
+      },
+      {
+       "controls": {
+        "props": [
+         "btnBack: Click = btnBack_Click",
+         "btnFinish: Click = btnFinish_Click",
+         "picSound: Click = picSound_Click",
+         "frmMap (click its title bar): FormClosing = frmMap_FormClosing"
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "If you have forgotten how to connect an event",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "Click the control in the designer. Click the lightning bolt at the top of the Properties window. Click the box beside the event, then click the small arrow at the right end of the box. Click the method."
+         },
+         {
+          "p": "Do not double-click the box. Double-clicking makes a new empty method with `_1` at the end of its name."
+         }
+        ]
+       }
+      },
+      {
+       "p": "The cards and the flags need no connecting here, because `+=` connects them in the code."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Shift and F7 together, to go back from the code to the designer.",
+         "see": "The designer shows frmMap.",
+         "img": {
+          "missing": true,
+          "alt": "frmMap in the designer, with the events list of btnBack",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Press Shift and F7 together, to go back from the code to the designer."
+           }
+          ]
+         },
+         "id": "4-8.1",
+         "n": 1
+        },
+        {
+         "do": "Press Ctrl, Shift and B together. This builds your project, which checks your code for mistakes.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "missing": true,
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 2,
+            "say": "Press Ctrl, Shift and B together. This builds your project, which checks your code for mistakes."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows errors",
+           "Double-click the first error in the Error List. Visual Studio 2019 jumps to the line with the error. Check that line letter by letter against the code in this chapter."
+          ]
+         ],
+         "id": "4-8.2",
+         "n": 2
+        }
+       ]
+      }
+     ],
+     "id": "8"
+    }
+   ],
+   "id": "4"
+  },
+  {
+   "title": "Open the map from the Welcome window, and test it",
+   "screens": [
+    {
+     "title": "Make Start the expedition open the map",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the gold button and the Game menu on the Welcome window both open the map."
+      },
+      {
+       "p": "A new expedition starts with nothing climbed. The Welcome window hides while the map is open, then shows again with any new score."
+      },
+      {
+       "code": {
+        "id": "c08-w-start",
+        "kind": "type",
+        "title": "btnStart_Click",
+        "lang": "cs",
+        "text": "// Starts a new expedition on the map\nprivate void btnStart_Click(object sender, EventArgs e)\n{\n    Expedition.Start(Expedition.CurrentPlayer);\n    this.Hide();\n    frmMap map = new frmMap();\n    map.ShowDialog();              // waits until the map closes\n    this.Show();\n    ShowEverything();              // a new score shows at once\n}",
+        "partLines": [
+         [
+          2,
+          4,
+          "A new climb",
+          "`Expedition.Start` sets every summit back to not climbed, for the player who is logged in."
+         ],
+         [
+          5,
+          10,
+          "Open the map and wait",
+          "`ShowDialog` waits until the map closes. Then the Welcome window shows again, and ShowEverything from chapter 7 shows any new score."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          10
+         ]
+        ],
+        "typed": 7,
+        "wordMarks": [
+         [
+          2,
+          35,
+          41,
+          12
+         ],
+         [
+          7,
+          8,
+          18,
+          16
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `frmWelcome.cs` in Solution Explorer.",
+         "see": "frmWelcome opens in the designer.",
+         "img": {
+          "missing": true,
+          "alt": "frmWelcome.cs, with btnStart_Click and mnuStart_Click typed",
+          "w": 800,
+          "h": 400,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Double-click `frmWelcome.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "say": "Press F7."
+           },
+           {
+            "n": 3,
+            "say": "Click at the end of the `}` that closes `btnBannerOK_Click`."
+           },
+           {
+            "n": 4,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 5,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "5-1.1",
+         "n": 1
+        },
+        {
+         "do": "Press F7.",
+         "see": "The code of frmWelcome shows in the code editor.",
+         "id": "5-1.2",
+         "n": 2
+        },
+        {
+         "do": "Click at the end of the `}` that closes `btnBannerOK_Click`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "5-1.3",
+         "n": 3
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "5-1.4",
+         "n": 4
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "btnStart_Click sits under btnBannerOK_Click.",
+         "wrong": [
+          [
+           "The Error List shows CS0111: Type already defines a member called btnStart_Click",
+           "Your frmWelcome already has an empty `btnStart_Click`. Delete the empty one, from its first line down to its `}`."
+          ]
+         ],
+         "id": "5-1.5",
+         "n": 5
+        }
+       ]
+      },
+      {
+       "p": "**Start the expedition** on the Game menu does the same as the gold button. Its method calls `btnStart_Click`, so the code lives in one place."
+      },
+      {
+       "code": {
+        "id": "c08-w-menu",
+        "kind": "type",
+        "title": "mnuStart_Click",
+        "lang": "cs",
+        "text": "// Game, then Start the expedition\nprivate void mnuStart_Click(object sender, EventArgs e)\n{\n    btnStart_Click(sender, e);\n}",
+        "partLines": [
+         [
+          2,
+          5,
+          "The same as the button",
+          "The menu item runs the gold button's method, handing over `sender` (the control clicked) and `e` (the details of the click)."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          5
+         ]
+        ],
+        "typed": 2
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `btnStart_Click`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmWelcome.cs, with mnuStart_Click typed",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 6,
+            "say": "Click at the end of the `}` that closes `btnStart_Click`."
+           },
+           {
+            "n": 7,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 8,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "5-1.6",
+         "n": 6
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "5-1.7",
+         "n": 7
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "mnuStart_Click sits under btnStart_Click.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "5-1.8",
+         "n": 8
+        }
+       ]
+      },
+      {
+       "p": "Connect each method to its event: click the control in the designer, then pick the method beside **Click** in the Properties window events list."
+      },
+      {
+       "controls": {
+        "props": [
+         "btnStart: Click = btnStart_Click",
+         "Start the expedition, under Game: Click = mnuStart_Click"
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Shift and F7 together, to go back from the code to the designer.",
+         "see": "The designer shows frmWelcome.",
+         "img": {
+          "missing": true,
+          "alt": "frmWelcome in the designer, with the events list of btnStart",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Press Shift and F7 together, to go back from the code to the designer."
+           },
+           {
+            "n": 10,
+            "say": "Press Ctrl, Shift and B together. This builds your project, which checks your code for mistakes."
+           }
+          ]
+         },
+         "id": "5-1.9",
+         "n": 9
+        },
+        {
+         "do": "Press Ctrl, Shift and B together. This builds your project, which checks your code for mistakes.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "wrong": [
+          [
+           "The Error List shows errors",
+           "Double-click the first error in the Error List. Visual Studio 2019 jumps to the line with the error. Check that line letter by letter against the code in this chapter."
+          ]
+         ],
+         "id": "5-1.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Open the map and try every part of it",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have seen the map work, from the Welcome window and back."
+      },
+      {
+       "p": "Try each part of the map now, so that a mistake shows up before chapter 9 adds a game to it."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press F5.",
+         "see": "Your game starts and shows the Log in window.",
+         "img": {
+          "missing": true,
+          "alt": "The Log in window of your game",
+          "w": 640,
+          "h": 400,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Press F5."
+           },
+           {
+            "n": 2,
+            "say": "Log in with a player you registered in chapter 5."
+           }
+          ]
+         },
+         "id": "5-2.1",
+         "n": 1
+        },
+        {
+         "do": "Log in with a player you registered in chapter 5.",
+         "see": "The Welcome window opens.",
+         "id": "5-2.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Start the expedition**.",
+         "see": "The map opens, with the Mournes on the left, 8 flags on it and 8 summit cards down the right.",
+         "img": {
+          "missing": true,
+          "alt": "The map with its 8 cards and 8 flags",
+          "w": 1000,
+          "h": 660,
+          "marks": [
+           {
+            "n": 3,
+            "say": "Click **Start the expedition**."
+           },
+           {
+            "n": 4,
+            "say": "Click the card for Slieve Binnian, at the top of the right side."
+           },
+           {
+            "n": 5,
+            "say": "Click **Finish the expedition**."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The map opens with no cards and no flags",
+           "Check that frmMap_Load has the loop with `MakeCard(i);` and `MakeFlag(i);`. Then check that frmMap_Load shows beside Load in the events list of frmMap."
+          ],
+          [
+           "The cards have no photos, or the map is blank",
+           "Check that the Images folder inside bin\\Debug holds the Map and Summits folders from chapter 2."
+          ]
+         ],
+         "id": "5-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click the card for Slieve Binnian, at the top of the right side.",
+         "see": "Nothing opens. That is right for now: no game has a `case` line in OpenGame yet.",
+         "id": "5-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click **Finish the expedition**.",
+         "see": "A message says **Climb at least one summit first.**",
+         "id": "5-2.5",
+         "n": 5
+        },
+        {
+         "do": "Click **OK** to close the message.",
+         "see": "The message closes and the map shows again.",
+         "img": {
+          "missing": true,
+          "alt": "The strip along the top of the map, with the muted speaker picture and Back to the welcome screen",
+          "w": 800,
+          "h": 120,
+          "marks": [
+           {
+            "n": 6,
+            "say": "Click **OK** to close the message."
+           },
+           {
+            "n": 7,
+            "say": "Click the speaker picture on the strip."
+           },
+           {
+            "n": 8,
+            "say": "Click **Back to the welcome screen**."
+           }
+          ]
+         },
+         "id": "5-2.6",
+         "n": 6
+        },
+        {
+         "do": "Click the speaker picture on the strip.",
+         "see": "The speaker picture changes to the muted speaker.",
+         "id": "5-2.7",
+         "n": 7
+        },
+        {
+         "do": "Click **Back to the welcome screen**.",
+         "see": "The map closes at once, with no question, because nothing is climbed. The Welcome window shows again.",
+         "id": "5-2.8",
+         "n": 8
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Any order, or one after another",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know why the map lets the player climb in any order. You will also see a simpler way for your own game."
+      },
+      {
+       "p": "Summit Ready lets the player choose. Each game is a different skill, so a player can start with the one they like best."
+      },
+      {
+       "p": "Any order needs 3 things: a Done array to remember each summit, a tick on each one, and a Finish button."
+      },
+      {
+       "p": "The simpler way is one after another. A single **Next summit** button opens the next place, in order. It needs no cards and no flags to click."
+      },
+      {
+       "code": {
+        "id": "c08-straight",
+        "kind": "read",
+        "title": "The other way: one summit after another",
+        "lang": "cs",
+        "text": "// The other way: one Next summit button, in place order\nprivate int nextPlace = 0;\n\nprivate void btnNext_Click(object sender, EventArgs e)\n{\n    OpenGame(nextPlace);\n    if (Expedition.Done[nextPlace]) nextPlace = nextPlace + 1;\n}",
+        "partLines": [
+         [
+          2,
+          2,
+          "The next place",
+          "`nextPlace` starts at 0, so the first summit opens first."
+         ],
+         [
+          4,
+          8,
+          "Next summit",
+          "The button opens the game at `nextPlace`. If the player finished it, `nextPlace` moves on by 1."
+         ]
+        ],
+        "wordMarks": [
+         [
+          4,
+          34,
+          40,
+          12
+         ]
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "Which way suits your own game",
+        "blocks": [
+         {
+          "p": "Choose one after another if each level builds on the one before, such as easy, then medium, then hard."
+         },
+         {
+          "p": "Choose any order if each level stands on its own, as the 8 games in Summit Ready do."
+         },
+         {
+          "p": "Say which way you chose, and why, in your design write-up."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Your turn: show how many summits are left",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have changed the map's strip on your own, and tested it."
+      },
+      {
+       "p": "The strip shows the points so far. Make it also say how many summits are left to climb."
+      },
+      {
+       "code": {
+        "id": "c08-turn",
+        "kind": "turn",
+        "title": "Show the summits left on the strip",
+        "lang": "cs",
+        "text": "lblScore.Text = \"Points so far: \" + Expedition.Total()\n    + \" of 800. Summits left: \" + (8 - Expedition.DoneCount());",
+        "task": [
+         "Find the line in ShowProgress that sets `lblScore.Text`.",
+         "Add the words `Summits left:` and the number of summits not yet climbed to the end.",
+         "Make lblScore wider in the Properties window if the words do not fit."
+        ],
+        "test": "Press F5, log in and click **Start the expedition**.",
+        "expect": "The strip says **Points so far: 0 of 800. Summits left: 8**.",
+        "hint": "`Expedition.DoneCount()` gives the summits climbed. Take it away from 8."
+       }
+      },
+      {
+       "p": "When the test passes, keep the change or put the line back. Later chapters work either way."
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Check that the map works",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that every part of the map works, including the clicks it must refuse."
+      },
+      {
+       "p": "Run each test with F5. Tick each test when it passes. The test marked as a click to refuse must do nothing, and that counts as a pass."
+      },
+      {
+       "check": [
+        {
+         "what": "Click **Start the expedition** on the Welcome window.",
+         "expect": "allowed",
+         "how": "The map opens with 8 cards and 8 flags. The strip says **Points so far: 0 of 800**.",
+         "must": "Must happen",
+         "fix": "Check btnStart_Click, then check that btnStart_Click shows beside Click in the events list of btnStart.",
+         "id": "5-5.t1"
+        },
+        {
+         "what": "Click **Game**, then **Start the expedition**, on the Welcome window.",
+         "expect": "allowed",
+         "how": "The map opens, the same as with the gold button.",
+         "must": "Must happen",
+         "fix": "Check that mnuStart_Click shows beside Click in the events list of Start the expedition.",
+         "id": "5-5.t2"
+        },
+        {
+         "what": "Click **Finish the expedition** with no summit climbed.",
+         "expect": "control",
+         "how": "Only the message **Climb at least one summit first.** shows. Nothing else opens.",
+         "fix": "Check the first `if` in btnFinish_Click. It must end with `return;` inside its braces.",
+         "id": "5-5.t3"
+        },
+        {
+         "what": "Click the speaker picture twice.",
+         "expect": "allowed",
+         "how": "The picture changes to the muted speaker, then back.",
+         "must": "Must happen",
+         "fix": "Check ShowSpeaker and picSound_Click, then check that picSound_Click shows beside Click for picSound.",
+         "id": "5-5.t4"
+        },
+        {
+         "what": "Click **Back to the welcome screen**.",
+         "expect": "allowed",
+         "how": "The map closes with no question, and the Welcome window shows again.",
+         "must": "Must happen",
+         "fix": "Check btnBack_Click, then check that frmMap_FormClosing shows beside FormClosing for frmMap.",
+         "id": "5-5.t5"
+        }
+       ]
+      },
+      {
+       "box": {
+        "title": "Evidence to keep",
+        "blocks": [
+         {
+          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
+         },
+         {
+          "p": "Paste each screenshot into your testing document, under the test it shows."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "5"
+    }
+   ],
+   "id": "5"
+  }
+ ],
+ "glossary": [
+  [
+   "Cursor",
+   "The pointer the mouse shows over a control. `Cursors.Hand` is the pointing hand."
+  ],
+  [
+   "Point",
+   "A place on a window or a panel: how far across, X, and how far down, Y."
+  ],
+  [
+   "place number",
+   "The number of a summit on the map, from 0 to 7. Slieve Binnian is place 0, and Slieve Donard is place 7."
+  ],
+  [
+   "static",
+   "A field or method marked `static` belongs to the class itself. Every window reads the same `Expedition.Done`, with no object made first."
+  ],
+  [
+   "array",
+   "A row of values of the same type, kept together under one name and numbered from 0. `Done[0]` is the first summit, and `Done[7]` is the 8th summit."
+  ],
+  [
+   "null",
+   "Nothing at all. A variable that holds `null` does not hold an object yet."
+  ],
+  [
+   "connect with +=",
+   "`+=` connects a method to an event in code. `card.Click += Summit_Click;` means that a click on that card runs `Summit_Click`."
+  ],
+  [
+   "Controls.Add",
+   "Puts a control that code made onto a window. Until then, the control exists, but nobody can see it."
+  ],
+  [
+   "Tag",
+   "A spare property that every control has. The map keeps each card's place number in its Tag."
+  ],
+  [
+   "Bitmap",
+   "A picture held in memory. `new Bitmap(photo, new Size(72, 48))` makes a small copy of a photo."
+  ],
+  [
+   "Environment.NewLine",
+   "Starts a new line inside some text, like pressing Enter."
+  ],
+  [
+   "cast",
+   "A type in brackets in front of a value tells C# what the value really is. `(Control)sender` tells C# that `sender` is a control."
+  ],
+  [
+   "sender",
+   "Every event method is given `sender`: the control that the event happened to."
+  ],
+  [
+   "and",
+   "`&&` means and. The `if` is true only when both of its parts are true."
+  ],
+  [
+   "or",
+   "`||` means or. The `if` is true when any one of its parts is true."
+  ],
+  [
+   "switch",
+   "Picks one `case` to run, using the value in the brackets. `switch (i)` runs the case whose number matches `i`."
+  ],
+  [
+   "ShowDialog",
+   "Opens a window and waits. The code after `ShowDialog()` runs only when that window closes."
+  ],
+  [
+   "Cancel",
+   "`e.Cancel = true` stops a window from closing. It goes in FormClosing, the code that runs as a window starts to close."
+  ]
+ ]
+}

@@ -35,13 +35,13 @@
        "p": "First you build Knot Pairs exactly as it is in Summit Ready. Then, in stage 5, you change it into a memory game on your own topic."
       },
       {
-       "p": "A round starts with 16 [[cards|0]] face down, in 4 rows of 4. Every card back shows a coiled rope on a blue square."
+       "p": "A round starts with 16 [[cards|1]] face down, in 4 rows of 4. Every card back shows a coiled rope on a blue square."
       },
       {
        "p": "Turned over, 8 of the cards show a photo of a knot, and 8 show the name of a knot. Each knot has one photo card and one name card."
       },
       {
-       "p": "You click two cards to turn them over, and that uses one [[try|2]]. If the photo and the name are the same knot, you have found a [[pair|1]]."
+       "p": "You click two cards to turn them over, and that uses one [[try|3]]. If the photo and the name are the same knot, you have found a [[pair|2]]."
       },
       {
        "p": "A pair stays face up with a green border. The box on the right then says what that knot is for."
@@ -225,7 +225,7 @@
        "need": [
         "Your Summit Ready project, with the practice game opening from the map (chapter 9).",
         "The Files class that finds files, the Sound class that plays sounds and the Mix class that shuffles numbers (chapter 2).",
-        "The Data, Images and Sounds folders in your project's [[bin\\Debug|3]] folder, from `summit-ready-files.zip` (chapter 2). They already hold every file that Knot Pairs needs.",
+        "The Data, Images and Sounds folders in your project's [[bin\\Debug|4]] folder, from `summit-ready-files.zip` (chapter 2). They already hold every file that Knot Pairs needs.",
         "The line `// each game chapter adds its own case below this line` in `frmMap.cs` (chapter 8).",
         "File name extensions turned on in File Explorer, so `knots.txt` shows as `knots.txt` and not as `knots` (chapter 2).",
         "About 2 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
@@ -233,6 +233,12 @@
       },
       {
        "words": [
+        [
+         "Height",
+         "How tall a control is, in pixels.",
+         "4-14",
+         true
+        ],
         [
          "card",
          "One of the 16 squares you click in Knot Pairs. In the code, each card is a button.",
@@ -499,7 +505,7 @@
           "p": "If a sound is missing, that moment is silent, and the game carries on."
          },
          {
-          "p": "To put a missing file back, you download the [[zip file|4]] again and paste its folders into bin\\Debug. When Windows asks about the files you already have, you click **Skip these files**."
+          "p": "To put a missing file back, you download the [[zip file|5]] again and paste its folders into bin\\Debug. When Windows asks about the files you already have, you click **Skip these files**."
          },
          {
           "p": "Skipping keeps every file you already have, including any file you changed. Only the missing files are copied in."
@@ -512,7 +518,7 @@
             "download": {
              "file": "summit-ready-files.zip",
              "label": "Download summit-ready-files.zip",
-             "size": "8.2 MB"
+             "size": "7.8 MB"
             },
             "id": "2-1.1",
             "n": 1
@@ -778,7 +784,7 @@
          "see": "A long menu opens.",
          "img": {
           "missing": true,
-          "alt": "The project menu, with Add pointed at and Class... in the second menu",
+          "alt": "The project menu, with Add pointed at and Class in the second menu",
           "w": 640,
           "h": 420,
           "marks": [
@@ -945,31 +951,31 @@
           4,
           26,
           39,
-          5
+          6
          ],
          [
           9,
           4,
           16,
-          6
+          7
          ],
          [
           17,
           11,
           17,
-          7
+          8
          ],
          [
           17,
           18,
           28,
-          8
+          9
          ],
          [
           27,
           35,
           43,
-          9
+          10
          ]
         ]
        }
@@ -1059,7 +1065,7 @@
         },
         {
          "do": "Type the 3 yellow lines that start with `Picture`, `Name` and `Use`. Press Enter at the end of each line.",
-         "see": "No line in `Knot.cs` has a [[red underline|31]].",
+         "see": "No line in `Knot.cs` has a [[red underline|32]].",
          "id": "2-2.17",
          "n": 17
         },
@@ -1096,7 +1102,7 @@
          "see": "A long menu opens.",
          "img": {
           "missing": true,
-          "alt": "The project menu, with Add pointed at and Form (Windows Forms)... in the second menu",
+          "alt": "The project menu, with Add pointed at and Form (Windows Forms) in the second menu",
           "w": 640,
           "h": 420,
           "marks": [
@@ -1211,7 +1217,7 @@
       {
        "steps": [
         {
-         "do": "Click the [[lightning bolt|10]] at the top of the Properties window.",
+         "do": "Click the [[lightning bolt|11]] at the top of the Properties window.",
          "see": "The Properties window now lists the form's events in place of its properties.",
          "img": {
           "missing": true,
@@ -1221,7 +1227,7 @@
           "marks": [
            {
             "n": 7,
-            "say": "Click the [[lightning bolt|10]] at the top of the Properties window."
+            "say": "Click the [[lightning bolt|11]] at the top of the Properties window."
            },
            {
             "n": 8,
@@ -1692,7 +1698,7 @@
        "p": "pnlPlay covers the Round over box in the designer. This is normal: the code brings the Round over box to the front when a round ends."
       },
       {
-       "p": "A Timer never shows on the window. When you drop a Timer on the form, it appears in the grey strip under the form. Its [[Interval|28]] is how long it waits, in thousandths of a second, so 900 is 0.9 seconds."
+       "p": "A Timer never shows on the window. When you drop a Timer on the form, it appears in the grey strip under the form. Its [[Interval|29]] is how long it waits, in thousandths of a second, so 900 is 0.9 seconds."
       },
       {
        "controls": {
@@ -1793,7 +1799,7 @@
          }
         ],
         "done": {
-         "see": "The dark header strip along the top of frmKnots. Under it, pnlPlay fills the rest of the form, with lblTries, lblRope, prgRope, lblPairs, lblUse and btnScore down its right-hand side. The left-hand side of pnlPlay stays empty, because the code puts the 16 cards there. tmrFlipBack and tmrDone sit in the grey strip under the form.",
+         "see": "The dark header strip along the top of frmKnots. Under it, pnlPlay fills the rest of the form, with lblTries, lblRope, prgRope, lblPairs, lblUse and btnScore down its right-hand side. The left-hand side of pnlPlay stays empty, because the code puts the 16 cards there. The Timers tmrFlipBack and tmrDone sit in the grey strip under the form.",
          "img": {
           "missing": true,
           "alt": "frmKnots in the designer with every control from the table on it, and the two Timers in the grey strip under the form",
@@ -1838,6 +1844,7 @@
         "kind": "copy",
         "title": "The game-form fields from chapter 9",
         "lang": "cs",
+        "taught": "09",
         "why": "The 3 fields are the same in every game form, and you typed them in chapter 9. Only the number in `gameNumber` changes. The places on the map are numbered from 0, so Knot Pairs, the second place, is number 1.",
         "text": "// ---------- the game-form fields from chapter 9 ----------\nprivate int gameNumber = 1;      // Knot Pairs is place 1 (0 is first)\nprivate GameResult result;       // made when the round ends\nprivate bool finished = false;   // true once the result is kept",
         "partLines": [
@@ -1915,6 +1922,7 @@
         "kind": "copy",
         "title": "The game-form methods from chapter 9",
         "lang": "cs",
+        "taught": "09",
         "why": "The 8 methods are the same in every game form, and you typed and tested them in chapter 9. Only the question that FormClosing asks names Knot Pairs.",
         "text": "// ---------- the game-form methods from chapter 9 ----------\n\n// Keeps the result on the map, even if the window is then closed\nprivate void KeepResult()\n{\n    Expedition.Finish(gameNumber, result);\n    finished = true;\n    lblScore.Text = \"Points: \" + result.Score;\n}\n\n// Fills in the Round over panel and brings it to the front\nprivate void ShowRoundOver()\n{\n    lblRoundScore.Text = \"You scored \" + result.Score\n        + \" out of 100 points.\";\n    lblWellList.Text = ListText(result.WentWell,\n        \"thing that went well\", \"things that went well\");\n    lblWrongList.Text = ListText(result.WentWrong,\n        \"thing that went wrong\", \"things that went wrong\");\n    if (result.Score >= 60) Sound.Play(\"win.wav\");\n    else Sound.Play(\"lose.wav\");\n    pnlRoundOver.Visible = true;\n    pnlRoundOver.BringToFront();\n}\n\n// Up to 3 lines from a list, then how many more there are\nprivate string ListText(List<string> lines, string one, string many)\n{\n    if (lines.Count == 0) return \"Nothing this time.\";\n    string text = \"\";\n    for (int i = 0; i < lines.Count && i < 3; i++)\n    {\n        text = text + \"- \" + lines[i] + Environment.NewLine;\n    }\n    int more = lines.Count - 3;\n    if (more == 1) text = text + \"And 1 more \" + one + \".\";\n    if (more > 1) text = text + \"And \" + more + \" more \" + many + \".\";\n    return text;\n}\n\n// Back to the map: closing the window runs FormClosing\nprivate void btnBack_Click(object sender, EventArgs e)\n{\n    this.Close();\n}\n\n// The Round over panel's Back to the map button\nprivate void btnDone_Click(object sender, EventArgs e)\n{\n    this.Close();\n}\n\n// Runs as the window closes, by Back, by Done or by the X\nprivate void frmKnots_FormClosing(object sender,\n    FormClosingEventArgs e)\n{\n    if (finished) return;    // a finished round closes at once\n    DialogResult answer = MessageBox.Show(\"Leave Knot Pairs? It will \"\n        + \"score nothing, but you can come back and climb it again.\",\n        \"Summit Ready\", MessageBoxButtons.YesNo);\n    if (answer == DialogResult.No) e.Cancel = true;   // stay\n}\n\n// Shows the speaker picture that matches the sound being on or off\nprivate void ShowSpeaker()\n{\n    string icon = \"icon-speaker-on-64.png\";\n    if (Sound.Muted) icon = \"icon-speaker-muted-64.png\";\n    picSound.Image = Files.Picture(\"Icons\", icon);\n}\n\n// The speaker picture turns the sound off, or back on\nprivate void picSound_Click(object sender, EventArgs e)\n{\n    Sound.Muted = !Sound.Muted;\n    ShowSpeaker();\n}",
         "partLines": [
@@ -1972,13 +1980,13 @@
           42,
           34,
           40,
-          21
+          22
          ],
          [
           31,
           36,
           38,
-          24
+          25
          ]
         ]
        }
@@ -2052,7 +2060,7 @@
        "p": "By the end of this screen, both **Back to the map** buttons on frmKnots close the window."
       },
       {
-       "p": "A pasted method does nothing until it is connected to an [[event|17]]. A pasted control keeps its name, but its events do not always come with it. So you check each event in the Properties window, and connect it."
+       "p": "A pasted method does nothing until it is connected to an [[event|18]]. A pasted control keeps its name, but its events do not always come with it. So you check each event in the Properties window, and connect it."
       },
       {
        "p": "You connect each event with the small arrow beside it. Do not double-click the box beside the event, because double-clicking makes a second, empty method."
@@ -2368,7 +2376,7 @@
        "p": "By the end of this screen, frmKnots has the variables that remember the cards, the tries and the pairs while a round plays."
       },
       {
-       "p": "These variables are called [[fields|11]]. They sit at the top of the class, outside every method, so every method in the form can use them."
+       "p": "These variables are called [[fields|12]]. They sit at the top of the class, outside every method, so every method in the form can use them."
       },
       {
        "p": "Every field below is new in this chapter, so you type every one."
@@ -2424,13 +2432,13 @@
           2,
           8,
           18,
-          8
+          9
          ],
          [
           3,
           8,
           16,
-          12
+          13
          ]
         ]
        }
@@ -2553,7 +2561,7 @@
           4,
           25,
           39,
-          14
+          15
          ]
         ]
        }
@@ -2706,43 +2714,43 @@
           12,
           4,
           11,
-          13
+          14
          ],
          [
           6,
           38,
           39,
-          15
+          16
          ],
          [
           7,
           16,
           17,
-          16
+          17
          ],
          [
           11,
           9,
           14,
-          17
+          18
          ],
          [
           11,
           15,
           17,
-          18
+          19
          ],
          [
           11,
           18,
           28,
-          19
+          20
          ],
          [
           12,
           12,
           24,
-          20
+          21
          ]
         ]
        }
@@ -2852,13 +2860,13 @@
           4,
           4,
           9,
-          12
+          13
          ],
          [
           7,
           29,
           30,
-          15
+          16
          ]
         ]
        }
@@ -2963,7 +2971,7 @@
           1,
           34,
           40,
-          21
+          22
          ]
         ]
        }
@@ -3055,13 +3063,13 @@
           2,
           30,
           36,
-          21
+          22
          ],
          [
           4,
           21,
           29,
-          22
+          23
          ]
         ]
        }
@@ -3177,25 +3185,25 @@
           2,
           13,
           23,
-          19
+          20
          ],
          [
           2,
           31,
           37,
-          21
+          22
          ],
          [
           5,
           15,
           17,
-          23
+          24
          ],
          [
           15,
           4,
           11,
-          25
+          26
          ]
         ]
        }
@@ -3310,13 +3318,13 @@
           4,
           17,
           31,
-          14
+          15
          ],
          [
           16,
           40,
           47,
-          26
+          27
          ]
         ]
        }
@@ -3473,19 +3481,19 @@
           11,
           37,
           43,
-          21
+          22
          ],
          [
           7,
           4,
           15,
-          27
+          28
          ],
          [
           11,
           13,
           29,
-          29
+          30
          ]
         ]
        }
@@ -3583,13 +3591,13 @@
           9,
           24,
           32,
-          9
+          10
          ],
          [
           5,
           25,
           39,
-          14
+          15
          ]
         ]
        }
@@ -3690,22 +3698,28 @@
         "typed": 9,
         "wordMarks": [
          [
+          7,
+          10,
+          16,
+          0
+         ],
+         [
           8,
           22,
           36,
-          14
+          15
          ],
          [
           11,
           13,
           25,
-          20
+          21
          ],
          [
           6,
           10,
           14,
-          30
+          31
          ]
         ]
        }
@@ -3803,7 +3817,7 @@
           5,
           19,
           21,
-          24
+          25
          ]
         ]
        }
@@ -3907,7 +3921,7 @@
           22,
           19,
           21,
-          24
+          25
          ]
         ]
        }
@@ -3993,7 +4007,7 @@
           6,
           27,
           29,
-          24
+          25
          ]
         ]
        }
@@ -4091,19 +4105,19 @@
           9,
           33,
           39,
-          21
+          22
          ],
          [
           5,
           4,
           11,
-          27
+          28
          ],
          [
           9,
           13,
           25,
-          29
+          30
          ]
         ]
        }
@@ -4388,13 +4402,38 @@
        "p": "Your map opens each game with a list of cases in frmMap.cs, one case for each place. Knot Pairs is place number 1, so its case says `case 1:`."
       },
       {
+       "code": {
+        "id": "c12-map",
+        "kind": "type",
+        "title": "The case line for Knot Pairs in frmMap.cs",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "case 1: game = new frmKnots(); break;",
+        "partLines": [
+         [
+          1,
+          1,
+          "Open Knot Pairs",
+          "When the player clicks place number 1, `game` becomes a new frmKnots window. `break;` ends this case. The map then opens the window."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          1
+         ]
+        ],
+        "typed": 1
+       }
+      },
+      {
        "steps": [
         {
          "do": "Double-click `frmMap.cs` in Solution Explorer.",
          "see": "frmMap opens in the designer.",
          "img": {
           "missing": true,
-          "alt": "Visual Studio 2019 with frmMap.cs in the code editor, the search box open, the new case line typed, and frmMap.cs picked in Solution Explorer on the right",
+          "alt": "Visual Studio 2019 with frmMap.cs in the code editor. The search box is open and the new case line is typed. frmMap.cs is picked in Solution Explorer on the right",
           "w": 800,
           "h": 450,
           "marks": [
@@ -5058,6 +5097,10 @@
   }
  ],
  "glossary": [
+  [
+   "Height",
+   "How tall a control is, in pixels."
+  ],
   [
    "card",
    "One of the 16 squares you click in Knot Pairs. In the code, each card is a button."

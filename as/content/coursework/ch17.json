@@ -1,0 +1,4752 @@
+{
+ "id": "17",
+ "n": 17,
+ "of": 20,
+ "title": "Build Route Timer, a slider game where you estimate how long a walk takes",
+ "kind": "a game chapter: build one game from each pair, and this pair is chapters 17 and 18",
+ "one": "You build Route Timer in your own project, exactly as it is in Summit Ready, and test it. Then you change it into an estimating game on your own topic.",
+ "prev": {
+  "id": "16",
+  "n": 16,
+  "title": "Grid Ref Rescue"
+ },
+ "next": {
+  "id": "18",
+  "n": 18,
+  "title": "Listen Out"
+ },
+ "stages": [
+  {
+   "title": "See what Route Timer does and how a round plays",
+   "screens": [
+    {
+     "title": "Look at a round of Route Timer, from the first leg to the score",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know how a round of Route Timer plays and how it scores."
+      },
+      {
+       "p": "Route Timer is an estimating game. It is on Slieve Muck, the seventh place on the Summit Ready map."
+      },
+      {
+       "p": "You build one game from each pair of game chapters. Route Timer is paired with Listen Out, so you build one of those two."
+      },
+      {
+       "p": "First you build Route Timer exactly as it is in Summit Ready. Then, in stage 5, you change it into an estimating game on your own topic."
+      },
+      {
+       "p": "A round has 5 [[legs|0]]. A leg is one part of a walk, such as Carrick Little to Slieve Binnian."
+      },
+      {
+       "p": "Each leg shows a photo on the left. On the right are the leg's distance in kilometres and its climb in metres."
+      },
+      {
+       "p": "Under the photo is a [[slider|2]] that runs from 0 to 4 hours. You drag it to your best guess of how long the leg takes. Your guess shows under the slider, such as **Your guess: 1 hour 55 minutes**."
+      },
+      {
+       "p": "The slider jumps in steps of 5 minutes, because nobody plans a walk to the exact minute."
+      },
+      {
+       "p": "When you are happy with your guess, you click **Lock in my time**. The game works out the time with [[Naismith's rule|1]], which walkers use to plan a day out."
+      },
+      {
+       "p": "Naismith's rule allows 12 minutes for every kilometre, plus 1 minute for every 10 metres of climb. The white box on the right shows the rule all the time."
+      },
+      {
+       "p": "After you lock in your time, the game shows its working. Under the slider, a bar shows 2 markers: your avatar at your guess, and a chequered flag at the Naismith time."
+      },
+      {
+       "p": "Your points depend on how far out your guess is:"
+      },
+      {
+       "p": "10 minutes out or less scores 20 points, and the game says **Spot on.** 20 minutes out or less scores 12 points, and it says **Close.**"
+      },
+      {
+       "p": "30 minutes out or less scores 5 points, and it says **A bit out.**"
+      },
+      {
+       "p": "More than 30 minutes out scores 0 points, and the game says your guess was too far out."
+      },
+      {
+       "p": "A guess that scores 12 points or more turns the result message green and plays the right sound. Any other guess turns it red and plays the wrong sound."
+      },
+      {
+       "p": "After each leg, **Next leg** appears. After the 5th leg, the button says **See my score**, and it opens the Round over box."
+      },
+      {
+       "p": "The best score is 5 legs at 20 points each, which is 100 points. The flag on Slieve Muck gets a tick on the map."
+      },
+      {
+       "box": {
+        "title": "Why real walkers add more time",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "Naismith's rule is for a fit walker on a good path in good weather. Real walkers add time for rests, rough ground, bad weather and a heavy rucksack."
+         },
+         {
+          "p": "The distances and climbs in Route Timer are rounded for practice. A real plan uses the exact figures from a map."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Check that your project is ready, and see the words this chapter uses",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know that your project has everything Route Timer needs."
+      },
+      {
+       "p": "Route Timer uses things you made in earlier chapters. Check that each one is in your project before you start."
+      },
+      {
+       "need": [
+        "Your Summit Ready project, with the practice game opening from the map (chapter 9).",
+        "The Files class that finds files, the Sound class that plays sounds and the Mix class that shuffles numbers (chapter 2).",
+        "The Data, Images and Sounds folders in your project's [[bin\\Debug|3]] folder, from `summit-ready-files.zip` (chapter 2). They already hold every file that Route Timer needs.",
+        "Players who can log in and have an avatar picture (chapter 5).",
+        "The line `// each game chapter adds its own case below this line` in `frmMap.cs` (chapter 8).",
+        "File name extensions turned on in File Explorer, so `routes.txt` shows as `routes.txt` and not as `routes` (chapter 2).",
+        "About 2 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
+       ]
+      },
+      {
+       "words": [
+        [
+         "leg",
+         "One part of a walk, from one place to another. A round of Route Timer has 5 legs.",
+         "1-1",
+         false
+        ],
+        [
+         "Naismith's rule",
+         "A rule walkers use to plan: 12 minutes for every kilometre, plus 1 minute for every 10 metres of climb.",
+         "1-1",
+         false
+        ],
+        [
+         "slider",
+         "A control with a handle that you drag along a line to pick a number. In the Toolbox, a slider is called a TrackBar.",
+         "1-1",
+         false
+        ],
+        [
+         "bin\\Debug",
+         "The folder inside your project where Visual Studio 2019 puts the program it builds. Summit Ready reads its data, pictures and sounds from there.",
+         "1-2",
+         false
+        ],
+        [
+         "zip file",
+         "One file with other files and folders packed inside it.",
+         "2-1",
+         false
+        ],
+        [
+         "property",
+         "A named value that an object carries, such as `Distance` on a RouteLeg. `{ get; set; }` lets other code read the value and change it.",
+         "2-2",
+         true
+        ],
+        [
+         "constructor",
+         "A method with the same name as its class. It runs once, when code makes a new object with `new`.",
+         "2-2",
+         true
+        ],
+        [
+         "static",
+         "A method marked `static` belongs to the class itself. You call it on the class name, as in `RouteLeg.LoadAll()`.",
+         "2-2",
+         true
+        ],
+        [
+         "List",
+         "A list that grows as you add to it. `List<RouteLeg>` is a list that holds RouteLeg objects.",
+         "2-2",
+         true
+        ],
+        [
+         "continue",
+         "Inside a loop, `continue` skips the rest of this turn of the loop. The loop goes straight on to its next turn.",
+         "2-2",
+         true
+        ],
+        [
+         "double",
+         "A number that can have a decimal point, such as 4.5. An `int` can only hold a whole number.",
+         "2-2",
+         true
+        ],
+        [
+         "Convert.ToDouble",
+         "Turns text such as `\"4.5\"` into the number 4.5.",
+         "2-2",
+         true
+        ],
+        [
+         "Convert.ToInt32",
+         "Turns text, or a number with a decimal point, into a whole number.",
+         "2-2",
+         true
+        ],
+        [
+         "lightning bolt",
+         "The button at the top of the Properties window that shows a control's events in place of its properties.",
+         "3-1",
+         false
+        ],
+        [
+         "field",
+         "A variable written at the top of the class, outside every method. Every method in the form can use it, and it keeps its value until the window closes.",
+         "4-4",
+         false
+        ],
+        [
+         "array",
+         "A row of values of the same type, kept together under one name and numbered from 0. `int[]` is an array of whole numbers.",
+         "4-4",
+         true
+        ],
+        [
+         "panel",
+         "A control that holds other controls. `pnlBar` holds the bar and its 2 markers.",
+         "3-5",
+         false
+        ],
+        [
+         "Scroll",
+         "The event a slider has when the player drags its handle.",
+         "4-6",
+         true
+        ],
+        [
+         "whole-number division",
+         "`/` between two whole numbers drops anything after the decimal point. `115 / 60` is 1, not 1.9.",
+         "4-6",
+         true
+        ],
+        [
+         "remainder",
+         "`%` gives what is left over after whole-number division. `115 % 60` is 55.",
+         "4-6",
+         true
+        ],
+        [
+         "return",
+         "`return` hands a value back to the code that called the method, and stops the method.",
+         "2-2",
+         true
+        ],
+        [
+         "Math.Round",
+         "Rounds a number to the nearest whole number, so 44.4 becomes 44.",
+         "4-9",
+         true
+        ],
+        [
+         "Math.Abs",
+         "Gives a number without its minus sign, so -12 becomes 12. Route Timer uses it to find how far out a guess is, whichever side it misses on.",
+         "4-9",
+         true
+        ],
+        [
+         "colour from red, green and blue",
+         "`Color.FromArgb(62, 142, 65)` mixes a colour from red, green and blue. Each number is from 0 to 255.",
+         "4-10",
+         true
+        ],
+        [
+         "event",
+         "Something that happens to a control, such as a click on a button.",
+         "4-2",
+         false
+        ],
+        [
+         "handler",
+         "The method that runs when an event happens. `btnLock_Click` is the handler for a click on **Lock in my time**.",
+         "4-9",
+         true
+        ],
+        [
+         "AddRange",
+         "`AddRange` adds every item from one list to the end of another list, in one go.",
+         "4-12",
+         true
+        ],
+        [
+         "red underline",
+         "The wavy red line Visual Studio 2019 draws under code it does not understand yet. Often it means a method you have not written yet.",
+         "2-2",
+         false
+        ]
+       ],
+       "intro": "You do not need to learn these words now. Where you first meet each one in the chapter, it has a dotted line under it. Hover over it or tap it to see what it means."
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "1"
+  },
+  {
+   "title": "Look at the list of legs, and add the RouteLeg class that reads it",
+   "screens": [
+    {
+     "title": "Read routes.txt, the list of the 8 legs",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know what each line of `routes.txt` holds."
+      },
+      {
+       "p": "Route Timer gets its legs from a text file, `routes.txt`. The file is already in your bin\\Debug\\Data folder, because `summit-ready-files.zip` put it there in chapter 2."
+      },
+      {
+       "p": "You do not type `routes.txt`. You read it here, so that the code in stage 4 makes sense."
+      },
+      {
+       "code": {
+        "id": "c17-routes-txt",
+        "kind": "read",
+        "title": "routes.txt: the 8 legs, one on each line",
+        "lang": "txt",
+        "text": "Bloody Bridge|Slieve Donard|5|820|summit-donard.jpg\nCarrick Little|Slieve Binnian|4.5|600|summit-binnian.jpg\nMeelmore Lodge|Hare's Gap|3|330|summit-meelmore.jpg\nTrassey Track|Slieve Bearnagh|4|600|summit-bearnagh.jpg\nDonard Park|Slieve Commedagh|6|760|summit-commedagh.jpg\nBen Crom|Slieve Lamagan|3.5|450|summit-lamagan.jpg\nHare's Gap|Slieve Bearnagh|1|300|summit-bearnagh.jpg\nSpelga Dam|Slieve Muck|3|270|summit-muck.jpg",
+        "partLines": [
+         [
+          1,
+          1,
+          "The first leg",
+          "Each line is one leg, in 5 parts with a bar `|` between them. The parts are where the leg starts, where it ends, the distance in kilometres, the climb in metres and the photo's file name."
+         ],
+         [
+          2,
+          2,
+          "A distance with a decimal point",
+          "A distance can have a decimal point, such as 4.5 kilometres. So the code keeps the distance in a `double`, not an `int`."
+         ],
+         [
+          3,
+          8,
+          "The other 6 legs",
+          "The other 6 legs have the same 5 parts, in the same order. The photos are in the Summits folder inside Images. A round uses 5 of the 8 legs, picked at random."
+         ]
+        ]
+       }
+      },
+      {
+       "p": "To type a bar `|`, hold Shift and press the key to the left of Z."
+      },
+      {
+       "box": {
+        "title": "If a file is missing or broken",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "Route Timer never crashes because a file is missing. This is what you see instead."
+         },
+         {
+          "p": "If `routes.txt` is missing, or has fewer than 5 good lines, a message box says **Route Timer needs 5 legs in Data\\routes.txt, each with 5 parts.**"
+         },
+         {
+          "p": "If a line of `routes.txt` does not have exactly 5 parts, Route Timer skips that line."
+         },
+         {
+          "p": "If a photo is missing, the space for the photo stays empty, and the game carries on."
+         },
+         {
+          "p": "If a sound is missing, that moment is silent, and the game carries on."
+         },
+         {
+          "p": "To put a missing file back, you download the [[zip file|4]] again and paste its folders into bin\\Debug. When Windows asks about the files you already have, you click **Skip these files**."
+         },
+         {
+          "p": "Skipping keeps every file you already have, including any file you changed. Only the missing files are copied in."
+         },
+         {
+          "steps": [
+           {
+            "do": "Click the download button below.",
+            "see": "Your browser shows that `summit-ready-files.zip` has downloaded.",
+            "download": {
+             "file": "summit-ready-files.zip",
+             "label": "Download summit-ready-files.zip",
+             "size": "7.8 MB"
+            },
+            "id": "2-1.1",
+            "n": 1
+           },
+           {
+            "do": "Press the Windows key and the E key together.",
+            "see": "File Explorer opens.",
+            "img": {
+             "missing": true,
+             "alt": "File Explorer open on Downloads, with the menu that opens on summit-ready-files.zip",
+             "w": 800,
+             "h": 450,
+             "marks": [
+              {
+               "n": 2,
+               "say": "Press the Windows key and the E key together."
+              },
+              {
+               "n": 3,
+               "say": "Click **Downloads** in the list down the left side of File Explorer."
+              },
+              {
+               "n": 4,
+               "say": "Right-click `summit-ready-files.zip`."
+              },
+              {
+               "n": 5,
+               "say": "Click **Extract All...** in the menu."
+              }
+             ]
+            },
+            "id": "2-1.2",
+            "n": 2
+           },
+           {
+            "do": "Click **Downloads** in the list down the left side of File Explorer.",
+            "see": "`summit-ready-files.zip` is in the list of files.",
+            "wrong": [
+             [
+              "There is also a file called `summit-ready-files (1).zip`",
+              "Your browser added (1) because you downloaded the zip file before, in chapter 2. Use the file that ends in (1), because it is the newest one."
+             ]
+            ],
+            "id": "2-1.3",
+            "n": 3
+           },
+           {
+            "do": "Right-click `summit-ready-files.zip`.",
+            "see": "A menu opens.",
+            "id": "2-1.4",
+            "n": 4
+           },
+           {
+            "do": "Click **Extract All...** in the menu.",
+            "see": "A window called Extract Compressed (Zipped) Folders opens.",
+            "wrong": [
+             [
+              "The menu has no **Extract All...**",
+              "Press Escape to close the menu. Double-click `summit-ready-files.zip`. Then click **Extract all** in the bar along the top of File Explorer."
+             ]
+            ],
+            "id": "2-1.5",
+            "n": 5
+           },
+           {
+            "do": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window.",
+            "see": "A new File Explorer window opens. It shows 3 folders, Data, Images and Sounds, and one file, `credits.txt`.",
+            "img": {
+             "missing": true,
+             "alt": "The Extract Compressed (Zipped) Folders window, with its Extract button",
+             "w": 640,
+             "h": 480,
+             "marks": [
+              {
+               "n": 6,
+               "say": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window."
+              }
+             ]
+            },
+            "id": "2-1.6",
+            "n": 6
+           },
+           {
+            "do": "Press Ctrl and A together.",
+            "see": "The 3 folders and `credits.txt` turn blue.",
+            "img": {
+             "missing": true,
+             "alt": "The unpacked folder, with Data, Images, Sounds and credits.txt highlighted",
+             "w": 800,
+             "h": 360,
+             "marks": [
+              {
+               "n": 7,
+               "say": "Press Ctrl and A together."
+              },
+              {
+               "n": 8,
+               "say": "Press Ctrl and C together."
+              }
+             ]
+            },
+            "id": "2-1.7",
+            "n": 7
+           },
+           {
+            "do": "Press Ctrl and C together.",
+            "see": "Nothing changes on the screen. That is normal: Windows has copied the 3 folders and `credits.txt`.",
+            "id": "2-1.8",
+            "n": 8
+           },
+           {
+            "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
+            "see": "Visual Studio 2019 comes to the front, with your project open.",
+            "img": {
+             "missing": true,
+             "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
+             "w": 800,
+             "h": 60,
+             "marks": [
+              {
+               "n": 9,
+               "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
+              }
+             ]
+            },
+            "id": "2-1.9",
+            "n": 9
+           },
+           {
+            "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+            "see": "A long menu opens.",
+            "img": {
+             "missing": true,
+             "alt": "Solution Explorer, with the menu that opens on the project line",
+             "w": 360,
+             "h": 420,
+             "marks": [
+              {
+               "n": 10,
+               "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+              },
+              {
+               "n": 11,
+               "say": "Click **Open Folder in File Explorer**, near the bottom of the menu."
+              }
+             ]
+            },
+            "id": "2-1.10",
+            "n": 10
+           },
+           {
+            "do": "Click **Open Folder in File Explorer**, near the bottom of the menu.",
+            "see": "File Explorer opens on your project's folder. You can see the bin and obj folders and your .cs files.",
+            "id": "2-1.11",
+            "n": 11
+           },
+           {
+            "do": "Double-click the **bin** folder.",
+            "see": "The bin folder holds a folder called Debug.",
+            "img": {
+             "missing": true,
+             "alt": "File Explorer on the project folder, with the bin folder",
+             "w": 640,
+             "h": 300,
+             "marks": [
+              {
+               "n": 12,
+               "say": "Double-click the **bin** folder."
+              }
+             ]
+            },
+            "id": "2-1.12",
+            "n": 12
+           },
+           {
+            "do": "Double-click the **Debug** folder.",
+            "see": "The Debug folder holds the Data, Images and Sounds folders, and your program, whose name ends in .exe.",
+            "img": {
+             "missing": true,
+             "alt": "File Explorer on the bin folder, with the Debug folder",
+             "w": 640,
+             "h": 300,
+             "marks": [
+              {
+               "n": 13,
+               "say": "Double-click the **Debug** folder."
+              }
+             ]
+            },
+            "id": "2-1.13",
+            "n": 13
+           },
+           {
+            "do": "Press Ctrl and V together.",
+            "see": "A window called Replace or Skip Files opens, because most of the files are already there.",
+            "img": {
+             "missing": true,
+             "alt": "The Replace or Skip Files window, with Skip these files",
+             "w": 640,
+             "h": 400,
+             "marks": [
+              {
+               "n": 14,
+               "say": "Press Ctrl and V together."
+              },
+              {
+               "n": 15,
+               "say": "Click **Skip these files**."
+              }
+             ]
+            },
+            "id": "2-1.14",
+            "n": 14
+           },
+           {
+            "do": "Click **Skip these files**.",
+            "see": "The window closes. Windows has copied in only the missing files.",
+            "id": "2-1.15",
+            "n": 15
+           }
+          ]
+         }
+        ]
+       }
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Add the RouteLeg class, which reads routes.txt",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has a RouteLeg class that reads all 8 legs from `routes.txt`."
+      },
+      {
+       "p": "The game needs the legs before it can show any photo. So you add a class called RouteLeg, which holds one leg and reads the file."
+      },
+      {
+       "p": "One RouteLeg object holds one line of `routes.txt`: where the leg starts and ends, its distance, its climb and its photo. The class also has a method, `LoadAll`, that reads every line into a list."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
+         "see": "Visual Studio 2019 comes to the front, with your project open.",
+         "img": {
+          "missing": true,
+          "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
+           }
+          ]
+         },
+         "id": "2-2.1",
+         "n": 1
+        },
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "The project menu, with Add pointed at and Class in the second menu",
+          "w": 640,
+          "h": 420,
+          "marks": [
+           {
+            "n": 2,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 3,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 4,
+            "say": "Click **Class...** at the bottom of the second menu."
+           }
+          ]
+         },
+         "id": "2-2.2",
+         "n": 2
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "2-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click **Class...** at the bottom of the second menu.",
+         "see": "The Add New Item window opens. Class is picked, and the Name box at the bottom says `Class1.cs`.",
+         "id": "2-2.4",
+         "n": 4
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "missing": true,
+          "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 6,
+            "say": "Type `RouteLeg.cs`"
+           },
+           {
+            "n": 7,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "2-2.5",
+         "n": 5
+        },
+        {
+         "do": "Type `RouteLeg.cs`",
+         "see": "The Name box shows `RouteLeg.cs`.",
+         "id": "2-2.6",
+         "n": 6
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "`RouteLeg.cs` opens in the code editor. At the top are 5 lines that start with `using`. Further down is `class RouteLeg`, with an empty pair of curly brackets under it.",
+         "id": "2-2.7",
+         "n": 7
+        },
+        {
+         "do": "Click at the end of the line `using System.Threading.Tasks;`",
+         "see": "The flashing cursor is after the semicolon.",
+         "img": {
+          "missing": true,
+          "alt": "RouteLeg.cs as Visual Studio 2019 makes it, with using System.IO; added",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 8,
+            "say": "Click at the end of the line `using System.Threading.Tasks;`"
+           },
+           {
+            "n": 9,
+            "say": "Press Enter."
+           },
+           {
+            "n": 10,
+            "say": "Type `using System.IO;`"
+           }
+          ]
+         },
+         "id": "2-2.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under `using System.Threading.Tasks;`.",
+         "id": "2-2.9",
+         "n": 9
+        },
+        {
+         "do": "Type `using System.IO;`",
+         "see": "The new line says `using System.IO;`. The RouteLeg class needs this line, because it reads a file.",
+         "id": "2-2.10",
+         "n": 10
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c17-routeleg-class",
+        "kind": "type",
+        "title": "RouteLeg.cs: the RouteLeg class",
+        "lang": "cs",
+        "why": "You type the 5 properties, and the 5 lines that put a value into each one, because they are new. The rest reads a file the same way as `LoadAll` in chapter 3, so it comes in the copy.",
+        "text": "// One leg from routes.txt: where it goes, how far and how much climb\nclass RouteLeg\n{\n    public string From { get; set; }       // where the leg starts\n    public string To { get; set; }         // where the leg ends\n    public double Distance { get; set; }   // kilometres\n    public int Climb { get; set; }         // metres of climb\n    public string Picture { get; set; }    // the photo's file name\n\n    // Makes one RouteLeg from a line of routes.txt, split at each |\n    public RouteLeg(string[] parts)\n    {\n        From = parts[0];\n        To = parts[1];\n        Distance = Convert.ToDouble(parts[2]);\n        Climb = Convert.ToInt32(parts[3]);\n        Picture = parts[4];\n    }\n\n    // Reads every leg in routes.txt into a list\n    public static List<RouteLeg> LoadAll()\n    {\n        List<RouteLeg> legs = new List<RouteLeg>();\n        string path = Files.Data(\"routes.txt\");\n        if (!File.Exists(path)) return legs;   // no file: an empty list\n        StreamReader reader = new StreamReader(path);\n        while (!reader.EndOfStream)\n        {\n            string line = reader.ReadLine();\n            string[] parts = line.Split('|');\n            if (parts.Length != 5) continue;    // skip a broken line\n            legs.Add(new RouteLeg(parts));\n        }\n        reader.Close();\n        return legs;\n    }",
+        "partLines": [
+         [
+          2,
+          8,
+          "The class and its 5 properties",
+          "`class RouteLeg` starts the class. Each property holds one part of a line of `routes.txt`. `Distance` is a `double`, because a distance can be 4.5 kilometres. `Climb` is an `int`, because the climb is always whole metres."
+         ],
+         [
+          11,
+          18,
+          "The constructor",
+          "This part is the constructor. It runs when code writes `new RouteLeg(parts)`. `parts` is one line of `routes.txt`, already cut into 5 pieces at each bar. `Convert.ToDouble` turns the text `\"4.5\"` into the number 4.5. `Convert.ToInt32` turns the text `\"600\"` into the whole number 600."
+         ],
+         [
+          21,
+          25,
+          "The start of LoadAll",
+          "`static` means that you call LoadAll on the class itself, as `RouteLeg.LoadAll()`. LoadAll starts with an empty list. `Files.Data` from chapter 2 gives the full path of `routes.txt`. If `routes.txt` is not there, LoadAll hands back the empty list, so the game shows a message and does not crash."
+         ],
+         [
+          26,
+          33,
+          "Read every line",
+          "The loop goes round once for each line of `routes.txt`. `Split('|')` cuts each line at each bar. If a line does not have exactly 5 parts, `continue` skips it. Every good line becomes a new RouteLeg on the end of the list."
+         ],
+         [
+          34,
+          36,
+          "Close the file and hand back the list",
+          "`reader.Close()` closes `routes.txt`, so that other programs can open it again. `return legs;` hands the full list back to the code that called LoadAll."
+         ]
+        ],
+        "focusLines": [
+         [
+          4,
+          8
+         ],
+         [
+          13,
+          17
+         ]
+        ],
+        "typed": 10,
+        "wordMarks": [
+         [
+          4,
+          23,
+          36,
+          5
+         ],
+         [
+          11,
+          4,
+          20,
+          6
+         ],
+         [
+          21,
+          11,
+          17,
+          7
+         ],
+         [
+          21,
+          18,
+          32,
+          8
+         ],
+         [
+          31,
+          35,
+          43,
+          9
+         ],
+         [
+          6,
+          11,
+          17,
+          10
+         ],
+         [
+          15,
+          19,
+          35,
+          11
+         ],
+         [
+          16,
+          16,
+          31,
+          12
+         ],
+         [
+          25,
+          32,
+          38,
+          20
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Drag from the start of `class RouteLeg` down to the end of the `}` two lines below it.",
+         "see": "`class RouteLeg` and its empty `{` and `}` turn blue. The last `}` in the file stays white. That is right: the last `}` closes the namespace, and it must stay.",
+         "img": {
+          "missing": true,
+          "alt": "RouteLeg.cs, with class RouteLeg and its empty braces highlighted",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 11,
+            "say": "Drag from the start of `class RouteLeg` down to the end of the `}` two lines below it."
+           },
+           {
+            "n": 13,
+            "say": "Press Ctrl and V together."
+           }
+          ]
+         },
+         "id": "2-2.11",
+         "n": 11
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c17-routeleg-class",
+         "id": "2-2.12",
+         "n": 12
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The RouteLeg class appears in place of the blue lines. Two lines start with `// YOU TYPE THIS PART`, and your typing goes there.",
+         "id": "2-2.13",
+         "n": 13
+        },
+        {
+         "do": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it.",
+         "see": "The whole line turns blue.",
+         "img": {
+          "missing": true,
+          "alt": "RouteLeg.cs, with the yellow lines typed in place of the two YOU TYPE THIS PART lines",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 14,
+            "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it."
+           },
+           {
+            "n": 15,
+            "say": "Type the 5 yellow lines that start with `public`. Press Enter at the end of each line."
+           },
+           {
+            "n": 16,
+            "say": "Triple-click the other line that starts with `// YOU TYPE THIS PART`."
+           },
+           {
+            "n": 17,
+            "say": "Type the 5 yellow lines from `From` down to `Picture`. Press Enter at the end of each line."
+           },
+           {
+            "n": 18,
+            "say": "Press Ctrl and S together."
+           }
+          ]
+         },
+         "id": "2-2.14",
+         "n": 14
+        },
+        {
+         "do": "Type the 5 yellow lines that start with `public`. Press Enter at the end of each line.",
+         "see": "The 5 properties are where the `// YOU TYPE THIS PART` line was. A red underline may show while you type. This is normal: it goes when the line is finished.",
+         "id": "2-2.15",
+         "n": 15
+        },
+        {
+         "do": "Triple-click the other line that starts with `// YOU TYPE THIS PART`.",
+         "see": "The whole line turns blue.",
+         "id": "2-2.16",
+         "n": 16
+        },
+        {
+         "do": "Type the 5 yellow lines from `From` down to `Picture`. Press Enter at the end of each line.",
+         "see": "No line in `RouteLeg.cs` has a [[red underline|27]].",
+         "id": "2-2.17",
+         "n": 17
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `RouteLeg.cs` on the tab at the top of the code editor disappears. Your RouteLeg class is saved.",
+         "id": "2-2.18",
+         "n": 18
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "2"
+  },
+  {
+   "title": "Make the Route Timer form and set the form's controls",
+   "screens": [
+    {
+     "title": "Add the Route Timer form and set the form's properties",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has an empty Route Timer window, called frmRouteTimer, at the right size and colour."
+      },
+      {
+       "p": "Route Timer needs its own window to play in. In Visual Studio 2019, a window is called a form."
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "The project menu, with Add pointed at and Form (Windows Forms) in the second menu",
+          "w": 640,
+          "h": 420,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 2,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 3,
+            "say": "Click **Form (Windows Forms)...** in the second menu."
+           }
+          ]
+         },
+         "id": "3-1.1",
+         "n": 1
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "3-1.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Form (Windows Forms)...** in the second menu.",
+         "see": "The Add New Item window opens. Form (Windows Forms) is picked, and the Name box says `Form1.cs`.",
+         "id": "3-1.3",
+         "n": 3
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Form1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "missing": true,
+          "alt": "The Add New Item window, with Form (Windows Forms) picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "say": "Type `frmRouteTimer.cs`"
+           },
+           {
+            "n": 6,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "3-1.4",
+         "n": 4
+        },
+        {
+         "do": "Type `frmRouteTimer.cs`",
+         "see": "The Name box shows `frmRouteTimer.cs`.",
+         "id": "3-1.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "A new empty form called frmRouteTimer opens in the designer. `frmRouteTimer.cs` appears in Solution Explorer.",
+         "id": "3-1.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "p": "Now set the form's properties in the Properties window, using the table below. Set **Font** first. If you change Font later, Visual Studio 2019 stretches the form to fit the new font, and its size (ClientSize) changes."
+      },
+      {
+       "controls": {
+        "props": [
+         "Font = Segoe UI, 11pt",
+         "Text = Summit Ready - Route Timer",
+         "ClientSize = 1000, 660",
+         "StartPosition = CenterScreen",
+         "FormBorderStyle = FixedSingle",
+         "MaximizeBox = False",
+         "BackColor = 243, 245, 242"
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "If you have forgotten how to set a property",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "Click the box beside the property's name in the Properties window. Type the new value, then press Enter."
+         },
+         {
+          "p": "For **Font**, click the box beside Font, then click the small button with 3 dots at the right of the box. Pick Segoe UI and size 11, then click **OK**."
+         },
+         {
+          "p": "For **BackColor**, type `243, 245, 242` in the box beside BackColor, then press Enter."
+         },
+         {
+          "p": "For **MaximizeBox**, click the arrow at the right of the box, then click **False**."
+         }
+        ]
+       }
+      },
+      {
+       "p": "Route Timer shows its first leg when the window opens. The form's Load event runs once, right before the window first appears. So you make an empty Load method now, and you fill it in during stage 4."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the [[lightning bolt|13]] at the top of the Properties window.",
+         "see": "The Properties window now lists the form's events in place of its properties.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of frmRouteTimer, with the lightning bolt, Load and the Properties button",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click the [[lightning bolt|13]] at the top of the Properties window."
+           },
+           {
+            "n": 8,
+            "say": "Double-click the empty box beside **Load**. Load comes after Leave, so scroll down the list a little if you cannot see it."
+           },
+           {
+            "n": 10,
+            "say": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window."
+           }
+          ]
+         },
+         "id": "3-1.7",
+         "n": 7
+        },
+        {
+         "do": "Double-click the empty box beside **Load**. Load comes after Leave, so scroll down the list a little if you cannot see it.",
+         "see": "The code editor opens `frmRouteTimer.cs`, with a new empty method called `frmRouteTimer_Load`. An empty method is normal here: you fill it in during stage 4.",
+         "id": "3-1.8",
+         "n": 8
+        },
+        {
+         "do": "Press Shift and F7 together.",
+         "see": "The designer shows frmRouteTimer.",
+         "img": {
+          "missing": true,
+          "alt": "The designer showing frmRouteTimer, with the frmRouteTimer.cs [Design] tab",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Press Shift and F7 together."
+           }
+          ]
+         },
+         "id": "3-1.9",
+         "n": 9
+        },
+        {
+         "do": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists properties again.",
+         "id": "3-1.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Copy the dark header strip from frmPractice onto frmRouteTimer",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmRouteTimer has the same dark header strip as your practice game."
+      },
+      {
+       "p": "frmPractice from chapter 9 already has a dark strip along the top. The strip holds the title, the instruction, Points, the speaker picture and **Back to the map**."
+      },
+      {
+       "p": "You copy the strip, so that every game looks the same. The copied controls keep their names, such as `lblScore` and `btnBack`, and the chapter 9 code needs those names."
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `frmPractice.cs` in Solution Explorer.",
+         "see": "frmPractice opens in the designer.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with frmPractice.cs",
+          "w": 360,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Double-click `frmPractice.cs` in Solution Explorer."
+           }
+          ]
+         },
+         "id": "3-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click a dark part of the header strip that has no words on it.",
+         "see": "The Properties window shows pnlHeader at the top.",
+         "img": {
+          "missing": true,
+          "alt": "frmPractice in the designer, with the dark header strip picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 2,
+            "say": "Click a dark part of the header strip that has no words on it."
+           },
+           {
+            "n": 3,
+            "say": "Press Ctrl and C together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Properties window shows lblTitle or another name, not pnlHeader",
+           "You clicked a control on the strip. Click a dark part of the strip with no words on it."
+          ]
+         ],
+         "id": "3-2.2",
+         "n": 2
+        },
+        {
+         "do": "Press Ctrl and C together.",
+         "see": "Nothing changes on the screen. That is normal: Visual Studio 2019 has copied the control and everything on it.",
+         "id": "3-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click the **frmRouteTimer.cs [Design]** tab at the top of the editor.",
+         "see": "The empty frmRouteTimer form shows again.",
+         "img": {
+          "missing": true,
+          "alt": "The empty frmRouteTimer form, with the frmRouteTimer.cs [Design] tab and the title bar of frmRouteTimer",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click the **frmRouteTimer.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 5,
+            "say": "Click the title bar of frmRouteTimer."
+           }
+          ]
+         },
+         "id": "3-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click the title bar of frmRouteTimer.",
+         "see": "The Properties window shows frmRouteTimer at the top. The form must be picked, because Visual Studio 2019 pastes onto whatever is picked.",
+         "id": "3-2.5",
+         "n": 5
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The dark header strip appears on frmRouteTimer, with small white squares at its corners. The Properties window shows pnlHeader.",
+         "img": {
+          "missing": true,
+          "alt": "frmRouteTimer with the pasted header strip, and the Location box in the Properties window",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 6,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 7,
+            "say": "Triple-click the box beside **Location** in the Properties window."
+           },
+           {
+            "n": 8,
+            "say": "Type `0, 0`"
+           },
+           {
+            "n": 9,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The pasted strip landed inside another control",
+           "Press Ctrl and Z together to undo the paste. Click the title bar of frmRouteTimer, then press Ctrl and V together again."
+          ]
+         ],
+         "id": "3-2.6",
+         "n": 6
+        },
+        {
+         "do": "Triple-click the box beside **Location** in the Properties window.",
+         "see": "The numbers in the box turn blue.",
+         "wrong": [
+          [
+           "The old value is still in the box after you type",
+           "Click the box, then press Home. Hold Shift and press End, so the whole value turns blue. Type the new value, then press Enter."
+          ]
+         ],
+         "id": "3-2.7",
+         "n": 7
+        },
+        {
+         "do": "Type `0, 0`",
+         "see": "The box shows `0, 0`.",
+         "id": "3-2.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The strip moves to the top left corner of frmRouteTimer and stretches right across the top.",
+         "id": "3-2.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Copy the Round over box from frmPractice onto frmRouteTimer",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmRouteTimer has the white Round over box that shows the score when a round ends."
+      },
+      {
+       "p": "frmPractice already has the Round over box. It is a panel called `pnlRoundOver`, and it stays hidden until a round ends. You copy it, the same way as the strip."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmPractice.cs [Design]** tab at the top of the editor.",
+         "see": "frmPractice shows again.",
+         "img": {
+          "missing": true,
+          "alt": "frmPractice in the designer, with the white Round over box picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the **frmPractice.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 2,
+            "say": "Click a white part of the Round over box that has no words on it."
+           },
+           {
+            "n": 3,
+            "say": "Press Ctrl and C together."
+           }
+          ]
+         },
+         "id": "3-3.1",
+         "n": 1
+        },
+        {
+         "do": "Click a white part of the Round over box that has no words on it.",
+         "see": "The Properties window shows pnlRoundOver at the top.",
+         "wrong": [
+          [
+           "You cannot see the white Round over box on frmPractice",
+           "Another control is covering it. Right-click the control that covers the box, then click **Send to Back**. The Round over box comes into view."
+          ]
+         ],
+         "id": "3-3.2",
+         "n": 2
+        },
+        {
+         "do": "Press Ctrl and C together.",
+         "see": "Nothing changes on the screen. That is normal: Visual Studio 2019 has copied the control and everything on it.",
+         "id": "3-3.3",
+         "n": 3
+        },
+        {
+         "do": "Click the **frmRouteTimer.cs [Design]** tab at the top of the editor.",
+         "see": "frmRouteTimer shows again, with the header strip.",
+         "img": {
+          "missing": true,
+          "alt": "frmRouteTimer with the pasted Round over box in the middle",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click the **frmRouteTimer.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 5,
+            "say": "Click the title bar of frmRouteTimer."
+           },
+           {
+            "n": 6,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 7,
+            "say": "Triple-click the box beside **Location** in the Properties window."
+           },
+           {
+            "n": 8,
+            "say": "Type `180, 120`"
+           },
+           {
+            "n": 9,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "3-3.4",
+         "n": 4
+        },
+        {
+         "do": "Click the title bar of frmRouteTimer.",
+         "see": "The Properties window shows frmRouteTimer at the top.",
+         "id": "3-3.5",
+         "n": 5
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The white Round over box appears on frmRouteTimer. The Properties window shows pnlRoundOver.",
+         "wrong": [
+          [
+           "The pasted box landed inside another control",
+           "Press Ctrl and Z together to undo the paste. Click the title bar of frmRouteTimer, then press Ctrl and V together again."
+          ]
+         ],
+         "id": "3-3.6",
+         "n": 6
+        },
+        {
+         "do": "Triple-click the box beside **Location** in the Properties window.",
+         "see": "The numbers in the box turn blue.",
+         "id": "3-3.7",
+         "n": 7
+        },
+        {
+         "do": "Type `180, 120`",
+         "see": "The box shows `180, 120`.",
+         "id": "3-3.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The Round over box moves to the middle of frmRouteTimer, below the header strip.",
+         "id": "3-3.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Change the title and the instruction on the header strip",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the header strip says Route Timer and tells the player what to do."
+      },
+      {
+       "p": "The copied strip still has the practice game's words. You change its title and its instruction for Route Timer."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the title at the left of the header strip.",
+         "see": "The Properties window shows lblTitle at the top.",
+         "img": {
+          "missing": true,
+          "alt": "The header strip on frmRouteTimer, with lblTitle picked and its Text box in the Properties window",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the title at the left of the header strip."
+           },
+           {
+            "n": 2,
+            "say": "Triple-click the box beside **Text** in the Properties window."
+           },
+           {
+            "n": 3,
+            "say": "Type `Slieve Muck - Route Timer`"
+           },
+           {
+            "n": 4,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "3-4.1",
+         "n": 1
+        },
+        {
+         "do": "Triple-click the box beside **Text** in the Properties window.",
+         "see": "The title's words turn blue.",
+         "id": "3-4.2",
+         "n": 2
+        },
+        {
+         "do": "Type `Slieve Muck - Route Timer`",
+         "see": "The box shows `Slieve Muck - Route Timer`.",
+         "id": "3-4.3",
+         "n": 3
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The title on the header strip says **Slieve Muck - Route Timer**.",
+         "id": "3-4.4",
+         "n": 4
+        },
+        {
+         "do": "Click the instruction under the title.",
+         "see": "The Properties window shows lblInstruction at the top.",
+         "img": {
+          "missing": true,
+          "alt": "The header strip on frmRouteTimer, with lblInstruction picked and its Text box in the Properties window",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Click the instruction under the title."
+           },
+           {
+            "n": 6,
+            "say": "Triple-click the box beside **Text** in the Properties window."
+           },
+           {
+            "n": 7,
+            "say": "Type `Slide to your best guess of how long each leg will take, then press Lock in my time.`"
+           },
+           {
+            "n": 8,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "3-4.5",
+         "n": 5
+        },
+        {
+         "do": "Triple-click the box beside **Text** in the Properties window.",
+         "see": "The instruction's words turn blue.",
+         "id": "3-4.6",
+         "n": 6
+        },
+        {
+         "do": "Type `Slide to your best guess of how long each leg will take, then press Lock in my time.`",
+         "see": "The box shows the new instruction.",
+         "id": "3-4.7",
+         "n": 7
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The instruction on the header strip shows the new words.",
+         "id": "3-4.8",
+         "n": 8
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Add the play area, the photo, the rule, the slider and the bar",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmRouteTimer has every control that Route Timer needs."
+      },
+      {
+       "p": "Some controls sit on a [[panel|16]], a control that holds other controls."
+      },
+      {
+       "p": "Add the controls in the order of the table. The panel called pnlPlay goes first, because every other control sits on it."
+      },
+      {
+       "p": "The rule label sits on pnlRule, and the line, the 2 markers and their words sit on pnlBar. So each of those panels goes before the controls that sit on it."
+      },
+      {
+       "p": "pnlPlay covers the Round over box in the designer. This is normal: the code brings the Round over box to the front when a round ends."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Panel",
+          "name": "pnlPlay",
+          "settings": [
+           "Location = 0, 56",
+           "Size = 1000, 604"
+          ],
+          "note": "Drop the Panel near the bottom left corner of frmRouteTimer, outside the white Round over box.",
+          "then": "pnlPlay covers the Round over box."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picLeg",
+          "settings": [
+           "Location = 20, 16",
+           "Size = 480, 320",
+           "SizeMode = StretchImage"
+          ],
+          "note": "Drop the PictureBox on pnlPlay. The photo comes from the code, so leave Image empty."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblLeg",
+          "settings": [
+           "AutoSize = False",
+           "Location = 520, 16",
+           "Size = 460, 54",
+           "Font = Segoe UI Semibold, 13pt",
+           "Text = (empty)"
+          ],
+          "note": "Drop the Label on pnlPlay. To empty Text, delete the words in the box beside Text, then press Enter."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblFacts",
+          "settings": [
+           "AutoSize = False",
+           "Location = 520, 74",
+           "Size = 460, 28",
+           "Font = Segoe UI, 12pt",
+           "Text = (empty)"
+          ],
+          "note": "Drop the Label on pnlPlay."
+         },
+         {
+          "toolbox": "Panel",
+          "name": "pnlRule",
+          "settings": [
+           "Location = 520, 108",
+           "Size = 460, 84",
+           "BackColor = White",
+           "BorderStyle = FixedSingle"
+          ],
+          "note": "Drop the Panel on pnlPlay.",
+          "then": "A white box with a thin border sits under lblFacts."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblRule",
+          "settings": [
+           "AutoSize = False",
+           "Location = 10, 8",
+           "Size = 440, 66",
+           "Font = Segoe UI, 11.5pt",
+           "BackColor = White",
+           "Text = Naismith's rule: 12 minutes for every kilometre, plus 1 minute for every 10 metres of climb."
+          ],
+          "note": "Drop the Label on pnlRule."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblWorked",
+          "settings": [
+           "AutoSize = False",
+           "Location = 520, 202",
+           "Size = 460, 78",
+           "Font = Segoe UI, 11pt",
+           "Text = (empty)"
+          ],
+          "note": "Drop the Label on pnlPlay."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblVerdict",
+          "settings": [
+           "AutoSize = False",
+           "Location = 520, 284",
+           "Size = 460, 64",
+           "Font = Segoe UI Semibold, 12pt",
+           "Text = (empty)"
+          ],
+          "note": "Drop the Label on pnlPlay."
+         },
+         {
+          "toolbox": "TrackBar",
+          "name": "trkTime",
+          "settings": [
+           "Location = 20, 362",
+           "Size = 600, 45",
+           "Minimum = 0",
+           "Maximum = 240",
+           "TickFrequency = 15",
+           "SmallChange = 5",
+           "LargeChange = 15"
+          ],
+          "note": "Drop the TrackBar on pnlPlay. The slider will go up to 240 minutes, which is 4 hours.",
+          "then": "A slider runs under the photo, with a small mark every 15 minutes."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblTick0",
+          "settings": [
+           "AutoSize = False",
+           "Location = 14, 410",
+           "Size = 64, 18",
+           "Font = Segoe UI, 8.5pt",
+           "ForeColor = 92, 107, 115",
+           "Text = 0"
+          ],
+          "note": "Drop the Label on pnlPlay, under the left end of the slider."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblTick1",
+          "settings": [
+           "AutoSize = False",
+           "Location = 152, 410",
+           "Size = 64, 18",
+           "Font = Segoe UI, 8.5pt",
+           "ForeColor = 92, 107, 115",
+           "Text = 1 hour"
+          ],
+          "note": "Drop the Label on pnlPlay."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblTick2",
+          "settings": [
+           "AutoSize = False",
+           "Location = 290, 410",
+           "Size = 64, 18",
+           "Font = Segoe UI, 8.5pt",
+           "ForeColor = 92, 107, 115",
+           "Text = 2 hours"
+          ],
+          "note": "Drop the Label on pnlPlay."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblTick3",
+          "settings": [
+           "AutoSize = False",
+           "Location = 428, 410",
+           "Size = 64, 18",
+           "Font = Segoe UI, 8.5pt",
+           "ForeColor = 92, 107, 115",
+           "Text = 3 hours"
+          ],
+          "note": "Drop the Label on pnlPlay."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblTick4",
+          "settings": [
+           "AutoSize = False",
+           "Location = 552, 410",
+           "Size = 64, 18",
+           "Font = Segoe UI, 8.5pt",
+           "ForeColor = 92, 107, 115",
+           "Text = 4 hours"
+          ],
+          "note": "Drop the Label on pnlPlay, under the right end of the slider."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblGuess",
+          "settings": [
+           "AutoSize = False",
+           "Location = 20, 432",
+           "Size = 600, 30",
+           "Font = Segoe UI Semibold, 13pt",
+           "Text = Your guess: 0 minutes"
+          ],
+          "note": "Drop the Label on pnlPlay."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnLock",
+          "settings": [
+           "Location = 660, 362",
+           "Size = 220, 44",
+           "Text = Lock in my time",
+           "BackColor = 242, 183, 5",
+           "FlatStyle = Flat",
+           "Font = Segoe UI Semibold, 11pt"
+          ],
+          "note": "Drop the Button on pnlPlay, to the right of the slider."
+         },
+         {
+          "toolbox": "Panel",
+          "name": "pnlBar",
+          "settings": [
+           "Location = 20, 470",
+           "Size = 640, 80",
+           "Visible = False"
+          ],
+          "note": "Drop the Panel on pnlPlay, under lblGuess.",
+          "then": "pnlBar still shows in the designer. Visible = False hides it only while the game runs."
+         },
+         {
+          "toolbox": "Panel",
+          "name": "pnlLine",
+          "settings": [
+           "Location = 16, 36",
+           "Size = 600, 8",
+           "BackColor = 92, 107, 115"
+          ],
+          "note": "Drop the Panel on pnlBar.",
+          "then": "A thin grey line runs across pnlBar."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picGuess",
+          "settings": [
+           "Location = 0, 0",
+           "Size = 32, 32",
+           "SizeMode = Zoom"
+          ],
+          "note": "Drop the PictureBox on pnlBar, above the line."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblGuessMark",
+          "settings": [
+           "AutoSize = False",
+           "Location = 40, 6",
+           "Size = 120, 22",
+           "Font = Segoe UI, 9pt",
+           "Text = Your guess"
+          ],
+          "note": "Drop the Label on pnlBar."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picFlag",
+          "settings": [
+           "Location = 0, 46",
+           "Size = 32, 32",
+           "SizeMode = Zoom"
+          ],
+          "note": "Drop the PictureBox on pnlBar, below the line."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblFlagMark",
+          "settings": [
+           "AutoSize = False",
+           "Location = 40, 52",
+           "Size = 120, 22",
+           "Font = Segoe UI, 9pt",
+           "Text = Naismith time"
+          ],
+          "note": "Drop the Label on pnlBar."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnNext",
+          "settings": [
+           "Location = 762, 548",
+           "Size = 220, 44",
+           "Text = Next leg",
+           "BackColor = 242, 183, 5",
+           "FlatStyle = Flat",
+           "Visible = False"
+          ],
+          "note": "Drop the Button on pnlPlay.",
+          "then": "btnNext still shows in the designer. Visible = False hides it only while the game runs."
+         }
+        ],
+        "done": {
+         "see": "The dark header strip along the top of frmRouteTimer. Under it, pnlPlay fills the rest of the form. picLeg is a large empty box on the left. The slider, its 5 time labels and lblGuess are under it. Down the right-hand side are lblLeg, lblFacts and the white rule box. Under them are lblWorked and lblVerdict. pnlBar sits under the slider, with btnLock and btnNext on the right.",
+         "img": {
+          "missing": true,
+          "alt": "frmRouteTimer in the designer with every control from the table on it",
+          "w": 800,
+          "h": 450,
+          "at": []
+         }
+        }
+       }
+      },
+      {
+       "box": {
+        "title": "How to find a control in the Toolbox",
+        "text": "The Toolbox is down the left side of Visual Studio 2019. Click the search box at the top of the Toolbox, then type the control's name, such as `TrackBar`. The control shows in the list under the search box.",
+        "fold": true
+       }
+      }
+     ],
+     "id": "5"
+    }
+   ],
+   "id": "3"
+  },
+  {
+   "title": "Write the game code, one method at a time",
+   "screens": [
+    {
+     "title": "Copy the chapter 9 fields and methods into frmRouteTimer.cs",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmRouteTimer has the same score, Round over and Back to the map code as your practice game."
+      },
+      {
+       "p": "Every game form has the same 3 fields and the same 8 methods from chapter 9. You typed and tested them in frmPractice, so here you copy them."
+      },
+      {
+       "p": "Red underlines come and go as you work through this stage. This is normal: by the end of the stage, every red underline has gone."
+      },
+      {
+       "code": {
+        "id": "c17-patfields",
+        "kind": "copy",
+        "title": "The game-form fields from chapter 9",
+        "lang": "cs",
+        "taught": "09",
+        "why": "The 3 fields are the same in every game form, and you typed them in chapter 9. Only the number in `gameNumber` changes. The places on the map are numbered from 0, so Route Timer, the seventh place, is number 6.",
+        "text": "// ---------- the game-form fields from chapter 9 ----------\nprivate int gameNumber = 6;      // Route Timer is place 6\nprivate GameResult result;       // made when the round ends\nprivate bool finished = false;   // true once the result is kept",
+        "partLines": [
+         [
+          1,
+          4,
+          "The 3 game-form fields",
+          "`gameNumber` is the game's place number on the map. `result` holds the score and the feedback once the round ends. `finished` turns true once the result is kept."
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmRouteTimer.cs** tab at the top of the editor, the one without [Design].",
+         "see": "The code of frmRouteTimer shows, with `frmRouteTimer_Load` near the bottom.",
+         "img": {
+          "missing": true,
+          "alt": "frmRouteTimer.cs in the code editor, with the 3 pasted fields under the class line",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the **frmRouteTimer.cs** tab at the top of the editor, the one without [Design]."
+           },
+           {
+            "n": 2,
+            "say": "Click at the end of the `{` under `public partial class frmRouteTimer : Form`."
+           },
+           {
+            "n": 3,
+            "say": "Press Enter."
+           },
+           {
+            "n": 5,
+            "say": "Press Ctrl and V together."
+           }
+          ]
+         },
+         "id": "4-1.1",
+         "n": 1
+        },
+        {
+         "do": "Click at the end of the `{` under `public partial class frmRouteTimer : Form`.",
+         "see": "The flashing cursor is after the `{`.",
+         "id": "4-1.2",
+         "n": 2
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the `{`.",
+         "id": "4-1.3",
+         "n": 3
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c17-patfields",
+         "id": "4-1.4",
+         "n": 4
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The 3 fields appear under the `{`, with a comment line above them that says they come from chapter 9.",
+         "id": "4-1.5",
+         "n": 5
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c17-patmethods",
+        "kind": "copy",
+        "title": "The game-form methods from chapter 9",
+        "lang": "cs",
+        "taught": "09",
+        "why": "The 8 methods are the same in every game form, and you typed and tested them in chapter 9. Only the question that FormClosing asks names Route Timer.",
+        "text": "// ---------- the game-form methods from chapter 9 ----------\n\n// Keeps the result on the map, even if the window is then closed\nprivate void KeepResult()\n{\n    Expedition.Finish(gameNumber, result);\n    finished = true;\n    lblScore.Text = \"Points: \" + result.Score;\n}\n\n// Fills in the Round over panel and brings it to the front\nprivate void ShowRoundOver()\n{\n    lblRoundScore.Text = \"You scored \" + result.Score\n        + \" out of 100 points.\";\n    lblWellList.Text = ListText(result.WentWell,\n        \"thing that went well\", \"things that went well\");\n    lblWrongList.Text = ListText(result.WentWrong,\n        \"thing that went wrong\", \"things that went wrong\");\n    if (result.Score >= 60) Sound.Play(\"win.wav\");\n    else Sound.Play(\"lose.wav\");\n    pnlRoundOver.Visible = true;\n    pnlRoundOver.BringToFront();\n}\n\n// Up to 3 lines from a list, then how many more there are\nprivate string ListText(List<string> lines, string one, string many)\n{\n    if (lines.Count == 0) return \"Nothing this time.\";\n    string text = \"\";\n    for (int i = 0; i < lines.Count && i < 3; i++)\n    {\n        text = text + \"- \" + lines[i] + Environment.NewLine;\n    }\n    int more = lines.Count - 3;\n    if (more == 1) text = text + \"And 1 more \" + one + \".\";\n    if (more > 1) text = text + \"And \" + more + \" more \" + many + \".\";\n    return text;\n}\n\n// Back to the map: closing the window runs FormClosing\nprivate void btnBack_Click(object sender, EventArgs e)\n{\n    this.Close();\n}\n\n// The Round over panel's Back to the map button\nprivate void btnDone_Click(object sender, EventArgs e)\n{\n    this.Close();\n}\n\n// Runs as the window closes, by Back, by Done or by the X\nprivate void frmRouteTimer_FormClosing(object sender,\n    FormClosingEventArgs e)\n{\n    if (finished) return;    // a finished round closes at once\n    DialogResult answer = MessageBox.Show(\"Leave Route Timer? It will \"\n        + \"score nothing, but you can come back and climb it again.\",\n        \"Summit Ready\", MessageBoxButtons.YesNo);\n    if (answer == DialogResult.No) e.Cancel = true;   // stay\n}\n\n// Shows the speaker picture that matches the sound being on or off\nprivate void ShowSpeaker()\n{\n    string icon = \"icon-speaker-on-64.png\";\n    if (Sound.Muted) icon = \"icon-speaker-muted-64.png\";\n    picSound.Image = Files.Picture(\"Icons\", icon);\n}\n\n// The speaker picture turns the sound off, or back on\nprivate void picSound_Click(object sender, EventArgs e)\n{\n    Sound.Muted = !Sound.Muted;\n    ShowSpeaker();\n}",
+        "partLines": [
+         [
+          1,
+          9,
+          "KeepResult",
+          "KeepResult tells the map that the round has ended, and hands it the result. `finished` turns true, and Points shows the final score."
+         ],
+         [
+          12,
+          24,
+          "ShowRoundOver",
+          "ShowRoundOver fills in the Round over box and plays the win or lose sound. Then it shows the Round over box in front of everything else."
+         ],
+         [
+          27,
+          39,
+          "ListText",
+          "ListText makes the words for What went well or What went wrong. It gives up to 3 lines, then a line that counts the rest."
+         ],
+         [
+          42,
+          45,
+          "btnBack_Click",
+          "**Back to the map** on the header strip closes the window. Closing the window runs FormClosing."
+         ],
+         [
+          48,
+          51,
+          "btnDone_Click",
+          "**Back to the map** in the Round over box closes the window in the same way."
+         ],
+         [
+          54,
+          62,
+          "frmRouteTimer_FormClosing",
+          "If the round is not finished, a message asks the player whether to leave. Clicking **No** sets `e.Cancel` to true, which keeps the window open."
+         ],
+         [
+          65,
+          70,
+          "ShowSpeaker",
+          "ShowSpeaker shows the speaker picture that matches the sound: on, or muted."
+         ],
+         [
+          73,
+          77,
+          "picSound_Click",
+          "Clicking the speaker picture turns the sound off, or back on. Then it shows the matching picture."
+         ]
+        ],
+        "wordMarks": [
+         [
+          29,
+          26,
+          32,
+          20
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmRouteTimer_Load`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmRouteTimer.cs, with the 8 pasted methods under frmRouteTimer_Load",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 6,
+            "say": "Click at the end of the `}` that closes `frmRouteTimer_Load`."
+           },
+           {
+            "n": 7,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 9,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 10,
+            "say": "Press Ctrl and S together."
+           }
+          ]
+         },
+         "id": "4-1.6",
+         "n": 6
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-1.7",
+         "n": 7
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c17-patmethods",
+         "id": "4-1.8",
+         "n": 8
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The 8 methods appear under `frmRouteTimer_Load`, with a comment line above them that says they come from chapter 9.",
+         "id": "4-1.9",
+         "n": 9
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `frmRouteTimer.cs` on the tab at the top of the editor disappears.",
+         "id": "4-1.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Connect Back to the map and the Round over box's button to their methods",
+     "blocks": [
+      {
+       "p": "By the end of this screen, both **Back to the map** buttons on frmRouteTimer close the window."
+      },
+      {
+       "p": "A pasted method does nothing until it is connected to an [[event|24]]. A pasted control keeps its name, but its events do not always come with it. So you check each event in the Properties window, and connect it."
+      },
+      {
+       "p": "You connect each event with the small arrow beside it. Do not double-click the box beside the event, because double-clicking makes a second, empty method."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Shift and F7 together.",
+         "see": "The designer shows frmRouteTimer.",
+         "img": {
+          "missing": true,
+          "alt": "frmRouteTimer in the designer, with Back to the map picked on the header strip",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Press Shift and F7 together."
+           },
+           {
+            "n": 2,
+            "say": "Click **Back to the map** on the header strip."
+           }
+          ]
+         },
+         "id": "4-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click **Back to the map** on the header strip.",
+         "see": "The Properties window shows btnBack at the top.",
+         "id": "4-2.2",
+         "n": 2
+        },
+        {
+         "do": "Click the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists the events of btnBack.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of btnBack, with the list open beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 3,
+            "say": "Click the lightning bolt at the top of the Properties window."
+           },
+           {
+            "n": 4,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 5,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 6,
+            "say": "Click `btnBack_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "wrong": [
+          [
+           "`btnBack_Click` is already in the box beside Click",
+           "The paste kept the event, so there is nothing to connect. Go on to btnDone."
+          ]
+         ],
+         "id": "4-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list drops down with the methods that can handle a click, including `btnBack_Click`.",
+         "id": "4-2.5",
+         "n": 5
+        },
+        {
+         "do": "Click `btnBack_Click` in the list.",
+         "see": "The box beside Click shows `btnBack_Click`.",
+         "wrong": [
+          [
+           "Visual Studio 2019 made a new method called `btnBack_Click_1`",
+           "You double-clicked the box. Click the arrow beside Click and pick `btnBack_Click`. Then, in `frmRouteTimer.cs`, delete the empty method `btnBack_Click_1`, from its first line down to its `}`."
+          ]
+         ],
+         "id": "4-2.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "p": "The Round over box's **Back to the map** button is called btnDone. pnlPlay covers btnDone in the designer. So you pick btnDone from the list at the top of the Properties window."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the arrow at the right end of the box at the very top of the Properties window.",
+         "see": "A list of every control on frmRouteTimer drops down.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window, with the list of every control open at the top",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click the arrow at the right end of the box at the very top of the Properties window."
+           },
+           {
+            "n": 8,
+            "say": "Click **btnDone** in the list."
+           }
+          ]
+         },
+         "id": "4-2.7",
+         "n": 7
+        },
+        {
+         "do": "Click **btnDone** in the list.",
+         "see": "The Properties window shows the events of btnDone.",
+         "id": "4-2.8",
+         "n": 8
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of btnDone, with btnDone_Click beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 10,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 11,
+            "say": "Click `btnDone_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-2.9",
+         "n": 9
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-2.10",
+         "n": 10
+        },
+        {
+         "do": "Click `btnDone_Click` in the list.",
+         "see": "The box beside Click shows `btnDone_Click`.",
+         "id": "4-2.11",
+         "n": 11
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Connect the speaker picture and the closing of the window, then build",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the speaker picture and the window's close button (the X) both work, and your project builds with no errors."
+      },
+      {
+       "p": "The speaker picture and the closing of the window need connecting too, in the same way."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the speaker picture on the header strip.",
+         "see": "The Properties window shows the events of picSound.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of picSound, with picSound_Click beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the speaker picture on the header strip."
+           },
+           {
+            "n": 2,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 3,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 4,
+            "say": "Click `picSound_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-3.1",
+         "n": 1
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-3.2",
+         "n": 2
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-3.3",
+         "n": 3
+        },
+        {
+         "do": "Click `picSound_Click` in the list.",
+         "see": "The box beside Click shows `picSound_Click`.",
+         "id": "4-3.4",
+         "n": 4
+        },
+        {
+         "do": "Click the title bar of frmRouteTimer.",
+         "see": "The Properties window shows the events of frmRouteTimer.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of frmRouteTimer, with frmRouteTimer_FormClosing beside FormClosing",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Click the title bar of frmRouteTimer."
+           },
+           {
+            "n": 6,
+            "say": "Click the box beside **FormClosing**. Scroll down the list a little if you cannot see it."
+           },
+           {
+            "n": 7,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 8,
+            "say": "Click `frmRouteTimer_FormClosing` in the list."
+           }
+          ]
+         },
+         "id": "4-3.5",
+         "n": 5
+        },
+        {
+         "do": "Click the box beside **FormClosing**. Scroll down the list a little if you cannot see it.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-3.6",
+         "n": 6
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "The list shows one method, `frmRouteTimer_FormClosing`.",
+         "id": "4-3.7",
+         "n": 7
+        },
+        {
+         "do": "Click `frmRouteTimer_FormClosing` in the list.",
+         "see": "The box beside FormClosing shows `frmRouteTimer_FormClosing`.",
+         "id": "4-3.8",
+         "n": 8
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "missing": true,
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows errors",
+           "Double-click the first error in the Error List. Visual Studio 2019 jumps to the line with the error. Check that line letter by letter against the code in this chapter."
+          ]
+         ],
+         "id": "4-3.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Type the Route Timer fields",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmRouteTimer has the variables that remember the legs, the points and the feedback."
+      },
+      {
+       "p": "These variables are called [[fields|14]]. They sit at the top of the class, outside every method, so every method in the form can use them."
+      },
+      {
+       "p": "Every field below is new in this chapter, so you type every one."
+      },
+      {
+       "code": {
+        "id": "c17-fields",
+        "kind": "type",
+        "title": "The Route Timer fields",
+        "lang": "cs",
+        "text": "// ---------- Route Timer ----------\nprivate List<RouteLeg> legs;           // every leg in routes.txt\nprivate int[] order;                   // the legs, mixed up\nprivate int number = 0;                // this leg, 0 to 4\nprivate int total = 0;                 // points from every leg\nprivate List<string> wellLines = new List<string>();\nprivate List<string> wrongLines = new List<string>();",
+        "partLines": [
+         [
+          2,
+          2,
+          "Every leg",
+          "`legs` holds every leg that `RouteLeg.LoadAll()` reads from `routes.txt`."
+         ],
+         [
+          3,
+          3,
+          "The legs in a mixed-up order",
+          "`order` is an array of whole numbers: the place of each leg in `legs`, in a random order. The round plays the first 5."
+         ],
+         [
+          4,
+          5,
+          "This leg and the points",
+          "`number` is this leg, from 0 to 4. `total` adds up the points from every leg."
+         ],
+         [
+          6,
+          7,
+          "The feedback lines",
+          "`wellLines` and `wrongLines` collect the lines for What went well and What went wrong, one leg at a time."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          7
+         ]
+        ],
+        "typed": 6,
+        "wordMarks": [
+         [
+          2,
+          8,
+          22,
+          8
+         ],
+         [
+          3,
+          8,
+          13,
+          15
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the line `private bool finished = false;   // true once the result is kept`",
+         "see": "The flashing cursor is at the end of the comment.",
+         "img": {
+          "missing": true,
+          "alt": "frmRouteTimer.cs, with the Route Timer fields typed under the chapter 9 fields",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the line `private bool finished = false;   // true once the result is kept`"
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-4.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under that line. The flashing cursor is on the new empty line.",
+         "id": "4-4.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The Route Timer fields are under the chapter 9 fields, and none of them has a red underline.",
+         "id": "4-4.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Type ShowLeg, which puts the next leg on the screen",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmRouteTimer can show any leg, with its photo and its facts, and a fresh slider."
+      },
+      {
+       "p": "ShowLeg is long, so it comes in 2 pieces. Type them one after the other, in the same method."
+      },
+      {
+       "code": {
+        "id": "c17-showleg",
+        "kind": "type",
+        "title": "ShowLeg, first piece",
+        "lang": "cs",
+        "text": "// Puts the next leg on the screen and resets the slider\nprivate void ShowLeg()\n{\n    RouteLeg leg = legs[order[number]];\n    picLeg.Image = Files.Picture(\"Summits\", leg.Picture);\n    lblLeg.Text = \"Leg \" + (number + 1) + \" of 5: \" + leg.From\n        + \" to \" + leg.To;\n    lblFacts.Text = \"Distance: \" + leg.Distance + \" km. Climb: \"\n        + leg.Climb + \" m.\";\n    trkTime.Value = 0;",
+        "partLines": [
+         [
+          2,
+          4,
+          "Which leg",
+          "`order[number]` is the place in `legs` of the leg to play now. `leg` is that leg."
+         ],
+         [
+          5,
+          9,
+          "The photo and the facts",
+          "`Files.Picture` from chapter 2 loads the leg's photo from the Summits folder inside Images. The 2 labels show the leg's name, its distance and its climb."
+         ],
+         [
+          10,
+          10,
+          "The slider back to 0",
+          "`trkTime.Value` is the number the slider is on. Setting it to 0 moves the handle back to the left end."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          10
+         ]
+        ],
+        "typed": 8
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmRouteTimer_Load`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmRouteTimer.cs, with both pieces of ShowLeg typed under frmRouteTimer_Load",
+          "w": 800,
+          "h": 400,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `frmRouteTimer_Load`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 4,
+            "say": "Type the yellow lines from the code above. They go straight under `trkTime.Value = 0;`."
+           }
+          ]
+         },
+         "id": "4-5.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-5.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The first piece of ShowLeg is under frmRouteTimer_Load. Red underlines show further down, because ShowLeg has no closing `}` yet. This is normal.",
+         "id": "4-5.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c17-showleg2",
+        "kind": "type",
+        "title": "ShowLeg, second piece",
+        "lang": "cs",
+        "text": "    trkTime.Enabled = true;\n    lblGuess.Text = \"Your guess: \" + TimeInWords(0);\n    lblWorked.Text = \"\";\n    lblVerdict.Text = \"\";\n    pnlBar.Visible = false;\n    btnLock.Visible = true;\n    btnNext.Visible = false;\n}",
+        "partLines": [
+         [
+          1,
+          2,
+          "The slider ready to use",
+          "`Enabled = true` lets the player drag the slider again. The guess shows as 0 minutes."
+         ],
+         [
+          3,
+          5,
+          "Clear the last leg",
+          "The working and the verdict are cleared, and the bar with its 2 markers hides."
+         ],
+         [
+          6,
+          8,
+          "The buttons",
+          "**Lock in my time** shows, and **Next leg** hides."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          8
+         ]
+        ],
+        "typed": 7
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Type the yellow lines from the code above. They go straight under `trkTime.Value = 0;`.",
+         "see": "ShowLeg ends with `btnNext.Visible = false;` and a `}`. Only `TimeInWords` has a red underline, because you have not written TimeInWords yet.",
+         "wrong": [
+          [
+           "Red underlines are still all down the file",
+           "ShowLeg needs its closing `}`. Check that a `}` sits under `btnNext.Visible = false;`."
+          ]
+         ],
+         "id": "4-5.4",
+         "n": 4
+        }
+       ]
+      }
+     ],
+     "id": "5"
+    },
+    {
+     "title": "Type trkTime_Scroll and TimeInWords, which show the guess in hours and minutes",
+     "blocks": [
+      {
+       "p": "By the end of this screen, dragging the slider shows the guess in words, such as 1 hour 55 minutes."
+      },
+      {
+       "p": "The slider gives a number of minutes, from 0 to 240. Two things happen each time it moves."
+      },
+      {
+       "box": {
+        "title": "What the slider does, in words first",
+        "blocks": [
+         {
+          "p": "First, the guess snaps to the nearest 5 minutes. Add 2, divide by 5 as whole numbers, then multiply by 5. Take 113. 113 + 2 is 115. 115 ÷ 5 is 23. 23 × 5 is 115."
+         },
+         {
+          "p": "Then the minutes turn into hours and minutes. 115 minutes ÷ 60 is 1 whole hour. What is left over is 55 minutes. So 115 minutes is 1 hour 55 minutes."
+         },
+         {
+          "p": "In C#, `/` gives the whole hours, and `%` gives the [[remainder|19]], the minutes left over."
+         }
+        ]
+       }
+      },
+      {
+       "code": {
+        "id": "c17-scroll",
+        "kind": "type",
+        "title": "trkTime_Scroll and TimeInWords",
+        "lang": "cs",
+        "text": "// The slider moved: snap it to 5 minutes and show the guess\nprivate void trkTime_Scroll(object sender, EventArgs e)\n{\n    trkTime.Value = (trkTime.Value + 2) / 5 * 5;\n    lblGuess.Text = \"Your guess: \" + TimeInWords(trkTime.Value);\n}\n\n// Turns minutes into words, like 1 hour 55 minutes\nprivate string TimeInWords(int minutes)\n{\n    int hours = minutes / 60;\n    int left = minutes % 60;\n    string h = hours + \" hours\";\n    if (hours == 1) h = \"1 hour\";\n    string m = left + \" minutes\";\n    if (left == 1) m = \"1 minute\";\n    if (hours == 0) return m;\n    if (left == 0) return h;\n    return h + \" \" + m;\n}",
+        "partLines": [
+         [
+          2,
+          4,
+          "Snap to 5 minutes",
+          "trkTime_Scroll runs each time the player drags the slider. This line moves the handle to the nearest 5 minutes, using [[whole-number division|18]]."
+         ],
+         [
+          5,
+          6,
+          "Show the guess",
+          "TimeInWords turns the minutes into words, and lblGuess shows them."
+         ],
+         [
+          9,
+          12,
+          "Hours and minutes",
+          "`string` before the name says that TimeInWords hands back some text. `hours` is the whole hours, and `left` is the minutes left over."
+         ],
+         [
+          13,
+          16,
+          "The words",
+          "`h` says the hours and `m` says the minutes. 1 hour and 1 minute have no s on the end."
+         ],
+         [
+          17,
+          20,
+          "Hand back the words",
+          "With no whole hours, TimeInWords hands back the minutes only, such as 45 minutes. With no minutes left over, it hands back the hours only, such as 2 hours. Otherwise it hands back both."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          20
+         ]
+        ],
+        "typed": 13,
+        "wordMarks": [
+         [
+          2,
+          13,
+          27,
+          17
+         ],
+         [
+          4,
+          40,
+          41,
+          18
+         ],
+         [
+          12,
+          23,
+          24,
+          19
+         ],
+         [
+          17,
+          20,
+          26,
+          20
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `ShowLeg`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmRouteTimer.cs, with trkTime_Scroll and TimeInWords typed under ShowLeg",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `ShowLeg`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-6.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-6.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The red underline under `TimeInWords` in ShowLeg has gone.",
+         "id": "4-6.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "6"
+    },
+    {
+     "title": "Fill in frmRouteTimer_Load, which sets up the round when the window opens",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmRouteTimer loads the legs, mixes them up and shows the first one as the window opens."
+      },
+      {
+       "p": "frmRouteTimer_Load is the empty method you made in stage 3. It runs once, right before the window first appears. You type the yellow lines inside it."
+      },
+      {
+       "code": {
+        "id": "c17-load",
+        "kind": "type",
+        "title": "frmRouteTimer_Load",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "private void frmRouteTimer_Load(object sender, EventArgs e)\n{\n    // Runs once, right before the window first appears\n    ShowSpeaker();\n    picGuess.Image = Files.Picture(\"Avatars\",\n        Expedition.CurrentPlayer.Avatar);\n    picFlag.Image = Files.Picture(\"Icons\",\n        \"icon-chequered-flag-64.png\");\n    legs = RouteLeg.LoadAll();\n    if (legs.Count < 5)\n    {\n        lblLeg.Text = \"Route Timer needs 5 legs in Data\\\\routes.txt, \"\n            + \"each with 5 parts.\";\n        return;\n    }\n    order = Mix.ShuffledNumbers(legs.Count);\n    ShowLeg();\n}",
+        "partLines": [
+         [
+          1,
+          4,
+          "Show the speaker",
+          "ShowSpeaker, from chapter 9, puts the right speaker picture on the header strip."
+         ],
+         [
+          5,
+          8,
+          "The 2 markers",
+          "The guess marker shows the avatar of the player who is logged in. The Naismith marker shows a chequered flag."
+         ],
+         [
+          9,
+          15,
+          "Not enough legs",
+          "LoadAll reads every leg. With fewer than 5 legs, lblLeg shows a message, and `return` stops frmRouteTimer_Load early, so no leg starts. Inside quotes, `\\\\` stands for one backslash, so the message shows Data\\routes.txt."
+         ],
+         [
+          16,
+          18,
+          "Mix up the legs",
+          "`Mix.ShuffledNumbers` from chapter 2 gives the numbers from 0 up in a random order. `ShowLeg()` puts the first leg on the screen."
+         ]
+        ],
+        "focusLines": [
+         [
+          3,
+          17
+         ]
+        ],
+        "typed": 12,
+        "wordMarks": [
+         [
+          14,
+          8,
+          14,
+          20
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `{` on the line under `private void frmRouteTimer_Load`.",
+         "see": "The flashing cursor is after the `{`.",
+         "img": {
+          "missing": true,
+          "alt": "frmRouteTimer.cs, with the yellow lines typed inside frmRouteTimer_Load",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `{` on the line under `private void frmRouteTimer_Load`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-7.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens inside frmRouteTimer_Load.",
+         "id": "4-7.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The yellow lines are inside frmRouteTimer_Load, and no line in frmRouteTimer.cs has a red underline.",
+         "id": "4-7.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "7"
+    },
+    {
+     "title": "Type LegPoints, which turns how far out a guess is into points",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmRouteTimer can give the points for a guess."
+      },
+      {
+       "p": "The points depend on how many minutes out the guess is, whichever side it misses on. Each range of minutes, such as 10 or less, is a band. The checks go from the closest band to the widest, and the first one that fits gives the points."
+      },
+      {
+       "code": {
+        "id": "c17-legpoints",
+        "kind": "type",
+        "title": "LegPoints",
+        "lang": "cs",
+        "text": "// Points for a guess that is diff minutes out\nprivate int LegPoints(int diff)\n{\n    if (diff <= 10) return 20;\n    if (diff <= 20) return 12;\n    if (diff <= 30) return 5;\n    return 0;\n}",
+        "partLines": [
+         [
+          2,
+          3,
+          "How far out",
+          "`diff` is how many minutes out the guess is. `int` before the name says that LegPoints hands back a whole number."
+         ],
+         [
+          4,
+          8,
+          "The 4 bands",
+          "10 minutes out or less scores 20 points, 20 minutes or less scores 12, and 30 minutes or less scores 5. Anything more scores 0. `return` hands back the points and stops LegPoints at once."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          8
+         ]
+        ],
+        "typed": 5,
+        "wordMarks": [
+         [
+          4,
+          20,
+          26,
+          20
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `TimeInWords`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmRouteTimer.cs, with LegPoints typed under TimeInWords",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `TimeInWords`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-8.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-8.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "LegPoints sits under TimeInWords, and no line in it has a red underline.",
+         "id": "4-8.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "8"
+    },
+    {
+     "title": "Type btnLock_Click, which works out the Naismith time and marks the guess",
+     "blocks": [
+      {
+       "p": "By the end of this screen, **Lock in my time** works out the Naismith time, shows the working and scores the guess."
+      },
+      {
+       "p": "This is the heart of Route Timer. Read the rule in words first, then see how each line of code follows it."
+      },
+      {
+       "code": {
+        "id": "c17-rule",
+        "kind": "read",
+        "title": "Naismith's rule, in words",
+        "lang": "txt",
+        "text": "time for the distance  =  distance in kilometres × 12\ntime for the climb     =  metres of climb ÷ 10\nNaismith time          =  time for the distance + time for the climb\nhow far out            =  the gap between your guess and the Naismith time",
+        "partLines": [
+         [
+          1,
+          1,
+          "The distance",
+          "A walker covers 1 kilometre in 12 minutes on the flat. So the distance in kilometres, times 12, is the minutes of walking."
+         ],
+         [
+          2,
+          2,
+          "The climb",
+          "Every 10 metres of climb adds 1 minute. So the metres of climb, divided by 10, is the extra minutes."
+         ],
+         [
+          3,
+          3,
+          "The total",
+          "The 2 times added together give the Naismith time for the leg."
+         ],
+         [
+          4,
+          4,
+          "How far out",
+          "The gap is always counted as a number of minutes above 0, whether the guess is too long or too short."
+         ]
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "Carrick Little to Slieve Binnian, worked through",
+        "blocks": [
+         {
+          "p": "The leg is 4.5 kilometres, with 600 metres of climb."
+         },
+         {
+          "p": "Time for the distance: 4.5 × 12 is 54 minutes. Time for the climb: 600 ÷ 10 is 60 minutes."
+         },
+         {
+          "p": "Naismith time: 54 + 60 is 114 minutes, which is 1 hour 54 minutes."
+         },
+         {
+          "p": "A guess of 1 hour 40 minutes is 100 minutes. The gap is 14 minutes, so the guess scores 12 points."
+         }
+        ]
+       }
+      },
+      {
+       "p": "The code follows the rule line by line. The distance is a `double`, so `Math.Round` rounds the walking time to whole minutes, and `Convert.ToInt32` keeps it as a whole number."
+      },
+      {
+       "p": "btnLock_Click is long, so it comes in 3 pieces. Type them one after the other, in the same method."
+      },
+      {
+       "code": {
+        "id": "c17-lock",
+        "kind": "type",
+        "title": "btnLock_Click, first piece: the rule",
+        "lang": "cs",
+        "text": "// Lock in my time: works out Naismith's time and marks the guess\nprivate void btnLock_Click(object sender, EventArgs e)\n{\n    RouteLeg leg = legs[order[number]];\n    int walk = Convert.ToInt32(Math.Round(leg.Distance * 12));\n    int climb = leg.Climb / 10;\n    int answer = walk + climb;\n    int guess = trkTime.Value;\n    int diff = Math.Abs(guess - answer);\n    int points = LegPoints(diff);",
+        "partLines": [
+         [
+          2,
+          4,
+          "This leg",
+          "`leg` is the leg on the screen now."
+         ],
+         [
+          5,
+          5,
+          "Time for the distance",
+          "`leg.Distance * 12` is the time for the distance. `Math.Round` rounds it to the nearest minute, and `Convert.ToInt32` turns it into an `int`. For 4.5 kilometres, `walk` is 54."
+         ],
+         [
+          6,
+          6,
+          "Time for the climb",
+          "`leg.Climb / 10` is the time for the climb. Both are whole numbers, so it is whole-number division. For 600 metres, `climb` is 60."
+         ],
+         [
+          7,
+          7,
+          "The Naismith time",
+          "`answer` is the Naismith time: 54 + 60, which is 114."
+         ],
+         [
+          8,
+          9,
+          "How far out",
+          "`guess` is the number the slider is on. `Math.Abs` takes off any minus sign, so `diff` is how far out the guess is, whichever side it misses on."
+         ],
+         [
+          10,
+          10,
+          "The points",
+          "LegPoints turns `diff` into the points for this leg."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          10
+         ]
+        ],
+        "typed": 8,
+        "wordMarks": [
+         [
+          5,
+          15,
+          30,
+          12
+         ],
+         [
+          6,
+          26,
+          27,
+          18
+         ],
+         [
+          5,
+          31,
+          41,
+          21
+         ],
+         [
+          9,
+          15,
+          23,
+          22
+         ],
+         [
+          2,
+          13,
+          26,
+          25
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `LegPoints`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmRouteTimer.cs, with the 3 pieces of btnLock_Click typed under LegPoints",
+          "w": 800,
+          "h": 400,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `LegPoints`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 4,
+            "say": "Under `int points = LegPoints(diff);`, type the yellow lines of the second piece."
+           },
+           {
+            "n": 5,
+            "say": "Under `lblScore.Text = \"Points: \" + total;`, type the yellow lines of the third piece."
+           }
+          ]
+         },
+         "id": "4-9.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-9.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The first piece of btnLock_Click is under LegPoints. Red underlines show further down, because btnLock_Click has no closing `}` yet. This is normal.",
+         "id": "4-9.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c17-lock2",
+        "kind": "type",
+        "title": "btnLock_Click, second piece: show the working",
+        "lang": "cs",
+        "text": "total = total + points;\ntrkTime.Enabled = false;\nbtnLock.Visible = false;\nSound.Play(\"click.wav\");\nlblWorked.Text = leg.Distance + \" km × 12 = \" + walk\n    + \" minutes. \" + leg.Climb + \" m ÷ 10 = \" + climb\n    + \" minutes. Total: \" + answer + \" minutes, which is \"\n    + TimeInWords(answer) + \".\";\nShowVerdict(leg, guess, answer, diff, points);\nShowBar(guess, answer);\nlblScore.Text = \"Points: \" + total;",
+        "partLines": [
+         [
+          1,
+          4,
+          "Lock the guess",
+          "The points go on the total. The slider stops working and **Lock in my time** hides, so the guess cannot change. The click sound plays."
+         ],
+         [
+          5,
+          8,
+          "Show the working",
+          "lblWorked shows the rule worked through for this leg, such as **4.5 km × 12 = 54 minutes. 600 m ÷ 10 = 60 minutes.**"
+         ],
+         [
+          9,
+          11,
+          "The verdict, the bar and the score",
+          "ShowVerdict says how far out the guess was. ShowBar moves the 2 markers along the bar. Points on the header strip shows the new total."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          11
+         ]
+        ],
+        "typed": 11
+       }
+      },
+      {
+       "code": {
+        "id": "c17-lock3",
+        "kind": "type",
+        "title": "btnLock_Click, third piece: the next button",
+        "lang": "cs",
+        "text": "    if (number == 4)\n    {\n        btnNext.Text = \"See my score\";\n        RecordResult();\n    }\n    else\n    {\n        btnNext.Text = \"Next leg\";\n    }\n    btnNext.Visible = true;\n    btnNext.Focus();\n}",
+        "partLines": [
+         [
+          1,
+          5,
+          "The last leg",
+          "After leg number 4, the 5th leg, the button says **See my score**, and RecordResult keeps the result."
+         ],
+         [
+          6,
+          9,
+          "Any other leg",
+          "Otherwise the button says **Next leg**."
+         ],
+         [
+          10,
+          12,
+          "Show the button",
+          "The button appears, and `Focus()` lets the player press Enter for it."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          12
+         ]
+        ],
+        "typed": 7
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Under `int points = LegPoints(diff);`, type the yellow lines of the second piece.",
+         "see": "The second piece ends with `lblScore.Text = \"Points: \" + total;`.",
+         "id": "4-9.4",
+         "n": 4
+        },
+        {
+         "do": "Under `lblScore.Text = \"Points: \" + total;`, type the yellow lines of the third piece.",
+         "see": "btnLock_Click ends with `btnNext.Focus();` and a `}`. `ShowVerdict`, `ShowBar` and `RecordResult` have red underlines. This is normal, because you have not written them yet.",
+         "wrong": [
+          [
+           "Red underlines are still all down the file",
+           "btnLock_Click needs its closing `}`. Check that a `}` sits under `btnNext.Focus();`."
+          ]
+         ],
+         "id": "4-9.5",
+         "n": 5
+        }
+       ]
+      }
+     ],
+     "id": "9"
+    },
+    {
+     "title": "Type ShowVerdict, which says how far out the guess was",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmRouteTimer says which way the guess missed, how far, and how many points it scored."
+      },
+      {
+       "p": "ShowVerdict builds the verdict from 3 things: which side the guess missed on, which band it fits, and how many minutes out it was."
+      },
+      {
+       "p": "ShowVerdict is long, so it comes in 2 pieces. Type them one after the other, in the same method."
+      },
+      {
+       "code": {
+        "id": "c17-verdict",
+        "kind": "type",
+        "title": "ShowVerdict, first piece: the words for the band",
+        "lang": "cs",
+        "text": "// Says which way the guess missed, how far, and the points\nprivate void ShowVerdict(RouteLeg leg, int guess, int answer,\n    int diff, int points)\n{\n    string side = \" too long.\";\n    if (guess < answer) side = \" too short.\";\n    string say;\n    if (diff <= 10) say = \"Spot on.\";\n    else if (diff <= 20) say = \"Close.\";\n    else if (diff <= 30) say = \"A bit out.\";\n    else if (guess < answer)\n    {\n        say = \"Too far out. You would still be walking when you \"\n            + \"planned to be finished.\";\n    }\n    else\n    {\n        say = \"Too far out. You planned far more time than this \"\n            + \"leg needs.\";\n    }",
+        "partLines": [
+         [
+          2,
+          4,
+          "What it gets",
+          "ShowVerdict gets the leg, the guess, the Naismith time, how far out, and the points. The list of values is long, so it goes onto 2 lines."
+         ],
+         [
+          5,
+          6,
+          "Which side",
+          "`side` says whether the guess was too long or too short."
+         ],
+         [
+          7,
+          10,
+          "The 3 close bands",
+          "`say` holds the words for the band. The checks go from the closest band out, as in LegPoints."
+         ],
+         [
+          11,
+          20,
+          "Too far out",
+          "More than 30 minutes out has 2 messages. A guess that is too short means you would still be walking. A guess that is too long means you planned far more time than you need."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          20
+         ]
+        ],
+        "typed": 14
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `btnLock_Click`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmRouteTimer.cs, with both pieces of ShowVerdict typed under btnLock_Click",
+          "w": 800,
+          "h": 400,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `btnLock_Click`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 4,
+            "say": "Type the yellow lines from the code above. They go straight under `+ \"leg needs.\";` and its `}`."
+           }
+          ]
+         },
+         "id": "4-10.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-10.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The first piece of ShowVerdict is under btnLock_Click. Red underlines show further down, because ShowVerdict has no closing `}` yet. This is normal.",
+         "id": "4-10.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c17-verdict2",
+        "kind": "type",
+        "title": "ShowVerdict, second piece: show it",
+        "lang": "cs",
+        "text": "    string missed = \"Your guess was exactly right.\";\n    if (diff == 1) missed = \"Your guess was 1 minute\" + side;\n    if (diff > 1) missed = \"Your guess was \" + diff + \" minutes\" + side;\n    lblVerdict.Text = missed + \" \" + say + \" \" + points + \" points.\";\n    if (points >= 12)\n    {\n        lblVerdict.ForeColor = Color.FromArgb(62, 142, 65);\n        Sound.Play(\"correct.wav\");\n    }\n    else\n    {\n        lblVerdict.ForeColor = Color.FromArgb(178, 58, 46);\n        Sound.Play(\"wrong.wav\");\n    }\n    string name = \"Your guess for \" + leg.From + \" to \" + leg.To;\n    if (diff <= 10) wellLines.Add(name + \" was spot on.\");\n    else if (diff <= 20) wellLines.Add(name + \" was close.\");\n    else wrongLines.Add(name + \" was \" + diff + \" minutes\" + side);\n}",
+        "partLines": [
+         [
+          1,
+          4,
+          "The verdict",
+          "`missed` says how many minutes out the guess was, with 1 minute written without an s. lblVerdict shows `missed`, then `say`, then the points."
+         ],
+         [
+          5,
+          14,
+          "Green or red",
+          "A guess that scores 12 points or more turns the result message green and plays the right sound. Any other guess turns it red and plays the wrong sound."
+         ],
+         [
+          15,
+          19,
+          "The feedback lines",
+          "A guess 20 minutes out or less adds a line to What went well. Any other guess adds a line to What went wrong, saying how far out it was."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          19
+         ]
+        ],
+        "typed": 14,
+        "wordMarks": [
+         [
+          7,
+          31,
+          45,
+          23
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Type the yellow lines from the code above. They go straight under `+ \"leg needs.\";` and its `}`.",
+         "see": "ShowVerdict ends with a `}`. The red underline under `ShowVerdict` in btnLock_Click has gone.",
+         "id": "4-10.4",
+         "n": 4
+        }
+       ]
+      }
+     ],
+     "id": "10"
+    },
+    {
+     "title": "Type ShowBar and MarkLeft, which move the 2 markers along the bar",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the bar under the slider shows your guess and the Naismith time side by side."
+      },
+      {
+       "p": "The line on the bar is 600 pixels long, and it stands for 240 minutes. So each marker's place on the line is its minutes × 600 ÷ 240."
+      },
+      {
+       "box": {
+        "title": "Where the Naismith flag goes for 114 minutes, in words first",
+        "blocks": [
+         {
+          "p": "114 × 600 is 68400. Then 68400 ÷ 240 is 285. So the flag goes 285 pixels along the bar."
+         },
+         {
+          "p": "The code multiplies first, then divides. With whole numbers, 600 ÷ 240 on its own would give 2, and every marker would land in the wrong place."
+         },
+         {
+          "p": "Each marker's words sit to its right. Near the right end of the bar there is no room, so the words move to the left of the marker."
+         }
+        ]
+       }
+      },
+      {
+       "code": {
+        "id": "c17-bar",
+        "kind": "type",
+        "title": "ShowBar and MarkLeft",
+        "lang": "cs",
+        "text": "// Moves the two markers along the bar: 240 minutes is 600 pixels\nprivate void ShowBar(int guess, int answer)\n{\n    picGuess.Left = guess * 600 / 240;\n    picFlag.Left = answer * 600 / 240;\n    lblGuessMark.Left = MarkLeft(picGuess.Left);\n    lblFlagMark.Left = MarkLeft(picFlag.Left);\n    pnlBar.Visible = true;\n}\n\n// Puts a marker's words to its right, or to its left near the end\nprivate int MarkLeft(int iconLeft)\n{\n    if (iconLeft > 460) return iconLeft - 124;\n    return iconLeft + 40;\n}",
+        "partLines": [
+         [
+          2,
+          5,
+          "Place the 2 markers",
+          "`Left` is how far in from the left of pnlBar a control starts. The avatar marker goes at the guess, and the flag goes at the Naismith time."
+         ],
+         [
+          6,
+          9,
+          "Place their words",
+          "MarkLeft works out where each marker's words go. Then the bar shows."
+         ],
+         [
+          12,
+          16,
+          "MarkLeft",
+          "If the marker is more than 460 pixels along, its words go 124 pixels to its left. Otherwise they go 40 pixels to its right."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          16
+         ]
+        ],
+        "typed": 9,
+        "wordMarks": [
+         [
+          4,
+          32,
+          33,
+          18
+         ],
+         [
+          14,
+          24,
+          30,
+          20
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `ShowVerdict`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmRouteTimer.cs, with ShowBar and MarkLeft typed under ShowVerdict",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `ShowVerdict`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-11.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-11.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The red underline under `ShowBar` in btnLock_Click has gone.",
+         "id": "4-11.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "11"
+    },
+    {
+     "title": "Type btnNext_Click and RecordResult, then build",
+     "blocks": [
+      {
+       "p": "By the end of this screen, every method in Route Timer is written, and your project builds with no errors."
+      },
+      {
+       "p": "One button does 2 jobs. After legs 1 to 4 it shows the next leg. After the 5th leg it opens the Round over box."
+      },
+      {
+       "code": {
+        "id": "c17-next",
+        "kind": "type",
+        "title": "btnNext_Click and RecordResult",
+        "lang": "cs",
+        "text": "// Next leg, or See my score after leg 5\nprivate void btnNext_Click(object sender, EventArgs e)\n{\n    if (number == 4)\n    {\n        ShowRoundOver();\n        return;\n    }\n    number++;\n    ShowLeg();\n}\n\n// Adds the feedback to the result, then keeps it\nprivate void RecordResult()\n{\n    result = new GameResult(\"Route Timer\", total);\n    result.WentWell.AddRange(wellLines);\n    result.WentWrong.AddRange(wrongLines);\n    KeepResult();\n}",
+        "partLines": [
+         [
+          2,
+          8,
+          "See my score",
+          "After the 5th leg, the button opens the Round over box, and `return` stops the method."
+         ],
+         [
+          9,
+          11,
+          "Next leg",
+          "Otherwise `number` goes up by 1, and ShowLeg shows the next leg."
+         ],
+         [
+          14,
+          20,
+          "RecordResult",
+          "`new GameResult` from chapter 9 makes the result, with the game's name and the total. `AddRange` adds every line from `wellLines` and `wrongLines` to the result. KeepResult, from chapter 9, keeps the result for the map."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          20
+         ]
+        ],
+        "typed": 11,
+        "wordMarks": [
+         [
+          7,
+          8,
+          14,
+          20
+         ],
+         [
+          17,
+          20,
+          28,
+          26
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `MarkLeft`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmRouteTimer.cs, with btnNext_Click and RecordResult typed under MarkLeft",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `MarkLeft`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-12.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-12.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "No line in frmRouteTimer.cs has a red underline.",
+         "id": "4-12.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "missing": true,
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows CS0103: The name 'ShowVerdict' does not exist in the current context",
+           "A method's name is spelt one way where you wrote the method, and another way where the code uses it. Check the spelling in btnLock_Click and in the first line of ShowVerdict. Capital letters count."
+          ],
+          [
+           "The Error List shows CS0266: Cannot implicitly convert type 'double' to 'int'",
+           "A `double` is going into an `int` without a convert. Check that the `walk` line in btnLock_Click starts `Convert.ToInt32(Math.Round(`."
+          ]
+         ],
+         "id": "4-12.4",
+         "n": 4
+        }
+       ]
+      }
+     ],
+     "id": "12"
+    },
+    {
+     "title": "Connect the slider, Lock in my time and Next leg to their methods",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the slider shows your guess as you drag it, and both buttons work."
+      },
+      {
+       "p": "trkTime_Scroll, btnLock_Click and btnNext_Click are written, but nothing runs them yet. You connect each one with the small arrow beside its event, as you did for Back to the map."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Shift and F7 together.",
+         "see": "The designer shows frmRouteTimer.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of trkTime, with trkTime_Scroll beside Scroll",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Press Shift and F7 together."
+           },
+           {
+            "n": 2,
+            "say": "Click the slider under the photo."
+           },
+           {
+            "n": 3,
+            "say": "Click the lightning bolt at the top of the Properties window."
+           },
+           {
+            "n": 4,
+            "say": "Click the box beside **Scroll**. Scroll down the list a little if you cannot see it."
+           },
+           {
+            "n": 5,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 6,
+            "say": "Click `trkTime_Scroll` in the list."
+           }
+          ]
+         },
+         "id": "4-13.1",
+         "n": 1
+        },
+        {
+         "do": "Click the slider under the photo.",
+         "see": "The Properties window shows trkTime at the top.",
+         "id": "4-13.2",
+         "n": 2
+        },
+        {
+         "do": "Click the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists the events of trkTime.",
+         "id": "4-13.3",
+         "n": 3
+        },
+        {
+         "do": "Click the box beside **Scroll**. Scroll down the list a little if you cannot see it.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-13.4",
+         "n": 4
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-13.5",
+         "n": 5
+        },
+        {
+         "do": "Click `trkTime_Scroll` in the list.",
+         "see": "The box beside Scroll shows `trkTime_Scroll`.",
+         "id": "4-13.6",
+         "n": 6
+        },
+        {
+         "do": "Click **Lock in my time** on pnlPlay.",
+         "see": "The Properties window lists the events of btnLock.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of btnLock, with btnLock_Click beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click **Lock in my time** on pnlPlay."
+           },
+           {
+            "n": 8,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 9,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 10,
+            "say": "Click `btnLock_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-13.7",
+         "n": 7
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-13.8",
+         "n": 8
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-13.9",
+         "n": 9
+        },
+        {
+         "do": "Click `btnLock_Click` in the list.",
+         "see": "The box beside Click shows `btnLock_Click`.",
+         "id": "4-13.10",
+         "n": 10
+        },
+        {
+         "do": "Click **Next leg** on pnlPlay.",
+         "see": "The Properties window lists the events of btnNext.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of btnNext, with btnNext_Click beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 11,
+            "say": "Click **Next leg** on pnlPlay."
+           },
+           {
+            "n": 12,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 13,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 14,
+            "say": "Click `btnNext_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-13.11",
+         "n": 11
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-13.12",
+         "n": 12
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-13.13",
+         "n": 13
+        },
+        {
+         "do": "Click `btnNext_Click` in the list.",
+         "see": "The box beside Click shows `btnNext_Click`.",
+         "id": "4-13.14",
+         "n": 14
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "missing": true,
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 15,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "id": "4-13.15",
+         "n": 15
+        }
+       ]
+      }
+     ],
+     "id": "13"
+    },
+    {
+     "title": "Open Route Timer from the map and play a round",
+     "blocks": [
+      {
+       "p": "By the end of this screen, place number 6 on your map opens Route Timer, and you have played a whole round."
+      },
+      {
+       "p": "Your map opens each game with a list of cases in frmMap.cs, one case for each place. Route Timer is place number 6, so its case says `case 6:`."
+      },
+      {
+       "code": {
+        "id": "c17-case",
+        "kind": "type",
+        "title": "The case line in frmMap.cs",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "case 6: game = new frmRouteTimer(); break;",
+        "partLines": [
+         [
+          1,
+          1,
+          "Open Route Timer",
+          "When the player clicks place number 6, the map makes a new frmRouteTimer and opens it."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          1
+         ]
+        ],
+        "typed": 1
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `frmMap.cs` in Solution Explorer.",
+         "see": "frmMap opens in the designer.",
+         "img": {
+          "missing": true,
+          "alt": "Visual Studio 2019 with frmMap.cs in the code editor. The search box is open and the new case line is typed. frmMap.cs is picked in Solution Explorer on the right",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Double-click `frmMap.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "say": "Press F7."
+           },
+           {
+            "n": 3,
+            "say": "Press Ctrl and F together."
+           },
+           {
+            "n": 4,
+            "say": "Type `each game chapter adds`"
+           },
+           {
+            "n": 5,
+            "say": "Press Escape."
+           },
+           {
+            "n": 6,
+            "say": "Press End."
+           },
+           {
+            "n": 7,
+            "say": "Press Enter."
+           },
+           {
+            "n": 8,
+            "say": "Type `case 6: game = new frmRouteTimer(); break;`"
+           }
+          ]
+         },
+         "id": "4-14.1",
+         "n": 1
+        },
+        {
+         "do": "Press F7.",
+         "see": "The code of frmMap shows.",
+         "id": "4-14.2",
+         "n": 2
+        },
+        {
+         "do": "Press Ctrl and F together.",
+         "see": "A small search box opens at the top right of the code.",
+         "id": "4-14.3",
+         "n": 3
+        },
+        {
+         "do": "Type `each game chapter adds`",
+         "see": "The line `// each game chapter adds its own case below this line` is highlighted.",
+         "id": "4-14.4",
+         "n": 4
+        },
+        {
+         "do": "Press Escape.",
+         "see": "The search box closes. The words you searched for stay highlighted.",
+         "id": "4-14.5",
+         "n": 5
+        },
+        {
+         "do": "Press End.",
+         "see": "The flashing cursor moves to the end of the comment line.",
+         "id": "4-14.6",
+         "n": 6
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the comment line.",
+         "id": "4-14.7",
+         "n": 7
+        },
+        {
+         "do": "Type `case 6: game = new frmRouteTimer(); break;`",
+         "see": "The new line says `case 6: game = new frmRouteTimer(); break;`.",
+         "wrong": [
+          [
+           "The Error List shows CS0152: The switch statement contains multiple cases with the label value '6'",
+           "Your map already uses place number 6 for another game. Change the 6 in the new case line to a place number that your map does not use yet. Then change `gameNumber` in frmRouteTimer.cs to the same number."
+          ]
+         ],
+         "id": "4-14.8",
+         "n": 8
+        },
+        {
+         "do": "Press F5.",
+         "see": "Your game starts and shows the login window.",
+         "img": {
+          "missing": true,
+          "alt": "The login window of your game, with a player's name and password typed in",
+          "w": 640,
+          "h": 400,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Press F5."
+           },
+           {
+            "n": 10,
+            "say": "Log in with a player you registered in chapter 5."
+           }
+          ]
+         },
+         "id": "4-14.9",
+         "n": 9
+        },
+        {
+         "do": "Log in with a player you registered in chapter 5.",
+         "see": "The Welcome screen opens.",
+         "id": "4-14.10",
+         "n": 10
+        },
+        {
+         "do": "Click **Start the expedition**.",
+         "see": "The map opens.",
+         "img": {
+          "missing": true,
+          "alt": "The Welcome screen of your game, with the Start the expedition button",
+          "w": 640,
+          "h": 400,
+          "marks": [
+           {
+            "n": 11,
+            "say": "Click **Start the expedition**."
+           }
+          ]
+         },
+         "id": "4-14.11",
+         "n": 11
+        },
+        {
+         "do": "Click place number 6 on the map, the seventh place.",
+         "see": "Route Timer opens. A photo shows on the left, and the leg says **Leg 1 of 5**.",
+         "img": {
+          "missing": true,
+          "alt": "The map, with place number 6 picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 12,
+            "say": "Click place number 6 on the map, the seventh place."
+           }
+          ]
+         },
+         "id": "4-14.12",
+         "n": 12
+        },
+        {
+         "do": "Play a whole round.",
+         "see": "The round ends with the Round over box.",
+         "img": {
+          "missing": true,
+          "alt": "Route Timer after Lock in my time, with the working, the verdict and the 2 markers on the bar",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 13,
+            "say": "Play a whole round."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "No photo shows, and the leg says that Route Timer needs more legs",
+           "Route Timer cannot find enough good lines in `routes.txt`. Check that the Data folder inside bin\\Debug holds `routes.txt`. Then check that each line has 5 parts, split by a bar `|`."
+          ],
+          [
+           "Dragging the slider does not change Your guess",
+           "trkTime_Scroll is not connected. Click the slider in the designer, open the events list, and check that Scroll shows `trkTime_Scroll`."
+          ],
+          [
+           "The guess shows minutes such as 113, not only steps of 5",
+           "Check the first line of trkTime_Scroll letter by letter. It must end `+ 2) / 5 * 5;`."
+          ],
+          [
+           "Both markers sit at the far left of the bar",
+           "Check ShowBar. It must multiply by 600 before it divides by 240."
+          ],
+          [
+           "A different game opens, or nothing opens, when you click place number 6",
+           "Check the new line in frmMap.cs. It must say `case 6:` and `new frmRouteTimer()`."
+          ]
+         ],
+         "id": "4-14.13",
+         "n": 13
+        }
+       ]
+      }
+     ],
+     "id": "14"
+    },
+    {
+     "title": "Your turn: make the slider snap to 10 minutes",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have changed how the slider snaps, and tested it, on your own."
+      },
+      {
+       "p": "The slider snaps to the nearest 5 minutes. Change Route Timer so that it snaps to the nearest 10 minutes."
+      },
+      {
+       "code": {
+        "id": "c17-turn-snap",
+        "kind": "turn",
+        "title": "Make the slider snap to 10 minutes",
+        "lang": "cs",
+        "text": "trkTime.Value = (trkTime.Value + 5) / 10 * 10;",
+        "task": [
+         "Find the first line inside trkTime_Scroll.",
+         "Change both 5s at the end of the line to 10, so the guess goes to whole tens of minutes.",
+         "Change the 2 that is added first to 5, which is half of 10. Then a guess rounds to the nearest 10, not down."
+        ],
+        "test": "Press F5, open Route Timer from the map, and drag the slider slowly from one end to the other.",
+        "expect": "Your guess only shows whole tens of minutes, such as 1 hour 50 minutes and 2 hours. A drag to 114 minutes shows 1 hour 50 minutes, and a drag to 116 minutes shows 2 hours.",
+        "hint": "With 5, the line adds 2 before it divides. That is half of 5, rounded down."
+       }
+      },
+      {
+       "p": "When the test passes, change the line back to how it was, because Route Timer is meant to snap to 5 minutes."
+      }
+     ],
+     "id": "15"
+    },
+    {
+     "title": "Check that Route Timer works",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that every part of Route Timer works, including the guesses it must score as 0."
+      },
+      {
+       "p": "Run each test with F5. Tick each test when it passes. Two tests are guesses that must score 0 points, and scoring 0 on those counts as a pass."
+      },
+      {
+       "check": [
+        {
+         "what": "On Carrick Little to Slieve Binnian, lock in 1 hour 55 minutes.",
+         "expect": "allowed",
+         "how": "The working says **Total: 114 minutes**. The verdict says **1 minute too long. Spot on. 20 points.** in green.",
+         "must": "Must happen",
+         "fix": "Check the first piece of btnLock_Click against its yellow lines, one line at a time.",
+         "id": "4-16.t1"
+        },
+        {
+         "what": "On any leg, lock in a guess 15 minutes under the Naismith time.",
+         "expect": "allowed",
+         "how": "The verdict says the guess was 15 minutes too short, and **Close.**, with 12 points in green.",
+         "must": "Must happen",
+         "fix": "Check LegPoints. The 20-minute band must give 12 points.",
+         "id": "4-16.t2"
+        },
+        {
+         "what": "On any leg, lock in 0 minutes.",
+         "expect": "control",
+         "how": "The verdict says **Too far out. You would still be walking when you planned to be finished.** It shows 0 points in red.",
+         "fix": "Check the first piece of ShowVerdict. The line `else if (guess < answer)` must come after the 3 close bands.",
+         "id": "4-16.t3"
+        },
+        {
+         "what": "On any leg, lock in 4 hours.",
+         "expect": "control",
+         "how": "The verdict says **Too far out. You planned far more time than this leg needs.** It shows 0 points in red.",
+         "fix": "Check the `else` at the end of the first piece of ShowVerdict.",
+         "id": "4-16.t4"
+        },
+        {
+         "what": "Lock in a time, then try to drag the slider.",
+         "expect": "allowed",
+         "how": "The slider does not move, and **Lock in my time** has gone.",
+         "must": "Must happen",
+         "fix": "Check that the second piece of btnLock_Click sets `trkTime.Enabled = false;` and `btnLock.Visible = false;`.",
+         "id": "4-16.t5"
+        },
+        {
+         "what": "Lock in a guess near 4 hours.",
+         "expect": "allowed",
+         "how": "The avatar marker is near the right end of the bar, with **Your guess** to its left, inside the bar.",
+         "must": "Must happen",
+         "fix": "Check MarkLeft. A marker more than 460 pixels along must put its words 124 pixels to its left.",
+         "id": "4-16.t6"
+        },
+        {
+         "what": "Click Back to the map in the middle of a round, then click No.",
+         "expect": "allowed",
+         "how": "The question **Leave Route Timer?** appears. After No, Route Timer stays open.",
+         "must": "Must happen",
+         "fix": "Click the form itself, open the events list in the Properties window, and check that FormClosing shows `frmRouteTimer_FormClosing`.",
+         "id": "4-16.t7"
+        },
+        {
+         "what": "Finish a round, then click Back to the map.",
+         "expect": "allowed",
+         "how": "The map shows again, and the flag on place number 6 shows a tick.",
+         "must": "Must happen",
+         "fix": "Check that the first field at the top of frmRouteTimer is `private int gameNumber = 6;`. Then check that frmMap opens Route Timer for `case 6:`.",
+         "id": "4-16.t8"
+        }
+       ]
+      }
+     ],
+     "id": "16"
+    }
+   ],
+   "id": "4"
+  },
+  {
+   "title": "Change Route Timer into a game on your own topic",
+   "screens": [
+    {
+     "title": "Choose your own formula, and 2 more things to change",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have chosen your own formula and its data, and 2 more things to change."
+      },
+      {
+       "p": "Your own game keeps the Route Timer code, but uses your own topic. Any topic where a formula turns 2 numbers into one answer works."
+      },
+      {
+       "box": {
+        "title": "3 topics that work",
+        "blocks": [
+         {
+          "p": "Home economics: cooking time for a joint of meat, such as 20 minutes for every 500 grams, plus 20 minutes."
+         },
+         {
+          "p": "Physics: stopping distance, as thinking distance plus braking distance, from a car's speed."
+         },
+         {
+          "p": "Geography: travel time for a journey by bus, from its distance and its number of stops."
+         }
+        ]
+       }
+      },
+      {
+       "p": "Change at least 2 more things as well, so that your game plays differently from Route Timer. For example, change the bands (how close a guess must be), the points, the number of rounds or the slider's range."
+      },
+      {
+       "p": "Every picture and sound you use must be free to use. Each one gets a line in `credits.txt`, saying who made it, its licence and a link."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Rename the RouteLeg class and the Route Timer form",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your class and your form have names that fit your topic."
+      },
+      {
+       "p": "A class is the blueprint for one kind of thing in your code. The name RouteLeg would confuse anyone who reads a cooking game, so rename it. Visual Studio 2019 can rename a file, and every use of its class, in one go."
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click `RouteLeg.cs` in Solution Explorer.",
+         "see": "A menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the right-click menu of RouteLeg.cs open",
+          "w": 360,
+          "h": 420,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Right-click `RouteLeg.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "say": "Click **Rename**."
+           }
+          ]
+         },
+         "id": "5-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click **Rename**.",
+         "see": "The name `RouteLeg.cs` becomes a box that you can type in.",
+         "id": "5-2.2",
+         "n": 2
+        },
+        {
+         "do": "Type your class's new name, such as `Joint.cs`",
+         "see": "The box shows the new name.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the name RouteLeg.cs turned into a box and Joint.cs typed in it",
+          "w": 360,
+          "h": 200,
+          "marks": [
+           {
+            "n": 3,
+            "say": "Type your class's new name, such as `Joint.cs`"
+           },
+           {
+            "n": 4,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "5-2.3",
+         "n": 3
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A message asks: You are renaming a file. Would you also like to perform a rename in this project of all references to the code element 'RouteLeg'?",
+         "id": "5-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click **Yes**.",
+         "see": "Every use of the class RouteLeg in your code changes to the new name. For example, `List<RouteLeg>` becomes `List<Joint>`.",
+         "img": {
+          "missing": true,
+          "alt": "The message that asks whether to rename every use of RouteLeg",
+          "w": 480,
+          "h": 200,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Click **Yes**."
+           }
+          ]
+         },
+         "id": "5-2.5",
+         "n": 5
+        },
+        {
+         "do": "Right-click `frmRouteTimer.cs` in Solution Explorer.",
+         "see": "A menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the right-click menu of frmRouteTimer.cs open",
+          "w": 360,
+          "h": 420,
+          "marks": [
+           {
+            "n": 6,
+            "say": "Right-click `frmRouteTimer.cs` in Solution Explorer."
+           },
+           {
+            "n": 7,
+            "say": "Click **Rename**."
+           }
+          ]
+         },
+         "id": "5-2.6",
+         "n": 6
+        },
+        {
+         "do": "Click **Rename**.",
+         "see": "The name `frmRouteTimer.cs` becomes a box that you can type in.",
+         "id": "5-2.7",
+         "n": 7
+        },
+        {
+         "do": "Type your form's new name, such as `frmRoastTimer.cs`",
+         "see": "The box shows the new name.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the name frmRouteTimer.cs turned into a box and frmRoastTimer.cs typed in it",
+          "w": 360,
+          "h": 200,
+          "marks": [
+           {
+            "n": 8,
+            "say": "Type your form's new name, such as `frmRoastTimer.cs`"
+           },
+           {
+            "n": 9,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "5-2.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The same message asks about every use of 'frmRouteTimer'.",
+         "id": "5-2.9",
+         "n": 9
+        },
+        {
+         "do": "Click **Yes**.",
+         "see": "Every use of the class frmRouteTimer changes to the new name, including the `case` line in frmMap.cs that opens your game.",
+         "img": {
+          "missing": true,
+          "alt": "The message that asks whether to rename every use of frmRouteTimer",
+          "w": 480,
+          "h": 200,
+          "marks": [
+           {
+            "n": 10,
+            "say": "Click **Yes**."
+           }
+          ]
+         },
+         "id": "5-2.10",
+         "n": 10
+        }
+       ]
+      },
+      {
+       "p": "Method names such as `ShowLeg` and `frmRouteTimer_Load` keep their old names, and so do field names such as `legs`. This is normal, and the old names still work. Rename them only if you want to."
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Put your own data file and pictures into bin\\Debug, and use your own formula",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your game reads your own data file, shows your own pictures and uses your own formula."
+      },
+      {
+       "p": "Your own files go in the same folders as the Summit Ready files, inside bin\\Debug. Your data file goes in Data, and your pictures go in a folder inside Images."
+      },
+      {
+       "code": {
+        "id": "c17-turn-data",
+        "kind": "turn",
+        "title": "Use your own data file, pictures and formula",
+        "lang": "cs",
+        "text": "string path = Files.Data(\"joints.txt\");\nint answer = Convert.ToInt32(Math.Round(leg.Distance / 500 * 20)) + 20;",
+        "task": [
+         "Make a text file with at least 5 lines. Each line has 5 parts split by a bar `|`, such as the name, a second name, 2 numbers and a picture's file name.",
+         "Save the text file in the Data folder inside bin\\Debug, with your own name, such as `joints.txt`.",
+         "Change `routes.txt` in LoadAll to the name of your text file.",
+         "Make a folder for your pictures inside bin\\Debug\\Images, and put your pictures in it.",
+         "Change `\"Summits\"` in ShowLeg to the name of your folder.",
+         "Change the lines for `walk`, `climb` and `answer` in btnLock_Click to your own formula.",
+         "Change the working in lblWorked, and the rule in lblRule, to match your formula.",
+         "Add a line to `credits.txt` for each new picture and each new sound."
+        ],
+        "test": "Press F5, open your game from the map, and work out the first answer yourself with a calculator.",
+        "expect": "Your own picture shows. When you lock in your calculator answer, the verdict says **Spot on.** with 20 points.",
+        "hint": "Write your formula in words first, as in the box on the btnLock_Click screen. Then write one line of code for each line of words."
+       }
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Change the words on the screen to fit your topic",
+     "blocks": [
+      {
+       "p": "By the end of this screen, every word on the screen and in the Round over box fits your topic."
+      },
+      {
+       "p": "A player of your game should never read about legs, climbs or walking, unless your topic is hillwalking. The words are in 2 places: the Properties window, and the messages in the code."
+      },
+      {
+       "code": {
+        "id": "c17-turn-words",
+        "kind": "turn",
+        "title": "Change every word about legs and walking",
+        "lang": "cs",
+        "text": "lblLeg.Text = \"Joint \" + (number + 1) + \" of 5: \" + leg.From;\nresult = new GameResult(\"Roast Timer\", total);",
+        "task": [
+         "Change the Text of lblTitle, of lblInstruction and of the form itself.",
+         "Change the Text of lblRule, lblFlagMark, the 5 time labels under the slider, btnLock and btnNext.",
+         "Change the words in ShowLeg, in the working in btnLock_Click and in the 2 Too far out messages in ShowVerdict.",
+         "Change the message in frmRouteTimer_Load that says **Route Timer needs**.",
+         "Change the question in FormClosing, and the game's name in RecordResult."
+        ],
+        "test": "Play a round to the end, and read every word on the screen and in the Round over box.",
+        "expect": "No word on the screen is about legs, climbs or walking, unless your topic is hillwalking.",
+        "hint": "Press Ctrl and F together, then type `leg` to find every word still about legs. Do the same for `walk`."
+       }
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Test your game, and keep the evidence",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that your own game works, and you have the evidence for your coursework."
+      },
+      {
+       "p": "Run each test with F5 on your own game. Tick each test when it passes. Two tests are guesses that must score 0 points, and scoring 0 on those counts as a pass."
+      },
+      {
+       "check": [
+        {
+         "what": "Work out the first answer with a calculator, and lock it in.",
+         "expect": "allowed",
+         "how": "The verdict says **Spot on.** with 20 points, in green.",
+         "must": "Must happen",
+         "id": "5-5.t1"
+        },
+        {
+         "what": "Lock in a guess 15 under the right answer.",
+         "expect": "allowed",
+         "how": "The verdict says **Close.** with 12 points.",
+         "must": "Must happen",
+         "id": "5-5.t2"
+        },
+        {
+         "what": "Lock in the lowest value on the slider.",
+         "expect": "control",
+         "how": "Your too-short message shows, with 0 points in red.",
+         "id": "5-5.t3"
+        },
+        {
+         "what": "Lock in the highest value on the slider.",
+         "expect": "control",
+         "how": "Your too-long message shows, with 0 points in red.",
+         "id": "5-5.t4"
+        },
+        {
+         "what": "Lock in a guess, then try to drag the slider.",
+         "expect": "allowed",
+         "how": "The slider does not move.",
+         "must": "Must happen",
+         "id": "5-5.t5"
+        },
+        {
+         "what": "Finish a round, then go back to the map.",
+         "expect": "allowed",
+         "how": "The flag on your game's place shows a tick.",
+         "must": "Must happen",
+         "id": "5-5.t6"
+        }
+       ]
+      },
+      {
+       "p": "Every test passed in Route Timer. So if a test fails now, the fault is in something you changed in this stage. Look back over your changes one at a time, starting with the last one."
+      },
+      {
+       "box": {
+        "title": "Evidence to keep",
+        "blocks": [
+         {
+          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
+         },
+         {
+          "p": "Paste each screenshot into your testing document, under the test it shows."
+         },
+         {
+          "p": "Keep your data file and your `credits.txt` with your project."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "5"
+    }
+   ],
+   "id": "5"
+  }
+ ],
+ "glossary": [
+  [
+   "leg",
+   "One part of a walk, from one place to another. A round of Route Timer has 5 legs."
+  ],
+  [
+   "Naismith's rule",
+   "A rule walkers use to plan: 12 minutes for every kilometre, plus 1 minute for every 10 metres of climb."
+  ],
+  [
+   "slider",
+   "A control with a handle that you drag along a line to pick a number. In the Toolbox, a slider is called a TrackBar."
+  ],
+  [
+   "bin\\Debug",
+   "The folder inside your project where Visual Studio 2019 puts the program it builds. Summit Ready reads its data, pictures and sounds from there."
+  ],
+  [
+   "zip file",
+   "One file with other files and folders packed inside it."
+  ],
+  [
+   "property",
+   "A named value that an object carries, such as `Distance` on a RouteLeg. `{ get; set; }` lets other code read the value and change it."
+  ],
+  [
+   "constructor",
+   "A method with the same name as its class. It runs once, when code makes a new object with `new`."
+  ],
+  [
+   "static",
+   "A method marked `static` belongs to the class itself. You call it on the class name, as in `RouteLeg.LoadAll()`."
+  ],
+  [
+   "List",
+   "A list that grows as you add to it. `List<RouteLeg>` is a list that holds RouteLeg objects."
+  ],
+  [
+   "continue",
+   "Inside a loop, `continue` skips the rest of this turn of the loop. The loop goes straight on to its next turn."
+  ],
+  [
+   "double",
+   "A number that can have a decimal point, such as 4.5. An `int` can only hold a whole number."
+  ],
+  [
+   "Convert.ToDouble",
+   "Turns text such as `\"4.5\"` into the number 4.5."
+  ],
+  [
+   "Convert.ToInt32",
+   "Turns text, or a number with a decimal point, into a whole number."
+  ],
+  [
+   "lightning bolt",
+   "The button at the top of the Properties window that shows a control's events in place of its properties."
+  ],
+  [
+   "field",
+   "A variable written at the top of the class, outside every method. Every method in the form can use it, and it keeps its value until the window closes."
+  ],
+  [
+   "array",
+   "A row of values of the same type, kept together under one name and numbered from 0. `int[]` is an array of whole numbers."
+  ],
+  [
+   "panel",
+   "A control that holds other controls. `pnlBar` holds the bar and its 2 markers."
+  ],
+  [
+   "Scroll",
+   "The event a slider has when the player drags its handle."
+  ],
+  [
+   "whole-number division",
+   "`/` between two whole numbers drops anything after the decimal point. `115 / 60` is 1, not 1.9."
+  ],
+  [
+   "remainder",
+   "`%` gives what is left over after whole-number division. `115 % 60` is 55."
+  ],
+  [
+   "return",
+   "`return` hands a value back to the code that called the method, and stops the method."
+  ],
+  [
+   "Math.Round",
+   "Rounds a number to the nearest whole number, so 44.4 becomes 44."
+  ],
+  [
+   "Math.Abs",
+   "Gives a number without its minus sign, so -12 becomes 12. Route Timer uses it to find how far out a guess is, whichever side it misses on."
+  ],
+  [
+   "colour from red, green and blue",
+   "`Color.FromArgb(62, 142, 65)` mixes a colour from red, green and blue. Each number is from 0 to 255."
+  ],
+  [
+   "event",
+   "Something that happens to a control, such as a click on a button."
+  ],
+  [
+   "handler",
+   "The method that runs when an event happens. `btnLock_Click` is the handler for a click on **Lock in my time**."
+  ],
+  [
+   "AddRange",
+   "`AddRange` adds every item from one list to the end of another list, in one go."
+  ],
+  [
+   "red underline",
+   "The wavy red line Visual Studio 2019 draws under code it does not understand yet. Often it means a method you have not written yet."
+  ]
+ ]
+}

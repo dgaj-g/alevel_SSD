@@ -1,0 +1,2809 @@
+{
+ "id": "07",
+ "n": 7,
+ "of": 20,
+ "title": "Scores, the Welcome window and the Top 10",
+ "kind": "a build chapter: the windows every player sees before the map",
+ "one": "You read the scores in `scores.txt`, and build the Welcome window. It shows the player's last and best scores, and a Top 10 board with one row for each player.",
+ "prev": {
+  "id": "06",
+  "n": 6,
+  "title": "Log in"
+ },
+ "next": {
+  "id": "08",
+  "n": 8,
+  "title": "The map"
+ },
+ "stages": [
+  {
+   "title": "See what the Welcome window shows",
+   "screens": [
+    {
+     "title": "Look at the Welcome window and the Top 10 board",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know what the Welcome window shows, and where each number comes from."
+      },
+      {
+       "p": "After a player logs in, the Welcome window opens. On the left is a white card with their avatar, a welcome message, their last score and their best score."
+      },
+      {
+       "screenshot": {
+        "img": "img/ch00-welcome.png",
+        "w": 490,
+        "h": 338,
+        "alt": "The Welcome window, with the player card on the left and the Top 10 board on the right",
+        "cap": "The Welcome window that you build in this chapter."
+       }
+      },
+      {
+       "p": "On the right is the Top 10 board. Each player is on it once, with their best score. Higher scores come first. Two equal scores go in A to Z order of username."
+      },
+      {
+       "p": "The player who is logged in has their own row in bold, on a pale gold background, so they can find themselves."
+      },
+      {
+       "p": "Every score comes from `scores.txt`, one score on each line: the username, the score and the date, with a bar `|` between them."
+      },
+      {
+       "code": {
+        "id": "c07-scores",
+        "kind": "read",
+        "title": "scores.txt: the first 3 lines",
+        "lang": "txt",
+        "text": "summitSeeker|610|14/09/2026 10:00\nsummitSeeker|760|14/09/2026 11:07\nsummitSeeker|700|14/09/2026 12:14",
+        "partLines": [
+         [
+          1,
+          3,
+          "One score on each line",
+          "summitSeeker has finished 3 expeditions here. Only the best, 760, goes on the board."
+         ]
+        ]
+       }
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Check that your project is ready, and see the words this chapter uses",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know that your project has everything the Welcome window needs."
+      },
+      {
+       "need": [
+        "Your Log in window. It opens the Welcome window (`frmWelcome`) and remembers which player logged in (`Expedition.CurrentPlayer`) (chapter 6).",
+        "The file `scores.txt` in the Data folder inside bin\\Debug, from `summit-ready-files.zip` (chapter 2).",
+        "Mix.Ordinal, which turns 1 into 1st, and the Sound class (chapter 2).",
+        "About 3 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
+       ]
+      },
+      {
+       "words": [
+        [
+         "Convert.ToInt32",
+         "Turns text into a whole number. `Convert.ToInt32(\"250\")` gives the number 250.",
+         "2-2",
+         true
+        ],
+        [
+         "Dictionary",
+         "A collection that finds each value by a key, such as a player's best score by their username.",
+         "2-4",
+         true
+        ],
+        [
+         "key",
+         "The value a Dictionary finds things by. Each key is in a Dictionary once only.",
+         "2-4",
+         true
+        ],
+        [
+         "bubble sort",
+         "A way to put a list in order. It goes along the list again and again, swapping any two neighbours that are in the wrong order.",
+         "2-5",
+         false
+        ],
+        [
+         "string.Compare",
+         "Compares two pieces of text for A to Z order. It gives a number below 0 when the first comes before the second.",
+         "2-5",
+         true
+        ],
+        [
+         "ListView",
+         "A control that shows rows and columns, like a small table, with a picture at the start of each row.",
+         "4-3",
+         true
+        ],
+        [
+         "ImageList",
+         "A control that holds pictures of the same size for another control, such as the ListView.",
+         "4-1",
+         true
+        ],
+        [
+         "SubItems",
+         "The second, third and later columns of a ListView row.",
+         "4-4",
+         true
+        ],
+        [
+         "Visible",
+         "A control with Visible set to false is not shown on the window.",
+         "4-2",
+         true
+        ],
+        [
+         "DialogResult",
+         "Which button the player clicked in a MessageBox, such as Yes or No.",
+         "4-5",
+         true
+        ]
+       ],
+       "intro": "You do not need to learn these words now. Where you first meet each one in the chapter, it has a dotted line under it. Hover over it or tap it to see what it means."
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "1"
+  },
+  {
+   "title": "Read scores.txt, and work out the Top 10",
+   "screens": [
+    {
+     "title": "Add the ScoreEntry class: one line of scores.txt",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has a ScoreEntry class that holds one score."
+      },
+      {
+       "p": "ScoreEntry has the same shape as the Player class from chapter 3: properties, a constructor and ToString. It has 3 properties, one for each part of a line of `scores.txt`."
+      },
+      {
+       "code": {
+        "id": "c07-entry",
+        "kind": "type",
+        "title": "ScoreEntry.cs: the ScoreEntry class",
+        "lang": "cs",
+        "text": "// One saved score: a line of scores.txt (chapter 7)\nclass ScoreEntry\n{\n    public string Username { get; set; }\n    public int Score { get; set; }\n    public string Date { get; set; }\n\n    // Makes one score from its three parts\n    public ScoreEntry(string username, int score, string date)\n    {\n        Username = username;\n        Score = score;\n        Date = date;\n    }\n\n    // The score as one line of scores.txt\n    public override string ToString()\n    {\n        return Username + \"|\" + Score + \"|\" + Date;\n    }\n}",
+        "partLines": [
+         [
+          1,
+          6,
+          "The 3 parts",
+          "Score is an `int`, so the code can compare scores as numbers."
+         ],
+         [
+          8,
+          14,
+          "The constructor",
+          "Makes a ScoreEntry from its 3 parts in one line."
+         ],
+         [
+          16,
+          21,
+          "ToString",
+          "Joins the 3 parts with a bar `|`, ready to be saved as a line of `scores.txt`."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          21
+         ]
+        ],
+        "typed": 10
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "The project menu, with Add pointed at and Class in the second menu",
+          "w": 640,
+          "h": 420,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 2,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 3,
+            "say": "Click **Class...** in the second menu."
+           },
+           {
+            "n": 4,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "say": "Type `ScoreEntry.cs`"
+           },
+           {
+            "n": 6,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "2-1.1",
+         "n": 1
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "2-1.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Class...** in the second menu.",
+         "see": "The Add New Item window opens, and the Name box says `Class1.cs`.",
+         "id": "2-1.3",
+         "n": 3
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "id": "2-1.4",
+         "n": 4
+        },
+        {
+         "do": "Type `ScoreEntry.cs`",
+         "see": "The Name box shows `ScoreEntry.cs`.",
+         "id": "2-1.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "`ScoreEntry.cs` opens, and it is in Solution Explorer.",
+         "id": "2-1.6",
+         "n": 6
+        },
+        {
+         "do": "Click at the start of the line `class ScoreEntry`.",
+         "see": "The flashing cursor is in front of `class`.",
+         "img": {
+          "missing": true,
+          "alt": "ScoreEntry.cs, with the class picked from class ScoreEntry down to its last }",
+          "w": 800,
+          "h": 400,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click at the start of the line `class ScoreEntry`."
+           },
+           {
+            "n": 8,
+            "say": "Hold Shift and click after the `}` that closes the class. It is the second `}` from the bottom."
+           },
+           {
+            "n": 9,
+            "say": "Press Delete."
+           },
+           {
+            "n": 10,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "2-1.7",
+         "n": 7
+        },
+        {
+         "do": "Hold Shift and click after the `}` that closes the class. It is the second `}` from the bottom.",
+         "see": "The class is blue, from `class ScoreEntry` down to its `}`.",
+         "id": "2-1.8",
+         "n": 8
+        },
+        {
+         "do": "Press Delete.",
+         "see": "The class has gone. The flashing cursor is inside `namespace`.",
+         "id": "2-1.9",
+         "n": 9
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The ScoreEntry class is inside `namespace`. No line has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "2-1.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Add the ScoreFile class, with LoadAll and Save",
+     "blocks": [
+      {
+       "p": "By the end of this screen, ScoreFile can read every score in `scores.txt`, and add a new one to the end."
+      },
+      {
+       "p": "LoadAll here has the same shape as PlayerFile.LoadAll from chapter 3. So it comes in the copy, and you type the lines that are different for scores."
+      },
+      {
+       "p": "`Convert.ToInt32` turns the score from text into a number."
+      },
+      {
+       "code": {
+        "id": "c07-sf-loadall",
+        "kind": "type",
+        "title": "ScoreFile.cs: the class and LoadAll",
+        "lang": "cs",
+        "why": "LoadAll has the same shape as PlayerFile.LoadAll, which you typed in chapter 3. You type the lines that change for scores.",
+        "text": "// Reads and adds to scores.txt, and works out the Top 10 (chapter 7)\nstatic class ScoreFile\n{\n    // Reads every score in scores.txt into a list\n    public static List<ScoreEntry> LoadAll()\n    {\n        List<ScoreEntry> scores = new List<ScoreEntry>();\n        string path = Files.Data(\"scores.txt\");\n        if (!File.Exists(path)) return scores;    // no file: no scores\n        StreamReader reader = new StreamReader(path);\n        while (!reader.EndOfStream)\n        {\n            string line = reader.ReadLine();\n            string[] parts = line.Split('|');\n            if (parts.Length != 3) continue;      // skip a broken line\n            scores.Add(new ScoreEntry(parts[0],\n                Convert.ToInt32(parts[1]), parts[2]));\n        }\n        reader.Close();\n        return scores;\n    }",
+        "partLines": [
+         [
+          1,
+          3,
+          "The class",
+          "ScoreFile is `static`, like PlayerFile. You use it by its class name: `ScoreFile.LoadAll()`."
+         ],
+         [
+          4,
+          9,
+          "An empty list to start",
+          "With no `scores.txt`, the list stays empty, so nobody has a score yet."
+         ],
+         [
+          10,
+          18,
+          "One ScoreEntry for each line",
+          "Each line splits into 3 parts at the bars. A line without 3 parts is skipped."
+         ],
+         [
+          19,
+          21,
+          "Close the file",
+          "The file is closed, and the list is given back."
+         ]
+        ],
+        "focusLines": [
+         [
+          5,
+          5
+         ],
+         [
+          7,
+          7
+         ],
+         [
+          9,
+          9
+         ],
+         [
+          15,
+          17
+         ],
+         [
+          20,
+          20
+         ]
+        ],
+        "typed": 7,
+        "wordMarks": [
+         [
+          17,
+          16,
+          31,
+          0
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "The project menu, with Add pointed at and Class in the second menu",
+          "w": 640,
+          "h": 420,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 2,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 3,
+            "say": "Click **Class...** in the second menu."
+           },
+           {
+            "n": 4,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "say": "Type `ScoreFile.cs`"
+           },
+           {
+            "n": 6,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "2-2.1",
+         "n": 1
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "2-2.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Class...** in the second menu.",
+         "see": "The Add New Item window opens, and the Name box says `Class1.cs`.",
+         "id": "2-2.3",
+         "n": 3
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "id": "2-2.4",
+         "n": 4
+        },
+        {
+         "do": "Type `ScoreFile.cs`",
+         "see": "The Name box shows `ScoreFile.cs`.",
+         "id": "2-2.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "`ScoreFile.cs` opens, and it is in Solution Explorer.",
+         "id": "2-2.6",
+         "n": 6
+        },
+        {
+         "do": "Click at the end of the line `using System.Threading.Tasks;` at the top of ScoreFile.cs.",
+         "see": "The flashing cursor is at the end of that line.",
+         "img": {
+          "missing": true,
+          "alt": "ScoreFile.cs, with using System.IO; under the other using lines",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click at the end of the line `using System.Threading.Tasks;` at the top of ScoreFile.cs."
+           },
+           {
+            "n": 8,
+            "say": "Press Enter."
+           },
+           {
+            "n": 9,
+            "say": "Type `using System.IO;`"
+           }
+          ]
+         },
+         "id": "2-2.7",
+         "n": 7
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens.",
+         "id": "2-2.8",
+         "n": 8
+        },
+        {
+         "do": "Type `using System.IO;`",
+         "see": "The line says `using System.IO;`.",
+         "id": "2-2.9",
+         "n": 9
+        },
+        {
+         "do": "Click at the start of the line `class ScoreFile`.",
+         "see": "The flashing cursor is in front of `class`.",
+         "img": {
+          "missing": true,
+          "alt": "ScoreFile.cs, with class ScoreFile and its { picked",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 10,
+            "say": "Click at the start of the line `class ScoreFile`."
+           },
+           {
+            "n": 11,
+            "say": "Hold Shift and click at the end of the `{` on the line under `class ScoreFile`."
+           },
+           {
+            "n": 12,
+            "say": "Click the copy button below."
+           },
+           {
+            "n": 13,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 14,
+            "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, then type its yellow lines. Repeat for each of the other 4."
+           }
+          ]
+         },
+         "id": "2-2.10",
+         "n": 10
+        },
+        {
+         "do": "Hold Shift and click at the end of the `{` on the line under `class ScoreFile`.",
+         "see": "The line `class ScoreFile` and the `{` under it are blue. The `}` under them is not.",
+         "id": "2-2.11",
+         "n": 11
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c07-sf-loadall",
+         "id": "2-2.12",
+         "n": 12
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The copy replaces the blue lines. The `}` that closes the class is under it.",
+         "id": "2-2.13",
+         "n": 13
+        },
+        {
+         "do": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, then type its yellow lines. Repeat for each of the other 4.",
+         "see": "There are 5 of these lines. When you have typed all 5, no line has a red underline.",
+         "wrong": [
+          [
+           "The `// YOU TYPE THIS PART` line is still there after you type",
+           "Click the old `// YOU TYPE THIS PART` line, then press Home. Hold Shift and press End, so the whole line turns blue. Press Delete."
+          ]
+         ],
+         "id": "2-2.14",
+         "n": 14
+        }
+       ]
+      },
+      {
+       "p": "Save adds one line to the end of `scores.txt`. Chapter 10 uses it when a player finishes an expedition."
+      },
+      {
+       "code": {
+        "id": "c07-sf-save",
+        "kind": "copy",
+        "title": "Save",
+        "lang": "cs",
+        "taught": "03",
+        "why": "StreamWriter with `true` adds to the end of a file. You typed the same lines in PlayerFile.Add in chapter 3.",
+        "text": "// Adds one score to the end of scores.txt\npublic static void Save(ScoreEntry e)\n{\n    StreamWriter writer = new StreamWriter(Files.Data(\"scores.txt\"),\n        true);                                // true: add to the end\n    writer.WriteLine(e.ToString());\n    writer.Close();\n}",
+        "partLines": [
+         [
+          1,
+          8,
+          "Add a line",
+          "`true` keeps the old lines and adds the new one at the end. `e.ToString()` is the score as one line, with its bars."
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `LoadAll`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "ScoreFile.cs, with Save pasted under LoadAll",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 15,
+            "say": "Click at the end of the `}` that closes `LoadAll`."
+           },
+           {
+            "n": 16,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 17,
+            "say": "Click the copy button below."
+           },
+           {
+            "n": 18,
+            "say": "Press Ctrl and V together."
+           }
+          ]
+         },
+         "id": "2-2.15",
+         "n": 15
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "2-2.16",
+         "n": 16
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c07-sf-save",
+         "id": "2-2.17",
+         "n": 17
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "Save sits under LoadAll.",
+         "id": "2-2.18",
+         "n": 18
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Type LastScore and BestScore",
+     "blocks": [
+      {
+       "p": "By the end of this screen, ScoreFile can find a player's last score and their best score."
+      },
+      {
+       "p": "Both methods start at -1, which means no score. A real score is never below 0, so -1 is safe to use."
+      },
+      {
+       "p": "LastScore keeps the score from every line with the player's username. Lines are in the order they were saved, so the last one kept is the most recent. BestScore keeps a score only when it is higher than the best so far."
+      },
+      {
+       "code": {
+        "id": "c07-sf-lastbest",
+        "kind": "type",
+        "title": "LastScore and BestScore",
+        "lang": "cs",
+        "text": "// The player's most recent score, or -1 if there are none\npublic static int LastScore(string username)\n{\n    int last = -1;\n    foreach (ScoreEntry e in LoadAll())\n    {\n        if (e.Username == username) last = e.Score;\n    }\n    return last;\n}\n\n// The player's highest score, or -1 if there are none\npublic static int BestScore(string username)\n{\n    int best = -1;\n    foreach (ScoreEntry e in LoadAll())\n    {\n        if (e.Username == username && e.Score > best) best = e.Score;\n    }\n    return best;\n}",
+        "partLines": [
+         [
+          1,
+          10,
+          "LastScore",
+          "Each matching line replaces `last`, so the last match is what comes back."
+         ],
+         [
+          12,
+          21,
+          "BestScore",
+          "`&&` means both must be true: the right player, and a higher score than `best`."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          21
+         ]
+        ],
+        "typed": 10
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `Save`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "ScoreFile.cs, with LastScore and BestScore typed under Save",
+          "w": 800,
+          "h": 400,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `Save`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "2-3.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "2-3.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "LastScore and BestScore sit under Save. No line has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "2-3.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Type the first half of TopTen: each player's best score",
+     "blocks": [
+      {
+       "p": "By the end of this screen, TopTen has an array, a numbered row of boxes, holding each player's best score once."
+      },
+      {
+       "p": "summitSeeker has 4 scores, but goes on the board once. So the first pass keeps one ScoreEntry for each player: their best. A [[Dictionary|1]] finds each player's best so far by their username."
+      },
+      {
+       "p": "The second pass copies the bests from the Dictionary into an array, ready to sort."
+      },
+      {
+       "code": {
+        "id": "c07-top-a",
+        "kind": "type",
+        "title": "TopTen: the first half",
+        "lang": "cs",
+        "text": "// The ten best players, highest first; empty places are null\npublic static ScoreEntry[] TopTen()\n{\n    // First pass: keep each player's best score\n    Dictionary<string, ScoreEntry> best =\n        new Dictionary<string, ScoreEntry>();\n    foreach (ScoreEntry e in LoadAll())\n    {\n        if (!best.ContainsKey(e.Username)) best.Add(e.Username, e);\n        else if (e.Score > best[e.Username].Score)\n        {\n            best[e.Username] = e;\n        }\n    }\n    // Second pass: copy the bests into an array\n    ScoreEntry[] all = new ScoreEntry[best.Count];\n    int n = 0;\n    foreach (string name in best.Keys)\n    {\n        all[n] = best[name];\n        n++;\n    }",
+        "partLines": [
+         [
+          1,
+          3,
+          "The method",
+          "TopTen gives back an array of 10 places. An empty place is `null`."
+         ],
+         [
+          4,
+          14,
+          "Keep each player's best",
+          "A new username is added with its score. For a username already in the Dictionary, a higher score replaces the one kept."
+         ],
+         [
+          15,
+          22,
+          "Copy the bests into an array",
+          "`best.Count` is the number of players. `n` counts along the array as each best is copied in."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          22
+         ]
+        ],
+        "typed": 12,
+        "wordMarks": [
+         [
+          5,
+          4,
+          14,
+          1
+         ],
+         [
+          9,
+          18,
+          29,
+          2
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `BestScore`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "ScoreFile.cs, with the first half of TopTen typed",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `BestScore`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "2-4.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "2-4.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The first half of TopTen sits under BestScore. Visual Studio 2019 added the `}` that closes TopTen when you typed its `{`.",
+         "wrong": [
+          [
+           "TopTen has a red underline under its name",
+           "That is right for now. TopTen has no `return` yet. The next yellow lines add it."
+          ]
+         ],
+         "id": "2-4.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Finish TopTen with a bubble sort, and type ComesBefore",
+     "blocks": [
+      {
+       "p": "By the end of this screen, TopTen gives back the 10 best players, highest score first."
+      },
+      {
+       "p": "A [[bubble sort|3]] goes along the array again and again. Each time two neighbours are in the wrong order, it swaps them. After enough passes, the whole array is in order."
+      },
+      {
+       "p": "A swap needs a spare variable, `keep`, so that neither value is lost."
+      },
+      {
+       "code": {
+        "id": "c07-top-b",
+        "kind": "type",
+        "title": "TopTen: the sort and the first ten",
+        "lang": "cs",
+        "text": "// Bubble sort: higher score first, equal scores A to Z\nfor (int pass = 0; pass < all.Length - 1; pass++)\n{\n    for (int i = 0; i < all.Length - 1 - pass; i++)\n    {\n        if (ComesBefore(all[i + 1], all[i]))\n        {\n            ScoreEntry keep = all[i];\n            all[i] = all[i + 1];\n            all[i + 1] = keep;\n        }\n    }\n}\n// The first ten go on the board\nScoreEntry[] top = new ScoreEntry[10];\nfor (int i = 0; i < 10 && i < all.Length; i++) top[i] = all[i];\nreturn top;",
+        "partLines": [
+         [
+          1,
+          5,
+          "The passes",
+          "Each pass carries the lowest score left to its place at the end, so each pass can stop one place sooner."
+         ],
+         [
+          6,
+          13,
+          "Swap two neighbours",
+          "If the second score should come before the first, the two swap places."
+         ],
+         [
+          14,
+          17,
+          "The first ten",
+          "The loop stops at 10 places, or at the end of the array if fewer than 10 players have scores."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          17
+         ]
+        ],
+        "typed": 9
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` under the line `n++;` in TopTen.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "ScoreFile.cs, with the sort typed in TopTen and ComesBefore under it",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` under the line `n++;` in TopTen."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 4,
+            "say": "Click at the end of the `}` that closes `TopTen`."
+           },
+           {
+            "n": 5,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 6,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "2-5.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens, above the last `}` of TopTen.",
+         "id": "2-5.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "TopTen ends with `return top;`. `ComesBefore` has a red underline, because you type it next.",
+         "id": "2-5.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "p": "ComesBefore decides which of 2 scores goes higher on the board. With equal scores, [[string.Compare|4]] puts the usernames in A to Z order. `true` means capitals do not matter."
+      },
+      {
+       "code": {
+        "id": "c07-comes",
+        "kind": "type",
+        "title": "ComesBefore",
+        "lang": "cs",
+        "text": "// True when score a belongs above score b on the board\nprivate static bool ComesBefore(ScoreEntry a, ScoreEntry b)\n{\n    if (a.Score > b.Score) return true;\n    if (a.Score < b.Score) return false;\n    return string.Compare(a.Username, b.Username, true) < 0;\n}",
+        "partLines": [
+         [
+          1,
+          7,
+          "Higher first, then A to Z",
+          "A higher score comes first. A lower score does not. Equal scores go by username."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          7
+         ]
+        ],
+        "typed": 4,
+        "wordMarks": [
+         [
+          6,
+          11,
+          25,
+          4
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `TopTen`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "2-5.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "2-5.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "ComesBefore sits under TopTen. The red underline under `ComesBefore` has gone.",
+         "id": "2-5.6",
+         "n": 6
+        }
+       ]
+      }
+     ],
+     "id": "5"
+    },
+    {
+     "title": "Add PlaceOf, TenthPlaceScore and AvatarOf",
+     "blocks": [
+      {
+       "p": "By the end of this screen, ScoreFile and PlayerFile have every method the Welcome window needs."
+      },
+      {
+       "p": "PlaceOf and TenthPlaceScore use TopTen. Chapter 10 uses them for the message after an expedition, so they come in the code you copy now."
+      },
+      {
+       "code": {
+        "id": "c07-sf-gift",
+        "kind": "copy",
+        "title": "PlaceOf and TenthPlaceScore",
+        "lang": "cs",
+        "gift": true,
+        "why": "These 2 short methods use TopTen, which you typed. Chapter 10 explains where they are used.",
+        "text": "// The player's place on the board, 1 to 10, or 0 if not on it\npublic static int PlaceOf(string username)\n{\n    ScoreEntry[] top = TopTen();\n    for (int i = 0; i < 10; i++)\n    {\n        if (top[i] != null && top[i].Username == username)\n        {\n            return i + 1;\n        }\n    }\n    return 0;\n}\n\n// The score in 10th place, or -1 if fewer than 10 have scored\npublic static int TenthPlaceScore()\n{\n    ScoreEntry[] top = TopTen();\n    if (top[9] == null) return -1;\n    return top[9].Score;\n}",
+        "partLines": [
+         [
+          1,
+          13,
+          "PlaceOf",
+          "Gives the player's place from 1 to 10, or 0 if they are not on the board."
+         ],
+         [
+          15,
+          21,
+          "TenthPlaceScore",
+          "Gives the score in 10th place, or -1 if fewer than 10 players have scores."
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `ComesBefore`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "ScoreFile.cs, with PlaceOf and TenthPlaceScore pasted at the end",
+          "w": 800,
+          "h": 400,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `ComesBefore`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Click the copy button below."
+           },
+           {
+            "n": 4,
+            "say": "Press Ctrl and V together."
+           }
+          ]
+         },
+         "id": "2-6.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "2-6.2",
+         "n": 2
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c07-sf-gift",
+         "id": "2-6.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "PlaceOf and TenthPlaceScore sit under ComesBefore.",
+         "id": "2-6.4",
+         "n": 4
+        }
+       ]
+      },
+      {
+       "p": "The board shows each player's avatar. AvatarOf in PlayerFile finds a player's avatar file from their username."
+      },
+      {
+       "code": {
+        "id": "c07-avatarof",
+        "kind": "type",
+        "title": "PlayerFile.AvatarOf",
+        "lang": "cs",
+        "text": "// The avatar file of a player, or \"\" if there is no such player\npublic static string AvatarOf(string username)\n{\n    List<Player> players = LoadAll();\n    foreach (Player p in players)\n    {\n        if (p.Username == username) return p.Avatar;\n    }\n    return \"\";\n}",
+        "partLines": [
+         [
+          1,
+          10,
+          "Find the avatar",
+          "The loop looks for the player. If nobody matches, AvatarOf gives back empty text."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          10
+         ]
+        ],
+        "typed": 5
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `PlayerFile.cs` in Solution Explorer.",
+         "see": "`PlayerFile.cs` opens in the code editor.",
+         "img": {
+          "missing": true,
+          "alt": "PlayerFile.cs, with AvatarOf typed under LogIn",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Double-click `PlayerFile.cs` in Solution Explorer."
+           },
+           {
+            "n": 6,
+            "say": "Click at the end of the `}` that closes `LogIn`."
+           },
+           {
+            "n": 7,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 8,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "2-6.5",
+         "n": 5
+        },
+        {
+         "do": "Click at the end of the `}` that closes `LogIn`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "2-6.6",
+         "n": 6
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "2-6.7",
+         "n": 7
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "AvatarOf sits under LogIn. No line has a red underline.",
+         "id": "2-6.8",
+         "n": 8
+        }
+       ]
+      }
+     ],
+     "id": "6"
+    }
+   ],
+   "id": "2"
+  },
+  {
+   "title": "Make the Welcome window and its controls",
+   "screens": [
+    {
+     "title": "Set the Welcome form's properties and add its menu bar",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmWelcome is the right size and colour, with Game, Sound and Help on its menu bar."
+      },
+      {
+       "p": "You added an empty frmWelcome in chapter 6. Set **Font** first, because it changes the size of other things. Then set the rest."
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `frmWelcome.cs` in Solution Explorer.",
+         "see": "The designer shows frmWelcome.",
+         "img": {
+          "missing": true,
+          "alt": "frmWelcome in the designer, with its title bar picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Double-click `frmWelcome.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "say": "Click the title bar of frmWelcome."
+           }
+          ]
+         },
+         "id": "3-1.1",
+         "n": 1
+        },
+        {
+         "do": "Click the title bar of frmWelcome.",
+         "see": "The Properties window shows frmWelcome at the top.",
+         "id": "3-1.2",
+         "n": 2
+        }
+       ]
+      },
+      {
+       "controls": {
+        "props": [
+         "Font = Segoe UI, 11pt",
+         "Text = Summit Ready - Welcome",
+         "ClientSize = 1000, 660",
+         "StartPosition = CenterScreen",
+         "FormBorderStyle = FixedSingle",
+         "MaximizeBox = False",
+         "BackColor = 243, 245, 242"
+        ]
+       }
+      },
+      {
+       "p": "Add a MenuStrip in the same way as in chapter 2. Name it mnuMain, and set BackColor to 255, 255, 255 and Font to Segoe UI, 9pt. Then type the menu items and name them with this table."
+      },
+      {
+       "controls": {
+        "props": [
+         "Game: (Name) = mnuGame",
+         "Start the expedition, under Game: (Name) = mnuStart",
+         "Log out, under Game: (Name) = mnuLogOut",
+         "Exit, under Game: (Name) = mnuExit",
+         "Sound: (Name) = mnuSoundMenu",
+         "Sound on, under Sound: (Name) = mnuSound, Checked = True",
+         "Help: (Name) = mnuHelp",
+         "How to play, under Help: (Name) = mnuHow",
+         "About Summit Ready, under Help: (Name) = mnuAbout"
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "If you have forgotten how to make a menu bar",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "Double-click **MenuStrip** in the Toolbox. Click **Type Here** on the menu bar, type `Game`, then press Enter."
+         },
+         {
+          "p": "Type each item under it, pressing Enter after each one. Click the **Type Here** box to the right of Game for the next menu."
+         },
+         {
+          "p": "Click each item, then change its (Name) in the Properties window."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Add the white player card on the left",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmWelcome has the white card with the avatar, the welcome, the 2 scores and the Start button."
+      },
+      {
+       "p": "The card is a panel. Drop every control in this table inside pnlCard. The words in lblHello, lblLast and lblBest are only for the designer. The code changes them for each player."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Panel",
+          "name": "pnlCard",
+          "settings": [
+           "Location = 16, 40",
+           "Size = 320, 604",
+           "BackColor = 255, 255, 255",
+           "BorderStyle = FixedSingle"
+          ],
+          "note": "Drop the Panel on frmWelcome."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picAvatar",
+          "settings": [
+           "Location = 79, 16",
+           "Size = 160, 160",
+           "SizeMode = Zoom"
+          ]
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblHello",
+          "settings": [
+           "AutoSize = False",
+           "Location = 16, 182",
+           "Size = 286, 52",
+           "Font = Segoe UI Semibold, 13pt",
+           "ForeColor = 38, 50, 56",
+           "TextAlign = TopCenter",
+           "Text = Welcome back."
+          ]
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblLast",
+          "settings": [
+           "AutoSize = False",
+           "Location = 16, 240",
+           "Size = 286, 24",
+           "Font = Segoe UI, 10.5pt",
+           "ForeColor = 38, 50, 56",
+           "Text = Your last score:"
+          ]
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblBest",
+          "settings": [
+           "AutoSize = False",
+           "Location = 16, 264",
+           "Size = 286, 24",
+           "Font = Segoe UI, 10.5pt",
+           "ForeColor = 38, 50, 56",
+           "Text = Your best score:"
+          ]
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblAboutTitle",
+          "settings": [
+           "AutoSize = False",
+           "Location = 16, 300",
+           "Size = 286, 24",
+           "Font = Segoe UI Semibold, 11pt",
+           "ForeColor = 38, 50, 56",
+           "Text = About the game"
+          ]
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblAbout",
+          "settings": [
+           "AutoSize = False",
+           "Location = 16, 326",
+           "Size = 286, 200",
+           "Font = Segoe UI, 10pt",
+           "ForeColor = 38, 50, 56",
+           "Text = Climb eight Mourne summits in any order. Each summit is a different expedition skill: packing your rucksack, knots, leaving no trace, reading the sky, kit words, grid references, timing a route and the sounds of the hills. Each summit scores up to 100 points, so a perfect expedition scores 800."
+          ],
+          "note": "Click the small arrow at the right of the Text box so you can type longer text."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnStart",
+          "settings": [
+           "Location = 19, 534",
+           "Size = 280, 52",
+           "Text = Start the expedition",
+           "BackColor = 242, 183, 5",
+           "ForeColor = 38, 50, 56",
+           "Font = Segoe UI Semibold, 11pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderSize = 0",
+           "Cursor = Hand"
+          ],
+          "then": "The gold button sits at the bottom of the card. Chapter 8 makes it open the map."
+         }
+        ],
+        "done": {
+         "see": "A tall white card runs down the left of frmWelcome. It holds an empty picture box, the welcome and score labels, About the game and the gold Start button.",
+         "img": {
+          "missing": true,
+          "alt": "frmWelcome in the designer with the white player card on the left",
+          "w": 800,
+          "h": 450,
+          "at": []
+         }
+        }
+       }
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Add the banner, ready for chapter 10",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmWelcome has a pale gold banner that stays hidden for now."
+      },
+      {
+       "p": "After an expedition, the banner says whether the player made the Top 10. Chapter 10 writes that code. You add the banner now, because the board moves down when the banner shows."
+      },
+      {
+       "p": "Set Visible to False last. A hidden panel still shows in the designer, so you can still click it."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Panel",
+          "name": "pnlBanner",
+          "settings": [
+           "Location = 352, 40",
+           "Size = 632, 104",
+           "BackColor = 255, 241, 193",
+           "BorderStyle = FixedSingle",
+           "Visible = False"
+          ],
+          "note": "Drop the Panel on frmWelcome, to the right of the card."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picTrophy",
+          "settings": [
+           "Location = 16, 18",
+           "Size = 64, 64",
+           "SizeMode = Zoom"
+          ]
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblBannerHead",
+          "settings": [
+           "AutoSize = False",
+           "Location = 92, 10",
+           "Size = 520, 28",
+           "Font = Segoe UI Semibold, 14pt",
+           "ForeColor = 38, 50, 56",
+           "Text = You made the Top 10!"
+          ]
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblBannerMessage",
+          "settings": [
+           "AutoSize = False",
+           "Location = 92, 40",
+           "Size = 440, 58",
+           "Font = Segoe UI, 10.5pt",
+           "ForeColor = 38, 50, 56",
+           "Text = (empty)"
+          ]
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnBannerOK",
+          "settings": [
+           "Location = 552, 58",
+           "Size = 64, 32",
+           "Text = OK",
+           "BackColor = 255, 255, 255",
+           "ForeColor = 38, 50, 56",
+           "Font = Segoe UI Semibold, 11pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderSize = 1",
+           "Cursor = Hand"
+          ]
+         }
+        ],
+        "done": {
+         "see": "A pale gold strip at the top right of frmWelcome, with an empty picture box, **You made the Top 10!** and a small OK button.",
+         "img": {
+          "missing": true,
+          "alt": "frmWelcome in the designer with the pale gold banner at the top right",
+          "w": 800,
+          "h": 450,
+          "at": []
+         }
+        }
+       }
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Add the Top 10 board, its columns and its avatar pictures",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmWelcome has the Top 10 board with its 4 columns, ready for the scores."
+      },
+      {
+       "p": "The board is a [[ListView|5]]. Its small avatar pictures come from an [[ImageList|6]]. Like a timer, an ImageList shows in the strip under the form, not on it."
+      },
+      {
+       "p": "Add the controls in the order of the table. Drop each one on frmWelcome, under the banner. The board and lblNoScores sit in the same place. The code shows one or the other."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "ImageList",
+          "name": "imgAvatars",
+          "settings": [
+           "ColorDepth = Depth32Bit",
+           "ImageSize = 32, 32"
+          ],
+          "then": "imgAvatars shows in the strip under frmWelcome."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblTopTitle",
+          "settings": [
+           "AutoSize = False",
+           "Location = 352, 40",
+           "Size = 400, 30",
+           "Font = Segoe UI Semibold, 14pt",
+           "ForeColor = 38, 50, 56",
+           "Text = Top 10 climbers"
+          ],
+          "note": "This sits on top of the banner. Right-click lblTopTitle and click **Bring to Front**."
+         },
+         {
+          "toolbox": "ListView",
+          "name": "lvTop",
+          "settings": [
+           "Location = 352, 74",
+           "Size = 632, 430",
+           "BackColor = 255, 255, 255",
+           "Font = Segoe UI, 10.5pt",
+           "View = Details",
+           "FullRowSelect = True",
+           "HeaderStyle = Nonclickable",
+           "MultiSelect = False",
+           "HideSelection = True",
+           "SmallImageList = imgAvatars"
+          ]
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblNoScores",
+          "settings": [
+           "AutoSize = False",
+           "Location = 352, 74",
+           "Size = 632, 60",
+           "BackColor = 255, 255, 255",
+           "BorderStyle = FixedSingle",
+           "Font = Segoe UI, 10.5pt",
+           "ForeColor = 38, 50, 56",
+           "TextAlign = MiddleCenter",
+           "Text = No scores yet. Be the first to finish an expedition.",
+           "Visible = False"
+          ]
+         }
+        ],
+        "done": {
+         "see": "A large white board under **Top 10 climbers**, with the No scores label across its top.",
+         "img": {
+          "missing": true,
+          "alt": "frmWelcome in the designer with the Top 10 board and lblNoScores",
+          "w": 800,
+          "h": 450,
+          "at": []
+         }
+        }
+       }
+      },
+      {
+       "p": "Now add the 4 columns of the board. Add Player first, so the avatar picture shows beside the player's name. The code moves Place in front of it."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click lvTop on frmWelcome.",
+         "see": "The Properties window shows lvTop at the top.",
+         "img": {
+          "missing": true,
+          "alt": "The ColumnHeader Collection Editor, with 4 columns added",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click lvTop on frmWelcome."
+           },
+           {
+            "n": 2,
+            "say": "Click the box beside **Columns**, then click the small button with 3 dots at the right of the box."
+           },
+           {
+            "n": 3,
+            "say": "Click **Add** 4 times."
+           },
+           {
+            "n": 4,
+            "say": "Click each column in the Members list, and set its properties with the table below."
+           },
+           {
+            "n": 5,
+            "say": "Click **OK**."
+           }
+          ]
+         },
+         "id": "3-4.1",
+         "n": 1
+        },
+        {
+         "do": "Click the box beside **Columns**, then click the small button with 3 dots at the right of the box.",
+         "see": "The ColumnHeader Collection Editor opens.",
+         "id": "3-4.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Add** 4 times.",
+         "see": "4 columns are in the Members list on the left.",
+         "id": "3-4.3",
+         "n": 3
+        },
+        {
+         "do": "Click each column in the Members list, and set its properties with the table below.",
+         "see": "Each column's name shows in the Members list.",
+         "id": "3-4.4",
+         "n": 4
+        },
+        {
+         "do": "Click **OK**.",
+         "see": "The board shows the 4 headings Player, Place, Best score and Date.",
+         "id": "3-4.5",
+         "n": 5
+        }
+       ]
+      },
+      {
+       "controls": {
+        "props": [
+         "1st column: (Name) = colPlayer, Text = Player, Width = 250",
+         "2nd column: (Name) = colPlace, Text = Place, Width = 70",
+         "3rd column: (Name) = colBest, Text = Best score, Width = 130",
+         "4th column: (Name) = colDate, Text = Date, Width = 150"
+        ]
+       }
+      }
+     ],
+     "id": "4"
+    }
+   ],
+   "id": "3"
+  },
+  {
+   "title": "Write the code of the Welcome window",
+   "screens": [
+    {
+     "title": "Type the avatar list, the Load method and ShowEverything",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmWelcome loads its pictures when it opens, then fills the whole window."
+      },
+      {
+       "p": "The board needs each avatar picture in imgAvatars. Each picture is kept under its file name, so the board can find it by the avatar file of each player."
+      },
+      {
+       "code": {
+        "id": "c07-w-files",
+        "kind": "type",
+        "title": "The avatar files",
+        "lang": "cs",
+        "text": "private string[] avatarFiles = { \"avatar-goat.png\",\n    \"avatar-eagle.png\", \"avatar-fox.png\", \"avatar-hare.png\",\n    \"avatar-deer.png\", \"avatar-owl.png\", \"avatar-badger.png\",\n    \"avatar-raven.png\" };",
+        "partLines": [
+         [
+          1,
+          4,
+          "The 8 file names",
+          "An array is a list of values kept under one name. This one holds the 8 avatar file names, the same as the Tags in frmRegister."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          4
+         ]
+        ],
+        "typed": 4
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Press F7.",
+         "see": "The code of frmWelcome shows in the code editor.",
+         "img": {
+          "missing": true,
+          "alt": "frmWelcome.cs, with avatarFiles under the class line",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Press F7."
+           },
+           {
+            "n": 2,
+            "say": "Click at the end of the `{` under `public partial class frmWelcome : Form`."
+           },
+           {
+            "n": 3,
+            "say": "Press Enter."
+           },
+           {
+            "n": 4,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-1.1",
+         "n": 1
+        },
+        {
+         "do": "Click at the end of the `{` under `public partial class frmWelcome : Form`.",
+         "see": "The flashing cursor is after the `{`.",
+         "id": "4-1.2",
+         "n": 2
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the `{`.",
+         "id": "4-1.3",
+         "n": 3
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "avatarFiles is under the `{`.",
+         "id": "4-1.4",
+         "n": 4
+        }
+       ]
+      },
+      {
+       "p": "The Load method fills imgAvatars, puts the Place column first, then calls ShowEverything. You type it yourself, then connect it to the Load event."
+      },
+      {
+       "code": {
+        "id": "c07-w-load",
+        "kind": "type",
+        "title": "frmWelcome_Load",
+        "lang": "cs",
+        "text": "// Loads the avatar pictures, then fills the whole screen\nprivate void frmWelcome_Load(object sender, EventArgs e)\n{\n    // The board's small pictures, one for each avatar file\n    foreach (string file in avatarFiles)\n    {\n        Image picture = Files.Picture(\"Avatars\", file);\n        if (picture != null) imgAvatars.Images.Add(file, picture);\n    }\n    // Player was added first, so it can show the avatar picture;\n    // these two lines put Place first on the screen\n    colPlace.DisplayIndex = 0;\n    colPlayer.DisplayIndex = 1;\n    picTrophy.Image = Files.Picture(\"Icons\", \"icon-trophy-64.png\");\n    mnuSound.Checked = !Sound.Muted;\n    ShowEverything();\n}",
+        "partLines": [
+         [
+          1,
+          9,
+          "Fill the ImageList",
+          "Each picture is added with its file name as its key. A missing picture is skipped."
+         ],
+         [
+          10,
+          13,
+          "Place first",
+          "`DisplayIndex` is where a column shows. 0 is the first column on the screen."
+         ],
+         [
+          14,
+          17,
+          "Everything else",
+          "The trophy picture is for the banner. The tick beside Sound on shows when the sound is on."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          17
+         ]
+        ],
+        "typed": 9,
+        "wordMarks": [
+         [
+          8,
+          29,
+          39,
+          6
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` under the line `InitializeComponent();`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmWelcome.cs, with frmWelcome_Load and ShowEverything typed",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Click at the end of the `}` under the line `InitializeComponent();`."
+           },
+           {
+            "n": 6,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 7,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 8,
+            "say": "Click at the end of the `}` that closes `frmWelcome_Load`."
+           },
+           {
+            "n": 9,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 10,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-1.5",
+         "n": 5
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-1.6",
+         "n": 6
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "frmWelcome_Load sits under the constructor. `ShowEverything` has a red underline for now.",
+         "id": "4-1.7",
+         "n": 7
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c07-w-every",
+        "kind": "type",
+        "title": "ShowEverything",
+        "lang": "cs",
+        "text": "// Fills the whole screen: the player, the banner and the board\nprivate void ShowEverything()\n{\n    ShowPlayer();\n    ShowBanner();\n    ShowBoard();\n}",
+        "partLines": [
+         [
+          1,
+          7,
+          "Three parts",
+          "Each part of the window has its own method. Chapter 8 calls ShowEverything again after an expedition."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          7
+         ]
+        ],
+        "typed": 4
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmWelcome_Load`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-1.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-1.9",
+         "n": 9
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "ShowEverything sits under frmWelcome_Load.",
+         "id": "4-1.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Type ShowPlayer, which fills the player card",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the card shows the player's avatar, a welcome, and their last and best scores."
+      },
+      {
+       "p": "A player with no scores yet gets a different welcome, and the best score line is hidden."
+      },
+      {
+       "code": {
+        "id": "c07-w-player",
+        "kind": "type",
+        "title": "ShowPlayer",
+        "lang": "cs",
+        "text": "// The left card: avatar, hello, last score and best score\nprivate void ShowPlayer()\n{\n    string name = Expedition.CurrentPlayer.Username;\n    picAvatar.Image = Files.Picture(\"Avatars\",\n        Expedition.CurrentPlayer.Avatar);\n    int last = ScoreFile.LastScore(name);\n    if (last == -1)\n    {\n        lblHello.Text = \"Welcome to Summit Ready, \" + name + \".\";\n        lblLast.Text = \"You have not finished an expedition yet.\";\n        lblBest.Visible = false;\n    }\n    else\n    {\n        lblHello.Text = \"Welcome back, \" + name + \".\";\n        lblLast.Text = \"Your last score: \" + last + \" points.\";\n        lblBest.Text = \"Your best score: \"\n            + ScoreFile.BestScore(name) + \" points.\";\n        lblBest.Visible = true;\n    }\n}",
+        "partLines": [
+         [
+          1,
+          7,
+          "Who it is",
+          "`Expedition.CurrentPlayer` is the player who logged in, from chapter 6."
+         ],
+         [
+          8,
+          13,
+          "No scores yet",
+          "-1 means no score. `lblBest.Visible = false` hides the best score line."
+         ],
+         [
+          14,
+          22,
+          "Welcome back",
+          "The last and best scores show, and the best score line shows again."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          22
+         ]
+        ],
+        "typed": 15,
+        "wordMarks": [
+         [
+          12,
+          16,
+          23,
+          8
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `ShowEverything`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmWelcome.cs, with ShowPlayer typed under ShowEverything",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `ShowEverything`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-2.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-2.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "ShowPlayer sits under ShowEverything.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "4-2.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Type ShowBanner for now, and MoveBoard",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the board sits at the top of the right side, with the banner hidden."
+      },
+      {
+       "p": "Chapter 10 fills in ShowBanner. For now it has one line, which hides the banner."
+      },
+      {
+       "code": {
+        "id": "c07-w-banner",
+        "kind": "type",
+        "title": "ShowBanner, for now",
+        "lang": "cs",
+        "text": "// The banner shows once, straight after a saved expedition\nprivate void ShowBanner()\n{\n    MoveBoard(false);\n}",
+        "partLines": [
+         [
+          1,
+          5,
+          "Hide the banner",
+          "MoveBoard(false) hides the banner."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          5
+         ]
+        ],
+        "typed": 2
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `ShowPlayer`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmWelcome.cs, with ShowBanner and MoveBoard typed",
+          "w": 800,
+          "h": 400,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `ShowPlayer`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 4,
+            "say": "Click at the end of the `}` that closes `ShowBanner`."
+           },
+           {
+            "n": 5,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 6,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-3.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-3.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "ShowBanner sits under ShowPlayer.",
+         "id": "4-3.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "p": "MoveBoard shows or hides the banner. When the banner shows, the title and the board move down 116 pixels to make room."
+      },
+      {
+       "code": {
+        "id": "c07-w-move",
+        "kind": "type",
+        "title": "MoveBoard",
+        "lang": "cs",
+        "text": "// Puts the board under the banner, or back at the top\nprivate void MoveBoard(bool bannerShowing)\n{\n    pnlBanner.Visible = bannerShowing;\n    int top = 40;\n    if (bannerShowing) top = 156;\n    lblTopTitle.Top = top;\n    lvTop.Top = top + 34;\n    lblNoScores.Top = top + 34;\n}",
+        "partLines": [
+         [
+          1,
+          10,
+          "Move the board",
+          "`Top` is how far down the window a control sits. The board is 34 pixels under its title."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          10
+         ]
+        ],
+        "typed": 7,
+        "wordMarks": [
+         [
+          8,
+          4,
+          9,
+          5
+         ],
+         [
+          4,
+          14,
+          21,
+          8
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `ShowBanner`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-3.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-3.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "MoveBoard sits under ShowBanner. The red underline under `MoveBoard` has gone.",
+         "id": "4-3.6",
+         "n": 6
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Type ShowBoard, which fills the Top 10",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the board shows one row for each of the 10 best players."
+      },
+      {
+       "p": "Each row is a ListViewItem. Its first column is the username, with the avatar picture beside it. The other columns are [[SubItems|7]]."
+      },
+      {
+       "p": "`break` leaves the loop early, at the first empty place."
+      },
+      {
+       "code": {
+        "id": "c07-w-board-a",
+        "kind": "type",
+        "title": "ShowBoard, without the highlight",
+        "lang": "cs",
+        "text": "// The Top 10: one row for each player, with their best score\nprivate void ShowBoard()\n{\n    string name = Expedition.CurrentPlayer.Username;\n    ScoreEntry[] top = ScoreFile.TopTen();\n    lvTop.Items.Clear();\n    lblNoScores.Visible = top[0] == null;\n    lvTop.Visible = top[0] != null;\n    for (int i = 0; i < 10; i++)\n    {\n        if (top[i] == null) break;    // nobody in this place yet\n        ListViewItem row = new ListViewItem(top[i].Username);\n        row.ImageKey = PlayerFile.AvatarOf(top[i].Username);\n        row.SubItems.Add(Mix.Ordinal(i + 1));\n        row.SubItems.Add(top[i].Score + \" points\");\n        row.SubItems.Add(top[i].Date);\n        lvTop.Items.Add(row);\n    }\n}",
+        "partLines": [
+         [
+          1,
+          6,
+          "Start again",
+          "`Clear` takes away the old rows, so no row shows twice."
+         ],
+         [
+          7,
+          8,
+          "Board or message",
+          "If the first place is empty, nobody has a score: the message shows and the board hides."
+         ],
+         [
+          9,
+          19,
+          "One row for each place",
+          "`ImageKey` picks the avatar picture by its file name. `Mix.Ordinal(i + 1)` turns 1 into 1st."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          19
+         ]
+        ],
+        "typed": 14,
+        "wordMarks": [
+         [
+          6,
+          4,
+          9,
+          5
+         ],
+         [
+          14,
+          12,
+          20,
+          7
+         ],
+         [
+          7,
+          16,
+          23,
+          8
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `MoveBoard`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmWelcome.cs, with ShowBoard typed under MoveBoard",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `MoveBoard`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-4.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-4.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "ShowBoard sits under MoveBoard. The red underline under `ShowBoard` in ShowEverything has gone.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "4-4.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "p": "Now pick out the player's own row: a pale gold background, and bold letters."
+      },
+      {
+       "code": {
+        "id": "c07-w-board",
+        "kind": "type",
+        "title": "ShowBoard, with the highlight",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// The Top 10: one row for each player, with their best score\nprivate void ShowBoard()\n{\n    string name = Expedition.CurrentPlayer.Username;\n    ScoreEntry[] top = ScoreFile.TopTen();\n    lvTop.Items.Clear();\n    lblNoScores.Visible = top[0] == null;\n    lvTop.Visible = top[0] != null;\n    for (int i = 0; i < 10; i++)\n    {\n        if (top[i] == null) break;    // nobody in this place yet\n        ListViewItem row = new ListViewItem(top[i].Username);\n        row.ImageKey = PlayerFile.AvatarOf(top[i].Username);\n        row.SubItems.Add(Mix.Ordinal(i + 1));\n        row.SubItems.Add(top[i].Score + \" points\");\n        row.SubItems.Add(top[i].Date);\n        if (top[i].Username == name)\n        {\n            row.BackColor = Color.FromArgb(255, 241, 193);\n            row.Font = new Font(lvTop.Font, FontStyle.Bold);\n        }\n        lvTop.Items.Add(row);\n    }\n}",
+        "partLines": [
+         [
+          1,
+          16,
+          "As before",
+          "The lines you typed above."
+         ],
+         [
+          17,
+          21,
+          "Your own row",
+          "`new Font(lvTop.Font, FontStyle.Bold)` is the board's font, made bold."
+         ],
+         [
+          22,
+          24,
+          "Add the row",
+          "The row goes on the board."
+         ]
+        ],
+        "focusLines": [
+         [
+          17,
+          20
+         ]
+        ],
+        "typed": 3
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the line `row.SubItems.Add(top[i].Date);`.",
+         "see": "The flashing cursor is after the semicolon.",
+         "img": {
+          "missing": true,
+          "alt": "ShowBoard, with the highlight lines typed before lvTop.Items.Add",
+          "w": 800,
+          "h": 400,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click at the end of the line `row.SubItems.Add(top[i].Date);`."
+           },
+           {
+            "n": 5,
+            "say": "Press Enter."
+           },
+           {
+            "n": 6,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-4.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens above `lvTop.Items.Add(row);`.",
+         "id": "4-4.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The 4 highlight lines sit between `row.SubItems.Add(top[i].Date);` and `lvTop.Items.Add(row);`.",
+         "id": "4-4.6",
+         "n": 6
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Type the OK button and the menu methods",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the banner's OK button and every menu item except Start the expedition have a method."
+      },
+      {
+       "p": "The OK button hides the banner, so the player can see the whole board again."
+      },
+      {
+       "code": {
+        "id": "c07-w-ok",
+        "kind": "type",
+        "title": "btnBannerOK_Click",
+        "lang": "cs",
+        "text": "// The banner's OK button hides it\nprivate void btnBannerOK_Click(object sender, EventArgs e)\n{\n    MoveBoard(false);\n}",
+        "partLines": [
+         [
+          1,
+          5,
+          "Hide the banner",
+          "OK hides the banner, and the board moves back up."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          5
+         ]
+        ],
+        "typed": 2
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `ShowBoard`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmWelcome.cs, with btnBannerOK_Click and the menu methods",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `ShowBoard`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 4,
+            "say": "Click at the end of the `}` that closes `btnBannerOK_Click`."
+           },
+           {
+            "n": 5,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 6,
+            "say": "Click the copy button below."
+           },
+           {
+            "n": 7,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 8,
+            "say": "Triple-click a line that starts with `// YOU TYPE THIS PART`, to select it. Then type its yellow lines in its place. Do the same for the other line."
+           }
+          ]
+         },
+         "id": "4-5.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-5.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "btnBannerOK_Click sits under ShowBoard.",
+         "id": "4-5.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "p": "Exit, How to play and About Summit Ready are as on frmLogin in chapter 2. They come in the code you copy below. You type Log out and Sound on."
+      },
+      {
+       "p": "Log out asks first. The MessageBox has Yes and No buttons, and [[DialogResult|9]] says which one was clicked. Closing the Welcome window takes the player back to the Log in window."
+      },
+      {
+       "code": {
+        "id": "c07-w-menus",
+        "kind": "type",
+        "title": "The menu methods",
+        "lang": "cs",
+        "why": "Exit, How to play and About Summit Ready are the same as the menu methods you typed on frmLogin in chapter 2.",
+        "text": "// Game, then Log out: back to the log in form\nprivate void mnuLogOut_Click(object sender, EventArgs e)\n{\n    DialogResult answer = MessageBox.Show(\"Log out of Summit Ready?\",\n        \"Summit Ready\", MessageBoxButtons.YesNo);\n    if (answer == DialogResult.Yes) this.Close();\n}\n\n// Game, then Exit\nprivate void mnuExit_Click(object sender, EventArgs e)\n{\n    Application.Exit();\n}\n\n// Sound, then Sound on: the tick shows when the sound is on\nprivate void mnuSound_Click(object sender, EventArgs e)\n{\n    Sound.Muted = !Sound.Muted;\n    mnuSound.Checked = !Sound.Muted;\n}\n\n// Help, then How to play\nprivate void mnuHow_Click(object sender, EventArgs e)\n{\n    MessageBox.Show(\"Log in, then press Start the expedition. Climb \"\n        + \"the eight summits in any order. Each summit is a \"\n        + \"different game worth up to 100 points. When you finish, \"\n        + \"you see what went well and what went wrong in each game, \"\n        + \"and whether you made the Top 10.\", \"How to play\");\n}\n\n// Help, then About Summit Ready\nprivate void mnuAbout_Click(object sender, EventArgs e)\n{\n    MessageBox.Show(\"Summit Ready is a teaching example for AS \"\n        + \"Software Systems Development. Pictures come from \"\n        + \"OpenMoji, Wikimedia Commons and OpenTopoMap. Sounds come \"\n        + \"from Kenney and Wikimedia Commons. Every credit is in \"\n        + \"credits.txt beside the program.\", \"About Summit Ready\");\n}",
+        "partLines": [
+         [
+          1,
+          7,
+          "Log out",
+          "Only Yes closes the window. No leaves the player where they are."
+         ],
+         [
+          9,
+          13,
+          "Exit",
+          "Closes the whole program, as in chapter 2."
+         ],
+         [
+          15,
+          20,
+          "Sound on",
+          "`!` turns true into false and false into true. The tick shows when the sound is on."
+         ],
+         [
+          22,
+          40,
+          "Help",
+          "The same messages as on frmLogin."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          6
+         ],
+         [
+          15,
+          19
+         ]
+        ],
+        "typed": 7,
+        "wordMarks": [
+         [
+          4,
+          4,
+          16,
+          9
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `btnBannerOK_Click`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-5.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-5.5",
+         "n": 5
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c07-w-menus",
+         "id": "4-5.6",
+         "n": 6
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The menu methods appear, with 2 lines that start with `// YOU TYPE THIS PART`.",
+         "id": "4-5.7",
+         "n": 7
+        },
+        {
+         "do": "Triple-click a line that starts with `// YOU TYPE THIS PART`, to select it. Then type its yellow lines in its place. Do the same for the other line.",
+         "see": "mnuLogOut_Click and mnuSound_Click are complete. No line has a red underline.",
+         "wrong": [
+          [
+           "The `// YOU TYPE THIS PART` line is still there after you type",
+           "Click the old `// YOU TYPE THIS PART` line, then press Home. Hold Shift and press End, so the whole line turns blue. Press Delete."
+          ]
+         ],
+         "id": "4-5.8",
+         "n": 8
+        }
+       ]
+      }
+     ],
+     "id": "5"
+    },
+    {
+     "title": "Connect the events, then build",
+     "blocks": [
+      {
+       "p": "By the end of this screen, every method on frmWelcome runs when it should, and your project builds."
+      },
+      {
+       "p": "Connect each event in the table to its method, in the same way as in chapter 5. Click the control or menu item, click the lightning bolt, then pick the method from the list beside the event."
+      },
+      {
+       "controls": {
+        "props": [
+         "frmWelcome (click its title bar): Load = frmWelcome_Load",
+         "btnBannerOK: Click = btnBannerOK_Click",
+         "Log out, under Game: Click = mnuLogOut_Click",
+         "Exit, under Game: Click = mnuExit_Click",
+         "Sound on, under Sound: Click = mnuSound_Click",
+         "How to play, under Help: Click = mnuHow_Click",
+         "About Summit Ready, under Help: Click = mnuAbout_Click"
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "If you have forgotten how to connect an event",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "Click the control in the designer. Click the lightning bolt at the top of the Properties window. Click the box beside the event, then click the small arrow at the right end of the box. Click the method."
+         },
+         {
+          "p": "Do not double-click the box. Double-clicking makes a new empty method with `_1` at the end of its name."
+         }
+        ]
+       }
+      },
+      {
+       "p": "Start the expedition has no method yet. Chapter 8 adds it, with the map."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "missing": true,
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows errors",
+           "Double-click the first error in the Error List. Visual Studio 2019 jumps to the line with the error. Check that line letter by letter against the code in this chapter."
+          ]
+         ],
+         "id": "4-6.1",
+         "n": 1
+        }
+       ]
+      }
+     ],
+     "id": "6"
+    }
+   ],
+   "id": "4"
+  },
+  {
+   "title": "Test the Welcome window, then make one change of your own",
+   "screens": [
+    {
+     "title": "Check that the Welcome window and the Top 10 work",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know the Welcome window shows the right scores. You also know the board shows each player once and stops at 10 rows."
+      },
+      {
+       "p": "Run each test with F5, and log in as the player each test names. summitSeeker's password is `peaks2026`."
+      },
+      {
+       "check": [
+        {
+         "what": "Log in as summitSeeker.",
+         "expect": "allowed",
+         "how": "The card says **Welcome back, summitSeeker.**, **Your last score: 540 points.** and **Your best score: 760 points.**",
+         "must": "Must happen",
+         "fix": "Check LastScore and BestScore in ScoreFile, then ShowPlayer.",
+         "id": "5-1.t1"
+        },
+        {
+         "what": "Look for summitSeeker on the board.",
+         "expect": "control",
+         "how": "summitSeeker is on the board once, 1st, with 760 points, even though `scores.txt` has 4 of their scores.",
+         "fix": "Check the first part of TopTen, which keeps one best score for each player.",
+         "id": "5-1.t2"
+        },
+        {
+         "what": "Count the rows on the board.",
+         "expect": "control",
+         "how": "There are 10 rows. `scores.txt` has 12 players, so the 2 lowest are not on the board.",
+         "fix": "Check the last 3 lines of TopTen, and `i < 10` in ShowBoard.",
+         "id": "5-1.t3"
+        },
+        {
+         "what": "Look at the rows with equal scores.",
+         "expect": "allowed",
+         "how": "cairnKing and heatherHop both have 560 points, and cairnKing comes first, because C comes before H.",
+         "must": "Must happen",
+         "fix": "Check ComesBefore.",
+         "id": "5-1.t4"
+        },
+        {
+         "what": "Look at summitSeeker's row.",
+         "expect": "allowed",
+         "how": "It is bold, on a pale gold background. No other row is.",
+         "must": "Must happen",
+         "fix": "Check the highlight lines in ShowBoard.",
+         "id": "5-1.t5"
+        },
+        {
+         "what": "Log out and click No. Then log out again and click Yes. Register a new player, then log in as them.",
+         "expect": "control",
+         "how": "No leaves the Welcome window open. After Yes, the new player's card says **You have not finished an expedition yet.**, with no best score line.",
+         "fix": "Check mnuLogOut_Click, then the `if (last == -1)` part of ShowPlayer.",
+         "id": "5-1.t6"
+        },
+        {
+         "what": "Click Sound, then click Sound on. Do this twice.",
+         "expect": "allowed",
+         "how": "The tick beside Sound on goes, then comes back.",
+         "must": "Must happen",
+         "fix": "Check mnuSound_Click, and that Sound on is connected to it.",
+         "id": "5-1.t7"
+        }
+       ]
+      },
+      {
+       "box": {
+        "title": "Evidence to keep",
+        "blocks": [
+         {
+          "p": "Take a screenshot of the Welcome window for summitSeeker, and one for your new player. Press the Windows key, Shift and S together, then drag a box around the window."
+         },
+         {
+          "p": "Paste each screenshot into your testing document, under the test it shows."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Your turn: show a Top 5",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have changed the size of the board, and tested it, on your own."
+      },
+      {
+       "p": "Make the board show only the 5 best players. Then change it back."
+      },
+      {
+       "code": {
+        "id": "turn-top5",
+        "kind": "turn",
+        "title": "Show a Top 5",
+        "lang": "cs",
+        "text": "for (int i = 0; i < 5; i++)",
+        "task": [
+         "Find the `for` line in ShowBoard.",
+         "Change 10 to 5."
+        ],
+        "test": "Press F5, then log in as summitSeeker.",
+        "expect": "The board has 5 rows, from summitSeeker in 1st place to cairnKing in 5th place.",
+        "hint": "Change only ShowBoard. TopTen still works out 10 places, and ShowBoard shows the first 5 of them."
+       }
+      },
+      {
+       "p": "When the test passes, change 5 back to 10, because the board is a Top 10."
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "5"
+  }
+ ],
+ "glossary": [
+  [
+   "Convert.ToInt32",
+   "Turns text into a whole number. `Convert.ToInt32(\"250\")` gives the number 250."
+  ],
+  [
+   "Dictionary",
+   "A collection that finds each value by a key, such as a player's best score by their username."
+  ],
+  [
+   "key",
+   "The value a Dictionary finds things by. Each key is in a Dictionary once only."
+  ],
+  [
+   "bubble sort",
+   "A way to put a list in order. It goes along the list again and again, swapping any two neighbours that are in the wrong order."
+  ],
+  [
+   "string.Compare",
+   "Compares two pieces of text for A to Z order. It gives a number below 0 when the first comes before the second."
+  ],
+  [
+   "ListView",
+   "A control that shows rows and columns, like a small table, with a picture at the start of each row."
+  ],
+  [
+   "ImageList",
+   "A control that holds pictures of the same size for another control, such as the ListView."
+  ],
+  [
+   "SubItems",
+   "The second, third and later columns of a ListView row."
+  ],
+  [
+   "Visible",
+   "A control with Visible set to false is not shown on the window."
+  ],
+  [
+   "DialogResult",
+   "Which button the player clicked in a MessageBox, such as Yes or No."
+  ]
+ ]
+}

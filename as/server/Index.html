@@ -635,7 +635,8 @@ details.cw-box>div{margin-top:8px}
 /* Phone width: one property to a row, so each value stays whole */
 @media (max-width:600px){
   .cw-controls .fp-props ul{grid-template-columns:minmax(0,1fr)}
-  .cw-controls .fp-props code{overflow-wrap:normal;text-align:right}
+  .cw-controls .fp-props li>span{flex:none}
+  .cw-controls .fp-props code{overflow-wrap:anywhere;text-align:right;min-width:0}
 }
 /* Phone width: each control in the table becomes its own card, each part under its own label */
 @media (max-width:600px){
@@ -683,7 +684,7 @@ details.cw-box>div{margin-top:8px}
 <body>
 <script>window.OLS_BOOT = { classCode: "<?= classCode ?>", baseUrl: "<?= baseUrl ?>" };
 window.A2_VENDOR = ["https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/","https://dgaj-g.github.io/ols-digital-skills/a2-ssd/platform/vendor/"];
-window.A2_DEPLOY = "a2ssd-as-2026-10-12-7ba5e9d7";
+window.A2_DEPLOY = "a2ssd-as-2026-10-12-87b39801";
 window.A2_CW = "https://dgaj-g.github.io/alevel_SSD/as/content/coursework/";</script>
 <div class="app" id="app"></div>
 <script>
@@ -1619,7 +1620,7 @@ window.CW = (function () {
     if (x.acceptButton) props.push('AcceptButton = ' + x.acceptButton + ' (after you add it)');
     if (x.cancelButton) props.push('CancelButton = ' + x.cancelButton + ' (after you add it)');
     if (x.formNote) wrap.appendChild(el('<p class="fp">' + md(x.formNote) + '</p>'));
-    if (props.length) wrap.appendChild(el('<div class="fp-props"><b>Click the form itself, then set these in the Properties window</b><ul>' + props.map(function (p) { var kv = p.split(' = '); return '<li><span>' + h(kv[0]) + '</span><code>' + h(kv.slice(1).join(' = ')) + '</code></li>'; }).join('') + '</ul>' + (x.load ? '<p class="fp-load"><b>Then make its Load event.</b> With the form itself still picked, press the lightning bolt at the top of the Properties window and double-click the empty box beside Load, which is part of the way down, after Leave. Visual Studio makes <code>' + h(x.form) + '_Load</code> for you; the code goes inside it. Press the Properties button, to the left of the lightning bolt, to go back to the properties.</p>' : '') + '</div>'));
+    if (props.length) wrap.appendChild(el('<div class="fp-props"><b>' + (props.some(function (p) { return /^[a-z]{2,4}[A-Z]\w*[ .]/.test(p.split(' = ')[0]); }) ? 'Click each control named below, then set these in the Properties window' : 'Click the form itself, then set these in the Properties window') + '</b><ul>' + props.map(function (p) { var kv = p.split(' = '); return '<li><span>' + h(kv[0]) + '</span><code>' + h(kv.slice(1).join(' = ')) + '</code></li>'; }).join('') + '</ul>' + (x.load ? '<p class="fp-load"><b>Then make its Load event.</b> With the form itself still picked, press the lightning bolt at the top of the Properties window and double-click the empty box beside Load, which is part of the way down, after Leave. Visual Studio makes <code>' + h(x.form) + '_Load</code> for you; the code goes inside it. Press the Properties button, to the left of the lightning bolt, to go back to the properties.</p>' : '') + '</div>'));
     if (x.img) wrap.appendChild(rShot(x.img));
     if (!x.rows) return wrap;
     var rows = x.rows.map(function (r) {

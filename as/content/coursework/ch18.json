@@ -1,0 +1,4770 @@
+{
+ "id": "18",
+ "n": 18,
+ "of": 20,
+ "title": "Build Listen Out, a game where a sound is the question",
+ "kind": "a game chapter: build one game from each pair, and this pair is chapters 17 and 18",
+ "one": "You build Listen Out in your own project, exactly as it is in Summit Ready, and test it. Then you change it into a listening game on your own topic.",
+ "prev": {
+  "id": "17",
+  "n": 17,
+  "title": "Route Timer"
+ },
+ "next": {
+  "id": "19",
+  "n": 19,
+  "title": "Test it"
+ },
+ "stages": [
+  {
+   "title": "See what Listen Out does and how a round plays",
+   "screens": [
+    {
+     "title": "Look at a round of Listen Out, from the first sound to the score",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know how a round of Listen Out plays and how it scores."
+      },
+      {
+       "p": "Listen Out is a listening game. It is on Slieve Donard, the last and highest place on the Summit Ready map."
+      },
+      {
+       "p": "You build one game from each pair of game chapters. Listen Out is paired with Route Timer, so you build one of those two."
+      },
+      {
+       "p": "First you build Listen Out exactly as it is in Summit Ready. Then, in stage 5, you change it into a listening game on your own topic."
+      },
+      {
+       "p": "In Listen Out, the question is a sound and the answers are pictures. Each sound is a [[sound file|0]] that plays when you press **Play the sound**."
+      },
+      {
+       "p": "Under the button are 4 pictures, each with a name, such as Red grouse or Rescue helicopter. One of the 4 pictures made the sound."
+      },
+      {
+       "p": "The 4 pictures stay grey until you have played the sound once. You have to listen before you guess."
+      },
+      {
+       "screenshot": {
+        "missing": true,
+        "alt": "Listen Out at the start of a round, with Play the sound and 4 grey pictures",
+        "w": 1000,
+        "h": 660,
+        "at": [],
+        "cap": "The start of a round. The 4 pictures stay grey until you press Play the sound."
+       }
+      },
+      {
+       "p": "You can play each sound 3 times. The sentence beside the button counts down your plays. After the third play, the button turns grey and does nothing."
+      },
+      {
+       "p": "Click the picture that made the sound. The right picture turns green. If you picked a different picture, your picture turns red."
+      },
+      {
+       "p": "The box under the pictures then says what made the sound, and one fact about it."
+      },
+      {
+       "screenshot": {
+        "missing": true,
+        "alt": "Listen Out after a right answer, with the right picture green and the fact underneath",
+        "w": 1000,
+        "h": 660,
+        "at": [],
+        "cap": "After a right answer: the picture is green, Points goes up by 10, and Next sound appears."
+       }
+      },
+      {
+       "p": "A round is 10 sounds. Each right answer is worth 10 points, so the best score is 100 points."
+      },
+      {
+       "p": "After the 10th sound, the button says **See my score**. It opens the Round over box, and the flag on Slieve Donard gets a tick on the map."
+      },
+      {
+       "screenshot": {
+        "missing": true,
+        "alt": "The Round over box at the end of a round of Listen Out",
+        "w": 1000,
+        "h": 660,
+        "at": [],
+        "cap": "The Round over box at the end of a round."
+       }
+      },
+      {
+       "p": "Listen Out is no fun with the sound off. So if the speaker on the map is muted, the map asks whether to turn the sound on before Listen Out opens."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Check that your project is ready, and see the words this chapter uses",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know that your project has everything Listen Out needs."
+      },
+      {
+       "p": "Listen Out uses things you made in earlier chapters. Check that each one is in your project before you start."
+      },
+      {
+       "need": [
+        "Your Summit Ready project, with the practice game opening from the map (chapter 9).",
+        "The Files class that finds files, the Sound class that plays sounds and the Mix class that shuffles numbers (chapter 2).",
+        "The Data, Images and Sounds folders in your project's [[bin\\Debug|1]] folder, from `summit-ready-files.zip` (chapter 2). They already hold every file that Listen Out needs.",
+        "The line `// each game chapter adds its own case below this line` in `frmMap.cs`, and the lines in OpenGame that check the sound (chapter 8).",
+        "File name extensions turned on in File Explorer, so `listen.txt` shows as `listen.txt` and not as `listen` (chapter 2).",
+        "About 2 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
+       ]
+      },
+      {
+       "p": "You also need headphones or speakers, because every question in Listen Out is a sound."
+      },
+      {
+       "words": [
+        [
+         "sound file",
+         "A file that holds a sound. Summit Ready's sounds are .wav files in the Sounds folder.",
+         "1-1",
+         false
+        ],
+        [
+         "bin\\Debug",
+         "The folder inside your project where Visual Studio 2019 puts the program it builds. Summit Ready reads its data, pictures and sounds from there.",
+         "1-2",
+         false
+        ],
+        [
+         "zip file",
+         "One file with other files and folders packed inside it.",
+         "2-1",
+         false
+        ],
+        [
+         "property",
+         "A named value that an object carries, such as `Name` on a ListenClip. `{ get; set; }` lets other code read the value and change it.",
+         "2-2",
+         true
+        ],
+        [
+         "constructor",
+         "A method with the same name as its class. It runs once, when code makes a new object with `new`.",
+         "2-2",
+         true
+        ],
+        [
+         "static",
+         "A method marked `static` belongs to the class itself. You call it on the class name, as in `ListenClip.LoadAll()`.",
+         "2-2",
+         true
+        ],
+        [
+         "List",
+         "A list that grows as you add to it. `List<ListenClip>` is a list that holds ListenClip objects.",
+         "2-2",
+         true
+        ],
+        [
+         "continue",
+         "Inside a loop, `continue` skips the rest of this turn of the loop. The loop goes straight on to its next turn.",
+         "2-2",
+         true
+        ],
+        [
+         "not",
+         "`!` in front of a true or false value turns it the other way. `!answered` is true while `answered` is false.",
+         "2-2",
+         true
+        ],
+        [
+         "lightning bolt",
+         "The button at the top of the Properties window that shows a control's events in place of its properties.",
+         "3-1",
+         false
+        ],
+        [
+         "panel",
+         "A control that holds other controls. `pnlPlay` is the play area that holds the button and the 4 pictures.",
+         "3-5",
+         false
+        ],
+        [
+         "field",
+         "A variable written at the top of the class, outside every method. Every method in the form can use it, and it keeps its value until the window closes.",
+         "4-4",
+         false
+        ],
+        [
+         "array",
+         "A row of values of the same type, kept together under one name and numbered from 0. `picks[0]` is the first picture button, and `picks[3]` is the 4th.",
+         "4-4",
+         true
+        ],
+        [
+         "random number",
+         "`random.Next(13)` gives a whole number picked by chance, from 0 up to 12.",
+         "4-6",
+         true
+        ],
+        [
+         "Contains",
+         "`choices.Contains(n)` is true when the list `choices` already holds `n`.",
+         "4-6",
+         true
+        ],
+        [
+         "null",
+         "`null` means no object at all. `Files.Picture` gives back `null` when the picture file is missing.",
+         "4-7",
+         true
+        ],
+        [
+         "Bitmap",
+         "A picture held in memory. `new Bitmap(photo, 210, 180)` makes a copy of `photo` that is 210 pixels wide and 180 pixels tall.",
+         "4-7",
+         true
+        ],
+        [
+         "colour from red, green and blue",
+         "`Color.FromArgb(62, 142, 65)` mixes a colour from red, green and blue. Each number is from 0 to 255.",
+         "4-7",
+         true
+        ],
+        [
+         "Cursor",
+         "The pointer the mouse shows over a control. `Cursors.Hand` is the pointing hand.",
+         "4-7",
+         true
+        ],
+        [
+         "Enabled",
+         "When a control's Enabled is false, it turns grey and clicks on it do nothing.",
+         "4-7",
+         true
+        ],
+        [
+         "take away 1",
+         "`playsLeft--` takes 1 away from `playsLeft`.",
+         "4-9",
+         true
+        ],
+        [
+         "event",
+         "Something that happens to a control, such as a click on a button.",
+         "4-2",
+         false
+        ],
+        [
+         "handler",
+         "The method that runs when an event happens. `Pick_Click` is the handler for a click on any of the 4 pictures.",
+         "4-10",
+         true
+        ],
+        [
+         "sender",
+         "Every handler is given `sender`: the control that the event happened to, such as the picture that was clicked.",
+         "4-1",
+         true
+        ],
+        [
+         "and",
+         "`&&` means and. The `if` is true only when both of its parts are true.",
+         "4-1",
+         true
+        ],
+        [
+         "StartsWith",
+         "`\"whistle-six\".StartsWith(\"whistle\")` is true, because the text starts with those letters.",
+         "4-13",
+         true
+        ],
+        [
+         "quote mark inside text",
+         "Inside quotes, `\\\"` stands for one quote mark, so the quote mark shows on the screen and does not end the text.",
+         "4-13",
+         false
+        ],
+        [
+         "AddRange",
+         "`AddRange` adds every line of one list to the end of another list.",
+         "4-14",
+         true
+        ],
+        [
+         "red underline",
+         "The wavy red line Visual Studio 2019 draws under code it does not understand yet. Often it means a method you have not written yet.",
+         "2-2",
+         false
+        ]
+       ],
+       "intro": "You do not need to learn these words now. Where you first meet each one in the chapter, it has a dotted line under it. Hover over it or tap it to see what it means."
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "1"
+  },
+  {
+   "title": "Look at the list of sounds, and add the ListenClip class that reads it",
+   "screens": [
+    {
+     "title": "Read listen.txt, the list of the 13 sounds",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know what each line of `listen.txt` holds."
+      },
+      {
+       "p": "Listen Out gets its sounds from a text file, `listen.txt`. The file is already in your bin\\Debug\\Data folder, because `summit-ready-files.zip` put it there in chapter 2."
+      },
+      {
+       "p": "The file has 13 sounds, and each round plays 10 of them, so a round is never quite the same twice."
+      },
+      {
+       "p": "You do not type `listen.txt`. You read it here, so that the code in stage 4 makes sense."
+      },
+      {
+       "code": {
+        "id": "c18-listen-txt",
+        "kind": "read",
+        "title": "listen.txt: the 13 sounds, one on each line",
+        "lang": "txt",
+        "text": "raven|Raven|the raven|A raven's deep croak carries a long way across the crags.\nred-grouse|Red grouse|the red grouse|The red grouse calls \"go-back, go-back\" from the heather.\nskylark|Skylark|the skylark|A skylark sings without stopping as it hovers high over the moor.\ncurlew|Curlew|the curlew|The curlew's bubbling call is a sound of the bogs and moors.\ncuckoo|Cuckoo|the cuckoo|The cuckoo calls its own name and is heard in late spring.\nmeadow-pipit|Meadow pipit|the meadow pipit|The meadow pipit is the small brown bird you hear most on the hills.\nsheep|Sheep|the sheep|Mourne sheep graze right up to the summits.\nstream|Mountain stream|the mountain stream|After heavy rain, streams can be too deep to cross.\nthunder|Thunder|the thunder|Thunder means lightning is near. Get off the high ground.\nwind|Strong wind|the strong wind|Strong wind on a ridge can knock you off balance. Keep low and get off the top.\nhelicopter|Rescue helicopter|the rescue helicopter|The Coastguard helicopter helps Mourne Mountain Rescue reach injured walkers.\nwhistle-six|Whistle: six blasts|the six-blast whistle|Six blasts on a whistle, then a minute's wait, is the signal for help in the mountains. Three blasts is the reply.\nwhistle-three|Whistle: three blasts|the three-blast whistle|Three blasts on a whistle is the reply: we hear you, help is coming.",
+        "partLines": [
+         [
+          1,
+          1,
+          "The first sound",
+          "Each line is one sound, in 4 parts with a bar `|` between them. `raven` is the file name, with no ending. The code adds `.wav` for the sound and `.jpg` for the picture."
+         ],
+         [
+          2,
+          13,
+          "The other 12 sounds",
+          "The second part, `Raven`, is the name under the picture. The third part, `the raven`, goes inside a sentence, such as \"Not quite. It was the raven.\" The last part is the fact that shows after you answer. The other 12 lines have the same 4 parts."
+         ]
+        ]
+       }
+      },
+      {
+       "p": "The sounds are in the Sounds folder inside bin\\Debug, such as `raven.wav`. The pictures are in the Listen folder inside bin\\Debug\\Images, such as `raven.jpg`."
+      },
+      {
+       "p": "To type a bar `|`, hold Shift and press the key to the left of Z."
+      },
+      {
+       "box": {
+        "title": "If a file is missing or broken",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "Listen Out never crashes because a file is missing. This is what you see instead."
+         },
+         {
+          "p": "If `listen.txt` is missing, or has fewer than 10 lines with 4 parts, **Play the sound** turns grey. The sentence beside it says **Listen Out needs 10 sounds in Data\\listen.txt, each with 4 parts.**"
+         },
+         {
+          "p": "If a line of `listen.txt` does not have exactly 4 parts, Listen Out skips that line."
+         },
+         {
+          "p": "If a picture is missing, its button shows only the name."
+         },
+         {
+          "p": "If a sound is missing, **Play the sound** is silent, and the game carries on."
+         },
+         {
+          "p": "To put a missing file back, you download the [[zip file|2]] again and paste its folders into bin\\Debug. When Windows asks about the files you already have, you click **Skip these files**."
+         },
+         {
+          "p": "Skipping keeps every file you already have, including any file you changed. Only the missing files are copied in."
+         },
+         {
+          "steps": [
+           {
+            "do": "Click the download button below.",
+            "see": "Your browser shows that `summit-ready-files.zip` has downloaded.",
+            "download": {
+             "file": "summit-ready-files.zip",
+             "label": "Download summit-ready-files.zip",
+             "size": "7.8 MB"
+            },
+            "id": "2-1.1",
+            "n": 1
+           },
+           {
+            "do": "Press the Windows key and the E key together.",
+            "see": "File Explorer opens.",
+            "img": {
+             "missing": true,
+             "alt": "File Explorer open on Downloads, with the menu that opens on summit-ready-files.zip",
+             "w": 800,
+             "h": 450,
+             "marks": [
+              {
+               "n": 2,
+               "say": "Press the Windows key and the E key together."
+              },
+              {
+               "n": 3,
+               "say": "Click **Downloads** in the list down the left side of File Explorer."
+              },
+              {
+               "n": 4,
+               "say": "Right-click `summit-ready-files.zip`."
+              },
+              {
+               "n": 5,
+               "say": "Click **Extract All...** in the menu."
+              }
+             ]
+            },
+            "id": "2-1.2",
+            "n": 2
+           },
+           {
+            "do": "Click **Downloads** in the list down the left side of File Explorer.",
+            "see": "`summit-ready-files.zip` is in the list of files.",
+            "wrong": [
+             [
+              "There is also a file called `summit-ready-files (1).zip`",
+              "Your browser added (1) because you downloaded the zip file before, in chapter 2. Use the file that ends in (1), because it is the newest one."
+             ]
+            ],
+            "id": "2-1.3",
+            "n": 3
+           },
+           {
+            "do": "Right-click `summit-ready-files.zip`.",
+            "see": "A menu opens.",
+            "id": "2-1.4",
+            "n": 4
+           },
+           {
+            "do": "Click **Extract All...** in the menu.",
+            "see": "A window called Extract Compressed (Zipped) Folders opens.",
+            "wrong": [
+             [
+              "The menu has no **Extract All...**",
+              "Press Escape to close the menu. Double-click `summit-ready-files.zip`. Then click **Extract all** in the bar along the top of File Explorer."
+             ]
+            ],
+            "id": "2-1.5",
+            "n": 5
+           },
+           {
+            "do": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window.",
+            "see": "A new File Explorer window opens. It shows 3 folders, Data, Images and Sounds, and one file, `credits.txt`.",
+            "img": {
+             "missing": true,
+             "alt": "The Extract Compressed (Zipped) Folders window, with its Extract button",
+             "w": 640,
+             "h": 480,
+             "marks": [
+              {
+               "n": 6,
+               "say": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window."
+              }
+             ]
+            },
+            "id": "2-1.6",
+            "n": 6
+           },
+           {
+            "do": "Press Ctrl and A together.",
+            "see": "The 3 folders and `credits.txt` turn blue.",
+            "img": {
+             "missing": true,
+             "alt": "The unpacked folder, with Data, Images, Sounds and credits.txt highlighted",
+             "w": 800,
+             "h": 360,
+             "marks": [
+              {
+               "n": 7,
+               "say": "Press Ctrl and A together."
+              },
+              {
+               "n": 8,
+               "say": "Press Ctrl and C together."
+              }
+             ]
+            },
+            "id": "2-1.7",
+            "n": 7
+           },
+           {
+            "do": "Press Ctrl and C together.",
+            "see": "Nothing changes on the screen. That is normal: Windows has copied the 3 folders and `credits.txt`.",
+            "id": "2-1.8",
+            "n": 8
+           },
+           {
+            "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
+            "see": "Visual Studio 2019 comes to the front, with your project open.",
+            "img": {
+             "missing": true,
+             "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
+             "w": 800,
+             "h": 60,
+             "marks": [
+              {
+               "n": 9,
+               "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
+              }
+             ]
+            },
+            "id": "2-1.9",
+            "n": 9
+           },
+           {
+            "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+            "see": "A long menu opens.",
+            "img": {
+             "missing": true,
+             "alt": "Solution Explorer, with the menu that opens on the project line",
+             "w": 360,
+             "h": 420,
+             "marks": [
+              {
+               "n": 10,
+               "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+              },
+              {
+               "n": 11,
+               "say": "Click **Open Folder in File Explorer**, near the bottom of the menu."
+              }
+             ]
+            },
+            "id": "2-1.10",
+            "n": 10
+           },
+           {
+            "do": "Click **Open Folder in File Explorer**, near the bottom of the menu.",
+            "see": "File Explorer opens on your project's folder. You can see the bin and obj folders and your .cs files.",
+            "id": "2-1.11",
+            "n": 11
+           },
+           {
+            "do": "Double-click the **bin** folder.",
+            "see": "The bin folder holds a folder called Debug.",
+            "img": {
+             "missing": true,
+             "alt": "File Explorer on the project folder, with the bin folder",
+             "w": 640,
+             "h": 300,
+             "marks": [
+              {
+               "n": 12,
+               "say": "Double-click the **bin** folder."
+              }
+             ]
+            },
+            "id": "2-1.12",
+            "n": 12
+           },
+           {
+            "do": "Double-click the **Debug** folder.",
+            "see": "The Debug folder holds the Data, Images and Sounds folders, and your program, whose name ends in .exe.",
+            "img": {
+             "missing": true,
+             "alt": "File Explorer on the bin folder, with the Debug folder",
+             "w": 640,
+             "h": 300,
+             "marks": [
+              {
+               "n": 13,
+               "say": "Double-click the **Debug** folder."
+              }
+             ]
+            },
+            "id": "2-1.13",
+            "n": 13
+           },
+           {
+            "do": "Press Ctrl and V together.",
+            "see": "A window called Replace or Skip Files opens, because most of the files are already there.",
+            "img": {
+             "missing": true,
+             "alt": "The Replace or Skip Files window, with Skip these files",
+             "w": 640,
+             "h": 400,
+             "marks": [
+              {
+               "n": 14,
+               "say": "Press Ctrl and V together."
+              },
+              {
+               "n": 15,
+               "say": "Click **Skip these files**."
+              }
+             ]
+            },
+            "id": "2-1.14",
+            "n": 14
+           },
+           {
+            "do": "Click **Skip these files**.",
+            "see": "The window closes. Windows has copied in only the missing files.",
+            "id": "2-1.15",
+            "n": 15
+           }
+          ]
+         }
+        ]
+       }
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Add the ListenClip class, which reads listen.txt",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has a ListenClip class that reads all 13 sounds from `listen.txt`."
+      },
+      {
+       "p": "The game needs the sounds before it can ask any questions. So you add a class called ListenClip, which holds one sound and reads the file."
+      },
+      {
+       "p": "One ListenClip object holds one line of `listen.txt`: the file name, the name, the name in a sentence and the fact. The ListenClip class also has a method, `LoadAll`, that reads every line into a list of ListenClip objects."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
+         "see": "Visual Studio 2019 comes to the front, with your project open.",
+         "img": {
+          "missing": true,
+          "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
+           }
+          ]
+         },
+         "id": "2-2.1",
+         "n": 1
+        },
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "The project menu, with Add pointed at and Class in the second menu",
+          "w": 640,
+          "h": 420,
+          "marks": [
+           {
+            "n": 2,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 3,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 4,
+            "say": "Click **Class...** at the bottom of the second menu."
+           }
+          ]
+         },
+         "id": "2-2.2",
+         "n": 2
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "2-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click **Class...** at the bottom of the second menu.",
+         "see": "The Add New Item window opens. Class is picked, and the Name box at the bottom says `Class1.cs`.",
+         "id": "2-2.4",
+         "n": 4
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "missing": true,
+          "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 6,
+            "say": "Type `ListenClip.cs`"
+           },
+           {
+            "n": 7,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "2-2.5",
+         "n": 5
+        },
+        {
+         "do": "Type `ListenClip.cs`",
+         "see": "The Name box shows `ListenClip.cs`.",
+         "id": "2-2.6",
+         "n": 6
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "`ListenClip.cs` opens in the code editor. At the top are 5 lines that start with `using`. Further down is `class ListenClip`, with an empty pair of curly brackets under it.",
+         "id": "2-2.7",
+         "n": 7
+        },
+        {
+         "do": "Click at the end of the line `using System.Threading.Tasks;`",
+         "see": "The flashing cursor is after the semicolon.",
+         "img": {
+          "missing": true,
+          "alt": "ListenClip.cs as Visual Studio 2019 makes it, with using System.IO; added",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 8,
+            "say": "Click at the end of the line `using System.Threading.Tasks;`"
+           },
+           {
+            "n": 9,
+            "say": "Press Enter."
+           },
+           {
+            "n": 10,
+            "say": "Type `using System.IO;`"
+           }
+          ]
+         },
+         "id": "2-2.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under `using System.Threading.Tasks;`.",
+         "id": "2-2.9",
+         "n": 9
+        },
+        {
+         "do": "Type `using System.IO;`",
+         "see": "The new line says `using System.IO;`. The ListenClip class needs this line, because it reads a file.",
+         "id": "2-2.10",
+         "n": 10
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c18-listenclip",
+        "kind": "type",
+        "title": "ListenClip.cs: the ListenClip class",
+        "lang": "cs",
+        "why": "You type the 4 properties, and the 4 lines that put a value into each one, because they are new. The rest reads a file the same way as `LoadAll` in chapter 3, so it comes in the copy.",
+        "text": "// One sound from listen.txt: its file, its name and what it is\nclass ListenClip\n{\n    public string FileName { get; set; }      // file name, no ending\n    public string Name { get; set; }          // the name, like Curlew\n    public string InSentence { get; set; }    // like \"the curlew\"\n    public string Explanation { get; set; }   // what made the sound\n\n    // Makes one ListenClip from a line of listen.txt, split at each |\n    public ListenClip(string[] parts)\n    {\n        FileName = parts[0];\n        Name = parts[1];\n        InSentence = parts[2];\n        Explanation = parts[3];\n    }\n\n    // Reads every sound in listen.txt into a list\n    public static List<ListenClip> LoadAll()\n    {\n        List<ListenClip> clips = new List<ListenClip>();\n        string path = Files.Data(\"listen.txt\");\n        if (!File.Exists(path)) return clips;   // no file: an empty list\n        StreamReader reader = new StreamReader(path);\n        while (!reader.EndOfStream)\n        {\n            string line = reader.ReadLine();\n            string[] parts = line.Split('|');\n            if (parts.Length != 4) continue;    // skip a broken line\n            clips.Add(new ListenClip(parts));\n        }\n        reader.Close();\n        return clips;\n    }",
+        "partLines": [
+         [
+          2,
+          7,
+          "The class and its 4 properties",
+          "`class ListenClip` starts the class. Each property holds one part of a line of `listen.txt`. `FileName` holds the file name with no ending, and `Name` holds the name under the picture. `InSentence` holds the name inside a sentence, and `Explanation` holds the fact. `{ get; set; }` lets other code read each property and change it."
+         ],
+         [
+          10,
+          16,
+          "The constructor",
+          "This part is the constructor. It runs when code writes `new ListenClip(parts)`. `parts` is one line of `listen.txt`, already cut into 4 pieces at each bar. The constructor puts `parts[0]` into `FileName`, and so on down to `parts[3]` in `Explanation`."
+         ],
+         [
+          19,
+          23,
+          "The start of LoadAll",
+          "`static` means that you call LoadAll on the class itself, as `ListenClip.LoadAll()`. You do not need a ListenClip object first. LoadAll starts with an empty list. `Files.Data` from chapter 2 gives the full path of `listen.txt` in the Data folder. `!` means not. If `listen.txt` is not there, LoadAll hands back the empty list, so the game shows a message and does not crash."
+         ],
+         [
+          24,
+          31,
+          "Read every line",
+          "The StreamReader is the part of C# that reads a file line by line. It opens `listen.txt`. The loop goes round once for each line, until the end of the file. `Split('|')` cuts each line at each bar into `parts`. If a line does not have exactly 4 parts, `continue` skips it and the loop moves on to the next line. Every line with 4 parts becomes a new ListenClip, and `clips.Add` puts it on the end of the list."
+         ],
+         [
+          32,
+          34,
+          "Close the file and hand back the list",
+          "`reader.Close()` closes `listen.txt`, so that other programs can open it again. `return clips;` hands the full list back to the code that called LoadAll."
+         ]
+        ],
+        "focusLines": [
+         [
+          4,
+          7
+         ],
+         [
+          12,
+          15
+         ]
+        ],
+        "typed": 8,
+        "wordMarks": [
+         [
+          4,
+          27,
+          40,
+          3
+         ],
+         [
+          10,
+          4,
+          22,
+          4
+         ],
+         [
+          19,
+          11,
+          17,
+          5
+         ],
+         [
+          19,
+          18,
+          34,
+          6
+         ],
+         [
+          29,
+          35,
+          43,
+          7
+         ],
+         [
+          23,
+          12,
+          24,
+          8
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Drag from the start of `class ListenClip` down to the end of the `}` two lines below it.",
+         "see": "`class ListenClip` and its empty `{` and `}` turn blue. The last `}` in the file stays white. That is right: the last `}` closes the namespace, and it must stay.",
+         "img": {
+          "missing": true,
+          "alt": "ListenClip.cs, with class ListenClip and its empty braces highlighted",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 11,
+            "say": "Drag from the start of `class ListenClip` down to the end of the `}` two lines below it."
+           },
+           {
+            "n": 13,
+            "say": "Press Ctrl and V together."
+           }
+          ]
+         },
+         "id": "2-2.11",
+         "n": 11
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c18-listenclip",
+         "id": "2-2.12",
+         "n": 12
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The ListenClip class appears in place of the blue lines. Two lines start with `// YOU TYPE THIS PART`, and your typing goes there.",
+         "id": "2-2.13",
+         "n": 13
+        },
+        {
+         "do": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it.",
+         "see": "The whole line turns blue.",
+         "img": {
+          "missing": true,
+          "alt": "ListenClip.cs, with the yellow lines typed in place of the two YOU TYPE THIS PART lines",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 14,
+            "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it."
+           },
+           {
+            "n": 15,
+            "say": "Type the 4 yellow lines that start with `public string`. Press Enter at the end of each line."
+           },
+           {
+            "n": 16,
+            "say": "Triple-click the other line that starts with `// YOU TYPE THIS PART`."
+           },
+           {
+            "n": 17,
+            "say": "Type the 4 yellow lines that start with `FileName`, `Name`, `InSentence` and `Explanation`. Press Enter at the end of each line."
+           },
+           {
+            "n": 18,
+            "say": "Press Ctrl and S together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The old `// YOU TYPE THIS PART` line is still there after you type",
+           "Click the old `// YOU TYPE THIS PART` line, then press Home. Hold Shift and press End, so the whole line turns blue. Press Delete."
+          ]
+         ],
+         "id": "2-2.14",
+         "n": 14
+        },
+        {
+         "do": "Type the 4 yellow lines that start with `public string`. Press Enter at the end of each line.",
+         "see": "The 4 properties are where the `// YOU TYPE THIS PART` line was. A red underline may show while you type. This is normal: it goes when the line is finished.",
+         "id": "2-2.15",
+         "n": 15
+        },
+        {
+         "do": "Triple-click the other line that starts with `// YOU TYPE THIS PART`.",
+         "see": "The whole line turns blue.",
+         "id": "2-2.16",
+         "n": 16
+        },
+        {
+         "do": "Type the 4 yellow lines that start with `FileName`, `Name`, `InSentence` and `Explanation`. Press Enter at the end of each line.",
+         "see": "No line in `ListenClip.cs` has a [[red underline|28]].",
+         "id": "2-2.17",
+         "n": 17
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `ListenClip.cs` on the tab at the top of the code editor disappears. Your ListenClip class is saved.",
+         "id": "2-2.18",
+         "n": 18
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "2"
+  },
+  {
+   "title": "Make the Listen Out form and set the form's controls",
+   "screens": [
+    {
+     "title": "Add the Listen Out form and set the form's properties",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has an empty Listen Out window, called frmListen, at the right size and colour."
+      },
+      {
+       "p": "Listen Out needs its own window to play in. In Visual Studio 2019, a window is called a form."
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "The project menu, with Add pointed at and Form (Windows Forms) in the second menu",
+          "w": 640,
+          "h": 420,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 2,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 3,
+            "say": "Click **Form (Windows Forms)...** in the second menu."
+           }
+          ]
+         },
+         "id": "3-1.1",
+         "n": 1
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "3-1.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Form (Windows Forms)...** in the second menu.",
+         "see": "The Add New Item window opens. Form (Windows Forms) is picked, and the Name box says `Form1.cs`.",
+         "id": "3-1.3",
+         "n": 3
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Form1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "missing": true,
+          "alt": "The Add New Item window, with Form (Windows Forms) picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "say": "Type `frmListen.cs`"
+           },
+           {
+            "n": 6,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "3-1.4",
+         "n": 4
+        },
+        {
+         "do": "Type `frmListen.cs`",
+         "see": "The Name box shows `frmListen.cs`.",
+         "id": "3-1.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "A new empty form called frmListen opens in the designer. `frmListen.cs` appears in Solution Explorer.",
+         "id": "3-1.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "p": "Now set the form's properties in the Properties window, using the table below. Set **Font** first. If you change Font later, Visual Studio 2019 stretches the form to fit the new font, and its size (ClientSize) changes."
+      },
+      {
+       "controls": {
+        "props": [
+         "Font = Segoe UI, 11pt",
+         "Text = Summit Ready - Listen Out",
+         "ClientSize = 1000, 660",
+         "StartPosition = CenterScreen",
+         "FormBorderStyle = FixedSingle",
+         "MaximizeBox = False",
+         "BackColor = 243, 245, 242"
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "If you have forgotten how to set a property",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "Click the box beside the property's name in the Properties window. Type the new value, then press Enter."
+         },
+         {
+          "p": "For **Font**, click the box beside Font, then click the small button with 3 dots at the right of the box. Pick Segoe UI and size 11, then click **OK**."
+         },
+         {
+          "p": "For **BackColor**, type `243, 245, 242` in the box beside BackColor, then press Enter."
+         },
+         {
+          "p": "For **MaximizeBox**, click the arrow at the right of the box, then click **False**."
+         }
+        ]
+       }
+      },
+      {
+       "p": "Listen Out reads its sounds and shows the first 4 pictures when the window opens. The form's Load event runs once, right before the window first appears. So you make an empty Load method now, and you fill it in during stage 4."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the [[lightning bolt|9]] at the top of the Properties window.",
+         "see": "The Properties window now lists the form's events in place of its properties.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of frmListen, with the lightning bolt, Load and the Properties button",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click the [[lightning bolt|9]] at the top of the Properties window."
+           },
+           {
+            "n": 8,
+            "say": "Double-click the empty box beside **Load**. Load comes after Leave, so scroll down the list a little if you cannot see it."
+           },
+           {
+            "n": 10,
+            "say": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window."
+           }
+          ]
+         },
+         "id": "3-1.7",
+         "n": 7
+        },
+        {
+         "do": "Double-click the empty box beside **Load**. Load comes after Leave, so scroll down the list a little if you cannot see it.",
+         "see": "The code editor opens `frmListen.cs`, with a new empty method called `frmListen_Load`. An empty method is normal here: you fill it in during stage 4.",
+         "id": "3-1.8",
+         "n": 8
+        },
+        {
+         "do": "To go back to the designer, press Shift and F7 together.",
+         "see": "The designer shows frmListen.",
+         "img": {
+          "missing": true,
+          "alt": "The designer showing frmListen, with the frmListen.cs [Design] tab",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 9,
+            "say": "To go back to the designer, press Shift and F7 together."
+           }
+          ]
+         },
+         "id": "3-1.9",
+         "n": 9
+        },
+        {
+         "do": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists properties again.",
+         "id": "3-1.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Copy the dark header strip from frmPractice onto frmListen",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmListen has the same dark header strip as your practice game."
+      },
+      {
+       "p": "frmPractice from chapter 9 already has a dark strip along the top. The strip holds the title, the instruction, Points, the speaker picture and **Back to the map**."
+      },
+      {
+       "p": "You copy the strip, so that every game looks the same. The copied controls keep their names, such as `lblScore` and `btnBack`, and the chapter 9 code needs those names."
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `frmPractice.cs` in Solution Explorer.",
+         "see": "frmPractice opens in the designer.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with frmPractice.cs",
+          "w": 360,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Double-click `frmPractice.cs` in Solution Explorer."
+           }
+          ]
+         },
+         "id": "3-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click a dark part of the header strip that has no words on it.",
+         "see": "The Properties window shows pnlHeader at the top.",
+         "img": {
+          "missing": true,
+          "alt": "frmPractice in the designer, with the dark header strip picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 2,
+            "say": "Click a dark part of the header strip that has no words on it."
+           },
+           {
+            "n": 3,
+            "say": "Press Ctrl and C together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Properties window shows lblTitle or another name, not pnlHeader",
+           "You clicked a control on the strip. Click a dark part of the strip with no words on it."
+          ]
+         ],
+         "id": "3-2.2",
+         "n": 2
+        },
+        {
+         "do": "Press Ctrl and C together.",
+         "see": "Nothing changes on the screen. That is normal: Visual Studio 2019 has copied the control and everything on it.",
+         "id": "3-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click the **frmListen.cs [Design]** tab at the top of the editor.",
+         "see": "The empty frmListen form shows again.",
+         "img": {
+          "missing": true,
+          "alt": "The empty frmListen form, with the frmListen.cs [Design] tab and the title bar of frmListen",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click the **frmListen.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 5,
+            "say": "Click the title bar of frmListen."
+           }
+          ]
+         },
+         "id": "3-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click the title bar of frmListen.",
+         "see": "The Properties window shows frmListen at the top. The form must be picked, because Visual Studio 2019 pastes onto whatever is picked.",
+         "id": "3-2.5",
+         "n": 5
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The dark header strip appears on frmListen, with small white squares at its corners. The Properties window shows pnlHeader.",
+         "img": {
+          "missing": true,
+          "alt": "frmListen with the pasted header strip, and the Location box in the Properties window",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 6,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 7,
+            "say": "Triple-click the box beside **Location** in the Properties window. Location is where the strip sits on the form."
+           },
+           {
+            "n": 8,
+            "say": "Type `0, 0`"
+           },
+           {
+            "n": 9,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The pasted strip landed inside another control",
+           "Press Ctrl and Z together to undo the paste. Click the title bar of frmListen, then press Ctrl and V together again."
+          ]
+         ],
+         "id": "3-2.6",
+         "n": 6
+        },
+        {
+         "do": "Triple-click the box beside **Location** in the Properties window. Location is where the strip sits on the form.",
+         "see": "The numbers in the box turn blue.",
+         "wrong": [
+          [
+           "The old value is still in the box after you type",
+           "Click the box, then press Home. Hold Shift and press End, so the whole value turns blue. Type the new value, then press Enter."
+          ]
+         ],
+         "id": "3-2.7",
+         "n": 7
+        },
+        {
+         "do": "Type `0, 0`",
+         "see": "The box shows `0, 0`.",
+         "id": "3-2.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The strip moves to the top left corner of frmListen and stretches right across the top.",
+         "id": "3-2.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Copy the Round over box from frmPractice onto frmListen",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmListen has the white Round over box that shows the score when a round ends."
+      },
+      {
+       "p": "frmPractice already has the Round over box. It is a panel called `pnlRoundOver`, and it stays hidden until a round ends. You copy it, the same way as the strip."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmPractice.cs [Design]** tab at the top of the editor.",
+         "see": "frmPractice shows again.",
+         "img": {
+          "missing": true,
+          "alt": "frmPractice in the designer, with the white Round over box picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the **frmPractice.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 2,
+            "say": "Click a white part of the Round over box that has no words on it."
+           },
+           {
+            "n": 3,
+            "say": "Press Ctrl and C together."
+           }
+          ]
+         },
+         "id": "3-3.1",
+         "n": 1
+        },
+        {
+         "do": "Click a white part of the Round over box that has no words on it.",
+         "see": "The Properties window shows pnlRoundOver at the top.",
+         "wrong": [
+          [
+           "You cannot see the white Round over box on frmPractice",
+           "Another control is covering it. Right-click the control that covers the box, then click **Send to Back**. The Round over box comes into view."
+          ]
+         ],
+         "id": "3-3.2",
+         "n": 2
+        },
+        {
+         "do": "Press Ctrl and C together.",
+         "see": "Nothing changes on the screen. That is normal: Visual Studio 2019 has copied the control and everything on it.",
+         "id": "3-3.3",
+         "n": 3
+        },
+        {
+         "do": "Click the **frmListen.cs [Design]** tab at the top of the editor.",
+         "see": "frmListen shows again, with the header strip.",
+         "img": {
+          "missing": true,
+          "alt": "frmListen with the pasted Round over box in the middle",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click the **frmListen.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 5,
+            "say": "Click the title bar of frmListen."
+           },
+           {
+            "n": 6,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 7,
+            "say": "Triple-click the box beside **Location** in the Properties window. Location is where the box sits on the form."
+           },
+           {
+            "n": 8,
+            "say": "Type `180, 120`"
+           },
+           {
+            "n": 9,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "3-3.4",
+         "n": 4
+        },
+        {
+         "do": "Click the title bar of frmListen.",
+         "see": "The Properties window shows frmListen at the top.",
+         "id": "3-3.5",
+         "n": 5
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The white Round over box appears on frmListen. The Properties window shows pnlRoundOver.",
+         "wrong": [
+          [
+           "The pasted box landed inside another control",
+           "Press Ctrl and Z together to undo the paste. Click the title bar of frmListen, then press Ctrl and V together again."
+          ]
+         ],
+         "id": "3-3.6",
+         "n": 6
+        },
+        {
+         "do": "Triple-click the box beside **Location** in the Properties window. Location is where the box sits on the form.",
+         "see": "The numbers in the box turn blue.",
+         "id": "3-3.7",
+         "n": 7
+        },
+        {
+         "do": "Type `180, 120`",
+         "see": "The box shows `180, 120`.",
+         "id": "3-3.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The Round over box moves to the middle of frmListen, below the header strip.",
+         "id": "3-3.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Change the title and the instruction on the header strip",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the header strip says Listen Out and tells the player what to do."
+      },
+      {
+       "p": "The copied strip still has the practice game's words. You change its title and its instruction for Listen Out."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the title at the left of the header strip.",
+         "see": "The Properties window shows lblTitle at the top.",
+         "img": {
+          "missing": true,
+          "alt": "The header strip on frmListen, with lblTitle picked and its Text box in the Properties window",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the title at the left of the header strip."
+           },
+           {
+            "n": 2,
+            "say": "Triple-click the box beside **Text** in the Properties window."
+           },
+           {
+            "n": 3,
+            "say": "Type `Slieve Donard - Listen Out`"
+           },
+           {
+            "n": 4,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "3-4.1",
+         "n": 1
+        },
+        {
+         "do": "Triple-click the box beside **Text** in the Properties window.",
+         "see": "The title's words turn blue.",
+         "id": "3-4.2",
+         "n": 2
+        },
+        {
+         "do": "Type `Slieve Donard - Listen Out`",
+         "see": "The box shows `Slieve Donard - Listen Out`.",
+         "id": "3-4.3",
+         "n": 3
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The title on the header strip says **Slieve Donard - Listen Out**.",
+         "id": "3-4.4",
+         "n": 4
+        },
+        {
+         "do": "Click the instruction under the title.",
+         "see": "The Properties window shows lblInstruction at the top.",
+         "img": {
+          "missing": true,
+          "alt": "The header strip on frmListen, with lblInstruction picked and its Text box in the Properties window",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Click the instruction under the title."
+           },
+           {
+            "n": 6,
+            "say": "Triple-click the box beside **Text** in the Properties window."
+           },
+           {
+            "n": 7,
+            "say": "Type `Press Play the sound, then click the picture that made it. You can play each sound up to three times.`"
+           },
+           {
+            "n": 8,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "3-4.5",
+         "n": 5
+        },
+        {
+         "do": "Triple-click the box beside **Text** in the Properties window.",
+         "see": "The instruction's words turn blue.",
+         "id": "3-4.6",
+         "n": 6
+        },
+        {
+         "do": "Type `Press Play the sound, then click the picture that made it. You can play each sound up to three times.`",
+         "see": "The box shows the new instruction.",
+         "id": "3-4.7",
+         "n": 7
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The instruction on the header strip shows the new words.",
+         "id": "3-4.8",
+         "n": 8
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Add the play area, the Play the sound button, the 4 picture buttons and Next sound",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmListen has every control that Listen Out needs."
+      },
+      {
+       "p": "Add the controls in the order of the table. The panel called pnlPlay goes first, because the other controls sit on it. A [[panel|10]] is a control that holds other controls."
+      },
+      {
+       "p": "pnlPlay covers the Round over box in the designer. This is normal: the code brings the Round over box to the front when a round ends."
+      },
+      {
+       "p": "The 4 picture buttons have no picture yet. The code puts a picture on each one when a sound is ready. Their Enabled is False, so they start grey."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Panel",
+          "name": "pnlPlay",
+          "settings": [
+           "Location = 0, 56",
+           "Size = 1000, 604"
+          ],
+          "note": "Drop the Panel near the bottom left corner of frmListen, outside the white Round over box.",
+          "then": "pnlPlay covers the Round over box."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblRound",
+          "settings": [
+           "AutoSize = False",
+           "Location = 30, 20",
+           "Size = 300, 34",
+           "Font = Segoe UI Semibold, 14pt",
+           "Text = Sound 1 of 10"
+          ],
+          "note": "Drop the Label on pnlPlay."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnPlay",
+          "settings": [
+           "Location = 30, 64",
+           "Size = 300, 80",
+           "Text = Play the sound",
+           "BackColor = 242, 183, 5",
+           "Font = Segoe UI Semibold, 13pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderSize = 0",
+           "TextImageRelation = ImageBeforeText",
+           "ImageAlign = MiddleLeft"
+          ],
+          "note": "Drop the Button on pnlPlay. BorderSize is inside FlatAppearance: click the small arrow beside FlatAppearance to open it.",
+          "then": "A wide yellow button that says Play the sound. The code adds the speaker picture."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblPlays",
+          "settings": [
+           "AutoSize = False",
+           "Location = 350, 90",
+           "Size = 600, 30",
+           "Font = Segoe UI, 12pt",
+           "Text = You can play this sound 3 times."
+          ],
+          "note": "Drop the Label on pnlPlay."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnPick1",
+          "settings": [
+           "Location = 30, 170",
+           "Size = 220, 250",
+           "Text = (empty)",
+           "BackColor = White",
+           "Font = Segoe UI Semibold, 12pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderColor = 38, 50, 56",
+           "Enabled = False",
+           "TextImageRelation = ImageAboveText",
+           "ImageAlign = TopCenter",
+           "TextAlign = BottomCenter"
+          ],
+          "note": "Drop the Button on pnlPlay. To empty Text, delete the words in the box beside Text, then press Enter.",
+          "then": "A tall white button with a thin dark border and no words."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnPick2",
+          "settings": [
+           "Location = 266, 170",
+           "Size = 220, 250",
+           "Text = (empty)",
+           "BackColor = White",
+           "Font = Segoe UI Semibold, 12pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderColor = 38, 50, 56",
+           "Enabled = False",
+           "TextImageRelation = ImageAboveText",
+           "ImageAlign = TopCenter",
+           "TextAlign = BottomCenter"
+          ],
+          "note": "Drop the Button on pnlPlay."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnPick3",
+          "settings": [
+           "Location = 502, 170",
+           "Size = 220, 250",
+           "Text = (empty)",
+           "BackColor = White",
+           "Font = Segoe UI Semibold, 12pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderColor = 38, 50, 56",
+           "Enabled = False",
+           "TextImageRelation = ImageAboveText",
+           "ImageAlign = TopCenter",
+           "TextAlign = BottomCenter"
+          ],
+          "note": "Drop the Button on pnlPlay."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnPick4",
+          "settings": [
+           "Location = 738, 170",
+           "Size = 220, 250",
+           "Text = (empty)",
+           "BackColor = White",
+           "Font = Segoe UI Semibold, 12pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderColor = 38, 50, 56",
+           "Enabled = False",
+           "TextImageRelation = ImageAboveText",
+           "ImageAlign = TopCenter",
+           "TextAlign = BottomCenter"
+          ],
+          "note": "Drop the Button on pnlPlay.",
+          "then": "4 white buttons in a row across pnlPlay."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblExplain",
+          "settings": [
+           "AutoSize = False",
+           "Location = 30, 496",
+           "Size = 700, 100",
+           "Font = Segoe UI, 12pt",
+           "Text = (empty)"
+          ],
+          "note": "Drop the Label on pnlPlay.",
+          "then": "lblExplain shows as an empty space with no words."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnNext",
+          "settings": [
+           "Location = 762, 548",
+           "Size = 220, 44",
+           "Text = Next sound",
+           "BackColor = 242, 183, 5",
+           "Font = Segoe UI Semibold, 11pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderSize = 0",
+           "Visible = False"
+          ],
+          "note": "Drop the Button on pnlPlay.",
+          "then": "btnNext still shows in the designer. Visible = False hides it only while the game runs."
+         }
+        ],
+        "done": {
+         "see": "The dark header strip along the top of frmListen. Under it, pnlPlay fills the rest of the form. At its top left are lblRound and the yellow Play the sound button. lblPlays is to their right. The 4 white picture buttons sit in a row across the middle. Under them, lblExplain is on the left and Next sound is on the right.",
+         "img": {
+          "missing": true,
+          "alt": "frmListen in the designer with every control from the table on it",
+          "w": 800,
+          "h": 450,
+          "at": []
+         }
+        }
+       }
+      },
+      {
+       "box": {
+        "title": "How to find a control in the Toolbox",
+        "text": "The Toolbox is down the left side of Visual Studio 2019. Click the search box at the top of the Toolbox, then type the control's name, such as `Button`. The control shows in the list under the search box.",
+        "fold": true
+       }
+      }
+     ],
+     "id": "5"
+    }
+   ],
+   "id": "3"
+  },
+  {
+   "title": "Write the game code, one method at a time",
+   "screens": [
+    {
+     "title": "Copy the chapter 9 fields and methods into frmListen.cs",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmListen has the same score, Round over and Back to the map code as your practice game."
+      },
+      {
+       "p": "Every game form has the same 3 fields and the same 8 methods from chapter 9. You typed and tested them in frmPractice, so here you copy them."
+      },
+      {
+       "p": "Red underlines come and go as you work through this stage. This is normal: by the end of the stage, every red underline has gone."
+      },
+      {
+       "code": {
+        "id": "c18-patfields",
+        "kind": "copy",
+        "title": "The game-form fields from chapter 9",
+        "lang": "cs",
+        "taught": "09",
+        "why": "The 3 fields are the same in every game form, and you typed them in chapter 9. Only the number in `gameNumber` changes. The places on the map are numbered from 0, so Listen Out, the eighth place, is number 7.",
+        "text": "// ---------- the game-form fields from chapter 9 ----------\nprivate int gameNumber = 7;      // Listen Out is place 7\nprivate GameResult result;       // made when the round ends\nprivate bool finished = false;   // true once the result is kept",
+        "partLines": [
+         [
+          1,
+          4,
+          "The 3 game-form fields",
+          "`gameNumber` is the game's place number on the map. `result` holds the score and the feedback once the round ends. `finished` turns true once the result is kept."
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmListen.cs** tab at the top of the editor, the one without [Design].",
+         "see": "The code of frmListen shows, with `frmListen_Load` near the bottom.",
+         "img": {
+          "missing": true,
+          "alt": "frmListen.cs in the code editor, with the 3 pasted fields under the class line",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the **frmListen.cs** tab at the top of the editor, the one without [Design]."
+           },
+           {
+            "n": 2,
+            "say": "Click at the end of the `{` under `public partial class frmListen : Form`."
+           },
+           {
+            "n": 3,
+            "say": "Press Enter."
+           },
+           {
+            "n": 5,
+            "say": "Press Ctrl and V together."
+           }
+          ]
+         },
+         "id": "4-1.1",
+         "n": 1
+        },
+        {
+         "do": "Click at the end of the `{` under `public partial class frmListen : Form`.",
+         "see": "The flashing cursor is after the `{`.",
+         "id": "4-1.2",
+         "n": 2
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the `{`.",
+         "id": "4-1.3",
+         "n": 3
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c18-patfields",
+         "id": "4-1.4",
+         "n": 4
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The 3 fields appear under the `{`, with a comment line above them that says they come from chapter 9.",
+         "id": "4-1.5",
+         "n": 5
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c18-patmethods",
+        "kind": "copy",
+        "title": "The game-form methods from chapter 9",
+        "lang": "cs",
+        "taught": "09",
+        "why": "The 8 methods are the same in every game form, and you typed and tested them in chapter 9. Only the question that appears when you close the window names Listen Out.",
+        "text": "// ---------- the game-form methods from chapter 9 ----------\n\n// Keeps the result on the map, even if the window is then closed\nprivate void KeepResult()\n{\n    Expedition.Finish(gameNumber, result);\n    finished = true;\n    lblScore.Text = \"Points: \" + result.Score;\n}\n\n// Fills in the Round over panel and brings it to the front\nprivate void ShowRoundOver()\n{\n    lblRoundScore.Text = \"You scored \" + result.Score\n        + \" out of 100 points.\";\n    lblWellList.Text = ListText(result.WentWell,\n        \"thing that went well\", \"things that went well\");\n    lblWrongList.Text = ListText(result.WentWrong,\n        \"thing that went wrong\", \"things that went wrong\");\n    if (result.Score >= 60) Sound.Play(\"win.wav\");\n    else Sound.Play(\"lose.wav\");\n    pnlRoundOver.Visible = true;\n    pnlRoundOver.BringToFront();\n}\n\n// Up to 3 lines from a list, then how many more there are\nprivate string ListText(List<string> lines, string one, string many)\n{\n    if (lines.Count == 0) return \"Nothing this time.\";\n    string text = \"\";\n    for (int i = 0; i < lines.Count && i < 3; i++)\n    {\n        text = text + \"- \" + lines[i] + Environment.NewLine;\n    }\n    int more = lines.Count - 3;\n    if (more == 1) text = text + \"And 1 more \" + one + \".\";\n    if (more > 1) text = text + \"And \" + more + \" more \" + many + \".\";\n    return text;\n}\n\n// Back to the map: closing the window runs FormClosing\nprivate void btnBack_Click(object sender, EventArgs e)\n{\n    this.Close();\n}\n\n// The Round over panel's Back to the map button\nprivate void btnDone_Click(object sender, EventArgs e)\n{\n    this.Close();\n}\n\n// Runs as the window closes, by Back, by Done or by the X\nprivate void frmListen_FormClosing(object sender,\n    FormClosingEventArgs e)\n{\n    if (finished) return;    // a finished round closes at once\n    DialogResult answer = MessageBox.Show(\"Leave Listen Out? It will \"\n        + \"score nothing, but you can come back and climb it again.\",\n        \"Summit Ready\", MessageBoxButtons.YesNo);\n    if (answer == DialogResult.No) e.Cancel = true;   // stay\n}\n\n// Shows the speaker picture that matches the sound being on or off\nprivate void ShowSpeaker()\n{\n    string icon = \"icon-speaker-on-64.png\";\n    if (Sound.Muted) icon = \"icon-speaker-muted-64.png\";\n    picSound.Image = Files.Picture(\"Icons\", icon);\n}\n\n// The speaker picture turns the sound off, or back on\nprivate void picSound_Click(object sender, EventArgs e)\n{\n    Sound.Muted = !Sound.Muted;\n    ShowSpeaker();\n}",
+        "partLines": [
+         [
+          1,
+          9,
+          "KeepResult",
+          "KeepResult tells the map that the round has ended, and hands it the result. `finished` turns true, and Points shows the final score."
+         ],
+         [
+          12,
+          24,
+          "ShowRoundOver",
+          "ShowRoundOver fills in the Round over box and plays the win or lose sound. Then it shows the Round over box in front of everything else."
+         ],
+         [
+          27,
+          39,
+          "ListText",
+          "ListText makes the words for What went well or What went wrong. It gives up to 3 lines, then a line that counts the rest."
+         ],
+         [
+          42,
+          45,
+          "btnBack_Click",
+          "Back to the map on the header strip closes the window. Closing the window runs FormClosing."
+         ],
+         [
+          48,
+          51,
+          "btnDone_Click",
+          "Back to the map in the Round over box closes the window in the same way."
+         ],
+         [
+          54,
+          62,
+          "frmListen_FormClosing",
+          "If the round is not finished, a message asks the player whether to leave. Clicking No sets `e.Cancel` to true, which keeps the window open."
+         ],
+         [
+          65,
+          70,
+          "ShowSpeaker",
+          "ShowSpeaker shows the speaker picture that matches the sound: on, or muted."
+         ],
+         [
+          73,
+          77,
+          "picSound_Click",
+          "Clicking the speaker picture turns the sound off, or back on. Then it shows the matching picture."
+         ]
+        ],
+        "wordMarks": [
+         [
+          27,
+          24,
+          36,
+          6
+         ],
+         [
+          42,
+          34,
+          40,
+          23
+         ],
+         [
+          31,
+          36,
+          38,
+          24
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmListen_Load`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmListen.cs, with the 8 pasted methods under frmListen_Load",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 6,
+            "say": "Click at the end of the `}` that closes `frmListen_Load`."
+           },
+           {
+            "n": 7,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 9,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 10,
+            "say": "Press Ctrl and S together."
+           }
+          ]
+         },
+         "id": "4-1.6",
+         "n": 6
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-1.7",
+         "n": 7
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c18-patmethods",
+         "id": "4-1.8",
+         "n": 8
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The 8 methods appear under `frmListen_Load`, with a comment line above them that says they come from chapter 9.",
+         "id": "4-1.9",
+         "n": 9
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `frmListen.cs` on the tab at the top of the editor disappears.",
+         "id": "4-1.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Connect Back to the map and the Round over box's button to their methods",
+     "blocks": [
+      {
+       "p": "By the end of this screen, both **Back to the map** buttons on frmListen close the window."
+      },
+      {
+       "p": "A pasted method does nothing until it is connected to an [[event|21]]. A pasted control keeps its name, but its events do not always come with it. So you check each event in the Properties window, and connect it."
+      },
+      {
+       "p": "You connect each event with the small arrow beside it. Do not double-click the box beside the event, because double-clicking makes a second, empty method."
+      },
+      {
+       "steps": [
+        {
+         "do": "To go back to the designer, press Shift and F7 together.",
+         "see": "The designer shows frmListen.",
+         "img": {
+          "missing": true,
+          "alt": "frmListen in the designer, with Back to the map picked on the header strip",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "To go back to the designer, press Shift and F7 together."
+           },
+           {
+            "n": 2,
+            "say": "Click **Back to the map** on the header strip."
+           }
+          ]
+         },
+         "id": "4-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click **Back to the map** on the header strip.",
+         "see": "The Properties window shows btnBack at the top.",
+         "id": "4-2.2",
+         "n": 2
+        },
+        {
+         "do": "Click the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists the events of btnBack.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of btnBack, with the list open beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 3,
+            "say": "Click the lightning bolt at the top of the Properties window."
+           },
+           {
+            "n": 4,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 5,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 6,
+            "say": "Click `btnBack_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "wrong": [
+          [
+           "`btnBack_Click` is already in the box beside Click",
+           "The paste kept the event, so there is nothing to connect. Go on to btnDone."
+          ]
+         ],
+         "id": "4-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list drops down with the methods that can handle a click, including `btnBack_Click`.",
+         "id": "4-2.5",
+         "n": 5
+        },
+        {
+         "do": "Click `btnBack_Click` in the list.",
+         "see": "The box beside Click shows `btnBack_Click`.",
+         "wrong": [
+          [
+           "Visual Studio 2019 made a new method called `btnBack_Click_1`",
+           "You double-clicked the box. Click the arrow beside Click and pick `btnBack_Click`. Then, in `frmListen.cs`, delete the empty method `btnBack_Click_1`, from its first line down to its `}`."
+          ]
+         ],
+         "id": "4-2.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "p": "The Round over box's **Back to the map** button is called btnDone. pnlPlay covers btnDone in the designer. So you pick btnDone from the list at the top of the Properties window."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the arrow at the right end of the box at the very top of the Properties window.",
+         "see": "A list of every control on frmListen drops down.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window, with the list of every control open at the top",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click the arrow at the right end of the box at the very top of the Properties window."
+           },
+           {
+            "n": 8,
+            "say": "Click **btnDone** in the list."
+           }
+          ]
+         },
+         "id": "4-2.7",
+         "n": 7
+        },
+        {
+         "do": "Click **btnDone** in the list.",
+         "see": "The Properties window shows the events of btnDone.",
+         "id": "4-2.8",
+         "n": 8
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of btnDone, with btnDone_Click beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 10,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 11,
+            "say": "Click `btnDone_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-2.9",
+         "n": 9
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-2.10",
+         "n": 10
+        },
+        {
+         "do": "Click `btnDone_Click` in the list.",
+         "see": "The box beside Click shows `btnDone_Click`.",
+         "id": "4-2.11",
+         "n": 11
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Connect the speaker picture and the closing of the window, then build",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the speaker picture and the window's close button (the X) both work, and your project builds with no errors."
+      },
+      {
+       "p": "The speaker picture and the closing of the window need connecting too, in the same way."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the speaker picture on the header strip.",
+         "see": "The Properties window shows the events of picSound.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of picSound, with picSound_Click beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click the speaker picture on the header strip."
+           },
+           {
+            "n": 2,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 3,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 4,
+            "say": "Click `picSound_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-3.1",
+         "n": 1
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-3.2",
+         "n": 2
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-3.3",
+         "n": 3
+        },
+        {
+         "do": "Click `picSound_Click` in the list.",
+         "see": "The box beside Click shows `picSound_Click`.",
+         "id": "4-3.4",
+         "n": 4
+        },
+        {
+         "do": "Click the title bar of frmListen.",
+         "see": "The Properties window shows the events of frmListen.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of frmListen, with frmListen_FormClosing beside FormClosing",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Click the title bar of frmListen."
+           },
+           {
+            "n": 6,
+            "say": "Click the box beside **FormClosing**. Scroll down the list a little if you cannot see it."
+           },
+           {
+            "n": 7,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 8,
+            "say": "Click `frmListen_FormClosing` in the list."
+           }
+          ]
+         },
+         "id": "4-3.5",
+         "n": 5
+        },
+        {
+         "do": "Click the box beside **FormClosing**. Scroll down the list a little if you cannot see it.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-3.6",
+         "n": 6
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "The list shows one method, `frmListen_FormClosing`.",
+         "id": "4-3.7",
+         "n": 7
+        },
+        {
+         "do": "Click `frmListen_FormClosing` in the list.",
+         "see": "The box beside FormClosing shows `frmListen_FormClosing`.",
+         "id": "4-3.8",
+         "n": 8
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "missing": true,
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows errors",
+           "Double-click the first error in the Error List. Visual Studio 2019 jumps to the line with the error. Check that line letter by letter against the code in this chapter."
+          ]
+         ],
+         "id": "4-3.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Type the Listen Out fields",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmListen has the variables that remember the sounds, the plays and the score while a round plays."
+      },
+      {
+       "p": "These variables are called [[fields|11]]. They sit at the top of the class, outside every method, so every method in the form can use them."
+      },
+      {
+       "p": "Every field below is new in this chapter, so you type every one."
+      },
+      {
+       "code": {
+        "id": "c18-fields",
+        "kind": "type",
+        "title": "The Listen Out fields",
+        "lang": "cs",
+        "text": "// ---------- Listen Out ----------\nprivate List<ListenClip> clips;        // every sound in listen.txt\nprivate int[] order;                   // the sounds, mixed up\nprivate int number = 0;                // this sound, 0 to 9\nprivate int playsLeft = 3;             // plays left for this sound\nprivate bool answered = false;         // true once a picture is picked\nprivate Button[] picks;                // the four answer buttons\nprivate int[] clipOf = new int[4];     // the sound on each button\nprivate int right = 0;                 // right answers so far\nprivate Random random = new Random();\nprivate List<string> wellLines = new List<string>();\nprivate List<string> wrongLines = new List<string>();",
+        "partLines": [
+         [
+          2,
+          3,
+          "The sounds",
+          "`clips` holds every sound that LoadAll reads from `listen.txt`. `order` holds the sounds' numbers in a random order, so each round plays them in a new order."
+         ],
+         [
+          4,
+          6,
+          "This sound",
+          "`number` counts the sounds in this round, from 0 to 9. `playsLeft` is how many plays this sound has left. `answered` turns true once the player clicks a picture."
+         ],
+         [
+          7,
+          8,
+          "The 4 picture buttons",
+          "`picks` is a row of the 4 picture buttons, kept together. A row like this is called an array. `clipOf` is a second array: `clipOf[2]` is the number of the sound whose picture is on the third button."
+         ],
+         [
+          9,
+          10,
+          "The score and the chance",
+          "`right` counts the right answers. `random` picks numbers by chance, for the 3 wrong pictures."
+         ],
+         [
+          11,
+          12,
+          "The feedback",
+          "`wellLines` and `wrongLines` collect the lines for What went well and What went wrong, one sound at a time."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          12
+         ]
+        ],
+        "typed": 11,
+        "wordMarks": [
+         [
+          2,
+          8,
+          24,
+          6
+         ],
+         [
+          3,
+          8,
+          13,
+          12
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the line `private bool finished = false;   // true once the result is kept`",
+         "see": "The flashing cursor is at the end of the comment.",
+         "img": {
+          "missing": true,
+          "alt": "frmListen.cs, with the Listen Out fields typed under the chapter 9 fields",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the line `private bool finished = false;   // true once the result is kept`"
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-4.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under that line. The flashing cursor is on the new empty line.",
+         "id": "4-4.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The 11 fields are under the chapter 9 fields. None of the 11 lines has a red underline.",
+         "id": "4-4.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Type PlaysText, which says how many plays are left",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmListen can make the sentence beside **Play the sound** for any number of plays left."
+      },
+      {
+       "p": "The sentence changes after every play. One method makes all 4 sentences, so the rest of the code asks PlaysText for the right one."
+      },
+      {
+       "code": {
+        "id": "c18-playstext",
+        "kind": "type",
+        "title": "PlaysText",
+        "lang": "cs",
+        "text": "// The sentence under Play the sound, for left plays still to go\nprivate string PlaysText(int left)\n{\n    if (left == 3)\n        return \"Play the sound first. You can play it 3 times.\";\n    if (left == 2) return \"You can play this sound 2 more times.\";\n    if (left == 1) return \"You can play this sound 1 more time.\";\n    return \"You have played this sound three times.\";\n}",
+        "partLines": [
+         [
+          2,
+          9,
+          "One sentence for each number of plays",
+          "PlaysText is given `left`, the plays still to go, and gives back a sentence. Each `return` hands back its sentence and stops the method at once. So when `left` is 0, only the last line is reached."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          9
+         ]
+        ],
+        "typed": 6
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmListen_Load`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmListen.cs, with PlaysText typed under frmListen_Load",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `frmListen_Load`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-5.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-5.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "PlaysText sits under `frmListen_Load`, with no red underline.",
+         "id": "4-5.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "5"
+    },
+    {
+     "title": "Type PickChoices and FindClip, which choose the 4 pictures",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmListen can choose the 4 pictures for a sound: the right one and 3 others."
+      },
+      {
+       "p": "The 3 wrong pictures are chosen by chance, but never twice. The two whistle sounds are easy to mix up, so they always come together."
+      },
+      {
+       "p": "Six blasts on a whistle means help is needed, and three blasts is the reply. Putting both on screen makes the player listen for the difference."
+      },
+      {
+       "code": {
+        "id": "c18-pickchoices",
+        "kind": "type",
+        "title": "PickChoices and FindClip",
+        "lang": "cs",
+        "text": "// Picks the right sound plus 3 others, with no repeats\nprivate List<int> PickChoices(int answer)\n{\n    List<int> choices = new List<int>();\n    choices.Add(answer);\n    string name = clips[answer].FileName;\n    if (name == \"whistle-six\") choices.Add(FindClip(\"whistle-three\"));\n    if (name == \"whistle-three\") choices.Add(FindClip(\"whistle-six\"));\n    while (choices.Count < 4)\n    {\n        int n = random.Next(clips.Count);\n        if (!choices.Contains(n)) choices.Add(n);\n    }\n    return choices;\n}\n\n// The place in the list of the sound called fileName\nprivate int FindClip(string fileName)\n{\n    for (int i = 0; i < clips.Count; i++)\n    {\n        if (clips[i].FileName == fileName) return i;\n    }\n    return 0;   // not found: any sound will do\n}",
+        "partLines": [
+         [
+          2,
+          5,
+          "Start with the right sound",
+          "PickChoices is given `answer`, the number of the sound that plays. The list `choices` starts with that number."
+         ],
+         [
+          6,
+          8,
+          "Keep the two whistles together",
+          "If the sound is one whistle, the other whistle goes into `choices` next. FindClip finds where that whistle is in the list."
+         ],
+         [
+          9,
+          15,
+          "3 more sounds, with no repeats",
+          "The loop goes round until `choices` holds 4 numbers. `random.Next(clips.Count)` gives a [[random number|13]] from 0 up to one less than the number of sounds. `!choices.Contains(n)` is true when `n` is not in the list yet, so a sound is never added twice."
+         ],
+         [
+          18,
+          25,
+          "FindClip",
+          "FindClip looks through every sound for the one called `fileName`, and gives back its place in the list. If no sound has that name, it gives back 0, so the game still has a picture to show."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          25
+         ]
+        ],
+        "typed": 14,
+        "wordMarks": [
+         [
+          2,
+          8,
+          17,
+          6
+         ],
+         [
+          12,
+          12,
+          20,
+          8
+         ],
+         [
+          11,
+          16,
+          27,
+          13
+         ],
+         [
+          12,
+          21,
+          29,
+          14
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `PlaysText`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmListen.cs, with PickChoices and FindClip typed under PlaysText",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `PlaysText`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-6.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-6.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "PickChoices and FindClip sit under PlaysText, with no red underline.",
+         "id": "4-6.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "6"
+    },
+    {
+     "title": "Type ShowSound, which gets the next sound ready",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmListen can put 4 pictures on the buttons and get ready to play the next sound."
+      },
+      {
+       "p": "ShowSound runs before every sound. It is long, so you type it in 2 parts. The first part puts a picture and a name on each of the 4 buttons, in a random order."
+      },
+      {
+       "code": {
+        "id": "c18-showsound",
+        "kind": "type",
+        "title": "ShowSound, part 1: the 4 pictures",
+        "lang": "cs",
+        "text": "// Puts the next sound's four pictures on the buttons\nprivate void ShowSound()\n{\n    int answer = order[number];\n    List<int> choices = PickChoices(answer);\n    int[] mixed = Mix.ShuffledNumbers(4);\n    for (int i = 0; i < 4; i++)\n    {\n        clipOf[i] = choices[mixed[i]];\n        ListenClip c = clips[clipOf[i]];\n        Image photo = Files.Picture(\"Listen\", c.FileName + \".jpg\");\n        if (photo != null) picks[i].Image = new Bitmap(photo, 210, 180);\n        picks[i].Text = c.Name;\n        picks[i].BackColor = Color.White;\n        picks[i].ForeColor = Color.FromArgb(38, 50, 56);\n        picks[i].Cursor = Cursors.Hand;\n        picks[i].Enabled = false;   // listen before you guess\n    }",
+        "partLines": [
+         [
+          2,
+          6,
+          "The sound and its 4 choices",
+          "`answer` is the number of this round's sound. PickChoices gives the 4 sounds to show. `Mix.ShuffledNumbers(4)` from chapter 2 gives 0 to 3 in a random order, so the right picture moves about."
+         ],
+         [
+          7,
+          12,
+          "A picture on each button",
+          "The loop runs once for each button. `clipOf[i]` keeps which sound is on button `i`. `Files.Picture` loads the sound's picture from Images\\Listen. If the picture is there, a [[Bitmap|16]] 210 pixels wide and 180 pixels tall fits it above the name."
+         ],
+         [
+          13,
+          18,
+          "How each button looks",
+          "The name goes under the picture. The button turns white again, with dark words and the pointing hand. Enabled becomes false, so the picture is grey until the sound has played."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          18
+         ]
+        ],
+        "typed": 14,
+        "wordMarks": [
+         [
+          5,
+          4,
+          13,
+          6
+         ],
+         [
+          6,
+          4,
+          9,
+          12
+         ],
+         [
+          12,
+          21,
+          25,
+          15
+         ],
+         [
+          12,
+          48,
+          54,
+          16
+         ],
+         [
+          15,
+          29,
+          43,
+          17
+         ],
+         [
+          16,
+          26,
+          38,
+          18
+         ],
+         [
+          17,
+          17,
+          24,
+          19
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `FindClip`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmListen.cs, with the first part of ShowSound typed under FindClip",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `FindClip`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-7.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-7.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The first part of ShowSound sits under FindClip. It ends with the `}` that closes the `for` loop.",
+         "id": "4-7.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "p": "The second part gets everything else ready for the new sound: 3 plays, the sentences, and the buttons."
+      },
+      {
+       "code": {
+        "id": "c18-showsound2",
+        "kind": "type",
+        "title": "ShowSound, part 2: ready for the next sound",
+        "lang": "cs",
+        "text": "    playsLeft = 3;\n    answered = false;\n    lblRound.Text = \"Sound \" + (number + 1) + \" of 10\";\n    lblPlays.Text = PlaysText(playsLeft);\n    lblExplain.Text = \"\";\n    btnPlay.Enabled = true;\n    btnPlay.BackColor = Color.FromArgb(242, 183, 5);\n    btnNext.Visible = false;\n}",
+        "partLines": [
+         [
+          1,
+          2,
+          "A fresh start",
+          "Each new sound gets 3 plays, and nothing is answered yet."
+         ],
+         [
+          3,
+          5,
+          "The words",
+          "lblRound says which sound this is. `number` counts from 0, so `number + 1` makes the first sound Sound 1 of 10. lblPlays gets its sentence from PlaysText, and the fact box empties."
+         ],
+         [
+          6,
+          9,
+          "The buttons",
+          "Play the sound works again and turns yellow again. Next sound hides until the player answers."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          9
+         ]
+        ],
+        "typed": 8
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes the `for` loop in ShowSound.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmListen.cs, with the second part of ShowSound typed under the for loop",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click at the end of the `}` that closes the `for` loop in ShowSound."
+           },
+           {
+            "n": 5,
+            "say": "Press Enter."
+           },
+           {
+            "n": 6,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-7.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the `}`.",
+         "id": "4-7.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "ShowSound ends with a `}` of its own. No line in ShowSound has a red underline.",
+         "id": "4-7.6",
+         "n": 6
+        }
+       ]
+      }
+     ],
+     "id": "7"
+    },
+    {
+     "title": "Fill in frmListen_Load, which sets up the round when the window opens",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmListen reads the sounds, mixes them up and shows the first 4 pictures as the window opens."
+      },
+      {
+       "p": "frmListen_Load is the empty method you made in stage 3. It runs once, right before the window first appears. You type the yellow lines inside it."
+      },
+      {
+       "code": {
+        "id": "c18-load",
+        "kind": "type",
+        "title": "frmListen_Load",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "private void frmListen_Load(object sender, EventArgs e)\n{\n    // Runs once, right before the window first appears\n    ShowSpeaker();\n    picks = new Button[] { btnPick1, btnPick2, btnPick3, btnPick4 };\n    btnPlay.Image = Files.Picture(\"Icons\", \"icon-speaker-on-64.png\");\n    clips = ListenClip.LoadAll();\n    if (clips.Count < 10)\n    {\n        lblPlays.Text = \"Listen Out needs 10 sounds in \"\n            + \"Data\\\\listen.txt, each with 4 parts.\";\n        btnPlay.Enabled = false;\n        return;\n    }\n    order = Mix.ShuffledNumbers(clips.Count);\n    ShowSound();\n}",
+        "partLines": [
+         [
+          1,
+          4,
+          "Show the speaker",
+          "ShowSpeaker, from chapter 9, puts the right speaker picture on the header strip."
+         ],
+         [
+          5,
+          6,
+          "The 4 buttons, and a speaker on Play",
+          "`picks` becomes an array of the 4 picture buttons, so a loop can reach each one as `picks[i]`. Then Play the sound gets a speaker picture from Images\\Icons."
+         ],
+         [
+          7,
+          14,
+          "Read the sounds",
+          "`ListenClip.LoadAll()` reads `listen.txt`, and `clips` keeps the list. With fewer than 10 sounds there is not enough for a round, so lblPlays shows a message. Play the sound turns grey, and `return` stops frmListen_Load early. Inside quotes, `\\\\` stands for one backslash, so the message shows Data\\listen.txt."
+         ],
+         [
+          15,
+          17,
+          "Mix up the sounds, then show the first",
+          "`Mix.ShuffledNumbers` from chapter 2 puts every sound's number in a random order. The round plays the first 10. ShowSound gets the first sound ready."
+         ]
+        ],
+        "focusLines": [
+         [
+          3,
+          16
+         ]
+        ],
+        "typed": 11,
+        "wordMarks": [
+         [
+          5,
+          16,
+          24,
+          12
+         ],
+         [
+          12,
+          16,
+          23,
+          19
+         ],
+         [
+          1,
+          35,
+          41,
+          23
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `{` on the line under `private void frmListen_Load`.",
+         "see": "The flashing cursor is after the `{`.",
+         "img": {
+          "missing": true,
+          "alt": "frmListen.cs, with the yellow lines typed inside frmListen_Load",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `{` on the line under `private void frmListen_Load`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-8.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens inside frmListen_Load.",
+         "id": "4-8.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The yellow lines are inside frmListen_Load. None of them has a red underline.",
+         "id": "4-8.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "8"
+    },
+    {
+     "title": "Type btnPlay_Click, which plays the sound up to 3 times",
+     "blocks": [
+      {
+       "p": "By the end of this screen, **Play the sound** plays the sound, counts down the plays and lets the player answer."
+      },
+      {
+       "p": "The player gets 3 plays of each sound, and no more. The first play also switches on the 4 pictures, so the player can only answer after listening."
+      },
+      {
+       "p": "Windows plays one sound at a time. A new sound stops the sound before it, so a second click on Play starts the sound again from the beginning."
+      },
+      {
+       "code": {
+        "id": "c18-play",
+        "kind": "type",
+        "title": "btnPlay_Click",
+        "lang": "cs",
+        "text": "// Play the sound: up to three times, then the button switches off\nprivate void btnPlay_Click(object sender, EventArgs e)\n{\n    if (playsLeft == 0) return;\n    Sound.Play(clips[order[number]].FileName + \".wav\");\n    playsLeft--;\n    lblPlays.Text = PlaysText(playsLeft);\n    if (playsLeft == 0)\n    {\n        btnPlay.Enabled = false;\n        // A flat button looks the same when off, so grey it\n        btnPlay.BackColor = Color.FromArgb(207, 216, 220);\n    }\n    if (!answered)\n    {\n        for (int i = 0; i < 4; i++)\n        {\n            picks[i].Enabled = true;\n        }\n    }\n}",
+        "partLines": [
+         [
+          2,
+          6,
+          "Play the sound",
+          "If no plays are left, `return` stops at once. Otherwise `Sound.Play` from chapter 2 plays the sound file: the sound's file name with `.wav` on the end. `playsLeft--` takes 1 away from the plays left."
+         ],
+         [
+          7,
+          13,
+          "After the last play",
+          "The sentence beside the button changes. After the third play, the button switches off. Its flat style looks the same when off, so the code turns it grey as well."
+         ],
+         [
+          14,
+          21,
+          "Let the player answer",
+          "`!answered` is true while no picture has been clicked. Then the loop sets Enabled to true on all 4 buttons, so the pictures can be clicked."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          21
+         ]
+        ],
+        "typed": 11,
+        "wordMarks": [
+         [
+          14,
+          8,
+          17,
+          8
+         ],
+         [
+          12,
+          28,
+          42,
+          17
+         ],
+         [
+          10,
+          16,
+          23,
+          19
+         ],
+         [
+          6,
+          4,
+          15,
+          20
+         ],
+         [
+          2,
+          34,
+          40,
+          23
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `ShowSound`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmListen.cs, with btnPlay_Click typed under ShowSound",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `ShowSound`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-9.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-9.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "btnPlay_Click sits under ShowSound, with no red underline.",
+         "id": "4-9.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "9"
+    },
+    {
+     "title": "Type Pick_Click, which runs when any of the 4 pictures is clicked",
+     "blocks": [
+      {
+       "p": "By the end of this screen, a click on any of the 4 pictures is sent to the code that marks the answer."
+      },
+      {
+       "p": "All 4 picture buttons run the same method, Pick_Click. So Pick_Click checks which of the 4 buttons was clicked, using `sender`."
+      },
+      {
+       "code": {
+        "id": "c18-pick",
+        "kind": "type",
+        "title": "Pick_Click",
+        "lang": "cs",
+        "text": "// One of the four pictures was clicked\nprivate void Pick_Click(object sender, EventArgs e)\n{\n    if (answered) return;          // this sound is done already\n    for (int i = 0; i < 4; i++)\n    {\n        if (sender == picks[i]) Answer(i);\n    }\n}",
+        "partLines": [
+         [
+          2,
+          4,
+          "One answer for each sound",
+          "Pick_Click is the [[handler|22]] for a click on any picture. Once this sound is answered, `return` stops it, so a second click does nothing."
+         ],
+         [
+          5,
+          9,
+          "Which button",
+          "`sender` is the button that was clicked. The loop compares it with each of the 4 buttons. When they match, Answer marks the answer on button `i`."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          9
+         ]
+        ],
+        "typed": 4,
+        "wordMarks": [
+         [
+          2,
+          13,
+          23,
+          22
+         ],
+         [
+          2,
+          31,
+          37,
+          23
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `btnPlay_Click`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmListen.cs, with Pick_Click typed under btnPlay_Click",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `btnPlay_Click`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-10.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-10.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "`Answer` has a red underline. This is normal, because you have not written Answer yet.",
+         "id": "4-10.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "10"
+    },
+    {
+     "title": "Type the first part of Answer, which colours the pictures",
+     "blocks": [
+      {
+       "p": "By the end of this screen, a click on a picture turns the right picture green, and a wrong pick red."
+      },
+      {
+       "p": "Answer is long, so you type it in 2 parts. The first part shows the player the right answer, whether they found it or not."
+      },
+      {
+       "code": {
+        "id": "c18-answer",
+        "kind": "type",
+        "title": "Answer, part 1: green and red",
+        "lang": "cs",
+        "text": "// Marks the picture on button picked\nprivate void Answer(int picked)\n{\n    answered = true;\n    int answer = order[number];\n    ListenClip clip = clips[answer];\n    for (int i = 0; i < 4; i++)\n    {\n        picks[i].Cursor = Cursors.Default;\n        if (clipOf[i] == answer)\n        {\n            picks[i].BackColor = Color.FromArgb(62, 142, 65);\n            picks[i].ForeColor = Color.White;\n        }\n        else if (i == picked)\n        {\n            picks[i].BackColor = Color.FromArgb(178, 58, 46);\n            picks[i].ForeColor = Color.White;\n        }\n    }",
+        "partLines": [
+         [
+          2,
+          6,
+          "The sound that was playing",
+          "Answer is given `picked`, the number of the button that was clicked. `answered` becomes true. `clip` is the sound that was playing."
+         ],
+         [
+          7,
+          9,
+          "No more pointing hand",
+          "The loop looks at each of the 4 buttons. The [[Cursor|18]] goes back to the arrow, because the buttons are done."
+         ],
+         [
+          10,
+          14,
+          "Green for the right picture",
+          "The button that holds the right sound turns green, made from red 62, green 142 and blue 65, with white words."
+         ],
+         [
+          15,
+          20,
+          "Red for a wrong pick",
+          "If the player clicked a different button, that button turns red, made from red 178, green 58 and blue 46."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          20
+         ]
+        ],
+        "typed": 12,
+        "wordMarks": [
+         [
+          12,
+          33,
+          47,
+          17
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `Pick_Click`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmListen.cs, with the first part of Answer typed under Pick_Click",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `Pick_Click`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-11.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-11.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The first part of Answer sits under Pick_Click. It ends with the `}` that closes the `for` loop.",
+         "id": "4-11.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "11"
+    },
+    {
+     "title": "Type the second part of Answer, which scores the answer",
+     "blocks": [
+      {
+       "p": "By the end of this screen, a right answer scores 10 points, and every answer adds a line of feedback."
+      },
+      {
+       "p": "The second part says whether the player was right, and gives the fact about the sound either way. After the 10th sound, it also works out the score."
+      },
+      {
+       "code": {
+        "id": "c18-answer2",
+        "kind": "type",
+        "title": "Answer, part 2: the score and the feedback",
+        "lang": "cs",
+        "text": "    if (clipOf[picked] == answer)\n    {\n        right++;\n        lblExplain.Text = \"Correct. \" + clip.Explanation;\n        wellLines.Add(\"You recognised \" + clip.InSentence + \".\");\n        Sound.Play(\"correct.wav\");\n    }\n    else\n    {\n        lblExplain.Text = \"Not quite. It was \" + clip.InSentence\n            + \". \" + clip.Explanation;\n        wrongLines.Add(MissLine(clip, clips[clipOf[picked]]));\n        Sound.Play(\"wrong.wav\");\n    }\n    lblScore.Text = \"Points: \" + right * 10;\n    if (number == 9)\n    {\n        btnNext.Text = \"See my score\";\n        RecordResult();\n    }\n    btnNext.Visible = true;\n}",
+        "partLines": [
+         [
+          1,
+          7,
+          "A right answer",
+          "`right` goes up by 1. The fact box says Correct. and then the fact. A line for What went well goes into `wellLines`, and the right sound plays."
+         ],
+         [
+          8,
+          14,
+          "A wrong answer",
+          "The fact box says Not quite, then the sound's name and the fact. MissLine makes the line for What went wrong, and the wrong sound plays."
+         ],
+         [
+          15,
+          22,
+          "Points, and the last sound",
+          "Points shows 10 for each right answer. After sound 10, `number` is 9. So Next sound becomes See my score, and RecordResult keeps the result. Then the button appears."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          22
+         ]
+        ],
+        "typed": 15
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes the `for` loop in Answer.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmListen.cs, with the second part of Answer typed under the for loop",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes the `for` loop in Answer."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-12.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the `}`.",
+         "id": "4-12.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "Answer ends with a `}` of its own. `MissLine` and `RecordResult` have red underlines. This is normal, because you have not written them yet.",
+         "id": "4-12.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "12"
+    },
+    {
+     "title": "Type MissLine, which writes the line for a missed sound",
+     "blocks": [
+      {
+       "p": "By the end of this screen, every missed sound gets a line in What went wrong."
+      },
+      {
+       "p": "Mixing up the two whistles is the most important mistake, because the whistle signals are about safety. So MissLine gives a whistle mix-up its own line."
+      },
+      {
+       "code": {
+        "id": "c18-missline",
+        "kind": "type",
+        "title": "MissLine",
+        "lang": "cs",
+        "text": "// The What went wrong line for a missed sound\nprivate string MissLine(ListenClip clip, ListenClip picked)\n{\n    bool whistles = clip.FileName.StartsWith(\"whistle\")\n        && picked.FileName.StartsWith(\"whistle\");\n    if (whistles && clip.FileName == \"whistle-six\")\n    {\n        return \"You mixed up the whistles. Six blasts means \"\n            + \"\\\"I need help\\\".\";\n    }\n    if (whistles)\n    {\n        return \"You mixed up the whistles. Three blasts means \"\n            + \"\\\"We hear you, help is coming\\\".\";\n    }\n    return \"You did not recognise \" + clip.InSentence + \".\";\n}",
+        "partLines": [
+         [
+          2,
+          5,
+          "Two whistles?",
+          "MissLine is given the sound that played and the sound the player picked. `StartsWith(\"whistle\")` is true when a file name starts with whistle. `&&` means and, so `whistles` is true only when both sounds are whistles."
+         ],
+         [
+          6,
+          10,
+          "Six blasts",
+          "If the player missed the six blasts, the line says what six blasts means. Inside the text, each `\\\"` is a [[quote mark inside text|26]]."
+         ],
+         [
+          11,
+          15,
+          "Three blasts",
+          "If the player missed the three blasts, the line says what three blasts means."
+         ],
+         [
+          16,
+          17,
+          "Any other sound",
+          "Every other missed sound gets the same line, with the sound's name in it."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          17
+         ]
+        ],
+        "typed": 10,
+        "wordMarks": [
+         [
+          5,
+          8,
+          10,
+          24
+         ],
+         [
+          4,
+          34,
+          44,
+          25
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `Answer`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmListen.cs, with MissLine typed under Answer",
+          "w": 800,
+          "h": 300,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `Answer`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-13.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-13.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The red underline under `MissLine` in Answer has gone.",
+         "id": "4-13.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "13"
+    },
+    {
+     "title": "Type btnNext_Click and RecordResult, then build",
+     "blocks": [
+      {
+       "p": "By the end of this screen, every method in Listen Out is written, and your project builds with no errors."
+      },
+      {
+       "p": "Next sound moves the round on. After sound 10, the same button opens the Round over box instead."
+      },
+      {
+       "code": {
+        "id": "c18-next",
+        "kind": "type",
+        "title": "btnNext_Click and RecordResult",
+        "lang": "cs",
+        "text": "// Next sound, or See my score after sound 10\nprivate void btnNext_Click(object sender, EventArgs e)\n{\n    if (number == 9)\n    {\n        ShowRoundOver();\n        return;\n    }\n    number++;\n    ShowSound();\n}\n\n// Works out the score, adds the feedback, then keeps the result\nprivate void RecordResult()\n{\n    int score = right * 10;\n    result = new GameResult(\"Listen Out\", score);\n    result.WentWell.AddRange(wellLines);\n    result.WentWrong.AddRange(wrongLines);\n    KeepResult();\n}",
+        "partLines": [
+         [
+          2,
+          8,
+          "After sound 10",
+          "After sound 10, `number` is 9. ShowRoundOver, from chapter 9, opens the Round over box, and `return` stops btnNext_Click."
+         ],
+         [
+          9,
+          11,
+          "The next sound",
+          "Otherwise `number` goes up by 1, and ShowSound gets the next sound ready."
+         ],
+         [
+          14,
+          17,
+          "The result",
+          "The score is 10 points for each right answer. `new GameResult` from chapter 9 makes the result, with the game's name and the score."
+         ],
+         [
+          18,
+          21,
+          "Feedback, then keep",
+          "`AddRange` adds every line in `wellLines` to What went well, and every line in `wrongLines` to What went wrong. KeepResult, from chapter 9, keeps the result for the map."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          21
+         ]
+        ],
+        "typed": 12,
+        "wordMarks": [
+         [
+          2,
+          34,
+          40,
+          23
+         ],
+         [
+          18,
+          20,
+          28,
+          27
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `MissLine`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "missing": true,
+          "alt": "frmListen.cs, with btnNext_Click and RecordResult typed under MissLine",
+          "w": 800,
+          "h": 360,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Click at the end of the `}` that closes `MissLine`."
+           },
+           {
+            "n": 2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-14.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-14.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "No line in frmListen.cs has a red underline.",
+         "id": "4-14.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "missing": true,
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows CS1022: Type or namespace definition, or end-of-file expected",
+           "The file has one `}` too many. Check ShowSound and Answer first, because you typed each one in 2 parts. Each method ends with one `}` of its own."
+          ],
+          [
+           "The Error List shows CS0103: The name 'MissLine' does not exist in the current context",
+           "A method's name is spelt one way where you wrote the method, and another way where the code uses it. Check that MissLine is spelt the same in Answer and in the first line of MissLine. Capital letters count."
+          ]
+         ],
+         "id": "4-14.4",
+         "n": 4
+        }
+       ]
+      }
+     ],
+     "id": "14"
+    },
+    {
+     "title": "Connect Play the sound, the 4 pictures and Next sound to their methods",
+     "blocks": [
+      {
+       "p": "By the end of this screen, every button on pnlPlay runs its method."
+      },
+      {
+       "p": "btnPlay_Click, Pick_Click and btnNext_Click are written, but nothing runs them yet. You connect each Click [[event|21]] with the small arrow, as you did for Back to the map."
+      },
+      {
+       "p": "The 4 picture buttons share one method, Pick_Click. So you pick all 4 buttons at once, and connect them together."
+      },
+      {
+       "steps": [
+        {
+         "do": "To go back to the designer, press Shift and F7 together.",
+         "see": "The designer shows frmListen.",
+         "img": {
+          "missing": true,
+          "alt": "frmListen in the designer, with Play the sound picked and the Properties window showing its events",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "To go back to the designer, press Shift and F7 together."
+           },
+           {
+            "n": 2,
+            "say": "Click **Play the sound** on pnlPlay."
+           },
+           {
+            "n": 3,
+            "say": "Click the lightning bolt at the top of the Properties window, if the events are not already showing."
+           }
+          ]
+         },
+         "id": "4-15.1",
+         "n": 1
+        },
+        {
+         "do": "Click **Play the sound** on pnlPlay.",
+         "see": "The Properties window shows btnPlay at the top.",
+         "id": "4-15.2",
+         "n": 2
+        },
+        {
+         "do": "Click the lightning bolt at the top of the Properties window, if the events are not already showing.",
+         "see": "The Properties window lists the events of btnPlay.",
+         "id": "4-15.3",
+         "n": 3
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of btnPlay, with btnPlay_Click beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 4,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 5,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 6,
+            "say": "Click `btnPlay_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-15.4",
+         "n": 4
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-15.5",
+         "n": 5
+        },
+        {
+         "do": "Click `btnPlay_Click` in the list.",
+         "see": "The box beside Click shows `btnPlay_Click`.",
+         "id": "4-15.6",
+         "n": 6
+        },
+        {
+         "do": "Click the first white picture button, btnPick1.",
+         "see": "The Properties window shows btnPick1 at the top.",
+         "img": {
+          "missing": true,
+          "alt": "frmListen in the designer, with all 4 picture buttons picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 7,
+            "say": "Click the first white picture button, btnPick1."
+           },
+           {
+            "n": 8,
+            "say": "Hold Ctrl and click each of the other 3 picture buttons. Then let go of Ctrl."
+           }
+          ]
+         },
+         "id": "4-15.7",
+         "n": 7
+        },
+        {
+         "do": "Hold Ctrl and click each of the other 3 picture buttons. Then let go of Ctrl.",
+         "see": "All 4 picture buttons have small squares at their corners. The box at the top of the Properties window is empty, because more than one control is picked.",
+         "wrong": [
+          [
+           "Only the last button you clicked is picked",
+           "Click btnPick1 again. Then hold Ctrl down the whole time you click the other 3 buttons."
+          ]
+         ],
+         "id": "4-15.8",
+         "n": 8
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing Pick_Click beside Click for all 4 picture buttons",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 10,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 11,
+            "say": "Click `Pick_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-15.9",
+         "n": 9
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-15.10",
+         "n": 10
+        },
+        {
+         "do": "Click `Pick_Click` in the list.",
+         "see": "The box beside Click shows `Pick_Click`. All 4 picture buttons now run Pick_Click.",
+         "id": "4-15.11",
+         "n": 11
+        },
+        {
+         "do": "Click **Next sound** on pnlPlay.",
+         "see": "The Properties window lists the events of btnNext.",
+         "img": {
+          "missing": true,
+          "alt": "The Properties window showing the events of btnNext, with btnNext_Click beside Click",
+          "w": 360,
+          "h": 480,
+          "marks": [
+           {
+            "n": 12,
+            "say": "Click **Next sound** on pnlPlay."
+           },
+           {
+            "n": 13,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 14,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 15,
+            "say": "Click `btnNext_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-15.12",
+         "n": 12
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-15.13",
+         "n": 13
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-15.14",
+         "n": 14
+        },
+        {
+         "do": "Click `btnNext_Click` in the list.",
+         "see": "The box beside Click shows `btnNext_Click`.",
+         "id": "4-15.15",
+         "n": 15
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "missing": true,
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 800,
+          "h": 60,
+          "marks": [
+           {
+            "n": 16,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows errors",
+           "Double-click the first error in the Error List. Visual Studio 2019 jumps to the line with the error. Check that line letter by letter against the code in this chapter."
+          ]
+         ],
+         "id": "4-15.16",
+         "n": 16
+        }
+       ]
+      }
+     ],
+     "id": "15"
+    },
+    {
+     "title": "Open Listen Out from the map and play a round",
+     "blocks": [
+      {
+       "p": "By the end of this screen, place number 7 on your map opens Listen Out, and you have played a whole round."
+      },
+      {
+       "p": "Your map picks which game to open from a list in frmMap.cs. Each place has one case, which is one choice in that list. Listen Out is place number 7, so its case says `case 7:`."
+      },
+      {
+       "code": {
+        "id": "c18-mapcase",
+        "kind": "type",
+        "title": "The new case line in frmMap.cs",
+        "lang": "cs",
+        "text": "case 7: game = new frmListen(); break;",
+        "partLines": [
+         [
+          1,
+          1,
+          "Open Listen Out for place 7",
+          "When the player clicks place number 7, `game` becomes a new frmListen. `break` ends the case, and the map then opens the game."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          1
+         ]
+        ],
+        "typed": 1
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `frmMap.cs` in Solution Explorer.",
+         "see": "frmMap opens in the designer.",
+         "img": {
+          "missing": true,
+          "alt": "Visual Studio 2019 with frmMap.cs in the code editor. The search box is open and the new case line is typed. frmMap.cs is picked in Solution Explorer on the right",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Double-click `frmMap.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "say": "Press F7."
+           },
+           {
+            "n": 3,
+            "say": "Press Ctrl and F together."
+           },
+           {
+            "n": 4,
+            "say": "Type `each game chapter adds`"
+           },
+           {
+            "n": 5,
+            "say": "Press Escape."
+           },
+           {
+            "n": 6,
+            "say": "Press End."
+           },
+           {
+            "n": 7,
+            "say": "Press Enter."
+           },
+           {
+            "n": 8,
+            "say": "Type the yellow line from the code above."
+           }
+          ]
+         },
+         "id": "4-16.1",
+         "n": 1
+        },
+        {
+         "do": "Press F7.",
+         "see": "The code of frmMap shows.",
+         "id": "4-16.2",
+         "n": 2
+        },
+        {
+         "do": "Press Ctrl and F together.",
+         "see": "A small search box opens at the top right of the code.",
+         "id": "4-16.3",
+         "n": 3
+        },
+        {
+         "do": "Type `each game chapter adds`",
+         "see": "The line `// each game chapter adds its own case below this line` is highlighted.",
+         "id": "4-16.4",
+         "n": 4
+        },
+        {
+         "do": "Press Escape.",
+         "see": "The search box closes. The words you searched for stay highlighted.",
+         "id": "4-16.5",
+         "n": 5
+        },
+        {
+         "do": "Press End.",
+         "see": "The flashing cursor moves to the end of the comment line.",
+         "id": "4-16.6",
+         "n": 6
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the comment line.",
+         "id": "4-16.7",
+         "n": 7
+        },
+        {
+         "do": "Type the yellow line from the code above.",
+         "see": "The new line says `case 7: game = new frmListen(); break;`.",
+         "wrong": [
+          [
+           "The Error List shows CS0152: The switch statement contains multiple cases with the label value '7'",
+           "Your map already uses place number 7 for another game. Change the 7 in the new case line to a place number that your map does not use yet. Then change `gameNumber` in frmListen.cs to the same number."
+          ]
+         ],
+         "id": "4-16.8",
+         "n": 8
+        }
+       ]
+      },
+      {
+       "p": "A few lines above the cases, OpenGame already checks the sound before Listen Out opens. You wrote these lines in chapter 8, so you read them here and do not type them."
+      },
+      {
+       "code": {
+        "id": "c18-mutecheck",
+        "kind": "read",
+        "title": "The sound check in OpenGame, from chapter 8",
+        "lang": "cs",
+        "text": "if (i == 7 && Sound.Muted)\n{\n    DialogResult answer = MessageBox.Show(\"Listen Out needs \"\n        + \"sound. Turn the sound on?\", \"Summit Ready\",\n        MessageBoxButtons.YesNo);\n    if (answer == DialogResult.No) return;\n    Sound.Muted = false;\n    ShowSpeaker();\n}",
+        "partLines": [
+         [
+          1,
+          5,
+          "Ask about the sound",
+          "The check runs only for place 7, and only when the speaker on the map is muted. A message asks the player whether to turn the sound on."
+         ],
+         [
+          6,
+          9,
+          "No or Yes",
+          "No stops OpenGame, so Listen Out does not open. Yes turns the sound on, and ShowSpeaker shows the speaker picture as on."
+         ]
+        ],
+        "wordMarks": [
+         [
+          1,
+          11,
+          13,
+          24
+         ]
+        ]
+       }
+      },
+      {
+       "p": "If you gave Listen Out a different place number, change the 7 in `if (i == 7` to the same number."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press F5.",
+         "see": "Your game starts and shows the login window.",
+         "img": {
+          "missing": true,
+          "alt": "The login window of your game, with a player's name and password typed in",
+          "w": 640,
+          "h": 400,
+          "marks": [
+           {
+            "n": 9,
+            "say": "Press F5."
+           },
+           {
+            "n": 10,
+            "say": "Log in with a player you registered in chapter 5."
+           }
+          ]
+         },
+         "id": "4-16.9",
+         "n": 9
+        },
+        {
+         "do": "Log in with a player you registered in chapter 5.",
+         "see": "The Welcome screen opens.",
+         "id": "4-16.10",
+         "n": 10
+        },
+        {
+         "do": "Click **Start the expedition**.",
+         "see": "The map opens.",
+         "img": {
+          "missing": true,
+          "alt": "The Welcome screen of your game, with the Start the expedition button",
+          "w": 640,
+          "h": 400,
+          "marks": [
+           {
+            "n": 11,
+            "say": "Click **Start the expedition**."
+           }
+          ]
+         },
+         "id": "4-16.11",
+         "n": 11
+        },
+        {
+         "do": "Click place number 7 on the map, Slieve Donard.",
+         "see": "Listen Out opens, with 4 grey pictures.",
+         "img": {
+          "missing": true,
+          "alt": "The map, with place number 7 picked",
+          "w": 800,
+          "h": 450,
+          "marks": [
+           {
+            "n": 12,
+            "say": "Click place number 7 on the map, Slieve Donard."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "A message asks whether to turn the sound on",
+           "The speaker on the map is muted. Click **Yes**, and Listen Out opens with the sound on."
+          ]
+         ],
+         "id": "4-16.12",
+         "n": 12
+        },
+        {
+         "do": "Play a whole round.",
+         "see": "The round ends with the Round over box.",
+         "img": {
+          "missing": true,
+          "alt": "Listen Out part-way through a round, with a right answer in green",
+          "w": 1000,
+          "h": 660,
+          "marks": [
+           {
+            "n": 13,
+            "say": "Play a whole round."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "**Play the sound** is grey, and the sentence says **Listen Out needs 10 sounds**",
+           "Listen Out cannot find 10 good lines in `listen.txt`. Check that the Data folder inside bin\\Debug holds `listen.txt`. Then check that each line has 4 parts split by a bar `|`."
+          ],
+          [
+           "A picture button shows only a name",
+           "Either the picture is missing from the Listen folder inside bin\\Debug\\Images, or `listen.txt` spells the file name differently. Compare the two names letter by letter."
+          ],
+          [
+           "You hear nothing when you press **Play the sound**",
+           "Check that the speaker picture on the header strip is not muted, and that your headphones are plugged in. Then check that the Sounds folder inside bin\\Debug holds the sound, such as `raven.wav`."
+          ],
+          [
+           "Clicking a picture does nothing",
+           "Check that you pressed Play the sound first. Then check that all 4 picture buttons show `Pick_Click` beside Click in the Properties window."
+          ],
+          [
+           "A different game opens, or nothing opens, when you click place number 7",
+           "Check the new line in frmMap.cs. It must say `case 7:` and `new frmListen()`."
+          ]
+         ],
+         "id": "4-16.13",
+         "n": 13
+        }
+       ]
+      }
+     ],
+     "id": "16"
+    },
+    {
+     "title": "Your turn: let each sound play only twice",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have changed how many plays each sound gets, and tested it, on your own."
+      },
+      {
+       "p": "Each sound plays up to 3 times. Change Listen Out so that each sound plays up to 2 times."
+      },
+      {
+       "code": {
+        "id": "c18-turn-plays",
+        "kind": "turn",
+        "title": "Let each sound play only twice",
+        "lang": "cs",
+        "text": "playsLeft = 2;\nif (left == 2) return \"Play the sound first. You can play it 2 times.\";",
+        "task": [
+         "Change `playsLeft` from 3 to 2 in the fields at the top of frmListen.cs.",
+         "Change `playsLeft = 3;` to `playsLeft = 2;` in ShowSound.",
+         "Change PlaysText, so that 2 plays left gives **Play the sound first. You can play it 2 times.**",
+         "Change the Text of lblPlays in the Properties window to `You can play this sound 2 times.`",
+         "Change the Text of lblInstruction so that the instruction says two times."
+        ],
+        "test": "Press F5, open Listen Out from the map, and press Play the sound twice.",
+        "expect": "After the second play, Play the sound turns grey, and the sentence says **You have played this sound** and the number of times.",
+        "hint": "3 things in the code say 3 plays. PlaysText needs the most thought, because each line is for one number of plays left."
+       }
+      },
+      {
+       "p": "When the test passes, change everything back to 3 plays, because Listen Out is meant to give 3."
+      }
+     ],
+     "id": "17"
+    },
+    {
+     "title": "Check that Listen Out works",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that every part of Listen Out works, including the clicks it must refuse."
+      },
+      {
+       "p": "Run each test with F5. Tick each test when it passes. The 3 tests marked as clicks to refuse must do nothing, and that counts as a pass."
+      },
+      {
+       "check": [
+        {
+         "what": "Click a picture before you press Play the sound.",
+         "expect": "control",
+         "how": "Start a new round, then click any picture straight away. Nothing must happen: no colour, no sound and no points.",
+         "fix": "Check the last line inside the `for` loop of ShowSound. It must be `picks[i].Enabled = false;`. Then check that btnPick1 to btnPick4 each have Enabled set to False in the Properties window.",
+         "id": "4-18.t1"
+        },
+        {
+         "what": "Press Play the sound 3 times.",
+         "expect": "allowed",
+         "how": "You hear the sound each time. After the third play, the button turns grey and the sentence says **You have played this sound three times.**",
+         "must": "Must happen",
+         "fix": "Check btnPlay_Click and PlaysText against their yellow lines. Then check that the box beside Click for btnPlay shows `btnPlay_Click`.",
+         "id": "4-18.t2"
+        },
+        {
+         "what": "Click Play the sound a fourth time.",
+         "expect": "control",
+         "how": "After 3 plays, click the grey button again. No sound must play.",
+         "fix": "Check the first line inside btnPlay_Click. It must be `if (playsLeft == 0) return;`.",
+         "id": "4-18.t3"
+        },
+        {
+         "what": "Click the picture that made the sound.",
+         "expect": "allowed",
+         "how": "The picture turns green, the box underneath says **Correct.** and the fact, and Points goes up by 10.",
+         "must": "Must happen",
+         "fix": "Check both parts of Answer against their yellow lines, one line at a time.",
+         "id": "4-18.t4"
+        },
+        {
+         "what": "Click a picture that did not make the sound.",
+         "expect": "allowed",
+         "how": "Your picture turns red, the right picture turns green, and the box underneath starts **Not quite. It was**.",
+         "must": "Must happen",
+         "fix": "Check the `else if (i == picked)` part of Answer, and the `else` part under it.",
+         "id": "4-18.t5"
+        },
+        {
+         "what": "After answering, click a different picture.",
+         "expect": "control",
+         "how": "Answer one sound, then click another picture. Nothing must change: no new colour and no new points.",
+         "fix": "Check the first line inside Pick_Click. It must be `if (answered) return;`. Then check that Answer starts with `answered = true;`.",
+         "id": "4-18.t6"
+        },
+        {
+         "what": "Answer all 10 sounds, getting 6 right, then click See my score.",
+         "expect": "allowed",
+         "how": "After the 10th answer, the button says **See my score**. The Round over box says **You scored 60 out of 100 points.**",
+         "must": "Must happen",
+         "fix": "Check the end of Answer, from `if (number == 9)`. Then check RecordResult: the score must be `right * 10`.",
+         "id": "4-18.t7"
+        },
+        {
+         "what": "Mute the speaker on the map, then click Slieve Donard.",
+         "expect": "allowed",
+         "how": "A message asks **Listen Out needs sound. Turn the sound on?** After No, the map stays. After Yes, Listen Out opens.",
+         "must": "Must happen",
+         "fix": "Check the lines at the start of OpenGame in frmMap.cs, from `if (i == 7 && Sound.Muted)`.",
+         "id": "4-18.t8"
+        },
+        {
+         "what": "Click Back to the map in the middle of a round, then click No.",
+         "expect": "allowed",
+         "how": "The question **Leave Listen Out?** appears. After No, Listen Out stays open.",
+         "must": "Must happen",
+         "fix": "Click the form itself, open the events list in the Properties window, and check that FormClosing shows `frmListen_FormClosing`.",
+         "id": "4-18.t9"
+        },
+        {
+         "what": "Finish a round, then click Back to the map.",
+         "expect": "allowed",
+         "how": "The map shows again, and the flag on place number 7 shows a tick.",
+         "must": "Must happen",
+         "fix": "Check that the first field at the top of frmListen is `private int gameNumber = 7;`. Then check that frmMap opens Listen Out for `case 7:`.",
+         "id": "4-18.t10"
+        }
+       ]
+      },
+      {
+       "box": {
+        "title": "Something to write about in your evaluation",
+        "blocks": [
+         {
+          "p": "Windows plays one sound at a time. If you click a picture while the sound is still playing, the right or wrong sound cuts it off."
+         },
+         {
+          "p": "That is a real limit of the way Summit Ready plays sounds. Say what it does to the player, and how a later version could wait for the sound to finish."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "18"
+    }
+   ],
+   "id": "4"
+  },
+  {
+   "title": "Change Listen Out into a game on your own topic",
+   "screens": [
+    {
+     "title": "Choose your own sounds, and 2 more things to change",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have chosen at least 10 sounds of your own, and 2 more things to change."
+      },
+      {
+       "p": "Your own game keeps the Listen Out code, but uses your own topic. Each question is a sound with a picture and a fact, so any topic with sounds like that works."
+      },
+      {
+       "box": {
+        "title": "3 topics that work",
+        "blocks": [
+         {
+          "p": "Music: the sound of an instrument, a photo of the instrument, and a fact about how it makes its sound."
+         },
+         {
+          "p": "French or Irish: a word said aloud, a picture of the thing, and the word written down."
+         },
+         {
+          "p": "Biology: an animal call, a photo of the animal, and where the animal lives."
+         }
+        ]
+       }
+      },
+      {
+       "p": "Change at least 2 more things as well, so that your game plays differently from Listen Out. For example, change the number of plays, the points for a right answer, the number of sounds in a round, or the colours."
+      },
+      {
+       "p": "Every picture and sound you use must be free to use. Each one gets a line in `credits.txt`, saying who made it, its licence and a link."
+      },
+      {
+       "p": "Each sound must be a .wav file. Windows Forms plays .wav files, but not .mp3 files."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Rename the ListenClip class and the Listen Out form",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your class and your form have names that fit your topic."
+      },
+      {
+       "p": "A class called ListenClip in a game about instruments would confuse anyone who reads your code. Visual Studio 2019 can rename a file, and every use of its class, in one go."
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click `ListenClip.cs` in Solution Explorer.",
+         "see": "A menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the right-click menu of ListenClip.cs open",
+          "w": 360,
+          "h": 420,
+          "marks": [
+           {
+            "n": 1,
+            "say": "Right-click `ListenClip.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "say": "Click **Rename**."
+           }
+          ]
+         },
+         "id": "5-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click **Rename**.",
+         "see": "The name `ListenClip.cs` becomes a box that you can type in.",
+         "id": "5-2.2",
+         "n": 2
+        },
+        {
+         "do": "Type your class's new name, such as `Instrument.cs`",
+         "see": "The box shows the new name.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the name ListenClip.cs turned into a box and Instrument.cs typed in it",
+          "w": 360,
+          "h": 200,
+          "marks": [
+           {
+            "n": 3,
+            "say": "Type your class's new name, such as `Instrument.cs`"
+           },
+           {
+            "n": 4,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "5-2.3",
+         "n": 3
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A message asks: You are renaming a file. Would you also like to perform a rename in this project of all references to the code element 'ListenClip'?",
+         "id": "5-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click **Yes**.",
+         "see": "Every use of the class ListenClip in your code changes to the new name. For example, `List<ListenClip>` becomes `List<Instrument>`.",
+         "img": {
+          "missing": true,
+          "alt": "The message that asks whether to rename every use of ListenClip",
+          "w": 480,
+          "h": 200,
+          "marks": [
+           {
+            "n": 5,
+            "say": "Click **Yes**."
+           }
+          ]
+         },
+         "id": "5-2.5",
+         "n": 5
+        },
+        {
+         "do": "Right-click `frmListen.cs` in Solution Explorer.",
+         "see": "A menu opens.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the right-click menu of frmListen.cs open",
+          "w": 360,
+          "h": 420,
+          "marks": [
+           {
+            "n": 6,
+            "say": "Right-click `frmListen.cs` in Solution Explorer."
+           },
+           {
+            "n": 7,
+            "say": "Click **Rename**."
+           }
+          ]
+         },
+         "id": "5-2.6",
+         "n": 6
+        },
+        {
+         "do": "Click **Rename**.",
+         "see": "The name `frmListen.cs` becomes a box that you can type in.",
+         "id": "5-2.7",
+         "n": 7
+        },
+        {
+         "do": "Type your form's new name, such as `frmInstruments.cs`",
+         "see": "The box shows the new name.",
+         "img": {
+          "missing": true,
+          "alt": "Solution Explorer, with the name frmListen.cs turned into a box and frmInstruments.cs typed in it",
+          "w": 360,
+          "h": 200,
+          "marks": [
+           {
+            "n": 8,
+            "say": "Type your form's new name, such as `frmInstruments.cs`"
+           },
+           {
+            "n": 9,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "5-2.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The same message asks about every use of 'frmListen'.",
+         "id": "5-2.9",
+         "n": 9
+        },
+        {
+         "do": "Click **Yes**.",
+         "see": "Every use of the class frmListen changes to the new name. This includes the line in frmMap.cs that opens your game.",
+         "img": {
+          "missing": true,
+          "alt": "The message that asks whether to rename every use of frmListen",
+          "w": 480,
+          "h": 200,
+          "marks": [
+           {
+            "n": 10,
+            "say": "Click **Yes**."
+           }
+          ]
+         },
+         "id": "5-2.10",
+         "n": 10
+        }
+       ]
+      },
+      {
+       "p": "Method names such as `frmListen_Load` keep their old names, and so do field names such as `clips`. This is normal, and the old names still work. Rename them only if you want to."
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Put your own data file, pictures and sounds into bin\\Debug",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your game reads your own data file, shows your own pictures and plays your own sounds."
+      },
+      {
+       "p": "Your own files go in the same folders as the Summit Ready files, inside bin\\Debug. Your data file goes in Data, your pictures go in a folder inside Images, and your sounds go in Sounds."
+      },
+      {
+       "p": "A picture and its sound share a name. For a line that starts `violin|`, the picture is `violin.jpg` and the sound is `violin.wav`."
+      },
+      {
+       "code": {
+        "id": "c18-turn-data",
+        "kind": "turn",
+        "title": "Use your own data file, pictures and sounds",
+        "lang": "cs",
+        "text": "string path = Files.Data(\"instruments.txt\");\nImage photo = Files.Picture(\"Instruments\", c.FileName + \".jpg\");",
+        "task": [
+         "Open Notepad and type at least 10 lines. Put a bar `|` between 4 parts: file name with no ending, name, name in a sentence, fact.",
+         "Save the text file in the Data folder inside bin\\Debug, with your own name, such as `instruments.txt`.",
+         "Change `listen.txt` in LoadAll to the name of your text file.",
+         "Make a folder inside bin\\Debug\\Images, named for your topic, such as Instruments. Then put a .jpg picture for each sound in it.",
+         "Change `\"Listen\"` in ShowSound to the name of your folder.",
+         "Put a .wav sound for each line in the Sounds folder inside bin\\Debug.",
+         "Find the whistle lines in PickChoices and MissLine. They only fit the Summit Ready sounds, so delete them, or change them to 2 of your own sounds that sound alike.",
+         "Add a line to `credits.txt` for each new picture and each new sound."
+        ],
+        "test": "Press F5 and open your game from the map.",
+        "expect": "The **Play the sound** button plays one of your own sounds, and the 4 buttons show your own pictures and names.",
+        "hint": "LoadAll is the only method that opens the text file. ShowSound is the only method that opens the picture folder."
+       }
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Change the words on the screen to fit your topic",
+     "blocks": [
+      {
+       "p": "By the end of this screen, every word on the screen and in the Round over box fits your topic."
+      },
+      {
+       "p": "A player of your game should never read about birds or mountains, unless that is your topic. The words are in 2 places: the Properties window, and the messages in the code."
+      },
+      {
+       "code": {
+        "id": "c18-turn-words",
+        "kind": "turn",
+        "title": "Change every word about the mountains",
+        "lang": "cs",
+        "text": "lblPlays.Text = \"Instrument Quiz needs 10 sounds in \"\n    + \"Data\\\\instruments.txt, each with 4 parts.\";\nresult = new GameResult(\"Instrument Quiz\", score);",
+        "task": [
+         "Change the Text of lblTitle and of lblInstruction.",
+         "Change the Text of the form itself, which shows in the title bar of the window.",
+         "Change the message in frmListen_Load that says **Listen Out needs 10 sounds**.",
+         "Change the lines in MissLine, if your topic needs different words.",
+         "Change the question in FormClosing.",
+         "Change the game's name, `\"Listen Out\"`, in RecordResult.",
+         "Change the message in OpenGame in frmMap.cs that says **Listen Out needs sound**."
+        ],
+        "test": "Play a round to the end, and read every word on the screen and in the Round over box.",
+        "expect": "No word on the screen is about Listen Out or the mountains, unless that is your topic.",
+        "hint": "Press Ctrl and F together, then type `Listen Out` to find every place that still names the old game."
+       }
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Test your game, and keep the evidence",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that your own game works, and you have the evidence for your coursework."
+      },
+      {
+       "p": "Run each test with F5 on your own game. Tick each test when it passes. Where the game must refuse, it does nothing, and that counts as a pass."
+      },
+      {
+       "check": [
+        {
+         "what": "Click a picture before you play the sound.",
+         "expect": "control",
+         "how": "Start a new round, then click any picture straight away. Nothing must happen.",
+         "id": "5-5.t1"
+        },
+        {
+         "what": "Play the sound as many times as your game allows.",
+         "expect": "allowed",
+         "how": "You hear your sound each time. After the last play, the button turns grey.",
+         "must": "Must happen",
+         "id": "5-5.t2"
+        },
+        {
+         "what": "Click the play button once more after the last play.",
+         "expect": "control",
+         "how": "No sound must play.",
+         "id": "5-5.t3"
+        },
+        {
+         "what": "Click the right picture.",
+         "expect": "allowed",
+         "how": "The picture turns green, your fact shows, and Points goes up.",
+         "must": "Must happen",
+         "id": "5-5.t4"
+        },
+        {
+         "what": "After answering, click a different picture.",
+         "expect": "control",
+         "how": "Nothing must change.",
+         "id": "5-5.t5"
+        },
+        {
+         "what": "Finish a round, then go back to the map.",
+         "expect": "allowed",
+         "how": "The flag on your game's place shows a tick.",
+         "must": "Must happen",
+         "id": "5-5.t6"
+        }
+       ]
+      },
+      {
+       "p": "Every test passed in Listen Out. So if a test fails now, the fault is in something you changed in this stage. Look back over your changes one at a time, starting with the last one."
+      },
+      {
+       "box": {
+        "title": "Evidence to keep",
+        "blocks": [
+         {
+          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
+         },
+         {
+          "p": "Paste each screenshot into your testing document, under the test it shows."
+         },
+         {
+          "p": "Keep your data file and your `credits.txt` with your project."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "5"
+    }
+   ],
+   "id": "5"
+  }
+ ],
+ "glossary": [
+  [
+   "sound file",
+   "A file that holds a sound. Summit Ready's sounds are .wav files in the Sounds folder."
+  ],
+  [
+   "bin\\Debug",
+   "The folder inside your project where Visual Studio 2019 puts the program it builds. Summit Ready reads its data, pictures and sounds from there."
+  ],
+  [
+   "zip file",
+   "One file with other files and folders packed inside it."
+  ],
+  [
+   "property",
+   "A named value that an object carries, such as `Name` on a ListenClip. `{ get; set; }` lets other code read the value and change it."
+  ],
+  [
+   "constructor",
+   "A method with the same name as its class. It runs once, when code makes a new object with `new`."
+  ],
+  [
+   "static",
+   "A method marked `static` belongs to the class itself. You call it on the class name, as in `ListenClip.LoadAll()`."
+  ],
+  [
+   "List",
+   "A list that grows as you add to it. `List<ListenClip>` is a list that holds ListenClip objects."
+  ],
+  [
+   "continue",
+   "Inside a loop, `continue` skips the rest of this turn of the loop. The loop goes straight on to its next turn."
+  ],
+  [
+   "not",
+   "`!` in front of a true or false value turns it the other way. `!answered` is true while `answered` is false."
+  ],
+  [
+   "lightning bolt",
+   "The button at the top of the Properties window that shows a control's events in place of its properties."
+  ],
+  [
+   "panel",
+   "A control that holds other controls. `pnlPlay` is the play area that holds the button and the 4 pictures."
+  ],
+  [
+   "field",
+   "A variable written at the top of the class, outside every method. Every method in the form can use it, and it keeps its value until the window closes."
+  ],
+  [
+   "array",
+   "A row of values of the same type, kept together under one name and numbered from 0. `picks[0]` is the first picture button, and `picks[3]` is the 4th."
+  ],
+  [
+   "random number",
+   "`random.Next(13)` gives a whole number picked by chance, from 0 up to 12."
+  ],
+  [
+   "Contains",
+   "`choices.Contains(n)` is true when the list `choices` already holds `n`."
+  ],
+  [
+   "null",
+   "`null` means no object at all. `Files.Picture` gives back `null` when the picture file is missing."
+  ],
+  [
+   "Bitmap",
+   "A picture held in memory. `new Bitmap(photo, 210, 180)` makes a copy of `photo` that is 210 pixels wide and 180 pixels tall."
+  ],
+  [
+   "colour from red, green and blue",
+   "`Color.FromArgb(62, 142, 65)` mixes a colour from red, green and blue. Each number is from 0 to 255."
+  ],
+  [
+   "Cursor",
+   "The pointer the mouse shows over a control. `Cursors.Hand` is the pointing hand."
+  ],
+  [
+   "Enabled",
+   "When a control's Enabled is false, it turns grey and clicks on it do nothing."
+  ],
+  [
+   "take away 1",
+   "`playsLeft--` takes 1 away from `playsLeft`."
+  ],
+  [
+   "event",
+   "Something that happens to a control, such as a click on a button."
+  ],
+  [
+   "handler",
+   "The method that runs when an event happens. `Pick_Click` is the handler for a click on any of the 4 pictures."
+  ],
+  [
+   "sender",
+   "Every handler is given `sender`: the control that the event happened to, such as the picture that was clicked."
+  ],
+  [
+   "and",
+   "`&&` means and. The `if` is true only when both of its parts are true."
+  ],
+  [
+   "StartsWith",
+   "`\"whistle-six\".StartsWith(\"whistle\")` is true, because the text starts with those letters."
+  ],
+  [
+   "quote mark inside text",
+   "Inside quotes, `\\\"` stands for one quote mark, so the quote mark shows on the screen and does not end the text."
+  ],
+  [
+   "AddRange",
+   "`AddRange` adds every line of one list to the end of another list."
+  ],
+  [
+   "red underline",
+   "The wavy red line Visual Studio 2019 draws under code it does not understand yet. Often it means a method you have not written yet."
+  ]
+ ]
+}
