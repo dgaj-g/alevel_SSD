@@ -1897,7 +1897,7 @@
        "steps": [
         {
          "do": "Press F5 to run the game.",
-         "see": "The welcome screen opens.",
+         "see": "The login window opens.",
          "img": {
           "missing": true,
           "alt": "The map, with the card for Slieve Binnian at the top of the right side",
