@@ -1752,7 +1752,7 @@
          "wrong": [
           [
            "The new method is called `button1_Click`",
-           "You double-clicked before you named the button. Press Ctrl and Z together to undo. Click the button once, then type `btnTest` in the (Name) box in the Properties window. Double-click the button again."
+           "You double-clicked before you named the button. Right-click `button1_Click` in the code, and click **Rename**. Type `btnTest_Click` and press Enter. Then click the **frmLogin.cs [Design]** tab, click the button once, and type `btnTest` in the (Name) box in the Properties window."
           ]
          ],
          "id": "4-1.4",
@@ -1861,8 +1861,12 @@
         },
         {
          "do": "Type the yellow lines from the code above.",
-         "see": "The 11 yellow lines are inside btnTest_Click. No line has a red underline.",
+         "see": "All the yellow lines are inside btnTest_Click. No line has a red underline.",
          "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
           [
            "A red underline stays under a word",
            "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
@@ -1942,14 +1946,14 @@
        "p": "By the end of this screen, you know that Player and PlayerFile work, and that they skip a broken line and refuse a taken name."
       },
       {
-       "p": "Run each test with F5 and the Test button. Each test says what must not happen. If it happens, the test fails."
+       "p": "Run each test with F5 and the Test button. The first test is the one you ran on the last screen, so you do not run it again. Each test says what must not happen. If it happens, the test fails."
       },
       {
        "check": [
         {
-         "what": "Click Test once, with testClimber not yet in `players.txt`.",
+         "what": "The first time you clicked Test, on the screen **Type the test code, and run it**.",
          "expect": "allowed",
-         "how": "The first message says **Added:** and shows the test player's line.",
+         "how": "The first message said **Added:** and showed the test player's line. Open `players.txt` in Notepad to check: testClimber is on one line of its own, with 4 parts.",
          "must": "Must happen",
          "fix": "Check Add and ToString against their yellow lines.",
          "id": "4-3.t1"
@@ -1964,15 +1968,15 @@
         {
          "what": "In btnTest_Click, change `\"testClimber\"` to `\"TESTCLIMBER\"`. Then press F5 and click Test.",
          "expect": "control",
-         "how": "TESTCLIMBER must not be added, because it is the same name in other capitals. The message says it is already there.",
-         "fix": "Check that Exists compares both names with `ToLower()`. Change the name back to `\"testClimber\"` after the test.",
+         "how": "TESTCLIMBER must not be added, because it is the same name in other capitals. The message says it is already there. Then close the program, change `\"TESTCLIMBER\"` back to `\"testClimber\"`, and save.",
+         "fix": "Check that Exists compares both names with `ToLower()`. If TESTCLIMBER was added, delete its line from `players.txt`.",
          "id": "4-3.t3"
         },
         {
          "what": "Open `players.txt` in Notepad. Type `broken line` on a new last line and save. Then press F5 and click Test.",
          "expect": "control",
-         "how": "The program must not crash, and the count must stay at 13. LoadAll skips the broken line.",
-         "fix": "Check the line `if (parts.Length != 4) continue;` in LoadAll. Delete the broken line from `players.txt` after the test.",
+         "how": "The program must not crash, and the count must stay at 13. LoadAll skips the broken line. Then close the program, delete the words `broken line` in Notepad, and save `players.txt`.",
+         "fix": "Check the line `if (parts.Length != 4) continue;` in LoadAll.",
          "id": "4-3.t4"
         }
        ]
@@ -2008,7 +2012,7 @@
           "p": "Take a screenshot of `players.txt` in Notepad, showing your new players at the end."
          },
          {
-          "p": "Paste each screenshot into your testing document, beside the test it shows."
+          "p": "Paste each screenshot into your testing document, with a line above it that says which test it shows."
          }
         ]
        }

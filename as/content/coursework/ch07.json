@@ -948,6 +948,10 @@
          "see": "The first half of TopTen sits under BestScore. Visual Studio 2019 added the `}` that closes TopTen when you typed its `{`.",
          "wrong": [
           [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ],
+          [
            "TopTen has a red underline under its name",
            "That is right for now. TopTen has no `return` yet. The next yellow lines add it."
           ]
@@ -1074,7 +1078,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "TopTen ends with `return top;`. `ComesBefore` has a red underline, because you type it next.",
          "id": "2-5.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       },
@@ -1131,7 +1141,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "ComesBefore sits under TopTen. The red underline under `ComesBefore` has gone.",
          "id": "2-5.6",
-         "n": 6
+         "n": 6,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -1320,7 +1336,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "AvatarOf sits under LogIn. No line has a red underline.",
          "id": "2-6.8",
-         "n": 8
+         "n": 8,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -1565,7 +1587,7 @@
        "p": "After an expedition, the banner says whether the player made the Top 10. Chapter 10 writes that code. You add the banner now, because the board moves down when the banner shows."
       },
       {
-       "p": "Set Visible to False last. A hidden panel still shows in the designer, so you can still click it."
+       "p": "Drop picTrophy, lblBannerHead, lblBannerMessage and btnBannerOK inside pnlBanner. Their Locations count from the top left corner of pnlBanner, not of the form. Set Visible to False last. A hidden panel still shows in the designer, so you can still click it."
       },
       {
        "controls": {
@@ -1580,7 +1602,7 @@
            "BorderStyle = FixedSingle",
            "Visible = False"
           ],
-          "note": "Drop the Panel on frmWelcome, to the right of the card."
+          "note": "Drop the Panel on frmWelcome, to the right of the card. Then drop the 4 controls below inside it."
          },
          {
           "toolbox": "PictureBox",
@@ -1656,7 +1678,7 @@
        "p": "The board is a [[ListView|5]]. Its small avatar pictures come from an [[ImageList|6]]. Like a timer, an ImageList shows in the strip under the form, not on it."
       },
       {
-       "p": "Add the controls in the order of the table. Drop each one on frmWelcome, under the banner. The board and lblNoScores sit in the same place. The code shows one or the other."
+       "p": "Add the controls in the order of the table. Drop each one on an empty part of frmWelcome, below the banner and not on it, then set its Location. A control dropped on the banner would belong to the banner and hide with it. The board and lblNoScores sit in the same place. The code shows one or the other."
       },
       {
        "controls": {
@@ -1681,7 +1703,7 @@
            "ForeColor = 38, 50, 56",
            "Text = Top 10 climbers"
           ],
-          "note": "This sits on top of the banner. Right-click lblTopTitle and click **Bring to Front**."
+          "note": "Once you set its Location, this sits on top of the banner. Right-click lblTopTitle and click **Bring to Front**."
          },
          {
           "toolbox": "ListView",
@@ -1917,7 +1939,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "avatarFiles is under the `{`.",
          "id": "4-1.4",
-         "n": 4
+         "n": 4,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       },
@@ -2034,7 +2062,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "frmWelcome_Load sits under the constructor. `ShowEverything` has a red underline for now.",
          "id": "4-1.7",
-         "n": 7
+         "n": 7,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       },
@@ -2080,7 +2114,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "ShowEverything sits under frmWelcome_Load.",
          "id": "4-1.10",
-         "n": 10
+         "n": 10,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -2298,7 +2338,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "ShowBanner sits under ShowPlayer.",
          "id": "4-3.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       },
@@ -2361,7 +2407,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "MoveBoard sits under ShowBanner. The red underline under `MoveBoard` has gone.",
          "id": "4-3.6",
-         "n": 6
+         "n": 6,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -2578,7 +2630,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The 4 highlight lines sit between `row.SubItems.Add(top[i].Date);` and `lvTop.Items.Add(row);`.",
          "id": "4-4.6",
-         "n": 6
+         "n": 6,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ]
+         ]
         }
        ]
       }
@@ -2698,7 +2756,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "btnBannerOK_Click sits under ShowBoard.",
          "id": "4-5.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       },
@@ -2797,6 +2861,10 @@
           [
            "The `// YOU TYPE THIS PART` line is still there after you type",
            "Click the old `// YOU TYPE THIS PART` line, then press Home. Hold Shift and press End, so the whole line turns blue. Press Delete."
+          ],
+          [
+           "There is an extra `}` under the lines you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. This is normal. Delete the extra `}`, because the lines you pasted already have their own `}` below."
           ]
          ],
          "id": "4-5.8",

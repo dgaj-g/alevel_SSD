@@ -157,8 +157,8 @@
       {
        "words": [
         [
-         "MouseClick",
-         "The event a control has when you click it with the mouse. It also says where the click was.",
+         "MouseEventArgs",
+         "The kind of information that `e` holds when a mouse event runs. It says where the mouse was and which button was pressed.",
          "4-8",
          true
         ],
@@ -909,7 +909,7 @@
         "title": "KitItem.cs: the KitItem class",
         "lang": "cs",
         "why": "You type the 4 properties, and the 4 lines that put a value into each one, because they are new. The rest reads a file the same way as `LoadAll` in chapter 3, so it comes in the copy.",
-        "text": "// One piece of kit from kit.txt: picture, name, pack or leave, and why\nclass KitItem\n{\n    public string Picture { get; set; }   // the picture's file name\n    public string Name { get; set; }      // the item's name\n    public bool Pack { get; set; }        // true: pack it, false: leave it\n    public string Reason { get; set; }    // why it is packed or left\n\n    // Makes one KitItem from a line of kit.txt, split at each |\n    public KitItem(string[] parts)\n    {\n        Picture = parts[0];\n        Name = parts[1];\n        Pack = parts[2] == \"pack\";\n        Reason = parts[3];\n    }\n\n    // Reads every item in kit.txt into a list\n    public static List<KitItem> LoadAll()\n    {\n        List<KitItem> items = new List<KitItem>();\n        string path = Files.Data(\"kit.txt\");\n        if (!File.Exists(path)) return items;   // no file: an empty list\n        StreamReader reader = new StreamReader(path);\n        while (!reader.EndOfStream)\n        {\n            string line = reader.ReadLine();\n            string[] parts = line.Split('|');\n            if (parts.Length != 4) continue;    // skip a broken line\n            items.Add(new KitItem(parts));\n        }\n        reader.Close();\n        return items;\n    }",
+        "text": "// One piece of kit from kit.txt: picture, name, pack or leave, and why\nclass KitItem\n{\n    public string Picture { get; set; }   // the picture's file name\n    public string Name { get; set; }      // the item's name\n    public bool Pack { get; set; }        // true: pack it, false: leave it\n    public string Reason { get; set; }    // why it is packed or left\n\n    // Makes one KitItem from a line of kit.txt, split at each |\n    public KitItem(string[] parts)\n    {\n        Picture = parts[0];\n        Name = parts[1];\n        Pack = parts[2] == \"pack\";\n        Reason = parts[3];\n    }\n\n    // Reads every item in kit.txt into a list\n    public static List<KitItem> LoadAll()\n    {\n        List<KitItem> items = new List<KitItem>();\n        string path = Files.Data(\"kit.txt\");\n        if (!File.Exists(path)) return items;   // no file: an empty list\n        StreamReader reader = new StreamReader(path);\n        while (!reader.EndOfStream)\n        {\n            string line = reader.ReadLine();\n            string[] parts = line.Split('|');\n            if (parts.Length != 4) continue;    // skip a broken line\n            items.Add(new KitItem(parts));\n        }\n        reader.Close();\n        return items;\n    }\n}",
         "partLines": [
          [
           2,
@@ -937,7 +937,7 @@
          ],
          [
           32,
-          34,
+          35,
           "Close the file and hand back the list",
           "`reader.Close()` closes `kit.txt`, so that other programs can open it again. `return items;` hands the full list back to the code that called LoadAll."
          ]
@@ -2712,7 +2712,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The yellow lines are inside frmRucksack_Load. `DealCards` has a red underline. This is normal, because you have not written DealCards yet.",
          "id": "4-5.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -2808,7 +2814,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "`MakeCard` and `ShowLeft` have red underlines. This is normal, because you have not written them yet.",
          "id": "4-6.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -2898,7 +2910,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "MakeCard sits under DealCards. `ShowLeft` still has a red underline, and that is still normal.",
          "id": "4-7.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -2994,7 +3012,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "Card_MouseDown and Zone_DragEnter sit under MakeCard.",
          "id": "4-8.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3096,7 +3120,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "`ZoneOf` has a red underline. This is normal, because you have not written ZoneOf yet.",
          "id": "4-9.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3198,7 +3228,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The red underlines under `ZoneOf` and `ShowLeft` have gone.",
          "id": "4-10.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3509,7 +3545,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "btnCheck_Click sits under ShowLeft.",
          "id": "4-12.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3612,7 +3654,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "`InRightPlace`, `MarkCard` and `RecordResult` have red underlines. This is normal, because you have not written them yet.",
          "id": "4-13.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3702,7 +3750,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The red underline under `InRightPlace` in btnCheck_Click has gone.",
          "id": "4-14.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3792,7 +3846,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The red underline under `MarkCard` in btnCheck_Click has gone.",
          "id": "4-15.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3882,7 +3942,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The red underline under `Card_Click` in MakeCard has gone.",
          "id": "4-16.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3960,7 +4026,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "`AddFeedback` has a red underline. This is normal, because you have not written AddFeedback yet.",
          "id": "4-17.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -4062,7 +4134,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "No line in frmRucksack.cs has a red underline.",
          "id": "4-18.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         },
         {
          "do": "Press Ctrl, Shift and B together.",
@@ -4190,7 +4268,7 @@
             "y": 66.7,
             "w": 15.6,
             "h": 2.9,
-            "say": "Click the box beside **DragEnter**, 2 lines further down."
+            "say": "Click the box beside **DragEnter**, the next line under DragDrop."
            },
            {
             "n": 8,
@@ -4230,7 +4308,7 @@
          "n": 6
         },
         {
-         "do": "Click the box beside **DragEnter**, 2 lines further down.",
+         "do": "Click the box beside **DragEnter**, the next line under DragDrop.",
          "see": "A small arrow appears at the right end of the box.",
          "id": "4-19.7",
          "n": 7
@@ -4290,7 +4368,7 @@
             "y": 66.7,
             "w": 15.6,
             "h": 2.9,
-            "say": "Click the box beside **DragEnter**, 2 lines further down."
+            "say": "Click the box beside **DragEnter**, the next line under DragDrop."
            },
            {
             "n": 15,
@@ -4330,7 +4408,7 @@
          "n": 13
         },
         {
-         "do": "Click the box beside **DragEnter**, 2 lines further down.",
+         "do": "Click the box beside **DragEnter**, the next line under DragDrop.",
          "see": "A small arrow appears at the right end of the box.",
          "id": "4-19.14",
          "n": 14
@@ -4390,7 +4468,7 @@
             "y": 66.7,
             "w": 15.6,
             "h": 2.9,
-            "say": "Click the box beside **DragEnter**, 2 lines further down."
+            "say": "Click the box beside **DragEnter**, the next line under DragDrop."
            },
            {
             "n": 22,
@@ -4430,7 +4508,7 @@
          "n": 20
         },
         {
-         "do": "Click the box beside **DragEnter**, 2 lines further down.",
+         "do": "Click the box beside **DragEnter**, the next line under DragDrop.",
          "see": "A small arrow appears at the right end of the box.",
          "id": "4-19.21",
          "n": 21
@@ -4490,7 +4568,7 @@
             "y": 66.7,
             "w": 15.6,
             "h": 2.9,
-            "say": "Click the box beside **DragEnter**, 2 lines further down."
+            "say": "Click the box beside **DragEnter**, the next line under DragDrop."
            },
            {
             "n": 29,
@@ -4530,7 +4608,7 @@
          "n": 27
         },
         {
-         "do": "Click the box beside **DragEnter**, 2 lines further down.",
+         "do": "Click the box beside **DragEnter**, the next line under DragDrop.",
          "see": "A small arrow appears at the right end of the box.",
          "id": "4-19.28",
          "n": 28
@@ -4590,7 +4668,7 @@
             "y": 66.7,
             "w": 15.6,
             "h": 2.9,
-            "say": "Click the box beside **DragEnter**, 2 lines further down."
+            "say": "Click the box beside **DragEnter**, the next line under DragDrop."
            },
            {
             "n": 36,
@@ -4630,7 +4708,7 @@
          "n": 34
         },
         {
-         "do": "Click the box beside **DragEnter**, 2 lines further down.",
+         "do": "Click the box beside **DragEnter**, the next line under DragDrop.",
          "see": "A small arrow appears at the right end of the box.",
          "id": "4-19.35",
          "n": 35
@@ -4690,7 +4768,7 @@
             "y": 66.7,
             "w": 15.6,
             "h": 2.9,
-            "say": "Click the box beside **DragEnter**, 2 lines further down."
+            "say": "Click the box beside **DragEnter**, the next line under DragDrop."
            },
            {
             "n": 43,
@@ -4730,7 +4808,7 @@
          "n": 41
         },
         {
-         "do": "Click the box beside **DragEnter**, 2 lines further down.",
+         "do": "Click the box beside **DragEnter**, the next line under DragDrop.",
          "see": "A small arrow appears at the right end of the box.",
          "id": "4-19.42",
          "n": 42
@@ -4836,7 +4914,7 @@
      "title": "Open Pack the Rucksack from the map and play a round",
      "blocks": [
       {
-       "p": "By the end of this screen, place number 0 on your map opens Pack the Rucksack, and you have played a whole round."
+       "p": "By the end of this screen, the card for Slieve Binnian on your map opens Pack the Rucksack, and you have played a whole round."
       },
       {
        "p": "Your map opens each game with a list of cases in frmMap.cs, one case for each place. Pack the Rucksack is place number 0, so its case says `case 0:`. In chapter 9, place 0 opened frmPractice. Now it opens Pack the Rucksack instead."
@@ -4854,7 +4932,7 @@
           1,
           1,
           "Open Pack the Rucksack",
-          "When the player clicks place number 0, `game` becomes a new frmRucksack window. `break;` ends this case. The map then opens the window."
+          "When the player clicks the card for Slieve Binnian, place number 0, `game` becomes a new frmRucksack window. `break;` ends this case. The map then opens the window."
          ]
         ],
         "focusLines": [
@@ -4980,7 +5058,7 @@
          "wrong": [
           [
            "The Error List shows CS0152: The switch statement contains multiple cases with the label value '0'",
-           "Your map already uses place number 0 for another game. Change the 0 in the new case line to a place number that your map does not use yet. Then change `gameNumber` in frmRucksack.cs to the same number."
+           "The frmPractice case line from chapter 9 is still there, so `case 0:` is in frmMap.cs twice. Delete the line `case 0: game = new frmPractice(); break;`."
           ]
          ],
          "id": "4-20.8",
@@ -5043,7 +5121,7 @@
          "n": 11
         },
         {
-         "do": "Click place number 0 on the map, the first place.",
+         "do": "Click the card for Slieve Binnian, at the top of the right side of the map.",
          "see": "Pack the Rucksack opens, with 12 kit cards on the kit pile.",
          "img": {
           "img": "img/cap/c239.png",
@@ -5057,7 +5135,7 @@
             "y": 13.5,
             "w": 35.9,
             "h": 8.4,
-            "say": "Click place number 0 on the map, the first place."
+            "say": "Click the card for Slieve Binnian, at the top of the right side of the map."
            }
           ]
          },
@@ -5101,7 +5179,7 @@
            "Check that the speaker picture on the header strip is not muted. Then check that the Sounds folder inside bin\\Debug holds `drop.wav`, `correct.wav`, `wrong.wav`, `win.wav` and `lose.wav`."
           ],
           [
-           "A different game opens, or nothing opens, when you click place number 0",
+           "A different game opens, or nothing opens, when you click the card for Slieve Binnian",
            "Check the new line in frmMap.cs. It must say `case 0:` and `new frmRucksack()`."
           ]
          ],
@@ -5228,7 +5306,7 @@
         {
          "what": "Finish a round, then click Back to the map.",
          "expect": "allowed",
-         "how": "The map shows again, and the flag on place number 0 shows a tick.",
+         "how": "The map shows again, and the flag on Slieve Binnian shows a tick.",
          "must": "Must happen",
          "fix": "Check that the first field at the top of frmRucksack is `private int gameNumber = 0;`. Then check that frmMap opens Pack the Rucksack for `case 0:`.",
          "id": "4-22.t10"
@@ -5503,7 +5581,7 @@
         "kind": "turn",
         "title": "Use your own data file and pictures",
         "lang": "cs",
-        "text": "string path = Files.Data(\"rubbish.txt\");\ncard.Image = new Bitmap(Files.Picture(\"Rubbish\", item.Picture), 64, 64);",
+        "text": "string path = Files.Data(\"rubbish.txt\");\nImage picture = Files.Picture(\"Rubbish\", item.Picture);",
         "task": [
          "Open Notepad and type at least 12 lines. Each line has 4 parts split by a bar `|`: the picture's file name, the name, `pack` or `leave`, and the reason.",
          "`pack` puts an item in the left-hand zone and `leave` puts it in the right-hand zone. Use each word on at least 6 lines.",
@@ -5637,8 +5715,8 @@
  ],
  "glossary": [
   [
-   "MouseClick",
-   "The event a control has when you click it with the mouse. It also says where the click was."
+   "MouseEventArgs",
+   "The kind of information that `e` holds when a mouse event runs. It says where the mouse was and which button was pressed."
   ],
   [
    "kit card",

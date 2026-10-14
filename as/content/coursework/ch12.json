@@ -175,7 +175,7 @@
           "y": 34.6,
           "w": 58.1,
           "h": 10.6,
-          "say": "What went well: up to 3 lines."
+          "say": "What went well: up to 3 lines, then one line that counts the rest."
          },
          {
           "n": 3,
@@ -183,7 +183,7 @@
           "y": 46.5,
           "w": 58.1,
           "h": 13,
-          "say": "What went wrong: only 3 lines show. The last line counts the rest."
+          "say": "What went wrong: the same. Here, 3 lines show, then a fourth line counts the other 2."
          },
          {
           "n": 4,
@@ -942,7 +942,7 @@
         "title": "Knot.cs: the Knot class",
         "lang": "cs",
         "why": "You type the 3 properties, and the 3 lines that put a value into each one, because they are new. The rest reads a file the same way as `LoadAll` in chapter 3, so it comes in the copy.",
-        "text": "// One knot from knots.txt: its photo, its name and what it is for\nclass Knot\n{\n    public string Picture { get; set; }   // the photo's file name\n    public string Name { get; set; }      // the knot's name\n    public string Use { get; set; }       // what the knot is for\n\n    // Makes one Knot from a line of knots.txt, split at each |\n    public Knot(string[] parts)\n    {\n        Picture = parts[0];\n        Name = parts[1];\n        Use = parts[2];\n    }\n\n    // Reads every knot in knots.txt into a list\n    public static List<Knot> LoadAll()\n    {\n        List<Knot> knots = new List<Knot>();\n        string path = Files.Data(\"knots.txt\");\n        if (!File.Exists(path)) return knots;   // no file: an empty list\n        StreamReader reader = new StreamReader(path);\n        while (!reader.EndOfStream)\n        {\n            string line = reader.ReadLine();\n            string[] parts = line.Split('|');\n            if (parts.Length != 3) continue;    // skip a broken line\n            knots.Add(new Knot(parts));\n        }\n        reader.Close();\n        return knots;\n    }",
+        "text": "// One knot from knots.txt: its photo, its name and what it is for\nclass Knot\n{\n    public string Picture { get; set; }   // the photo's file name\n    public string Name { get; set; }      // the knot's name\n    public string Use { get; set; }       // what the knot is for\n\n    // Makes one Knot from a line of knots.txt, split at each |\n    public Knot(string[] parts)\n    {\n        Picture = parts[0];\n        Name = parts[1];\n        Use = parts[2];\n    }\n\n    // Reads every knot in knots.txt into a list\n    public static List<Knot> LoadAll()\n    {\n        List<Knot> knots = new List<Knot>();\n        string path = Files.Data(\"knots.txt\");\n        if (!File.Exists(path)) return knots;   // no file: an empty list\n        StreamReader reader = new StreamReader(path);\n        while (!reader.EndOfStream)\n        {\n            string line = reader.ReadLine();\n            string[] parts = line.Split('|');\n            if (parts.Length != 3) continue;    // skip a broken line\n            knots.Add(new Knot(parts));\n        }\n        reader.Close();\n        return knots;\n    }\n}",
         "partLines": [
          [
           2,
@@ -970,7 +970,7 @@
          ],
          [
           30,
-          32,
+          33,
           "Close the file and hand back the list",
           "`reader.Close()` closes `knots.txt`, so that other programs can open it again. `return knots;` hands the full list back to the code that called LoadAll."
          ]
@@ -2680,7 +2680,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "ShowBack and ShowFace sit between `frmKnots_Load` and the comment line that says the game-form methods come from chapter 9.",
          "id": "4-5.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         },
         {
          "do": "Press Ctrl, Shift and B together.",
@@ -2851,7 +2857,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "`Card_Click` has a red underline. This is normal, because you have not written Card_Click yet.",
          "id": "4-6.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -2947,7 +2959,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "MakeCards sits under MakeCard. `Card_Click` still has a red underline, and that is still normal.",
          "id": "4-7.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3032,7 +3050,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The yellow lines are inside frmKnots_Load. The only red underline left is under `Card_Click` in MakeCard.",
          "id": "4-8.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3110,7 +3134,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "CardNumber sits under MakeCards. `Card_Click` still has a red underline, and that is still normal.",
          "id": "4-9.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3224,7 +3254,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The red underline under `Card_Click` in MakeCard has gone. `Match` and `NoMatch` now have red underlines. This is normal, because you have not written them yet.",
          "id": "4-10.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3349,6 +3385,12 @@
         {
          "do": "Type the first group of yellow lines, from `// The two cards show the same knot` down to `cards[first].FlatAppearance.BorderSize = 4;`. Press Enter at the end of each line.",
          "see": "The first group of yellow lines is where the first `// YOU TYPE THIS PART` line was.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ]
+         ],
          "id": "4-11.6",
          "n": 6
         },
@@ -3361,6 +3403,12 @@
         {
          "do": "Type the second group of yellow lines, from `first = -1;` down to the `}` that closes Match.",
          "see": "`AllMatched` and `RopeSnaps` have red underlines. This is normal, because you have not written them yet.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ]
+         ],
          "id": "4-11.8",
          "n": 8
         }
@@ -3458,7 +3506,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The red underline under `NoMatch` in Card_Click has gone.",
          "id": "4-12.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3542,7 +3596,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "`AddNameStrip` and `RecordResult` have red underlines. This is normal, because you have not written them yet.",
          "id": "4-13.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3644,7 +3704,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The red underline under `AddNameStrip` in RopeSnaps has gone.",
          "id": "4-14.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3722,7 +3788,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "`AddFeedback` has a red underline. This is normal, because you have not written AddFeedback yet.",
          "id": "4-15.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3806,7 +3878,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "`KnotMatched` has a red underline. This is normal, because you have not written KnotMatched yet.",
          "id": "4-16.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3872,7 +3950,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The red underline under `KnotMatched` in AddFeedback has gone.",
          "id": "4-17.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3962,7 +4046,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "No line in frmKnots.cs has a red underline.",
          "id": "4-18.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         },
         {
          "do": "Press Ctrl, Shift and B together.",
@@ -4248,7 +4338,7 @@
      "title": "Open Knot Pairs from the map and play a round",
      "blocks": [
       {
-       "p": "By the end of this screen, place number 1 on your map opens Knot Pairs, and you have played a whole round."
+       "p": "By the end of this screen, the card for Slieve Lamagan on your map opens Knot Pairs, and you have played a whole round."
       },
       {
        "p": "Your map opens each game with a list of cases in frmMap.cs, one case for each place. Knot Pairs is place number 1, so its case says `case 1:`."
@@ -4266,7 +4356,7 @@
           1,
           1,
           "Open Knot Pairs",
-          "When the player clicks place number 1, `game` becomes a new frmKnots window. `break;` ends this case. The map then opens the window."
+          "When the player clicks the card for Slieve Lamagan, place number 1, `game` becomes a new frmKnots window. `break;` ends this case. The map then opens the window."
          ]
         ],
         "focusLines": [
@@ -4392,7 +4482,7 @@
          "wrong": [
           [
            "The Error List shows CS0152: The switch statement contains multiple cases with the label value '1'",
-           "Your map already uses place number 1 for another game. Change the 1 in the new case line to a place number that your map does not use yet. Then change `gameNumber` in frmKnots.cs to the same number."
+           "The line `case 1: game = new frmKnots(); break;` is in frmMap.cs twice. Delete one of the two lines."
           ]
          ],
          "id": "4-20.8",
@@ -4455,7 +4545,7 @@
          "n": 11
         },
         {
-         "do": "Click place number 1 on the map, the second place.",
+         "do": "Click the card for Slieve Lamagan, the second card down the right side of the map.",
          "see": "Knot Pairs opens, with 16 rope cards face down.",
          "img": {
           "img": "img/cap/c279.png",
@@ -4467,7 +4557,7 @@
             "n": 12,
             "x": 80.8,
             "y": 27.0,
-            "say": "Click place number 1 on the map, the second place."
+            "say": "Click the card for Slieve Lamagan, the second card down the right side of the map."
            }
           ]
          },
@@ -4507,7 +4597,7 @@
            "Check that the speaker picture on the header strip is not muted. Then check that the Sounds folder inside bin\\Debug holds `flip.wav`, `wrong.wav`, `match.wav`, `win.wav` and `lose.wav`."
           ],
           [
-           "A different game opens, or nothing opens, when you click place number 1",
+           "A different game opens, or nothing opens, when you click the card for Slieve Lamagan",
            "Check the new line in frmMap.cs. It must say `case 1:` and `new frmKnots()`."
           ]
          ],
@@ -4621,7 +4711,7 @@
         {
          "what": "Finish a round, then click Back to the map.",
          "expect": "allowed",
-         "how": "The map shows again, and the flag on place number 1 shows a tick.",
+         "how": "The map shows again, and the flag on Slieve Lamagan shows a tick.",
          "must": "Must happen",
          "fix": "Check that the first field at the top of frmKnots is `private int gameNumber = 1;`. Then check that frmMap opens Knot Pairs for `case 1:`.",
          "id": "4-22.t8"

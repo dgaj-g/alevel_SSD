@@ -155,10 +155,10 @@
      "id": "1"
     },
     {
-     "title": "See the 8 games, and choose the 4 you will build",
+     "title": "See the 8 games, in 4 pairs",
      "blocks": [
       {
-       "p": "By the end of this screen, you will know the 8 games in Summit Ready, and which 4 of them you will build."
+       "p": "By the end of this screen, you will know the 8 games in Summit Ready, and the 4 pairs they come in."
       },
       {
        "p": "Each game scores up to 100 points, so a perfect expedition scores 800 points. Each game is played in a different way, so each game teaches you a different piece of C#."
@@ -292,7 +292,7 @@
        "p": "Topics like these would work well. You could choose the elements of the periodic table, or French verbs. You could choose key dates in a history topic, or the parts of a plant cell."
       },
       {
-       "p": "In chapter 1, you choose your own client and your own topic, and you plan your game."
+       "p": "Before chapter 1, you write down your first idea for a topic. In chapter 1, you choose your own client and your final topic, and you plan your game."
       }
      ],
      "id": "1"
@@ -376,7 +376,7 @@
        "p": "The marker reads your portfolio. The game on its own earns very few marks. Your code only earns marks when your portfolio shows it and says what it does."
       },
       {
-       "p": "Chapter 1 is for AO1. Chapters 2 to 18 build the game for AO2. Chapter 19 tests the game for all 3 parts, and chapter 20 is for AO2 and AO3."
+       "p": "Chapter 1 is for AO1. Chapters 2 to 18 build the game for AO2. Chapter 19 tests the game for all 3 parts, and chapter 20 is for AO2 and AO3, with a last check of all 3."
       },
       {
        "p": "These marks come from the CCEA mark scheme for this coursework. Your teacher has the full mark scheme if you want to read it."
@@ -515,23 +515,24 @@
       {
        "check": [
         {
-         "what": "Your topic is about a school subject or a skill that a real person finds tricky.",
+         "what": "Your first idea for a topic is about a school subject or a skill that a real person finds tricky.",
          "expect": "allowed",
-         "how": "Write one sentence that names your topic and who finds it tricky.",
+         "how": "Write one sentence that names your first idea for a topic and who finds it tricky.",
          "must": "Must be true",
          "id": "4-2.t1"
         },
         {
-         "what": "Your topic is on the list of Summit Ready topics.",
+         "what": "Your first idea for a topic is NOT on the list of Summit Ready topics.",
          "expect": "control",
          "how": "If your game is about camping, knots or the weather, it is too close to Summit Ready. Pick another topic.",
+         "must": "Must be true",
          "fix": "Read the list of topics again on the screen called **Keep your own game away from the Summit Ready topics**.",
          "id": "4-2.t2"
         },
         {
          "what": "You know which chapter gives each assessment objective its marks.",
          "expect": "allowed",
-         "how": "Chapter 1 is AO1, chapters 2 to 18 are AO2, chapter 19 is all 3 parts, and chapter 20 is AO2 and AO3.",
+         "how": "Chapter 1 is AO1, and chapters 2 to 18 are AO2. Chapter 19 is all 3 parts. Chapter 20 is AO2 and AO3, with a last check of all 3.",
          "must": "Must be true",
          "id": "4-2.t3"
         }
@@ -542,10 +543,10 @@
         "title": "Evidence to keep",
         "blocks": [
          {
-          "p": "Make a folder for your coursework in your OneDrive. Your portfolio, your screenshots and your project will all go in it."
+          "p": "Make a folder called `Coursework` in your OneDrive. Your portfolio and every other Word document for your coursework will go in it."
          },
          {
-          "p": "Write your topic and your client in one sentence at the top of a new Word document. That document becomes your portfolio."
+          "p": "Write your first idea for a topic in one sentence at the top of a new Word document. Save it in your `Coursework` folder, and name it `Portfolio`. That document becomes your portfolio. In chapter 1, you add your client and your final topic."
          }
         ]
        }

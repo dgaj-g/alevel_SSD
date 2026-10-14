@@ -70,7 +70,7 @@
         "Your project, with the map opening from **Start the expedition** (chapter 8).",
         "The GameResult class, with GameName, Score and the constructor (chapter 8).",
         "The line `// each game chapter adds its own case below this line` in `frmMap.cs` (chapter 8).",
-        "The Icons folder and the Sounds folder inside bin\\Debug, with `win.wav` and `lose.wav` (chapter 2).",
+        "The Icons folder inside Images, and the Sounds folder, both inside bin\\Debug (chapter 2). The Sounds folder holds `win.wav` and `lose.wav`.",
         "About 2 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
        ]
       },
@@ -282,7 +282,7 @@
         },
         {
          "do": "Type the 2 yellow lines that start with `public List<string>`.",
-         "see": "No line has a red underline. If `List` has one, check that the top line of the file is `using System.Collections.Generic;`",
+         "see": "No line has a red underline. If `List` has one, check that one of the `using` lines at the top of the file is `using System.Collections.Generic;`",
          "id": "2-1.7",
          "n": 7
         },
@@ -1625,8 +1625,8 @@
       },
       {
        "box": {
-        "title": "If you cannot click btnDone, because it is hidden",
-        "text": "Click the small arrow at the top of the Properties window, above the list of properties. A list of every control on frmPractice drops down. Click `btnDone` in the list.",
+        "title": "If you cannot click btnAnswer2 or btnAnswer3, because the white box hides them",
+        "text": "Click the small arrow at the top of the Properties window, above the list of properties. A list of every control on frmPractice drops down. Click `btnAnswer2` in the list. Then do the same for `btnAnswer3`.",
         "fold": true
        }
       },
@@ -1824,7 +1824,7 @@
        ]
       },
       {
-       "p": "Chapter 11 builds Pack the Rucksack, the real game for place 0. That chapter replaces this line with its own."
+       "p": "Chapter 11 builds Pack the Rucksack, the real game for place 0. If you build that chapter, it replaces this line with its own."
       }
      ],
      "id": "1"
@@ -2026,7 +2026,7 @@
         },
         {
          "do": "Click **850 m**.",
-         "see": "The right answer turns green and **See my score** appears.",
+         "see": "All 3 answers turn grey. The result line says **Right! Slieve Donard is 850 m high.** and **See my score** appears.",
          "id": "5-2.12",
          "n": 12
         },

@@ -3,7 +3,7 @@
  "n": 17,
  "of": 20,
  "title": "Build Route Timer, a slider game where you estimate how long a walk takes",
- "kind": "a game chapter: build one game from each pair, and this pair is chapters 17 and 18",
+ "kind": "a game chapter: build one game from each pair, and this pair is chapters 14 and 17",
  "one": "You build Route Timer in your own project, exactly as it is in Summit Ready, and test it. Then you change it into an estimating game on your own topic.",
  "prev": {
   "id": "16",
@@ -29,7 +29,7 @@
        "p": "Route Timer is an estimating game. It is on Slieve Muck, the seventh place on the Summit Ready map."
       },
       {
-       "p": "You build one game from each pair of game chapters. Route Timer is paired with Listen Out, so you build one of those two."
+       "p": "You build one game from each pair of game chapters. Route Timer is paired with Read the Sky, so you build one of those two."
       },
       {
        "p": "First you build Route Timer exactly as it is in Summit Ready. Then, in stage 5, you change it into an estimating game on your own topic."
@@ -348,7 +348,7 @@
           "p": "Route Timer never crashes because a file is missing. This is what you see instead."
          },
          {
-          "p": "If `routes.txt` is missing, or has fewer than 5 good lines, a message box says **Route Timer needs 5 legs in Data\\routes.txt, each with 5 parts.**"
+          "p": "If `routes.txt` is missing, or has fewer than 5 good lines, the leg label at the top right shows a message. It says **Route Timer needs 5 legs in Data\\routes.txt, each with 5 parts.** Mend the file, then open Route Timer again."
          },
          {
           "p": "If a line of `routes.txt` does not have exactly 5 parts, Route Timer skips that line."
@@ -797,7 +797,7 @@
         "title": "RouteLeg.cs: the RouteLeg class",
         "lang": "cs",
         "why": "You type the 5 properties, and the 5 lines that put a value into each one, because they are new. The rest reads a file the same way as `LoadAll` in chapter 3, so it comes in the copy.",
-        "text": "// One leg from routes.txt: where it goes, how far and how much climb\nclass RouteLeg\n{\n    public string From { get; set; }       // where the leg starts\n    public string To { get; set; }         // where the leg ends\n    public double Distance { get; set; }   // kilometres\n    public int Climb { get; set; }         // metres of climb\n    public string Picture { get; set; }    // the photo's file name\n\n    // Makes one RouteLeg from a line of routes.txt, split at each |\n    public RouteLeg(string[] parts)\n    {\n        From = parts[0];\n        To = parts[1];\n        Distance = Convert.ToDouble(parts[2]);\n        Climb = Convert.ToInt32(parts[3]);\n        Picture = parts[4];\n    }\n\n    // Reads every leg in routes.txt into a list\n    public static List<RouteLeg> LoadAll()\n    {\n        List<RouteLeg> legs = new List<RouteLeg>();\n        string path = Files.Data(\"routes.txt\");\n        if (!File.Exists(path)) return legs;   // no file: an empty list\n        StreamReader reader = new StreamReader(path);\n        while (!reader.EndOfStream)\n        {\n            string line = reader.ReadLine();\n            string[] parts = line.Split('|');\n            if (parts.Length != 5) continue;    // skip a broken line\n            legs.Add(new RouteLeg(parts));\n        }\n        reader.Close();\n        return legs;\n    }",
+        "text": "// One leg from routes.txt: where it goes, how far and how much climb\nclass RouteLeg\n{\n    public string From { get; set; }       // where the leg starts\n    public string To { get; set; }         // where the leg ends\n    public double Distance { get; set; }   // kilometres\n    public int Climb { get; set; }         // metres of climb\n    public string Picture { get; set; }    // the photo's file name\n\n    // Makes one RouteLeg from a line of routes.txt, split at each |\n    public RouteLeg(string[] parts)\n    {\n        From = parts[0];\n        To = parts[1];\n        Distance = Convert.ToDouble(parts[2]);\n        Climb = Convert.ToInt32(parts[3]);\n        Picture = parts[4];\n    }\n\n    // Reads every leg in routes.txt into a list\n    public static List<RouteLeg> LoadAll()\n    {\n        List<RouteLeg> legs = new List<RouteLeg>();\n        string path = Files.Data(\"routes.txt\");\n        if (!File.Exists(path)) return legs;   // no file: an empty list\n        StreamReader reader = new StreamReader(path);\n        while (!reader.EndOfStream)\n        {\n            string line = reader.ReadLine();\n            string[] parts = line.Split('|');\n            if (parts.Length != 5) continue;    // skip a broken line\n            legs.Add(new RouteLeg(parts));\n        }\n        reader.Close();\n        return legs;\n    }\n}",
         "partLines": [
          [
           2,
@@ -825,7 +825,7 @@
          ],
          [
           34,
-          36,
+          37,
           "Close the file and hand back the list",
           "`reader.Close()` closes `routes.txt`, so that other programs can open it again. `return legs;` hands the full list back to the code that called LoadAll."
          ]
@@ -1076,7 +1076,8 @@
          "FormBorderStyle = FixedSingle",
          "Size = 1016, 699",
          "MaximizeBox = False",
-         "BackColor = 243, 245, 242"
+         "BackColor = 243, 245, 242",
+         "ForeColor = 38, 50, 56"
         ]
        }
       },
@@ -2704,9 +2705,15 @@
         },
         {
          "do": "Type the yellow lines from the code above.",
-         "see": "The first piece of ShowLeg is under frmRouteTimer_Load. Red underlines show further down, because ShowLeg has no closing `}` yet. This is normal.",
+         "see": "The first piece of ShowLeg is under frmRouteTimer_Load. Visual Studio 2019 added the `}` that closes ShowLeg when you typed its `{`. The next piece goes above that `}`.",
          "id": "4-5.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ]
+         ]
         }
        ]
       },
@@ -2882,7 +2889,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The red underline under `TimeInWords` in ShowLeg has gone.",
          "id": "4-6.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -2967,7 +2980,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The yellow lines are inside frmRouteTimer_Load, and no line in frmRouteTimer.cs has a red underline.",
          "id": "4-7.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3039,7 +3058,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "LegPoints sits under TimeInWords, and no line in it has a red underline.",
          "id": "4-8.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3217,9 +3242,15 @@
         },
         {
          "do": "Type the yellow lines from the code above.",
-         "see": "The first piece of btnLock_Click is under LegPoints. Red underlines show further down, because btnLock_Click has no closing `}` yet. This is normal.",
+         "see": "The first piece of btnLock_Click is under LegPoints. Visual Studio 2019 added the `}` that closes btnLock_Click when you typed its `{`. The next piece goes above that `}`.",
          "id": "4-9.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ]
+         ]
         }
        ]
       },
@@ -3300,6 +3331,12 @@
         {
          "do": "Under `int points = LegPoints(diff);`, type the yellow lines of the second piece.",
          "see": "The second piece ends with `lblScore.Text = \"Points: \" + total;`.",
+         "wrong": [
+          [
+           "You cannot find the `×` or `÷` key on the keyboard",
+           "Type a small `x` in place of `×`, and a `/` in place of `÷`. The game works the same. Only the working on the screen shows `x` and `/`."
+          ]
+         ],
          "id": "4-9.4",
          "n": 4
         },
@@ -3307,6 +3344,10 @@
          "do": "Under `lblScore.Text = \"Points: \" + total;`, type the yellow lines of the third piece.",
          "see": "btnLock_Click ends with `btnNext.Focus();` and a `}`. `ShowVerdict`, `ShowBar` and `RecordResult` have red underlines. This is normal, because you have not written them yet.",
          "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ],
           [
            "Red underlines are still all down the file",
            "btnLock_Click needs its closing `}`. Check that a `}` sits under `btnNext.Focus();`."
@@ -3390,9 +3431,15 @@
         },
         {
          "do": "Type the yellow lines from the code above.",
-         "see": "The first piece of ShowVerdict is under btnLock_Click. Red underlines show further down, because ShowVerdict has no closing `}` yet. This is normal.",
+         "see": "The first piece of ShowVerdict is under btnLock_Click. Visual Studio 2019 added the `}` that closes ShowVerdict when you typed its `{`. The next piece goes above that `}`.",
          "id": "4-10.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ]
+         ]
         }
        ]
       },
@@ -3446,7 +3493,13 @@
          "do": "Type the yellow lines from the code above. They go straight under `+ \"leg needs.\";` and its `}`.",
          "see": "ShowVerdict ends with a `}`. The red underline under `ShowVerdict` in btnLock_Click has gone.",
          "id": "4-10.4",
-         "n": 4
+         "n": 4,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3546,7 +3599,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The red underline under `ShowBar` in btnLock_Click has gone.",
          "id": "4-11.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3630,7 +3689,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "No line in frmRouteTimer.cs has a red underline.",
          "id": "4-12.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         },
         {
          "do": "Press Ctrl, Shift and B together.",
@@ -3919,7 +3984,7 @@
      "title": "Open Route Timer from the map and play a round",
      "blocks": [
       {
-       "p": "By the end of this screen, place number 6 on your map opens Route Timer, and you have played a whole round."
+       "p": "By the end of this screen, the card for Slieve Muck on your map opens Route Timer, and you have played a whole round."
       },
       {
        "p": "Your map opens each game with a list of cases in frmMap.cs, one case for each place. Route Timer is place number 6, so its case says `case 6:`."
@@ -3937,7 +4002,7 @@
           1,
           1,
           "Open Route Timer",
-          "When the player clicks place number 6, the map makes a new frmRouteTimer and opens it."
+          "When the player clicks the card for Slieve Muck, place number 6, the map makes a new frmRouteTimer and opens it."
          ]
         ],
         "focusLines": [
@@ -4063,7 +4128,7 @@
          "wrong": [
           [
            "The Error List shows CS0152: The switch statement contains multiple cases with the label value '6'",
-           "Your map already uses place number 6 for another game. Change the 6 in the new case line to a place number that your map does not use yet. Then change `gameNumber` in frmRouteTimer.cs to the same number."
+           "The line `case 6: game = new frmRouteTimer(); break;` is in frmMap.cs twice. Delete one of the two lines."
           ]
          ],
          "id": "4-14.8",
@@ -4126,7 +4191,7 @@
          "n": 11
         },
         {
-         "do": "Click place number 6 on the map, the seventh place.",
+         "do": "Click the card for Slieve Muck, the seventh card down the right side of the map.",
          "see": "Route Timer opens. A photo shows on the left, and the leg says **Leg 1 of 5**.",
          "img": {
           "img": "img/cap/c472.png",
@@ -4140,7 +4205,7 @@
             "y": 67.3,
             "w": 36.2,
             "h": 8.8,
-            "say": "Click place number 6 on the map, the seventh place."
+            "say": "Click the card for Slieve Muck, the seventh card down the right side of the map."
            }
           ]
          },
@@ -4184,7 +4249,7 @@
            "Check ShowBar. It must multiply by 600 before it divides by 240."
           ],
           [
-           "A different game opens, or nothing opens, when you click place number 6",
+           "A different game opens, or nothing opens, when you click the card for Slieve Muck",
            "Check the new line in frmMap.cs. It must say `case 6:` and `new frmRouteTimer()`."
           ]
          ],
@@ -4240,7 +4305,7 @@
       {
        "check": [
         {
-         "what": "On Carrick Little to Slieve Binnian, lock in 1 hour 55 minutes.",
+         "what": "If Carrick Little to Slieve Binnian comes up, lock in 1 hour 55 minutes. If it does not come up, press F5 to run the game again.",
          "expect": "allowed",
          "how": "The working says **Total: 114 minutes**. The verdict says **1 minute too long. Spot on. 20 points.** in green.",
          "must": "Must happen",
@@ -4296,7 +4361,7 @@
         {
          "what": "Finish a round, then click Back to the map.",
          "expect": "allowed",
-         "how": "The map shows again, and the flag on place number 6 shows a tick.",
+         "how": "The map shows again, and the flag on Slieve Muck shows a tick.",
          "must": "Must happen",
          "fix": "Check that the first field at the top of frmRouteTimer is `private int gameNumber = 6;`. Then check that frmMap opens Route Timer for `case 6:`.",
          "id": "4-16.t8"

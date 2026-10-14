@@ -13,7 +13,7 @@
  "next": {
   "id": "05",
   "n": 5,
-  "title": "Register with an avatar"
+  "title": "Register a new player with an avatar"
  },
  "stages": [
   {
@@ -1105,6 +1105,9 @@
        ]
       },
       {
+       "p": "Now do the same for Avatar. It has one rule, so only one line is yellow."
+      },
+      {
        "code": {
         "id": "c04-avatar",
         "kind": "type",
@@ -1172,7 +1175,7 @@
             "y": 57.7,
             "w": 35.8,
             "h": 5.8,
-            "say": "Type the yellow lines. Press Enter at the end of each line, but not after the last one."
+            "say": "Type the yellow line."
            },
            {
             "n": 15,
@@ -1217,8 +1220,8 @@
          "n": 13
         },
         {
-         "do": "Type the yellow lines. Press Enter at the end of each line, but not after the last one.",
-         "see": "The yellow lines are where the `// YOU TYPE THIS PART` line was. No line has a red underline.",
+         "do": "Type the yellow line.",
+         "see": "The yellow line is where the `// YOU TYPE THIS PART` line was. No line has a red underline.",
          "wrong": [
           [
            "The `// YOU TYPE THIS PART` line is still there after you type",
@@ -1772,7 +1775,10 @@
        "p": "By the end of this screen, you know that every rule throws the right message, and that a good player is still added."
       },
       {
-       "p": "Change one value in btnTest_Click, press F5, then click Test. A row marked **Must be refused** must show its message and not add the player."
+       "p": "Change one value in btnTest_Click, press F5, then click Test. After each test, close the Summit Ready - Log in window before you change the next value. A row marked **Must be refused** must show its message and not add the player. Take a screenshot of each message, **Rule broken** or **Added:**, before you click OK on it. You need them for your testing document."
+      },
+      {
+       "p": "Test rules 5 and 6 as well, before the row that sets the password to `ropeclimb`. Set the password to `\"\"`, and the message must say **Type a password.** Then set it to `abc1`, and the message must say **Your password needs 6 to 20 characters.**"
       },
       {
        "check": [
@@ -1990,14 +1996,14 @@
        ]
       },
       {
-       "p": "testClimber and rulesTester stay in `players.txt`. Chapter 6 uses them to test the log in."
+       "p": "testClimber and rulesTester stay in `players.txt`."
       },
       {
        "box": {
         "title": "Evidence to keep",
         "blocks": [
          {
-          "p": "Take a screenshot of each **Rule broken** message from the tests, and of the **Added:** message."
+          "p": "Use the screenshots you took on the last screen, one of each **Rule broken** message and of the **Added:** message."
          },
          {
           "p": "Paste each screenshot into your testing document, beside the test data that caused it. Each test is a row: the data, what should happen, and what did happen."

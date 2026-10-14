@@ -8,7 +8,7 @@
  "prev": {
   "id": "04",
   "n": 4,
-  "title": "Exceptions and the Player rules"
+  "title": "Your own exceptions"
  },
  "next": {
   "id": "06",
@@ -548,7 +548,7 @@
        "p": "By the end of this screen, frmRegister has a heading and the first 4 avatar pictures, each in its own frame."
       },
       {
-       "p": "Each avatar is a picture inside a panel that is a little bigger than the picture. The edge of the panel shows all round the picture, like a frame."
+       "p": "Each avatar is a picture inside a panel that is a little bigger than the picture. The panel leaves a thin edge all round the picture, like a frame. You cannot see the edge yet, because the panel has the same colour as the form."
       },
       {
        "p": "When a player clicks a picture, the code turns its frame gold. That is why each picture needs its own panel."
@@ -592,7 +592,7 @@
            "Tag = avatar-goat.png"
           ],
           "note": "Drop the PictureBox inside pnlGoat. Its Location counts from the top left corner of pnlGoat, not of the form.",
-          "then": "A white square sits inside pnlGoat, with a thin edge of the panel showing all round it."
+          "then": "A white square sits inside pnlGoat. You cannot see the panel, because it has the same colour as the form."
          },
          {
           "toolbox": "Label",
@@ -629,7 +629,7 @@
            "Tag = avatar-eagle.png"
           ],
           "note": "Drop the PictureBox inside pnlEagle. Its Location counts from the top left corner of pnlEagle, not of the form.",
-          "then": "A white square sits inside pnlEagle, with a thin edge of the panel showing all round it."
+          "then": "A white square sits inside pnlEagle. You cannot see the panel, because it has the same colour as the form."
          },
          {
           "toolbox": "Label",
@@ -666,7 +666,7 @@
            "Tag = avatar-fox.png"
           ],
           "note": "Drop the PictureBox inside pnlFox. Its Location counts from the top left corner of pnlFox, not of the form.",
-          "then": "A white square sits inside pnlFox, with a thin edge of the panel showing all round it."
+          "then": "A white square sits inside pnlFox. You cannot see the panel, because it has the same colour as the form."
          },
          {
           "toolbox": "Label",
@@ -703,7 +703,7 @@
            "Tag = avatar-hare.png"
           ],
           "note": "Drop the PictureBox inside pnlHare. Its Location counts from the top left corner of pnlHare, not of the form.",
-          "then": "A white square sits inside pnlHare, with a thin edge of the panel showing all round it."
+          "then": "A white square sits inside pnlHare. You cannot see the panel, because it has the same colour as the form."
          },
          {
           "toolbox": "Label",
@@ -771,7 +771,7 @@
            "Tag = avatar-deer.png"
           ],
           "note": "Drop the PictureBox inside pnlDeer. Its Location counts from the top left corner of pnlDeer, not of the form.",
-          "then": "A white square sits inside pnlDeer, with a thin edge of the panel showing all round it."
+          "then": "A white square sits inside pnlDeer. You cannot see the panel, because it has the same colour as the form."
          },
          {
           "toolbox": "Label",
@@ -808,7 +808,7 @@
            "Tag = avatar-owl.png"
           ],
           "note": "Drop the PictureBox inside pnlOwl. Its Location counts from the top left corner of pnlOwl, not of the form.",
-          "then": "A white square sits inside pnlOwl, with a thin edge of the panel showing all round it."
+          "then": "A white square sits inside pnlOwl. You cannot see the panel, because it has the same colour as the form."
          },
          {
           "toolbox": "Label",
@@ -845,7 +845,7 @@
            "Tag = avatar-badger.png"
           ],
           "note": "Drop the PictureBox inside pnlBadger. Its Location counts from the top left corner of pnlBadger, not of the form.",
-          "then": "A white square sits inside pnlBadger, with a thin edge of the panel showing all round it."
+          "then": "A white square sits inside pnlBadger. You cannot see the panel, because it has the same colour as the form."
          },
          {
           "toolbox": "Label",
@@ -882,7 +882,7 @@
            "Tag = avatar-raven.png"
           ],
           "note": "Drop the PictureBox inside pnlRaven. Its Location counts from the top left corner of pnlRaven, not of the form.",
-          "then": "A white square sits inside pnlRaven, with a thin edge of the panel showing all round it."
+          "then": "A white square sits inside pnlRaven. You cannot see the panel, because it has the same colour as the form."
          },
          {
           "toolbox": "Label",
@@ -1083,6 +1083,12 @@
         {
          "do": "Type the yellow lines from the code above.",
          "see": "The 3 fields are under the `{`. `pictures` has no red underline.",
+         "wrong": [
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
          "id": "3-1.4",
          "n": 4
         }
@@ -1243,6 +1249,16 @@
         {
          "do": "Type the yellow lines from the code above.",
          "see": "The yellow lines are inside frmRegister_Load. No line has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
          "id": "3-1.11",
          "n": 11
         }
@@ -1388,6 +1404,16 @@
         {
          "do": "Type the yellow lines from the code above.",
          "see": "Avatar_Click sits under frmRegister_Load. No line has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
          "id": "3-2.3",
          "n": 3
         }
@@ -1592,8 +1618,16 @@
          "see": "The start of btnCreate_Click sits under Avatar_Click. Visual Studio 2019 added the `}` that closes btnCreate_Click when you typed its `{`.",
          "wrong": [
           [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ],
+          [
            "btnCreate_Click has no `}` at the end",
            "Press Enter after the last yellow line, then type `}`."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
           ]
          ],
          "id": "3-3.3",
@@ -1802,6 +1836,16 @@
         {
          "do": "Triple-click the last line that starts with `// YOU TYPE THIS PART`, then type the last group of yellow lines.",
          "see": "The 2 `catch` blocks sit under the line `Player.CheckPasswordsMatch`. No line has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
          "id": "3-4.8",
          "n": 8
         }
@@ -1900,6 +1944,16 @@
         {
          "do": "Type the yellow lines from the code above.",
          "see": "btnCreate_Click ends with `this.Close();` and one `}`.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
          "id": "3-5.3",
          "n": 3
         }
@@ -1986,6 +2040,16 @@
         {
          "do": "Type the yellow lines from the code above.",
          "see": "btnBack_Click is the last method in frmRegister.cs.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
          "id": "3-6.3",
          "n": 3
         }
