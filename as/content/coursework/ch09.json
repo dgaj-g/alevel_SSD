@@ -30,10 +30,11 @@
       },
       {
        "screenshot": {
-        "missing": true,
-        "w": 1000,
-        "h": 660,
+        "img": "img/cap/s9e9e62b9.png",
         "alt": "The practice game window, with the dark strip, the question and 3 answer buttons, and the white Round over box in the middle",
+        "w": 818,
+        "h": 565,
+        "marks": [],
         "cap": "The practice game, with the Round over box showing after the round."
        }
       },
@@ -187,41 +188,61 @@
          "do": "Double-click `GameResult.cs` in Solution Explorer.",
          "see": "GameResult.cs opens in the code editor.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c155.png",
           "alt": "GameResult.cs, with the comment and the 2 lists typed",
-          "w": 800,
-          "h": 360,
+          "w": 1102,
+          "h": 318,
           "marks": [
            {
             "n": 1,
+            "x": 30.0,
+            "y": 3.1,
             "say": "Double-click `GameResult.cs` in Solution Explorer."
            },
            {
             "n": 2,
+            "x": 12.9,
+            "y": 51.2,
             "say": "Click at the end of the `{` under `namespace SummitReady`."
            },
            {
             "n": 3,
+            "x": 14.0,
+            "y": 56.2,
             "say": "Press Enter."
            },
            {
             "n": 4,
+            "x": 13.1,
+            "y": 52.7,
+            "w": 44.7,
+            "h": 7.3,
             "say": "Type the yellow comment line."
            },
            {
             "n": 5,
+            "x": 36.4,
+            "y": 76.2,
             "say": "Click at the end of the line `public int Score { get; set; }`"
            },
            {
             "n": 6,
+            "x": 16.6,
+            "y": 81.5,
             "say": "Press Enter."
            },
            {
             "n": 7,
+            "x": 15.7,
+            "y": 78.1,
+            "w": 33.9,
+            "h": 12.3,
             "say": "Type the 2 yellow lines that start with `public List<string>`."
            },
            {
             "n": 8,
+            "x": 30.0,
+            "y": 3.1,
             "say": "Press Ctrl and S together."
            }
           ]
@@ -291,34 +312,28 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c068.png",
           "alt": "The project menu, with Add pointed at and Form (Windows Forms) in the second menu",
-          "w": 640,
-          "h": 420,
+          "w": 949,
+          "h": 605,
           "marks": [
            {
             "n": 1,
+            "x": 73.8,
+            "y": 4.6,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 2,
+            "x": 40.6,
+            "y": 37.8,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 3,
+            "x": 11.6,
+            "y": 81.0,
             "say": "Click **Form (Windows Forms)...** in the second menu."
-           },
-           {
-            "n": 4,
-            "say": "Triple-click the Name box at the bottom of the Add New Item window."
-           },
-           {
-            "n": 5,
-            "say": "Type `frmPractice.cs`"
-           },
-           {
-            "n": 6,
-            "say": "Click **Add**."
            }
           ]
          },
@@ -340,6 +355,34 @@
         {
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Form1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "img": "img/cap/c069.png",
+          "alt": "The Add New Item window, with Form (Windows Forms) picked",
+          "w": 943,
+          "h": 592,
+          "marks": [
+           {
+            "n": 4,
+            "x": 42.5,
+            "y": 91.1,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "x": 13.8,
+            "y": 89.5,
+            "w": 57.4,
+            "h": 3.5,
+            "say": "Type `frmPractice.cs`"
+           },
+           {
+            "n": 6,
+            "x": 86.0,
+            "y": 96.3,
+            "say": "Click **Add**."
+           }
+          ]
+         },
          "id": "2-2.4",
          "n": 4
         },
@@ -365,9 +408,9 @@
         "props": [
          "Font = Segoe UI, 11pt",
          "Text = Summit Ready - Practice game",
-         "ClientSize = 1000, 660",
          "StartPosition = CenterScreen",
          "FormBorderStyle = FixedSingle",
+         "Size = 1016, 699",
          "MaximizeBox = False",
          "BackColor = 243, 245, 242",
          "ForeColor = 38, 50, 56"
@@ -383,21 +426,29 @@
          "do": "Click the lightning bolt at the top of the Properties window.",
          "see": "The Properties window lists the form's events in place of its properties.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c156.png",
           "alt": "The Properties window showing the events of frmPractice, with the lightning bolt, Load and the Properties button",
-          "w": 360,
-          "h": 480,
+          "w": 352,
+          "h": 514,
           "marks": [
            {
             "n": 7,
+            "x": 25.8,
+            "y": 11.2,
             "say": "Click the lightning bolt at the top of the Properties window."
            },
            {
             "n": 8,
+            "x": 4.2,
+            "y": 47.1,
+            "w": 94.1,
+            "h": 3.8,
             "say": "Double-click the empty box beside **Load**. Scroll down the list a little if you cannot see it."
            },
            {
             "n": 10,
+            "x": 19.2,
+            "y": 11.2,
             "say": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window."
            }
           ]
@@ -415,13 +466,15 @@
          "do": "Press Shift and F7 together.",
          "see": "The designer shows frmPractice.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c157.png",
           "alt": "The designer showing frmPractice",
-          "w": 800,
-          "h": 300,
+          "w": 1078,
+          "h": 624,
           "marks": [
            {
             "n": 9,
+            "x": 9.1,
+            "y": 1.6,
             "say": "Press Shift and F7 together."
            }
           ]
@@ -542,11 +595,11 @@
         "done": {
          "see": "The dark strip along the top of frmPractice holds the title, the instruction, Points: 0, an empty picture box and **Back to the map**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c158.png",
           "alt": "The dark strip on frmPractice with every control from the table on it",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1078,
+          "h": 624,
+          "marks": []
          }
         }
        }
@@ -678,11 +731,11 @@
         "done": {
          "see": "The white box in the middle of frmPractice says **Round over** and the score line. Under them are **What went well** in green, **What went wrong** in red and a gold button.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c159.png",
           "alt": "The Round over box on frmPractice with every control from the table on it",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1078,
+          "h": 624,
+          "marks": []
          }
         }
        }
@@ -807,11 +860,11 @@
         "done": {
          "see": "The question runs across the top of the play area. The white box covers part of the answers in the designer. When the game runs, the box is hidden until the round ends.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c160.png",
           "alt": "frmPractice in the designer with the strip, the play area and the white box",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1078,
+          "h": 624,
+          "marks": []
          }
         }
        }
@@ -877,25 +930,35 @@
          "do": "Press F7.",
          "see": "The code of frmPractice shows in the code editor.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c161.png",
           "alt": "frmPractice.cs, with the fields typed under the class line",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 414,
           "marks": [
            {
             "n": 1,
+            "x": 5.0,
+            "y": 2.4,
             "say": "Press F7."
            },
            {
             "n": 2,
+            "x": 15.4,
+            "y": 62.7,
             "say": "Click at the end of the `{` under `public partial class frmPractice : Form`."
            },
            {
             "n": 3,
+            "x": 16.6,
+            "y": 66.6,
             "say": "Press Enter."
            },
            {
             "n": 4,
+            "x": 15.7,
+            "y": 63.9,
+            "w": 43.4,
+            "h": 28.7,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -954,21 +1017,29 @@
          "do": "Click at the end of the `{` under `private void frmPractice_Load(object sender, EventArgs e)`.",
          "see": "The flashing cursor is after the `{`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c162.png",
           "alt": "frmPractice.cs, with the 2 lines typed inside frmPractice_Load",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 574,
           "marks": [
            {
             "n": 5,
+            "x": 18.0,
+            "y": 87.0,
             "say": "Click at the end of the `{` under `private void frmPractice_Load(object sender, EventArgs e)`."
            },
            {
             "n": 6,
+            "x": 19.1,
+            "y": 89.8,
             "say": "Press Enter."
            },
            {
             "n": 7,
+            "x": 18.2,
+            "y": 87.8,
+            "w": 43.4,
+            "h": 6.8,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1057,26 +1128,6 @@
         {
          "do": "Click at the end of the `}` that closes `frmPractice_Load`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmPractice.cs, with Answer_Click typed under frmPractice_Load",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `frmPractice_Load`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-2.1",
          "n": 1
         },
@@ -1144,26 +1195,6 @@
         {
          "do": "Click at the end of the `}` that closes `Answer_Click`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmPractice.cs, with RecordResult typed under Answer_Click",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 4,
-            "say": "Click at the end of the `}` that closes `Answer_Click`."
-           },
-           {
-            "n": 5,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 6,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-2.4",
          "n": 4
         },
@@ -1216,26 +1247,6 @@
         {
          "do": "Click at the end of the `}` that closes `RecordResult`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmPractice.cs, with btnScore_Click typed under RecordResult",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 7,
-            "say": "Click at the end of the `}` that closes `RecordResult`."
-           },
-           {
-            "n": 8,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 9,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-2.7",
          "n": 7
         },
@@ -1335,26 +1346,6 @@
         {
          "do": "Click at the end of the `}` that closes `btnScore_Click`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmPractice.cs, with KeepResult and ShowRoundOver typed under btnScore_Click",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `btnScore_Click`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-3.1",
          "n": 1
         },
@@ -1430,26 +1421,6 @@
         {
          "do": "Click at the end of the `}` that closes `ShowRoundOver`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmPractice.cs, with ListText typed under ShowRoundOver",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 4,
-            "say": "Click at the end of the `}` that closes `ShowRoundOver`."
-           },
-           {
-            "n": 5,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 6,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-3.4",
          "n": 4
         },
@@ -1526,26 +1497,6 @@
         {
          "do": "Click at the end of the `}` that closes `ListText`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmPractice.cs, with the 3 methods typed under ListText",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `ListText`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-4.1",
          "n": 1
         },
@@ -1602,30 +1553,6 @@
         {
          "do": "Click at the end of the `}` that closes `frmPractice_FormClosing`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmPractice.cs, with ShowSpeaker and picSound_Click pasted at the bottom",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 4,
-            "say": "Click at the end of the `}` that closes `frmPractice_FormClosing`."
-           },
-           {
-            "n": 5,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 7,
-            "say": "Press Ctrl and V together."
-           },
-           {
-            "n": 8,
-            "say": "Press Ctrl and S together."
-           }
-          ]
-         },
          "id": "4-4.4",
          "n": 4
         },
@@ -1709,13 +1636,15 @@
          "do": "Press Shift and F7 together.",
          "see": "The designer shows frmPractice.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c170.png",
           "alt": "frmPractice in the designer, with the events list of btnAnswer1",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 517,
           "marks": [
            {
             "n": 1,
+            "x": 11.7,
+            "y": 1.6,
             "say": "Press Shift and F7 together."
            }
           ]
@@ -1727,13 +1656,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 2,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -1798,29 +1729,41 @@
          "do": "Double-click `frmMap.cs` in Solution Explorer.",
          "see": "The design of frmMap shows.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c171.png",
           "alt": "frmMap.cs, with the new case line under the comment line in OpenGame",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 430,
           "marks": [
            {
             "n": 1,
+            "x": 5.0,
+            "y": 2.3,
             "say": "Double-click `frmMap.cs` in Solution Explorer."
            },
            {
             "n": 2,
+            "x": 5.0,
+            "y": 2.3,
             "say": "Press F7."
            },
            {
             "n": 3,
+            "x": 56.8,
+            "y": 86.3,
             "say": "Click at the end of the line `// each game chapter adds its own case below this line`"
            },
            {
             "n": 4,
+            "x": 21.7,
+            "y": 90.0,
             "say": "Press Enter."
            },
            {
             "n": 5,
+            "x": 20.8,
+            "y": 87.5,
+            "w": 26.9,
+            "h": 5.4,
             "say": "Type `case 0: game = new frmPractice(); break;`"
            }
           ]
@@ -1856,13 +1799,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 6,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -1899,25 +1844,35 @@
          "do": "Press F5 to run the game.",
          "see": "The login window opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c172.png",
           "alt": "The map, with the card for Slieve Binnian at the top of the right side",
           "w": 1000,
-          "h": 660,
+          "h": 681,
           "marks": [
            {
             "n": 1,
+            "x": 7.0,
+            "y": 2.0,
             "say": "Press F5 to run the game."
            },
            {
             "n": 2,
+            "x": 8.9,
+            "y": 7.5,
             "say": "Log in with your username and password."
            },
            {
             "n": 3,
+            "x": 20.1,
+            "y": 10.6,
             "say": "Click **Start the expedition**."
            },
            {
             "n": 4,
+            "x": 62.7,
+            "y": 13.6,
+            "w": 36.2,
+            "h": 8.6,
             "say": "Click the card for Slieve Binnian, at the top of the right side."
            }
           ]
@@ -1953,17 +1908,21 @@
          "do": "Click **746 m**.",
          "see": "All 3 answers turn grey. The result line says **Not quite. Slieve Donard is 850 m high.** Points says 0, and **See my score** appears.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c173.png",
           "alt": "The practice game after a wrong answer, with See my score showing",
           "w": 1000,
-          "h": 660,
+          "h": 689,
           "marks": [
            {
             "n": 5,
+            "x": 13.8,
+            "y": 32.7,
             "say": "Click **746 m**."
            },
            {
             "n": 6,
+            "x": 15.0,
+            "y": 53.3,
             "say": "Click **See my score**."
            }
           ]
@@ -1987,37 +1946,53 @@
          "do": "Click the gold **Back to the map**.",
          "see": "The practice game closes with no question. On the map, Slieve Binnian has a tick and a green card.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c174.png",
           "alt": "The map with a tick on Slieve Binnian and its green card",
           "w": 1000,
-          "h": 660,
+          "h": 689,
           "marks": [
            {
             "n": 7,
+            "x": 31.2,
+            "y": 87.4,
             "say": "Click the gold **Back to the map**."
            },
            {
             "n": 8,
+            "x": 87.9,
+            "y": 8.3,
             "say": "Click **Back to the welcome screen**."
            },
            {
             "n": 9,
+            "x": 7.0,
+            "y": 2.0,
             "say": "Click **Yes**."
            },
            {
             "n": 10,
+            "x": 8.9,
+            "y": 7.5,
             "say": "Click **Start the expedition** again."
            },
            {
             "n": 11,
+            "x": 62.7,
+            "y": 13.5,
+            "w": 36.2,
+            "h": 8.5,
             "say": "Click the card for Slieve Binnian."
            },
            {
             "n": 12,
+            "x": 77.1,
+            "y": 19.0,
             "say": "Click **850 m**."
            },
            {
             "n": 13,
+            "x": 67.6,
+            "y": 7.1,
             "say": "Click **See my score**."
            }
           ]

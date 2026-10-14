@@ -30,10 +30,11 @@
       },
       {
        "screenshot": {
-        "missing": true,
-        "w": 1000,
-        "h": 660,
+        "img": "img/cap/scc71142d.png",
         "alt": "The map window, with the Mournes map on the left and 8 summit cards down the right",
+        "w": 818,
+        "h": 565,
+        "marks": [],
         "cap": "The map at the start of an expedition. No summit is climbed yet."
        }
       },
@@ -216,34 +217,28 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c023.png",
           "alt": "The project menu, with Add pointed at and Class in the second menu",
-          "w": 640,
-          "h": 420,
+          "w": 959,
+          "h": 616,
           "marks": [
            {
             "n": 1,
+            "x": 73.0,
+            "y": 5.4,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 2,
+            "x": 39.6,
+            "y": 38.6,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 3,
+            "x": 6.2,
+            "y": 93.2,
             "say": "Click **Class...** in the second menu."
-           },
-           {
-            "n": 4,
-            "say": "Triple-click the Name box at the bottom of the Add New Item window."
-           },
-           {
-            "n": 5,
-            "say": "Type `GameResult.cs`"
-           },
-           {
-            "n": 6,
-            "say": "Click **Add**."
            }
           ]
          },
@@ -265,6 +260,32 @@
         {
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "img": "img/cap/c024.png",
+          "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
+          "w": 948,
+          "h": 660,
+          "marks": [
+           {
+            "n": 4,
+            "x": 16.9,
+            "y": 92.1,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "x": 42.2,
+            "y": 92.1,
+            "say": "Type `GameResult.cs`"
+           },
+           {
+            "n": 6,
+            "x": 85.7,
+            "y": 96.5,
+            "say": "Click **Add**."
+           }
+          ]
+         },
          "id": "2-1.4",
          "n": 4
         },
@@ -319,25 +340,35 @@
          "do": "Click at the end of the `{` under `class GameResult`.",
          "see": "The flashing cursor is after the `{`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c128.png",
           "alt": "GameResult.cs, with the 2 properties and the constructor typed",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 7,
+            "x": 15.4,
+            "y": 32.1,
             "say": "Click at the end of the `{` under `class GameResult`."
            },
            {
             "n": 8,
+            "x": 16.6,
+            "y": 34.7,
             "say": "Press Enter."
            },
            {
             "n": 9,
+            "x": 15.7,
+            "y": 32.9,
+            "w": 30.1,
+            "h": 22.4,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 10,
+            "x": 5.0,
+            "y": 1.6,
             "say": "Press Ctrl and S together."
            }
           ]
@@ -456,41 +487,61 @@
          "do": "Double-click `Expedition.cs` in Solution Explorer.",
          "see": "Expedition.cs opens in the code editor.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c129.png",
           "alt": "Expedition.cs, with the comment above the class and the arrays typed",
-          "w": 800,
-          "h": 400,
+          "w": 1568,
+          "h": 502,
           "marks": [
            {
             "n": 1,
+            "x": 87.1,
+            "y": 31.5,
             "say": "Double-click `Expedition.cs` in Solution Explorer."
            },
            {
             "n": 2,
+            "x": 7.5,
+            "y": 26.9,
             "say": "Click at the end of the `{` under `namespace SummitReady`."
            },
            {
             "n": 3,
+            "x": 6.7,
+            "y": 29.5,
             "say": "Press Enter."
            },
            {
             "n": 4,
+            "x": 7.6,
+            "y": 27.7,
+            "w": 22.3,
+            "h": 3.8,
             "say": "Type the yellow comment line that starts `// The climb in progress`."
            },
            {
             "n": 5,
+            "x": 31.2,
+            "y": 37.4,
             "say": "Click at the end of the line `public static Player CurrentPlayer;   // who is logged in`"
            },
            {
             "n": 6,
+            "x": 9.6,
+            "y": 40.0,
             "say": "Press Enter twice."
            },
            {
             "n": 7,
+            "x": 9.1,
+            "y": 41.0,
+            "w": 26.8,
+            "h": 32.7,
             "say": "Type the rest of the yellow lines."
            },
            {
             "n": 8,
+            "x": 2.9,
+            "y": 1.6,
             "say": "Press Ctrl and S together."
            }
           ]
@@ -607,21 +658,29 @@
          "do": "Click at the end of the line `public static GameResult[] Results = new GameResult[8];`",
          "see": "The flashing cursor is after the `;`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c130.png",
           "alt": "Expedition.cs, with Start and Finish typed under the arrays",
-          "w": 800,
-          "h": 360,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 1,
+            "x": 52.3,
+            "y": 42.8,
             "say": "Click at the end of the line `public static GameResult[] Results = new GameResult[8];`"
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 45.5,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 46.3,
+            "w": 35.8,
+            "h": 46.1,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -685,25 +744,35 @@
          "do": "Click at the end of the `}` that closes `Finish`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c131.png",
           "alt": "Expedition.cs, with Total and DoneCount typed under Finish",
-          "w": 800,
-          "h": 360,
+          "w": 1102,
+          "h": 679,
           "marks": [
            {
             "n": 4,
+            "x": 18.0,
+            "y": 28.6,
             "say": "Click at the end of the `}` that closes `Finish`."
            },
            {
             "n": 5,
+            "x": 16.6,
+            "y": 31.0,
             "say": "Press Enter twice."
            },
            {
             "n": 6,
+            "x": 15.7,
+            "y": 31.7,
+            "w": 35.8,
+            "h": 50.6,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 7,
+            "x": 6.4,
+            "y": 97.7,
             "say": "Press Ctrl, Shift and B together. This builds your project, which checks your code for mistakes."
            }
           ]
@@ -767,34 +836,28 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c068.png",
           "alt": "The project menu, with Add pointed at and Form (Windows Forms) in the second menu",
-          "w": 640,
-          "h": 420,
+          "w": 949,
+          "h": 605,
           "marks": [
            {
             "n": 1,
+            "x": 73.8,
+            "y": 4.6,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 2,
+            "x": 40.6,
+            "y": 37.8,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 3,
+            "x": 11.6,
+            "y": 81.0,
             "say": "Click **Form (Windows Forms)...** in the second menu."
-           },
-           {
-            "n": 4,
-            "say": "Triple-click the Name box at the bottom of the Add New Item window."
-           },
-           {
-            "n": 5,
-            "say": "Type `frmMap.cs`"
-           },
-           {
-            "n": 6,
-            "say": "Click **Add**."
            }
           ]
          },
@@ -816,6 +879,34 @@
         {
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Form1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "img": "img/cap/c069.png",
+          "alt": "The Add New Item window, with Form (Windows Forms) picked",
+          "w": 943,
+          "h": 592,
+          "marks": [
+           {
+            "n": 4,
+            "x": 42.5,
+            "y": 91.1,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "x": 13.8,
+            "y": 89.5,
+            "w": 57.4,
+            "h": 3.5,
+            "say": "Type `frmMap.cs`"
+           },
+           {
+            "n": 6,
+            "x": 86.0,
+            "y": 96.3,
+            "say": "Click **Add**."
+           }
+          ]
+         },
          "id": "3-1.4",
          "n": 4
         },
@@ -841,9 +932,9 @@
         "props": [
          "Font = Segoe UI, 11pt",
          "Text = Summit Ready - Your expedition",
-         "ClientSize = 1000, 660",
          "StartPosition = CenterScreen",
          "FormBorderStyle = FixedSingle",
+         "Size = 1016, 699",
          "MaximizeBox = False",
          "BackColor = 243, 245, 242",
          "ForeColor = 38, 50, 56"
@@ -859,21 +950,29 @@
          "do": "Click the lightning bolt at the top of the Properties window.",
          "see": "The Properties window lists the form's events in place of its properties.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c132.png",
           "alt": "The Properties window showing the events of frmMap, with the lightning bolt, Load and the Properties button",
-          "w": 360,
-          "h": 480,
+          "w": 352,
+          "h": 514,
           "marks": [
            {
             "n": 7,
+            "x": 25.1,
+            "y": 11.2,
             "say": "Click the lightning bolt at the top of the Properties window."
            },
            {
             "n": 8,
+            "x": 35.5,
+            "y": 80.2,
+            "w": 55.7,
+            "h": 3.8,
             "say": "Double-click the empty box beside **Load**. Scroll down the list a little if you cannot see it."
            },
            {
             "n": 10,
+            "x": 18.8,
+            "y": 11.2,
             "say": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window."
            }
           ]
@@ -891,13 +990,15 @@
          "do": "Press Shift and F7 together, to go back from the code to the designer.",
          "see": "The designer shows frmMap.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c133.png",
           "alt": "The designer showing frmMap",
-          "w": 800,
-          "h": 300,
+          "w": 1531,
+          "h": 626,
           "marks": [
            {
             "n": 9,
+            "x": 13.2,
+            "y": 2.0,
             "say": "Press Shift and F7 together, to go back from the code to the designer."
            }
           ]
@@ -1041,11 +1142,11 @@
         "done": {
          "see": "The dark strip along the top of frmMap holds the title, the instruction, the points, an empty picture box and **Back to the welcome screen**. Under it, a large empty picture box fills the left side. The right side stays empty above the gold Finish button, because the code puts the 8 cards there.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c134.png",
           "alt": "frmMap in the designer with every control from the table on it",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1041,
+          "h": 881,
+          "marks": []
          }
         }
        }
@@ -1125,25 +1226,35 @@
          "do": "Press F7.",
          "see": "The code of frmMap shows in the code editor.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c135.png",
           "alt": "frmMap.cs, with the fields typed under the class line",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 446,
           "marks": [
            {
             "n": 1,
+            "x": 5.0,
+            "y": 2.2,
             "say": "Press F7."
            },
            {
             "n": 2,
+            "x": 15.4,
+            "y": 47.3,
             "say": "Click at the end of the `{` under `public partial class frmMap : Form`."
            },
            {
             "n": 3,
+            "x": 16.6,
+            "y": 50.8,
             "say": "Press Enter."
            },
            {
             "n": 4,
+            "x": 15.7,
+            "y": 48.4,
+            "w": 42.8,
+            "h": 44.8,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1223,37 +1334,55 @@
          "do": "Click before the word `private` in the line `private void frmMap_Load(object sender, EventArgs e)`.",
          "see": "The flashing cursor is before `private`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c136.png",
           "alt": "frmMap.cs, with the comment above frmMap_Load and its lines typed",
-          "w": 800,
-          "h": 360,
+          "w": 1102,
+          "h": 574,
           "marks": [
            {
             "n": 5,
+            "x": 16.6,
+            "y": 67.4,
             "say": "Click before the word `private` in the line `private void frmMap_Load(object sender, EventArgs e)`."
            },
            {
             "n": 6,
+            "x": 22.2,
+            "y": 67.4,
             "say": "Press Enter."
            },
            {
             "n": 7,
+            "x": 14.7,
+            "y": 64.6,
             "say": "Press the Up arrow key."
            },
            {
             "n": 8,
+            "x": 15.7,
+            "y": 62.7,
+            "w": 35.8,
+            "h": 4.1,
             "say": "Type the yellow comment line."
            },
            {
             "n": 9,
+            "x": 18.0,
+            "y": 70.1,
             "say": "Click at the end of the `{` under `private void frmMap_Load(object sender, EventArgs e)`."
            },
            {
             "n": 10,
+            "x": 19.1,
+            "y": 72.9,
             "say": "Press Enter."
            },
            {
             "n": 11,
+            "x": 18.2,
+            "y": 71.0,
+            "w": 39.6,
+            "h": 23.7,
             "say": "Type the rest of the yellow lines."
            }
           ]
@@ -1417,29 +1546,43 @@
          "do": "Click at the end of the `}` that closes `frmMap_Load`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c137.png",
           "alt": "frmMap.cs, with MakeCard pasted and its 2 gaps typed",
-          "w": 800,
-          "h": 360,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 1,
+            "x": 18.0,
+            "y": 34.7,
             "say": "Click at the end of the `}` that closes `frmMap_Load`."
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 40.0,
             "say": "Press Enter twice."
            },
            {
             "n": 4,
+            "x": 15.7,
+            "y": 38.2,
+            "w": 47.2,
+            "h": 56.8,
             "say": "Press Ctrl and V together."
            },
            {
             "n": 5,
+            "x": 19.1,
+            "y": 48.1,
             "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`."
            },
            {
             "n": 6,
+            "x": 18.2,
+            "y": 46.3,
+            "w": 29.4,
+            "h": 9.1,
             "say": "Type the yellow lines that replace the blue line. Do the same for the other `// YOU TYPE THIS PART` line."
            }
           ]
@@ -1570,29 +1713,43 @@
          "do": "Click at the end of the `}` that closes `MakeCard`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c138.png",
           "alt": "frmMap.cs, with MakeFlag pasted and its gap typed",
-          "w": 800,
-          "h": 360,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 1,
+            "x": 18.0,
+            "y": 53.3,
             "say": "Click at the end of the `}` that closes `MakeCard`."
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 58.6,
             "say": "Press Enter twice."
            },
            {
             "n": 4,
+            "x": 15.7,
+            "y": 56.8,
+            "w": 39.6,
+            "h": 40.8,
             "say": "Press Ctrl and V together."
            },
            {
             "n": 5,
+            "x": 19.1,
+            "y": 74.3,
             "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`."
            },
            {
             "n": 6,
+            "x": 18.2,
+            "y": 72.5,
+            "w": 37.0,
+            "h": 11.9,
             "say": "Type the yellow lines that replace the blue line."
            }
           ]
@@ -1719,29 +1876,43 @@
          "do": "Click at the end of the `}` that closes `MakeFlag`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c139.png",
           "alt": "frmMap.cs, with ShowProgress pasted and its 3 gaps typed",
-          "w": 800,
-          "h": 360,
+          "w": 1102,
+          "h": 590,
           "marks": [
            {
             "n": 1,
+            "x": 18.0,
+            "y": 14.1,
             "say": "Click at the end of the `}` that closes `MakeFlag`."
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 19.5,
             "say": "Press Enter twice."
            },
            {
             "n": 4,
+            "x": 15.7,
+            "y": 17.6,
+            "w": 44.0,
+            "h": 77.2,
             "say": "Press Ctrl and V together."
            },
            {
             "n": 5,
+            "x": 19.1,
+            "y": 27.6,
             "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`."
            },
            {
             "n": 6,
+            "x": 18.2,
+            "y": 25.7,
+            "w": 35.8,
+            "h": 6.6,
             "say": "Type the yellow lines that replace the blue line. Do the same for each of the other 2 `// YOU TYPE THIS PART` lines."
            }
           ]
@@ -1850,21 +2021,29 @@
          "do": "Click at the end of the `}` that closes `ShowProgress`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c140.png",
           "alt": "frmMap.cs, with Summit_Click typed under ShowProgress",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 1,
+            "x": 18.0,
+            "y": 71.7,
             "say": "Click at the end of the `}` that closes `ShowProgress`."
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 77.0,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 75.2,
+            "w": 41.6,
+            "h": 22.4,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1954,21 +2133,29 @@
          "do": "Click at the end of the `}` that closes `Summit_Click`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c141.png",
           "alt": "frmMap.cs, with the first part of OpenGame typed",
-          "w": 800,
-          "h": 400,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 4,
+            "x": 18.0,
+            "y": 42.8,
             "say": "Click at the end of the `}` that closes `Summit_Click`."
            },
            {
             "n": 5,
+            "x": 16.6,
+            "y": 48.1,
             "say": "Press Enter twice."
            },
            {
             "n": 6,
+            "x": 15.7,
+            "y": 46.3,
+            "w": 42.8,
+            "h": 48.7,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -2049,21 +2236,29 @@
          "do": "Click at the end of the `}` under the line `// each game chapter adds its own case below this line`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c142.png",
           "alt": "frmMap.cs, with the end of OpenGame typed under the switch",
-          "w": 800,
-          "h": 400,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 7,
+            "x": 20.6,
+            "y": 61.2,
             "say": "Click at the end of the `}` under the line `// each game chapter adds its own case below this line`."
            },
            {
             "n": 8,
+            "x": 19.1,
+            "y": 63.8,
             "say": "Press Enter."
            },
            {
             "n": 9,
+            "x": 18.2,
+            "y": 62.0,
+            "w": 42.1,
+            "h": 32.9,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -2153,21 +2348,29 @@
          "do": "Click at the end of the `}` that closes `OpenGame`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c143.png",
           "alt": "frmMap.cs, with btnFinish_Click typed under OpenGame",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 1,
+            "x": 18.0,
+            "y": 42.8,
             "say": "Click at the end of the `}` that closes `OpenGame`."
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 48.1,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 46.3,
+            "w": 44.0,
+            "h": 53.9,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -2229,21 +2432,29 @@
          "do": "Click at the end of the `}` that closes `btnFinish_Click`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c144.png",
           "alt": "frmMap.cs, with OpenFeedback typed under btnFinish_Click",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 4,
+            "x": 18.0,
+            "y": 77.0,
             "say": "Click at the end of the `}` that closes `btnFinish_Click`."
            },
            {
             "n": 5,
+            "x": 16.6,
+            "y": 82.4,
             "say": "Press Enter twice."
            },
            {
             "n": 6,
+            "x": 15.7,
+            "y": 80.6,
+            "w": 42.1,
+            "h": 17.0,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -2339,21 +2550,29 @@
          "do": "Click at the end of the `}` that closes `OpenFeedback`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c145.png",
           "alt": "frmMap.cs, with btnBack_Click and frmMap_FormClosing typed",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 1,
+            "x": 18.0,
+            "y": 53.3,
             "say": "Click at the end of the `}` that closes `OpenFeedback`."
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 58.6,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 56.8,
+            "w": 46.0,
+            "h": 40.8,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -2420,21 +2639,29 @@
          "do": "Click at the end of the `}` that closes `frmMap_FormClosing`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c146.png",
           "alt": "frmMap.cs, with ShowSpeaker and picSound_Click typed",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 4,
+            "x": 18.0,
+            "y": 56.0,
             "say": "Click at the end of the `}` that closes `frmMap_FormClosing`."
            },
            {
             "n": 5,
+            "x": 16.6,
+            "y": 61.2,
             "say": "Press Enter twice."
            },
            {
             "n": 6,
+            "x": 15.7,
+            "y": 59.4,
+            "w": 44.0,
+            "h": 38.2,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -2507,13 +2734,15 @@
          "do": "Press Shift and F7 together, to go back from the code to the designer.",
          "see": "The designer shows frmMap.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c147.png",
           "alt": "frmMap in the designer, with the events list of btnBack",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 517,
           "marks": [
            {
             "n": 1,
+            "x": 10.7,
+            "y": 1.6,
             "say": "Press Shift and F7 together, to go back from the code to the designer."
            }
           ]
@@ -2525,13 +2754,15 @@
          "do": "Press Ctrl, Shift and B together. This builds your project, which checks your code for mistakes.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 2,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together. This builds your project, which checks your code for mistakes."
            }
           ]
@@ -2615,29 +2846,41 @@
          "do": "Double-click `frmWelcome.cs` in Solution Explorer.",
          "see": "frmWelcome opens in the designer.",
          "img": {
-          "missing": true,
-          "alt": "frmWelcome.cs, with btnStart_Click and mnuStart_Click typed",
-          "w": 800,
-          "h": 400,
+          "img": "img/cap/c148.png",
+          "alt": "frmWelcome.cs, with btnStart_Click typed",
+          "w": 1102,
+          "h": 414,
           "marks": [
            {
             "n": 1,
+            "x": 41.8,
+            "y": 2.4,
             "say": "Double-click `frmWelcome.cs` in Solution Explorer."
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 35.5,
             "say": "Press F7."
            },
            {
             "n": 3,
+            "x": 18.0,
+            "y": 47.0,
             "say": "Click at the end of the `}` that closes `btnBannerOK_Click`."
            },
            {
             "n": 4,
+            "x": 16.6,
+            "y": 54.7,
             "say": "Press Enter twice."
            },
            {
             "n": 5,
+            "x": 15.7,
+            "y": 52.1,
+            "w": 42.1,
+            "h": 40.5,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -2710,21 +2953,29 @@
          "do": "Click at the end of the `}` that closes `btnStart_Click`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c149.png",
           "alt": "frmWelcome.cs, with mnuStart_Click typed",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 509,
           "marks": [
            {
             "n": 6,
+            "x": 18.0,
+            "y": 72.8,
             "say": "Click at the end of the `}` that closes `btnStart_Click`."
            },
            {
             "n": 7,
+            "x": 16.6,
+            "y": 79.1,
             "say": "Press Enter twice."
            },
            {
             "n": 8,
+            "x": 15.7,
+            "y": 76.9,
+            "w": 36.4,
+            "h": 17.1,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -2769,17 +3020,23 @@
          "do": "Press Shift and F7 together, to go back from the code to the designer.",
          "see": "The designer shows frmWelcome.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c150.png",
           "alt": "frmWelcome in the designer, with the events list of btnStart",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 517,
           "marks": [
            {
             "n": 9,
+            "x": 44.7,
+            "y": 1.6,
             "say": "Press Shift and F7 together, to go back from the code to the designer."
            },
            {
             "n": 10,
+            "x": 82.1,
+            "y": 32.9,
+            "w": 17.6,
+            "h": 3.1,
             "say": "Press Ctrl, Shift and B together. This builds your project, which checks your code for mistakes."
            }
           ]
@@ -2819,17 +3076,23 @@
          "do": "Press F5.",
          "see": "Your game starts and shows the Log in window.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c151.png",
           "alt": "The Log in window of your game",
-          "w": 640,
-          "h": 400,
+          "w": 1002,
+          "h": 691,
           "marks": [
            {
             "n": 1,
+            "x": 8.9,
+            "y": 2.1,
             "say": "Press F5."
            },
            {
             "n": 2,
+            "x": 33.0,
+            "y": 63.7,
+            "w": 33.9,
+            "h": 29.7,
             "say": "Log in with a player you registered in chapter 5."
            }
           ]
@@ -2847,21 +3110,31 @@
          "do": "Click **Start the expedition**.",
          "see": "The map opens, with the Mournes on the left, 8 flags on it and 8 summit cards down the right.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c152.png",
           "alt": "The map with its 8 cards and 8 flags",
-          "w": 1000,
-          "h": 660,
+          "w": 1002,
+          "h": 691,
           "marks": [
            {
             "n": 3,
+            "x": 11.4,
+            "y": 2.1,
             "say": "Click **Start the expedition**."
            },
            {
             "n": 4,
+            "x": 62.8,
+            "y": 13.8,
+            "w": 35.8,
+            "h": 8.3,
             "say": "Click the card for Slieve Binnian, at the top of the right side."
            },
            {
             "n": 5,
+            "x": 62.8,
+            "y": 91.9,
+            "w": 35.8,
+            "h": 6.2,
             "say": "Click **Finish the expedition**."
            }
           ]
@@ -2895,21 +3168,29 @@
          "do": "Click **OK** to close the message.",
          "see": "The message closes and the map shows again.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c153.png",
           "alt": "The strip along the top of the map, with the muted speaker picture and Back to the welcome screen",
-          "w": 800,
-          "h": 120,
+          "w": 1002,
+          "h": 89,
           "marks": [
            {
             "n": 6,
+            "x": 63.0,
+            "y": 58.9,
             "say": "Click **OK** to close the message."
            },
            {
             "n": 7,
+            "x": 74.1,
+            "y": 64.4,
             "say": "Click the speaker picture on the strip."
            },
            {
             "n": 8,
+            "x": 77.0,
+            "y": 41.1,
+            "w": 21.9,
+            "h": 49.3,
             "say": "Click **Back to the welcome screen**."
            }
           ]

@@ -121,22 +121,6 @@
         {
          "do": "Open `evaluation-template.docx` in Word.",
          "see": "Word shows the evaluation table with its 4 column headings.",
-         "img": {
-          "missing": true,
-          "alt": "The evaluation template open in Word, with its 4 column headings and the File menu",
-          "w": 800,
-          "h": 450,
-          "marks": [
-           {
-            "n": 2,
-            "say": "Open `evaluation-template.docx` in Word."
-           },
-           {
-            "n": 3,
-            "say": "Click **File**, then **Save As**, and save it in your portfolio folder."
-           }
-          ]
-         },
          "id": "1-2.2",
          "n": 2
         },
@@ -303,17 +287,19 @@
       {
        "steps": [
         {
-         "do": "In Solution Explorer, double-click one of your own .cs files.",
+         "do": "In Solution Explorer, right-click one of your own .cs files, such as frmLogin.cs, and click **View Code**.",
          "see": "The code opens. A green comment line starting with // sits above each method.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c526.png",
           "alt": "A form's code in Visual Studio 2019, with a green comment line above each method",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 1,
-            "say": "In Solution Explorer, double-click one of your own .cs files."
+            "x": 85.6,
+            "y": 56.1,
+            "say": "In Solution Explorer, right-click one of your own .cs files, such as frmLogin.cs, and click **View Code**."
            }
           ]
          },
@@ -324,13 +310,17 @@
          "do": "Click in the code, press Control and A together, then press Control and C together.",
          "see": "All the code in the file is copied.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c527.png",
           "alt": "The same code in Visual Studio 2019 with every line selected in blue",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 2,
+            "x": 6.4,
+            "y": 20.4,
+            "w": 27.4,
+            "h": 64.3,
             "say": "Click in the code, press Control and A together, then press Control and C together."
            }
           ]
@@ -341,18 +331,6 @@
         {
          "do": "In your Word portfolio, type the file name as a heading, such as frmLogin.cs, then press Control and V together under it.",
          "see": "The code sits under its heading, in the same order as in Visual Studio 2019.",
-         "img": {
-          "missing": true,
-          "alt": "A Word portfolio page with the heading frmLogin.cs and the code pasted under it",
-          "w": 800,
-          "h": 450,
-          "marks": [
-           {
-            "n": 3,
-            "say": "In your Word portfolio, type the file name as a heading, such as frmLogin.cs, then press Control and V together under it."
-           }
-          ]
-         },
          "id": "2-2.3",
          "n": 3
         }

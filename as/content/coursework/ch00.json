@@ -130,10 +130,11 @@
       },
       {
        "screenshot": {
-        "missing": true,
+        "img": "img/cap/c000.png",
         "alt": "The Your expedition map, with 8 red flags on the left and a list of the 8 summits on the right.",
-        "w": 941,
-        "h": 680,
+        "w": 1000,
+        "h": 689,
+        "marks": [],
         "cap": "The map. Each summit in the list on the right opens its game."
        }
       },
@@ -203,10 +204,11 @@
       },
       {
        "screenshot": {
-        "missing": true,
+        "img": "img/cap/c001.png",
         "alt": "Whiteout during a round, with the hidden word, the letter buttons and the cloud coming down over the picture.",
-        "w": 803,
-        "h": 549,
+        "w": 1000,
+        "h": 599,
+        "marks": [],
         "cap": "Whiteout: guess the hidden word one letter at a time, before the cloud comes all the way down."
        }
       },

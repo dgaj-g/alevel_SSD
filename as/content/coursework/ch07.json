@@ -205,34 +205,28 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c023.png",
           "alt": "The project menu, with Add pointed at and Class in the second menu",
-          "w": 640,
-          "h": 420,
+          "w": 959,
+          "h": 616,
           "marks": [
            {
             "n": 1,
+            "x": 73.0,
+            "y": 5.4,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 2,
+            "x": 39.6,
+            "y": 38.6,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 3,
+            "x": 6.2,
+            "y": 93.2,
             "say": "Click **Class...** in the second menu."
-           },
-           {
-            "n": 4,
-            "say": "Triple-click the Name box at the bottom of the Add New Item window."
-           },
-           {
-            "n": 5,
-            "say": "Type `ScoreEntry.cs`"
-           },
-           {
-            "n": 6,
-            "say": "Click **Add**."
            }
           ]
          },
@@ -254,6 +248,32 @@
         {
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "img": "img/cap/c024.png",
+          "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
+          "w": 948,
+          "h": 660,
+          "marks": [
+           {
+            "n": 4,
+            "x": 16.9,
+            "y": 92.1,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "x": 42.2,
+            "y": 92.1,
+            "say": "Type `ScoreEntry.cs`"
+           },
+           {
+            "n": 6,
+            "x": 85.7,
+            "y": 96.5,
+            "say": "Click **Add**."
+           }
+          ]
+         },
          "id": "2-1.4",
          "n": 4
         },
@@ -273,25 +293,35 @@
          "do": "Click at the start of the line `class ScoreEntry`.",
          "see": "The flashing cursor is in front of `class`.",
          "img": {
-          "missing": true,
-          "alt": "ScoreEntry.cs, with the class picked from class ScoreEntry down to its last }",
-          "w": 800,
-          "h": 400,
+          "img": "img/cap/c535.png",
+          "alt": "ScoreEntry.cs, with a box from class ScoreEntry down to its last }",
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 7,
+            "x": 7.5,
+            "y": 35.1,
             "say": "Click at the start of the line `class ScoreEntry`."
            },
            {
             "n": 8,
+            "x": 8.5,
+            "y": 39.0,
             "say": "Hold Shift and click after the `}` that closes the class. It is the second `}` from the bottom."
            },
            {
             "n": 9,
+            "x": 7.0,
+            "y": 33.8,
+            "w": 7.7,
+            "h": 6.2,
             "say": "Press Delete."
            },
            {
             "n": 10,
+            "x": 19.1,
+            "y": 37.0,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -413,34 +443,28 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c023.png",
           "alt": "The project menu, with Add pointed at and Class in the second menu",
-          "w": 640,
-          "h": 420,
+          "w": 959,
+          "h": 616,
           "marks": [
            {
             "n": 1,
+            "x": 73.0,
+            "y": 5.4,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 2,
+            "x": 39.6,
+            "y": 38.6,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 3,
+            "x": 6.2,
+            "y": 93.2,
             "say": "Click **Class...** in the second menu."
-           },
-           {
-            "n": 4,
-            "say": "Triple-click the Name box at the bottom of the Add New Item window."
-           },
-           {
-            "n": 5,
-            "say": "Type `ScoreFile.cs`"
-           },
-           {
-            "n": 6,
-            "say": "Click **Add**."
            }
           ]
          },
@@ -462,6 +486,32 @@
         {
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "img": "img/cap/c024.png",
+          "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
+          "w": 948,
+          "h": 660,
+          "marks": [
+           {
+            "n": 4,
+            "x": 16.9,
+            "y": 92.1,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "x": 42.2,
+            "y": 92.1,
+            "say": "Type `ScoreFile.cs`"
+           },
+           {
+            "n": 6,
+            "x": 85.7,
+            "y": 96.5,
+            "say": "Click **Add**."
+           }
+          ]
+         },
          "id": "2-2.4",
          "n": 4
         },
@@ -481,21 +531,27 @@
          "do": "Click at the end of the line `using System.Threading.Tasks;` at the top of ScoreFile.cs.",
          "see": "The flashing cursor is at the end of that line.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c107.png",
           "alt": "ScoreFile.cs, with using System.IO; under the other using lines",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 306,
           "marks": [
            {
             "n": 7,
+            "x": 30.7,
+            "y": 37.6,
             "say": "Click at the end of the line `using System.Threading.Tasks;` at the top of ScoreFile.cs."
            },
            {
             "n": 8,
+            "x": 11.4,
+            "y": 42.8,
             "say": "Press Enter."
            },
            {
             "n": 9,
+            "x": 22.4,
+            "y": 42.8,
             "say": "Type `using System.IO;`"
            }
           ]
@@ -519,29 +575,41 @@
          "do": "Click at the start of the line `class ScoreFile`.",
          "see": "The flashing cursor is in front of `class`.",
          "img": {
-          "missing": true,
-          "alt": "ScoreFile.cs, with class ScoreFile and its { picked",
-          "w": 800,
-          "h": 300,
+          "img": "img/cap/c536.png",
+          "alt": "ScoreFile.cs, with a box round class ScoreFile and its {",
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 10,
+            "x": 7.5,
+            "y": 37.0,
             "say": "Click at the start of the line `class ScoreFile`."
            },
            {
             "n": 11,
+            "x": 8.5,
+            "y": 39.0,
             "say": "Hold Shift and click at the end of the `{` on the line under `class ScoreFile`."
            },
            {
             "n": 12,
+            "x": 7.0,
+            "y": 35.7,
+            "w": 7.7,
+            "h": 4.3,
             "say": "Click the copy button below."
            },
            {
             "n": 13,
+            "x": 19.1,
+            "y": 37.9,
             "say": "Press Ctrl and V together."
            },
            {
             "n": 14,
+            "x": 11.5,
+            "y": 40.9,
             "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, then type its yellow lines. Repeat for each of the other 4."
            }
           ]
@@ -610,25 +678,35 @@
          "do": "Click at the end of the `}` that closes `LoadAll`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c109.png",
           "alt": "ScoreFile.cs, with Save pasted under LoadAll",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 15,
+            "x": 18.0,
+            "y": 63.8,
             "say": "Click at the end of the `}` that closes `LoadAll`."
            },
            {
             "n": 16,
+            "x": 11.4,
+            "y": 69.1,
             "say": "Press Enter twice."
            },
            {
             "n": 17,
+            "x": 15.7,
+            "y": 67.3,
+            "w": 45.3,
+            "h": 22.4,
             "say": "Click the copy button below."
            },
            {
             "n": 18,
+            "x": 18.0,
+            "y": 87.7,
             "say": "Press Ctrl and V together."
            }
           ]
@@ -708,21 +786,29 @@
          "do": "Click at the end of the `}` that closes `Save`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c110.png",
           "alt": "ScoreFile.cs, with LastScore and BestScore typed under Save",
-          "w": 800,
-          "h": 400,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 1,
+            "x": 18.0,
+            "y": 34.7,
             "say": "Click at the end of the `}` that closes `Save`."
            },
            {
             "n": 2,
+            "x": 11.4,
+            "y": 40.0,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 38.2,
+            "w": 45.3,
+            "h": 56.8,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -821,21 +907,29 @@
          "do": "Click at the end of the `}` that closes `BestScore`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c111.png",
           "alt": "ScoreFile.cs, with the first half of TopTen typed",
-          "w": 800,
-          "h": 450,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 1,
+            "x": 18.0,
+            "y": 26.9,
             "say": "Click at the end of the `}` that closes `BestScore`."
            },
            {
             "n": 2,
+            "x": 11.4,
+            "y": 32.1,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 30.3,
+            "w": 44.0,
+            "h": 62.0,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -920,33 +1014,49 @@
          "do": "Click at the end of the `}` under the line `n++;` in TopTen.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c112.png",
           "alt": "ScoreFile.cs, with the sort typed in TopTen and ComesBefore under it",
-          "w": 800,
-          "h": 450,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 1,
+            "x": 20.6,
+            "y": 19.0,
             "say": "Click at the end of the `}` under the line `n++;` in TopTen."
            },
            {
             "n": 2,
+            "x": 19.1,
+            "y": 21.6,
             "say": "Press Enter."
            },
            {
             "n": 3,
+            "x": 18.2,
+            "y": 19.8,
+            "w": 41.4,
+            "h": 46.1,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 4,
+            "x": 18.0,
+            "y": 66.5,
             "say": "Click at the end of the `}` that closes `TopTen`."
            },
            {
             "n": 5,
+            "x": 11.4,
+            "y": 71.7,
             "say": "Press Enter twice."
            },
            {
             "n": 6,
+            "x": 15.7,
+            "y": 69.9,
+            "w": 39.6,
+            "h": 19.8,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1068,25 +1178,35 @@
          "do": "Click at the end of the `}` that closes `ComesBefore`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c113.png",
           "alt": "ScoreFile.cs, with PlaceOf and TenthPlaceScore pasted at the end",
-          "w": 800,
-          "h": 400,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 1,
+            "x": 18.0,
+            "y": 26.9,
             "say": "Click at the end of the `}` that closes `ComesBefore`."
            },
            {
             "n": 2,
+            "x": 11.4,
+            "y": 32.1,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 30.3,
+            "w": 40.9,
+            "h": 56.8,
             "say": "Click the copy button below."
            },
            {
             "n": 4,
+            "x": 18.0,
+            "y": 85.1,
             "say": "Press Ctrl and V together."
            }
           ]
@@ -1148,25 +1268,35 @@
          "do": "Double-click `PlayerFile.cs` in Solution Explorer.",
          "see": "`PlayerFile.cs` opens in the code editor.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c114.png",
           "alt": "PlayerFile.cs, with AvatarOf typed under LogIn",
-          "w": 800,
-          "h": 300,
+          "w": 1178,
+          "h": 606,
           "marks": [
            {
             "n": 5,
+            "x": 93.8,
+            "y": 1.6,
             "say": "Double-click `PlayerFile.cs` in Solution Explorer."
            },
            {
             "n": 6,
+            "x": 16.8,
+            "y": 61.2,
             "say": "Click at the end of the `}` that closes `LogIn`."
            },
            {
             "n": 7,
+            "x": 10.7,
+            "y": 66.5,
             "say": "Press Enter twice."
            },
            {
             "n": 8,
+            "x": 14.7,
+            "y": 64.6,
+            "w": 39.4,
+            "h": 27.7,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1218,17 +1348,21 @@
          "do": "Double-click `frmWelcome.cs` in Solution Explorer.",
          "see": "The designer shows frmWelcome.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c115.png",
           "alt": "frmWelcome in the designer, with its title bar picked",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 517,
           "marks": [
            {
             "n": 1,
+            "x": 87.4,
+            "y": 33.5,
             "say": "Double-click `frmWelcome.cs` in Solution Explorer."
            },
            {
             "n": 2,
+            "x": 19.4,
+            "y": 9.0,
             "say": "Click the title bar of frmWelcome."
            }
           ]
@@ -1249,9 +1383,9 @@
         "props": [
          "Font = Segoe UI, 11pt",
          "Text = Summit Ready - Welcome",
-         "ClientSize = 1000, 660",
          "StartPosition = CenterScreen",
          "FormBorderStyle = FixedSingle",
+         "Size = 1016, 699",
          "MaximizeBox = False",
          "BackColor = 243, 245, 242"
         ]
@@ -1409,11 +1543,11 @@
         "done": {
          "see": "A tall white card runs down the left of frmWelcome. It holds an empty picture box, the welcome and score labels, About the game and the gold Start button.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c116.png",
           "alt": "frmWelcome in the designer with the white player card on the left",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1041,
+          "h": 718,
+          "marks": []
          }
         }
        }
@@ -1500,11 +1634,11 @@
         "done": {
          "see": "A pale gold strip at the top right of frmWelcome, with an empty picture box, **You made the Top 10!** and a small OK button.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c117.png",
           "alt": "frmWelcome in the designer with the pale gold banner at the top right",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1041,
+          "h": 718,
+          "marks": []
          }
         }
        }
@@ -1585,11 +1719,11 @@
         "done": {
          "see": "A large white board under **Top 10 climbers**, with the No scores label across its top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c118.png",
           "alt": "frmWelcome in the designer with the Top 10 board and lblNoScores",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1041,
+          "h": 718,
+          "marks": []
          }
         }
        }
@@ -1603,29 +1737,43 @@
          "do": "Click lvTop on frmWelcome.",
          "see": "The Properties window shows lvTop at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c119.png",
           "alt": "The ColumnHeader Collection Editor, with 4 columns added",
-          "w": 800,
-          "h": 450,
+          "w": 1500,
+          "h": 422,
           "marks": [
            {
             "n": 1,
+            "x": 9.8,
+            "y": 69.6,
             "say": "Click lvTop on frmWelcome."
            },
            {
             "n": 2,
+            "x": 77.7,
+            "y": 31.9,
+            "w": 21.1,
+            "h": 4.3,
             "say": "Click the box beside **Columns**, then click the small button with 3 dots at the right of the box."
            },
            {
             "n": 3,
+            "x": 23.1,
+            "y": 84.1,
             "say": "Click **Add** 4 times."
            },
            {
             "n": 4,
+            "x": 19.8,
+            "y": 17.4,
+            "w": 14.4,
+            "h": 17.4,
             "say": "Click each column in the Members list, and set its properties with the table below."
            },
            {
             "n": 5,
+            "x": 46.3,
+            "y": 93.3,
             "say": "Click **OK**."
            }
           ]
@@ -1717,25 +1865,35 @@
          "do": "Press F7.",
          "see": "The code of frmWelcome shows in the code editor.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c120.png",
           "alt": "frmWelcome.cs, with avatarFiles under the class line",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 441,
           "marks": [
            {
             "n": 1,
+            "x": 5.0,
+            "y": 2.2,
             "say": "Press F7."
            },
            {
             "n": 2,
+            "x": 14.8,
+            "y": 58.9,
             "say": "Click at the end of the `{` under `public partial class frmWelcome : Form`."
            },
            {
             "n": 3,
+            "x": 16.3,
+            "y": 62.5,
             "say": "Press Enter."
            },
            {
             "n": 4,
+            "x": 15.7,
+            "y": 60.0,
+            "w": 40.2,
+            "h": 16.1,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1816,33 +1974,49 @@
          "do": "Click at the end of the `}` under the line `InitializeComponent();`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c121.png",
           "alt": "frmWelcome.cs, with frmWelcome_Load and ShowEverything typed",
-          "w": 800,
-          "h": 450,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 5,
+            "x": 17.1,
+            "y": 21.8,
             "say": "Click at the end of the `}` under the line `InitializeComponent();`."
            },
            {
             "n": 6,
+            "x": 16.3,
+            "y": 27.1,
             "say": "Press Enter twice."
            },
            {
             "n": 7,
+            "x": 15.7,
+            "y": 25.1,
+            "w": 44.0,
+            "h": 43.4,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 8,
+            "x": 17.1,
+            "y": 69.3,
             "say": "Click at the end of the `}` that closes `frmWelcome_Load`."
            },
            {
             "n": 9,
+            "x": 16.3,
+            "y": 74.5,
             "say": "Press Enter twice."
            },
            {
             "n": 10,
+            "x": 15.7,
+            "y": 72.5,
+            "w": 41.6,
+            "h": 17.2,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1972,21 +2146,29 @@
          "do": "Click at the end of the `}` that closes `ShowEverything`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c122.png",
           "alt": "frmWelcome.cs, with ShowPlayer typed under ShowEverything",
-          "w": 800,
-          "h": 450,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 1,
+            "x": 17.1,
+            "y": 29.7,
             "say": "Click at the end of the `}` that closes `ShowEverything`."
            },
            {
             "n": 2,
+            "x": 16.3,
+            "y": 34.9,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 32.9,
+            "w": 43.4,
+            "h": 54.1,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -2056,33 +2238,49 @@
          "do": "Click at the end of the `}` that closes `ShowPlayer`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c123.png",
           "alt": "frmWelcome.cs, with ShowBanner and MoveBoard typed",
-          "w": 800,
-          "h": 400,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 1,
+            "x": 17.1,
+            "y": 45.7,
             "say": "Click at the end of the `}` that closes `ShowPlayer`."
            },
            {
             "n": 2,
+            "x": 16.3,
+            "y": 50.9,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 48.9,
+            "w": 39.0,
+            "h": 11.7,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 4,
+            "x": 17.1,
+            "y": 61.4,
             "say": "Click at the end of the `}` that closes `ShowBanner`."
            },
            {
             "n": 5,
+            "x": 16.3,
+            "y": 66.7,
             "say": "Press Enter twice."
            },
            {
             "n": 6,
+            "x": 15.7,
+            "y": 64.6,
+            "w": 35.8,
+            "h": 25.1,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -2244,21 +2442,29 @@
          "do": "Click at the end of the `}` that closes `MoveBoard`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c124.png",
           "alt": "frmWelcome.cs, with ShowBoard typed under MoveBoard",
-          "w": 800,
-          "h": 450,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 1,
+            "x": 17.1,
+            "y": 37.6,
             "say": "Click at the end of the `}` that closes `MoveBoard`."
            },
            {
             "n": 2,
+            "x": 16.3,
+            "y": 42.8,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 41.0,
+            "w": 42.8,
+            "h": 46.1,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -2332,21 +2538,29 @@
          "do": "Click at the end of the line `row.SubItems.Add(top[i].Date);`.",
          "see": "The flashing cursor is after the semicolon.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c125.png",
           "alt": "ShowBoard, with the highlight lines typed before lvTop.Items.Add",
-          "w": 800,
-          "h": 400,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 4,
+            "x": 41.6,
+            "y": 69.1,
             "say": "Click at the end of the line `row.SubItems.Add(top[i].Date);`."
            },
            {
             "n": 5,
+            "x": 21.7,
+            "y": 71.7,
             "say": "Press Enter."
            },
            {
             "n": 6,
+            "x": 20.8,
+            "y": 69.9,
+            "w": 34.4,
+            "h": 11.7,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -2410,41 +2624,63 @@
          "do": "Click at the end of the `}` that closes `ShowBoard`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c126.png",
           "alt": "frmWelcome.cs, with btnBannerOK_Click and the menu methods",
-          "w": 800,
-          "h": 450,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 1,
+            "x": 17.1,
+            "y": 16.6,
             "say": "Click at the end of the `}` that closes `ShowBoard`."
            },
            {
             "n": 2,
+            "x": 16.3,
+            "y": 21.8,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 19.8,
+            "w": 38.3,
+            "h": 11.7,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 4,
+            "x": 17.1,
+            "y": 32.3,
             "say": "Click at the end of the `}` that closes `btnBannerOK_Click`."
            },
            {
             "n": 5,
+            "x": 16.3,
+            "y": 37.6,
             "say": "Press Enter twice."
            },
            {
             "n": 6,
+            "x": 57.8,
+            "y": 37.6,
             "say": "Click the copy button below."
            },
            {
             "n": 7,
+            "x": 15.7,
+            "y": 36.4,
+            "w": 53.2,
+            "h": 60.6,
             "say": "Press Ctrl and V together."
            },
            {
             "n": 8,
+            "x": 17.8,
+            "y": 44.2,
+            "w": 44.4,
+            "h": 7.9,
             "say": "Triple-click a line that starts with `// YOU TYPE THIS PART`, to select it. Then type its yellow lines in its place. Do the same for the other line."
            }
           ]
@@ -2616,13 +2852,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 1,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]

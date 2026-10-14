@@ -159,13 +159,15 @@
          "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
          "see": "Visual Studio 2019 comes to the front, with your project open.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c015.png",
           "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
-          "w": 800,
-          "h": 60,
+          "w": 960,
+          "h": 41,
           "marks": [
            {
             "n": 1,
+            "x": 63.9,
+            "y": 50.0,
             "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
            }
           ]
@@ -177,21 +179,27 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c068.png",
           "alt": "The project menu, with Add pointed at and Form (Windows Forms) in the second menu",
-          "w": 640,
-          "h": 420,
+          "w": 949,
+          "h": 605,
           "marks": [
            {
             "n": 2,
+            "x": 73.8,
+            "y": 4.6,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 3,
+            "x": 40.6,
+            "y": 37.8,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 4,
+            "x": 11.6,
+            "y": 81.0,
             "say": "Click **Form (Windows Forms)...** in the second menu."
            }
           ]
@@ -215,21 +223,29 @@
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Form1.cs` turns blue, so what you type next replaces it.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c069.png",
           "alt": "The Add New Item window, with Form (Windows Forms) picked",
-          "w": 800,
-          "h": 450,
+          "w": 943,
+          "h": 592,
           "marks": [
            {
             "n": 5,
+            "x": 42.5,
+            "y": 91.1,
             "say": "Triple-click the Name box at the bottom of the Add New Item window."
            },
            {
             "n": 6,
+            "x": 13.8,
+            "y": 89.5,
+            "w": 57.4,
+            "h": 3.5,
             "say": "Type `frmRegister.cs`"
            },
            {
             "n": 7,
+            "x": 86.0,
+            "y": 96.3,
             "say": "Click **Add**."
            }
           ]
@@ -252,16 +268,16 @@
        ]
       },
       {
-       "p": "Now set the form's properties in the Properties window, using the table below. Set **Font** first. If you change Font later, Visual Studio 2019 stretches the form, and its size (ClientSize) changes."
+       "p": "Now set the form's properties in the Properties window, using the table below. Set **Font** first. If you change Font later, Visual Studio 2019 stretches the form, and its Size changes."
       },
       {
        "controls": {
         "props": [
          "Font = Segoe UI, 11pt",
          "Text = Summit Ready - Register",
-         "ClientSize = 1000, 660",
          "StartPosition = CenterScreen",
          "FormBorderStyle = FixedSingle",
+         "Size = 1016, 699",
          "MaximizeBox = False",
          "BackColor = 243, 245, 242"
         ]
@@ -345,11 +361,11 @@
         "done": {
          "see": "A dark strip along the top of frmRegister, with **Register a new player** in white and the instruction in light grey under it.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c070.png",
           "alt": "frmRegister in the designer with the dark header strip, its title and its instruction",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1053,
+          "h": 357,
+          "marks": []
          }
         }
        }
@@ -513,11 +529,11 @@
         "done": {
          "see": "Down the left side of frmRegister: Username, its box and its grey hint. Then Password, its box and its grey hint. Then Type your password again and its box. The 3 red message labels are empty, so they show as empty spaces.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c071.png",
           "alt": "frmRegister in the designer with the 3 boxes, their labels and their hints down the left side",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1053,
+          "h": 602,
+          "marks": []
          }
         }
        }
@@ -707,11 +723,11 @@
         "done": {
          "see": "**Choose your avatar** on the right of frmRegister. Under it, a row of 4 white squares, each inside its own panel, with Goat, Eagle, Fox and Hare under them. The squares are empty, because the code loads the pictures.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c072.png",
           "alt": "frmRegister in the designer with the top row of 4 avatar frames and their names",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1053,
+          "h": 602,
+          "marks": []
          }
         }
        }
@@ -939,11 +955,11 @@
         "done": {
          "see": "frmRegister looks like the picture at the start of this chapter, with empty white squares where the animals go.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c073.png",
           "alt": "frmRegister in the designer with every control on it",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1053,
+          "h": 732,
+          "marks": []
          }
         }
        }
@@ -1016,25 +1032,35 @@
          "do": "Press F7.",
          "see": "The code of frmRegister shows in the code editor.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c074.png",
           "alt": "frmRegister.cs, with the 3 fields typed under the class line",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 393,
           "marks": [
            {
             "n": 1,
+            "x": 5.0,
+            "y": 2.5,
             "say": "Press F7."
            },
            {
             "n": 2,
+            "x": 15.4,
+            "y": 66.0,
             "say": "Click at the end of the `{` under `public partial class frmRegister : Form`."
            },
            {
             "n": 3,
+            "x": 16.6,
+            "y": 70.1,
             "say": "Press Enter."
            },
            {
             "n": 4,
+            "x": 15.7,
+            "y": 67.3,
+            "w": 44.0,
+            "h": 14.0,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1122,25 +1148,33 @@
          "do": "Press Shift and F7 together.",
          "see": "The designer shows frmRegister.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c075.png",
           "alt": "The Properties window showing the events of frmRegister, with the lightning bolt and Load",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 521,
           "marks": [
            {
             "n": 5,
+            "x": 11.6,
+            "y": 2.5,
             "say": "Press Shift and F7 together."
            },
            {
             "n": 6,
+            "x": 19.4,
+            "y": 9.9,
             "say": "Click the title bar of frmRegister."
            },
            {
             "n": 7,
+            "x": 86.0,
+            "y": 59.6,
             "say": "Click the [[lightning bolt|8]] at the top of the Properties window."
            },
            {
             "n": 8,
+            "x": 93.7,
+            "y": 63.3,
             "say": "Double-click the empty box beside **Load**. Scroll down the list a little if you cannot see it."
            }
           ]
@@ -1170,21 +1204,29 @@
          "do": "Click at the end of the `{` on the line under `private void frmRegister_Load`.",
          "see": "The flashing cursor is after the `{`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c076.png",
           "alt": "frmRegister.cs, with the yellow lines typed inside frmRegister_Load",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 488,
           "marks": [
            {
             "n": 9,
+            "x": 18.0,
+            "y": 62.9,
             "say": "Click at the end of the `{` on the line under `private void frmRegister_Load`."
            },
            {
             "n": 10,
+            "x": 19.1,
+            "y": 66.2,
             "say": "Press Enter."
            },
            {
             "n": 11,
+            "x": 18.2,
+            "y": 63.9,
+            "w": 42.8,
+            "h": 21.1,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1307,21 +1349,29 @@
          "do": "Click at the end of the `}` that closes `frmRegister_Load`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c077.png",
           "alt": "frmRegister.cs, with Avatar_Click typed under frmRegister_Load",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 575,
           "marks": [
            {
             "n": 1,
+            "x": 18.0,
+            "y": 58.9,
             "say": "Click at the end of the `}` that closes `frmRegister_Load`."
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 64.5,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 62.6,
+            "w": 41.6,
+            "h": 34.7,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1352,33 +1402,47 @@
          "do": "Press Shift and F7 together.",
          "see": "The designer shows frmRegister.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c078.png",
           "alt": "frmRegister in the designer with all 8 pictures picked, and Avatar_Click beside Click",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 521,
           "marks": [
            {
             "n": 4,
+            "x": 11.6,
+            "y": 2.5,
             "say": "Press Shift and F7 together."
            },
            {
             "n": 5,
+            "x": 28.3,
+            "y": 35.5,
             "say": "Click the Goat picture."
            },
            {
             "n": 6,
+            "x": 35.5,
+            "y": 35.5,
             "say": "Hold Ctrl and click each of the other 7 pictures, one at a time."
            },
            {
             "n": 7,
+            "x": 86.0,
+            "y": 59.6,
             "say": "Click the lightning bolt at the top of the Properties window."
            },
            {
             "n": 8,
+            "x": 93.7,
+            "y": 78.4,
             "say": "Click the box beside **Click**, then click the small arrow at the right end of the box."
            },
            {
             "n": 9,
+            "x": 89.3,
+            "y": 76.9,
+            "w": 9.6,
+            "h": 3.1,
             "say": "Click `Avatar_Click` in the list."
            }
           ]
@@ -1487,21 +1551,29 @@
          "do": "Click at the end of the `}` that closes `Avatar_Click`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c079.png",
           "alt": "frmRegister.cs, with the start of btnCreate_Click typed under Avatar_Click",
-          "w": 800,
-          "h": 400,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 1,
+            "x": 18.0,
+            "y": 45.5,
             "say": "Click at the end of the `}` that closes `Avatar_Click`."
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 50.7,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 48.9,
+            "w": 42.8,
+            "h": 48.7,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1620,17 +1692,23 @@
          "do": "Click at the start of the line `// Checks every box, shows each box's own message, then saves`.",
          "see": "The flashing cursor is at the start of that line.",
          "img": {
-          "missing": true,
-          "alt": "btnCreate_Click, picked from its comment line down to the } under the username check",
-          "w": 800,
-          "h": 400,
+          "img": "img/cap/c534.png",
+          "alt": "btnCreate_Click, with a box from its comment line down to the } under the username check",
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 1,
+            "x": 9.1,
+            "y": 23.4,
             "say": "Click at the start of the line `// Checks every box, shows each box's own message, then saves`."
            },
            {
             "n": 2,
+            "x": 8.8,
+            "y": 22.2,
+            "w": 25.0,
+            "h": 35.3,
             "say": "Hold Shift and click at the end of the `}` under the line `allRight = false;`."
            }
           ]
@@ -1655,29 +1733,41 @@
          "do": "Press Ctrl and V together.",
          "see": "The copy replaces the blue lines. It has 4 lines that start with `// YOU TYPE THIS PART`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c081.png",
           "alt": "btnCreate_Click after the paste, with 4 lines that start with // YOU TYPE THIS PART",
-          "w": 800,
-          "h": 400,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 4,
+            "x": 15.7,
+            "y": 6.7,
+            "w": 42.8,
+            "h": 90.9,
             "say": "Press Ctrl and V together."
            },
            {
             "n": 5,
+            "x": 21.7,
+            "y": 61.2,
             "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, then type the first yellow line."
            },
            {
             "n": 6,
+            "x": 21.7,
+            "y": 71.7,
             "say": "Triple-click the next line that starts with `// YOU TYPE THIS PART`, then type the next yellow line."
            },
            {
             "n": 7,
+            "x": 21.7,
+            "y": 85.1,
             "say": "Triple-click the next line that starts with `// YOU TYPE THIS PART`, then type the next yellow line."
            },
            {
             "n": 8,
+            "x": 19.1,
+            "y": 90.3,
             "say": "Triple-click the last line that starts with `// YOU TYPE THIS PART`, then type the last group of yellow lines."
            }
           ]
@@ -1771,21 +1861,29 @@
          "do": "Click at the end of the `}` under the line `lblAvatarError.Text = ex.Message;` and its `allRight = false;`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c082.png",
           "alt": "btnCreate_Click, with the save typed at the end",
-          "w": 800,
-          "h": 400,
+          "w": 1102,
+          "h": 509,
           "marks": [
            {
             "n": 1,
+            "x": 20.6,
+            "y": 47.6,
             "say": "Click at the end of the `}` under the line `lblAvatarError.Text = ex.Message;` and its `allRight = false;`."
            },
            {
             "n": 2,
+            "x": 19.1,
+            "y": 51.0,
             "say": "Press Enter."
            },
            {
             "n": 3,
+            "x": 18.2,
+            "y": 48.8,
+            "w": 42.1,
+            "h": 45.2,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1849,21 +1947,29 @@
          "do": "Click at the end of the `}` that closes `btnCreate_Click`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c083.png",
           "alt": "frmRegister.cs, with btnBack_Click typed under btnCreate_Click",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 1,
+            "x": 18.0,
+            "y": 79.6,
             "say": "Click at the end of the `}` that closes `btnCreate_Click`."
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 85.1,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 83.2,
+            "w": 35.8,
+            "h": 14.3,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1894,29 +2000,41 @@
          "do": "Press Shift and F7 together.",
          "see": "The designer shows frmRegister.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c084.png",
           "alt": "The Properties window showing the events of btnCreate, with btnCreate_Click beside Click",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 521,
           "marks": [
            {
             "n": 4,
+            "x": 11.6,
+            "y": 2.5,
             "say": "Press Shift and F7 together."
            },
            {
             "n": 5,
+            "x": 10.7,
+            "y": 88.3,
             "say": "Click **Create my player** on frmRegister."
            },
            {
             "n": 6,
+            "x": 86.0,
+            "y": 59.6,
             "say": "Click the lightning bolt at the top of the Properties window."
            },
            {
             "n": 7,
+            "x": 93.7,
+            "y": 87.6,
             "say": "Click the box beside **Click**, then click the small arrow at the right end of the box."
            },
            {
             "n": 8,
+            "x": 89.3,
+            "y": 86.0,
+            "w": 9.6,
+            "h": 3.1,
             "say": "Click `btnCreate_Click` in the list."
            }
           ]
@@ -1962,29 +2080,41 @@
          "do": "Press Shift and F7 together.",
          "see": "The designer shows frmRegister.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c085.png",
           "alt": "The Properties window showing the events of btnBack, with btnBack_Click beside Click",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 521,
           "marks": [
            {
             "n": 9,
+            "x": 11.6,
+            "y": 2.5,
             "say": "Press Shift and F7 together."
            },
            {
             "n": 10,
+            "x": 22.0,
+            "y": 88.2,
             "say": "Click **Back to log in** on frmRegister."
            },
            {
             "n": 11,
+            "x": 86.0,
+            "y": 59.6,
             "say": "Click the lightning bolt at the top of the Properties window."
            },
            {
             "n": 12,
+            "x": 93.0,
+            "y": 87.4,
             "say": "Click the box beside **Click**, then click the small arrow at the right end of the box."
            },
            {
             "n": 13,
+            "x": 89.3,
+            "y": 86.0,
+            "w": 9.6,
+            "h": 3.1,
             "say": "Click `btnBack_Click` in the list."
            }
           ]
@@ -2030,13 +2160,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 14,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -2096,21 +2228,29 @@
          "do": "Double-click `Program.cs` in Solution Explorer.",
          "see": "`Program.cs` opens in the code editor.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c086.png",
           "alt": "Program.cs, with frmLogin picked in the Application.Run line",
-          "w": 800,
-          "h": 300,
+          "w": 1568,
+          "h": 370,
           "marks": [
            {
             "n": 1,
+            "x": 86.6,
+            "y": 56.2,
             "say": "Double-click `Program.cs` in Solution Explorer."
            },
            {
             "n": 2,
+            "x": 19.8,
+            "y": 77.3,
             "say": "Double-click the word `frmLogin` in the line `Application.Run(new frmLogin());`"
            },
            {
             "n": 3,
+            "x": 18.2,
+            "y": 75.3,
+            "w": 3.2,
+            "h": 4.1,
             "say": "Type `frmRegister`"
            }
           ]
@@ -2134,13 +2274,15 @@
          "do": "Press F5.",
          "see": "The Register window opens, with the 8 avatar pictures.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c087.png",
           "alt": "The Register window running, with all 8 avatar pictures",
-          "w": 800,
-          "h": 450,
+          "w": 1002,
+          "h": 692,
           "marks": [
            {
             "n": 4,
+            "x": 10.3,
+            "y": 2.1,
             "say": "Press F5."
            }
           ]
@@ -2286,25 +2428,37 @@
          "do": "Click the **Program.cs** tab at the top of the editor.",
          "see": "`Program.cs` shows in the code editor.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c088.png",
           "alt": "Program.cs, with frmLogin back in the Application.Run line",
-          "w": 800,
-          "h": 300,
+          "w": 1568,
+          "h": 370,
           "marks": [
            {
             "n": 1,
+            "x": 3.2,
+            "y": 3.6,
             "say": "Click the **Program.cs** tab at the top of the editor."
            },
            {
             "n": 2,
+            "x": 19.8,
+            "y": 77.3,
             "say": "Double-click the word `frmRegister` in the line `Application.Run(new frmRegister());`"
            },
            {
             "n": 3,
+            "x": 18.2,
+            "y": 75.3,
+            "w": 3.2,
+            "h": 4.1,
             "say": "Type `frmLogin`"
            },
            {
             "n": 4,
+            "x": 1.8,
+            "y": 1.4,
+            "w": 5.4,
+            "h": 4.4,
             "say": "Press Ctrl and S together."
            }
           ]

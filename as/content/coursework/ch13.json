@@ -110,11 +110,11 @@
       },
       {
        "screenshot": {
-        "missing": true,
+        "img": "img/cap/s74808881.png",
         "alt": "The Round over box at the end of a round of Leave No Trace",
-        "w": 1002,
-        "h": 693,
-        "at": [],
+        "w": 818,
+        "h": 565,
+        "marks": [],
         "cap": "The Round over box at the end of a round."
        }
       },
@@ -482,25 +482,41 @@
             "do": "Press the Windows key and the E key together.",
             "see": "File Explorer opens.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c012.png",
              "alt": "File Explorer open on Downloads, with the menu that opens on summit-ready-files.zip",
-             "w": 800,
-             "h": 450,
+             "w": 818,
+             "h": 565,
              "marks": [
               {
                "n": 2,
+               "x": 0.2,
+               "y": 0.4,
+               "w": 78.0,
+               "h": 10.8,
                "say": "Press the Windows key and the E key together."
               },
               {
                "n": 3,
+               "x": 2.9,
+               "y": 21.2,
+               "w": 12.5,
+               "h": 3.2,
                "say": "Click **Downloads** in the list down the left side of File Explorer."
               },
               {
                "n": 4,
+               "x": 17.5,
+               "y": 20.5,
+               "w": 59.5,
+               "h": 3.0,
                "say": "Right-click `summit-ready-files.zip`."
               },
               {
                "n": 5,
+               "x": 36.2,
+               "y": 36.6,
+               "w": 26.8,
+               "h": 3.0,
                "say": "Click **Extract All...** in the menu."
               }
              ]
@@ -542,13 +558,17 @@
             "do": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window.",
             "see": "A new File Explorer window opens. It shows 3 folders, Data, Images and Sounds, and one file, `credits.txt`.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c013.png",
              "alt": "The Extract Compressed (Zipped) Folders window, with its Extract button",
-             "w": 640,
-             "h": 480,
+             "w": 622,
+             "h": 470,
              "marks": [
               {
                "n": 6,
+               "x": 68.5,
+               "y": 81.3,
+               "w": 10.0,
+               "h": 4.7,
                "say": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window."
               }
              ]
@@ -560,17 +580,25 @@
             "do": "Press Ctrl and A together.",
             "see": "The 3 folders and `credits.txt` turn blue.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c014.png",
              "alt": "The unpacked folder, with Data, Images, Sounds and credits.txt highlighted",
-             "w": 800,
-             "h": 360,
+             "w": 920,
+             "h": 486,
              "marks": [
               {
                "n": 7,
+               "x": 15.7,
+               "y": 36.0,
+               "w": 53.0,
+               "h": 14.0,
                "say": "Press Ctrl and A together."
               },
               {
                "n": 8,
+               "x": 6.7,
+               "y": 10.3,
+               "w": 3.5,
+               "h": 10.7,
                "say": "Press Ctrl and C together."
               }
              ]
@@ -588,13 +616,15 @@
             "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
             "see": "Visual Studio 2019 comes to the front, with your project open.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c015.png",
              "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
-             "w": 800,
-             "h": 60,
+             "w": 960,
+             "h": 41,
              "marks": [
               {
                "n": 9,
+               "x": 63.9,
+               "y": 50.0,
                "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
               }
              ]
@@ -606,17 +636,21 @@
             "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
             "see": "A long menu opens.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c016.png",
              "alt": "Solution Explorer, with the menu that opens on the project line",
-             "w": 360,
-             "h": 420,
+             "w": 635,
+             "h": 616,
              "marks": [
               {
                "n": 10,
+               "x": 59.8,
+               "y": 5.4,
                "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
               },
               {
                "n": 11,
+               "x": 18.8,
+               "y": 89.1,
                "say": "Click **Open Folder in File Explorer**, near the bottom of the menu."
               }
              ]
@@ -634,13 +668,15 @@
             "do": "Double-click the **bin** folder.",
             "see": "The bin folder holds a folder called Debug.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c017.png",
              "alt": "File Explorer on the project folder, with the bin folder",
-             "w": 640,
-             "h": 300,
+             "w": 960,
+             "h": 279,
              "marks": [
               {
                "n": 12,
+               "x": 21.3,
+               "y": 27.7,
                "say": "Double-click the **bin** folder."
               }
              ]
@@ -652,13 +688,15 @@
             "do": "Double-click the **Debug** folder.",
             "see": "The Debug folder holds the Data, Images and Sounds folders, and your program, whose name ends in .exe.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c018.png",
              "alt": "File Explorer on the bin folder, with the Debug folder",
-             "w": 640,
-             "h": 300,
+             "w": 960,
+             "h": 279,
              "marks": [
               {
                "n": 13,
+               "x": 22.4,
+               "y": 27.7,
                "say": "Double-click the **Debug** folder."
               }
              ]
@@ -670,17 +708,25 @@
             "do": "Press Ctrl and V together.",
             "see": "A window called Replace or Skip Files opens, because most of the files are already there.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c194.png",
              "alt": "The Replace or Skip Files window, with Skip these files",
-             "w": 640,
-             "h": 400,
+             "w": 1123,
+             "h": 600,
              "marks": [
               {
                "n": 14,
+               "x": 15.1,
+               "y": 35.0,
+               "w": 62.3,
+               "h": 25.8,
                "say": "Press Ctrl and V together."
               },
               {
                "n": 15,
+               "x": 31.7,
+               "y": 27.7,
+               "w": 35.1,
+               "h": 5.3,
                "say": "Click **Skip these files**."
               }
              ]
@@ -717,13 +763,15 @@
          "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
          "see": "Visual Studio 2019 comes to the front, with your project open.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c015.png",
           "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
-          "w": 800,
-          "h": 60,
+          "w": 960,
+          "h": 41,
           "marks": [
            {
             "n": 1,
+            "x": 63.9,
+            "y": 50.0,
             "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
            }
           ]
@@ -735,17 +783,21 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c016.png",
           "alt": "Solution Explorer, with the menu that opens on the project line",
-          "w": 360,
-          "h": 420,
+          "w": 635,
+          "h": 616,
           "marks": [
            {
             "n": 2,
+            "x": 59.8,
+            "y": 5.4,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 3,
+            "x": 18.8,
+            "y": 89.1,
             "say": "Click **Open Folder in File Explorer**, near the bottom of the menu."
            }
           ]
@@ -763,13 +815,15 @@
          "do": "Double-click the **bin** folder.",
          "see": "The bin folder holds a folder called Debug.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c017.png",
           "alt": "File Explorer on the project folder, with the bin folder",
-          "w": 640,
-          "h": 300,
+          "w": 960,
+          "h": 279,
           "marks": [
            {
             "n": 4,
+            "x": 21.3,
+            "y": 27.7,
             "say": "Double-click the **bin** folder."
            }
           ]
@@ -781,13 +835,15 @@
          "do": "Double-click the **Debug** folder.",
          "see": "The Debug folder holds the Data, Images and Sounds folders.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c018.png",
           "alt": "File Explorer on the bin folder, with the Debug folder",
-          "w": 640,
-          "h": 300,
+          "w": 960,
+          "h": 279,
           "marks": [
            {
             "n": 5,
+            "x": 22.4,
+            "y": 27.7,
             "say": "Double-click the **Debug** folder."
            }
           ]
@@ -799,17 +855,21 @@
          "do": "Double-click the **Images** folder.",
          "see": "The Images folder holds `field.jpg` and some folders, including Avatars, Icons and Litter.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c287.png",
           "alt": "File Explorer on the Images folder, with field.jpg and the Litter folder",
-          "w": 640,
-          "h": 300,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 6,
+            "x": 68.3,
+            "y": 27.2,
             "say": "Double-click the **Images** folder."
            },
            {
             "n": 7,
+            "x": 18.9,
+            "y": 55.2,
             "say": "Double-click the **Litter** folder."
            }
           ]
@@ -833,13 +893,15 @@
          "do": "Close File Explorer with the X at its top right corner.",
          "see": "Visual Studio 2019 shows again.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c288.png",
           "alt": "File Explorer on the Litter folder, with its X at the top right",
-          "w": 640,
-          "h": 300,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 8,
+            "x": 97.9,
+            "y": 2.1,
             "say": "Close File Explorer with the X at its top right corner."
            }
           ]
@@ -873,21 +935,27 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c068.png",
           "alt": "The project menu, with Add pointed at and Form (Windows Forms) in the second menu",
-          "w": 640,
-          "h": 420,
+          "w": 949,
+          "h": 605,
           "marks": [
            {
             "n": 1,
+            "x": 73.8,
+            "y": 4.6,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 2,
+            "x": 40.6,
+            "y": 37.8,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 3,
+            "x": 11.6,
+            "y": 81.0,
             "say": "Click **Form (Windows Forms)...** in the second menu."
            }
           ]
@@ -911,21 +979,29 @@
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Form1.cs` turns blue, so what you type next replaces it.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c069.png",
           "alt": "The Add New Item window, with Form (Windows Forms) picked",
-          "w": 800,
-          "h": 450,
+          "w": 943,
+          "h": 592,
           "marks": [
            {
             "n": 4,
+            "x": 42.5,
+            "y": 91.1,
             "say": "Triple-click the Name box at the bottom of the Add New Item window."
            },
            {
             "n": 5,
+            "x": 13.8,
+            "y": 89.5,
+            "w": 57.4,
+            "h": 3.5,
             "say": "Type `frmLitter.cs`"
            },
            {
             "n": 6,
+            "x": 86.0,
+            "y": 96.3,
             "say": "Click **Add**."
            }
           ]
@@ -948,7 +1024,7 @@
        ]
       },
       {
-       "p": "Now set the form's properties in the Properties window, using the table below. Set **Font** first. If you change Font later, Visual Studio 2019 stretches the form to fit the new font, and its size (ClientSize) changes."
+       "p": "Now set the form's properties in the Properties window, using the table below. Set **Font** first. If you change Font later, Visual Studio 2019 stretches the form to fit the new font, and its Size changes."
       },
       {
        "p": "Leave No Trace needs 2 properties that the other games do not. [[KeyPreview|8]] True lets the form hear the arrow keys. [[DoubleBuffered|9]] True draws each picture off the screen first, so nothing flickers as the sheep move."
@@ -958,9 +1034,9 @@
         "props": [
          "Font = Segoe UI, 11pt",
          "Text = Summit Ready - Leave No Trace",
-         "ClientSize = 1000, 660",
          "StartPosition = CenterScreen",
          "FormBorderStyle = FixedSingle",
+         "Size = 1016, 699",
          "MaximizeBox = False",
          "BackColor = 243, 245, 242",
          "KeyPreview = True",
@@ -997,21 +1073,27 @@
          "do": "Click the [[lightning bolt|3]] at the top of the Properties window.",
          "see": "The Properties window now lists the form's events in place of its properties.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c289.png",
           "alt": "The Properties window showing the events of frmLitter, with the lightning bolt, Load and the Properties button",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 7,
+            "x": 45.8,
+            "y": 13.2,
             "say": "Click the [[lightning bolt|3]] at the top of the Properties window."
            },
            {
             "n": 8,
+            "x": 75.9,
+            "y": 54.5,
             "say": "Double-click the empty box beside **Load**. The events are in A to Z order, so scroll down a little if you cannot see it."
            },
            {
             "n": 10,
+            "x": 40.8,
+            "y": 13.2,
             "say": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window."
            }
           ]
@@ -1029,13 +1111,15 @@
          "do": "Press Shift and F7 together.",
          "see": "The designer shows frmLitter.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c290.png",
           "alt": "The designer showing frmLitter, with the frmLitter.cs [Design] tab",
-          "w": 800,
-          "h": 300,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 9,
+            "x": 10.7,
+            "y": 2.3,
             "say": "Press Shift and F7 together."
            }
           ]
@@ -1072,13 +1156,17 @@
          "do": "Double-click `frmPractice.cs` in Solution Explorer.",
          "see": "frmPractice opens in the designer.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c200.png",
           "alt": "Solution Explorer, with frmPractice.cs",
-          "w": 360,
-          "h": 300,
+          "w": 352,
+          "h": 138,
           "marks": [
            {
             "n": 1,
+            "x": 14.6,
+            "y": 77.9,
+            "w": 31.4,
+            "h": 13.3,
             "say": "Double-click `frmPractice.cs` in Solution Explorer."
            }
           ]
@@ -1090,17 +1178,23 @@
          "do": "Click a dark part of the header strip that has no words on it.",
          "see": "The Properties window shows pnlHeader at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c201.png",
           "alt": "frmPractice in the designer, with the dark header strip picked",
-          "w": 800,
-          "h": 450,
+          "w": 1078,
+          "h": 624,
           "marks": [
            {
             "n": 2,
+            "x": 77.0,
+            "y": 18.8,
             "say": "Click a dark part of the header strip that has no words on it."
            },
            {
             "n": 3,
+            "x": 5.0,
+            "y": 10.6,
+            "w": 93.1,
+            "h": 9.6,
             "say": "Press Ctrl and C together."
            }
           ]
@@ -1124,17 +1218,21 @@
          "do": "Click the **frmLitter.cs [Design]** tab at the top of the editor.",
          "see": "The empty frmLitter form shows again.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c291.png",
           "alt": "The empty frmLitter form, with the frmLitter.cs [Design] tab and the title bar of frmLitter",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 4,
+            "x": 5.7,
+            "y": 2.7,
             "say": "Click the **frmLitter.cs [Design]** tab at the top of the editor."
            },
            {
             "n": 5,
+            "x": 31.7,
+            "y": 9.9,
             "say": "Click the title bar of frmLitter."
            }
           ]
@@ -1152,25 +1250,39 @@
          "do": "Press Ctrl and V together.",
          "see": "The dark header strip appears on frmLitter, with small white squares at its corners. The Properties window shows pnlHeader.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c292.png",
           "alt": "frmLitter with the pasted header strip, and the Location box in the Properties window",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 6,
+            "x": 18.1,
+            "y": 60.2,
             "say": "Press Ctrl and V together."
            },
            {
             "n": 7,
+            "x": 89.1,
+            "y": 85.4,
+            "w": 9.9,
+            "h": 2.8,
             "say": "Triple-click the box beside **Location** in the Properties window."
            },
            {
             "n": 8,
+            "x": 89.1,
+            "y": 85.4,
+            "w": 9.9,
+            "h": 2.8,
             "say": "Type `0, 0`"
            },
            {
             "n": 9,
+            "x": 89.1,
+            "y": 85.4,
+            "w": 9.9,
+            "h": 2.8,
             "say": "Press Enter."
            }
           ]
@@ -1228,21 +1340,31 @@
          "do": "Click the **frmPractice.cs [Design]** tab at the top of the editor.",
          "see": "frmPractice shows again.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c204.png",
           "alt": "frmPractice in the designer, with the white Round over box picked",
-          "w": 800,
-          "h": 450,
+          "w": 1078,
+          "h": 624,
           "marks": [
            {
             "n": 1,
+            "x": 3.0,
+            "y": 0.2,
+            "w": 15.8,
+            "h": 2.9,
             "say": "Click the **frmPractice.cs [Design]** tab at the top of the editor."
            },
            {
             "n": 2,
-            "say": "Click a white part of the Round over box that has no words on it."
+            "x": 34.1,
+            "y": 93.7,
+            "say": "Click the white space to the right of the words Round over, at the top of the box. (The empty space lower down holds hidden labels, so a click there picks a label, not the box.)"
            },
            {
             "n": 3,
+            "x": 21.7,
+            "y": 29.8,
+            "w": 59.8,
+            "h": 67.8,
             "say": "Press Ctrl and C together."
            }
           ]
@@ -1251,7 +1373,7 @@
          "n": 1
         },
         {
-         "do": "Click a white part of the Round over box that has no words on it.",
+         "do": "Click the white space to the right of the words Round over, at the top of the box. (The empty space lower down holds hidden labels, so a click there picks a label, not the box.)",
          "see": "The Properties window shows pnlRoundOver at the top.",
          "wrong": [
           [
@@ -1272,33 +1394,53 @@
          "do": "Click the **frmLitter.cs [Design]** tab at the top of the editor.",
          "see": "frmLitter shows again, with the header strip.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c293.png",
           "alt": "frmLitter with the pasted Round over box in the middle",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 4,
+            "x": 6.1,
+            "y": 0.2,
+            "w": 8.6,
+            "h": 2.8,
             "say": "Click the **frmLitter.cs [Design]** tab at the top of the editor."
            },
            {
             "n": 5,
+            "x": 18.1,
+            "y": 8.5,
             "say": "Click the title bar of frmLitter."
            },
            {
             "n": 6,
+            "x": 28.0,
+            "y": 57.4,
             "say": "Press Ctrl and V together."
            },
            {
             "n": 7,
+            "x": 89.1,
+            "y": 85.4,
+            "w": 9.9,
+            "h": 2.8,
             "say": "Triple-click the box beside **Location** in the Properties window."
            },
            {
             "n": 8,
+            "x": 89.1,
+            "y": 85.4,
+            "w": 9.9,
+            "h": 2.8,
             "say": "Type `180, 120`"
            },
            {
             "n": 9,
+            "x": 89.1,
+            "y": 85.4,
+            "w": 9.9,
+            "h": 2.8,
             "say": "Press Enter."
            }
           ]
@@ -1362,25 +1504,39 @@
          "do": "Click the title at the left of the header strip.",
          "see": "The Properties window shows lblTitle at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c294.png",
           "alt": "The header strip on frmLitter, with lblTitle picked and its Text box in the Properties window",
-          "w": 800,
-          "h": 300,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 1,
+            "x": 5.7,
+            "y": 13.5,
             "say": "Click the title at the left of the header strip."
            },
            {
             "n": 2,
+            "x": 89.1,
+            "y": 79.6,
+            "w": 8.9,
+            "h": 2.8,
             "say": "Triple-click the box beside **Text** in the Properties window."
            },
            {
             "n": 3,
+            "x": 89.1,
+            "y": 79.6,
+            "w": 8.9,
+            "h": 2.8,
             "say": "Type `Slieve Meelmore - Leave No Trace`"
            },
            {
             "n": 4,
+            "x": 89.1,
+            "y": 79.6,
+            "w": 8.9,
+            "h": 2.8,
             "say": "Press Enter."
            }
           ]
@@ -1410,25 +1566,39 @@
          "do": "Click the instruction under the title.",
          "see": "The Properties window shows lblInstruction at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c295.png",
           "alt": "The header strip on frmLitter, with lblInstruction picked and its Text box in the Properties window",
-          "w": 800,
-          "h": 300,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 5,
+            "x": 8.2,
+            "y": 16.9,
             "say": "Click the instruction under the title."
            },
            {
             "n": 6,
+            "x": 89.1,
+            "y": 79.6,
+            "w": 8.9,
+            "h": 2.8,
             "say": "Triple-click the box beside **Text** in the Properties window."
            },
            {
             "n": 7,
+            "x": 89.1,
+            "y": 79.6,
+            "w": 8.9,
+            "h": 2.8,
             "say": "Type `Use the arrow keys to walk your avatar and pick up all 8 pieces of litter. Keep away from the sheep.`"
            },
            {
             "n": 8,
+            "x": 89.1,
+            "y": 79.6,
+            "w": 8.9,
+            "h": 2.8,
             "say": "Press Enter."
            }
           ]
@@ -1624,11 +1794,11 @@
         "done": {
          "see": "The dark header strip along the top of frmLitter. Under it, a light green field fills the window. A small dark strip sits in its top right corner, with the 2 labels and 3 empty hearts. Start walking is in the middle, and the empty avatar box is at the left. The 3 Timers sit in the grey strip under the form.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c296.png",
           "alt": "frmLitter in the designer with every control from the table on it, and the 3 Timers in the grey strip under the form",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1568,
+          "h": 675,
+          "marks": []
          }
         }
        }
@@ -1693,30 +1863,6 @@
         {
          "do": "Click the **frmLitter.cs** tab at the top of the editor, the one without [Design].",
          "see": "The code of frmLitter shows, with `frmLitter_Load` near the bottom.",
-         "img": {
-          "missing": true,
-          "alt": "frmLitter.cs in the code editor, with the 3 pasted fields under the class line",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click the **frmLitter.cs** tab at the top of the editor, the one without [Design]."
-           },
-           {
-            "n": 2,
-            "say": "Click at the end of the `{` under `public partial class frmLitter : Form`."
-           },
-           {
-            "n": 3,
-            "say": "Press Enter."
-           },
-           {
-            "n": 5,
-            "say": "Press Ctrl and V together."
-           }
-          ]
-         },
          "id": "4-1.1",
          "n": 1
         },
@@ -1839,30 +1985,6 @@
         {
          "do": "Click at the end of the `}` that closes `frmLitter_Load`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmLitter.cs, with the 8 pasted methods under frmLitter_Load",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 6,
-            "say": "Click at the end of the `}` that closes `frmLitter_Load`."
-           },
-           {
-            "n": 7,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 9,
-            "say": "Press Ctrl and V together."
-           },
-           {
-            "n": 10,
-            "say": "Press Ctrl and S together."
-           }
-          ]
-         },
          "id": "4-1.6",
          "n": 6
         },
@@ -1914,17 +2036,23 @@
          "do": "Press Shift and F7 together.",
          "see": "The designer shows frmLitter.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c299.png",
           "alt": "frmLitter in the designer, with Back to the map picked on the header strip",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 1,
+            "x": 5.8,
+            "y": 0.2,
+            "w": 8.4,
+            "h": 2.8,
             "say": "Press Shift and F7 together."
            },
            {
             "n": 2,
+            "x": 49.3,
+            "y": 14.4,
             "say": "Click **Back to the map** on the header strip."
            }
           ]
@@ -1942,25 +2070,35 @@
          "do": "Click the lightning bolt at the top of the Properties window.",
          "see": "The Properties window lists the events of btnBack.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c212.png",
           "alt": "The Properties window showing the events of btnBack, with the list open beside Click",
-          "w": 360,
-          "h": 480,
+          "w": 352,
+          "h": 489,
           "marks": [
            {
             "n": 3,
+            "x": 25.3,
+            "y": 11.2,
             "say": "Click the lightning bolt at the top of the Properties window."
            },
            {
             "n": 4,
+            "x": 42.0,
+            "y": 14.7,
+            "w": 47.2,
+            "h": 3.7,
             "say": "Click the box beside **Click**."
            },
            {
             "n": 5,
+            "x": 92.0,
+            "y": 16.6,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 6,
+            "x": 54.0,
+            "y": 32.7,
             "say": "Click `btnBack_Click` in the list."
            }
           ]
@@ -2009,17 +2147,23 @@
          "do": "Click the arrow at the right end of the box at the very top of the Properties window.",
          "see": "A list of every control on frmLitter drops down.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c213.png",
           "alt": "The Properties window, with the list of every control open at the top",
-          "w": 360,
-          "h": 480,
+          "w": 352,
+          "h": 489,
           "marks": [
            {
             "n": 7,
+            "x": 96.6,
+            "y": 6.5,
             "say": "Click the arrow at the right end of the box at the very top of the Properties window."
            },
            {
             "n": 8,
+            "x": 1.1,
+            "y": 16.8,
+            "w": 69.9,
+            "h": 3.3,
             "say": "Click **btnDone** in the list."
            }
           ]
@@ -2037,21 +2181,31 @@
          "do": "Click the box beside **Click**.",
          "see": "A small arrow appears at the right end of the box.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c214.png",
           "alt": "The Properties window showing the events of btnDone, with btnDone_Click beside Click",
-          "w": 360,
-          "h": 480,
+          "w": 352,
+          "h": 489,
           "marks": [
            {
             "n": 9,
+            "x": 4.5,
+            "y": 14.7,
+            "w": 89.2,
+            "h": 3.7,
             "say": "Click the box beside **Click**."
            },
            {
             "n": 10,
+            "x": 95.2,
+            "y": 16.4,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 11,
+            "x": 42.3,
+            "y": 35.2,
+            "w": 51.4,
+            "h": 3.7,
             "say": "Click `btnDone_Click` in the list."
            }
           ]
@@ -2091,25 +2245,37 @@
          "do": "Click the speaker picture on the header strip.",
          "see": "The Properties window shows the events of picSound.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c215.png",
           "alt": "The Properties window showing the events of picSound, with picSound_Click beside Click",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 1,
+            "x": 41.8,
+            "y": 15.1,
             "say": "Click the speaker picture on the header strip."
            },
            {
             "n": 2,
+            "x": 82.3,
+            "y": 51.4,
+            "w": 15.6,
+            "h": 2.9,
             "say": "Click the box beside **Click**."
            },
            {
             "n": 3,
+            "x": 98.4,
+            "y": 52.7,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 4,
+            "x": 89.3,
+            "y": 70.6,
+            "w": 9.6,
+            "h": 2.9,
             "say": "Click `picSound_Click` in the list."
            }
           ]
@@ -2139,25 +2305,37 @@
          "do": "Click the title bar of frmLitter.",
          "see": "The Properties window shows the events of frmLitter.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c300.png",
           "alt": "The Properties window showing the events of frmLitter, with frmLitter_FormClosing beside FormClosing",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 5,
+            "x": 18.1,
+            "y": 8.5,
             "say": "Click the title bar of frmLitter."
            },
            {
             "n": 6,
+            "x": 89.1,
+            "y": 91.1,
+            "w": 9.7,
+            "h": 2.8,
             "say": "Click the box beside **FormClosing**. Scroll down the list a little if you cannot see it."
            },
            {
             "n": 7,
+            "x": 98.4,
+            "y": 92.6,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 8,
+            "x": 89.1,
+            "y": 91.1,
+            "w": 8.9,
+            "h": 2.8,
             "say": "Click `frmLitter_FormClosing` in the list."
            }
           ]
@@ -2187,13 +2365,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 9,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -2285,26 +2465,6 @@
         {
          "do": "Click at the end of the line `private bool finished = false;   // true once the result is kept`",
          "see": "The flashing cursor is at the end of the comment.",
-         "img": {
-          "missing": true,
-          "alt": "frmLitter.cs, with the first block of Leave No Trace fields typed under the chapter 9 fields",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the line `private bool finished = false;   // true once the result is kept`"
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-4.1",
          "n": 1
         },
@@ -2377,22 +2537,6 @@
         {
          "do": "Press Enter twice.",
          "see": "A blank line, then a new empty line, open under `private Image greyHeart;`.",
-         "img": {
-          "missing": true,
-          "alt": "frmLitter.cs, with the second block of Leave No Trace fields typed",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 4,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 5,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-4.4",
          "n": 4
         },
@@ -2490,26 +2634,6 @@
         {
          "do": "Click at the end of the `{` on the line under `private void frmLitter_Load`.",
          "see": "The flashing cursor is after the `{`.",
-         "img": {
-          "missing": true,
-          "alt": "frmLitter.cs, with the yellow lines typed inside frmLitter_Load",
-          "w": 800,
-          "h": 360,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `{` on the line under `private void frmLitter_Load`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-5.1",
          "n": 1
         },
@@ -2691,34 +2815,6 @@
         {
          "do": "Click at the end of the `}` that closes `frmLitter_Load`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmLitter.cs, with PlaceLitter pasted under frmLitter_Load and the yellow lines typed in it",
-          "w": 800,
-          "h": 360,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `frmLitter_Load`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 4,
-            "say": "Press Ctrl and V together."
-           },
-           {
-            "n": 5,
-            "say": "Triple-click the line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it."
-           },
-           {
-            "n": 6,
-            "say": "Type the yellow lines, from `int x = 0;` down to the line that starts `tooClose = (across`. Press Enter at the end of each line."
-           }
-          ]
-         },
          "id": "4-6.1",
          "n": 1
         },
@@ -2852,26 +2948,6 @@
         {
          "do": "Click at the end of the `}` that closes `PlaceLitter`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmLitter.cs, with PlaceSheep typed under PlaceLitter",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `PlaceLitter`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-7.1",
          "n": 1
         },
@@ -2962,26 +3038,6 @@
         {
          "do": "Click at the end of the `}` that closes `PlaceSheep`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmLitter.cs, with btnGo_Click typed under PlaceSheep",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `PlaceSheep`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-8.1",
          "n": 1
         },
@@ -3114,26 +3170,6 @@
         {
          "do": "Click at the end of the `}` that closes `btnGo_Click`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmLitter.cs, with frmLitter_KeyDown and frmLitter_KeyUp typed under btnGo_Click",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `btnGo_Click`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-9.1",
          "n": 1
         },
@@ -3248,26 +3284,6 @@
         {
          "do": "Click at the end of the `}` that closes `frmLitter_KeyUp`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmLitter.cs, with tmrGame_Tick and MovePlayer typed under frmLitter_KeyUp",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `frmLitter_KeyUp`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-10.1",
          "n": 1
         },
@@ -3364,26 +3380,6 @@
         {
          "do": "Click at the end of the `}` that closes `MovePlayer`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmLitter.cs, with MoveSheep typed under MovePlayer",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `MovePlayer`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-11.1",
          "n": 1
         },
@@ -3498,26 +3494,6 @@
         {
          "do": "Click at the end of the `}` that closes `MoveSheep`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmLitter.cs, with CheckLitter typed under MoveSheep",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `MoveSheep`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-12.1",
          "n": 1
         },
@@ -3644,26 +3620,6 @@
         {
          "do": "Click at the end of the `}` that closes `CheckLitter`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmLitter.cs, with CheckSheep typed under CheckLitter",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `CheckLitter`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-13.1",
          "n": 1
         },
@@ -3772,26 +3728,6 @@
         {
          "do": "Click at the end of the `}` that closes `CheckSheep`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmLitter.cs, with tmrClock_Tick and EndRound typed under CheckSheep",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `CheckSheep`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-14.1",
          "n": 1
         },
@@ -3876,26 +3812,6 @@
         {
          "do": "Click at the end of the `}` that closes `EndRound`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmLitter.cs, with tmrDone_Tick and RecordResult typed under EndRound",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `EndRound`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-15.1",
          "n": 1
         },
@@ -3966,26 +3882,6 @@
         {
          "do": "Click at the end of the `}` that closes `RecordResult`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmLitter.cs, with AddFeedback typed under RecordResult",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `RecordResult`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-16.1",
          "n": 1
         },
@@ -4063,26 +3959,6 @@
         {
          "do": "Click at the end of the line `if (bumps == 0) result.WentWell.Add(\"No sheep knocked you over.\");` in AddFeedback.",
          "see": "The flashing cursor is after the semicolon.",
-         "img": {
-          "missing": true,
-          "alt": "frmLitter.cs, with the yellow lines typed at the end of AddFeedback",
-          "w": 800,
-          "h": 400,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the line `if (bumps == 0) result.WentWell.Add(\"No sheep knocked you over.\");` in AddFeedback."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-17.1",
          "n": 1
         },
@@ -4132,26 +4008,6 @@
         {
          "do": "Click at the end of the `}` that closes `AddFeedback`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmLitter.cs, with Pieces typed under AddFeedback",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 4,
-            "say": "Click at the end of the `}` that closes `AddFeedback`."
-           },
-           {
-            "n": 5,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 6,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-17.4",
          "n": 4
         },
@@ -4171,13 +4027,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 7,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -4218,13 +4076,17 @@
          "do": "Press Shift and F7 together.",
          "see": "The designer shows frmLitter.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c317.png",
           "alt": "frmLitter in the designer, with Start walking picked",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 1,
+            "x": 7.3,
+            "y": 0.2,
+            "w": 10.0,
+            "h": 2.9,
             "say": "Press Shift and F7 together."
            }
           ]
@@ -4236,25 +4098,37 @@
          "do": "Click **Start walking** in the middle of the field.",
          "see": "The Properties window shows btnGo at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c318.png",
           "alt": "The Properties window showing the events of btnGo, with btnGo_Click beside Click",
-          "w": 360,
-          "h": 300,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 2,
+            "x": 28.1,
+            "y": 64.4,
             "say": "Click **Start walking** in the middle of the field."
            },
            {
             "n": 3,
+            "x": 89.1,
+            "y": 59.4,
+            "w": 9.7,
+            "h": 2.8,
             "say": "Click the box beside **Click**."
            },
            {
             "n": 4,
+            "x": 98.4,
+            "y": 60.9,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 5,
+            "x": 89.1,
+            "y": 59.4,
+            "w": 8.9,
+            "h": 2.8,
             "say": "Click `btnGo_Click` in the list."
            }
           ]
@@ -4284,25 +4158,37 @@
          "do": "Click **tmrGame** in the grey strip under frmLitter.",
          "see": "The Properties window shows tmrGame at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c319.png",
           "alt": "The Properties window showing the events of tmrGame, with tmrGame_Tick beside Tick",
-          "w": 360,
-          "h": 300,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 6,
+            "x": 3.3,
+            "y": 86.3,
             "say": "Click **tmrGame** in the grey strip under frmLitter."
            },
            {
             "n": 7,
+            "x": 89.1,
+            "y": 42.2,
+            "w": 10.6,
+            "h": 2.8,
             "say": "Click the box beside **Tick**."
            },
            {
             "n": 8,
+            "x": 99.2,
+            "y": 43.7,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 9,
+            "x": 89.1,
+            "y": 42.2,
+            "w": 9.5,
+            "h": 2.8,
             "say": "Click `tmrGame_Tick` in the list."
            }
           ]
@@ -4332,25 +4218,37 @@
          "do": "Click **tmrClock** in the grey strip under frmLitter.",
          "see": "The Properties window shows tmrClock at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c320.png",
           "alt": "The Properties window showing the events of tmrClock, with tmrClock_Tick beside Tick",
-          "w": 360,
-          "h": 300,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 10,
+            "x": 8.8,
+            "y": 86.3,
             "say": "Click **tmrClock** in the grey strip under frmLitter."
            },
            {
             "n": 11,
+            "x": 89.1,
+            "y": 42.2,
+            "w": 10.6,
+            "h": 2.8,
             "say": "Click the box beside **Tick**."
            },
            {
             "n": 12,
+            "x": 99.2,
+            "y": 43.7,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 13,
+            "x": 89.1,
+            "y": 42.2,
+            "w": 9.5,
+            "h": 2.8,
             "say": "Click `tmrClock_Tick` in the list."
            }
           ]
@@ -4380,25 +4278,37 @@
          "do": "Click **tmrDone** in the grey strip under frmLitter.",
          "see": "The Properties window shows tmrDone at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c321.png",
           "alt": "The Properties window showing the events of tmrDone, with tmrDone_Tick beside Tick",
-          "w": 360,
-          "h": 300,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 14,
+            "x": 14.1,
+            "y": 86.3,
             "say": "Click **tmrDone** in the grey strip under frmLitter."
            },
            {
             "n": 15,
+            "x": 89.1,
+            "y": 42.2,
+            "w": 10.6,
+            "h": 2.8,
             "say": "Click the box beside **Tick**."
            },
            {
             "n": 16,
+            "x": 99.2,
+            "y": 43.7,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 17,
+            "x": 89.1,
+            "y": 42.2,
+            "w": 9.5,
+            "h": 2.8,
             "say": "Click `tmrDone_Tick` in the list."
            }
           ]
@@ -4428,25 +4338,37 @@
          "do": "Click the title bar of frmLitter.",
          "see": "The Properties window shows frmLitter at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c322.png",
           "alt": "The Properties window showing the events of frmLitter, with frmLitter_KeyDown beside KeyDown",
-          "w": 360,
-          "h": 300,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 18,
+            "x": 18.1,
+            "y": 8.5,
             "say": "Click the title bar of frmLitter."
            },
            {
             "n": 19,
+            "x": 89.1,
+            "y": 79.6,
+            "w": 9.7,
+            "h": 2.8,
             "say": "Click the box beside **KeyDown**."
            },
            {
             "n": 20,
+            "x": 98.4,
+            "y": 80.9,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 21,
+            "x": 89.1,
+            "y": 79.6,
+            "w": 8.9,
+            "h": 2.8,
             "say": "Click `frmLitter_KeyDown` in the list."
            }
           ]
@@ -4476,21 +4398,31 @@
          "do": "Click the box beside **KeyUp**, 2 lines below KeyDown.",
          "see": "A small arrow appears at the right end of the box.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c323.png",
           "alt": "The Properties window showing the events of frmLitter, with frmLitter_KeyUp beside KeyUp",
-          "w": 360,
-          "h": 300,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 22,
+            "x": 89.1,
+            "y": 85.4,
+            "w": 9.7,
+            "h": 2.8,
             "say": "Click the box beside **KeyUp**, 2 lines below KeyDown."
            },
            {
             "n": 23,
+            "x": 98.4,
+            "y": 86.7,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 24,
+            "x": 89.1,
+            "y": 85.4,
+            "w": 8.9,
+            "h": 2.8,
             "say": "Click `frmLitter_KeyUp` in the list."
            }
           ]
@@ -4514,13 +4446,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 25,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -4573,41 +4507,65 @@
          "do": "Double-click `frmMap.cs` in Solution Explorer.",
          "see": "frmMap opens in the designer.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c236.png",
           "alt": "Visual Studio 2019 with frmMap.cs in the code editor. The search box is open and the new case line is typed. frmMap.cs is picked in Solution Explorer on the right",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 1,
+            "x": 86.7,
+            "y": 19.2,
             "say": "Double-click `frmMap.cs` in Solution Explorer."
            },
            {
             "n": 2,
+            "x": 1.7,
+            "y": 0.2,
+            "w": 5.4,
+            "h": 2.9,
             "say": "Press F7."
            },
            {
             "n": 3,
+            "x": 66.3,
+            "y": 7.8,
+            "w": 10.0,
+            "h": 3.1,
             "say": "Press Ctrl and F together."
            },
            {
             "n": 4,
+            "x": 13.5,
+            "y": 50.6,
+            "w": 8.3,
+            "h": 2.5,
             "say": "Type `each game chapter adds`"
            },
            {
             "n": 5,
+            "x": 79.4,
+            "y": 9.2,
             "say": "Press Escape."
            },
            {
             "n": 6,
+            "x": 6.5,
+            "y": 54.5,
             "say": "Press End."
            },
            {
             "n": 7,
+            "x": 12.4,
+            "y": 54.5,
             "say": "Press Enter."
            },
            {
             "n": 8,
+            "x": 12.3,
+            "y": 53.1,
+            "w": 15.0,
+            "h": 2.7,
             "say": "Type `case 2: game = new frmLitter(); break;`"
            }
           ]
@@ -4667,17 +4625,23 @@
          "do": "Press F5.",
          "see": "Your game starts and shows the login window.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c237.png",
           "alt": "The login window of your game, with a player's name and password typed in",
-          "w": 640,
-          "h": 400,
+          "w": 999,
+          "h": 690,
           "marks": [
            {
             "n": 9,
+            "x": 8.0,
+            "y": 1.9,
             "say": "Press F5."
            },
            {
             "n": 10,
+            "x": 33.0,
+            "y": 63.8,
+            "w": 33.8,
+            "h": 29.7,
             "say": "Log in with a player you registered in chapter 5."
            }
           ]
@@ -4695,13 +4659,17 @@
          "do": "Click **Start the expedition**.",
          "see": "The map opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c238.png",
           "alt": "The Welcome screen of your game, with the Start the expedition button",
-          "w": 640,
-          "h": 400,
+          "w": 999,
+          "h": 690,
           "marks": [
            {
             "n": 11,
+            "x": 3.4,
+            "y": 87.5,
+            "w": 28.0,
+            "h": 7.5,
             "say": "Click **Start the expedition**."
            }
           ]
@@ -4713,13 +4681,17 @@
          "do": "Click place number 2 on the map, the third place.",
          "see": "Leave No Trace opens, with your avatar, 8 pieces of litter, 3 sheep and Start walking.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c324.png",
           "alt": "The map, with place number 2 picked",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 12,
+            "x": 62.7,
+            "y": 31.6,
+            "w": 36.0,
+            "h": 8.5,
             "say": "Click place number 2 on the map, the third place."
            }
           ]
@@ -4962,17 +4934,23 @@
          "do": "Right-click `frmLitter.cs` in Solution Explorer.",
          "see": "A menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c325.png",
           "alt": "Solution Explorer, with the right-click menu of frmLitter.cs open",
-          "w": 360,
-          "h": 420,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 1,
+            "x": 81.9,
+            "y": 48.4,
+            "w": 17.1,
+            "h": 2.9,
             "say": "Right-click `frmLitter.cs` in Solution Explorer."
            },
            {
             "n": 2,
+            "x": 74.3,
+            "y": 90.4,
             "say": "Click **Rename**."
            }
           ]
@@ -4982,25 +4960,31 @@
         },
         {
          "do": "Click **Rename**.",
-         "see": "The name `frmLitter.cs` becomes a box that you can type in.",
+         "see": "The name `frmLitter.cs` becomes a box, with `frmLitter` highlighted.",
          "id": "5-2.2",
          "n": 2
         },
         {
-         "do": "Type your form's new name, such as `frmSpaceWalk.cs`",
-         "see": "The box shows the new name.",
+         "do": "Type your form's new name, such as `frmSpaceWalk`",
+         "see": "The box shows `frmSpaceWalk.cs`. Visual Studio keeps the `.cs` on the end for you.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c326.png",
           "alt": "Solution Explorer, with the name frmLitter.cs turned into a box and frmSpaceWalk.cs typed in it",
-          "w": 360,
-          "h": 200,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 3,
-            "say": "Type your form's new name, such as `frmSpaceWalk.cs`"
+            "x": 84.7,
+            "y": 48.2,
+            "w": 5.7,
+            "h": 3.3,
+            "say": "Type your form's new name, such as `frmSpaceWalk`"
            },
            {
             "n": 4,
+            "x": 91.8,
+            "y": 49.8,
             "say": "Press Enter."
            }
           ]
@@ -5018,13 +5002,15 @@
          "do": "Click **Yes**.",
          "see": "Every place that used `frmLitter` now uses the new name, including the line in `frmMap.cs` that opens your game.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c327.png",
           "alt": "The message that asks whether to rename every use of frmLitter",
-          "w": 480,
-          "h": 200,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 5,
+            "x": 53.7,
+            "y": 57.6,
             "say": "Click **Yes**."
            }
           ]

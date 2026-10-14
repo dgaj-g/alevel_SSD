@@ -376,13 +376,17 @@
          "do": "Do what the row says, such as type `ab` in the Username box and click **Create my player**.",
          "see": "The game allows it or refuses it.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c522.png",
           "alt": "The running Register form with ab typed in the Username box and the length message under it",
-          "w": 800,
-          "h": 450,
+          "w": 818,
+          "h": 565,
           "marks": [
            {
             "n": 1,
+            "x": 3.7,
+            "y": 17.7,
+            "w": 33.0,
+            "h": 10.6,
             "say": "Do what the row says, such as type `ab` in the Username box and click **Create my player**."
            }
           ]
@@ -393,40 +397,12 @@
         {
          "do": "Press the Windows key, Shift and S together, then drag a box around the form.",
          "see": "The screen goes grey while you drag. When you let go, the picture is copied.",
-         "img": {
-          "missing": true,
-          "alt": "The Windows screen-snip bar at the top of the screen, with a box being dragged around a form",
-          "w": 800,
-          "h": 450,
-          "marks": [
-           {
-            "n": 2,
-            "say": "Press the Windows key, Shift and S together, then drag a box around the form."
-           }
-          ]
-         },
          "id": "3-1.2",
          "n": 2
         },
         {
          "do": "Paste the picture into your portfolio, under a heading with its screenshot number, such as S14.",
          "see": "The picture shows the form, the data you typed, and the message the game showed.",
-         "img": {
-          "missing": true,
-          "alt": "A Word portfolio page with screenshot S14 under its heading, and the test plan row filled in below",
-          "w": 800,
-          "h": 450,
-          "marks": [
-           {
-            "n": 3,
-            "say": "Paste the picture into your portfolio, under a heading with its screenshot number, such as S14."
-           },
-           {
-            "n": 4,
-            "say": "Write what happened in the Actual result column of the row."
-           }
-          ]
-         },
          "id": "3-1.3",
          "n": 3
         },

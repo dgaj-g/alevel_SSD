@@ -179,25 +179,35 @@
          "do": "Double-click `Expedition.cs` in Solution Explorer.",
          "see": "Expedition.cs opens in the code editor.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c175.png",
           "alt": "Expedition.cs, with the banner fields typed under the Results line",
-          "w": 800,
-          "h": 360,
+          "w": 1102,
+          "h": 574,
           "marks": [
            {
             "n": 1,
+            "x": 5.0,
+            "y": 1.7,
             "say": "Double-click `Expedition.cs` in Solution Explorer."
            },
            {
             "n": 2,
+            "x": 52.3,
+            "y": 75.7,
             "say": "Click at the end of the line `public static GameResult[] Results = new GameResult[8];`"
            },
            {
             "n": 3,
+            "x": 16.6,
+            "y": 81.2,
             "say": "Press Enter twice."
            },
            {
             "n": 4,
+            "x": 15.7,
+            "y": 79.3,
+            "w": 44.7,
+            "h": 15.4,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -277,26 +287,6 @@
         {
          "do": "Click at the end of the `}` that closes `DoneCount`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "Expedition.cs, with BannerCase typed under DoneCount",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 5,
-            "say": "Click at the end of the `}` that closes `DoneCount`."
-           },
-           {
-            "n": 6,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 7,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "2-1.5",
          "n": 5
         },
@@ -361,26 +351,6 @@
         {
          "do": "Click at the end of the `}` that closes `BannerCase`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "Expedition.cs, with BannerHeading typed under BannerCase",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `BannerCase`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "2-2.1",
          "n": 1
         },
@@ -461,34 +431,6 @@
         {
          "do": "Click at the end of the `}` that closes `BannerHeading`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "Expedition.cs, with BannerMessage pasted and its gap typed",
-          "w": 800,
-          "h": 360,
-          "marks": [
-           {
-            "n": 4,
-            "say": "Click at the end of the `}` that closes `BannerHeading`."
-           },
-           {
-            "n": 5,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 7,
-            "say": "Press Ctrl and V together."
-           },
-           {
-            "n": 8,
-            "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`."
-           },
-           {
-            "n": 9,
-            "say": "Type the yellow lines that go in that gap. If another `// YOU TYPE THIS PART` line is left, triple-click it and type its yellow lines."
-           }
-          ]
-         },
          "id": "2-2.4",
          "n": 4
         },
@@ -537,13 +479,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 10,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -583,34 +527,28 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c068.png",
           "alt": "The project menu, with Add pointed at and Form (Windows Forms) in the second menu",
-          "w": 640,
-          "h": 420,
+          "w": 949,
+          "h": 605,
           "marks": [
            {
             "n": 1,
+            "x": 73.8,
+            "y": 4.6,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 2,
+            "x": 40.6,
+            "y": 37.8,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 3,
+            "x": 11.6,
+            "y": 81.0,
             "say": "Click **Form (Windows Forms)...** in the second menu."
-           },
-           {
-            "n": 4,
-            "say": "Triple-click the Name box at the bottom of the Add New Item window."
-           },
-           {
-            "n": 5,
-            "say": "Type `frmFeedback.cs`"
-           },
-           {
-            "n": 6,
-            "say": "Click **Add**."
            }
           ]
          },
@@ -632,6 +570,34 @@
         {
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Form1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "img": "img/cap/c069.png",
+          "alt": "The Add New Item window, with Form (Windows Forms) picked",
+          "w": 943,
+          "h": 592,
+          "marks": [
+           {
+            "n": 4,
+            "x": 42.5,
+            "y": 91.1,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "x": 13.8,
+            "y": 89.5,
+            "w": 57.4,
+            "h": 3.5,
+            "say": "Type `frmFeedback.cs`"
+           },
+           {
+            "n": 6,
+            "x": 86.0,
+            "y": 96.3,
+            "say": "Click **Add**."
+           }
+          ]
+         },
          "id": "3-1.4",
          "n": 4
         },
@@ -657,9 +623,9 @@
         "props": [
          "Font = Segoe UI, 11pt",
          "Text = Summit Ready - Expedition complete",
-         "ClientSize = 1000, 660",
          "StartPosition = CenterScreen",
          "FormBorderStyle = FixedSingle",
+         "Size = 1016, 699",
          "MaximizeBox = False",
          "BackColor = 243, 245, 242",
          "ForeColor = 38, 50, 56"
@@ -675,21 +641,29 @@
          "do": "Click the lightning bolt at the top of the Properties window.",
          "see": "The Properties window lists the form's events in place of its properties.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c179.png",
           "alt": "The Properties window showing the events of frmFeedback, with the lightning bolt, Load and the Properties button",
-          "w": 360,
-          "h": 480,
+          "w": 353,
+          "h": 514,
           "marks": [
            {
             "n": 7,
+            "x": 25.7,
+            "y": 9.8,
             "say": "Click the lightning bolt at the top of the Properties window."
            },
            {
             "n": 8,
+            "x": 42.4,
+            "y": 45.7,
+            "w": 52.8,
+            "h": 4.0,
             "say": "Double-click the empty box beside **Load**. Scroll down the list a little if you cannot see it."
            },
            {
             "n": 10,
+            "x": 18.8,
+            "y": 9.8,
             "say": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window."
            }
           ]
@@ -707,13 +681,15 @@
          "do": "Press Shift and F7 together.",
          "see": "The designer shows frmFeedback.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c180.png",
           "alt": "The designer showing frmFeedback",
-          "w": 800,
-          "h": 300,
+          "w": 1078,
+          "h": 624,
           "marks": [
            {
             "n": 9,
+            "x": 22.2,
+            "y": 1.6,
             "say": "Press Shift and F7 together."
            }
           ]
@@ -824,11 +800,11 @@
         "done": {
          "see": "The dark strip has the title and the instruction. Under it is the total, with a tall white list down the left side. The gold Save button sits in the bottom right corner.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c181.png",
           "alt": "frmFeedback in the designer, with the strip, the total, the list and the Save button",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1041,
+          "h": 730,
+          "marks": []
          }
         }
        }
@@ -954,11 +930,11 @@
         "done": {
          "see": "The white box on the right says **Click a summit on the left.** at the top. Under it are the bar, then the 2 headings, each with a feedback box under it.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c182.png",
           "alt": "frmFeedback in the designer with every control from both tables on it",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1041,
+          "h": 730,
+          "marks": []
          }
         }
        }
@@ -1011,53 +987,81 @@
          "do": "Press F7.",
          "see": "The code of frmFeedback shows in the code editor.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c183.png",
           "alt": "frmFeedback.cs, with the Saved field and the lines of frmFeedback_Load typed",
-          "w": 800,
-          "h": 450,
+          "w": 1102,
+          "h": 574,
           "marks": [
            {
             "n": 1,
+            "x": 5.0,
+            "y": 1.7,
             "say": "Press F7."
            },
            {
             "n": 2,
+            "x": 15.4,
+            "y": 11.7,
             "say": "Click at the end of the `{` under `public partial class frmFeedback : Form`."
            },
            {
             "n": 3,
+            "x": 16.6,
+            "y": 14.5,
             "say": "Press Enter."
            },
            {
             "n": 4,
+            "x": 15.7,
+            "y": 12.6,
+            "w": 43.4,
+            "h": 4.1,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 5,
+            "x": 16.6,
+            "y": 36.7,
             "say": "Click before the word `private` in the line `private void frmFeedback_Load(object sender, EventArgs e)`."
            },
            {
             "n": 6,
+            "x": 16.6,
+            "y": 33.9,
             "say": "Press Enter."
            },
            {
             "n": 7,
+            "x": 56.1,
+            "y": 33.9,
             "say": "Press the Up arrow key."
            },
            {
             "n": 8,
+            "x": 15.7,
+            "y": 32.0,
+            "w": 40.2,
+            "h": 4.1,
             "say": "Type the yellow comment line."
            },
            {
             "n": 9,
+            "x": 18.0,
+            "y": 39.4,
             "say": "Click at the end of the `{` under `private void frmFeedback_Load(object sender, EventArgs e)`."
            },
            {
             "n": 10,
+            "x": 19.1,
+            "y": 42.2,
             "say": "Press Enter."
            },
            {
             "n": 11,
+            "x": 18.2,
+            "y": 40.3,
+            "w": 43.4,
+            "h": 54.4,
             "say": "Type the rest of the yellow lines."
            }
           ]
@@ -1268,34 +1272,6 @@
         {
          "do": "Click at the end of the `}` that closes `frmFeedback_Load`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmFeedback.cs, with lstGames_SelectedIndexChanged pasted and its gaps typed",
-          "w": 800,
-          "h": 360,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `frmFeedback_Load`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 4,
-            "say": "Press Ctrl and V together."
-           },
-           {
-            "n": 5,
-            "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`."
-           },
-           {
-            "n": 6,
-            "say": "Type the yellow lines that go in that gap. If another `// YOU TYPE THIS PART` line is left, triple-click it and type its yellow lines."
-           }
-          ]
-         },
          "id": "4-2.1",
          "n": 1
         },
@@ -1391,26 +1367,6 @@
         {
          "do": "Click at the end of the `}` that closes `lstGames_SelectedIndexChanged`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmFeedback.cs, with btnSave_Click typed",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `lstGames_SelectedIndexChanged`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-3.1",
          "n": 1
         },
@@ -1466,26 +1422,6 @@
         {
          "do": "Click at the end of the `}` that closes `btnSave_Click`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmFeedback.cs, with frmFeedback_FormClosing typed",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 4,
-            "say": "Click at the end of the `}` that closes `btnSave_Click`."
-           },
-           {
-            "n": 5,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 6,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-3.4",
          "n": 4
         },
@@ -1527,13 +1463,15 @@
          "do": "Press Shift and F7 together.",
          "see": "The designer shows frmFeedback.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c187.png",
           "alt": "frmFeedback in the designer, with the events list of lstGames",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 1,
+            "x": 12.1,
+            "y": 1.6,
             "say": "Press Shift and F7 together."
            }
           ]
@@ -1572,13 +1510,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 2,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -1648,21 +1588,27 @@
          "do": "Double-click `frmMap.cs` in Solution Explorer, then press F7.",
          "see": "The code of frmMap shows.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c188.png",
           "alt": "frmMap.cs, with the old OpenFeedback picked in blue",
-          "w": 800,
-          "h": 400,
+          "w": 1102,
+          "h": 433,
           "marks": [
            {
             "n": 1,
+            "x": 5.0,
+            "y": 2.3,
             "say": "Double-click `frmMap.cs` in Solution Explorer, then press F7."
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 74.6,
             "say": "Click before the `//` at the start of the line `// Shows the total for now (chapter 10 adds the feedback window)`."
            },
            {
             "n": 3,
+            "x": 18.0,
+            "y": 92.9,
             "say": "Hold Shift and click after the `}` that closes `OpenFeedback`."
            }
           ]
@@ -1685,18 +1631,6 @@
         {
          "do": "Type the yellow lines from the code above.",
          "see": "The new OpenFeedback replaces the old one. No line has a red underline.",
-         "img": {
-          "missing": true,
-          "alt": "frmMap.cs, with the new OpenFeedback typed",
-          "w": 800,
-          "h": 400,
-          "marks": [
-           {
-            "n": 4,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "wrong": [
           [
            "There is an extra `}` at the end of what you typed",
@@ -1771,25 +1705,35 @@
          "do": "Double-click `frmWelcome.cs` in Solution Explorer, then press F7.",
          "see": "The code of frmWelcome shows.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c190.png",
           "alt": "frmWelcome.cs, with the new lines of ShowBanner typed",
-          "w": 800,
-          "h": 400,
+          "w": 1102,
+          "h": 477,
           "marks": [
            {
             "n": 1,
+            "x": 5.0,
+            "y": 2.1,
             "say": "Double-click `frmWelcome.cs` in Solution Explorer, then press F7."
            },
            {
             "n": 2,
+            "x": 33.2,
+            "y": 61.0,
             "say": "Click at the end of the line `MoveBoard(false);` inside ShowBanner."
            },
            {
             "n": 3,
+            "x": 21.7,
+            "y": 61.0,
             "say": "Hold Shift and press Home."
            },
            {
             "n": 4,
+            "x": 18.2,
+            "y": 52.1,
+            "w": 43.4,
+            "h": 41.5,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1825,13 +1769,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 5,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -1865,21 +1811,31 @@
          "do": "Press F5, log in, then click **Start the expedition**.",
          "see": "The map opens.",
          "img": {
-          "missing": true,
-          "alt": "The map, with the card for Slieve Binnian at the top of the right side",
-          "w": 1000,
-          "h": 660,
+          "img": "img/cap/c529.png",
+          "alt": "The map at the start of an expedition, with the Slieve Binnian card at the top of the right side",
+          "w": 818,
+          "h": 565,
           "marks": [
            {
             "n": 1,
+            "x": 1.0,
+            "y": 5.3,
+            "w": 39.4,
+            "h": 7.4,
             "say": "Press F5, log in, then click **Start the expedition**."
            },
            {
             "n": 2,
+            "x": 62.6,
+            "y": 13.5,
+            "w": 36.2,
+            "h": 8.8,
             "say": "Open the practice game from Slieve Binnian. Click your answer to the question, then click the gold **Back to the map**."
            },
            {
             "n": 3,
+            "x": 80.7,
+            "y": 94.9,
             "say": "Click **Finish the expedition**, then click **Yes**."
            }
           ]
@@ -1903,17 +1859,21 @@
          "do": "Click the first line in the list.",
          "see": "The white box shows the practice game's score, the bar and one line of feedback.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c191.png",
           "alt": "The feedback window, with the first summit picked and its feedback on the right",
           "w": 1000,
-          "h": 660,
+          "h": 689,
           "marks": [
            {
             "n": 4,
+            "x": 15.0,
+            "y": 22.2,
             "say": "Click the first line in the list."
            },
            {
             "n": 5,
+            "x": 11.5,
+            "y": 24.9,
             "say": "Click the second line in the list."
            }
           ]
@@ -1931,13 +1891,17 @@
          "do": "Click **Save my score**.",
          "see": "The feedback window and the map close. The Welcome window shows the gold banner above the Top 10.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c192.png",
           "alt": "The Welcome window with the gold banner and the highlighted row on the Top 10",
           "w": 1000,
-          "h": 660,
+          "h": 689,
           "marks": [
            {
             "n": 6,
+            "x": 35.2,
+            "y": 9.8,
+            "w": 63.4,
+            "h": 15.3,
             "say": "Click **Save my score**."
            }
           ]

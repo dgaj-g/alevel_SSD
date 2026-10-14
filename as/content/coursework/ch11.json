@@ -121,11 +121,11 @@
       },
       {
        "screenshot": {
-        "missing": true,
+        "img": "img/cap/c193.png",
         "alt": "The Round over box at the end of a round of Pack the Rucksack",
-        "w": 1002,
-        "h": 693,
-        "at": [],
+        "w": 999,
+        "h": 690,
+        "marks": [],
         "cap": "The Round over box at the end of a round."
        }
       },
@@ -494,25 +494,41 @@
             "do": "Press the Windows key and the E key together.",
             "see": "File Explorer opens.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c012.png",
              "alt": "File Explorer open on Downloads, with the menu that opens on summit-ready-files.zip",
-             "w": 800,
-             "h": 450,
+             "w": 818,
+             "h": 565,
              "marks": [
               {
                "n": 2,
+               "x": 0.2,
+               "y": 0.4,
+               "w": 78.0,
+               "h": 10.8,
                "say": "Press the Windows key and the E key together."
               },
               {
                "n": 3,
+               "x": 2.9,
+               "y": 21.2,
+               "w": 12.5,
+               "h": 3.2,
                "say": "Click **Downloads** in the list down the left side of File Explorer."
               },
               {
                "n": 4,
+               "x": 17.5,
+               "y": 20.5,
+               "w": 59.5,
+               "h": 3.0,
                "say": "Right-click `summit-ready-files.zip`."
               },
               {
                "n": 5,
+               "x": 36.2,
+               "y": 36.6,
+               "w": 26.8,
+               "h": 3.0,
                "say": "Click **Extract All...** in the menu."
               }
              ]
@@ -554,13 +570,17 @@
             "do": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window.",
             "see": "A new File Explorer window opens. It shows 3 folders, Data, Images and Sounds, and one file, `credits.txt`.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c013.png",
              "alt": "The Extract Compressed (Zipped) Folders window, with its Extract button",
-             "w": 640,
-             "h": 480,
+             "w": 622,
+             "h": 470,
              "marks": [
               {
                "n": 6,
+               "x": 68.5,
+               "y": 81.3,
+               "w": 10.0,
+               "h": 4.7,
                "say": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window."
               }
              ]
@@ -572,17 +592,25 @@
             "do": "Press Ctrl and A together.",
             "see": "The 3 folders and `credits.txt` turn blue.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c014.png",
              "alt": "The unpacked folder, with Data, Images, Sounds and credits.txt highlighted",
-             "w": 800,
-             "h": 360,
+             "w": 920,
+             "h": 486,
              "marks": [
               {
                "n": 7,
+               "x": 15.7,
+               "y": 36.0,
+               "w": 53.0,
+               "h": 14.0,
                "say": "Press Ctrl and A together."
               },
               {
                "n": 8,
+               "x": 6.7,
+               "y": 10.3,
+               "w": 3.5,
+               "h": 10.7,
                "say": "Press Ctrl and C together."
               }
              ]
@@ -600,13 +628,15 @@
             "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
             "see": "Visual Studio 2019 comes to the front, with your project open.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c015.png",
              "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
-             "w": 800,
-             "h": 60,
+             "w": 960,
+             "h": 41,
              "marks": [
               {
                "n": 9,
+               "x": 63.9,
+               "y": 50.0,
                "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
               }
              ]
@@ -618,17 +648,21 @@
             "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
             "see": "A long menu opens.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c016.png",
              "alt": "Solution Explorer, with the menu that opens on the project line",
-             "w": 360,
-             "h": 420,
+             "w": 635,
+             "h": 616,
              "marks": [
               {
                "n": 10,
+               "x": 59.8,
+               "y": 5.4,
                "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
               },
               {
                "n": 11,
+               "x": 18.8,
+               "y": 89.1,
                "say": "Click **Open Folder in File Explorer**, near the bottom of the menu."
               }
              ]
@@ -646,13 +680,15 @@
             "do": "Double-click the **bin** folder.",
             "see": "The bin folder holds a folder called Debug.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c017.png",
              "alt": "File Explorer on the project folder, with the bin folder",
-             "w": 640,
-             "h": 300,
+             "w": 960,
+             "h": 279,
              "marks": [
               {
                "n": 12,
+               "x": 21.3,
+               "y": 27.7,
                "say": "Double-click the **bin** folder."
               }
              ]
@@ -664,13 +700,15 @@
             "do": "Double-click the **Debug** folder.",
             "see": "The Debug folder holds the Data, Images and Sounds folders, and your program, whose name ends in .exe.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c018.png",
              "alt": "File Explorer on the bin folder, with the Debug folder",
-             "w": 640,
-             "h": 300,
+             "w": 960,
+             "h": 279,
              "marks": [
               {
                "n": 13,
+               "x": 22.4,
+               "y": 27.7,
                "say": "Double-click the **Debug** folder."
               }
              ]
@@ -682,17 +720,25 @@
             "do": "Press Ctrl and V together.",
             "see": "A window called Replace or Skip Files opens, because most of the files are already there.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c194.png",
              "alt": "The Replace or Skip Files window, with Skip these files",
-             "w": 640,
-             "h": 400,
+             "w": 1123,
+             "h": 600,
              "marks": [
               {
                "n": 14,
+               "x": 15.1,
+               "y": 35.0,
+               "w": 62.3,
+               "h": 25.8,
                "say": "Press Ctrl and V together."
               },
               {
                "n": 15,
+               "x": 31.7,
+               "y": 27.7,
+               "w": 35.1,
+               "h": 5.3,
                "say": "Click **Skip these files**."
               }
              ]
@@ -732,13 +778,15 @@
          "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
          "see": "Visual Studio 2019 comes to the front, with your project open.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c015.png",
           "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
-          "w": 800,
-          "h": 60,
+          "w": 960,
+          "h": 41,
           "marks": [
            {
             "n": 1,
+            "x": 63.9,
+            "y": 50.0,
             "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
            }
           ]
@@ -750,21 +798,27 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c023.png",
           "alt": "The project menu, with Add pointed at and Class in the second menu",
-          "w": 640,
-          "h": 420,
+          "w": 959,
+          "h": 616,
           "marks": [
            {
             "n": 2,
+            "x": 73.0,
+            "y": 5.4,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 3,
+            "x": 39.6,
+            "y": 38.6,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 4,
+            "x": 6.2,
+            "y": 93.2,
             "say": "Click **Class...** at the bottom of the second menu."
            }
           ]
@@ -788,21 +842,27 @@
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Class1.cs` turns blue, so what you type next replaces it.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c024.png",
           "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
-          "w": 800,
-          "h": 450,
+          "w": 948,
+          "h": 660,
           "marks": [
            {
             "n": 5,
+            "x": 16.9,
+            "y": 92.1,
             "say": "Triple-click the Name box at the bottom of the Add New Item window."
            },
            {
             "n": 6,
+            "x": 42.2,
+            "y": 92.1,
             "say": "Type `KitItem.cs`"
            },
            {
             "n": 7,
+            "x": 85.7,
+            "y": 96.5,
             "say": "Click **Add**."
            }
           ]
@@ -825,26 +885,6 @@
         {
          "do": "Click at the end of the line `using System.Threading.Tasks;`",
          "see": "The flashing cursor is after the semicolon.",
-         "img": {
-          "missing": true,
-          "alt": "KitItem.cs as Visual Studio 2019 makes it, with using System.IO; added",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 8,
-            "say": "Click at the end of the line `using System.Threading.Tasks;`"
-           },
-           {
-            "n": 9,
-            "say": "Press Enter."
-           },
-           {
-            "n": 10,
-            "say": "Type `using System.IO;`"
-           }
-          ]
-         },
          "id": "2-2.8",
          "n": 8
         },
@@ -958,26 +998,6 @@
         {
          "do": "Drag from the start of `class KitItem` down to the end of the `}` two lines below it.",
          "see": "`class KitItem` and its empty `{` and `}` turn blue. The last `}` in the file stays white. That is right: the last `}` closes the namespace, and it must stay.",
-         "img": {
-          "missing": true,
-          "alt": "KitItem.cs, with class KitItem and its empty braces highlighted, then the pasted class",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 11,
-            "say": "Drag from the start of `class KitItem` down to the end of the `}` two lines below it."
-           },
-           {
-            "n": 12,
-            "say": "Click the copy button below."
-           },
-           {
-            "n": 13,
-            "say": "Press Ctrl and V together."
-           }
-          ]
-         },
          "id": "2-2.11",
          "n": 11
         },
@@ -997,34 +1017,6 @@
         {
          "do": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it.",
          "see": "The whole line turns blue.",
-         "img": {
-          "missing": true,
-          "alt": "KitItem.cs, with the yellow lines typed in place of the two YOU TYPE THIS PART lines",
-          "w": 800,
-          "h": 360,
-          "marks": [
-           {
-            "n": 14,
-            "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it."
-           },
-           {
-            "n": 15,
-            "say": "Type the 4 yellow lines that start with `public string` or `public bool`. Press Enter at the end of each line."
-           },
-           {
-            "n": 16,
-            "say": "Triple-click the other line that starts with `// YOU TYPE THIS PART`."
-           },
-           {
-            "n": 17,
-            "say": "Type the 4 yellow lines that start with `Picture`, `Name`, `Pack` and `Reason`. Press Enter at the end of each line."
-           },
-           {
-            "n": 18,
-            "say": "Press Ctrl and S together."
-           }
-          ]
-         },
          "wrong": [
           [
            "The old `// YOU TYPE THIS PART` line is still there after you type",
@@ -1084,21 +1076,27 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c068.png",
           "alt": "The project menu, with Add pointed at and Form (Windows Forms) in the second menu",
-          "w": 640,
-          "h": 420,
+          "w": 949,
+          "h": 605,
           "marks": [
            {
             "n": 1,
+            "x": 73.8,
+            "y": 4.6,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 2,
+            "x": 40.6,
+            "y": 37.8,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 3,
+            "x": 11.6,
+            "y": 81.0,
             "say": "Click **Form (Windows Forms)...** in the second menu."
            }
           ]
@@ -1122,21 +1120,29 @@
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Form1.cs` turns blue, so what you type next replaces it.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c069.png",
           "alt": "The Add New Item window, with Form (Windows Forms) picked",
-          "w": 800,
-          "h": 450,
+          "w": 943,
+          "h": 592,
           "marks": [
            {
             "n": 4,
+            "x": 42.5,
+            "y": 91.1,
             "say": "Triple-click the Name box at the bottom of the Add New Item window."
            },
            {
             "n": 5,
+            "x": 13.8,
+            "y": 89.5,
+            "w": 57.4,
+            "h": 3.5,
             "say": "Type `frmRucksack.cs`"
            },
            {
             "n": 6,
+            "x": 86.0,
+            "y": 96.3,
             "say": "Click **Add**."
            }
           ]
@@ -1159,16 +1165,16 @@
        ]
       },
       {
-       "p": "Now set the form's properties in the Properties window, using the table below. Set **Font** first. If you change Font later, Visual Studio 2019 stretches the form to fit the new font, and its size (ClientSize) changes."
+       "p": "Now set the form's properties in the Properties window, using the table below. Set **Font** first. If you change Font later, Visual Studio 2019 stretches the form to fit the new font, and its Size changes."
       },
       {
        "controls": {
         "props": [
          "Font = Segoe UI, 11pt",
          "Text = Summit Ready - Pack the Rucksack",
-         "ClientSize = 1000, 660",
          "StartPosition = CenterScreen",
          "FormBorderStyle = FixedSingle",
+         "Size = 1016, 699",
          "MaximizeBox = False",
          "BackColor = 243, 245, 242"
         ]
@@ -1203,21 +1209,29 @@
          "do": "Click the [[lightning bolt|12]] at the top of the Properties window.",
          "see": "The Properties window now lists the form's events in place of its properties.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c198.png",
           "alt": "The Properties window showing the events of frmRucksack, with the lightning bolt, Load and the Properties button",
-          "w": 360,
-          "h": 480,
+          "w": 352,
+          "h": 489,
           "marks": [
            {
             "n": 7,
+            "x": 25.4,
+            "y": 11.5,
             "say": "Click the [[lightning bolt|12]] at the top of the Properties window."
            },
            {
             "n": 8,
+            "x": 4.2,
+            "y": 49.5,
+            "w": 94.1,
+            "h": 4.0,
             "say": "Double-click the empty box beside **Load**. Load comes after Leave, so scroll down the list a little if you cannot see it."
            },
            {
             "n": 10,
+            "x": 18.5,
+            "y": 11.5,
             "say": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window."
            }
           ]
@@ -1235,13 +1249,17 @@
          "do": "Press Shift and F7 together, to go back from the code to the designer.",
          "see": "The designer shows frmRucksack.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c199.png",
           "alt": "The designer showing frmRucksack, with the frmRucksack.cs [Design] tab",
-          "w": 800,
-          "h": 300,
+          "w": 1078,
+          "h": 624,
           "marks": [
            {
             "n": 9,
+            "x": 15.5,
+            "y": 0.2,
+            "w": 13.9,
+            "h": 2.9,
             "say": "Press Shift and F7 together, to go back from the code to the designer."
            }
           ]
@@ -1278,13 +1296,17 @@
          "do": "Double-click `frmPractice.cs` in Solution Explorer.",
          "see": "frmPractice opens in the designer.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c200.png",
           "alt": "Solution Explorer, with frmPractice.cs",
-          "w": 360,
-          "h": 300,
+          "w": 352,
+          "h": 138,
           "marks": [
            {
             "n": 1,
+            "x": 14.6,
+            "y": 77.9,
+            "w": 31.4,
+            "h": 13.3,
             "say": "Double-click `frmPractice.cs` in Solution Explorer."
            }
           ]
@@ -1296,17 +1318,23 @@
          "do": "Click a dark part of the header strip that has no words on it.",
          "see": "The Properties window shows pnlHeader at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c201.png",
           "alt": "frmPractice in the designer, with the dark header strip picked",
-          "w": 800,
-          "h": 450,
+          "w": 1078,
+          "h": 624,
           "marks": [
            {
             "n": 2,
+            "x": 77.0,
+            "y": 18.8,
             "say": "Click a dark part of the header strip that has no words on it."
            },
            {
             "n": 3,
+            "x": 5.0,
+            "y": 10.6,
+            "w": 93.1,
+            "h": 9.6,
             "say": "Press Ctrl and C together."
            }
           ]
@@ -1330,17 +1358,23 @@
          "do": "Click the **frmRucksack.cs [Design]** tab at the top of the editor.",
          "see": "The empty frmRucksack form shows again.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c202.png",
           "alt": "The empty frmRucksack form, with the frmRucksack.cs [Design] tab and the title bar of frmRucksack",
-          "w": 800,
-          "h": 450,
+          "w": 1078,
+          "h": 624,
           "marks": [
            {
             "n": 4,
+            "x": 30.9,
+            "y": 0.2,
+            "w": 16.2,
+            "h": 2.9,
             "say": "Click the **frmRucksack.cs [Design]** tab at the top of the editor."
            },
            {
             "n": 5,
+            "x": 34.1,
+            "y": 9.0,
             "say": "Click the title bar of frmRucksack."
            }
           ]
@@ -1358,25 +1392,37 @@
          "do": "Press Ctrl and V together.",
          "see": "The dark header strip appears on frmRucksack, with small white squares at its corners. The Properties window shows pnlHeader.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c203.png",
           "alt": "frmRucksack with the pasted header strip, and the Location box in the Properties window",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 6,
+            "x": 2.8,
+            "y": 10.6,
+            "w": 52.2,
+            "h": 9.6,
             "say": "Press Ctrl and V together."
            },
            {
             "n": 7,
+            "x": 81.0,
+            "y": 72.5,
+            "w": 16.5,
+            "h": 3.1,
             "say": "Triple-click the box beside **Location** in the Properties window, so you can move the strip to the top left corner."
            },
            {
             "n": 8,
+            "x": 88.8,
+            "y": 74.1,
             "say": "Type `0, 0`"
            },
            {
             "n": 9,
+            "x": 93.1,
+            "y": 74.1,
             "say": "Press Enter."
            }
           ]
@@ -1434,21 +1480,31 @@
          "do": "Click the **frmPractice.cs [Design]** tab at the top of the editor.",
          "see": "frmPractice shows again.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c204.png",
           "alt": "frmPractice in the designer, with the white Round over box picked",
-          "w": 800,
-          "h": 450,
+          "w": 1078,
+          "h": 624,
           "marks": [
            {
             "n": 1,
+            "x": 3.0,
+            "y": 0.2,
+            "w": 15.8,
+            "h": 2.9,
             "say": "Click the **frmPractice.cs [Design]** tab at the top of the editor."
            },
            {
             "n": 2,
+            "x": 34.1,
+            "y": 93.7,
             "say": "Click a white part of the Round over box that has no words on it."
            },
            {
             "n": 3,
+            "x": 21.7,
+            "y": 29.8,
+            "w": 59.8,
+            "h": 67.8,
             "say": "Press Ctrl and C together."
            }
           ]
@@ -1478,33 +1534,51 @@
          "do": "Click the **frmRucksack.cs [Design]** tab at the top of the editor.",
          "see": "frmRucksack shows again, with the header strip.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c205.png",
           "alt": "frmRucksack with the pasted Round over box in the middle",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 4,
+            "x": 17.7,
+            "y": 0.2,
+            "w": 9.3,
+            "h": 2.9,
             "say": "Click the **frmRucksack.cs [Design]** tab at the top of the editor."
            },
            {
             "n": 5,
+            "x": 19.1,
+            "y": 9.0,
             "say": "Click the title bar of frmRucksack."
            },
            {
             "n": 6,
+            "x": 12.2,
+            "y": 29.8,
+            "w": 33.5,
+            "h": 67.8,
             "say": "Press Ctrl and V together."
            },
            {
             "n": 7,
+            "x": 81.0,
+            "y": 72.5,
+            "w": 16.5,
+            "h": 3.1,
             "say": "Triple-click the box beside **Location** in the Properties window, so you can move the Round over box to the middle of the form."
            },
            {
             "n": 8,
+            "x": 88.8,
+            "y": 74.1,
             "say": "Type `180, 120`"
            },
            {
             "n": 9,
+            "x": 93.1,
+            "y": 74.1,
             "say": "Press Enter."
            }
           ]
@@ -1568,25 +1642,37 @@
          "do": "Click the title at the left of the header strip.",
          "see": "The Properties window shows lblTitle at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c206.png",
           "alt": "The header strip on frmRucksack, with lblTitle picked and its Text box in the Properties window",
-          "w": 800,
-          "h": 300,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 1,
+            "x": 3.3,
+            "y": 11.0,
+            "w": 29.3,
+            "h": 5.9,
             "say": "Click the title at the left of the header strip."
            },
            {
             "n": 2,
+            "x": 81.0,
+            "y": 72.5,
+            "w": 16.5,
+            "h": 3.1,
             "say": "Triple-click the box beside **Text** in the Properties window."
            },
            {
             "n": 3,
+            "x": 90.6,
+            "y": 74.1,
             "say": "Type `Slieve Binnian - Pack the Rucksack`"
            },
            {
             "n": 4,
+            "x": 95.0,
+            "y": 74.1,
             "say": "Press Enter."
            }
           ]
@@ -1616,25 +1702,37 @@
          "do": "Click the instruction under the title.",
          "see": "The Properties window shows lblInstruction at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c207.png",
           "alt": "The header strip on frmRucksack, with lblInstruction picked and its Text box in the Properties window",
-          "w": 800,
-          "h": 300,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 5,
+            "x": 3.6,
+            "y": 15.5,
+            "w": 36.9,
+            "h": 4.3,
             "say": "Click the instruction under the title."
            },
            {
             "n": 6,
+            "x": 81.0,
+            "y": 72.5,
+            "w": 16.6,
+            "h": 3.3,
             "say": "Triple-click the box beside **Text** in the Properties window."
            },
            {
             "n": 7,
+            "x": 90.6,
+            "y": 74.1,
             "say": "Type `Drag each item into your rucksack or onto the pile to leave at home, then press Check my rucksack.`"
            },
            {
             "n": 8,
+            "x": 95.0,
+            "y": 74.1,
             "say": "Press Enter."
            }
           ]
@@ -1839,11 +1937,11 @@
         "done": {
          "see": "The dark header strip along the top of frmRucksack. Under it are 3 white zones: the kit pile across the top, Pack it on the left and Leave it at home on the right. Each zone has its heading at its top left. Along the bottom are Items left to sort: 12, and the yellow Check my rucksack button.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c208.png",
           "alt": "frmRucksack in the designer with every control from the table on it",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1078,
+          "h": 744,
+          "marks": []
          }
         }
        }
@@ -1922,30 +2020,6 @@
         {
          "do": "Click the **frmRucksack.cs** tab at the top of the editor, the one without [Design].",
          "see": "The code of frmRucksack shows, with `frmRucksack_Load` near the bottom.",
-         "img": {
-          "missing": true,
-          "alt": "frmRucksack.cs in the code editor, with the 3 pasted fields under the class line",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click the **frmRucksack.cs** tab at the top of the editor, the one without [Design]."
-           },
-           {
-            "n": 2,
-            "say": "Click at the end of the `{` under `public partial class frmRucksack : Form`."
-           },
-           {
-            "n": 3,
-            "say": "Press Enter."
-           },
-           {
-            "n": 5,
-            "say": "Press Ctrl and V together."
-           }
-          ]
-         },
          "id": "4-1.1",
          "n": 1
         },
@@ -2050,30 +2124,6 @@
         {
          "do": "Click at the end of the `}` that closes `frmRucksack_Load`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmRucksack.cs, with the 8 pasted methods under frmRucksack_Load",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 6,
-            "say": "Click at the end of the `}` that closes `frmRucksack_Load`."
-           },
-           {
-            "n": 7,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 9,
-            "say": "Press Ctrl and V together."
-           },
-           {
-            "n": 10,
-            "say": "Press Ctrl and S together."
-           }
-          ]
-         },
          "id": "4-1.6",
          "n": 6
         },
@@ -2125,17 +2175,21 @@
          "do": "Press Shift and F7 together, to go back from the code to the designer.",
          "see": "The designer shows frmRucksack.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c211.png",
           "alt": "frmRucksack in the designer, with Back to the map picked on the header strip",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 1,
+            "x": 21.6,
+            "y": 1.8,
             "say": "Press Shift and F7 together, to go back from the code to the designer."
            },
            {
             "n": 2,
+            "x": 88.2,
+            "y": 15.5,
             "say": "Click **Back to the map** on the header strip."
            }
           ]
@@ -2153,25 +2207,35 @@
          "do": "Click the lightning bolt at the top of the Properties window.",
          "see": "The Properties window lists the events of btnBack.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c212.png",
           "alt": "The Properties window showing the events of btnBack, with the list open beside Click",
-          "w": 360,
-          "h": 480,
+          "w": 352,
+          "h": 489,
           "marks": [
            {
             "n": 3,
+            "x": 25.3,
+            "y": 11.2,
             "say": "Click the lightning bolt at the top of the Properties window."
            },
            {
             "n": 4,
+            "x": 42.0,
+            "y": 14.7,
+            "w": 47.2,
+            "h": 3.7,
             "say": "Click the box beside **Click**."
            },
            {
             "n": 5,
+            "x": 92.0,
+            "y": 16.6,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 6,
+            "x": 54.0,
+            "y": 32.7,
             "say": "Click `btnBack_Click` in the list."
            }
           ]
@@ -2220,17 +2284,23 @@
          "do": "Click the arrow at the right end of the box at the very top of the Properties window.",
          "see": "A list of every control on frmRucksack drops down.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c213.png",
           "alt": "The Properties window, with the list of every control open at the top",
-          "w": 360,
-          "h": 480,
+          "w": 352,
+          "h": 489,
           "marks": [
            {
             "n": 7,
+            "x": 96.6,
+            "y": 6.5,
             "say": "Click the arrow at the right end of the box at the very top of the Properties window."
            },
            {
             "n": 8,
+            "x": 1.1,
+            "y": 16.8,
+            "w": 69.9,
+            "h": 3.3,
             "say": "Click **btnDone** in the list."
            }
           ]
@@ -2248,21 +2318,31 @@
          "do": "Click the box beside **Click**.",
          "see": "A small arrow appears at the right end of the box.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c214.png",
           "alt": "The Properties window showing the events of btnDone, with btnDone_Click beside Click",
-          "w": 360,
-          "h": 480,
+          "w": 352,
+          "h": 489,
           "marks": [
            {
             "n": 9,
+            "x": 4.5,
+            "y": 14.7,
+            "w": 89.2,
+            "h": 3.7,
             "say": "Click the box beside **Click**."
            },
            {
             "n": 10,
+            "x": 95.2,
+            "y": 16.4,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 11,
+            "x": 42.3,
+            "y": 35.2,
+            "w": 51.4,
+            "h": 3.7,
             "say": "Click `btnDone_Click` in the list."
            }
           ]
@@ -2302,25 +2382,37 @@
          "do": "Click the speaker picture on the header strip.",
          "see": "The Properties window shows the events of picSound.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c215.png",
           "alt": "The Properties window showing the events of picSound, with picSound_Click beside Click",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 1,
+            "x": 41.8,
+            "y": 15.1,
             "say": "Click the speaker picture on the header strip."
            },
            {
             "n": 2,
+            "x": 82.3,
+            "y": 51.4,
+            "w": 15.6,
+            "h": 2.9,
             "say": "Click the box beside **Click**."
            },
            {
             "n": 3,
+            "x": 98.4,
+            "y": 52.7,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 4,
+            "x": 89.3,
+            "y": 70.6,
+            "w": 9.6,
+            "h": 2.9,
             "say": "Click `picSound_Click` in the list."
            }
           ]
@@ -2350,25 +2442,37 @@
          "do": "Click the title bar of frmRucksack.",
          "see": "The Properties window shows the events of frmRucksack.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c216.png",
           "alt": "The Properties window showing the events of frmRucksack, with frmRucksack_FormClosing beside FormClosing",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 5,
+            "x": 19.4,
+            "y": 9.0,
             "say": "Click the title bar of frmRucksack."
            },
            {
             "n": 6,
+            "x": 82.3,
+            "y": 63.5,
+            "w": 15.6,
+            "h": 2.9,
             "say": "Click the box beside **FormClosing**. Scroll down the list a little if you cannot see it."
            },
            {
             "n": 7,
+            "x": 98.4,
+            "y": 64.9,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 8,
+            "x": 88.7,
+            "y": 66.7,
+            "w": 10.2,
+            "h": 3.1,
             "say": "Click `frmRucksack_FormClosing` in the list."
            }
           ]
@@ -2398,13 +2502,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 9,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -2484,26 +2590,6 @@
         {
          "do": "Click at the end of the line `private bool finished = false;   // true once the result is kept`",
          "see": "The flashing cursor is at the end of the comment.",
-         "img": {
-          "missing": true,
-          "alt": "frmRucksack.cs, with the Pack the Rucksack fields typed under the chapter 9 fields",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the line `private bool finished = false;   // true once the result is kept`"
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-4.1",
          "n": 1
         },
@@ -2613,26 +2699,6 @@
         {
          "do": "Click at the end of the `{` on the line under `private void frmRucksack_Load`.",
          "see": "The flashing cursor is after the `{`.",
-         "img": {
-          "missing": true,
-          "alt": "frmRucksack.cs, with the yellow lines typed inside frmRucksack_Load",
-          "w": 800,
-          "h": 360,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `{` on the line under `private void frmRucksack_Load`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-5.1",
          "n": 1
         },
@@ -2729,26 +2795,6 @@
         {
          "do": "Click at the end of the `}` that closes `frmRucksack_Load`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmRucksack.cs, with DealCards typed under frmRucksack_Load",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `frmRucksack_Load`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-6.1",
          "n": 1
         },
@@ -2839,26 +2885,6 @@
         {
          "do": "Click at the end of the `}` that closes `DealCards`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmRucksack.cs, with MakeCard typed under DealCards",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `DealCards`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-7.1",
          "n": 1
         },
@@ -2955,26 +2981,6 @@
         {
          "do": "Click at the end of the `}` that closes `MakeCard`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmRucksack.cs, with Card_MouseDown and Zone_DragEnter typed under MakeCard",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `MakeCard`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-8.1",
          "n": 1
         },
@@ -3077,26 +3083,6 @@
         {
          "do": "Click at the end of the `}` that closes `Zone_DragEnter`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmRucksack.cs, with Zone_DragDrop typed under Zone_DragEnter",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `Zone_DragEnter`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-9.1",
          "n": 1
         },
@@ -3199,26 +3185,6 @@
         {
          "do": "Click at the end of the `}` that closes `Zone_DragDrop`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmRucksack.cs, with ZoneOf and ShowLeft typed under Zone_DragDrop",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `Zone_DragDrop`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-10.1",
          "n": 1
         },
@@ -3322,26 +3288,6 @@
         {
          "do": "Click at the end of the line `picPackIcon.Image = Files.Picture(\"Icons\", \"icon-rucksack-64.png\");` in frmRucksack_Load.",
          "see": "The flashing cursor is after the semicolon.",
-         "img": {
-          "missing": true,
-          "alt": "frmRucksack.cs, with the 5 yellow lines typed into frmRucksack_Load",
-          "w": 800,
-          "h": 360,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the line `picPackIcon.Image = Files.Picture(\"Icons\", \"icon-rucksack-64.png\");` in frmRucksack_Load."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-11.1",
          "n": 1
         },
@@ -3466,26 +3412,6 @@
         {
          "do": "Click at the end of the line `card.Cursor = Cursors.Hand;` in MakeCard.",
          "see": "The flashing cursor is after the semicolon.",
-         "img": {
-          "missing": true,
-          "alt": "frmRucksack.cs, with the 6 yellow lines typed into MakeCard",
-          "w": 800,
-          "h": 360,
-          "marks": [
-           {
-            "n": 4,
-            "say": "Click at the end of the line `card.Cursor = Cursors.Hand;` in MakeCard."
-           },
-           {
-            "n": 5,
-            "say": "Press Enter."
-           },
-           {
-            "n": 6,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-11.4",
          "n": 4
         },
@@ -3570,26 +3496,6 @@
         {
          "do": "Click at the end of the `}` that closes `ShowLeft`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmRucksack.cs, with btnCheck_Click typed under ShowLeft",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `ShowLeft`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-12.1",
          "n": 1
         },
@@ -3693,26 +3599,6 @@
         {
          "do": "Click at the end of the line `checkedYet = true;` in btnCheck_Click.",
          "see": "The flashing cursor is after the semicolon.",
-         "img": {
-          "missing": true,
-          "alt": "frmRucksack.cs, with the yellow lines typed into btnCheck_Click",
-          "w": 800,
-          "h": 400,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the line `checkedYet = true;` in btnCheck_Click."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-13.1",
          "n": 1
         },
@@ -3803,26 +3689,6 @@
         {
          "do": "Click at the end of the `}` that closes `btnCheck_Click`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmRucksack.cs, with InRightPlace typed under btnCheck_Click",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `btnCheck_Click`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-14.1",
          "n": 1
         },
@@ -3913,26 +3779,6 @@
         {
          "do": "Click at the end of the `}` that closes `InRightPlace`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmRucksack.cs, with MarkCard typed under InRightPlace",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `InRightPlace`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-15.1",
          "n": 1
         },
@@ -4023,26 +3869,6 @@
         {
          "do": "Click at the end of the `}` that closes `MarkCard`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmRucksack.cs, with Card_Click typed under MarkCard",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `MarkCard`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-16.1",
          "n": 1
         },
@@ -4121,26 +3947,6 @@
         {
          "do": "Click at the end of the `}` that closes `Card_Click`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmRucksack.cs, with RecordResult typed under Card_Click",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `Card_Click`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-17.1",
          "n": 1
         },
@@ -4243,26 +4049,6 @@
         {
          "do": "Click at the end of the `}` that closes `RecordResult`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmRucksack.cs, with AddFeedback typed under RecordResult",
-          "w": 800,
-          "h": 360,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `RecordResult`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-18.1",
          "n": 1
         },
@@ -4282,13 +4068,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 4,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -4329,17 +4117,23 @@
          "do": "Press Shift and F7 together, to go back from the code to the designer.",
          "see": "The designer shows frmRucksack.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c233.png",
           "alt": "frmRucksack in the designer, with the 3 zones and their headings",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 1,
+            "x": 8.9,
+            "y": 0.2,
+            "w": 7.8,
+            "h": 3.1,
             "say": "Press Shift and F7 together, to go back from the code to the designer."
            },
            {
             "n": 2,
+            "x": 86.1,
+            "y": 30.8,
             "say": "Click the lightning bolt at the top of the Properties window."
            }
           ]
@@ -4357,37 +4151,59 @@
          "do": "Click an empty part of the kit pile, near its bottom edge.",
          "see": "The Properties window shows flpPile at the top, and lists its events.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c234.png",
           "alt": "The Properties window showing the events of a drop control, with Zone_DragDrop beside DragDrop and Zone_DragEnter beside DragEnter",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 3,
+            "x": 29.1,
+            "y": 57.8,
             "say": "Click an empty part of the kit pile, near its bottom edge."
            },
            {
             "n": 4,
+            "x": 82.3,
+            "y": 63.5,
+            "w": 6.9,
+            "h": 2.9,
             "say": "Click the box beside **DragDrop**."
            },
            {
             "n": 5,
+            "x": 98.4,
+            "y": 64.9,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 6,
+            "x": 89.3,
+            "y": 63.5,
+            "w": 8.5,
+            "h": 2.9,
             "say": "Click `Zone_DragDrop` in the list."
            },
            {
             "n": 7,
+            "x": 82.3,
+            "y": 66.7,
+            "w": 15.6,
+            "h": 2.9,
             "say": "Click the box beside **DragEnter**, 2 lines further down."
            },
            {
             "n": 8,
+            "x": 98.4,
+            "y": 68.0,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 9,
+            "x": 89.3,
+            "y": 69.8,
+            "w": 9.6,
+            "h": 2.9,
             "say": "Click `Zone_DragEnter` in the list."
            }
           ]
@@ -4435,37 +4251,59 @@
          "do": "Click the words **Your kit pile**.",
          "see": "The Properties window shows lblPileHead at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c234.png",
           "alt": "The Properties window showing the events of a drop control, with Zone_DragDrop beside DragDrop and Zone_DragEnter beside DragEnter",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 10,
+            "x": 29.1,
+            "y": 57.8,
             "say": "Click the words **Your kit pile**."
            },
            {
             "n": 11,
+            "x": 82.3,
+            "y": 63.5,
+            "w": 6.9,
+            "h": 2.9,
             "say": "Click the box beside **DragDrop**."
            },
            {
             "n": 12,
+            "x": 98.4,
+            "y": 64.9,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 13,
+            "x": 89.3,
+            "y": 63.5,
+            "w": 8.5,
+            "h": 2.9,
             "say": "Click `Zone_DragDrop` in the list."
            },
            {
             "n": 14,
+            "x": 82.3,
+            "y": 66.7,
+            "w": 15.6,
+            "h": 2.9,
             "say": "Click the box beside **DragEnter**, 2 lines further down."
            },
            {
             "n": 15,
+            "x": 98.4,
+            "y": 68.0,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 16,
+            "x": 89.3,
+            "y": 69.8,
+            "w": 9.6,
+            "h": 2.9,
             "say": "Click `Zone_DragEnter` in the list."
            }
           ]
@@ -4513,37 +4351,59 @@
          "do": "Click an empty part of the Pack it zone.",
          "see": "The Properties window shows flpPack at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c234.png",
           "alt": "The Properties window showing the events of a drop control, with Zone_DragDrop beside DragDrop and Zone_DragEnter beside DragEnter",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 17,
+            "x": 29.1,
+            "y": 57.8,
             "say": "Click an empty part of the Pack it zone."
            },
            {
             "n": 18,
+            "x": 82.3,
+            "y": 63.5,
+            "w": 6.9,
+            "h": 2.9,
             "say": "Click the box beside **DragDrop**."
            },
            {
             "n": 19,
+            "x": 98.4,
+            "y": 64.9,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 20,
+            "x": 89.3,
+            "y": 63.5,
+            "w": 8.5,
+            "h": 2.9,
             "say": "Click `Zone_DragDrop` in the list."
            },
            {
             "n": 21,
+            "x": 82.3,
+            "y": 66.7,
+            "w": 15.6,
+            "h": 2.9,
             "say": "Click the box beside **DragEnter**, 2 lines further down."
            },
            {
             "n": 22,
+            "x": 98.4,
+            "y": 68.0,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 23,
+            "x": 89.3,
+            "y": 69.8,
+            "w": 9.6,
+            "h": 2.9,
             "say": "Click `Zone_DragEnter` in the list."
            }
           ]
@@ -4591,37 +4451,59 @@
          "do": "Click the words **Pack it**.",
          "see": "The Properties window shows lblPackHead at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c234.png",
           "alt": "The Properties window showing the events of a drop control, with Zone_DragDrop beside DragDrop and Zone_DragEnter beside DragEnter",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 24,
+            "x": 29.1,
+            "y": 57.8,
             "say": "Click the words **Pack it**."
            },
            {
             "n": 25,
+            "x": 82.3,
+            "y": 63.5,
+            "w": 6.9,
+            "h": 2.9,
             "say": "Click the box beside **DragDrop**."
            },
            {
             "n": 26,
+            "x": 98.4,
+            "y": 64.9,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 27,
+            "x": 89.3,
+            "y": 63.5,
+            "w": 8.5,
+            "h": 2.9,
             "say": "Click `Zone_DragDrop` in the list."
            },
            {
             "n": 28,
+            "x": 82.3,
+            "y": 66.7,
+            "w": 15.6,
+            "h": 2.9,
             "say": "Click the box beside **DragEnter**, 2 lines further down."
            },
            {
             "n": 29,
+            "x": 98.4,
+            "y": 68.0,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 30,
+            "x": 89.3,
+            "y": 69.8,
+            "w": 9.6,
+            "h": 2.9,
             "say": "Click `Zone_DragEnter` in the list."
            }
           ]
@@ -4669,37 +4551,59 @@
          "do": "Click an empty part of the Leave it at home zone.",
          "see": "The Properties window shows flpLeave at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c234.png",
           "alt": "The Properties window showing the events of a drop control, with Zone_DragDrop beside DragDrop and Zone_DragEnter beside DragEnter",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 31,
+            "x": 29.1,
+            "y": 57.8,
             "say": "Click an empty part of the Leave it at home zone."
            },
            {
             "n": 32,
+            "x": 82.3,
+            "y": 63.5,
+            "w": 6.9,
+            "h": 2.9,
             "say": "Click the box beside **DragDrop**."
            },
            {
             "n": 33,
+            "x": 98.4,
+            "y": 64.9,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 34,
+            "x": 89.3,
+            "y": 63.5,
+            "w": 8.5,
+            "h": 2.9,
             "say": "Click `Zone_DragDrop` in the list."
            },
            {
             "n": 35,
+            "x": 82.3,
+            "y": 66.7,
+            "w": 15.6,
+            "h": 2.9,
             "say": "Click the box beside **DragEnter**, 2 lines further down."
            },
            {
             "n": 36,
+            "x": 98.4,
+            "y": 68.0,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 37,
+            "x": 89.3,
+            "y": 69.8,
+            "w": 9.6,
+            "h": 2.9,
             "say": "Click `Zone_DragEnter` in the list."
            }
           ]
@@ -4747,37 +4651,59 @@
          "do": "Click the words **Leave it at home**.",
          "see": "The Properties window shows lblLeaveHead at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c234.png",
           "alt": "The Properties window showing the events of a drop control, with Zone_DragDrop beside DragDrop and Zone_DragEnter beside DragEnter",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 38,
+            "x": 29.1,
+            "y": 57.8,
             "say": "Click the words **Leave it at home**."
            },
            {
             "n": 39,
+            "x": 82.3,
+            "y": 63.5,
+            "w": 6.9,
+            "h": 2.9,
             "say": "Click the box beside **DragDrop**."
            },
            {
             "n": 40,
+            "x": 98.4,
+            "y": 64.9,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 41,
+            "x": 89.3,
+            "y": 63.5,
+            "w": 8.5,
+            "h": 2.9,
             "say": "Click `Zone_DragDrop` in the list."
            },
            {
             "n": 42,
+            "x": 82.3,
+            "y": 66.7,
+            "w": 15.6,
+            "h": 2.9,
             "say": "Click the box beside **DragEnter**, 2 lines further down."
            },
            {
             "n": 43,
+            "x": 98.4,
+            "y": 68.0,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 44,
+            "x": 89.3,
+            "y": 69.8,
+            "w": 9.6,
+            "h": 2.9,
             "say": "Click `Zone_DragEnter` in the list."
            }
           ]
@@ -4825,25 +4751,37 @@
          "do": "Click **Check my rucksack** on pnlPlay.",
          "see": "The Properties window lists the events of btnCheck.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c235.png",
           "alt": "The Properties window showing the events of btnCheck, with btnCheck_Click beside Click",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 45,
+            "x": 48.9,
+            "y": 91.4,
             "say": "Click **Check my rucksack** on pnlPlay."
            },
            {
             "n": 46,
+            "x": 82.3,
+            "y": 36.1,
+            "w": 15.6,
+            "h": 2.9,
             "say": "Click the box beside **Click**."
            },
            {
             "n": 47,
+            "x": 98.4,
+            "y": 37.5,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 48,
+            "x": 89.3,
+            "y": 42.5,
+            "w": 9.6,
+            "h": 2.9,
             "say": "Click `btnCheck_Click` in the list."
            }
           ]
@@ -4873,13 +4811,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 49,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -4932,41 +4872,65 @@
          "do": "Double-click `frmMap.cs` in Solution Explorer.",
          "see": "frmMap opens in the designer.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c236.png",
           "alt": "Visual Studio 2019 with frmMap.cs in the code editor. The search box is open and the new case line is typed. frmMap.cs is picked in Solution Explorer on the right",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 1,
+            "x": 86.7,
+            "y": 19.2,
             "say": "Double-click `frmMap.cs` in Solution Explorer."
            },
            {
             "n": 2,
+            "x": 1.7,
+            "y": 0.2,
+            "w": 5.4,
+            "h": 2.9,
             "say": "Press F7."
            },
            {
             "n": 3,
+            "x": 66.3,
+            "y": 7.8,
+            "w": 10.0,
+            "h": 3.1,
             "say": "Press Ctrl and F together."
            },
            {
             "n": 4,
+            "x": 13.5,
+            "y": 50.6,
+            "w": 8.3,
+            "h": 2.5,
             "say": "Type `each game chapter adds`"
            },
            {
             "n": 5,
+            "x": 79.4,
+            "y": 9.2,
             "say": "Press Escape."
            },
            {
             "n": 6,
+            "x": 6.5,
+            "y": 54.5,
             "say": "Press the Down arrow once."
            },
            {
             "n": 7,
+            "x": 12.4,
+            "y": 54.5,
             "say": "Press Home, then hold Shift and press End, to highlight the whole line."
            },
            {
             "n": 8,
+            "x": 12.3,
+            "y": 53.1,
+            "w": 15.0,
+            "h": 2.7,
             "say": "Type `case 0: game = new frmRucksack(); break;`"
            }
           ]
@@ -5026,17 +4990,23 @@
          "do": "Press F5.",
          "see": "Your game starts and shows the login window.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c237.png",
           "alt": "The login window of your game, with a player's name and password typed in",
-          "w": 640,
-          "h": 400,
+          "w": 999,
+          "h": 690,
           "marks": [
            {
             "n": 9,
+            "x": 8.0,
+            "y": 1.9,
             "say": "Press F5."
            },
            {
             "n": 10,
+            "x": 33.0,
+            "y": 63.8,
+            "w": 33.8,
+            "h": 29.7,
             "say": "Log in with a player you registered in chapter 5."
            }
           ]
@@ -5054,13 +5024,17 @@
          "do": "Click **Start the expedition**.",
          "see": "The map opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c238.png",
           "alt": "The Welcome screen of your game, with the Start the expedition button",
-          "w": 640,
-          "h": 400,
+          "w": 999,
+          "h": 690,
           "marks": [
            {
             "n": 11,
+            "x": 3.4,
+            "y": 87.5,
+            "w": 28.0,
+            "h": 7.5,
             "say": "Click **Start the expedition**."
            }
           ]
@@ -5072,13 +5046,17 @@
          "do": "Click place number 0 on the map, the first place.",
          "see": "Pack the Rucksack opens, with 12 kit cards on the kit pile.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c239.png",
           "alt": "The map, with place number 0 picked",
-          "w": 800,
-          "h": 450,
+          "w": 999,
+          "h": 690,
           "marks": [
            {
             "n": 12,
+            "x": 62.8,
+            "y": 13.5,
+            "w": 35.9,
+            "h": 8.4,
             "say": "Click place number 0 on the map, the first place."
            }
           ]
@@ -5318,17 +5296,25 @@
          "do": "Right-click `KitItem.cs` in Solution Explorer.",
          "see": "A menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c240.png",
           "alt": "Solution Explorer, with the right-click menu of KitItem.cs open",
-          "w": 360,
-          "h": 420,
+          "w": 668,
+          "h": 679,
           "marks": [
            {
             "n": 1,
+            "x": 49.3,
+            "y": 58.6,
+            "w": 32.3,
+            "h": 2.9,
             "say": "Right-click `KitItem.cs` in Solution Explorer."
            },
            {
             "n": 2,
+            "x": 2.0,
+            "y": 88.1,
+            "w": 47.6,
+            "h": 3.2,
             "say": "Click **Rename**."
            }
           ]
@@ -5338,25 +5324,33 @@
         },
         {
          "do": "Click **Rename**.",
-         "see": "The name `KitItem.cs` becomes a box that you can type in.",
+         "see": "The name `KitItem.cs` becomes a box, with `KitItem` highlighted.",
          "id": "5-2.2",
          "n": 2
         },
         {
-         "do": "Type your class's new name, such as `Rubbish.cs`",
-         "see": "The box shows the new name.",
+         "do": "Type your class's new name, such as `Rubbish`",
+         "see": "The box shows `Rubbish.cs`. Visual Studio keeps the `.cs` on the end for you.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c241.png",
           "alt": "Solution Explorer, with the name KitItem.cs turned into a box and Rubbish.cs typed in it",
-          "w": 360,
-          "h": 200,
+          "w": 352,
+          "h": 465,
           "marks": [
            {
             "n": 3,
-            "say": "Type your class's new name, such as `Rubbish.cs`"
+            "x": 18.8,
+            "y": 85.6,
+            "w": 20.5,
+            "h": 4.1,
+            "say": "Type your class's new name, such as `Rubbish`"
            },
            {
             "n": 4,
+            "x": 18.8,
+            "y": 85.6,
+            "w": 20.5,
+            "h": 4.1,
             "say": "Press Enter."
            }
           ]
@@ -5374,13 +5368,17 @@
          "do": "Click **Yes**.",
          "see": "Every use of the class KitItem in your code changes to the new name. For example, `List<KitItem>` becomes `List<Rubbish>`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c242.png",
           "alt": "The message that asks whether to rename every use of KitItem",
-          "w": 480,
-          "h": 200,
+          "w": 417,
+          "h": 171,
           "marks": [
            {
             "n": 5,
+            "x": 56.6,
+            "y": 77.8,
+            "w": 17.0,
+            "h": 12.9,
             "say": "Click **Yes**."
            }
           ]
@@ -5392,17 +5390,25 @@
          "do": "Right-click `frmRucksack.cs` in Solution Explorer.",
          "see": "A menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c243.png",
           "alt": "Solution Explorer, with the right-click menu of frmRucksack.cs open",
-          "w": 360,
-          "h": 420,
+          "w": 668,
+          "h": 679,
           "marks": [
            {
             "n": 6,
+            "x": 49.3,
+            "y": 50.7,
+            "w": 32.3,
+            "h": 2.8,
             "say": "Right-click `frmRucksack.cs` in Solution Explorer."
            },
            {
             "n": 7,
+            "x": 2.0,
+            "y": 88.1,
+            "w": 47.6,
+            "h": 3.2,
             "say": "Click **Rename**."
            }
           ]
@@ -5412,25 +5418,33 @@
         },
         {
          "do": "Click **Rename**.",
-         "see": "The name `frmRucksack.cs` becomes a box that you can type in.",
+         "see": "The name `frmRucksack.cs` becomes a box, with `frmRucksack` highlighted.",
          "id": "5-2.7",
          "n": 7
         },
         {
-         "do": "Type your form's new name, such as `frmRecycle.cs`",
-         "see": "The box shows the new name.",
+         "do": "Type your form's new name, such as `frmRecycle`",
+         "see": "The box shows `frmRecycle.cs`. Visual Studio keeps the `.cs` on the end for you.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c244.png",
           "alt": "Solution Explorer, with the name frmRucksack.cs turned into a box and frmRecycle.cs typed in it",
-          "w": 360,
-          "h": 200,
+          "w": 352,
+          "h": 465,
           "marks": [
            {
             "n": 8,
-            "say": "Type your form's new name, such as `frmRecycle.cs`"
+            "x": 18.8,
+            "y": 74.0,
+            "w": 25.0,
+            "h": 4.1,
+            "say": "Type your form's new name, such as `frmRecycle`"
            },
            {
             "n": 9,
+            "x": 18.8,
+            "y": 74.0,
+            "w": 25.0,
+            "h": 4.1,
             "say": "Press Enter."
            }
           ]
@@ -5448,13 +5462,17 @@
          "do": "Click **Yes**.",
          "see": "Every use of frmRucksack changes to the new name, including the line in frmMap.cs that opens your game.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c245.png",
           "alt": "The message that asks whether to rename every use of frmRucksack",
-          "w": 480,
-          "h": 200,
+          "w": 417,
+          "h": 171,
           "marks": [
            {
             "n": 10,
+            "x": 56.6,
+            "y": 77.8,
+            "w": 17.0,
+            "h": 12.9,
             "say": "Click **Yes**."
            }
           ]

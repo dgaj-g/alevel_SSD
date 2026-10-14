@@ -187,21 +187,29 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c040.png",
           "alt": "File Explorer on bin\\Debug\\Data, with players.txt",
-          "w": 800,
-          "h": 300,
+          "w": 1139,
+          "h": 612,
           "marks": [
            {
             "n": 1,
+            "x": 52.4,
+            "y": 28.8,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 2,
+            "x": 1.7,
+            "y": 4.6,
             "say": "Click **Open Folder in File Explorer**, near the bottom of the menu."
            },
            {
             "n": 3,
+            "x": 57.5,
+            "y": 27.0,
+            "w": 11.4,
+            "h": 3.4,
             "say": "Double-click **bin**, then **Debug**, then **Data**."
            }
           ]
@@ -225,17 +233,21 @@
          "do": "Double-click `players.txt`.",
          "see": "Notepad opens `players.txt`. It holds 12 lines, one for each player.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c041.png",
           "alt": "players.txt open in Notepad, with its 12 lines",
-          "w": 800,
-          "h": 360,
+          "w": 1433,
+          "h": 538,
           "marks": [
            {
             "n": 4,
+            "x": 6.2,
+            "y": 2.7,
             "say": "Double-click `players.txt`."
            },
            {
             "n": 5,
+            "x": 98.0,
+            "y": 2.7,
             "say": "Click the cross at the top right of Notepad."
            }
           ]
@@ -334,34 +346,28 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c023.png",
           "alt": "The project menu, with Add pointed at and Class in the second menu",
-          "w": 640,
-          "h": 420,
+          "w": 959,
+          "h": 616,
           "marks": [
            {
             "n": 1,
+            "x": 73.0,
+            "y": 5.4,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 2,
+            "x": 39.6,
+            "y": 38.6,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 3,
+            "x": 6.2,
+            "y": 93.2,
             "say": "Click **Class...** at the bottom of the second menu."
-           },
-           {
-            "n": 4,
-            "say": "Triple-click the Name box at the bottom of the Add New Item window."
-           },
-           {
-            "n": 5,
-            "say": "Type `Player.cs`"
-           },
-           {
-            "n": 6,
-            "say": "Click **Add**."
            }
           ]
          },
@@ -383,6 +389,32 @@
         {
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "img": "img/cap/c024.png",
+          "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
+          "w": 948,
+          "h": 660,
+          "marks": [
+           {
+            "n": 4,
+            "x": 16.9,
+            "y": 92.1,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "x": 42.2,
+            "y": 92.1,
+            "say": "Type `Player.cs`"
+           },
+           {
+            "n": 6,
+            "x": 85.7,
+            "y": 96.5,
+            "say": "Click **Add**."
+           }
+          ]
+         },
          "id": "2-1.4",
          "n": 4
         },
@@ -402,25 +434,35 @@
          "do": "Drag from the start of `class Player` down to the end of the `{` under it, so that what you type next replaces them.",
          "see": "`class Player` and the `{` under it turn blue. The 2 `}` under them stay white.",
          "img": {
-          "missing": true,
-          "alt": "Player.cs, with class Player and the { under it highlighted",
-          "w": 800,
-          "h": 300,
+          "img": "img/cap/c533.png",
+          "alt": "Player.cs, with a box round class Player and the { under it",
+          "w": 1102,
+          "h": 679,
           "marks": [
            {
             "n": 7,
+            "x": 13.1,
+            "y": 24.7,
+            "w": 8.8,
+            "h": 5.8,
             "say": "Drag from the start of `class Player` down to the end of the `{` under it, so that what you type next replaces them."
            },
            {
             "n": 8,
+            "x": 14.0,
+            "y": 26.3,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 9,
+            "x": 5.0,
+            "y": 1.4,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 10,
+            "x": 6.4,
+            "y": 97.7,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -524,29 +566,41 @@
          "do": "Click at the end of the line `private string joined;`",
          "see": "The flashing cursor is after the semicolon.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c043.png",
           "alt": "Player.cs, with the 2 constructors under the 4 fields",
-          "w": 800,
-          "h": 450,
+          "w": 1102,
+          "h": 679,
           "marks": [
            {
             "n": 1,
+            "x": 31.3,
+            "y": 40.5,
             "say": "Click at the end of the line `private string joined;`"
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 45.2,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 43.6,
+            "w": 41.6,
+            "h": 43.4,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 4,
+            "x": 5.0,
+            "y": 1.4,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 5,
+            "x": 6.4,
+            "y": 97.7,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -671,29 +725,41 @@
          "do": "Click at the end of the `}` that closes the second constructor.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c044.png",
           "alt": "Player.cs, with Username, Password and Avatar under the constructors",
-          "w": 800,
-          "h": 450,
+          "w": 1102,
+          "h": 679,
           "marks": [
            {
             "n": 1,
+            "x": 18.0,
+            "y": 31.0,
             "say": "Click at the end of the `}` that closes the second constructor."
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 35.7,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 34.1,
+            "w": 19.9,
+            "h": 48.3,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 4,
+            "x": 5.0,
+            "y": 1.4,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 5,
+            "x": 6.4,
+            "y": 97.7,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -771,29 +837,41 @@
          "do": "Click at the end of the `}` that closes Avatar.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c045.png",
           "alt": "Player.cs, with Joined under Avatar",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 679,
           "marks": [
            {
             "n": 6,
+            "x": 18.0,
+            "y": 64.0,
             "say": "Click at the end of the `}` that closes Avatar."
            },
            {
             "n": 7,
+            "x": 16.6,
+            "y": 68.6,
             "say": "Press Enter twice."
            },
            {
             "n": 8,
+            "x": 15.7,
+            "y": 67.0,
+            "w": 30.7,
+            "h": 15.3,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 9,
+            "x": 5.0,
+            "y": 1.4,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 10,
+            "x": 6.4,
+            "y": 97.7,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -888,29 +966,41 @@
          "do": "Click at the end of the `}` that closes Joined.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c046.png",
           "alt": "Player.cs, with ToString under Joined",
-          "w": 800,
-          "h": 360,
+          "w": 1102,
+          "h": 679,
           "marks": [
            {
             "n": 1,
+            "x": 18.0,
+            "y": 66.3,
             "say": "Click at the end of the `}` that closes Joined."
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 71.0,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 69.4,
+            "w": 44.0,
+            "h": 13.0,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 4,
+            "x": 5.0,
+            "y": 1.4,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 5,
+            "x": 6.4,
+            "y": 97.7,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -1009,34 +1099,28 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c023.png",
           "alt": "The project menu, with Add pointed at and Class in the second menu",
-          "w": 640,
-          "h": 420,
+          "w": 959,
+          "h": 616,
           "marks": [
            {
             "n": 1,
+            "x": 73.0,
+            "y": 5.4,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 2,
+            "x": 39.6,
+            "y": 38.6,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 3,
+            "x": 6.2,
+            "y": 93.2,
             "say": "Click **Class...** at the bottom of the second menu."
-           },
-           {
-            "n": 4,
-            "say": "Triple-click the Name box at the bottom of the Add New Item window."
-           },
-           {
-            "n": 5,
-            "say": "Type `PlayerFile.cs`"
-           },
-           {
-            "n": 6,
-            "say": "Click **Add**."
            }
           ]
          },
@@ -1058,6 +1142,32 @@
         {
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "img": "img/cap/c024.png",
+          "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
+          "w": 948,
+          "h": 660,
+          "marks": [
+           {
+            "n": 4,
+            "x": 16.9,
+            "y": 92.1,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "x": 42.2,
+            "y": 92.1,
+            "say": "Type `PlayerFile.cs`"
+           },
+           {
+            "n": 6,
+            "x": 85.7,
+            "y": 96.5,
+            "say": "Click **Add**."
+           }
+          ]
+         },
          "id": "3-1.4",
          "n": 4
         },
@@ -1077,17 +1187,21 @@
          "do": "Click at the end of the line `using System.Threading.Tasks;`",
          "see": "The flashing cursor is after the semicolon.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c047.png",
           "alt": "PlayerFile.cs, with using System.IO; added under the other using lines",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 416,
           "marks": [
            {
             "n": 7,
+            "x": 30.7,
+            "y": 27.6,
             "say": "Click at the end of the line `using System.Threading.Tasks;`"
            },
            {
             "n": 8,
+            "x": 11.4,
+            "y": 31.5,
             "say": "Press Enter, then type the yellow line."
            }
           ]
@@ -1196,25 +1310,35 @@
          "do": "Drag from the start of `class PlayerFile` down to the end of the `{` under it. What you type next replaces them.",
          "see": "`class PlayerFile` and the `{` under it turn blue. The 2 `}` under them stay white.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c048.png",
           "alt": "PlayerFile.cs, with LoadAll typed in place of class PlayerFile",
-          "w": 800,
-          "h": 450,
+          "w": 1102,
+          "h": 679,
           "marks": [
            {
             "n": 9,
+            "x": 14.0,
+            "y": 28.6,
             "say": "Drag from the start of `class PlayerFile` down to the end of the `{` under it. What you type next replaces them."
            },
            {
             "n": 10,
+            "x": 13.1,
+            "y": 27.0,
+            "w": 47.2,
+            "h": 50.6,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 11,
+            "x": 5.0,
+            "y": 1.4,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 12,
+            "x": 6.4,
+            "y": 97.7,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -1315,29 +1439,41 @@
          "do": "Click at the end of the `}` that closes LoadAll.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c049.png",
           "alt": "PlayerFile.cs, with Exists under LoadAll",
-          "w": 800,
-          "h": 360,
+          "w": 1102,
+          "h": 679,
           "marks": [
            {
             "n": 1,
+            "x": 18.0,
+            "y": 54.6,
             "say": "Click at the end of the `}` that closes LoadAll."
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 59.3,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 57.7,
+            "w": 44.7,
+            "h": 24.7,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 4,
+            "x": 5.0,
+            "y": 1.4,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 5,
+            "x": 6.4,
+            "y": 97.7,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -1423,29 +1559,41 @@
          "do": "Click at the end of the `}` that closes Exists.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c050.png",
           "alt": "PlayerFile.cs, with Add under Exists",
-          "w": 800,
-          "h": 360,
+          "w": 1102,
+          "h": 679,
           "marks": [
            {
             "n": 6,
+            "x": 18.0,
+            "y": 59.3,
             "say": "Click at the end of the `}` that closes Exists."
            },
            {
             "n": 7,
+            "x": 16.6,
+            "y": 64.0,
             "say": "Press Enter twice."
            },
            {
             "n": 8,
+            "x": 15.7,
+            "y": 62.3,
+            "w": 45.3,
+            "h": 20.0,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 9,
+            "x": 5.0,
+            "y": 1.4,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 10,
+            "x": 6.4,
+            "y": 97.7,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -1513,21 +1661,27 @@
          "do": "Click the **frmLogin.cs [Design]** tab at the top of the editor.",
          "see": "The designer shows frmLogin.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c051.png",
           "alt": "frmLogin in the designer, with the Test button on it",
-          "w": 800,
-          "h": 450,
+          "w": 1102,
+          "h": 563,
           "marks": [
            {
             "n": 1,
+            "x": 61.7,
+            "y": 3.0,
             "say": "Click the **frmLogin.cs [Design]** tab at the top of the editor."
            },
            {
             "n": 2,
+            "x": 1.4,
+            "y": 4.6,
             "say": "Click **Toolbox** on the left edge of Visual Studio 2019."
            },
            {
             "n": 3,
+            "x": 64.9,
+            "y": 54.1,
             "say": "Drag **Button** from the Common Controls group onto the middle of frmLogin."
            }
           ]
@@ -1565,11 +1719,11 @@
         "done": {
          "see": "frmLogin has one button that says Test.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c052.png",
           "alt": "frmLogin with the Test button, and the Properties window showing btnTest",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1568,
+          "h": 515,
+          "marks": []
          }
         }
        }
@@ -1580,13 +1734,17 @@
          "do": "Double-click the Test button on frmLogin.",
          "see": "The code editor opens `frmLogin.cs`, with a new empty method called `btnTest_Click`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c053.png",
           "alt": "frmLogin.cs, with the new empty btnTest_Click",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 404,
           "marks": [
            {
             "n": 4,
+            "x": 15.6,
+            "y": 69.4,
+            "w": 35.6,
+            "h": 17.6,
             "say": "Double-click the Test button on frmLogin."
            }
           ]
@@ -1665,25 +1823,35 @@
          "do": "Click on the empty line between the `{` and the `}` of btnTest_Click.",
          "see": "The flashing cursor is inside btnTest_Click.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c054.png",
           "alt": "btnTest_Click with the yellow lines typed",
-          "w": 800,
-          "h": 450,
+          "w": 1102,
+          "h": 618,
           "marks": [
            {
             "n": 1,
+            "x": 18.8,
+            "y": 59.2,
             "say": "Click on the empty line between the `{` and the `}` of btnTest_Click."
            },
            {
             "n": 2,
+            "x": 17.8,
+            "y": 57.4,
+            "w": 44.7,
+            "h": 39.8,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 3,
+            "x": 5.0,
+            "y": 8.5,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 4,
+            "x": 44.1,
+            "y": 3.0,
             "say": "Press F5 to run the game."
            }
           ]
@@ -1719,21 +1887,27 @@
          "do": "Click **Test**.",
          "see": "A message says **Added:** and then `testClimber|rope2026|avatar-fox.png|` with today's date.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c055.png",
           "alt": "The message that says Added, with the test player's line",
-          "w": 640,
-          "h": 240,
+          "w": 1002,
+          "h": 691,
           "marks": [
            {
             "n": 5,
+            "x": 65.9,
+            "y": 37.7,
             "say": "Click **Test**."
            },
            {
             "n": 6,
+            "x": 62.0,
+            "y": 61.1,
             "say": "Click **OK**."
            },
            {
             "n": 7,
+            "x": 97.6,
+            "y": 2.1,
             "say": "Click **OK**, then click the cross at the top right of the Summit Ready - Log in window."
            }
           ]

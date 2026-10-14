@@ -42,11 +42,11 @@
       },
       {
        "screenshot": {
-        "missing": true,
+        "img": "img/cap/se70dfcbb.png",
         "alt": "Whiteout part-way through a word. The mountain photo is on the left with some cloud over its top. The clue, the word with some letters found, and the wrong-letter count are on the right. The 26 letter buttons are along the bottom, with the tried letters grey",
-        "w": 803,
-        "h": 549,
-        "at": [],
+        "w": 818,
+        "h": 565,
+        "marks": [],
         "cap": "Part-way through a word. Two wrong letters have brought the cloud down over the top of the mountain."
        }
       },
@@ -58,11 +58,11 @@
       },
       {
        "screenshot": {
-        "missing": true,
+        "img": "img/cap/s22fb18c8.png",
         "alt": "Whiteout after a whiteout, with the cloud covering the whole photo and the word shown in red",
-        "w": 803,
-        "h": 549,
-        "at": [],
+        "w": 818,
+        "h": 565,
+        "marks": [],
         "cap": "A whiteout. The word shows in red, and it scores 0."
        }
       },
@@ -74,11 +74,11 @@
       },
       {
        "screenshot": {
-        "missing": true,
+        "img": "img/cap/scd3e4876.png",
         "alt": "The Round over box at the end of a round of Whiteout",
-        "w": 803,
-        "h": 549,
-        "at": [],
+        "w": 818,
+        "h": 565,
+        "marks": [],
         "cap": "The Round over box at the end of a round."
        }
       }
@@ -443,25 +443,41 @@
             "do": "Press the Windows key and the E key together.",
             "see": "File Explorer opens.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c012.png",
              "alt": "File Explorer open on Downloads, with the menu that opens on summit-ready-files.zip",
-             "w": 800,
-             "h": 450,
+             "w": 818,
+             "h": 565,
              "marks": [
               {
                "n": 2,
+               "x": 0.2,
+               "y": 0.4,
+               "w": 78.0,
+               "h": 10.8,
                "say": "Press the Windows key and the E key together."
               },
               {
                "n": 3,
+               "x": 2.9,
+               "y": 21.2,
+               "w": 12.5,
+               "h": 3.2,
                "say": "Click **Downloads** in the list down the left side of File Explorer."
               },
               {
                "n": 4,
+               "x": 17.5,
+               "y": 20.5,
+               "w": 59.5,
+               "h": 3.0,
                "say": "Right-click `summit-ready-files.zip`."
               },
               {
                "n": 5,
+               "x": 36.2,
+               "y": 36.6,
+               "w": 26.8,
+               "h": 3.0,
                "say": "Click **Extract All...** in the menu."
               }
              ]
@@ -503,13 +519,17 @@
             "do": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window.",
             "see": "A new File Explorer window opens. It shows 3 folders, Data, Images and Sounds, and one file, `credits.txt`.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c013.png",
              "alt": "The Extract Compressed (Zipped) Folders window, with its Extract button",
-             "w": 640,
-             "h": 480,
+             "w": 622,
+             "h": 470,
              "marks": [
               {
                "n": 6,
+               "x": 68.5,
+               "y": 81.3,
+               "w": 10.0,
+               "h": 4.7,
                "say": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window."
               }
              ]
@@ -521,17 +541,25 @@
             "do": "Press Ctrl and A together.",
             "see": "The 3 folders and `credits.txt` turn blue.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c014.png",
              "alt": "The unpacked folder, with Data, Images, Sounds and credits.txt highlighted",
-             "w": 800,
-             "h": 360,
+             "w": 920,
+             "h": 486,
              "marks": [
               {
                "n": 7,
+               "x": 15.7,
+               "y": 36.0,
+               "w": 53.0,
+               "h": 14.0,
                "say": "Press Ctrl and A together."
               },
               {
                "n": 8,
+               "x": 6.7,
+               "y": 10.3,
+               "w": 3.5,
+               "h": 10.7,
                "say": "Press Ctrl and C together."
               }
              ]
@@ -549,13 +577,15 @@
             "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
             "see": "Visual Studio 2019 comes to the front, with your project open.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c015.png",
              "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
-             "w": 800,
-             "h": 60,
+             "w": 960,
+             "h": 41,
              "marks": [
               {
                "n": 9,
+               "x": 63.9,
+               "y": 50.0,
                "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
               }
              ]
@@ -567,17 +597,21 @@
             "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
             "see": "A long menu opens.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c016.png",
              "alt": "Solution Explorer, with the menu that opens on the project line",
-             "w": 360,
-             "h": 420,
+             "w": 635,
+             "h": 616,
              "marks": [
               {
                "n": 10,
+               "x": 59.8,
+               "y": 5.4,
                "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
               },
               {
                "n": 11,
+               "x": 18.8,
+               "y": 89.1,
                "say": "Click **Open Folder in File Explorer**, near the bottom of the menu."
               }
              ]
@@ -595,13 +629,15 @@
             "do": "Double-click the **bin** folder.",
             "see": "The bin folder holds a folder called Debug.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c017.png",
              "alt": "File Explorer on the project folder, with the bin folder",
-             "w": 640,
-             "h": 300,
+             "w": 960,
+             "h": 279,
              "marks": [
               {
                "n": 12,
+               "x": 21.3,
+               "y": 27.7,
                "say": "Double-click the **bin** folder."
               }
              ]
@@ -613,13 +649,15 @@
             "do": "Double-click the **Debug** folder.",
             "see": "The Debug folder holds the Data, Images and Sounds folders, and your program, whose name ends in .exe.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c018.png",
              "alt": "File Explorer on the bin folder, with the Debug folder",
-             "w": 640,
-             "h": 300,
+             "w": 960,
+             "h": 279,
              "marks": [
               {
                "n": 13,
+               "x": 22.4,
+               "y": 27.7,
                "say": "Double-click the **Debug** folder."
               }
              ]
@@ -631,17 +669,25 @@
             "do": "Press Ctrl and V together.",
             "see": "A window called Replace or Skip Files opens, because most of the files are already there.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c194.png",
              "alt": "The Replace or Skip Files window, with Skip these files",
-             "w": 640,
-             "h": 400,
+             "w": 1123,
+             "h": 600,
              "marks": [
               {
                "n": 14,
+               "x": 15.1,
+               "y": 35.0,
+               "w": 62.3,
+               "h": 25.8,
                "say": "Press Ctrl and V together."
               },
               {
                "n": 15,
+               "x": 31.7,
+               "y": 27.7,
+               "w": 35.1,
+               "h": 5.3,
                "say": "Click **Skip these files**."
               }
              ]
@@ -681,13 +727,15 @@
          "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
          "see": "Visual Studio 2019 comes to the front, with your project open.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c015.png",
           "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
-          "w": 800,
-          "h": 60,
+          "w": 960,
+          "h": 41,
           "marks": [
            {
             "n": 1,
+            "x": 63.9,
+            "y": 50.0,
             "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
            }
           ]
@@ -699,21 +747,27 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c023.png",
           "alt": "The project menu, with Add pointed at and Class in the second menu",
-          "w": 640,
-          "h": 420,
+          "w": 959,
+          "h": 616,
           "marks": [
            {
             "n": 2,
+            "x": 73.0,
+            "y": 5.4,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 3,
+            "x": 39.6,
+            "y": 38.6,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 4,
+            "x": 6.2,
+            "y": 93.2,
             "say": "Click **Class...** at the bottom of the second menu."
            }
           ]
@@ -737,21 +791,27 @@
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Class1.cs` turns blue, so what you type next replaces it.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c024.png",
           "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
-          "w": 800,
-          "h": 450,
+          "w": 948,
+          "h": 660,
           "marks": [
            {
             "n": 5,
+            "x": 16.9,
+            "y": 92.1,
             "say": "Triple-click the Name box at the bottom of the Add New Item window."
            },
            {
             "n": 6,
+            "x": 42.2,
+            "y": 92.1,
             "say": "Type `WordClue.cs`"
            },
            {
             "n": 7,
+            "x": 85.7,
+            "y": 96.5,
             "say": "Click **Add**."
            }
           ]
@@ -774,26 +834,6 @@
         {
          "do": "Click at the end of the line `using System.Threading.Tasks;`",
          "see": "The flashing cursor is after the semicolon.",
-         "img": {
-          "missing": true,
-          "alt": "WordClue.cs as Visual Studio 2019 makes it, with using System.IO; added",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 8,
-            "say": "Click at the end of the line `using System.Threading.Tasks;`"
-           },
-           {
-            "n": 9,
-            "say": "Press Enter."
-           },
-           {
-            "n": 10,
-            "say": "Type `using System.IO;`"
-           }
-          ]
-         },
          "id": "2-2.8",
          "n": 8
         },
@@ -907,22 +947,6 @@
         {
          "do": "Drag from the start of `class WordClue` down to the end of the `}` two lines below it.",
          "see": "`class WordClue` and its empty `{` and `}` turn blue. The last `}` in the file stays white. That is right: the last `}` closes the namespace, and it must stay.",
-         "img": {
-          "missing": true,
-          "alt": "WordClue.cs, with class WordClue and its empty braces highlighted",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 11,
-            "say": "Drag from the start of `class WordClue` down to the end of the `}` two lines below it."
-           },
-           {
-            "n": 13,
-            "say": "Press Ctrl and V together."
-           }
-          ]
-         },
          "id": "2-2.11",
          "n": 11
         },
@@ -942,34 +966,6 @@
         {
          "do": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it.",
          "see": "The whole line turns blue.",
-         "img": {
-          "missing": true,
-          "alt": "WordClue.cs, with the yellow lines typed in place of the two YOU TYPE THIS PART lines",
-          "w": 800,
-          "h": 360,
-          "marks": [
-           {
-            "n": 14,
-            "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it."
-           },
-           {
-            "n": 15,
-            "say": "Type the 2 yellow lines that start with `public`. Press Enter at the end of each line."
-           },
-           {
-            "n": 16,
-            "say": "Triple-click the other line that starts with `// YOU TYPE THIS PART`."
-           },
-           {
-            "n": 17,
-            "say": "Type the 2 yellow lines, `Word = parts[0];` and `Clue = parts[1];`. Press Enter at the end of each line."
-           },
-           {
-            "n": 18,
-            "say": "Press Ctrl and S together."
-           }
-          ]
-         },
          "wrong": [
           [
            "The old `// YOU TYPE THIS PART` line is still there after you type",
@@ -1029,21 +1025,27 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c068.png",
           "alt": "The project menu, with Add pointed at and Form (Windows Forms) in the second menu",
-          "w": 640,
-          "h": 420,
+          "w": 949,
+          "h": 605,
           "marks": [
            {
             "n": 1,
+            "x": 73.8,
+            "y": 4.6,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 2,
+            "x": 40.6,
+            "y": 37.8,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 3,
+            "x": 11.6,
+            "y": 81.0,
             "say": "Click **Form (Windows Forms)...** in the second menu."
            }
           ]
@@ -1067,21 +1069,29 @@
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Form1.cs` turns blue, so what you type next replaces it.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c069.png",
           "alt": "The Add New Item window, with Form (Windows Forms) picked",
-          "w": 800,
-          "h": 450,
+          "w": 943,
+          "h": 592,
           "marks": [
            {
             "n": 4,
+            "x": 42.5,
+            "y": 91.1,
             "say": "Triple-click the Name box at the bottom of the Add New Item window."
            },
            {
             "n": 5,
+            "x": 13.8,
+            "y": 89.5,
+            "w": 57.4,
+            "h": 3.5,
             "say": "Type `frmWhiteout.cs`"
            },
            {
             "n": 6,
+            "x": 86.0,
+            "y": 96.3,
             "say": "Click **Add**."
            }
           ]
@@ -1104,7 +1114,7 @@
        ]
       },
       {
-       "p": "Now set the form's properties in the Properties window, using the table below. Set **Font** first. If you change Font later, Visual Studio 2019 stretches the form to fit the new font, and its size (ClientSize) changes."
+       "p": "Now set the form's properties in the Properties window, using the table below. Set **Font** first. If you change Font later, Visual Studio 2019 stretches the form to fit the new font, and its Size changes."
       },
       {
        "p": "[[KeyPreview|22]] is new. When it is True, the form hears every key the player types, even while a letter button has the focus. Without it, typing a letter on the keyboard does nothing."
@@ -1114,9 +1124,9 @@
         "props": [
          "Font = Segoe UI, 11pt",
          "Text = Summit Ready - Whiteout",
-         "ClientSize = 1000, 660",
          "StartPosition = CenterScreen",
          "FormBorderStyle = FixedSingle",
+         "Size = 1016, 699",
          "MaximizeBox = False",
          "BackColor = 243, 245, 242",
          "KeyPreview = True"
@@ -1152,21 +1162,29 @@
          "do": "Click the [[lightning bolt|11]] at the top of the Properties window.",
          "see": "The Properties window now lists the form's events in place of its properties.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c371.png",
           "alt": "The Properties window showing the events of frmWhiteout, with the lightning bolt, Load and the Properties button",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 7,
+            "x": 84.9,
+            "y": 48.4,
             "say": "Click the [[lightning bolt|11]] at the top of the Properties window."
            },
            {
             "n": 8,
+            "x": 81.0,
+            "y": 87.0,
+            "w": 16.6,
+            "h": 2.2,
             "say": "Double-click the empty box beside **Load**. Load comes after Leave, so scroll down the list a little if you cannot see it."
            },
            {
             "n": 10,
+            "x": 83.6,
+            "y": 48.4,
             "say": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window."
            }
           ]
@@ -1184,13 +1202,17 @@
          "do": "Press Shift and F7 together.",
          "see": "The designer shows frmWhiteout.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c372.png",
           "alt": "The designer showing frmWhiteout, with the frmWhiteout.cs [Design] tab",
-          "w": 800,
-          "h": 300,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 9,
+            "x": 8.6,
+            "y": 13.3,
+            "w": 9.2,
+            "h": 2.4,
             "say": "Press Shift and F7 together."
            }
           ]
@@ -1227,13 +1249,17 @@
          "do": "Double-click `frmPractice.cs` in Solution Explorer.",
          "see": "frmPractice opens in the designer.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c200.png",
           "alt": "Solution Explorer, with frmPractice.cs",
-          "w": 360,
-          "h": 300,
+          "w": 352,
+          "h": 138,
           "marks": [
            {
             "n": 1,
+            "x": 14.6,
+            "y": 77.9,
+            "w": 31.4,
+            "h": 13.3,
             "say": "Double-click `frmPractice.cs` in Solution Explorer."
            }
           ]
@@ -1245,17 +1271,23 @@
          "do": "Click a dark part of the header strip that has no words on it.",
          "see": "The Properties window shows pnlHeader at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c201.png",
           "alt": "frmPractice in the designer, with the dark header strip picked",
-          "w": 800,
-          "h": 450,
+          "w": 1078,
+          "h": 624,
           "marks": [
            {
             "n": 2,
+            "x": 77.0,
+            "y": 18.8,
             "say": "Click a dark part of the header strip that has no words on it."
            },
            {
             "n": 3,
+            "x": 5.0,
+            "y": 10.6,
+            "w": 93.1,
+            "h": 9.6,
             "say": "Press Ctrl and C together."
            }
           ]
@@ -1279,17 +1311,23 @@
          "do": "Click the **frmWhiteout.cs [Design]** tab at the top of the editor.",
          "see": "The empty frmWhiteout form shows again.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c373.png",
           "alt": "The empty frmWhiteout form, with the frmWhiteout.cs [Design] tab and the title bar of frmWhiteout",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 4,
+            "x": 8.6,
+            "y": 13.3,
+            "w": 9.2,
+            "h": 2.4,
             "say": "Click the **frmWhiteout.cs [Design]** tab at the top of the editor."
            },
            {
             "n": 5,
+            "x": 19.1,
+            "y": 20.1,
             "say": "Click the title bar of frmWhiteout."
            }
           ]
@@ -1307,25 +1345,39 @@
          "do": "Press Ctrl and V together.",
          "see": "The dark header strip appears on frmWhiteout, with small white squares at its corners. The Properties window shows pnlHeader.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c374.png",
           "alt": "frmWhiteout with the pasted header strip, and the Location box in the Properties window",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 6,
+            "x": 2.8,
+            "y": 21.5,
+            "w": 52.3,
+            "h": 7.0,
             "say": "Press Ctrl and V together."
            },
            {
             "n": 7,
+            "x": 81.0,
+            "y": 88.6,
+            "w": 16.6,
+            "h": 2.4,
             "say": "Triple-click the box beside **Location** in the Properties window."
            },
            {
             "n": 8,
+            "x": 88.0,
+            "y": 88.6,
+            "w": 9.6,
+            "h": 2.4,
             "say": "Type `0, 0`"
            },
            {
             "n": 9,
+            "x": 92.5,
+            "y": 89.8,
             "say": "Press Enter."
            }
           ]
@@ -1383,21 +1435,31 @@
          "do": "Click the **frmPractice.cs [Design]** tab at the top of the editor.",
          "see": "frmPractice shows again.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c204.png",
           "alt": "frmPractice in the designer, with the white Round over box picked",
-          "w": 800,
-          "h": 450,
+          "w": 1078,
+          "h": 624,
           "marks": [
            {
             "n": 1,
+            "x": 3.0,
+            "y": 0.2,
+            "w": 15.8,
+            "h": 2.9,
             "say": "Click the **frmPractice.cs [Design]** tab at the top of the editor."
            },
            {
             "n": 2,
-            "say": "Click a white part of the Round over box that has no words on it."
+            "x": 34.1,
+            "y": 93.7,
+            "say": "Click the white space to the right of the words Round over, at the top of the box. (The empty space lower down holds hidden labels, so a click there picks a label, not the box.)"
            },
            {
             "n": 3,
+            "x": 21.7,
+            "y": 29.8,
+            "w": 59.8,
+            "h": 67.8,
             "say": "Press Ctrl and C together."
            }
           ]
@@ -1406,7 +1468,7 @@
          "n": 1
         },
         {
-         "do": "Click a white part of the Round over box that has no words on it.",
+         "do": "Click the white space to the right of the words Round over, at the top of the box. (The empty space lower down holds hidden labels, so a click there picks a label, not the box.)",
          "see": "The Properties window shows pnlRoundOver at the top.",
          "wrong": [
           [
@@ -1427,33 +1489,53 @@
          "do": "Click the **frmWhiteout.cs [Design]** tab at the top of the editor.",
          "see": "frmWhiteout shows again, with the header strip.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c375.png",
           "alt": "frmWhiteout with the pasted Round over box in the middle",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 4,
+            "x": 8.6,
+            "y": 13.3,
+            "w": 9.2,
+            "h": 2.4,
             "say": "Click the **frmWhiteout.cs [Design]** tab at the top of the editor."
            },
            {
             "n": 5,
+            "x": 19.1,
+            "y": 20.1,
             "say": "Click the title bar of frmWhiteout."
            },
            {
             "n": 6,
+            "x": 12.2,
+            "y": 35.9,
+            "w": 33.5,
+            "h": 51.3,
             "say": "Press Ctrl and V together."
            },
            {
             "n": 7,
+            "x": 81.0,
+            "y": 88.6,
+            "w": 16.6,
+            "h": 2.4,
             "say": "Triple-click the box beside **Location** in the Properties window."
            },
            {
             "n": 8,
+            "x": 88.0,
+            "y": 88.6,
+            "w": 9.6,
+            "h": 2.4,
             "say": "Type `180, 120`"
            },
            {
             "n": 9,
+            "x": 92.5,
+            "y": 89.8,
             "say": "Press Enter."
            }
           ]
@@ -1517,25 +1599,39 @@
          "do": "Click the title at the left of the header strip.",
          "see": "The Properties window shows lblTitle at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c376.png",
           "alt": "The header strip on frmWhiteout, with lblTitle picked and its Text box in the Properties window",
-          "w": 800,
-          "h": 300,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 1,
+            "x": 3.5,
+            "y": 22.5,
+            "w": 29.0,
+            "h": 3.6,
             "say": "Click the title at the left of the header strip."
            },
            {
             "n": 2,
+            "x": 88.0,
+            "y": 86.4,
+            "w": 9.6,
+            "h": 2.4,
             "say": "Triple-click the box beside **Text** in the Properties window."
            },
            {
             "n": 3,
+            "x": 88.0,
+            "y": 86.4,
+            "w": 9.6,
+            "h": 2.4,
             "say": "Type `Slieve Bearnagh - Whiteout`"
            },
            {
             "n": 4,
+            "x": 92.5,
+            "y": 87.6,
             "say": "Press Enter."
            }
           ]
@@ -1565,25 +1661,39 @@
          "do": "Click the instruction under the title.",
          "see": "The Properties window shows lblInstruction at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c377.png",
           "alt": "The header strip on frmWhiteout, with lblInstruction picked and its Text box in the Properties window",
-          "w": 800,
-          "h": 300,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 5,
+            "x": 3.5,
+            "y": 25.5,
+            "w": 37.0,
+            "h": 2.7,
             "say": "Click the instruction under the title."
            },
            {
             "n": 6,
+            "x": 88.0,
+            "y": 86.4,
+            "w": 9.6,
+            "h": 2.4,
             "say": "Triple-click the box beside **Text** in the Properties window."
            },
            {
             "n": 7,
+            "x": 88.0,
+            "y": 86.4,
+            "w": 9.6,
+            "h": 2.4,
             "say": "Type `Guess the word one letter at a time. Six wrong letters and the cloud hides the mountain.`"
            },
            {
             "n": 8,
+            "x": 92.5,
+            "y": 87.6,
             "say": "Press Enter."
            }
           ]
@@ -1762,11 +1872,11 @@
         "done": {
          "see": "The dark header strip along the top of frmWhiteout. Under it, pnlPlay fills the rest of the form. picPeak is a box on the left, and flpLetters is a wide dotted box under it. Down the right-hand side are lblWordCount, lblClue, lblWord, lblWrong, lblMessage and btnNext.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c378.png",
           "alt": "frmWhiteout in the designer with every control from the table on it",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1568,
+          "h": 675,
+          "marks": []
          }
         }
        }
@@ -1830,30 +1940,6 @@
         {
          "do": "Click the **frmWhiteout.cs** tab at the top of the editor, the one without [Design].",
          "see": "The code of frmWhiteout shows, with `frmWhiteout_Load` near the bottom.",
-         "img": {
-          "missing": true,
-          "alt": "frmWhiteout.cs in the code editor, with the 3 pasted fields under the class line",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click the **frmWhiteout.cs** tab at the top of the editor, the one without [Design]."
-           },
-           {
-            "n": 2,
-            "say": "Click at the end of the `{` under `public partial class frmWhiteout : Form`."
-           },
-           {
-            "n": 3,
-            "say": "Press Enter."
-           },
-           {
-            "n": 5,
-            "say": "Press Ctrl and V together."
-           }
-          ]
-         },
          "id": "4-1.1",
          "n": 1
         },
@@ -1964,30 +2050,6 @@
         {
          "do": "Click at the end of the `}` that closes `frmWhiteout_Load`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmWhiteout.cs, with the 8 pasted methods under frmWhiteout_Load",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 6,
-            "say": "Click at the end of the `}` that closes `frmWhiteout_Load`."
-           },
-           {
-            "n": 7,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 9,
-            "say": "Press Ctrl and V together."
-           },
-           {
-            "n": 10,
-            "say": "Press Ctrl and S together."
-           }
-          ]
-         },
          "id": "4-1.6",
          "n": 6
         },
@@ -2039,17 +2101,25 @@
          "do": "Press Shift and F7 together.",
          "see": "The designer shows frmWhiteout.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c381.png",
           "alt": "frmWhiteout in the designer, with Back to the map picked on the header strip",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 1,
+            "x": 8.6,
+            "y": 13.3,
+            "w": 9.2,
+            "h": 2.4,
             "say": "Press Shift and F7 together."
            },
            {
             "n": 2,
+            "x": 44.5,
+            "y": 22.2,
+            "w": 10.0,
+            "h": 5.5,
             "say": "Click **Back to the map** on the header strip."
            }
           ]
@@ -2067,25 +2137,35 @@
          "do": "Click the lightning bolt at the top of the Properties window.",
          "see": "The Properties window lists the events of btnBack.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c212.png",
           "alt": "The Properties window showing the events of btnBack, with the list open beside Click",
-          "w": 360,
-          "h": 480,
+          "w": 352,
+          "h": 489,
           "marks": [
            {
             "n": 3,
+            "x": 25.3,
+            "y": 11.2,
             "say": "Click the lightning bolt at the top of the Properties window."
            },
            {
             "n": 4,
+            "x": 42.0,
+            "y": 14.7,
+            "w": 47.2,
+            "h": 3.7,
             "say": "Click the box beside **Click**."
            },
            {
             "n": 5,
+            "x": 92.0,
+            "y": 16.6,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 6,
+            "x": 54.0,
+            "y": 32.7,
             "say": "Click `btnBack_Click` in the list."
            }
           ]
@@ -2134,17 +2214,23 @@
          "do": "Click the arrow at the right end of the box at the very top of the Properties window.",
          "see": "A list of every control on frmWhiteout drops down.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c213.png",
           "alt": "The Properties window, with the list of every control open at the top",
-          "w": 360,
-          "h": 480,
+          "w": 352,
+          "h": 489,
           "marks": [
            {
             "n": 7,
+            "x": 96.6,
+            "y": 6.5,
             "say": "Click the arrow at the right end of the box at the very top of the Properties window."
            },
            {
             "n": 8,
+            "x": 1.1,
+            "y": 16.8,
+            "w": 69.9,
+            "h": 3.3,
             "say": "Click **btnDone** in the list."
            }
           ]
@@ -2162,21 +2248,31 @@
          "do": "Click the box beside **Click**.",
          "see": "A small arrow appears at the right end of the box.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c214.png",
           "alt": "The Properties window showing the events of btnDone, with btnDone_Click beside Click",
-          "w": 360,
-          "h": 480,
+          "w": 352,
+          "h": 489,
           "marks": [
            {
             "n": 9,
+            "x": 4.5,
+            "y": 14.7,
+            "w": 89.2,
+            "h": 3.7,
             "say": "Click the box beside **Click**."
            },
            {
             "n": 10,
+            "x": 95.2,
+            "y": 16.4,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 11,
+            "x": 42.3,
+            "y": 35.2,
+            "w": 51.4,
+            "h": 3.7,
             "say": "Click `btnDone_Click` in the list."
            }
           ]
@@ -2216,25 +2312,37 @@
          "do": "Click the speaker picture on the header strip.",
          "see": "The Properties window shows the events of picSound.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c215.png",
           "alt": "The Properties window showing the events of picSound, with picSound_Click beside Click",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 1,
+            "x": 41.8,
+            "y": 15.1,
             "say": "Click the speaker picture on the header strip."
            },
            {
             "n": 2,
+            "x": 82.3,
+            "y": 51.4,
+            "w": 15.6,
+            "h": 2.9,
             "say": "Click the box beside **Click**."
            },
            {
             "n": 3,
+            "x": 98.4,
+            "y": 52.7,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 4,
+            "x": 89.3,
+            "y": 70.6,
+            "w": 9.6,
+            "h": 2.9,
             "say": "Click `picSound_Click` in the list."
            }
           ]
@@ -2264,25 +2372,35 @@
          "do": "Click the title bar of frmWhiteout.",
          "see": "The Properties window shows the events of frmWhiteout.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c382.png",
           "alt": "The Properties window showing the events of frmWhiteout, with frmWhiteout_FormClosing beside FormClosing",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 5,
+            "x": 19.1,
+            "y": 20.1,
             "say": "Click the title bar of frmWhiteout."
            },
            {
             "n": 6,
+            "x": 88.0,
+            "y": 63.4,
+            "w": 9.6,
+            "h": 2.4,
             "say": "Click the box beside **FormClosing**. Scroll down the list a little if you cannot see it."
            },
            {
             "n": 7,
+            "x": 96.9,
+            "y": 64.6,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 8,
+            "x": 91.8,
+            "y": 64.6,
             "say": "Click `frmWhiteout_FormClosing` in the list."
            }
           ]
@@ -2312,13 +2430,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 9,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -2422,26 +2542,6 @@
         {
          "do": "Click at the end of the line `private bool finished = false;   // true once the result is kept`",
          "see": "The flashing cursor is at the end of the comment.",
-         "img": {
-          "missing": true,
-          "alt": "frmWhiteout.cs, with the Whiteout fields typed under the chapter 9 fields",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the line `private bool finished = false;   // true once the result is kept`"
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-4.1",
          "n": 1
         },
@@ -2545,26 +2645,6 @@
         {
          "do": "Click at the end of the `{` on the line under `private void frmWhiteout_Load`.",
          "see": "The flashing cursor is after the `{`.",
-         "img": {
-          "missing": true,
-          "alt": "frmWhiteout.cs, with the yellow lines typed inside frmWhiteout_Load",
-          "w": 800,
-          "h": 360,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `{` on the line under `private void frmWhiteout_Load`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-5.1",
          "n": 1
         },
@@ -2709,26 +2789,6 @@
         {
          "do": "Click at the end of the `}` that closes `frmWhiteout_Load`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmWhiteout.cs, with MakeLetters typed under frmWhiteout_Load",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `frmWhiteout_Load`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-6.1",
          "n": 1
         },
@@ -2843,26 +2903,6 @@
         {
          "do": "Click at the end of the `}` that closes `MakeLetters`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmWhiteout.cs, with the first part of ShowWord typed under MakeLetters",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `MakeLetters`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-7.1",
          "n": 1
         },
@@ -2947,26 +2987,6 @@
         {
          "do": "Click at the end of the line `lblMessage.Text = \"\";` near the end of ShowWord.",
          "see": "The flashing cursor is after the semicolon.",
-         "img": {
-          "missing": true,
-          "alt": "frmWhiteout.cs, with the end of ShowWord, ShowFound and Letter_Click typed",
-          "w": 800,
-          "h": 360,
-          "marks": [
-           {
-            "n": 4,
-            "say": "Click at the end of the line `lblMessage.Text = \"\";` near the end of ShowWord."
-           },
-           {
-            "n": 5,
-            "say": "Press Enter."
-           },
-           {
-            "n": 6,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-7.4",
          "n": 4
         },
@@ -3081,26 +3101,6 @@
         {
          "do": "Click at the end of the `}` that closes `Letter_Click`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmWhiteout.cs, with frmWhiteout_KeyPress typed under Letter_Click",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `Letter_Click`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-8.1",
          "n": 1
         },
@@ -3221,26 +3221,6 @@
         {
          "do": "Click at the end of the `}` that closes `frmWhiteout_KeyPress`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmWhiteout.cs, with the first part of TryLetter typed under frmWhiteout_KeyPress",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `frmWhiteout_KeyPress`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-9.1",
          "n": 1
         },
@@ -3328,26 +3308,6 @@
         {
          "do": "Click at the end of the second `}` under `inWord = true;`. It closes the loop.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmWhiteout.cs, with the second part of TryLetter and WordPoints typed",
-          "w": 800,
-          "h": 400,
-          "marks": [
-           {
-            "n": 4,
-            "say": "Click at the end of the second `}` under `inWord = true;`. It closes the loop."
-           },
-           {
-            "n": 5,
-            "say": "Press Enter."
-           },
-           {
-            "n": 6,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-9.4",
          "n": 4
         },
@@ -3438,26 +3398,6 @@
         {
          "do": "Click at the end of the `}` that closes `WordPoints`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmWhiteout.cs, with WordSolved typed under WordPoints",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `WordPoints`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-10.1",
          "n": 1
         },
@@ -3518,26 +3458,6 @@
         {
          "do": "Click at the end of the `}` that closes `WordSolved`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmWhiteout.cs, with Whiteout typed under WordSolved",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 4,
-            "say": "Click at the end of the `}` that closes `WordSolved`."
-           },
-           {
-            "n": 5,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 6,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-10.4",
          "n": 4
         },
@@ -3628,26 +3548,6 @@
         {
          "do": "Click at the end of the `}` that closes `Whiteout`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmWhiteout.cs, with EndWord typed under Whiteout",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `Whiteout`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-11.1",
          "n": 1
         },
@@ -3721,25 +3621,37 @@
          "do": "Click at the end of the `}` that closes `EndWord`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c394.png",
           "alt": "frmWhiteout.cs, with btnNext_Click and RecordResult typed under EndWord",
-          "w": 800,
-          "h": 360,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 4,
+            "x": 9.8,
+            "y": 25.3,
             "say": "Click at the end of the `}` that closes `EndWord`."
            },
            {
             "n": 5,
+            "x": 9.6,
+            "y": 27.3,
             "say": "Press Enter twice."
            },
            {
             "n": 6,
+            "x": 8.9,
+            "y": 28.1,
+            "w": 26.8,
+            "h": 38.8,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 7,
+            "x": 0.1,
+            "y": 92.7,
+            "w": 12.6,
+            "h": 2.1,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -3795,33 +3707,51 @@
          "do": "Press Shift and F7 together.",
          "see": "The designer shows frmWhiteout.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c395.png",
           "alt": "frmWhiteout in the designer, with Next word picked and the Properties window showing its events",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 1,
+            "x": 8.6,
+            "y": 13.3,
+            "w": 9.2,
+            "h": 2.4,
             "say": "Press Shift and F7 together."
            },
            {
             "n": 2,
+            "x": 30.4,
+            "y": 65.8,
+            "w": 11.5,
+            "h": 5.6,
             "say": "Click **Next word** on pnlPlay."
            },
            {
             "n": 3,
+            "x": 84.9,
+            "y": 38.5,
             "say": "Click the lightning bolt at the top of the Properties window."
            },
            {
             "n": 4,
+            "x": 88.0,
+            "y": 58.8,
+            "w": 9.6,
+            "h": 2.4,
             "say": "Click the box beside **Click**."
            },
            {
             "n": 5,
+            "x": 96.9,
+            "y": 60.0,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 6,
+            "x": 91.8,
+            "y": 60.0,
             "say": "Click `btnNext_Click` in the list."
            }
           ]
@@ -3863,25 +3793,35 @@
          "do": "Click the title bar of frmWhiteout.",
          "see": "The Properties window lists the events of frmWhiteout.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c396.png",
           "alt": "The Properties window showing the events of frmWhiteout, with frmWhiteout_KeyPress beside KeyPress",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 7,
+            "x": 19.1,
+            "y": 20.1,
             "say": "Click the title bar of frmWhiteout."
            },
            {
             "n": 8,
+            "x": 88.0,
+            "y": 81.8,
+            "w": 9.6,
+            "h": 2.4,
             "say": "Click the box beside **KeyPress**."
            },
            {
             "n": 9,
+            "x": 96.9,
+            "y": 83.0,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 10,
+            "x": 91.8,
+            "y": 83.0,
             "say": "Click `frmWhiteout_KeyPress` in the list."
            }
           ]
@@ -3911,13 +3851,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 11,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -3970,41 +3912,65 @@
          "do": "Double-click `frmMap.cs` in Solution Explorer.",
          "see": "frmMap opens in the designer.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c236.png",
           "alt": "Visual Studio 2019 with frmMap.cs in the code editor. The search box is open and the new case line is typed. frmMap.cs is picked in Solution Explorer on the right",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 1,
+            "x": 86.7,
+            "y": 19.2,
             "say": "Double-click `frmMap.cs` in Solution Explorer."
            },
            {
             "n": 2,
+            "x": 1.7,
+            "y": 0.2,
+            "w": 5.4,
+            "h": 2.9,
             "say": "Press F7."
            },
            {
             "n": 3,
+            "x": 66.3,
+            "y": 7.8,
+            "w": 10.0,
+            "h": 3.1,
             "say": "Press Ctrl and F together."
            },
            {
             "n": 4,
+            "x": 13.5,
+            "y": 50.6,
+            "w": 8.3,
+            "h": 2.5,
             "say": "Type `each game chapter adds`"
            },
            {
             "n": 5,
+            "x": 79.4,
+            "y": 9.2,
             "say": "Press Escape."
            },
            {
             "n": 6,
+            "x": 6.5,
+            "y": 54.5,
             "say": "Press End."
            },
            {
             "n": 7,
+            "x": 12.4,
+            "y": 54.5,
             "say": "Press Enter."
            },
            {
             "n": 8,
+            "x": 12.3,
+            "y": 53.1,
+            "w": 15.0,
+            "h": 2.7,
             "say": "Type the yellow line from the code above."
            }
           ]
@@ -4064,17 +4030,23 @@
          "do": "Press F5.",
          "see": "Your game starts and shows the login window.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c237.png",
           "alt": "The login window of your game, with a player's name and password typed in",
-          "w": 640,
-          "h": 400,
+          "w": 999,
+          "h": 690,
           "marks": [
            {
             "n": 9,
+            "x": 8.0,
+            "y": 1.9,
             "say": "Press F5."
            },
            {
             "n": 10,
+            "x": 33.0,
+            "y": 63.8,
+            "w": 33.8,
+            "h": 29.7,
             "say": "Log in with a player you registered in chapter 5."
            }
           ]
@@ -4092,13 +4064,17 @@
          "do": "Click **Start the expedition**.",
          "see": "The map opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c238.png",
           "alt": "The Welcome screen of your game, with the Start the expedition button",
-          "w": 640,
-          "h": 400,
+          "w": 999,
+          "h": 690,
           "marks": [
            {
             "n": 11,
+            "x": 3.4,
+            "y": 87.5,
+            "w": 28.0,
+            "h": 7.5,
             "say": "Click **Start the expedition**."
            }
           ]
@@ -4110,13 +4086,17 @@
          "do": "Click place number 4 on the map, the fifth place.",
          "see": "Whiteout opens, with the mountain photo, a clue, a row of underscores and 26 letter buttons.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c397.png",
           "alt": "The map, with place number 4 picked",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 12,
+            "x": 56.6,
+            "y": 49.2,
+            "w": 18.8,
+            "h": 7.0,
             "say": "Click place number 4 on the map, the fifth place."
            }
           ]
@@ -4128,13 +4108,17 @@
          "do": "Play a whole round. Try some letters with the mouse and some on the keyboard.",
          "see": "After the 4th word, See my score opens the Round over box.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c398.png",
           "alt": "Whiteout part-way through a word, with some cloud over the mountain",
-          "w": 803,
-          "h": 549,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 13,
+            "x": 25.0,
+            "y": 65.5,
+            "w": 33.8,
+            "h": 11.9,
             "say": "Play a whole round. Try some letters with the mouse and some on the keyboard."
            }
           ]
@@ -4349,17 +4333,23 @@
          "do": "Right-click `WordClue.cs` in Solution Explorer.",
          "see": "A menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c399.png",
           "alt": "Solution Explorer, with the right-click menu of WordClue.cs open",
-          "w": 360,
-          "h": 420,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 1,
+            "x": 85.8,
+            "y": 84.4,
             "say": "Right-click `WordClue.cs` in Solution Explorer."
            },
            {
             "n": 2,
+            "x": 68.5,
+            "y": 85.6,
+            "w": 14.5,
+            "h": 2.7,
             "say": "Click **Rename**."
            }
           ]
@@ -4369,25 +4359,31 @@
         },
         {
          "do": "Click **Rename**.",
-         "see": "The name `WordClue.cs` becomes a box that you can type in.",
+         "see": "The name `WordClue.cs` becomes a box, with `WordClue` highlighted.",
          "id": "5-2.2",
          "n": 2
         },
         {
-         "do": "Type your class's new name, such as `CellWord.cs`",
-         "see": "The box shows the new name.",
+         "do": "Type your class's new name, such as `CellWord`",
+         "see": "The box shows `CellWord.cs`. Visual Studio keeps the `.cs` on the end for you.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c400.png",
           "alt": "Solution Explorer, with the name WordClue.cs turned into a box and CellWord.cs typed in it",
-          "w": 360,
-          "h": 200,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 3,
-            "say": "Type your class's new name, such as `CellWord.cs`"
+            "x": 83.7,
+            "y": 83.1,
+            "w": 4.1,
+            "h": 2.5,
+            "say": "Type your class's new name, such as `CellWord`"
            },
            {
             "n": 4,
+            "x": 88.8,
+            "y": 84.3,
             "say": "Press Enter."
            }
           ]
@@ -4405,13 +4401,15 @@
          "do": "Click **Yes**.",
          "see": "Every use of the class WordClue in your code changes to the new name. For example, `List<WordClue>` becomes `List<CellWord>`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c401.png",
           "alt": "The message that asks whether to rename every use of WordClue",
-          "w": 480,
-          "h": 200,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 5,
+            "x": 53.6,
+            "y": 60.3,
             "say": "Click **Yes**."
            }
           ]
@@ -4423,17 +4421,23 @@
          "do": "Right-click `frmWhiteout.cs` in Solution Explorer.",
          "see": "A menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c402.png",
           "alt": "Solution Explorer, with the right-click menu of frmWhiteout.cs open",
-          "w": 360,
-          "h": 420,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 6,
+            "x": 86.1,
+            "y": 60.4,
             "say": "Right-click `frmWhiteout.cs` in Solution Explorer."
            },
            {
             "n": 7,
+            "x": 68.5,
+            "y": 85.6,
+            "w": 14.5,
+            "h": 2.7,
             "say": "Click **Rename**."
            }
           ]
@@ -4443,25 +4447,31 @@
         },
         {
          "do": "Click **Rename**.",
-         "see": "The name `frmWhiteout.cs` becomes a box that you can type in.",
+         "see": "The name `frmWhiteout.cs` becomes a box, with `frmWhiteout` highlighted.",
          "id": "5-2.7",
          "n": 7
         },
         {
-         "do": "Type your form's new name, such as `frmCells.cs`",
-         "see": "The box shows the new name.",
+         "do": "Type your form's new name, such as `frmCells`",
+         "see": "The box shows `frmCells.cs`. Visual Studio keeps the `.cs` on the end for you.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c403.png",
           "alt": "Solution Explorer, with the name frmWhiteout.cs turned into a box and frmCells.cs typed in it",
-          "w": 360,
-          "h": 200,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 8,
-            "say": "Type your form's new name, such as `frmCells.cs`"
+            "x": 83.8,
+            "y": 59.3,
+            "w": 3.3,
+            "h": 2.4,
+            "say": "Type your form's new name, such as `frmCells`"
            },
            {
             "n": 9,
+            "x": 88.0,
+            "y": 60.4,
             "say": "Press Enter."
            }
           ]
@@ -4479,13 +4489,15 @@
          "do": "Click **Yes**.",
          "see": "Every use of the class frmWhiteout changes to the new name, including the line in frmMap.cs that opens your game.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c404.png",
           "alt": "The message that asks whether to rename every use of frmWhiteout",
-          "w": 480,
-          "h": 200,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 10,
+            "x": 53.6,
+            "y": 60.3,
             "say": "Click **Yes**."
            }
           ]

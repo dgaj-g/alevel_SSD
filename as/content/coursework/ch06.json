@@ -155,9 +155,9 @@
         "props": [
          "Font = Segoe UI, 11pt",
          "Text = Summit Ready - Log in",
-         "ClientSize = 1000, 660",
          "StartPosition = CenterScreen",
          "FormBorderStyle = FixedSingle",
+         "Size = 1016, 699",
          "MaximizeBox = False",
          "BackColor = 243, 245, 242"
         ]
@@ -208,11 +208,11 @@
         "done": {
          "see": "An empty box across the top of frmLogin, with **Summit Ready** in large letters under it, and the grey subtitle under that.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c089.png",
           "alt": "frmLogin in the designer with the empty banner box, the title and the subtitle",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1041,
+          "h": 505,
+          "marks": []
          }
         }
        }
@@ -334,11 +334,11 @@
         "done": {
          "see": "A white box under the subtitle, holding Username and its box, Password and its box, an empty space, and the gold **Log in** button.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c090.png",
           "alt": "frmLogin in the designer with the white log in box and everything inside it",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1041,
+          "h": 510,
+          "marks": []
          }
         }
        }
@@ -407,11 +407,11 @@
         "done": {
          "see": "frmLogin looks like the picture at the start of this chapter, with an empty box where the banner goes.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c091.png",
           "alt": "frmLogin in the designer with every control on it, and tmrWait in the strip under it",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1041,
+          "h": 572,
+          "marks": []
          }
         }
        }
@@ -465,25 +465,33 @@
          "do": "Click the **frmLogin.cs [Design]** tab at the top of the editor.",
          "see": "The designer shows frmLogin.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c092.png",
           "alt": "The Properties window showing the events of frmLogin, with Load",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 521,
           "marks": [
            {
             "n": 1,
+            "x": 63.3,
+            "y": 2.5,
             "say": "Click the **frmLogin.cs [Design]** tab at the top of the editor."
            },
            {
             "n": 2,
+            "x": 29.1,
+            "y": 9.9,
             "say": "Click the title bar of frmLogin."
            },
            {
             "n": 3,
+            "x": 86.0,
+            "y": 59.6,
             "say": "Click the lightning bolt at the top of the Properties window."
            },
            {
             "n": 4,
+            "x": 93.7,
+            "y": 63.3,
             "say": "Double-click the empty box beside **Load**. Scroll down the list a little if you cannot see it."
            }
           ]
@@ -513,21 +521,29 @@
          "do": "Click at the end of the `{` on the line under `private void frmLogin_Load`.",
          "see": "The flashing cursor is after the `{`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c093.png",
           "alt": "frmLogin.cs, with the 2 yellow lines typed inside frmLogin_Load",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 382,
           "marks": [
            {
             "n": 5,
+            "x": 18.0,
+            "y": 80.4,
             "say": "Click at the end of the `{` on the line under `private void frmLogin_Load`."
            },
            {
             "n": 6,
+            "x": 19.1,
+            "y": 84.6,
             "say": "Press Enter."
            },
            {
             "n": 7,
+            "x": 18.2,
+            "y": 81.7,
+            "w": 42.8,
+            "h": 10.3,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -626,25 +642,35 @@
          "do": "Double-click `PlayerFile.cs` in Solution Explorer.",
          "see": "`PlayerFile.cs` opens in the code editor.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c094.png",
           "alt": "PlayerFile.cs, with LogIn typed under Add",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 501,
           "marks": [
            {
             "n": 1,
+            "x": 86.8,
+            "y": 37.6,
             "say": "Double-click `PlayerFile.cs` in Solution Explorer."
            },
            {
             "n": 2,
+            "x": 10.5,
+            "y": 34.7,
             "say": "Click at the end of the `}` that closes `Add`."
            },
            {
             "n": 3,
+            "x": 9.6,
+            "y": 40.0,
             "say": "Press Enter twice."
            },
            {
             "n": 4,
+            "x": 9.1,
+            "y": 38.2,
+            "w": 24.5,
+            "h": 59.4,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -728,21 +754,27 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c023.png",
           "alt": "The project menu, with Add pointed at and Class in the second menu",
-          "w": 640,
-          "h": 420,
+          "w": 959,
+          "h": 616,
           "marks": [
            {
             "n": 1,
+            "x": 73.0,
+            "y": 5.4,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 2,
+            "x": 39.6,
+            "y": 38.6,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 3,
+            "x": 6.2,
+            "y": 93.2,
             "say": "Click **Class...** in the second menu."
            }
           ]
@@ -766,21 +798,29 @@
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Class1.cs` turns blue, so what you type next replaces it.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c095.png",
           "alt": "The Add New Item window, with Class picked and Expedition.cs in the Name box",
-          "w": 800,
-          "h": 450,
+          "w": 940,
+          "h": 590,
           "marks": [
            {
             "n": 4,
+            "x": 42.4,
+            "y": 91.3,
             "say": "Triple-click the Name box at the bottom of the Add New Item window."
            },
            {
             "n": 5,
+            "x": 13.8,
+            "y": 89.8,
+            "w": 57.3,
+            "h": 3.1,
             "say": "Type `Expedition.cs`"
            },
            {
             "n": 6,
+            "x": 86.1,
+            "y": 96.5,
             "say": "Click **Add**."
            }
           ]
@@ -804,29 +844,43 @@
          "do": "Click at the start of the word `class` in the line `class Expedition`.",
          "see": "The flashing cursor is in front of `class`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c096.png",
           "alt": "Expedition.cs, with static in front of class and the CurrentPlayer field typed",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 306,
           "marks": [
            {
             "n": 7,
+            "x": 18.2,
+            "y": 58.4,
             "say": "Click at the start of the word `class` in the line `class Expedition`."
            },
            {
             "n": 8,
+            "x": 13.3,
+            "y": 54.8,
+            "w": 4.7,
+            "h": 7.2,
             "say": "Type `static` and a space."
            },
            {
             "n": 9,
+            "x": 15.4,
+            "y": 63.6,
             "say": "Click at the end of the `{` on the line under `static class Expedition`."
            },
            {
             "n": 10,
+            "x": 14.0,
+            "y": 68.8,
             "say": "Press Enter."
            },
            {
             "n": 11,
+            "x": 15.7,
+            "y": 65.2,
+            "w": 37.7,
+            "h": 7.6,
             "say": "Type the yellow line `public static Player CurrentPlayer;` and its comment."
            }
           ]
@@ -869,21 +923,27 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c068.png",
           "alt": "The project menu, with Add pointed at and Form (Windows Forms) in the second menu",
-          "w": 640,
-          "h": 420,
+          "w": 949,
+          "h": 605,
           "marks": [
            {
             "n": 12,
+            "x": 73.8,
+            "y": 4.6,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 13,
+            "x": 40.6,
+            "y": 37.8,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 14,
+            "x": 11.6,
+            "y": 81.0,
             "say": "Click **Form (Windows Forms)...** in the second menu."
            }
           ]
@@ -907,21 +967,29 @@
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Form1.cs` turns blue.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c097.png",
           "alt": "The Add New Item window, with frmWelcome.cs in the Name box",
-          "w": 800,
-          "h": 450,
+          "w": 940,
+          "h": 590,
           "marks": [
            {
             "n": 15,
+            "x": 42.4,
+            "y": 91.3,
             "say": "Triple-click the Name box at the bottom of the Add New Item window."
            },
            {
             "n": 16,
+            "x": 13.8,
+            "y": 89.8,
+            "w": 57.3,
+            "h": 3.1,
             "say": "Type `frmWelcome.cs`"
            },
            {
             "n": 17,
+            "x": 86.1,
+            "y": 96.5,
             "say": "Click **Add**."
            }
           ]
@@ -985,25 +1053,35 @@
          "do": "Click the **frmLogin.cs** tab, the one without [Design].",
          "see": "The code of frmLogin shows in the code editor.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c098.png",
           "alt": "frmLogin.cs, with the 2 fields typed under the class line",
-          "w": 800,
-          "h": 300,
+          "w": 1102,
+          "h": 318,
           "marks": [
            {
             "n": 1,
+            "x": 80.8,
+            "y": 3.5,
             "say": "Click the **frmLogin.cs** tab, the one without [Design]."
            },
            {
             "n": 2,
+            "x": 15.4,
+            "y": 81.5,
             "say": "Click at the end of the `{` under `public partial class frmLogin : Form`."
            },
            {
             "n": 3,
+            "x": 14.0,
+            "y": 86.5,
             "say": "Press Enter."
            },
            {
             "n": 4,
+            "x": 15.7,
+            "y": 83.1,
+            "w": 44.0,
+            "h": 12.3,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1096,21 +1174,29 @@
          "do": "Click at the end of the `}` that closes `frmLogin_Load`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c099.png",
           "alt": "frmLogin.cs, with the start of btnLogIn_Click typed under frmLogin_Load",
-          "w": 800,
-          "h": 400,
+          "w": 1102,
+          "h": 558,
           "marks": [
            {
             "n": 5,
+            "x": 18.0,
+            "y": 40.6,
             "say": "Click at the end of the `}` that closes `frmLogin_Load`."
            },
            {
             "n": 6,
+            "x": 16.6,
+            "y": 46.5,
             "say": "Press Enter twice."
            },
            {
             "n": 7,
+            "x": 15.7,
+            "y": 44.5,
+            "w": 42.8,
+            "h": 50.0,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1203,21 +1289,29 @@
          "do": "Click at the end of the `}` under the line `this.Show();`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c100.png",
           "alt": "btnLogIn_Click, with the 2 catch blocks typed after the try",
-          "w": 800,
-          "h": 400,
+          "w": 1102,
+          "h": 558,
           "marks": [
            {
             "n": 1,
+            "x": 20.6,
+            "y": 57.9,
             "say": "Click at the end of the `}` under the line `this.Show();`."
            },
            {
             "n": 2,
+            "x": 19.1,
+            "y": 60.7,
             "say": "Press Enter."
            },
            {
             "n": 3,
+            "x": 18.2,
+            "y": 58.8,
+            "w": 43.4,
+            "h": 35.7,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1301,33 +1395,49 @@
          "do": "Click at the end of the `}` that closes `btnLogIn_Click`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c101.png",
           "alt": "frmLogin.cs, with StartWait and tmrWait_Tick typed",
-          "w": 800,
-          "h": 450,
+          "w": 1102,
+          "h": 606,
           "marks": [
            {
             "n": 1,
+            "x": 18.0,
+            "y": 26.9,
             "say": "Click at the end of the `}` that closes `btnLogIn_Click`."
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 32.1,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 30.3,
+            "w": 44.0,
+            "h": 27.7,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 4,
+            "x": 18.0,
+            "y": 56.0,
             "say": "Click at the end of the `}` that closes `StartWait`."
            },
            {
             "n": 5,
+            "x": 16.6,
+            "y": 61.2,
             "say": "Press Enter twice."
            },
            {
             "n": 6,
+            "x": 15.7,
+            "y": 59.4,
+            "w": 39.6,
+            "h": 38.2,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1492,21 +1602,29 @@
          "do": "Click at the end of the `}` that closes `tmrWait_Tick`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c102.png",
           "alt": "frmLogin.cs, with lnkRegister_LinkClicked typed under tmrWait_Tick",
-          "w": 800,
-          "h": 400,
+          "w": 1102,
+          "h": 590,
           "marks": [
            {
             "n": 1,
+            "x": 18.0,
+            "y": 46.7,
             "say": "Click at the end of the `}` that closes `tmrWait_Tick`."
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 52.1,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 50.2,
+            "w": 43.4,
+            "h": 44.6,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1552,29 +1670,41 @@
          "do": "Click the **frmLogin.cs [Design]** tab at the top of the editor.",
          "see": "The designer shows frmLogin.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c103.png",
           "alt": "The Properties window showing the events of btnLogIn, with btnLogIn_Click beside Click",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 516,
           "marks": [
            {
             "n": 1,
+            "x": 72.5,
+            "y": 1.8,
             "say": "Click the **frmLogin.cs [Design]** tab at the top of the editor."
            },
            {
             "n": 2,
+            "x": 29.2,
+            "y": 70.6,
             "say": "Click the **Log in** button on frmLogin."
            },
            {
             "n": 3,
+            "x": 86.0,
+            "y": 59.2,
             "say": "Click the lightning bolt at the top of the Properties window."
            },
            {
             "n": 4,
+            "x": 98.2,
+            "y": 87.3,
             "say": "Click the box beside **Click**, then click the small arrow at the right end of the box."
            },
            {
             "n": 5,
+            "x": 89.1,
+            "y": 85.9,
+            "w": 8.5,
+            "h": 2.9,
             "say": "Click `btnLogIn_Click` in the list."
            }
           ]
@@ -1620,29 +1750,41 @@
          "do": "Click the **frmLogin.cs [Design]** tab at the top of the editor.",
          "see": "The designer shows frmLogin.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c104.png",
           "alt": "The Properties window showing the events of tmrWait, with tmrWait_Tick beside Tick",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 516,
           "marks": [
            {
             "n": 6,
+            "x": 72.5,
+            "y": 1.8,
             "say": "Click the **frmLogin.cs [Design]** tab at the top of the editor."
            },
            {
             "n": 7,
+            "x": 4.7,
+            "y": 91.2,
             "say": "Click **tmrWait** in the strip under the form on frmLogin."
            },
            {
             "n": 8,
+            "x": 86.0,
+            "y": 59.2,
             "say": "Click the lightning bolt at the top of the Properties window."
            },
            {
             "n": 9,
+            "x": 83.3,
+            "y": 61.6,
+            "w": 16.1,
+            "h": 2.7,
             "say": "Click the box beside **Tick**, then click the small arrow at the right end of the box."
            },
            {
             "n": 10,
+            "x": 91.1,
+            "y": 82.2,
             "say": "Click `tmrWait_Tick` in the list."
            }
           ]
@@ -1688,29 +1830,41 @@
          "do": "Click the **frmLogin.cs [Design]** tab at the top of the editor.",
          "see": "The designer shows frmLogin.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c105.png",
           "alt": "The Properties window showing the events of lnkRegister, with lnkRegister_LinkClicked beside LinkClicked",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 516,
           "marks": [
            {
             "n": 11,
+            "x": 72.5,
+            "y": 1.8,
             "say": "Click the **frmLogin.cs [Design]** tab at the top of the editor."
            },
            {
             "n": 12,
+            "x": 28.2,
+            "y": 78.6,
             "say": "Click **Register a new player** on frmLogin."
            },
            {
             "n": 13,
+            "x": 86.0,
+            "y": 59.2,
             "say": "Click the lightning bolt at the top of the Properties window."
            },
            {
             "n": 14,
+            "x": 83.3,
+            "y": 82.7,
+            "w": 15.4,
+            "h": 2.7,
             "say": "Click the box beside **LinkClicked**, then click the small arrow at the right end of the box."
            },
            {
             "n": 15,
+            "x": 92.4,
+            "y": 87.5,
             "say": "Click `lnkRegister_LinkClicked` in the list."
            }
           ]
@@ -1756,13 +1910,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 16,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]

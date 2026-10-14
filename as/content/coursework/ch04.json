@@ -263,34 +263,28 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c023.png",
           "alt": "The project menu, with Add pointed at and Class in the second menu",
-          "w": 640,
-          "h": 420,
+          "w": 959,
+          "h": 616,
           "marks": [
            {
             "n": 1,
+            "x": 73.0,
+            "y": 5.4,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 2,
+            "x": 39.6,
+            "y": 38.6,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 3,
+            "x": 6.2,
+            "y": 93.2,
             "say": "Click **Class...** at the bottom of the second menu."
-           },
-           {
-            "n": 4,
-            "say": "Triple-click the Name box at the bottom of the Add New Item window."
-           },
-           {
-            "n": 5,
-            "say": "Type `Exceptions.cs`"
-           },
-           {
-            "n": 6,
-            "say": "Click **Add**."
            }
           ]
          },
@@ -312,6 +306,32 @@
         {
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "img": "img/cap/c024.png",
+          "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
+          "w": 948,
+          "h": 660,
+          "marks": [
+           {
+            "n": 4,
+            "x": 16.9,
+            "y": 92.1,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "x": 42.2,
+            "y": 92.1,
+            "say": "Type `Exceptions.cs`"
+           },
+           {
+            "n": 6,
+            "x": 85.7,
+            "y": 96.5,
+            "say": "Click **Add**."
+           }
+          ]
+         },
          "id": "2-1.4",
          "n": 4
         },
@@ -331,25 +351,35 @@
          "do": "Drag from the start of `class Exceptions` down to the end of the `}` two lines below it, so your typing replaces them.",
          "see": "`class Exceptions` and its empty `{` and `}` turn blue. The last `}` in the file stays white, because it closes the namespace, the outer box that holds all your project's code.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c056.png",
           "alt": "Exceptions.cs, with SummitException and BlankFieldException typed",
-          "w": 800,
-          "h": 360,
+          "w": 1102,
+          "h": 679,
           "marks": [
            {
             "n": 7,
+            "x": 14.0,
+            "y": 26.3,
             "say": "Drag from the start of `class Exceptions` down to the end of the `}` two lines below it, so your typing replaces them."
            },
            {
             "n": 8,
+            "x": 13.1,
+            "y": 24.7,
+            "w": 47.2,
+            "h": 29.4,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 9,
+            "x": 5.0,
+            "y": 1.4,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 10,
+            "x": 6.4,
+            "y": 97.7,
             "say": "Press Ctrl, Shift and B together. This checks the whole project for mistakes."
            }
           ]
@@ -474,21 +504,29 @@
          "do": "Click at the end of the `}` that closes BlankFieldException.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c057.png",
           "alt": "Exceptions.cs, with the 7 exceptions for players pasted under BlankFieldException",
-          "w": 800,
-          "h": 450,
+          "w": 1102,
+          "h": 612,
           "marks": [
            {
             "n": 1,
+            "x": 15.4,
+            "y": 58.0,
             "say": "Click at the end of the `}` that closes BlankFieldException."
            },
            {
             "n": 2,
+            "x": 14.0,
+            "y": 63.2,
             "say": "Press Enter twice."
            },
            {
             "n": 4,
+            "x": 13.1,
+            "y": 61.4,
+            "w": 44.1,
+            "h": 37.8,
             "say": "Press Ctrl and V together."
            }
           ]
@@ -557,29 +595,41 @@
          "do": "Click at the end of the `}` that closes LoginFailedException.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c058.png",
           "alt": "Exceptions.cs, with the 3 exceptions for the games under LoginFailedException",
-          "w": 800,
-          "h": 360,
+          "w": 1102,
+          "h": 679,
           "marks": [
            {
             "n": 5,
+            "x": 15.4,
+            "y": 59.3,
             "say": "Click at the end of the `}` that closes LoginFailedException."
            },
            {
             "n": 6,
+            "x": 14.0,
+            "y": 64.0,
             "say": "Press Enter twice."
            },
            {
             "n": 8,
+            "x": 13.1,
+            "y": 62.3,
+            "w": 44.7,
+            "h": 27.0,
             "say": "Press Ctrl and V together."
            },
            {
             "n": 9,
+            "x": 5.0,
+            "y": 1.4,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 10,
+            "x": 6.4,
+            "y": 97.7,
             "say": "Press Ctrl, Shift and B together. This checks the whole project for mistakes."
            }
           ]
@@ -719,37 +769,55 @@
          "do": "Click the **Player.cs** tab at the top of the editor.",
          "see": "The code of Player shows.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c059.png",
           "alt": "Player.cs, with the rules typed into Username",
-          "w": 800,
-          "h": 450,
+          "w": 1102,
+          "h": 679,
           "marks": [
            {
             "n": 1,
+            "x": 35.8,
+            "y": 1.4,
             "say": "Click the **Player.cs** tab at the top of the editor."
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 14.6,
             "say": "Drag from the start of the comment above `public string Username` down to the end of the `}` that closes Username."
            },
            {
             "n": 4,
+            "x": 15.7,
+            "y": 13.0,
+            "w": 44.0,
+            "h": 59.8,
             "say": "Press Ctrl and V together."
            },
            {
             "n": 5,
+            "x": 21.7,
+            "y": 28.6,
             "say": "Triple-click the line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it."
            },
            {
             "n": 6,
+            "x": 20.8,
+            "y": 27.0,
+            "w": 38.9,
+            "h": 41.1,
             "say": "Type the yellow lines. Press Enter at the end of each line, but not after the last one."
            },
            {
             "n": 7,
+            "x": 39.9,
+            "y": 1.4,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 8,
+            "x": 6.4,
+            "y": 97.7,
             "say": "Press Ctrl, Shift and B together. This checks the whole project for mistakes."
            }
           ]
@@ -921,37 +989,55 @@
          "do": "Click the **Player.cs** tab at the top of the editor.",
          "see": "The code of Player shows.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c060.png",
           "alt": "Player.cs, with the rules typed into Password",
-          "w": 800,
-          "h": 450,
+          "w": 1102,
+          "h": 679,
           "marks": [
            {
             "n": 1,
+            "x": 35.8,
+            "y": 1.4,
             "say": "Click the **Player.cs** tab at the top of the editor."
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 9.9,
             "say": "Drag from the start of the comment above `public string Password` down to the end of the `}` that closes Password."
            },
            {
             "n": 4,
+            "x": 15.7,
+            "y": 8.3,
+            "w": 45.3,
+            "h": 81.1,
             "say": "Press Ctrl and V together."
            },
            {
             "n": 5,
+            "x": 21.7,
+            "y": 24.0,
             "say": "Triple-click the line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it."
            },
            {
             "n": 6,
+            "x": 20.8,
+            "y": 22.3,
+            "w": 40.2,
+            "h": 62.3,
             "say": "Type the yellow lines. Press Enter at the end of each line, but not after the last one."
            },
            {
             "n": 7,
+            "x": 39.9,
+            "y": 1.4,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 8,
+            "x": 6.4,
+            "y": 97.7,
             "say": "Press Ctrl, Shift and B together. This checks the whole project for mistakes."
            }
           ]
@@ -1049,37 +1135,55 @@
          "do": "Click the **Player.cs** tab at the top of the editor.",
          "see": "The code of Player shows.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c061.png",
           "alt": "Player.cs, with the rule typed into Avatar",
-          "w": 800,
-          "h": 450,
+          "w": 1102,
+          "h": 679,
           "marks": [
            {
             "n": 9,
+            "x": 35.8,
+            "y": 1.4,
             "say": "Click the **Player.cs** tab at the top of the editor."
            },
            {
             "n": 10,
+            "x": 16.6,
+            "y": 45.2,
             "say": "Drag from the start of the comment above `public string Avatar` down to the end of the `}` that closes Avatar."
            },
            {
             "n": 12,
+            "x": 15.7,
+            "y": 43.6,
+            "w": 40.9,
+            "h": 24.5,
             "say": "Press Ctrl and V together."
            },
            {
             "n": 13,
+            "x": 21.7,
+            "y": 59.3,
             "say": "Triple-click the line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it."
            },
            {
             "n": 14,
+            "x": 20.8,
+            "y": 57.7,
+            "w": 35.8,
+            "h": 5.8,
             "say": "Type the yellow lines. Press Enter at the end of each line, but not after the last one."
            },
            {
             "n": 15,
+            "x": 39.9,
+            "y": 1.4,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 16,
+            "x": 6.4,
+            "y": 97.7,
             "say": "Press Ctrl, Shift and B together. This checks the whole project for mistakes."
            }
           ]
@@ -1197,29 +1301,41 @@
          "do": "Click at the end of the `}` that closes Joined.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c062.png",
           "alt": "Player.cs, with CheckPasswordsMatch between Joined and ToString",
-          "w": 800,
-          "h": 360,
+          "w": 1102,
+          "h": 679,
           "marks": [
            {
             "n": 1,
+            "x": 18.0,
+            "y": 49.9,
             "say": "Click at the end of the `}` that closes Joined."
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 54.6,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 15.7,
+            "y": 53.0,
+            "w": 44.0,
+            "h": 22.3,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 4,
+            "x": 39.9,
+            "y": 1.4,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 5,
+            "x": 6.4,
+            "y": 97.7,
             "say": "Press Ctrl, Shift and B together. This checks the whole project for mistakes."
            }
           ]
@@ -1324,37 +1440,57 @@
          "do": "Click the **PlayerFile.cs** tab at the top of the editor.",
          "see": "The code of PlayerFile shows.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c063.png",
           "alt": "PlayerFile.cs, with rule 4 typed into Add",
-          "w": 800,
-          "h": 360,
+          "w": 1102,
+          "h": 679,
           "marks": [
            {
             "n": 1,
+            "x": 27.1,
+            "y": 1.4,
             "say": "Click the **PlayerFile.cs** tab at the top of the editor."
            },
            {
             "n": 2,
+            "x": 16.6,
+            "y": 59.3,
             "say": "Drag from the start of the comment above `public static void Add` down to the end of the `}` that closes Add."
            },
            {
             "n": 4,
+            "x": 15.7,
+            "y": 57.7,
+            "w": 45.3,
+            "h": 29.4,
             "say": "Press Ctrl and V together."
            },
            {
             "n": 5,
+            "x": 15.7,
+            "y": 57.7,
+            "w": 35.8,
+            "h": 3.4,
             "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, then type the yellow comment line."
            },
            {
             "n": 6,
+            "x": 18.2,
+            "y": 64.7,
+            "w": 32.0,
+            "h": 10.6,
             "say": "Triple-click the second line that starts with `// YOU TYPE THIS PART`, then type the other yellow lines."
            },
            {
             "n": 7,
+            "x": 31.3,
+            "y": 1.4,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 8,
+            "x": 6.4,
+            "y": 97.7,
             "say": "Press Ctrl, Shift and B together. This checks the whole project for mistakes."
            }
           ]
@@ -1502,29 +1638,43 @@
          "do": "Click the **frmLogin.cs** tab at the top of the editor.",
          "see": "The code of frmLogin shows.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c064.png",
           "alt": "btnTest_Click with try and catch typed",
-          "w": 800,
-          "h": 450,
+          "w": 1102,
+          "h": 575,
           "marks": [
            {
             "n": 1,
+            "x": 16.7,
+            "y": 1.7,
             "say": "Click the **frmLogin.cs** tab at the top of the editor."
            },
            {
             "n": 2,
+            "x": 18.2,
+            "y": 54.3,
+            "w": 31.3,
+            "h": 37.4,
             "say": "Drag from the start of the line under the `{` of btnTest_Click down to the end of the line above its `}`."
            },
            {
             "n": 3,
+            "x": 19.1,
+            "y": 56.2,
             "say": "Press Delete."
            },
            {
             "n": 4,
+            "x": 18.2,
+            "y": 54.3,
+            "w": 31.3,
+            "h": 37.4,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 5,
+            "x": 21.0,
+            "y": 1.7,
             "say": "Press Ctrl and S together."
            }
           ]
@@ -1570,21 +1720,27 @@
          "do": "Press F5, then click **Test**.",
          "see": "A box with the title **Rule broken** says **Your username has 2 characters. It needs 3 to 12.**",
          "img": {
-          "missing": true,
+          "img": "img/cap/c065.png",
           "alt": "The Rule broken message for a username of 2 characters",
-          "w": 640,
-          "h": 240,
+          "w": 1001,
+          "h": 691,
           "marks": [
            {
             "n": 6,
+            "x": 65.9,
+            "y": 37.7,
             "say": "Press F5, then click **Test**."
            },
            {
             "n": 7,
+            "x": 60.0,
+            "y": 61.1,
             "say": "Click **OK** on the **Rule broken** box."
            },
            {
             "n": 8,
+            "x": 97.6,
+            "y": 2.1,
             "say": "Close the Summit Ready - Log in window."
            }
           ]
@@ -1708,17 +1864,21 @@
          "do": "Click the **frmLogin.cs [Design]** tab at the top of the editor.",
          "see": "The designer shows frmLogin.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c066.png",
           "alt": "frmLogin in the designer, with the Test button picked",
-          "w": 800,
-          "h": 450,
+          "w": 1537,
+          "h": 626,
           "marks": [
            {
             "n": 1,
+            "x": 51.8,
+            "y": 2.0,
             "say": "Click the **frmLogin.cs [Design]** tab at the top of the editor."
            },
            {
             "n": 2,
+            "x": 46.5,
+            "y": 47.9,
             "say": "Click the Test button on frmLogin, then press Delete."
            }
           ]
@@ -1736,29 +1896,41 @@
          "do": "Click the **frmLogin.cs** tab, the one without [Design].",
          "see": "The code of frmLogin shows.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c067.png",
           "alt": "frmLogin.cs with btnTest_Click deleted, and the 3 menu methods still there",
-          "w": 800,
-          "h": 360,
+          "w": 1102,
+          "h": 679,
           "marks": [
            {
             "n": 3,
+            "x": 16.7,
+            "y": 1.4,
             "say": "Click the **frmLogin.cs** tab, the one without [Design]."
            },
            {
             "n": 4,
+            "x": 15.6,
+            "y": 79.3,
+            "w": 46.7,
+            "h": 2.5,
             "say": "Drag from the start of `private void btnTest_Click` down to the end of the `}` that closes it."
            },
            {
             "n": 5,
+            "x": 16.2,
+            "y": 80.5,
             "say": "Press Delete."
            },
            {
             "n": 6,
+            "x": 21.0,
+            "y": 1.4,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 7,
+            "x": 6.4,
+            "y": 97.7,
             "say": "Press Ctrl, Shift and B together. This checks the whole project for mistakes."
            }
           ]

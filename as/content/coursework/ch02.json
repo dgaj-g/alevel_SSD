@@ -269,25 +269,33 @@
          "do": "Press the Windows key and the E key together.",
          "see": "File Explorer opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c002.png",
           "alt": "File Explorer, with the View tab open and the File name extensions box ticked",
-          "w": 800,
-          "h": 300,
+          "w": 1568,
+          "h": 312,
           "marks": [
            {
             "n": 1,
+            "x": 19.9,
+            "y": 3.0,
             "say": "Press the Windows key and the E key together."
            },
            {
             "n": 2,
+            "x": 10.4,
+            "y": 9.0,
             "say": "Click **View** in the bar along the top of File Explorer."
            },
            {
             "n": 3,
+            "x": 38.1,
+            "y": 22.0,
             "say": "Click the box beside **File name extensions**, so that it shows a tick."
            },
            {
             "n": 4,
+            "x": 98.7,
+            "y": 2.7,
             "say": "Click the cross at the top right of File Explorer."
            }
           ]
@@ -339,21 +347,27 @@
          "do": "Press the Windows key.",
          "see": "The Start menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c003.png",
           "alt": "The Start menu, with Visual Studio 2019 at the top of the list",
-          "w": 640,
-          "h": 480,
+          "w": 396,
+          "h": 681,
           "marks": [
            {
             "n": 1,
+            "x": 5.8,
+            "y": 97.0,
             "say": "Press the Windows key."
            },
            {
             "n": 2,
+            "x": 54.5,
+            "y": 97.0,
             "say": "Type `Visual Studio 2019`"
            },
            {
             "n": 3,
+            "x": 41.7,
+            "y": 16.8,
             "say": "Press Enter."
            }
           ]
@@ -377,25 +391,33 @@
          "do": "Click **Create a new project**.",
          "see": "The Create a new project window opens, with a search box at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c004.png",
           "alt": "The Create a new project window, with Windows Forms App (.NET Framework) picked",
-          "w": 800,
-          "h": 450,
+          "w": 1026,
+          "h": 682,
           "marks": [
            {
             "n": 4,
+            "x": 14.6,
+            "y": 9.7,
             "say": "Click **Create a new project**."
            },
            {
             "n": 5,
+            "x": 44.6,
+            "y": 10.6,
             "say": "Click the search box at the top of the window."
            },
            {
             "n": 6,
+            "x": 55.4,
+            "y": 10.6,
             "say": "Type `Windows Forms App`"
            },
            {
             "n": 7,
+            "x": 57.7,
+            "y": 37.1,
             "say": "Click **Windows Forms App (.NET Framework)**, the one with **C#** under its name."
            }
           ]
@@ -431,29 +453,39 @@
          "do": "Click **Next**.",
          "see": "The Configure your new project window opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c005.png",
           "alt": "The Configure your new project window, with the Project name box and the Framework box",
-          "w": 800,
-          "h": 450,
+          "w": 1026,
+          "h": 682,
           "marks": [
            {
             "n": 8,
+            "x": 90.6,
+            "y": 91.4,
             "say": "Click **Next**."
            },
            {
             "n": 9,
+            "x": 20.8,
+            "y": 28.7,
             "say": "Triple-click the Project name box."
            },
            {
             "n": 10,
+            "x": 10.9,
+            "y": 28.7,
             "say": "Type `SummitReady`"
            },
            {
             "n": 11,
+            "x": 57.8,
+            "y": 66.5,
             "say": "Click the arrow at the right of the Framework box."
            },
            {
             "n": 12,
+            "x": 12.1,
+            "y": 66.5,
             "say": "Click **.NET Framework 4.7.2**."
            }
           ]
@@ -495,13 +527,15 @@
          "do": "Click **Create**.",
          "see": "After a few seconds, your project opens. The designer in the middle shows an empty form called Form1.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c006.png",
           "alt": "Visual Studio 2019 with the new project open: the designer, Solution Explorer and the Properties window",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 757,
           "marks": [
            {
             "n": 13,
+            "x": 23.6,
+            "y": 38.4,
             "say": "Click **Create**."
            }
           ]
@@ -535,21 +569,27 @@
          "do": "Right-click `Form1.cs` in Solution Explorer.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c007.png",
           "alt": "Solution Explorer, with the menu that opens on Form1.cs and Rename in it",
-          "w": 360,
-          "h": 420,
+          "w": 561,
+          "h": 495,
           "marks": [
            {
             "n": 1,
+            "x": 53.4,
+            "y": 21.3,
             "say": "Right-click `Form1.cs` in Solution Explorer."
            },
            {
             "n": 2,
+            "x": 12.4,
+            "y": 83.8,
             "say": "Click **Rename** in the menu."
            },
            {
             "n": 3,
+            "x": 48.6,
+            "y": 21.3,
             "say": "Type `frmLogin`"
            }
           ]
@@ -573,17 +613,21 @@
          "do": "Press Enter.",
          "see": "A message asks whether to change the name Form1 everywhere in your code.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c008.png",
           "alt": "The message that asks whether to rename all references to Form1, with its Yes button",
-          "w": 640,
-          "h": 240,
+          "w": 425,
+          "h": 178,
           "marks": [
            {
             "n": 4,
+            "x": 10.4,
+            "y": 42.1,
             "say": "Press Enter."
            },
            {
             "n": 5,
+            "x": 63.9,
+            "y": 81.4,
             "say": "Click **Yes**."
            }
           ]
@@ -607,13 +651,15 @@
          "do": "Click the title bar of the form in the designer.",
          "see": "The Properties window shows frmLogin at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c009.png",
           "alt": "The designer with frmLogin picked, and the Font box in the Properties window",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 757,
           "marks": [
            {
             "n": 6,
+            "x": 19.8,
+            "y": 13.7,
             "say": "Click the title bar of the form in the designer."
            }
           ]
@@ -624,16 +670,16 @@
        ]
       },
       {
-       "p": "Now set the form's settings in the Properties window, using the table below. Set **Font** first, because changing Font later makes Visual Studio 2019 resize the form."
+       "p": "Now set the form's settings in the Properties window, using the table below. Set **Font** first, because changing Font later makes Visual Studio 2019 resize the form. Set **FormBorderStyle** before **Size** for the same reason."
       },
       {
        "controls": {
         "props": [
          "Font = Segoe UI, 11pt",
          "Text = Summit Ready - Log in",
-         "ClientSize = 1000, 660",
          "StartPosition = CenterScreen",
          "FormBorderStyle = FixedSingle",
+         "Size = 1016, 699",
          "MaximizeBox = False",
          "BackColor = 243, 245, 242"
         ]
@@ -679,13 +725,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 1,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -697,17 +745,21 @@
          "do": "Press F5.",
          "see": "Your program runs. An empty window opens in the middle of the screen, with **Summit Ready - Log in** in its title bar.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c011.png",
           "alt": "The empty frmLogin window running, with Summit Ready - Log in in its title bar",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 757,
           "marks": [
            {
             "n": 2,
+            "x": 26.1,
+            "y": 5.1,
             "say": "Press F5."
            },
            {
             "n": 3,
+            "x": 74.8,
+            "y": 14.8,
             "say": "Click the cross at the top right of the Summit Ready - Log in window."
            }
           ]
@@ -764,25 +816,41 @@
          "do": "Press the Windows key and the E key together.",
          "see": "File Explorer opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c012.png",
           "alt": "File Explorer open on Downloads, with the menu that opens on summit-ready-files.zip",
-          "w": 800,
-          "h": 450,
+          "w": 818,
+          "h": 565,
           "marks": [
            {
             "n": 2,
+            "x": 0.2,
+            "y": 0.4,
+            "w": 78.0,
+            "h": 10.8,
             "say": "Press the Windows key and the E key together."
            },
            {
             "n": 3,
+            "x": 2.9,
+            "y": 21.2,
+            "w": 12.5,
+            "h": 3.2,
             "say": "Click **Downloads** in the list down the left side of File Explorer."
            },
            {
             "n": 4,
+            "x": 17.5,
+            "y": 20.5,
+            "w": 59.5,
+            "h": 3.0,
             "say": "Right-click `summit-ready-files.zip`."
            },
            {
             "n": 5,
+            "x": 36.2,
+            "y": 36.6,
+            "w": 26.8,
+            "h": 3.0,
             "say": "Click **Extract All...** in the menu."
            }
           ]
@@ -824,13 +892,17 @@
          "do": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window.",
          "see": "A new File Explorer window opens. It shows 3 folders, Data, Images and Sounds, and one file, `credits.txt`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c013.png",
           "alt": "The Extract Compressed (Zipped) Folders window, with its Extract button",
-          "w": 640,
-          "h": 480,
+          "w": 622,
+          "h": 470,
           "marks": [
            {
             "n": 6,
+            "x": 68.5,
+            "y": 81.3,
+            "w": 10.0,
+            "h": 4.7,
             "say": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window."
            }
           ]
@@ -842,17 +914,25 @@
          "do": "Press Ctrl and A together, to pick every folder and file in this window.",
          "see": "The 3 folders and `credits.txt` turn blue.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c014.png",
           "alt": "The unpacked folder, with Data, Images, Sounds and credits.txt highlighted",
-          "w": 800,
-          "h": 360,
+          "w": 920,
+          "h": 486,
           "marks": [
            {
             "n": 7,
+            "x": 15.7,
+            "y": 36.0,
+            "w": 53.0,
+            "h": 14.0,
             "say": "Press Ctrl and A together, to pick every folder and file in this window."
            },
            {
             "n": 8,
+            "x": 6.7,
+            "y": 10.3,
+            "w": 3.5,
+            "h": 10.7,
             "say": "Press Ctrl and C together."
            }
           ]
@@ -870,13 +950,15 @@
          "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
          "see": "Visual Studio 2019 comes to the front, with your project open.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c015.png",
           "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
-          "w": 800,
-          "h": 60,
+          "w": 960,
+          "h": 41,
           "marks": [
            {
             "n": 9,
+            "x": 63.9,
+            "y": 50.0,
             "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
            }
           ]
@@ -888,17 +970,21 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c016.png",
           "alt": "Solution Explorer, with the menu that opens on the project line",
-          "w": 360,
-          "h": 420,
+          "w": 635,
+          "h": 616,
           "marks": [
            {
             "n": 10,
+            "x": 59.8,
+            "y": 5.4,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 11,
+            "x": 18.8,
+            "y": 89.1,
             "say": "Click **Open Folder in File Explorer**, near the bottom of the menu."
            }
           ]
@@ -916,13 +1002,15 @@
          "do": "Double-click the **bin** folder.",
          "see": "The bin folder holds a folder called Debug.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c017.png",
           "alt": "File Explorer on the project folder, with the bin folder",
-          "w": 640,
-          "h": 300,
+          "w": 960,
+          "h": 279,
           "marks": [
            {
             "n": 12,
+            "x": 21.3,
+            "y": 27.7,
             "say": "Double-click the **bin** folder."
            }
           ]
@@ -934,13 +1022,15 @@
          "do": "Double-click the **Debug** folder.",
          "see": "The Debug folder holds your program, `SummitReady.exe`, and 2 or 3 other files that Visual Studio 2019 made.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c018.png",
           "alt": "File Explorer on the bin folder, with the Debug folder",
-          "w": 640,
-          "h": 300,
+          "w": 960,
+          "h": 279,
           "marks": [
            {
             "n": 13,
+            "x": 22.4,
+            "y": 27.7,
             "say": "Double-click the **Debug** folder."
            }
           ]
@@ -958,13 +1048,17 @@
          "do": "Press Ctrl and V together.",
          "see": "The Data, Images and Sounds folders and `credits.txt` appear in the Debug folder, beside `SummitReady.exe`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c019.png",
           "alt": "The Debug folder after the paste, with Data, Images, Sounds and credits.txt beside SummitReady.exe",
-          "w": 800,
-          "h": 360,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 14,
+            "x": 15.5,
+            "y": 35.7,
+            "w": 60.5,
+            "h": 13.9,
             "say": "Press Ctrl and V together."
            }
           ]
@@ -1001,17 +1095,21 @@
          "do": "Double-click the **Data** folder.",
          "see": "The Data folder holds 9 text files, such as `players.txt`, `knots.txt` and `words.txt`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c020.png",
           "alt": "The Data folder, with its 9 text files",
-          "w": 640,
-          "h": 360,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 1,
+            "x": 67.7,
+            "y": 27.2,
             "say": "Double-click the **Data** folder."
            },
            {
             "n": 2,
+            "x": 1.6,
+            "y": 27.2,
             "say": "Click the back arrow at the top left of File Explorer."
            }
           ]
@@ -1029,17 +1127,21 @@
          "do": "Double-click the **Images** folder.",
          "see": "The Images folder holds 9 folders, such as Avatars, Icons and Knots, and 3 pictures.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c021.png",
           "alt": "The Images folder, with its 9 folders and 3 pictures",
-          "w": 640,
-          "h": 360,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 3,
+            "x": 68.3,
+            "y": 27.2,
             "say": "Double-click the **Images** folder."
            },
            {
             "n": 4,
+            "x": 1.6,
+            "y": 27.2,
             "say": "Click the back arrow at the top left of File Explorer."
            }
           ]
@@ -1057,17 +1159,21 @@
          "do": "Double-click the **Sounds** folder.",
          "see": "The Sounds folder holds 26 sounds, such as `click.wav`, `correct.wav` and `curlew.wav`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c022.png",
           "alt": "The Sounds folder, with its 26 .wav files",
-          "w": 640,
-          "h": 360,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 5,
+            "x": 68.4,
+            "y": 27.2,
             "say": "Double-click the **Sounds** folder."
            },
            {
             "n": 6,
+            "x": 1.6,
+            "y": 27.2,
             "say": "Click the back arrow at the top left of File Explorer."
            }
           ]
@@ -1160,21 +1266,27 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c023.png",
           "alt": "The project menu, with Add pointed at and Class in the second menu",
-          "w": 640,
-          "h": 420,
+          "w": 959,
+          "h": 616,
           "marks": [
            {
             "n": 1,
+            "x": 73.0,
+            "y": 5.4,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 2,
+            "x": 39.6,
+            "y": 38.6,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 3,
+            "x": 6.2,
+            "y": 93.2,
             "say": "Click **Class...** at the bottom of the second menu."
            }
           ]
@@ -1198,21 +1310,27 @@
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Class1.cs` turns blue, so what you type next replaces it.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c024.png",
           "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
-          "w": 800,
-          "h": 450,
+          "w": 948,
+          "h": 660,
           "marks": [
            {
             "n": 4,
+            "x": 16.9,
+            "y": 92.1,
             "say": "Triple-click the Name box at the bottom of the Add New Item window."
            },
            {
             "n": 5,
+            "x": 42.2,
+            "y": 92.1,
             "say": "Type `Files.cs`"
            },
            {
             "n": 6,
+            "x": 85.7,
+            "y": 96.5,
             "say": "Click **Add**."
            }
           ]
@@ -1236,21 +1354,29 @@
          "do": "Click at the end of the line `using System.Threading.Tasks;`",
          "see": "The flashing cursor is after the semicolon.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c025.png",
           "alt": "Files.cs as Visual Studio 2019 makes it, with the new using lines added",
-          "w": 800,
-          "h": 300,
+          "w": 965,
+          "h": 355,
           "marks": [
            {
             "n": 7,
+            "x": 33.8,
+            "y": 35.0,
             "say": "Click at the end of the line `using System.Threading.Tasks;`"
            },
            {
             "n": 8,
+            "x": 12.8,
+            "y": 39.3,
             "say": "Press Enter."
            },
            {
             "n": 9,
+            "x": 11.8,
+            "y": 37.1,
+            "w": 21.1,
+            "h": 11.4,
             "say": "Type the 3 yellow lines. Press Enter at the end of each line, but not after the last one."
            }
           ]
@@ -1362,17 +1488,23 @@
          "do": "Drag from the start of `class Files` down to the end of the `}` two lines below it.",
          "see": "`class Files` and its empty `{` and `}` turn blue. The last `}` in the file stays white. It closes the namespace, the group that holds your classes, so keep it.",
          "img": {
-          "missing": true,
-          "alt": "Files.cs, with class Files and its empty braces highlighted",
-          "w": 800,
-          "h": 300,
+          "img": "img/cap/c530.png",
+          "alt": "Files.cs, with a box round class Files and its empty braces",
+          "w": 965,
+          "h": 355,
           "marks": [
            {
             "n": 10,
+            "x": 15.7,
+            "y": 70.0,
             "say": "Drag from the start of `class Files` down to the end of the `}` two lines below it."
            },
            {
             "n": 11,
+            "x": 14.7,
+            "y": 67.1,
+            "w": 10.3,
+            "h": 14.3,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1400,17 +1532,21 @@
          "do": "Press Ctrl and S together.",
          "see": "The star after `Files.cs` on the tab at the top of the code editor disappears.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c027.png",
           "alt": "The Files.cs tab with no star, and Build succeeded in the bottom left corner",
-          "w": 800,
-          "h": 200,
+          "w": 1568,
+          "h": 609,
           "marks": [
            {
             "n": 12,
+            "x": 2.9,
+            "y": 10.3,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 13,
+            "x": 3.7,
+            "y": 97.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -1472,21 +1608,27 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c023.png",
           "alt": "The project menu, with Add pointed at and Class in the second menu",
-          "w": 640,
-          "h": 420,
+          "w": 959,
+          "h": 616,
           "marks": [
            {
             "n": 1,
+            "x": 73.0,
+            "y": 5.4,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 2,
+            "x": 39.6,
+            "y": 38.6,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 3,
+            "x": 6.2,
+            "y": 93.2,
             "say": "Click **Class...** at the bottom of the second menu."
            }
           ]
@@ -1510,21 +1652,27 @@
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Class1.cs` turns blue, so what you type next replaces it.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c024.png",
           "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
-          "w": 800,
-          "h": 450,
+          "w": 948,
+          "h": 660,
           "marks": [
            {
             "n": 4,
+            "x": 16.9,
+            "y": 92.1,
             "say": "Triple-click the Name box at the bottom of the Add New Item window."
            },
            {
             "n": 5,
+            "x": 42.2,
+            "y": 92.1,
             "say": "Type `Sound.cs`"
            },
            {
             "n": 6,
+            "x": 85.7,
+            "y": 96.5,
             "say": "Click **Add**."
            }
           ]
@@ -1548,21 +1696,29 @@
          "do": "Click at the end of the line `using System.Threading.Tasks;`",
          "see": "The flashing cursor is after the semicolon.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c028.png",
           "alt": "Sound.cs as Visual Studio 2019 makes it, with the new using lines added",
-          "w": 800,
-          "h": 300,
+          "w": 960,
+          "h": 306,
           "marks": [
            {
             "n": 7,
+            "x": 33.9,
+            "y": 38.0,
             "say": "Click at the end of the line `using System.Threading.Tasks;`"
            },
            {
             "n": 8,
+            "x": 12.8,
+            "y": 43.2,
             "say": "Press Enter."
            },
            {
             "n": 9,
+            "x": 12.2,
+            "y": 40.4,
+            "w": 14.8,
+            "h": 10.8,
             "say": "Type the 2 yellow lines. Press Enter at the end of the first line only."
            }
           ]
@@ -1671,17 +1827,23 @@
          "do": "Drag from the start of `class Sound` down to the end of the `}` two lines below it.",
          "see": "`class Sound` and its empty `{` and `}` turn blue. The last `}` in the file stays white. It closes the namespace, the group that holds your classes, so keep it.",
          "img": {
-          "missing": true,
-          "alt": "Sound.cs, with class Sound and its empty braces highlighted",
-          "w": 800,
-          "h": 300,
+          "img": "img/cap/c531.png",
+          "alt": "Sound.cs, with a box round class Sound and its empty braces",
+          "w": 960,
+          "h": 306,
           "marks": [
            {
             "n": 10,
+            "x": 15.8,
+            "y": 73.6,
             "say": "Drag from the start of `class Sound` down to the end of the `}` two lines below it."
            },
            {
             "n": 11,
+            "x": 15.1,
+            "y": 70.4,
+            "w": 9.8,
+            "h": 16.8,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1709,17 +1871,21 @@
          "do": "Press Ctrl and S together.",
          "see": "The star after `Sound.cs` on the tab at the top of the code editor disappears.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c030.png",
           "alt": "The Sound.cs tab with no star, and Build succeeded in the bottom left corner",
-          "w": 800,
-          "h": 200,
+          "w": 1568,
+          "h": 609,
           "marks": [
            {
             "n": 12,
+            "x": 2.9,
+            "y": 10.3,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 13,
+            "x": 3.7,
+            "y": 97.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -1759,21 +1925,27 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c023.png",
           "alt": "The project menu, with Add pointed at and Class in the second menu",
-          "w": 640,
-          "h": 420,
+          "w": 959,
+          "h": 616,
           "marks": [
            {
             "n": 1,
+            "x": 73.0,
+            "y": 5.4,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 2,
+            "x": 39.6,
+            "y": 38.6,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 3,
+            "x": 6.2,
+            "y": 93.2,
             "say": "Click **Class...** at the bottom of the second menu."
            }
           ]
@@ -1797,21 +1969,27 @@
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Class1.cs` turns blue, so what you type next replaces it.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c024.png",
           "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
-          "w": 800,
-          "h": 450,
+          "w": 948,
+          "h": 660,
           "marks": [
            {
             "n": 4,
+            "x": 16.9,
+            "y": 92.1,
             "say": "Triple-click the Name box at the bottom of the Add New Item window."
            },
            {
             "n": 5,
+            "x": 42.2,
+            "y": 92.1,
             "say": "Type `Mix.cs`"
            },
            {
             "n": 6,
+            "x": 85.7,
+            "y": 96.5,
             "say": "Click **Add**."
            }
           ]
@@ -1935,17 +2113,23 @@
          "do": "Drag from the start of `class Mix` down to the end of the `{` under it.",
          "see": "`class Mix` and the `{` under it turn blue. The 2 `}` under them stay white. The first closes the class. The last closes the namespace, the group that holds your classes.",
          "img": {
-          "missing": true,
-          "alt": "Mix.cs, with class Mix and the { under it highlighted",
-          "w": 800,
-          "h": 300,
+          "img": "img/cap/c532.png",
+          "alt": "Mix.cs, with a box round class Mix and the { under it",
+          "w": 960,
+          "h": 306,
           "marks": [
            {
             "n": 7,
+            "x": 15.8,
+            "y": 62.8,
             "say": "Drag from the start of `class Mix` down to the end of the `{` under it."
            },
            {
             "n": 8,
+            "x": 14.8,
+            "y": 59.2,
+            "w": 8.7,
+            "h": 12.0,
             "say": "Type the yellow lines from the code above."
            }
           ]
@@ -1973,17 +2157,21 @@
          "do": "Press Ctrl and S together.",
          "see": "The star after `Mix.cs` on the tab at the top of the code editor disappears.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c032.png",
           "alt": "The Mix.cs tab with no star, and Build succeeded in the bottom left corner",
-          "w": 800,
-          "h": 200,
+          "w": 1568,
+          "h": 609,
           "marks": [
            {
             "n": 9,
+            "x": 2.9,
+            "y": 10.3,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 10,
+            "x": 3.7,
+            "y": 97.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -2068,29 +2256,41 @@
          "do": "Click at the end of the `}` that closes `ShuffledNumbers`.",
          "see": "The flashing cursor is after the `}`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c033.png",
           "alt": "Mix.cs, with Ordinal typed under ShuffledNumbers",
-          "w": 800,
-          "h": 360,
+          "w": 1568,
+          "h": 609,
           "marks": [
            {
             "n": 1,
+            "x": 9.8,
+            "y": 32.8,
             "say": "Click at the end of the `}` that closes `ShuffledNumbers`."
            },
            {
             "n": 2,
+            "x": 9.6,
+            "y": 34.9,
             "say": "Press Enter twice."
            },
            {
             "n": 3,
+            "x": 8.9,
+            "y": 35.7,
+            "w": 17.9,
+            "h": 25.6,
             "say": "Type the yellow lines from the code above."
            },
            {
             "n": 4,
+            "x": 2.9,
+            "y": 10.3,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 5,
+            "x": 3.7,
+            "y": 97.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -2161,21 +2361,27 @@
          "do": "Click the **frmLogin.cs [Design]** tab at the top of the editor.",
          "see": "The designer shows frmLogin.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c034.png",
           "alt": "The Toolbox, with MenuStrip in the Menus & Toolbars group",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 609,
           "marks": [
            {
             "n": 1,
+            "x": 19.1,
+            "y": 10.3,
             "say": "Click the **frmLogin.cs [Design]** tab at the top of the editor."
            },
            {
             "n": 2,
+            "x": 0.8,
+            "y": 12.6,
             "say": "Click **Toolbox** on the left edge of Visual Studio 2019."
            },
            {
             "n": 3,
+            "x": 5.4,
+            "y": 32.3,
             "say": "Double-click **MenuStrip** in the Menus & Toolbars group."
            }
           ]
@@ -2205,21 +2411,27 @@
          "do": "Click **menuStrip1** in the grey strip under the form.",
          "see": "The Properties window shows menuStrip1 at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c035.png",
           "alt": "menuStrip1 picked, with the (Name) box in the Properties window",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 609,
           "marks": [
            {
             "n": 4,
+            "x": 5.4,
+            "y": 61.0,
             "say": "Click **menuStrip1** in the grey strip under the form."
            },
            {
             "n": 5,
+            "x": 90.9,
+            "y": 68.4,
             "say": "Triple-click the box beside **(Name)**, at the top of the Properties window."
            },
            {
             "n": 6,
+            "x": 93.8,
+            "y": 68.4,
             "say": "Type `mnuMain`, then press Enter."
            }
           ]
@@ -2267,21 +2479,27 @@
          "do": "Click **Type Here** on the menu bar.",
          "see": "The box turns into a place to type.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c036.png",
           "alt": "The menu bar with File typed, and the Type Here boxes beside it and under it",
-          "w": 800,
-          "h": 300,
+          "w": 1568,
+          "h": 609,
           "marks": [
            {
             "n": 7,
+            "x": 3.8,
+            "y": 19.5,
             "say": "Click **Type Here** on the menu bar."
            },
            {
             "n": 8,
+            "x": 4.2,
+            "y": 19.5,
             "say": "Type `File`, then press Enter."
            },
            {
             "n": 9,
+            "x": 8.0,
+            "y": 22.5,
             "say": "Type `Exit`, then press Enter."
            }
           ]
@@ -2305,25 +2523,33 @@
          "do": "Click the **Type Here** box to the right of File.",
          "see": "The box turns into a place to type.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c037.png",
           "alt": "The menu bar with Help open, and How to play and About Summit Ready under it",
-          "w": 800,
-          "h": 300,
+          "w": 1568,
+          "h": 609,
           "marks": [
            {
             "n": 10,
+            "x": 5.9,
+            "y": 19.5,
             "say": "Click the **Type Here** box to the right of File."
            },
            {
             "n": 11,
+            "x": 6.4,
+            "y": 19.5,
             "say": "Type `Help`, then press Enter."
            },
            {
             "n": 12,
+            "x": 8.6,
+            "y": 22.5,
             "say": "Type `How to play`, then press Enter."
            },
            {
             "n": 13,
+            "x": 9.9,
+            "y": 25.4,
             "say": "Type `About Summit Ready`, then press Enter."
            }
           ]
@@ -2425,33 +2651,45 @@
          "do": "Click **File** on the menu bar of frmLogin, then double-click **Exit**.",
          "see": "The code editor opens `frmLogin.cs`, with a new empty method called `mnuExit_Click`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c038.png",
           "alt": "frmLogin.cs, with the comment and the yellow line typed in mnuExit_Click",
-          "w": 800,
-          "h": 300,
+          "w": 960,
+          "h": 306,
           "marks": [
            {
             "n": 1,
+            "x": 25.5,
+            "y": 57.2,
             "say": "Click **File** on the menu bar of frmLogin, then double-click **Exit**."
            },
            {
             "n": 2,
+            "x": 18.9,
+            "y": 57.2,
             "say": "Click on the line `private void mnuExit_Click(object sender, EventArgs e)`, then press Home."
            },
            {
             "n": 3,
+            "x": 18.9,
+            "y": 51.6,
             "say": "Press Enter, then press the Up arrow key."
            },
            {
             "n": 4,
+            "x": 25.5,
+            "y": 51.6,
             "say": "Type the yellow comment line `// File, then Exit`"
            },
            {
             "n": 5,
+            "x": 19.4,
+            "y": 62.8,
             "say": "Click at the end of the `{` under `private void mnuExit_Click`."
            },
            {
             "n": 6,
+            "x": 27.0,
+            "y": 67.6,
             "say": "Press Enter, then type the yellow line `Application.Exit();`"
            }
           ]
@@ -2564,33 +2802,49 @@
          "do": "Click the **frmLogin.cs [Design]** tab, click **Help**, then double-click **How to play**.",
          "see": "The code editor shows a new empty method called `mnuHow_Click`, under mnuExit_Click.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c039.png",
           "alt": "frmLogin.cs, with mnuHow_Click and mnuAbout_Click typed",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 609,
           "marks": [
            {
             "n": 7,
+            "x": 24.0,
+            "y": 10.3,
             "say": "Click the **frmLogin.cs [Design]** tab, click **Help**, then double-click **How to play**."
            },
            {
             "n": 8,
+            "x": 8.9,
+            "y": 19.3,
+            "w": 25.8,
+            "h": 17.4,
             "say": "Type the comment above `mnuHow_Click`, and the yellow lines inside it, the same way as for Exit."
            },
            {
             "n": 9,
+            "x": 24.9,
+            "y": 10.3,
             "say": "Click the **frmLogin.cs [Design]** tab, click **Help**, then double-click **About Summit Ready**."
            },
            {
             "n": 10,
+            "x": 8.9,
+            "y": 40.8,
+            "w": 25.8,
+            "h": 17.4,
             "say": "Type the comment above `mnuAbout_Click`, and the yellow lines inside it."
            },
            {
             "n": 11,
+            "x": 3.5,
+            "y": 10.3,
             "say": "Press Ctrl and S together."
            },
            {
             "n": 12,
+            "x": 3.7,
+            "y": 97.9,
             "say": "Press Ctrl, Shift and B together, to check your code has no mistakes."
            }
           ]
