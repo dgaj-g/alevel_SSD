@@ -2744,7 +2744,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The yellow lines are inside frmSky_Load. `ShowQuestion` has a red underline. This is normal, because you have not written ShowQuestion yet.",
          "id": "4-5.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -2890,6 +2896,12 @@
         {
          "do": "Type the first group of yellow lines, from `// Puts question number on the screen` down to `answers[i].Text = q.Answers[mixed[i]];`. Press Enter at the end of each line.",
          "see": "The first group of yellow lines is where the first `// YOU TYPE THIS PART` line was.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ]
+         ],
          "id": "4-6.6",
          "n": 6
         },
@@ -2902,6 +2914,12 @@
         {
          "do": "Type the second group of yellow lines, from `answered = false;` down to the `}` that closes ShowQuestion.",
          "see": "The red underline under `ShowQuestion` in frmSky_Load has gone.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ]
+         ],
          "id": "4-6.8",
          "n": 8
         }
@@ -3032,7 +3050,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "`Answer` has a red underline. This is normal, because you have not written Answer yet.",
          "id": "4-7.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3135,9 +3159,15 @@
         },
         {
          "do": "Type the yellow lines from the code above.",
-         "see": "The first part of Answer is under Answer_Click. `FirstLower` has a red underline. Answer has no `}` at its end yet, so more red underlines show further down. This is normal.",
+         "see": "The first part of Answer is under Answer_Click. `FirstLower` has a red underline. Visual Studio 2019 added the `}` that closes Answer when you typed its `{`. The second part goes above that `}`.",
          "id": "4-8.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ]
+         ]
         }
        ]
       },
@@ -3253,6 +3283,12 @@
         {
          "do": "Type the first group of yellow lines, from `if (picked != -1 && answerOf[picked] == q.Right)` down to the first `+ best + \". \" + q.Explanation;`. Press Enter at the end of each line.",
          "see": "The first group of yellow lines is where the first `// YOU TYPE THIS PART` line was.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ]
+         ],
          "id": "4-8.9",
          "n": 9
         },
@@ -3266,6 +3302,10 @@
          "do": "Type the second group of yellow lines, from `wrongLines.Add` down to the `}` that closes Answer.",
          "see": "`FirstLower` and `RecordResult` have red underlines. This is normal, because you have not written them yet.",
          "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ],
           [
            "Every method under Answer has a red underline",
            "Answer has one `}` too few, or one too many. Count the `{` and `}` in Answer against the code above. Visual Studio 2019 sometimes adds a `}` by itself when you type a `{`."
@@ -3380,7 +3420,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "No line in frmSky.cs has a red underline.",
          "id": "4-9.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         },
         {
          "do": "Press Ctrl, Shift and B together.",
@@ -3403,10 +3449,6 @@
           [
            "The Error List shows CS0103: The name 'FirstLower' does not exist in the current context",
            "A method's name is spelt one way where you wrote the method, and another way where the code uses it. Check that FirstLower is spelt the same in Answer and in the first line of FirstLower. Capital letters count."
-          ],
-          [
-           "The Error List shows warnings, such as CS0414",
-           "A warning is not an error. The warnings go away once every method is connected."
           ]
          ],
          "id": "4-9.4",
@@ -3796,7 +3838,7 @@
      "title": "Open Read the Sky from the map and play a round",
      "blocks": [
       {
-       "p": "By the end of this screen, place number 3 on your map opens Read the Sky, and you have played a whole round."
+       "p": "By the end of this screen, the card for Slieve Commedagh on your map opens Read the Sky, and you have played a whole round."
       },
       {
        "p": "Your map opens each game with a list of cases in frmMap.cs, one case for each place. Read the Sky is place number 3, so its case says `case 3:`."
@@ -3814,7 +3856,7 @@
           1,
           1,
           "Open Read the Sky",
-          "When the player clicks place number 3, `game` becomes a new frmSky window. `break;` ends this case. The map then opens the window."
+          "When the player clicks the card for Slieve Commedagh, place number 3, `game` becomes a new frmSky window. `break;` ends this case. The map then opens the window."
          ]
         ],
         "focusLines": [
@@ -3940,7 +3982,7 @@
          "wrong": [
           [
            "The Error List shows CS0152: The switch statement contains multiple cases with the label value '3'",
-           "Your map already uses place number 3 for another game. Change the 3 in the new case line to a place number that your map does not use yet. Then change `gameNumber` in frmSky.cs to the same number."
+           "The line `case 3: game = new frmSky(); break;` is in frmMap.cs twice. Delete one of the two lines."
           ]
          ],
          "id": "4-11.8",
@@ -4003,7 +4045,7 @@
          "n": 11
         },
         {
-         "do": "Click place number 3 on the map, the fourth place.",
+         "do": "Click the card for Slieve Commedagh, the fourth card down the right side of the map.",
          "see": "Read the Sky opens, with a sky photo, a question, 3 answers and a time bar that is getting shorter.",
          "img": {
           "img": "img/cap/c358.png",
@@ -4017,7 +4059,7 @@
             "y": 40.4,
             "w": 36.2,
             "h": 8.7,
-            "say": "Click place number 3 on the map, the fourth place."
+            "say": "Click the card for Slieve Commedagh, the fourth card down the right side of the map."
            }
           ]
          },
@@ -4061,7 +4103,7 @@
            "That answer button is not connected. Check that the events list of each answer button shows `Answer_Click` beside Click."
           ],
           [
-           "A different game opens, or nothing opens, when you click place number 3",
+           "A different game opens, or nothing opens, when you click the card for Slieve Commedagh",
            "Check the new line in frmMap.cs. It must say `case 3:` and `new frmSky()`."
           ]
          ],
@@ -4174,7 +4216,7 @@
         {
          "what": "Finish a round, then click Back to the map.",
          "expect": "allowed",
-         "how": "The map shows again, and the flag on place number 3 shows a tick.",
+         "how": "The map shows again, and the flag on Slieve Commedagh shows a tick.",
          "must": "Must happen",
          "fix": "Check that the first field at the top of frmSky is `private int gameNumber = 3;`. Then check that frmMap opens Read the Sky for `case 3:`.",
          "id": "4-13.t8"
@@ -4219,7 +4261,7 @@
        "p": "You need at least 10 questions, because a round uses 10. More than 10 is better, so the rounds differ."
       },
       {
-       "p": "Change at least 2 more things as well, so that your game plays differently from Read the Sky. For example, change the time for each question, the points for a right answer, the number of questions or the colours."
+       "p": "Change at least 2 more things as well, so that your game plays differently from Read the Sky. For example, change the time for each question, the score that plays the win sound, the colours or the feedback lines."
       },
       {
        "p": "Every picture and sound you use must be free to use. Each one gets a line in `credits.txt`, saying who made it, its licence and a link."

@@ -42,7 +42,7 @@
         ],
         [
          "valid data",
-         "Data that follows the rule, so the game must allow it, such as `ridgeRunner` as a username.",
+         "Data that follows the rule, so the game must allow it, such as `walker3` as a username.",
          "2-1",
          false
         ],
@@ -82,8 +82,8 @@
       {
        "steps": [
         {
-         "do": "Click the download button below.",
-         "see": "Your browser shows that `test-plan-template.docx` has downloaded. Open it in Word and save it in your portfolio folder.",
+         "do": "Click the download button below. Then open `test-plan-template.docx` in Word, click **File**, then **Save As**, and save it in your `Coursework` folder.",
+         "see": "Your browser shows that `test-plan-template.docx` has downloaded, and Word shows the empty test plan table.",
          "download": {
           "file": "test-plan-template.docx",
           "label": "Download the test plan template",
@@ -95,7 +95,7 @@
        ]
       },
       {
-       "p": "The template holds a table with 6 columns, in this order:"
+       "p": "The template holds 2 tables. The first is your test plan, and it has 6 columns, in this order:"
       },
       {
        "box": {
@@ -123,7 +123,7 @@
        }
       },
       {
-       "p": "The same table is your list of evidence. The marker reads a row, then finds its screenshot by the number."
+       "p": "The same table is your list of evidence. The marker reads a row, then finds its screenshot by the number. The second table in the template is for fixes, and you use it later in this chapter."
       }
      ],
      "id": "1"
@@ -175,7 +175,7 @@
        "p": "A button that asks a question, such as **Log out**, needs a row for each answer. T7 and T8 are both needed."
       },
       {
-       "p": "In Summit Ready, the map has 8 summits, so it needs 8 rows: one row for each summit, opening its own game."
+       "p": "In the full Summit Ready, the map has 8 summits, so it needs 8 rows: one row for each summit, opening its own game. Your map needs one row for each summit that opens one of your games."
       },
       {
        "p": "Each game also needs a row for **Back to the map**, and a row for its sound button."
@@ -212,7 +212,7 @@
         "title": "An example to read: the 4 kinds of data for the Summit Ready username, which must be 3 to 12 characters",
         "blocks": [
          {
-          "p": "**Valid:** `ridgeRunner`. Expected: allowed."
+          "p": "**Valid:** `walker3`. Expected: allowed."
          },
          {
           "p": "**Invalid:** `ridge!`. Expected: refused with \"Your username can only use letters and numbers. Take out the !.\""
@@ -319,7 +319,7 @@
        "p": "By the end of this screen, your test plan will test the boxes and keys a player uses inside each game."
       },
       {
-       "p": "A game that asks the player to type, such as Grid Ref Rescue or Whiteout, has rules too."
+       "p": "If a game of yours asks the player to type, it has rules too, as Grid Ref Rescue and Whiteout do."
       },
       {
        "box": {
@@ -407,7 +407,7 @@
          "n": 3
         },
         {
-         "do": "Write what happened in the Actual result column of the row.",
+         "do": "Write what happened in the Actual result column of the row, and write the screenshot number, such as S14, in the Screenshot number column.",
          "see": "The row has its actual result and its screenshot number.",
          "id": "3-1.4",
          "n": 4
@@ -433,7 +433,7 @@
        "p": "A test fails when the actual result is not the expected result. That is useful: it is a fault you found before the marker did."
       },
       {
-       "p": "Keep a second table, your fix-and-retest log, with 4 columns: test number, what went wrong, what you changed, and the [[retest|6]] result."
+       "p": "Use the second table in your template, your fix-and-retest log. It has 4 columns: test number, what went wrong, what you changed, and the [[retest|6]] result."
       },
       {
        "box": {
@@ -516,7 +516,7 @@
         {
          "what": "The username `ab` in your own game.",
          "expect": "control",
-         "how": "Type it in your Register form, if your game has one, and click the button that saves the player.",
+         "how": "Type it in your Register form, and click **Create my player**.",
          "fix": "Go back to the chapter where you wrote that rule, and check the code that tests the length.",
          "id": "3-3.t3"
         },
@@ -563,7 +563,7 @@
   ],
   [
    "valid data",
-   "Data that follows the rule, so the game must allow it, such as `ridgeRunner` as a username."
+   "Data that follows the rule, so the game must allow it, such as `walker3` as a username."
   ],
   [
    "invalid data",

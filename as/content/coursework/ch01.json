@@ -122,8 +122,8 @@
       {
        "steps": [
         {
-         "do": "Click the download button below.",
-         "see": "Your browser shows that `requirements-template.docx` has downloaded. Open it in Word and save it in your portfolio folder.",
+         "do": "Click the download button below. Then open `requirements-template.docx` in Word, click **File**, then **Save As**, and save it in your `Coursework` folder.",
+         "see": "Your browser shows that `requirements-template.docx` has downloaded, and Word shows the heading **My requirements** and an empty table.",
          "download": {
           "file": "requirements-template.docx",
           "label": "Download the requirements template",
@@ -245,8 +245,8 @@
       {
        "steps": [
         {
-         "do": "Click the download button below.",
-         "see": "Your browser shows that `storyboard-template.docx` has downloaded. Open it in Word and save it in your portfolio folder.",
+         "do": "Click the download button below. Then open `storyboard-template.docx` in Word, click **File**, then **Save As**, and save it in your `Coursework` folder.",
+         "see": "Your browser shows that `storyboard-template.docx` has downloaded, and Word shows the heading **My storyboard** with 3 windows to fill in.",
          "download": {
           "file": "storyboard-template.docx",
           "label": "Download the storyboard template",
@@ -292,7 +292,7 @@
        }
       },
       {
-       "p": "Draw your 4 game forms too, even before you know all of the code. You can add detail as you build them."
+       "p": "Draw a form for each game you plan to build too, even before you know all of the code. If you have not chosen your games yet, draw each game's form when you reach its chapter, and add it to your storyboard. You can add detail as you build them."
       }
      ],
      "id": "1"
@@ -420,7 +420,7 @@
        }
       },
       {
-       "p": "For each data file, write its name, what one line holds, each field in order, and one real example line."
+       "p": "For each data file, write its name, what one line holds, each field in order, and one real example line. Do this now for the files you already know, such as players and scores. Add a table for each game's own file when you reach that game's chapter."
       },
       {
        "box": {
@@ -460,9 +460,10 @@
          "id": "4-2.t1"
         },
         {
-         "what": "A requirement such as \"The game looks good\".",
+         "what": "None of your requirements is like \"The game looks good\".",
          "expect": "control",
          "how": "Read each requirement. If no test could check it, rewrite it so that it names something a player can see or do.",
+         "must": "Must be true",
          "fix": "Change it to say exactly what must be on the screen, such as the words on a button.",
          "id": "4-2.t2"
         },

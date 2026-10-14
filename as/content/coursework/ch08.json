@@ -582,6 +582,12 @@
         {
          "do": "Type the rest of the yellow lines.",
          "see": "`GameResult` in the last line has no red underline, because you added the class on the last screen.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
          "id": "2-2.7",
          "n": 7
         },
@@ -1278,7 +1284,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The fields are under the `{`. No line has a red underline.",
          "id": "4-1.4",
-         "n": 4
+         "n": 4,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       },
@@ -1423,6 +1435,12 @@
         {
          "do": "Type the rest of the yellow lines.",
          "see": "`ShowSpeaker`, `MakeCard`, `MakeFlag` and `ShowProgress` have red underlines. This is normal, because you have not written those methods yet.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
          "id": "4-1.11",
          "n": 11
         }
@@ -1952,6 +1970,10 @@
           [
            "The `// YOU TYPE THIS PART` line is still there after you type",
            "Click the old `// YOU TYPE THIS PART` line, then press Home. Hold Shift and press End, so the whole line turns blue. Press Delete."
+          ],
+          [
+           "There is an extra `}` under the lines you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. This is normal. Delete the extra `}`, because the lines you pasted already have their own `}` below."
           ]
          ],
          "id": "4-4.6",
@@ -2911,6 +2933,10 @@
          "see": "btnStart_Click sits under btnBannerOK_Click.",
          "wrong": [
           [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
            "The Error List shows CS0111: Type already defines a member called btnStart_Click",
            "Your frmWelcome already has an empty `btnStart_Click`. Delete the empty one, from its first line down to its `}`."
           ]
@@ -3004,7 +3030,7 @@
        ]
       },
       {
-       "p": "Connect each method to its event: click the control in the designer, then pick the method beside **Click** in the Properties window events list."
+       "p": "Connect each method to its event. Click the control or menu item in the designer, then click the lightning bolt at the top of the Properties window. Then pick the method from the list beside **Click**."
       },
       {
        "controls": {
@@ -3299,7 +3325,7 @@
         "task": [
          "Find the line in ShowProgress that sets `lblScore.Text`.",
          "Add the words `Summits left:` and the number of summits not yet climbed to the end.",
-         "Make lblScore wider in the Properties window if the words do not fit."
+         "Make lblScore wider on its left side, so the words do not go under the speaker picture. In the Properties window, set Location to `380, 8` and Size to `336, 24`."
         ],
         "test": "Press F5, log in and click **Start the expedition**.",
         "expect": "The strip says **Points so far: 0 of 800. Summits left: 8**.",

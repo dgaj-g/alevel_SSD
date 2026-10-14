@@ -2478,7 +2478,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The fields are under the chapter 9 fields, with the comment line above them. No line has a red underline.",
          "id": "4-4.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       },
@@ -2647,7 +2653,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The yellow lines are inside frmLitter_Load. `PlaceLitter` and `PlaceSheep` have red underlines. This is normal, because you have not written them yet.",
          "id": "4-5.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -2853,7 +2865,13 @@
          "do": "Type the yellow lines, from `int x = 0;` down to the line that starts `tooClose = (across`. Press Enter at the end of each line.",
          "see": "The `while` loop sits between `piece.Image` and `piece.Location`. No line in PlaceLitter has a red underline.",
          "id": "4-6.6",
-         "n": 6
+         "n": 6,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ]
+         ]
         }
        ]
       }
@@ -2961,7 +2979,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "PlaceSheep sits under PlaceLitter. The red underlines in frmLitter_Load have gone.",
          "id": "4-7.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3051,7 +3075,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "btnGo_Click sits under PlaceSheep.",
          "id": "4-8.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3183,7 +3213,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "`MovePlayer` has a red underline. This is normal, because you have not written MovePlayer yet.",
          "id": "4-9.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3297,7 +3333,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "`MoveSheep`, `CheckLitter` and `CheckSheep` have red underlines. This is normal, because you have not written them yet.",
          "id": "4-10.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3393,7 +3435,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The red underline under `MoveSheep` in tmrGame_Tick has gone.",
          "id": "4-11.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3507,7 +3555,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "`EndRound` has a red underline. This is normal, because you have not written EndRound yet.",
          "id": "4-12.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3633,7 +3687,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The red underline under `CheckSheep` in tmrGame_Tick has gone.",
          "id": "4-13.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3741,7 +3801,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The red underlines under `EndRound` have gone. `RecordResult` has a red underline, and that is normal.",
          "id": "4-14.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3825,7 +3891,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "`AddFeedback` has a red underline. This is normal, because you have not written AddFeedback yet.",
          "id": "4-15.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3895,7 +3967,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "`Pieces` has a red underline. This is normal, because you have not written Pieces yet.",
          "id": "4-16.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3972,7 +4050,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The yellow lines are at the end of AddFeedback, before its last `}`.",
          "id": "4-17.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ]
+         ]
         }
        ]
       },
@@ -4021,7 +4105,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "No line in frmLitter.cs has a red underline.",
          "id": "4-17.6",
-         "n": 6
+         "n": 6,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         },
         {
          "do": "Press Ctrl, Shift and B together.",
@@ -4471,7 +4561,7 @@
      "title": "Open Leave No Trace from the map and play a round",
      "blocks": [
       {
-       "p": "By the end of this screen, place number 2 on your map opens Leave No Trace, and you have played a whole round."
+       "p": "By the end of this screen, the card for Slieve Meelmore on your map opens Leave No Trace, and you have played a whole round."
       },
       {
        "p": "Your map opens each game with a list of cases in frmMap.cs, one case for each place. Leave No Trace is place number 2, so its case says `case 2:`."
@@ -4489,7 +4579,7 @@
           1,
           1,
           "Open Leave No Trace",
-          "When the player clicks place number 2, `game` becomes a new frmLitter window. `break;` ends this case. The map then opens the window."
+          "When the player clicks the card for Slieve Meelmore, place number 2, `game` becomes a new frmLitter window. `break;` ends this case. The map then opens the window."
          ]
         ],
         "focusLines": [
@@ -4615,7 +4705,7 @@
          "wrong": [
           [
            "The Error List shows CS0152: The switch statement contains multiple cases with the label value '2'",
-           "Your map already uses place number 2 for another game. Change the 2 in the new case line to a place number that your map does not use yet. Then change `gameNumber` in frmLitter.cs to the same number."
+           "The line `case 2: game = new frmLitter(); break;` is in frmMap.cs twice. Delete one of the two lines."
           ]
          ],
          "id": "4-19.8",
@@ -4678,7 +4768,7 @@
          "n": 11
         },
         {
-         "do": "Click place number 2 on the map, the third place.",
+         "do": "Click the card for Slieve Meelmore, the third card down the right side of the map.",
          "see": "Leave No Trace opens, with your avatar, 8 pieces of litter, 3 sheep and Start walking.",
          "img": {
           "img": "img/cap/c324.png",
@@ -4692,7 +4782,7 @@
             "y": 31.6,
             "w": 36.0,
             "h": 8.5,
-            "say": "Click place number 2 on the map, the third place."
+            "say": "Click the card for Slieve Meelmore, the third card down the right side of the map."
            }
           ]
          },
@@ -4736,7 +4826,7 @@
            "Check that the Images folder inside bin\\Debug holds `field.jpg`, and that the Icons folder inside it holds `icon-heart-64.png`."
           ],
           [
-           "A different game opens, or nothing opens, when you click place number 2",
+           "A different game opens, or nothing opens, when you click the card for Slieve Meelmore",
            "Check the new line in frmMap.cs. It must say `case 2:` and `new frmLitter()`."
           ]
          ],
@@ -4869,7 +4959,7 @@
         {
          "what": "Finish a round, then click Back to the map.",
          "expect": "allowed",
-         "how": "The map shows again, and the flag on place number 2 shows a tick.",
+         "how": "The map shows again, and the flag on Slieve Meelmore shows a tick.",
          "must": "Must happen",
          "fix": "Check that the first field at the top of frmLitter is `private int gameNumber = 2;`. Then check that frmMap opens Leave No Trace for `case 2:`.",
          "id": "4-21.t11"

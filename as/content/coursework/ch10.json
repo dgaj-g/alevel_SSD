@@ -80,7 +80,7 @@
        "need": [
         "Your project, with the practice game opening from the map (chapter 9).",
         "The Welcome window, with the gold banner, ShowBanner and MoveBoard (chapter 7).",
-        "ScoreFile, with Save, BestScore, PlaceOf and TenthPlaceScore (chapters 5 and 7).",
+        "ScoreFile, with Save, BestScore, PlaceOf and TenthPlaceScore (chapter 7).",
         "About 2 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
        ]
       },
@@ -1305,6 +1305,10 @@
          "see": "The method is complete. No line has a red underline.",
          "wrong": [
           [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ],
+          [
            "The `// YOU TYPE THIS PART` line is still there after you type",
            "Click the old `// YOU TYPE THIS PART` line, then press Home. Hold Shift and press End, so the whole line turns blue. Press Delete."
           ]
@@ -1321,7 +1325,7 @@
      "title": "Save the score, and ask before leaving without saving",
      "blocks": [
       {
-       "p": "By the end of this screen, **Save my score** saves the score and closes the window."
+       "p": "By the end of this screen, frmFeedback has the code that saves the score and the code that asks before the window closes. The next screen connects them."
       },
       {
        "p": "The banner needs the player's best score and place from before the save. So btnSave_Click reads them first, then saves."
@@ -1338,7 +1342,7 @@
           2,
           6,
           "Before the save",
-          "The best score and the place before this save, from ScoreFile in chapters 5 and 7."
+          "The best score and the place before this save, from ScoreFile in chapter 7."
          ],
          [
           7,
@@ -1830,7 +1834,7 @@
             "y": 13.5,
             "w": 36.2,
             "h": 8.8,
-            "say": "Open the practice game from Slieve Binnian. Click your answer to the question, then click the gold **Back to the map**."
+            "say": "Open the practice game from Slieve Binnian. Click your answer to the question, click **See my score**, then click the gold **Back to the map**."
            },
            {
             "n": 3,
@@ -1844,7 +1848,7 @@
          "n": 1
         },
         {
-         "do": "Open the practice game from Slieve Binnian. Click your answer to the question, then click the gold **Back to the map**.",
+         "do": "Open the practice game from Slieve Binnian. Click your answer to the question, click **See my score**, then click the gold **Back to the map**.",
          "see": "The map shows a tick on Slieve Binnian.",
          "id": "5-3.2",
          "n": 2
@@ -1889,7 +1893,7 @@
         },
         {
          "do": "Click **Save my score**.",
-         "see": "The feedback window and the map close. The Welcome window shows the gold banner above the Top 10.",
+         "see": "The feedback window and the map close. The Welcome window shows the gold banner above the Top 10. A new player sees **Expedition saved** and no highlighted row. The picture shows a player who has made the Top 10 for the first time.",
          "img": {
           "img": "img/cap/c192.png",
           "alt": "The Welcome window with the gold banner and the highlighted row on the Top 10",
@@ -1958,7 +1962,7 @@
        "p": "By the end of this screen, you know every part of the finish line works, including refusing to close without saving."
       },
       {
-       "p": "Run each test with F5. Tick each test when it passes. A test marked \"Must be refused\" should do nothing, and that counts as a pass."
+       "p": "Run each test with F5. Tick each test when it passes. A test marked \"Must be refused\" should do nothing, and that counts as a pass. Log in as `peakBagger`, with the password `tick800`, for these tests. A new player is not on the Top 10 yet, so no row of theirs could be highlighted."
       },
       {
        "check": [

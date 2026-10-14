@@ -48,7 +48,7 @@
           "p": "3 small classes: Files finds files, Sound plays sounds, and Mix shuffles numbers."
          },
          {
-          "p": "A plan for your own pictures and sounds, and a line in `credits.txt` for each one."
+          "p": "A plan for your own pictures and sounds."
          }
         ]
        }
@@ -56,7 +56,7 @@
       {
        "need": [
         "Your plan, with your topic and the forms you want (chapter 1).",
-        "A computer with Visual Studio 2019 on it, and your school sign-in (chapter 0).",
+        "A computer with Visual Studio 2019 on it (chapter 0).",
         "About 2 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
        ]
       },
@@ -524,7 +524,7 @@
          "n": 12
         },
         {
-         "do": "Click **Create**.",
+         "do": "Look at the Location box. Leave it as it is, unless your teacher has given you a folder to use. Then click **Create**.",
          "see": "After a few seconds, your project opens. The designer in the middle shows an empty form called Form1.",
          "img": {
           "img": "img/cap/c006.png",
@@ -536,7 +536,7 @@
             "n": 13,
             "x": 23.6,
             "y": 38.4,
-            "say": "Click **Create**."
+            "say": "Look at the Location box. Leave it as it is, unless your teacher has given you a folder to use. Then click **Create**."
            }
           ]
          },
@@ -546,7 +546,7 @@
        ]
       },
       {
-       "p": "Leave the Location box as it is, unless your teacher has given you a folder to use."
+       "p": "Visual Studio 2019 keeps your project in the folder that the Location box showed."
       },
       {
        "p": "[[Solution Explorer|9]] is the list on the right. It shows every file in your project. The [[Properties window|10]] is under it, and shows the settings of whatever you click."
@@ -705,7 +705,7 @@
        }
       },
       {
-       "p": "FixedSingle and MaximizeBox = False stop the player making the window bigger. Every Summit Ready window is 1000 by 660, so nothing on it can be pushed out of place."
+       "p": "FixedSingle and MaximizeBox = False stop the player making the window bigger. Every Summit Ready window is 1000 by 660 inside its border, so nothing on it can be pushed out of place. Size = 1016, 699 is a little bigger, because it counts the border and the title bar too."
       }
      ],
      "id": "4"
@@ -2625,10 +2625,14 @@
         "focusLines": [
          [
           1,
-          5
+          1
+         ],
+         [
+          4,
+          4
          ]
         ],
-        "typed": 2,
+        "typed": 1,
         "wordMarks": [
          [
           2,
@@ -2697,7 +2701,7 @@
          "wrong": [
           [
            "The new method is called `exitToolStripMenuItem_Click`",
-           "You double-clicked before you named Exit. Press Ctrl and Z together, go back to the designer, and name Exit `mnuExit`. Then double-click it again."
+           "You double-clicked before you named Exit. Right-click `exitToolStripMenuItem_Click` in the code, and click **Rename**. Type `mnuExit_Click` and press Enter. Then click the **frmLogin.cs [Design]** tab, click Exit, and type `mnuExit` in the (Name) box in the Properties window."
           ]
          ],
          "id": "4-2.1",
@@ -2757,10 +2761,14 @@
         "focusLines": [
          [
           1,
-          9
+          1
+         ],
+         [
+          4,
+          8
          ]
         ],
-        "typed": 6,
+        "typed": 5,
         "wordMarks": [
          [
           4,
@@ -2790,10 +2798,14 @@
         "focusLines": [
          [
           1,
-          9
+          1
+         ],
+         [
+          4,
+          8
          ]
         ],
-        "typed": 6
+        "typed": 5
        }
       },
       {
@@ -3000,7 +3012,7 @@
         "title": "5 rules for your own files",
         "blocks": [
          {
-          "p": "Pictures are `.png` or `.jpg` files. Sounds are `.wav` files, because the game's sound player, SoundPlayer, plays only `.wav`."
+          "p": "Pictures are `.png` or `.jpg` files. Sounds are `.wav` files, because the game's sound player, SoundPlayer, plays only `.wav`. If a sound ends in `.mp3` or `.ogg`, look for another sound that ends in `.wav`. Changing the end of the file name does not work."
          },
          {
           "p": "Name each file in small letters, with its kind first and no spaces, such as `avatar-otter.png`."
@@ -3127,7 +3139,7 @@
           "p": "Take a screenshot of Solution Explorer, showing `frmLogin.cs`, `Files.cs`, `Sound.cs` and `Mix.cs`."
          },
          {
-          "p": "Paste each screenshot into your testing document. Keep your list of the pictures and sounds you plan to find."
+          "p": "Open your portfolio in Word, and add a heading called **Testing document**. Paste each screenshot under it, with a line above it that says which test it shows. Keep your list of the pictures and sounds you plan to find."
          }
         ]
        }

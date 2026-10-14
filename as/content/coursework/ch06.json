@@ -38,10 +38,10 @@
        }
       },
       {
-       "p": "If a box is blank, a red message says which box to fill in. If the username and password do not match a player in `players.txt`, a red message says so."
+       "p": "The rules for logging in are numbered 12 to 15, and the notes in the code use those numbers. Rules 12 and 13: if the username box or the password box is blank, a red message says which box to fill in. Rule 14: if the username and password do not match a player in `players.txt`, a red message says so."
       },
       {
-       "p": "After 3 wrong tries in a row, the **Log in** button stops working for 30 seconds, and counts down each second. That slows down anyone who tries to guess a password."
+       "p": "Rule 15: after 3 wrong tries in a row, the **Log in** button stops working for 30 seconds, and counts down each second. That slows down anyone who tries to guess a password."
       },
       {
        "p": "When the username and password match, the Log in window hides and the Welcome window opens. The Welcome window is empty for now. Chapter 7 fills it."
@@ -61,7 +61,7 @@
       {
        "need": [
         "You need frmLogin with its menu bar, File and Help (chapter 2).",
-        "The file `banner.jpg` in the Images folder inside bin\\Debug (chapter 2).",
+        "The file `banner.jpg`, one of the 3 pictures in the Images folder inside bin\\Debug (chapter 2).",
         "The two error types BlankFieldException and LoginFailedException, which you made earlier (chapter 4).",
         "The Register window, frmRegister, which holds the new player's username in `NewUsername` (chapter 5).",
         "About 2 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
@@ -1104,6 +1104,12 @@
         {
          "do": "Type the yellow lines from the code above.",
          "see": "The 2 fields are under the `{`.",
+         "wrong": [
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
          "id": "3-4.4",
          "n": 4
         }
@@ -1215,8 +1221,16 @@
          "see": "The start of btnLogIn_Click sits under frmLogin_Load. Visual Studio 2019 added the `}` that closes btnLogIn_Click when you typed its `{`.",
          "wrong": [
           [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ],
+          [
            "btnLogIn_Click has no `}` at the end",
            "Press Enter after the last yellow line, then type `}`."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
           ]
          ],
          "id": "3-4.7",
@@ -1328,6 +1342,16 @@
         {
          "do": "Type the yellow lines from the code above.",
          "see": "The 2 `catch` blocks sit under the `try`. `StartWait` has a red underline, because you type StartWait on the next screen.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word other than `StartWait`",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
          "id": "3-5.3",
          "n": 3
         }
@@ -1454,6 +1478,16 @@
         {
          "do": "Type the yellow lines from the code above.",
          "see": "StartWait sits under btnLogIn_Click. The red underline under `StartWait` has gone.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
          "id": "3-6.3",
          "n": 3
         }
@@ -1516,11 +1550,15 @@
         },
         {
          "do": "Type the yellow lines from the code above.",
-         "see": "tmrWait_Tick sits under StartWait.",
+         "see": "tmrWait_Tick sits under StartWait. Visual Studio 2019 added the `}` that closes tmrWait_Tick when you typed its `{`.",
          "wrong": [
           [
            "There is an extra `}` at the end of what you typed",
            "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
           ]
          ],
          "id": "3-6.6",
@@ -1969,7 +2007,7 @@
          "id": "4-1.t2"
         },
         {
-         "what": "Type `summitSeeker` and a wrong password, then click Log in. Do this 3 times in a row.",
+         "what": "Type `summitSeeker` and a wrong password, then click Log in. Do this until the button turns grey.",
          "expect": "control",
          "how": "The button turns grey and says **Try again in 30 seconds**, then counts down. Clicking it does nothing until it says Log in again.",
          "fix": "Check `if (wrongTries == 3)` in btnLogIn_Click, then StartWait. Then click tmrWait and check `tmrWait_Tick` sits beside Tick in the Properties events list.",
@@ -1992,7 +2030,7 @@
          "id": "4-1.t5"
         },
         {
-         "what": "Click Register a new player. Fill in the Register window with new details, then click OK.",
+         "what": "Click Register a new player. Fill in the Register window with new details, then click Create my player.",
          "expect": "allowed",
          "how": "The Log in window comes back, with the new username in the Username box and the cursor in Password.",
          "must": "Must happen",
@@ -2034,7 +2072,7 @@
         "lang": "cs",
         "text": "lblError.Text = \"Three wrong tries. Wait 10 seconds, then try \"\n    + \"again.\";\nwaitLeft = 10;",
         "task": [
-         "In StartWait, change 30 to 10 in the text that says **Try again in 30 seconds**.",
+         "In StartWait, change 30 to 10 in the red message that says **Three wrong tries. Wait 30 seconds, then try again.**",
          "In StartWait, change `waitLeft = 30;` to `waitLeft = 10;`"
         ],
         "test": "Press F5. Type `summitSeeker` and a wrong password, then click Log in. Do this 3 times in a row.",

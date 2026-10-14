@@ -3,7 +3,7 @@
  "n": 18,
  "of": 20,
  "title": "Build Listen Out, a game where a sound is the question",
- "kind": "a game chapter: build one game from each pair, and this pair is chapters 17 and 18",
+ "kind": "a game chapter: build one game from each pair, and this pair is chapters 16 and 18",
  "one": "You build Listen Out in your own project, exactly as it is in Summit Ready, and test it. Then you change it into a listening game on your own topic.",
  "prev": {
   "id": "17",
@@ -29,7 +29,7 @@
        "p": "Listen Out is a listening game. It is on Slieve Donard, the last and highest place on the Summit Ready map."
       },
       {
-       "p": "You build one game from each pair of game chapters. Listen Out is paired with Route Timer, so you build one of those two."
+       "p": "You build one game from each pair of game chapters. Listen Out is paired with Grid Ref Rescue, so you build one of those two."
       },
       {
        "p": "First you build Listen Out exactly as it is in Summit Ready. Then, in stage 5, you change it into a listening game on your own topic."
@@ -806,7 +806,7 @@
         "title": "ListenClip.cs: the ListenClip class",
         "lang": "cs",
         "why": "You type the 4 properties, and the 4 lines that put a value into each one, because they are new. The rest reads a file the same way as `LoadAll` in chapter 3, so it comes in the copy.",
-        "text": "// One sound from listen.txt: its file, its name and what it is\nclass ListenClip\n{\n    public string FileName { get; set; }      // file name, no ending\n    public string Name { get; set; }          // the name, like Curlew\n    public string InSentence { get; set; }    // like \"the curlew\"\n    public string Explanation { get; set; }   // what made the sound\n\n    // Makes one ListenClip from a line of listen.txt, split at each |\n    public ListenClip(string[] parts)\n    {\n        FileName = parts[0];\n        Name = parts[1];\n        InSentence = parts[2];\n        Explanation = parts[3];\n    }\n\n    // Reads every sound in listen.txt into a list\n    public static List<ListenClip> LoadAll()\n    {\n        List<ListenClip> clips = new List<ListenClip>();\n        string path = Files.Data(\"listen.txt\");\n        if (!File.Exists(path)) return clips;   // no file: an empty list\n        StreamReader reader = new StreamReader(path);\n        while (!reader.EndOfStream)\n        {\n            string line = reader.ReadLine();\n            string[] parts = line.Split('|');\n            if (parts.Length != 4) continue;    // skip a broken line\n            clips.Add(new ListenClip(parts));\n        }\n        reader.Close();\n        return clips;\n    }",
+        "text": "// One sound from listen.txt: its file, its name and what it is\nclass ListenClip\n{\n    public string FileName { get; set; }      // file name, no ending\n    public string Name { get; set; }          // the name, like Curlew\n    public string InSentence { get; set; }    // like \"the curlew\"\n    public string Explanation { get; set; }   // what made the sound\n\n    // Makes one ListenClip from a line of listen.txt, split at each |\n    public ListenClip(string[] parts)\n    {\n        FileName = parts[0];\n        Name = parts[1];\n        InSentence = parts[2];\n        Explanation = parts[3];\n    }\n\n    // Reads every sound in listen.txt into a list\n    public static List<ListenClip> LoadAll()\n    {\n        List<ListenClip> clips = new List<ListenClip>();\n        string path = Files.Data(\"listen.txt\");\n        if (!File.Exists(path)) return clips;   // no file: an empty list\n        StreamReader reader = new StreamReader(path);\n        while (!reader.EndOfStream)\n        {\n            string line = reader.ReadLine();\n            string[] parts = line.Split('|');\n            if (parts.Length != 4) continue;    // skip a broken line\n            clips.Add(new ListenClip(parts));\n        }\n        reader.Close();\n        return clips;\n    }\n}",
         "partLines": [
          [
           2,
@@ -834,7 +834,7 @@
          ],
          [
           32,
-          34,
+          35,
           "Close the file and hand back the list",
           "`reader.Close()` closes `listen.txt`, so that other programs can open it again. `return clips;` hands the full list back to the code that called LoadAll."
          ]
@@ -1073,7 +1073,8 @@
          "FormBorderStyle = FixedSingle",
          "Size = 1016, 699",
          "MaximizeBox = False",
-         "BackColor = 243, 245, 242"
+         "BackColor = 243, 245, 242",
+         "ForeColor = 38, 50, 56"
         ]
        }
       },
@@ -2500,7 +2501,7 @@
         },
         {
          "do": "Type the yellow lines from the code above.",
-         "see": "The 11 fields are under the chapter 9 fields. None of the 11 lines has a red underline.",
+         "see": "The comment line and the 11 fields are under the chapter 9 fields. None of the 12 lines has a red underline.",
          "id": "4-4.3",
          "n": 3
         }
@@ -2560,7 +2561,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "PlaysText sits under `frmListen_Load`, with no red underline.",
          "id": "4-5.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -2665,7 +2672,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "PickChoices and FindClip sit under PlaysText, with no red underline.",
          "id": "4-6.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -2779,7 +2792,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The first part of ShowSound sits under FindClip. It ends with the `}` that closes the `for` loop.",
          "id": "4-7.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ]
+         ]
         }
        ]
       },
@@ -2839,6 +2858,12 @@
         {
          "do": "Type the yellow lines from the code above.",
          "see": "ShowSound ends with a `}` of its own. No line in ShowSound has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` under ShowSound",
+           "Visual Studio 2019 added a `}` when you typed the `{` of ShowSound. This is normal. Delete the extra `}` below the one you typed, so that ShowSound ends with one `}`."
+          ]
+         ],
          "id": "4-7.6",
          "n": 6
         }
@@ -2937,7 +2962,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The yellow lines are inside frmListen_Load. None of them has a red underline.",
          "id": "4-8.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3042,7 +3073,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "btnPlay_Click sits under ShowSound, with no red underline.",
          "id": "4-9.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3120,7 +3157,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "`Answer` has a red underline. This is normal, because you have not written Answer yet.",
          "id": "4-10.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3204,7 +3247,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The first part of Answer sits under Pick_Click. It ends with the `}` that closes the `for` loop.",
          "id": "4-11.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ]
+         ]
         }
        ]
       }
@@ -3274,7 +3323,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "Answer ends with a `}` of its own. `MissLine` and `RecordResult` have red underlines. This is normal, because you have not written them yet.",
          "id": "4-12.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3364,7 +3419,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The red underline under `MissLine` in Answer has gone.",
          "id": "4-13.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3454,7 +3515,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "No line in frmListen.cs has a red underline.",
          "id": "4-14.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         },
         {
          "do": "Press Ctrl, Shift and B together.",
@@ -3780,7 +3847,7 @@
      "title": "Open Listen Out from the map and play a round",
      "blocks": [
       {
-       "p": "By the end of this screen, place number 7 on your map opens Listen Out, and you have played a whole round."
+       "p": "By the end of this screen, the card for Slieve Donard on your map opens Listen Out, and you have played a whole round."
       },
       {
        "p": "Your map picks which game to open from a list in frmMap.cs. Each place has one case, which is one choice in that list. Listen Out is place number 7, so its case says `case 7:`."
@@ -3797,7 +3864,7 @@
           1,
           1,
           "Open Listen Out for place 7",
-          "When the player clicks place number 7, `game` becomes a new frmListen. `break` ends the case, and the map then opens the game."
+          "When the player clicks the card for Slieve Donard, place number 7, `game` becomes a new frmListen. `break` ends the case, and the map then opens the game."
          ]
         ],
         "focusLines": [
@@ -3923,7 +3990,7 @@
          "wrong": [
           [
            "The Error List shows CS0152: The switch statement contains multiple cases with the label value '7'",
-           "Your map already uses place number 7 for another game. Change the 7 in the new case line to a place number that your map does not use yet. Then change `gameNumber` in frmListen.cs to the same number."
+           "The line `case 7: game = new frmListen(); break;` is in frmMap.cs twice. Delete one of the two lines."
           ]
          ],
          "id": "4-16.8",
@@ -3966,7 +4033,7 @@
        }
       },
       {
-       "p": "If you gave Listen Out a different place number, change the 7 in `if (i == 7` to the same number."
+       "p": "Listen Out is place number 7, the card for Slieve Donard, so the check says `i == 7`."
       },
       {
        "steps": [
@@ -4027,7 +4094,7 @@
          "n": 11
         },
         {
-         "do": "Click place number 7 on the map, Slieve Donard.",
+         "do": "Click the card for Slieve Donard, at the bottom of the right side of the map.",
          "see": "Listen Out opens, with 4 grey pictures.",
          "img": {
           "img": "img/cap/c514.png",
@@ -4041,7 +4108,7 @@
             "y": 76.3,
             "w": 36.2,
             "h": 8.8,
-            "say": "Click place number 7 on the map, Slieve Donard."
+            "say": "Click the card for Slieve Donard, at the bottom of the right side of the map."
            }
           ]
          },
@@ -4091,7 +4158,7 @@
            "Check that you pressed Play the sound first. Then check that all 4 picture buttons show `Pick_Click` beside Click in the Properties window."
           ],
           [
-           "A different game opens, or nothing opens, when you click place number 7",
+           "A different game opens, or nothing opens, when you click the card for Slieve Donard",
            "Check the new line in frmMap.cs. It must say `case 7:` and `new frmListen()`."
           ]
          ],
@@ -4122,12 +4189,12 @@
         "task": [
          "Change `playsLeft` from 3 to 2 in the fields at the top of frmListen.cs.",
          "Change `playsLeft = 3;` to `playsLeft = 2;` in ShowSound.",
-         "Change PlaysText, so that 2 plays left gives **Play the sound first. You can play it 2 times.**",
+         "In PlaysText, delete the line `if (left == 2) return \"You can play this sound 2 more times.\";`. Then replace `if (left == 3)` and the line under it with `if (left == 2) return \"Play the sound first. You can play it 2 times.\";`. In the last line, change **three** to **two**.",
          "Change the Text of lblPlays in the Properties window to `You can play this sound 2 times.`",
          "Change the Text of lblInstruction so that the instruction says two times."
         ],
         "test": "Press F5, open Listen Out from the map, and press Play the sound twice.",
-        "expect": "After the second play, Play the sound turns grey, and the sentence says **You have played this sound** and the number of times.",
+        "expect": "After the second play, Play the sound turns grey, and the sentence says **You have played this sound two times.**",
         "hint": "3 things in the code say 3 plays. PlaysText needs the most thought, because each line is for one number of plays left."
        }
       },
@@ -4220,7 +4287,7 @@
         {
          "what": "Finish a round, then click Back to the map.",
          "expect": "allowed",
-         "how": "The map shows again, and the flag on place number 7 shows a tick.",
+         "how": "The map shows again, and the flag on Slieve Donard shows a tick.",
          "must": "Must happen",
          "fix": "Check that the first field at the top of frmListen is `private int gameNumber = 7;`. Then check that frmMap opens Listen Out for `case 7:`.",
          "id": "4-18.t10"
@@ -4275,7 +4342,7 @@
        }
       },
       {
-       "p": "Change at least 2 more things as well, so that your game plays differently from Listen Out. For example, change the number of plays, the points for a right answer, the number of sounds in a round, or the colours."
+       "p": "Change at least 2 more things as well, so that your game plays differently from Listen Out. For example, change the score that plays the win sound, the colours or the feedback lines."
       },
       {
        "p": "Every picture and sound you use must be free to use. Each one gets a line in `credits.txt`, saying who made it, its licence and a link."

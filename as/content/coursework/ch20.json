@@ -69,7 +69,7 @@
        "p": "Sit with your client while they play your game. Do not help them unless they are stuck."
       },
       {
-       "p": "Write down where they stopped, what they asked, and what they said. That is your [[client feedback|0]]."
+       "p": "Write down where they stopped, what they asked, and what they said. That is your [[client feedback|0]]. Write it on paper or in your notes now. Then copy it into the **Client feedback** table in the evaluation template, which you download on the next screen."
       },
       {
        "box": {
@@ -91,7 +91,7 @@
        }
       },
       {
-       "p": "Add each change to your storyboard, beside the first drawing, with the reason. The marker looks for changes that were acted on."
+       "p": "Add each change to your storyboard, beside the first drawing, with the reason. The marker looks for changes that were acted on. Your client's words will be about the games you built, which may not be Listen Out or Whiteout."
       }
      ],
      "id": "1"
@@ -125,15 +125,15 @@
          "n": 2
         },
         {
-         "do": "Click **File**, then **Save As**, and save it in your portfolio folder.",
-         "see": "The file name at the top of Word shows the copy in your portfolio folder.",
+         "do": "Click **File**, then **Save As**, and save it in your `Coursework` folder.",
+         "see": "The file name at the top of Word shows the name you saved it with.",
          "id": "1-2.3",
          "n": 3
         }
        ]
       },
       {
-       "p": "The template holds a table with 4 columns: the requirement, met or partly met or not met, the evidence, and a comment."
+       "p": "The template holds 2 tables. The first has 4 columns: the requirement, met or partly met or not met, the evidence, and a comment. The second, called **Client feedback**, has 2 columns: what your client said, and the change you made. Copy your notes from the last screen into it."
       },
       {
        "p": "The evidence is a test number and a screenshot number from chapter 19, such as T23 and S23."
@@ -158,7 +158,7 @@
        "p": "Be honest. A requirement that is partly met, with a clear reason, earns more than one that claims too much."
       },
       {
-       "p": "Go back to your client's words from chapter 1. Write a few sentences on whether your game solves their problem."
+       "p": "Go back to your client's words from chapter 1. Write a few sentences on whether your game solves their problem. Type them under the evaluation table, under a new heading **Does my game solve my client's problem?**"
       }
      ],
      "id": "2"
@@ -167,7 +167,7 @@
      "title": "Write about what your game cannot do",
      "blocks": [
       {
-       "p": "By the end of this screen, you will have written the [[limitations|2]] of your game, and how a better version would fix each one."
+       "p": "By the end of this screen, a new heading **Limitations** will hold the [[limitations|2]] of your game. Under each one, you say how a better version would fix it."
       },
       {
        "p": "Every game has limitations. The marker rewards a pupil who can see them and explain them."
@@ -239,13 +239,13 @@
      "title": "Write about your own performance",
      "blocks": [
       {
-       "p": "By the end of this screen, you will have written about your [[own performance|3]], using your work log."
+       "p": "By the end of this screen, a new heading **Own performance** will hold what you wrote about your [[own performance|3]]. You use your work log or your notes."
       },
       {
        "p": "The marker wants to read about your time, your skills, and what you would do better next time."
       },
       {
-       "p": "Open your [[work log|4]]. It shows what you did in each lesson, so you can write about your time with real dates."
+       "p": "Open your [[work log|4]], or, if you did not keep one, your notes and the dates of your lessons. They show what you did in each lesson, so you can write about your time with real dates."
       },
       {
        "box": {
@@ -276,19 +276,19 @@
      "title": "Add your code to your portfolio, with comments",
      "blocks": [
       {
-       "p": "By the end of this screen, your portfolio will hold a [[code listing|5]] of your game, with a comment on each method."
+       "p": "By the end of this screen, a new heading **Code listing** will hold a [[code listing|5]] of your game. Each method has a comment."
       },
       {
        "p": "The marker gives top marks to work that refers to the code in detail. A code listing lets you point to each part."
       },
       {
-       "p": "Look back at Sound.cs on the last screen. Each comment says in one line what the code under it does. Write your comments the same way."
+       "p": "Look back at Sound.cs on the screen called **Write about what your game cannot do**. Each comment says in one line what the code under it does. Write your comments the same way. If one of your methods has no comment, type one above it."
       },
       {
        "steps": [
         {
          "do": "In Solution Explorer, right-click one of your own .cs files, such as frmLogin.cs, and click **View Code**.",
-         "see": "The code opens. A green comment line starting with // sits above each method.",
+         "see": "The code opens. A green comment line starting with // sits above each method that you typed.",
          "img": {
           "img": "img/cap/c526.png",
           "alt": "A form's code in Visual Studio 2019, with a green comment line above each method",
@@ -329,7 +329,7 @@
          "n": 2
         },
         {
-         "do": "In your Word portfolio, type the file name as a heading, such as frmLogin.cs, then press Control and V together under it.",
+         "do": "In your Word portfolio, type the file name as a heading, such as frmLogin.cs, then press Enter, then press Control and V together.",
          "see": "The code sits under its heading, in the same order as in Visual Studio 2019.",
          "id": "2-2.3",
          "n": 3
@@ -340,7 +340,7 @@
        "p": "Repeat these 3 steps for each of your own .cs files. Paste only the files you wrote or changed. Leave out the files whose names end in .Designer.cs, which Visual Studio 2019 writes for you."
       },
       {
-       "p": "In your evaluation and your test analysis, name the method that meets each requirement, such as \"CheckPasswordsMatch in Player.cs\"."
+       "p": "In your evaluation and your test analysis, name the method that meets each requirement, such as \"CheckPasswordsMatch in Player.cs\". The rule numbers in the comments of your code are not your R numbers. Use your R numbers from chapter 1."
       }
      ],
      "id": "2"

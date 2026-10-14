@@ -2658,7 +2658,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The yellow lines are inside frmWhiteout_Load. `MakeLetters` and `ShowWord` have red underlines. This is normal, because you have not written them yet.",
          "id": "4-5.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -2802,7 +2808,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "`Letter_Click` has a red underline. This is normal, because you have not written Letter_Click yet.",
          "id": "4-6.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -2914,9 +2926,15 @@
         },
         {
          "do": "Type the yellow lines from the code above.",
-         "see": "The first part of ShowWord is under MakeLetters. ShowWord has no `}` at its end yet, so red underlines show further down. This is normal.",
+         "see": "The first part of ShowWord is under MakeLetters. Visual Studio 2019 added the `}` that closes ShowWord when you typed its `{`. The next part goes above that `}`.",
          "id": "4-7.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ]
+         ]
         }
        ]
       },
@@ -3000,7 +3018,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The red underlines under `ShowWord` and `Letter_Click` have gone. `TryLetter` has a red underline, because you have not written TryLetter yet.",
          "id": "4-7.6",
-         "n": 6
+         "n": 6,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3114,7 +3138,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "`TryLetter` still has a red underline. This is normal, because you write TryLetter next.",
          "id": "4-8.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3232,9 +3262,15 @@
         },
         {
          "do": "Type the yellow lines from the code above.",
-         "see": "The first part of TryLetter is under frmWhiteout_KeyPress. TryLetter has no `}` at its end yet, so red underlines show further down. This is normal.",
+         "see": "The first part of TryLetter is under frmWhiteout_KeyPress. Visual Studio 2019 added the `}` that closes TryLetter when you typed its `{`. The next part goes above that `}`.",
          "id": "4-9.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that each `{` you typed has only one `}` to close it."
+          ]
+         ]
         }
        ]
       },
@@ -3321,6 +3357,10 @@
          "do": "Type the yellow lines from the code above.",
          "see": "`WordSolved` and `Whiteout` have red underlines. This is normal, because you have not written them yet.",
          "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
           [
            "Every method under TryLetter has a red underline",
            "TryLetter has one `}` too few, or one too many. Count the `{` and `}` in TryLetter against the code above. Visual Studio 2019 sometimes adds a `}` by itself when you type a `{`."
@@ -3411,7 +3451,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "`EndWord` has a red underline. This is normal, because you have not written EndWord yet.",
          "id": "4-10.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       },
@@ -3471,7 +3517,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The red underline under `Whiteout` in TryLetter has gone.",
          "id": "4-10.6",
-         "n": 6
+         "n": 6,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       }
@@ -3561,7 +3613,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "The red underline under `EndWord` has gone. `RecordResult` has a red underline.",
          "id": "4-11.3",
-         "n": 3
+         "n": 3,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         }
        ]
       },
@@ -3669,7 +3727,13 @@
          "do": "Type the yellow lines from the code above.",
          "see": "No line in frmWhiteout.cs has a red underline.",
          "id": "4-11.6",
-         "n": 6
+         "n": 6,
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ]
+         ]
         },
         {
          "do": "Press Ctrl, Shift and B together.",
@@ -3876,7 +3940,7 @@
      "title": "Open Whiteout from the map and play a round",
      "blocks": [
       {
-       "p": "By the end of this screen, place number 4 on your map opens Whiteout, and you have played a whole round."
+       "p": "By the end of this screen, the card for Slieve Bearnagh on your map opens Whiteout, and you have played a whole round."
       },
       {
        "p": "Your map opens each game with a list of cases in frmMap.cs, one case for each place. Whiteout is place number 4, so its case says `case 4:`."
@@ -3894,7 +3958,7 @@
           1,
           1,
           "Open Whiteout",
-          "When the player clicks place number 4, `game` becomes a new frmWhiteout window. `break;` ends this case. The map then opens the window."
+          "When the player clicks the card for Slieve Bearnagh, place number 4, `game` becomes a new frmWhiteout window. `break;` ends this case. The map then opens the window."
          ]
         ],
         "focusLines": [
@@ -4020,7 +4084,7 @@
          "wrong": [
           [
            "The Error List shows CS0152: The switch statement contains multiple cases with the label value '4'",
-           "Your map already uses place number 4 for another game. Change the 4 in the new case line to a place number that your map does not use yet. Then change `gameNumber` in frmWhiteout.cs to the same number."
+           "The line `case 4: game = new frmWhiteout(); break;` is in frmMap.cs twice. Delete one of the two lines."
           ]
          ],
          "id": "4-13.8",
@@ -4083,7 +4147,7 @@
          "n": 11
         },
         {
-         "do": "Click place number 4 on the map, the fifth place.",
+         "do": "Click the card for Slieve Bearnagh, the fifth card down the right side of the map.",
          "see": "Whiteout opens, with the mountain photo, a clue, a row of underscores and 26 letter buttons.",
          "img": {
           "img": "img/cap/c397.png",
@@ -4097,7 +4161,7 @@
             "y": 49.2,
             "w": 18.8,
             "h": 7.0,
-            "say": "Click place number 4 on the map, the fifth place."
+            "say": "Click the card for Slieve Bearnagh, the fifth card down the right side of the map."
            }
           ]
          },
@@ -4141,7 +4205,7 @@
            "pnlFog may have landed inside another control. Pick pnlFog from the list at the top of the Properties window. Check that its Location is `20, 8`. Then right-click picPeak and click **Send to Back**."
           ],
           [
-           "A different game opens, or nothing opens, when you click place number 4",
+           "A different game opens, or nothing opens, when you click the card for Slieve Bearnagh",
            "Check the new line in frmMap.cs. It must say `case 4:` and `new frmWhiteout()`."
           ]
          ],
@@ -4193,7 +4257,7 @@
        "p": "By the end of this screen, you know that every part of Whiteout works, including the letters it must refuse."
       },
       {
-       "p": "Run each test with F5. Tick each test when it passes. The 2 tests marked as letters to refuse must do nothing, and that counts as a pass."
+       "p": "Run each test with F5. Tick each test when it passes. In the 2 tests marked **Must be refused**, the game turns the letter away. That counts as a pass."
       },
       {
        "check": [
@@ -4262,7 +4326,7 @@
         {
          "what": "Finish a round, then click Back to the map.",
          "expect": "allowed",
-         "how": "The map shows again, and the flag on place number 4 shows a tick.",
+         "how": "The map shows again, and the flag on Slieve Bearnagh shows a tick.",
          "must": "Must happen",
          "fix": "Check that the first field at the top of frmWhiteout is `private int gameNumber = 4;`. Then check that frmMap opens Whiteout for `case 4:`.",
          "id": "4-15.t9"
@@ -4532,7 +4596,7 @@
         "task": [
          "Open Notepad and type at least 4 lines. On each line put a word, a bar `|`, then its clue, like `words.txt`.",
          "Save the text file in the Data folder inside bin\\Debug, with your own name, such as `cells.txt`.",
-         "Open your class file, `WordClue.cs`. Find the LoadAll method and change `words.txt` to the name of your text file.",
+         "Open your class file, the one you renamed on the screen before. It was `WordClue.cs`. Find the LoadAll method and change `words.txt` to the name of your text file.",
          "Make a folder for your picture inside bin\\Debug\\Images, such as Cells, and put your picture in the folder.",
          "Change the line in frmWhiteout_Load that loads `summit-bearnagh.jpg`, so it loads your picture from your folder.",
          "Add a line to `credits.txt` for each new picture and each new sound."
