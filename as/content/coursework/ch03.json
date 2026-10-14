@@ -1,0 +1,2109 @@
+{
+ "id": "03",
+ "n": 3,
+ "of": 20,
+ "title": "Players in a text file",
+ "kind": "a core chapter: the log in, the register form and the Top 10 all use what you make here",
+ "one": "You make a Player class that holds one player, and a PlayerFile class that reads every player from players.txt and adds new ones. A test button shows that both work.",
+ "prev": {
+  "id": "02",
+  "n": 2,
+  "title": "Set up Visual Studio 2019"
+ },
+ "next": {
+  "id": "04",
+  "n": 4,
+  "title": "Your own exceptions"
+ },
+ "stages": [
+  {
+   "title": "See how players.txt holds the players",
+   "screens": [
+    {
+     "title": "See what this chapter makes, and the words it uses",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know what the Player and PlayerFile classes do, and why a game needs them."
+      },
+      {
+       "p": "Summit Ready remembers every player who registers, even after the program closes. It keeps them in a text file, `players.txt`, in the Data folder."
+      },
+      {
+       "p": "This chapter makes 2 classes. Player holds one player. PlayerFile reads every player from `players.txt`, checks whether a username is taken, and adds new players to the end of the file."
+      },
+      {
+       "need": [
+        "Your project from chapter 2, with the Data folder in bin\\Debug (chapter 2).",
+        "The Files class from chapter 2, which finds `players.txt` (chapter 2).",
+        "About 2 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
+       ]
+      },
+      {
+       "words": [
+        [
+         "while",
+         "`while` runs a loop again and again, for as long as its test is true.",
+         "3-1",
+         true
+        ],
+        [
+         "not equal",
+         "`!=` means is not equal to. It is true when the two values are different.",
+         "3-1",
+         true
+        ],
+        [
+         "Length",
+         "How many values a list holds, or how many letters and symbols a piece of text has.",
+         "3-1",
+         true
+        ],
+        [
+         "text file",
+         "A file of plain letters and numbers, such as `players.txt`. You can open it in Notepad.",
+         "1-2",
+         false
+        ],
+        [
+         "object",
+         "One thing made from a class, with its own values. Each player in the game is one Player object.",
+         "2-1",
+         false
+        ],
+        [
+         "private",
+         "Only code inside the same class can use a `private` field.",
+         "2-1",
+         true
+        ],
+        [
+         "constructor",
+         "The method that runs when code makes a new object with `new`. It has the same name as the class.",
+         "2-2",
+         true
+        ],
+        [
+         "this",
+         "`this.username` means the field of this object, not the parameter with the same name.",
+         "2-2",
+         true
+        ],
+        [
+         "property",
+         "A named value of an object that other classes can read and change, such as `Username`. It has a `get` part and a `set` part.",
+         "2-3",
+         false
+        ],
+        [
+         "get",
+         "The part of a property that hands its value back to the code that asks.",
+         "2-3",
+         true
+        ],
+        [
+         "set",
+         "The part of a property that changes its value.",
+         "2-3",
+         true
+        ],
+        [
+         "value",
+         "Inside `set`, `value` holds whatever the code is trying to put in the property.",
+         "2-3",
+         true
+        ],
+        [
+         "override",
+         "`override` swaps a method that every class already has, such as ToString, for your own one.",
+         "2-4",
+         true
+        ],
+        [
+         "List",
+         "A row of values that grows as you add to it. `List<Player>` holds Player objects.",
+         "3-1",
+         true
+        ],
+        [
+         "StreamReader",
+         "Reads a text file one line at a time.",
+         "3-1",
+         true
+        ],
+        [
+         "StreamWriter",
+         "Writes lines to a text file.",
+         "3-2",
+         true
+        ],
+        [
+         "Split",
+         "Cuts a line into parts at every bar `|`, and gives you the parts as a list of values.",
+         "3-1",
+         true
+        ],
+        [
+         "foreach",
+         "Runs its lines once for every value in a list.",
+         "3-2",
+         true
+        ],
+        [
+         "continue",
+         "`continue` skips the rest of the loop for this time round, and goes on to the next one.",
+         "3-1",
+         true
+        ],
+        [
+         "ToLower",
+         "Gives a copy of some text in small letters, so `SummitSeeker` becomes `summitseeker`.",
+         "3-2",
+         true
+        ],
+        [
+         "temporary",
+         "Only there for now. The test button is temporary: chapter 4 deletes it.",
+         "4-1",
+         false
+        ]
+       ],
+       "intro": "You do not need to learn these words now. Where you first meet each one in the chapter, it has a dotted line under it. Hover over it or tap it to see what it means."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Open players.txt and read one line",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know what each part of a line in `players.txt` holds."
+      },
+      {
+       "p": "Each line of the [[text file|3]] is one player, with 4 parts split by a bar `|`. Open the file in Notepad to see it."
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "img": "img/cap/c040.png",
+          "alt": "File Explorer on bin\\Debug\\Data, with players.txt",
+          "w": 1139,
+          "h": 612,
+          "marks": [
+           {
+            "n": 1,
+            "x": 52.4,
+            "y": 28.8,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 2,
+            "x": 1.7,
+            "y": 4.6,
+            "say": "Click **Open Folder in File Explorer**, near the bottom of the menu."
+           },
+           {
+            "n": 3,
+            "x": 57.5,
+            "y": 27.0,
+            "w": 11.4,
+            "h": 3.4,
+            "say": "Double-click **bin**, then **Debug**, then **Data**."
+           }
+          ]
+         },
+         "id": "1-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click **Open Folder in File Explorer**, near the bottom of the menu.",
+         "see": "File Explorer opens on your project's folder.",
+         "id": "1-2.2",
+         "n": 2
+        },
+        {
+         "do": "Double-click **bin**, then **Debug**, then **Data**.",
+         "see": "The Data folder shows its 9 text files.",
+         "id": "1-2.3",
+         "n": 3
+        },
+        {
+         "do": "Double-click `players.txt`.",
+         "see": "Notepad opens `players.txt`. It holds 12 lines, one for each player.",
+         "img": {
+          "img": "img/cap/c041.png",
+          "alt": "players.txt open in Notepad, with its 12 lines",
+          "w": 1433,
+          "h": 538,
+          "marks": [
+           {
+            "n": 4,
+            "x": 6.2,
+            "y": 2.7,
+            "say": "Double-click `players.txt`."
+           },
+           {
+            "n": 5,
+            "x": 98.0,
+            "y": 2.7,
+            "say": "Click the cross at the top right of Notepad."
+           }
+          ]
+         },
+         "id": "1-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click the cross at the top right of Notepad.",
+         "see": "Notepad closes. Nothing in the file has changed.",
+         "id": "1-2.5",
+         "n": 5
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c03-players",
+        "kind": "read",
+        "title": "players.txt: the first 3 lines",
+        "lang": "txt",
+        "text": "summitSeeker|peaks2026|avatar-goat.png|01/09/2026\nridgeRunner|summit42|avatar-goat.png|03/09/2026\nbogTrotter|heather7|avatar-fox.png|05/09/2026",
+        "partLines": [
+         [
+          1,
+          3,
+          "One player on each line",
+          "The 4 parts are the username, the password, the avatar picture, and the date the player joined. The avatar is a file name from the Avatars folder."
+         ]
+        ]
+       }
+      },
+      {
+       "p": "A real game would never keep passwords where anyone can read them. Summit Ready does, so you can see every part of the file while you build it."
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "1"
+  },
+  {
+   "title": "Make the Player class",
+   "screens": [
+    {
+     "title": "Add Player.cs and its 4 fields",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has a Player class with a field for each part of a line."
+      },
+      {
+       "p": "Each player in the game is one [[object|4]] made from the Player class. A field is a named box inside the object that holds one value. The 4 fields hold the 4 parts of the player's line. They are `private`, so only Player can change them."
+      },
+      {
+       "code": {
+        "id": "c03-player-fields",
+        "kind": "type",
+        "title": "Player.cs: the class and its 4 fields",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// One player: a line of players.txt (chapters 3 and 4)\nclass Player\n{\n    private string username;\n    private string password;\n    private string avatar;\n    private string joined;",
+        "partLines": [
+         [
+          1,
+          3,
+          "The class",
+          "Player is not `static`, which means you can make many players from it. Each player is a new object, with its own 4 values."
+         ],
+         [
+          4,
+          7,
+          "The 4 fields",
+          "One field for each part of a line in `players.txt`. They start with a small letter, because they are private. The comment says chapters 3 and 4, because chapter 4 adds the rules that finish this class."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          7
+         ]
+        ],
+        "typed": 5,
+        "wordMarks": [
+         [
+          4,
+          4,
+          18,
+          5
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "img": "img/cap/c023.png",
+          "alt": "The project menu, with Add pointed at and Class in the second menu",
+          "w": 959,
+          "h": 616,
+          "marks": [
+           {
+            "n": 1,
+            "x": 73.0,
+            "y": 5.4,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 2,
+            "x": 39.6,
+            "y": 38.6,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 3,
+            "x": 6.2,
+            "y": 93.2,
+            "say": "Click **Class...** at the bottom of the second menu."
+           }
+          ]
+         },
+         "id": "2-1.1",
+         "n": 1
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "2-1.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Class...** at the bottom of the second menu.",
+         "see": "The Add New Item window opens. Class is picked, and the Name box at the bottom says `Class1.cs`.",
+         "id": "2-1.3",
+         "n": 3
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "img": "img/cap/c024.png",
+          "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
+          "w": 948,
+          "h": 660,
+          "marks": [
+           {
+            "n": 4,
+            "x": 16.9,
+            "y": 92.1,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "x": 42.2,
+            "y": 92.1,
+            "say": "Type `Player.cs`"
+           },
+           {
+            "n": 6,
+            "x": 85.7,
+            "y": 96.5,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "2-1.4",
+         "n": 4
+        },
+        {
+         "do": "Type `Player.cs`",
+         "see": "The Name box shows `Player.cs`.",
+         "id": "2-1.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "`Player.cs` opens in the code editor, with `class Player` and an empty pair of curly brackets.",
+         "id": "2-1.6",
+         "n": 6
+        },
+        {
+         "do": "Drag from the start of `class Player` down to the end of the `{` under it, so that what you type next replaces them.",
+         "see": "`class Player` and the `{` under it turn blue. The 2 `}` under them stay white.",
+         "img": {
+          "img": "img/cap/c533.png",
+          "alt": "Player.cs, with a box round class Player and the { under it",
+          "w": 1102,
+          "h": 679,
+          "marks": [
+           {
+            "n": 7,
+            "x": 13.1,
+            "y": 24.7,
+            "w": 8.8,
+            "h": 5.8,
+            "say": "Drag from the start of `class Player` down to the end of the `{` under it, so that what you type next replaces them."
+           },
+           {
+            "n": 8,
+            "x": 14.0,
+            "y": 26.3,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 9,
+            "x": 5.0,
+            "y": 1.4,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 10,
+            "x": 6.4,
+            "y": 97.7,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "id": "2-1.7",
+         "n": 7
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The comment, the class line and the 4 fields are where `class Player` was. The `}` that closes the class is under them.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "2-1.8",
+         "n": 8
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `Player.cs` on the tab disappears.",
+         "id": "2-1.9",
+         "n": 9
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "2-1.10",
+         "n": 10
+        }
+       ]
+      },
+      {
+       "p": "Visual Studio 2019 draws a green line under each field. This is normal: it means no code uses the field yet, and the green lines go once you type the next screen."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Type the 2 constructors",
+     "blocks": [
+      {
+       "p": "By the end of this screen, code can make an empty Player, or a Player filled in from one line of the file."
+      },
+      {
+       "p": "A [[constructor|6]] runs when code writes `new Player`. Player has 2 of them. C# picks the one that matches what the code hands it: nothing, or all 4 parts."
+      },
+      {
+       "code": {
+        "id": "c03-player-ctors",
+        "kind": "type",
+        "title": "The 2 constructors",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// An empty player: the register form fills it in, rule by rule\npublic Player()\n{\n    username = \"\";\n    password = \"\";\n    avatar = \"\";\n    joined = DateTime.Now.ToString(\"dd/MM/yyyy\");\n}\n\n// A player read from players.txt: the rules are skipped\npublic Player(string username, string password, string avatar,\n    string joined)\n{\n    this.username = username;\n    this.password = password;\n    this.avatar = avatar;\n    this.joined = joined;\n}",
+        "partLines": [
+         [
+          1,
+          8,
+          "An empty player",
+          "`new Player()` makes a player with nothing in it yet. The register form fills it in, one box at a time. `joined` is set to the date today, written like 02/09/2026."
+         ],
+         [
+          10,
+          18,
+          "A player from the file",
+          "The second constructor takes all 4 parts, so PlayerFile can make a player from one line. Each parameter has the same name as a field. `this.username` is the field, and `username` on its own is the parameter."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          18
+         ]
+        ],
+        "typed": 11,
+        "wordMarks": [
+         [
+          2,
+          0,
+          14,
+          6
+         ],
+         [
+          14,
+          4,
+          9,
+          7
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the line `private string joined;`",
+         "see": "The flashing cursor is after the semicolon.",
+         "img": {
+          "img": "img/cap/c043.png",
+          "alt": "Player.cs, with the 2 constructors under the 4 fields",
+          "w": 1102,
+          "h": 679,
+          "marks": [
+           {
+            "n": 1,
+            "x": 31.3,
+            "y": 40.5,
+            "say": "Click at the end of the line `private string joined;`"
+           },
+           {
+            "n": 2,
+            "x": 16.6,
+            "y": 45.2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "x": 15.7,
+            "y": 43.6,
+            "w": 41.6,
+            "h": 43.4,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 4,
+            "x": 5.0,
+            "y": 1.4,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 5,
+            "x": 6.4,
+            "y": 97.7,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "id": "2-2.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under it. The flashing cursor is on the new empty line.",
+         "id": "2-2.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The 2 constructors are under the fields. No line has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "2-2.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `Player.cs` on the tab disappears.",
+         "id": "2-2.4",
+         "n": 4
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "2-2.5",
+         "n": 5
+        }
+       ]
+      },
+      {
+       "p": "The parameter line of the second constructor is long, so it carries on onto a second line. C# reads the 2 lines as one, up to the `)`."
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Type the properties, for now with no rules",
+     "blocks": [
+      {
+       "p": "By the end of this screen, other classes can read and change a player's username, password, avatar and date."
+      },
+      {
+       "p": "Other classes cannot touch the private fields. They use a [[property|8]] instead. The `get` part hands the value back, and the `set` part changes it."
+      },
+      {
+       "p": "For now, each `set` puts the new value straight into the field. Chapter 4 adds the rules, such as a username of 3 to 12 letters and numbers."
+      },
+      {
+       "code": {
+        "id": "c03-player-props",
+        "kind": "type",
+        "title": "Username, Password and Avatar, with no rules yet",
+        "lang": "cs",
+        "text": "// The username\npublic string Username\n{\n    get { return username; }\n    set { username = value; }\n}\n\n// The password\npublic string Password\n{\n    get { return password; }\n    set { password = value; }\n}\n\n// The avatar's file name\npublic string Avatar\n{\n    get { return avatar; }\n    set { avatar = value; }\n}",
+        "noCopy": true,
+        "partLines": [
+         [
+          1,
+          6,
+          "Username",
+          "A property starts with a capital letter, and its field with a small one. `value` is whatever the code puts in, as in `p.Username = \"fellWalker\";`."
+         ],
+         [
+          8,
+          13,
+          "Password",
+          "Password works the same way."
+         ],
+         [
+          15,
+          20,
+          "Avatar",
+          "So does Avatar."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          20
+         ]
+        ],
+        "typed": 9,
+        "wordMarks": [
+         [
+          4,
+          4,
+          9,
+          9
+         ],
+         [
+          5,
+          4,
+          9,
+          10
+         ],
+         [
+          5,
+          21,
+          26,
+          11
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes the second constructor.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "img": "img/cap/c044.png",
+          "alt": "Player.cs, with Username, Password and Avatar under the constructors",
+          "w": 1102,
+          "h": 679,
+          "marks": [
+           {
+            "n": 1,
+            "x": 18.0,
+            "y": 31.0,
+            "say": "Click at the end of the `}` that closes the second constructor."
+           },
+           {
+            "n": 2,
+            "x": 16.6,
+            "y": 35.7,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "x": 15.7,
+            "y": 34.1,
+            "w": 19.9,
+            "h": 48.3,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 4,
+            "x": 5.0,
+            "y": 1.4,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 5,
+            "x": 6.4,
+            "y": 97.7,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "id": "2-3.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under it. The flashing cursor is on the new empty line.",
+         "id": "2-3.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The 3 properties are under the constructors. No line has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "2-3.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `Player.cs` on the tab disappears.",
+         "id": "2-3.4",
+         "n": 4
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "2-3.5",
+         "n": 5
+        }
+       ]
+      },
+      {
+       "p": "Joined has a property too. Type it under Avatar."
+      },
+      {
+       "code": {
+        "id": "c03-player-joined",
+        "kind": "type",
+        "title": "Joined",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// The date the player joined, like 02/09/2026\npublic string Joined\n{\n    get { return joined; }\n    set { joined = value; }\n}",
+        "partLines": [
+         [
+          1,
+          6,
+          "Joined",
+          "Joined never has a rule, so this is its final version."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          6
+         ]
+        ],
+        "typed": 3
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes Avatar.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "img": "img/cap/c045.png",
+          "alt": "Player.cs, with Joined under Avatar",
+          "w": 1102,
+          "h": 679,
+          "marks": [
+           {
+            "n": 6,
+            "x": 18.0,
+            "y": 64.0,
+            "say": "Click at the end of the `}` that closes Avatar."
+           },
+           {
+            "n": 7,
+            "x": 16.6,
+            "y": 68.6,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 8,
+            "x": 15.7,
+            "y": 67.0,
+            "w": 30.7,
+            "h": 15.3,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 9,
+            "x": 5.0,
+            "y": 1.4,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 10,
+            "x": 6.4,
+            "y": 97.7,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "id": "2-3.6",
+         "n": 6
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under it. The flashing cursor is on the new empty line.",
+         "id": "2-3.7",
+         "n": 7
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "Joined is under Avatar. No line has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "2-3.8",
+         "n": 8
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `Player.cs` on the tab disappears.",
+         "id": "2-3.9",
+         "n": 9
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "2-3.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Type ToString, which turns a player back into a line",
+     "blocks": [
+      {
+       "p": "By the end of this screen, a Player can turn itself back into one line of `players.txt`."
+      },
+      {
+       "p": "Every class has a ToString method that gives the object as words. Player swaps it for its own one, with `override`, so the words are a line of the file."
+      },
+      {
+       "code": {
+        "id": "c03-player-tostring",
+        "kind": "type",
+        "title": "ToString",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// The player as one line of players.txt\npublic override string ToString()\n{\n    return username + \"|\" + password + \"|\" + avatar + \"|\" + joined;\n}",
+        "partLines": [
+         [
+          1,
+          5,
+          "ToString",
+          "`override` swaps the ToString that every class has for this one. It joins the 4 fields with a bar `|` between them, in the same order as the file."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          5
+         ]
+        ],
+        "typed": 2,
+        "wordMarks": [
+         [
+          2,
+          7,
+          15,
+          12
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes Joined.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "img": "img/cap/c046.png",
+          "alt": "Player.cs, with ToString under Joined",
+          "w": 1102,
+          "h": 679,
+          "marks": [
+           {
+            "n": 1,
+            "x": 18.0,
+            "y": 66.3,
+            "say": "Click at the end of the `}` that closes Joined."
+           },
+           {
+            "n": 2,
+            "x": 16.6,
+            "y": 71.0,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "x": 15.7,
+            "y": 69.4,
+            "w": 44.0,
+            "h": 13.0,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 4,
+            "x": 5.0,
+            "y": 1.4,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 5,
+            "x": 6.4,
+            "y": 97.7,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "id": "2-4.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under it. The flashing cursor is on the new empty line.",
+         "id": "2-4.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The new lines are under Joined, inside the class. No line has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "2-4.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star on the tab at the top of the code editor disappears.",
+         "id": "2-4.4",
+         "n": 4
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "2-4.5",
+         "n": 5
+        }
+       ]
+      },
+      {
+       "p": "The Player class is ready for this chapter. Chapter 4 adds the rules, and one more method, between Joined and ToString."
+      }
+     ],
+     "id": "4"
+    }
+   ],
+   "id": "2"
+  },
+  {
+   "title": "Make the PlayerFile class",
+   "screens": [
+    {
+     "title": "Add PlayerFile.cs, and type LoadAll",
+     "blocks": [
+      {
+       "p": "By the end of this screen, PlayerFile can read every player in `players.txt` into a list."
+      },
+      {
+       "p": "PlayerFile is the only class that opens `players.txt`. Every form asks PlayerFile, and never opens the file itself."
+      },
+      {
+       "p": "PlayerFile.cs needs one extra `using` line, for the classes that read and write files."
+      },
+      {
+       "code": {
+        "id": "c03-pf-using",
+        "kind": "type",
+        "title": "The using line for PlayerFile.cs",
+        "lang": "cs",
+        "text": "using System.IO;",
+        "noCopy": true,
+        "partLines": [
+         [
+          1,
+          1,
+          "The using line",
+          "`System.IO` has StreamReader and StreamWriter, which read and write text files."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          1
+         ]
+        ],
+        "typed": 1
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "img": "img/cap/c023.png",
+          "alt": "The project menu, with Add pointed at and Class in the second menu",
+          "w": 959,
+          "h": 616,
+          "marks": [
+           {
+            "n": 1,
+            "x": 73.0,
+            "y": 5.4,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 2,
+            "x": 39.6,
+            "y": 38.6,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 3,
+            "x": 6.2,
+            "y": 93.2,
+            "say": "Click **Class...** at the bottom of the second menu."
+           }
+          ]
+         },
+         "id": "3-1.1",
+         "n": 1
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "3-1.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Class...** at the bottom of the second menu.",
+         "see": "The Add New Item window opens. Class is picked, and the Name box at the bottom says `Class1.cs`.",
+         "id": "3-1.3",
+         "n": 3
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "img": "img/cap/c024.png",
+          "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
+          "w": 948,
+          "h": 660,
+          "marks": [
+           {
+            "n": 4,
+            "x": 16.9,
+            "y": 92.1,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "x": 42.2,
+            "y": 92.1,
+            "say": "Type `PlayerFile.cs`"
+           },
+           {
+            "n": 6,
+            "x": 85.7,
+            "y": 96.5,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "3-1.4",
+         "n": 4
+        },
+        {
+         "do": "Type `PlayerFile.cs`",
+         "see": "The Name box shows `PlayerFile.cs`.",
+         "id": "3-1.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "`PlayerFile.cs` opens in the code editor, with `class PlayerFile` and an empty pair of curly brackets.",
+         "id": "3-1.6",
+         "n": 6
+        },
+        {
+         "do": "Click at the end of the line `using System.Threading.Tasks;`",
+         "see": "The flashing cursor is after the semicolon.",
+         "img": {
+          "img": "img/cap/c047.png",
+          "alt": "PlayerFile.cs, with using System.IO; added under the other using lines",
+          "w": 1102,
+          "h": 416,
+          "marks": [
+           {
+            "n": 7,
+            "x": 30.7,
+            "y": 27.6,
+            "say": "Click at the end of the line `using System.Threading.Tasks;`"
+           },
+           {
+            "n": 8,
+            "x": 11.4,
+            "y": 31.5,
+            "say": "Press Enter, then type the yellow line."
+           }
+          ]
+         },
+         "id": "3-1.7",
+         "n": 7
+        },
+        {
+         "do": "Press Enter, then type the yellow line.",
+         "see": "`using System.IO;` is under `using System.Threading.Tasks;`.",
+         "id": "3-1.8",
+         "n": 8
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c03-pf-loadall",
+        "kind": "type",
+        "title": "PlayerFile.cs: the class and LoadAll",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// Reads and adds to players.txt (chapters 3 and 4)\nstatic class PlayerFile\n{\n    // Reads every player in players.txt into a list\n    public static List<Player> LoadAll()\n    {\n        List<Player> players = new List<Player>();\n        string path = Files.Data(\"players.txt\");\n        if (!File.Exists(path)) return players;   // no file: no players\n        StreamReader reader = new StreamReader(path);\n        while (!reader.EndOfStream)\n        {\n            string line = reader.ReadLine();\n            string[] parts = line.Split('|');\n            if (parts.Length != 4) continue;      // skip a broken line\n            players.Add(new Player(parts[0], parts[1], parts[2],\n                parts[3]));\n        }\n        reader.Close();\n        return players;\n    }",
+        "partLines": [
+         [
+          1,
+          3,
+          "The class",
+          "`static` means you never make a PlayerFile object. There is only one `players.txt`, so one PlayerFile does the job."
+         ],
+         [
+          4,
+          9,
+          "Start with an empty list",
+          "LoadAll gives back a `List<Player>`. It starts empty. If `players.txt` is not there, LoadAll hands back the empty list, so the game carries on with no players."
+         ],
+         [
+          10,
+          18,
+          "Read one line at a time",
+          "The `while` loop repeats its lines until the reader reaches the end of the file. `Split('|')` cuts each line at the bars into parts. A line without exactly 4 parts is broken, so `continue` skips it. A good line becomes a new Player, made by the second constructor, and goes into the list."
+         ],
+         [
+          19,
+          21,
+          "Close the file",
+          "`Close` lets go of the file, so other code can open it. Then LoadAll hands back the full list."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          21
+         ]
+        ],
+        "typed": 14,
+        "wordMarks": [
+         [
+          11,
+          8,
+          13,
+          0
+         ],
+         [
+          15,
+          29,
+          31,
+          1
+         ],
+         [
+          15,
+          21,
+          28,
+          2
+         ],
+         [
+          5,
+          18,
+          30,
+          13
+         ],
+         [
+          10,
+          8,
+          20,
+          14
+         ],
+         [
+          14,
+          34,
+          39,
+          16
+         ],
+         [
+          15,
+          35,
+          43,
+          18
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Drag from the start of `class PlayerFile` down to the end of the `{` under it. What you type next replaces them.",
+         "see": "`class PlayerFile` and the `{` under it turn blue. The 2 `}` under them stay white.",
+         "img": {
+          "img": "img/cap/c048.png",
+          "alt": "PlayerFile.cs, with LoadAll typed in place of class PlayerFile",
+          "w": 1102,
+          "h": 679,
+          "marks": [
+           {
+            "n": 9,
+            "x": 14.0,
+            "y": 28.6,
+            "say": "Drag from the start of `class PlayerFile` down to the end of the `{` under it. What you type next replaces them."
+           },
+           {
+            "n": 10,
+            "x": 13.1,
+            "y": 27.0,
+            "w": 47.2,
+            "h": 50.6,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 11,
+            "x": 5.0,
+            "y": 1.4,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 12,
+            "x": 6.4,
+            "y": 97.7,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "id": "3-1.9",
+         "n": 9
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "LoadAll is inside the class. The `}` that closes the class is under it.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "3-1.10",
+         "n": 10
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `PlayerFile.cs` on the tab disappears.",
+         "id": "3-1.11",
+         "n": 11
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "3-1.12",
+         "n": 12
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Type Exists and Add",
+     "blocks": [
+      {
+       "p": "By the end of this screen, PlayerFile can check whether a username is taken, and add a new player to the file."
+      },
+      {
+       "p": "Exists looks at every player with [[foreach|17]]. It compares the names in small letters, so `SummitSeeker` and `summitseeker` count as the same name."
+      },
+      {
+       "code": {
+        "id": "c03-pf-exists",
+        "kind": "type",
+        "title": "Exists",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// True when a player has this username, in any capitals\npublic static bool Exists(string username)\n{\n    List<Player> players = LoadAll();\n    foreach (Player p in players)\n    {\n        if (p.Username.ToLower() == username.ToLower()) return true;\n    }\n    return false;\n}",
+        "partLines": [
+         [
+          1,
+          10,
+          "Exists",
+          "Exists loads every player, then looks at each one in turn. `ToLower` turns both names into small letters before they are compared. The first match hands back true at once. If the loop ends with no match, Exists hands back false."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          10
+         ]
+        ],
+        "typed": 5,
+        "wordMarks": [
+         [
+          4,
+          4,
+          16,
+          13
+         ],
+         [
+          5,
+          4,
+          11,
+          17
+         ],
+         [
+          7,
+          23,
+          30,
+          19
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes LoadAll.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "img": "img/cap/c049.png",
+          "alt": "PlayerFile.cs, with Exists under LoadAll",
+          "w": 1102,
+          "h": 679,
+          "marks": [
+           {
+            "n": 1,
+            "x": 18.0,
+            "y": 54.6,
+            "say": "Click at the end of the `}` that closes LoadAll."
+           },
+           {
+            "n": 2,
+            "x": 16.6,
+            "y": 59.3,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "x": 15.7,
+            "y": 57.7,
+            "w": 44.7,
+            "h": 24.7,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 4,
+            "x": 5.0,
+            "y": 1.4,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 5,
+            "x": 6.4,
+            "y": 97.7,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "id": "3-2.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under it. The flashing cursor is on the new empty line.",
+         "id": "3-2.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The new lines are under LoadAll, inside the class. No line has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "3-2.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star on the tab at the top of the code editor disappears.",
+         "id": "3-2.4",
+         "n": 4
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "3-2.5",
+         "n": 5
+        }
+       ]
+      },
+      {
+       "p": "Add writes a new player at the end of the file. Chapter 4 makes Add refuse a username that is taken. For now, it adds whatever it is given."
+      },
+      {
+       "code": {
+        "id": "c03-pf-add",
+        "kind": "type",
+        "title": "Add, with no rule yet",
+        "lang": "cs",
+        "text": "// Adds a new player to the end of players.txt\npublic static void Add(Player p)\n{\n    StreamWriter writer = new StreamWriter(Files.Data(\"players.txt\"),\n        true);                                // true: add to the end\n    writer.WriteLine(p.ToString());\n    writer.Close();\n}",
+        "noCopy": true,
+        "partLines": [
+         [
+          1,
+          8,
+          "Add",
+          "The `true` after the path tells the StreamWriter to add to the end of the file. Without it, the StreamWriter would wipe the file and every player in it. `p.ToString()` is the player as one line."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          8
+         ]
+        ],
+        "typed": 5,
+        "wordMarks": [
+         [
+          4,
+          4,
+          16,
+          15
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes Exists.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "img": "img/cap/c050.png",
+          "alt": "PlayerFile.cs, with Add under Exists",
+          "w": 1102,
+          "h": 679,
+          "marks": [
+           {
+            "n": 6,
+            "x": 18.0,
+            "y": 59.3,
+            "say": "Click at the end of the `}` that closes Exists."
+           },
+           {
+            "n": 7,
+            "x": 16.6,
+            "y": 64.0,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 8,
+            "x": 15.7,
+            "y": 62.3,
+            "w": 45.3,
+            "h": 20.0,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 9,
+            "x": 5.0,
+            "y": 1.4,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 10,
+            "x": 6.4,
+            "y": 97.7,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "id": "3-2.6",
+         "n": 6
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under it. The flashing cursor is on the new empty line.",
+         "id": "3-2.7",
+         "n": 7
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The new lines are under Exists, inside the class. No line has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "3-2.8",
+         "n": 8
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star on the tab at the top of the code editor disappears.",
+         "id": "3-2.9",
+         "n": 9
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "3-2.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "3"
+  },
+  {
+   "title": "Test Player and PlayerFile with a temporary button",
+   "screens": [
+    {
+     "title": "Put a temporary Test button on frmLogin",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmLogin has a [[temporary|20]] button that you click to test Player and PlayerFile."
+      },
+      {
+       "p": "The classes do not show anything on the screen. A test button runs them, and shows what they did in message boxes."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmLogin.cs [Design]** tab at the top of the editor.",
+         "see": "The designer shows frmLogin.",
+         "img": {
+          "img": "img/cap/c051.png",
+          "alt": "frmLogin in the designer, with the Test button on it",
+          "w": 1102,
+          "h": 563,
+          "marks": [
+           {
+            "n": 1,
+            "x": 61.7,
+            "y": 3.0,
+            "say": "Click the **frmLogin.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 2,
+            "x": 1.4,
+            "y": 4.6,
+            "say": "Click **Toolbox** on the left edge of Visual Studio 2019."
+           },
+           {
+            "n": 3,
+            "x": 64.9,
+            "y": 54.1,
+            "say": "Drag **Button** from the Common Controls group onto the middle of frmLogin."
+           }
+          ]
+         },
+         "id": "4-1.1",
+         "n": 1
+        },
+        {
+         "do": "Click **Toolbox** on the left edge of Visual Studio 2019.",
+         "see": "The Toolbox opens.",
+         "id": "4-1.2",
+         "n": 2
+        },
+        {
+         "do": "Drag **Button** from the Common Controls group onto the middle of frmLogin.",
+         "see": "A button called button1 is on the form.",
+         "id": "4-1.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Button",
+          "name": "btnTest",
+          "settings": [
+           "Text = Test"
+          ],
+          "note": "Drop it in the middle of frmLogin. It is temporary: chapter 4 deletes it.",
+          "then": "The button is named `btnTest` and its text says Test."
+         }
+        ],
+        "done": {
+         "see": "frmLogin has one button that says Test.",
+         "img": {
+          "img": "img/cap/c052.png",
+          "alt": "frmLogin with the Test button, and the Properties window showing btnTest",
+          "w": 1568,
+          "h": 515,
+          "marks": []
+         }
+        }
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click the Test button on frmLogin.",
+         "see": "The code editor opens `frmLogin.cs`, with a new empty method called `btnTest_Click`.",
+         "img": {
+          "img": "img/cap/c053.png",
+          "alt": "frmLogin.cs, with the new empty btnTest_Click",
+          "w": 1102,
+          "h": 404,
+          "marks": [
+           {
+            "n": 4,
+            "x": 15.6,
+            "y": 69.4,
+            "w": 35.6,
+            "h": 17.6,
+            "say": "Double-click the Test button on frmLogin."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The new method is called `button1_Click`",
+           "You double-clicked before you named the button. Press Ctrl and Z together to undo. Click the button once, then type `btnTest` in the (Name) box in the Properties window. Double-click the button again."
+          ]
+         ],
+         "id": "4-1.4",
+         "n": 4
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Type the test code, and run it",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have seen PlayerFile add a test player to `players.txt` and read every player back."
+      },
+      {
+       "p": "The test makes a new player with the empty constructor, and sets its 3 properties. If the username is not taken, Add writes it to the file. Then LoadAll counts every player."
+      },
+      {
+       "code": {
+        "id": "c03-test",
+        "kind": "type",
+        "title": "btnTest_Click: the test code",
+        "lang": "cs",
+        "text": "private void btnTest_Click(object sender, EventArgs e)\n{\n    Player p = new Player();\n    p.Username = \"testClimber\";\n    p.Password = \"rope2026\";\n    p.Avatar = \"avatar-fox.png\";\n    if (PlayerFile.Exists(p.Username))\n    {\n        MessageBox.Show(p.Username + \" is already in players.txt.\");\n    }\n    else\n    {\n        PlayerFile.Add(p);\n        MessageBox.Show(\"Added: \" + p.ToString());\n    }\n    List<Player> players = PlayerFile.LoadAll();\n    MessageBox.Show(\"players.txt holds \" + players.Count + \" players.\");\n}",
+        "noCopy": true,
+        "partLines": [
+         [
+          1,
+          6,
+          "Make a test player",
+          "`new Player()` runs the empty constructor. The 3 lines after it use the `set` part of each property."
+         ],
+         [
+          7,
+          15,
+          "Add it, once",
+          "If testClimber is in the file already, the test says so. Otherwise Add writes the player at the end of the file, and the message shows the line it wrote."
+         ],
+         [
+          16,
+          18,
+          "Count every player",
+          "LoadAll reads the whole file again. `Count` is how many players are in the list."
+         ]
+        ],
+        "focusLines": [
+         [
+          3,
+          17
+         ]
+        ],
+        "typed": 11,
+        "wordMarks": [
+         [
+          16,
+          4,
+          16,
+          13
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click on the empty line between the `{` and the `}` of btnTest_Click.",
+         "see": "The flashing cursor is inside btnTest_Click.",
+         "img": {
+          "img": "img/cap/c054.png",
+          "alt": "btnTest_Click with the yellow lines typed",
+          "w": 1102,
+          "h": 618,
+          "marks": [
+           {
+            "n": 1,
+            "x": 18.8,
+            "y": 59.2,
+            "say": "Click on the empty line between the `{` and the `}` of btnTest_Click."
+           },
+           {
+            "n": 2,
+            "x": 17.8,
+            "y": 57.4,
+            "w": 44.7,
+            "h": 39.8,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 3,
+            "x": 5.0,
+            "y": 8.5,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 4,
+            "x": 44.1,
+            "y": 3.0,
+            "say": "Press F5 to run the game."
+           }
+          ]
+         },
+         "id": "4-2.1",
+         "n": 1
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The 11 yellow lines are inside btnTest_Click. No line has a red underline.",
+         "wrong": [
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "4-2.2",
+         "n": 2
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `frmLogin.cs` on the tab disappears.",
+         "id": "4-2.3",
+         "n": 3
+        },
+        {
+         "do": "Press F5 to run the game.",
+         "see": "The Summit Ready - Log in window opens.",
+         "id": "4-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click **Test**.",
+         "see": "A message says **Added:** and then `testClimber|rope2026|avatar-fox.png|` with today's date.",
+         "img": {
+          "img": "img/cap/c055.png",
+          "alt": "The message that says Added, with the test player's line",
+          "w": 1002,
+          "h": 691,
+          "marks": [
+           {
+            "n": 5,
+            "x": 65.9,
+            "y": 37.7,
+            "say": "Click **Test**."
+           },
+           {
+            "n": 6,
+            "x": 62.0,
+            "y": 61.1,
+            "say": "Click **OK**."
+           },
+           {
+            "n": 7,
+            "x": 97.6,
+            "y": 2.1,
+            "say": "Click **OK**, then click the cross at the top right of the Summit Ready - Log in window."
+           }
+          ]
+         },
+         "id": "4-2.5",
+         "n": 5
+        },
+        {
+         "do": "Click **OK**.",
+         "see": "A second message says **players.txt holds 13 players.**",
+         "id": "4-2.6",
+         "n": 6
+        },
+        {
+         "do": "Click **OK**, then click the cross at the top right of the Summit Ready - Log in window.",
+         "see": "The window closes, and Visual Studio 2019 comes back.",
+         "id": "4-2.7",
+         "n": 7
+        }
+       ]
+      },
+      {
+       "p": "Open `players.txt` in Notepad again. testClimber is the last line, with the same 4 parts as every other line."
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Check that Player and PlayerFile work",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that Player and PlayerFile work, and that they skip a broken line and refuse a taken name."
+      },
+      {
+       "p": "Run each test with F5 and the Test button. Each test says what must not happen. If it happens, the test fails."
+      },
+      {
+       "check": [
+        {
+         "what": "Click Test once, with testClimber not yet in `players.txt`.",
+         "expect": "allowed",
+         "how": "The first message says **Added:** and shows the test player's line.",
+         "must": "Must happen",
+         "fix": "Check Add and ToString against their yellow lines.",
+         "id": "4-3.t1"
+        },
+        {
+         "what": "Close the program, press F5 again, and click Test a second time.",
+         "expect": "control",
+         "how": "The first message says **testClimber is already in players.txt.** There must not be a second testClimber line, and the count stays at 13.",
+         "fix": "Check Exists. Each name must use `ToLower()`, and `return true;` must be inside the `if`.",
+         "id": "4-3.t2"
+        },
+        {
+         "what": "In btnTest_Click, change `\"testClimber\"` to `\"TESTCLIMBER\"`. Then press F5 and click Test.",
+         "expect": "control",
+         "how": "TESTCLIMBER must not be added, because it is the same name in other capitals. The message says it is already there.",
+         "fix": "Check that Exists compares both names with `ToLower()`. Change the name back to `\"testClimber\"` after the test.",
+         "id": "4-3.t3"
+        },
+        {
+         "what": "Open `players.txt` in Notepad. Type `broken line` on a new last line and save. Then press F5 and click Test.",
+         "expect": "control",
+         "how": "The program must not crash, and the count must stay at 13. LoadAll skips the broken line.",
+         "fix": "Check the line `if (parts.Length != 4) continue;` in LoadAll. Delete the broken line from `players.txt` after the test.",
+         "id": "4-3.t4"
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "turn-own-player",
+        "kind": "turn",
+        "title": "Add a player with your own username",
+        "lang": "cs",
+        "text": "p.Username = \"testClimber\";\np.Avatar = \"avatar-fox.png\";",
+        "task": [
+         "In btnTest_Click, change the username to one of your own. Use letters and numbers only, because a bar `|` would break the line.",
+         "Change the password to one of your own, with letters and numbers.",
+         "Change the avatar to another picture in the Avatars folder, such as `avatar-owl.png`."
+        ],
+        "test": "Press F5 and click Test.",
+        "expect": "The first message shows your own player's line, and the count goes up by one.",
+        "hint": "The 3 values are in the 3 lines that start with `p.`. Each picture's file name is in `bin\\Debug\\Images\\Avatars`."
+       }
+      },
+      {
+       "p": "Keep the Test button for now. Chapter 4 uses it to test the rules, and then deletes it."
+      },
+      {
+       "box": {
+        "title": "Evidence to keep",
+        "blocks": [
+         {
+          "p": "Take a screenshot of the message that says **Added:**, and of the message with the count."
+         },
+         {
+          "p": "Take a screenshot of `players.txt` in Notepad, showing your new players at the end."
+         },
+         {
+          "p": "Paste each screenshot into your testing document, beside the test it shows."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "3"
+    }
+   ],
+   "id": "4"
+  }
+ ],
+ "glossary": [
+  [
+   "while",
+   "`while` runs a loop again and again, for as long as its test is true."
+  ],
+  [
+   "not equal",
+   "`!=` means is not equal to. It is true when the two values are different."
+  ],
+  [
+   "Length",
+   "How many values a list holds, or how many letters and symbols a piece of text has."
+  ],
+  [
+   "text file",
+   "A file of plain letters and numbers, such as `players.txt`. You can open it in Notepad."
+  ],
+  [
+   "object",
+   "One thing made from a class, with its own values. Each player in the game is one Player object."
+  ],
+  [
+   "private",
+   "Only code inside the same class can use a `private` field."
+  ],
+  [
+   "constructor",
+   "The method that runs when code makes a new object with `new`. It has the same name as the class."
+  ],
+  [
+   "this",
+   "`this.username` means the field of this object, not the parameter with the same name."
+  ],
+  [
+   "property",
+   "A named value of an object that other classes can read and change, such as `Username`. It has a `get` part and a `set` part."
+  ],
+  [
+   "get",
+   "The part of a property that hands its value back to the code that asks."
+  ],
+  [
+   "set",
+   "The part of a property that changes its value."
+  ],
+  [
+   "value",
+   "Inside `set`, `value` holds whatever the code is trying to put in the property."
+  ],
+  [
+   "override",
+   "`override` swaps a method that every class already has, such as ToString, for your own one."
+  ],
+  [
+   "List",
+   "A row of values that grows as you add to it. `List<Player>` holds Player objects."
+  ],
+  [
+   "StreamReader",
+   "Reads a text file one line at a time."
+  ],
+  [
+   "StreamWriter",
+   "Writes lines to a text file."
+  ],
+  [
+   "Split",
+   "Cuts a line into parts at every bar `|`, and gives you the parts as a list of values."
+  ],
+  [
+   "foreach",
+   "Runs its lines once for every value in a list."
+  ],
+  [
+   "continue",
+   "`continue` skips the rest of the loop for this time round, and goes on to the next one."
+  ],
+  [
+   "ToLower",
+   "Gives a copy of some text in small letters, so `SummitSeeker` becomes `summitseeker`."
+  ],
+  [
+   "temporary",
+   "Only there for now. The test button is temporary: chapter 4 deletes it."
+  ]
+ ]
+}

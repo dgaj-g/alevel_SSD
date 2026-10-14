@@ -1,0 +1,2174 @@
+{
+ "id": "09",
+ "n": 9,
+ "of": 20,
+ "title": "The shape of every game",
+ "kind": "a build chapter: the practice game, with the parts every game shares",
+ "one": "You build a short practice game with the 3 parts that every game in Summit Ready shares. They are the dark strip along the top, the play area and the Round over box. Then the map opens it from the first summit.",
+ "prev": {
+  "id": "08",
+  "n": 8,
+  "title": "The map"
+ },
+ "next": {
+  "id": "10",
+  "n": 10,
+  "title": "The finish line"
+ },
+ "stages": [
+  {
+   "title": "See the shape that every game shares",
+   "screens": [
+    {
+     "title": "Look at the 3 parts of every game window",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know the 3 parts that every game window in Summit Ready has."
+      },
+      {
+       "p": "The 8 games play in 8 different ways, but every game window has the same shape. A player who learns one game knows where to look in the next one."
+      },
+      {
+       "screenshot": {
+        "img": "img/cap/s9e9e62b9.png",
+        "alt": "The practice game window, with the dark strip, the question and 3 answer buttons, and the white Round over box in the middle",
+        "w": 818,
+        "h": 565,
+        "marks": [],
+        "cap": "The practice game, with the Round over box showing after the round."
+       }
+      },
+      {
+       "p": "**The dark strip** runs along the top. It shows the game's name, what to do, the points, the speaker picture and **Back to the map**."
+      },
+      {
+       "p": "**The [[play area|4]]** fills the rest of the window. This is the only part that is different in each game."
+      },
+      {
+       "p": "**The [[Round over box|5]]** is hidden until the round ends. Then it shows the score, what went well and what went wrong, and a second **Back to the map** button."
+      },
+      {
+       "p": "When a round ends, the game packs the score and feedback into a GameResult and hands it to the map. The map ticks the summit, and chapter 10 shows the feedback from every game together."
+      },
+      {
+       "p": "In this chapter, you build the 3 parts around a one-question practice game. Each game chapter then copies the strip and the box from your practice game."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Check that your project is ready, and see the words this chapter uses",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know that your project has everything the practice game needs."
+      },
+      {
+       "p": "The practice game opens from the map, so check that each part from chapter 8 is in your project."
+      },
+      {
+       "need": [
+        "Your project, with the map opening from **Start the expedition** (chapter 8).",
+        "The GameResult class, with GameName, Score and the constructor (chapter 8).",
+        "The line `// each game chapter adds its own case below this line` in `frmMap.cs` (chapter 8).",
+        "The Icons folder and the Sounds folder inside bin\\Debug, with `win.wav` and `lose.wav` (chapter 2).",
+        "About 2 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
+       ]
+      },
+      {
+       "words": [
+        [
+         "list",
+         "A `List<string>` holds any number of pieces of text, in order. It can grow: `.Add` puts one more piece on the end.",
+         "2-1",
+         true
+        ],
+        [
+         "Enabled",
+         "A button with `Enabled = false` is greyed out, and clicking it does nothing.",
+         "4-2",
+         true
+        ],
+        [
+         "Visible",
+         "A control with `Visible = false` is hidden while the game runs. The designer still shows it, so you can change it.",
+         "4-2",
+         true
+        ],
+        [
+         "BringToFront",
+         "Puts a control in front of every other control on the window.",
+         "4-3",
+         true
+        ],
+        [
+         "play area",
+         "The part of a game window under the dark strip, where the game itself is played.",
+         "1-1",
+         false
+        ],
+        [
+         "Round over box",
+         "The white box that shows the score and the feedback when a round ends.",
+         "1-1",
+         false
+        ]
+       ],
+       "intro": "You do not need to learn these words now. Where you first meet each one in the chapter, it has a dotted line under it. Hover over it or tap it to see what it means."
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "1"
+  },
+  {
+   "title": "Add the feedback lists to GameResult, and make the practice form",
+   "screens": [
+    {
+     "title": "Add the feedback lists to GameResult",
+     "blocks": [
+      {
+       "p": "By the end of this screen, a GameResult can hold lines about what went well and what went wrong."
+      },
+      {
+       "p": "Chapter 10 shows each game's feedback, so every GameResult needs 2 lists of lines. A game adds a line to a list each time something goes well, or goes wrong."
+      },
+      {
+       "code": {
+        "id": "c09-result",
+        "kind": "type",
+        "title": "GameResult.cs: the whole class",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// What happened in one game: its score and its feedback (chapter 9)\nclass GameResult\n{\n    public string GameName { get; set; }\n    public int Score { get; set; }\n    public List<string> WentWell = new List<string>();\n    public List<string> WentWrong = new List<string>();\n\n    public GameResult(string gameName, int score)\n    {\n        GameName = gameName;\n        Score = score;\n    }\n}",
+        "partLines": [
+         [
+          1,
+          5,
+          "From chapter 8",
+          "The comment says what the class is for. You typed the 2 properties in chapter 8."
+         ],
+         [
+          6,
+          7,
+          "The 2 lists",
+          "Each [[list|0]] starts empty. A game adds a line with `result.WentWell.Add(...)`."
+         ],
+         [
+          9,
+          14,
+          "The constructor from chapter 8",
+          "The constructor puts the name and the score into the 2 properties, the same as before."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          1
+         ],
+         [
+          6,
+          7
+         ]
+        ],
+        "typed": 2,
+        "wordMarks": [
+         [
+          6,
+          11,
+          23,
+          0
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `GameResult.cs` in Solution Explorer.",
+         "see": "GameResult.cs opens in the code editor.",
+         "img": {
+          "img": "img/cap/c155.png",
+          "alt": "GameResult.cs, with the comment and the 2 lists typed",
+          "w": 1102,
+          "h": 318,
+          "marks": [
+           {
+            "n": 1,
+            "x": 30.0,
+            "y": 3.1,
+            "say": "Double-click `GameResult.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "x": 12.9,
+            "y": 51.2,
+            "say": "Click at the end of the `{` under `namespace SummitReady`."
+           },
+           {
+            "n": 3,
+            "x": 14.0,
+            "y": 56.2,
+            "say": "Press Enter."
+           },
+           {
+            "n": 4,
+            "x": 13.1,
+            "y": 52.7,
+            "w": 44.7,
+            "h": 7.3,
+            "say": "Type the yellow comment line."
+           },
+           {
+            "n": 5,
+            "x": 36.4,
+            "y": 76.2,
+            "say": "Click at the end of the line `public int Score { get; set; }`"
+           },
+           {
+            "n": 6,
+            "x": 16.6,
+            "y": 81.5,
+            "say": "Press Enter."
+           },
+           {
+            "n": 7,
+            "x": 15.7,
+            "y": 78.1,
+            "w": 33.9,
+            "h": 12.3,
+            "say": "Type the 2 yellow lines that start with `public List<string>`."
+           },
+           {
+            "n": 8,
+            "x": 30.0,
+            "y": 3.1,
+            "say": "Press Ctrl and S together."
+           }
+          ]
+         },
+         "id": "2-1.1",
+         "n": 1
+        },
+        {
+         "do": "Click at the end of the `{` under `namespace SummitReady`.",
+         "see": "The flashing cursor is after the `{`.",
+         "id": "2-1.2",
+         "n": 2
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens above `class GameResult`.",
+         "id": "2-1.3",
+         "n": 3
+        },
+        {
+         "do": "Type the yellow comment line.",
+         "see": "The comment sits above `class GameResult`.",
+         "id": "2-1.4",
+         "n": 4
+        },
+        {
+         "do": "Click at the end of the line `public int Score { get; set; }`",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "2-1.5",
+         "n": 5
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under `Score`.",
+         "id": "2-1.6",
+         "n": 6
+        },
+        {
+         "do": "Type the 2 yellow lines that start with `public List<string>`.",
+         "see": "No line has a red underline. If `List` has one, check that the top line of the file is `using System.Collections.Generic;`",
+         "id": "2-1.7",
+         "n": 7
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after the file's name on the tab at the top of the editor disappears.",
+         "id": "2-1.8",
+         "n": 8
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Add the practice form and set its properties",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has an empty practice window, called frmPractice."
+      },
+      {
+       "p": "Every game is a window of its own, the same size as the map. So the practice game needs a new form, which is a new window."
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "img": "img/cap/c068.png",
+          "alt": "The project menu, with Add pointed at and Form (Windows Forms) in the second menu",
+          "w": 949,
+          "h": 605,
+          "marks": [
+           {
+            "n": 1,
+            "x": 73.8,
+            "y": 4.6,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 2,
+            "x": 40.6,
+            "y": 37.8,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 3,
+            "x": 11.6,
+            "y": 81.0,
+            "say": "Click **Form (Windows Forms)...** in the second menu."
+           }
+          ]
+         },
+         "id": "2-2.1",
+         "n": 1
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "2-2.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Form (Windows Forms)...** in the second menu.",
+         "see": "The Add New Item window opens, and the Name box says `Form1.cs`.",
+         "id": "2-2.3",
+         "n": 3
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Form1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "img": "img/cap/c069.png",
+          "alt": "The Add New Item window, with Form (Windows Forms) picked",
+          "w": 943,
+          "h": 592,
+          "marks": [
+           {
+            "n": 4,
+            "x": 42.5,
+            "y": 91.1,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "x": 13.8,
+            "y": 89.5,
+            "w": 57.4,
+            "h": 3.5,
+            "say": "Type `frmPractice.cs`"
+           },
+           {
+            "n": 6,
+            "x": 86.0,
+            "y": 96.3,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "2-2.4",
+         "n": 4
+        },
+        {
+         "do": "Type `frmPractice.cs`",
+         "see": "The Name box shows `frmPractice.cs`.",
+         "id": "2-2.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "`frmPractice.cs` opens, and it is in Solution Explorer.",
+         "id": "2-2.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "p": "Set the form's properties with the table below. Set **Font** first, so the size does not change later."
+      },
+      {
+       "controls": {
+        "props": [
+         "Font = Segoe UI, 11pt",
+         "Text = Summit Ready - Practice game",
+         "StartPosition = CenterScreen",
+         "FormBorderStyle = FixedSingle",
+         "Size = 1016, 699",
+         "MaximizeBox = False",
+         "BackColor = 243, 245, 242",
+         "ForeColor = 38, 50, 56"
+        ]
+       }
+      },
+      {
+       "p": "The practice game shows the speaker picture when its window opens. So it needs a Load method, which is code that runs at that moment. You make an empty one now."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists the form's events in place of its properties.",
+         "img": {
+          "img": "img/cap/c156.png",
+          "alt": "The Properties window showing the events of frmPractice, with the lightning bolt, Load and the Properties button",
+          "w": 352,
+          "h": 514,
+          "marks": [
+           {
+            "n": 7,
+            "x": 25.8,
+            "y": 11.2,
+            "say": "Click the lightning bolt at the top of the Properties window."
+           },
+           {
+            "n": 8,
+            "x": 4.2,
+            "y": 47.1,
+            "w": 94.1,
+            "h": 3.8,
+            "say": "Double-click the empty box beside **Load**. Scroll down the list a little if you cannot see it."
+           },
+           {
+            "n": 10,
+            "x": 19.2,
+            "y": 11.2,
+            "say": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window."
+           }
+          ]
+         },
+         "id": "2-2.7",
+         "n": 7
+        },
+        {
+         "do": "Double-click the empty box beside **Load**. Scroll down the list a little if you cannot see it.",
+         "see": "The code editor opens `frmPractice.cs`, with a new empty method called `frmPractice_Load`.",
+         "id": "2-2.8",
+         "n": 8
+        },
+        {
+         "do": "Press Shift and F7 together.",
+         "see": "The designer shows frmPractice.",
+         "img": {
+          "img": "img/cap/c157.png",
+          "alt": "The designer showing frmPractice",
+          "w": 1078,
+          "h": 624,
+          "marks": [
+           {
+            "n": 9,
+            "x": 9.1,
+            "y": 1.6,
+            "say": "Press Shift and F7 together."
+           }
+          ]
+         },
+         "id": "2-2.9",
+         "n": 9
+        },
+        {
+         "do": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists properties again.",
+         "id": "2-2.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "2"
+  },
+  {
+   "title": "Build the 3 parts of the window",
+   "screens": [
+    {
+     "title": "Add the dark strip along the top",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmPractice has the dark strip, with its title, instruction, points, speaker picture and Back button."
+      },
+      {
+       "p": "Each game chapter copies this strip, so the control names must be exactly as in the table. The game code uses those names."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Panel",
+          "name": "pnlHeader",
+          "settings": [
+           "Location = 0, 0",
+           "Size = 1000, 56",
+           "BackColor = 38, 50, 56"
+          ],
+          "note": "Drop the Panel near the top of frmPractice.",
+          "then": "A dark strip runs along the top of frmPractice."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblTitle",
+          "settings": [
+           "AutoSize = False",
+           "Location = 16, 6",
+           "Size = 550, 28",
+           "Font = Segoe UI Semibold, 15pt",
+           "ForeColor = 255, 255, 255",
+           "Text = Practice game"
+          ],
+          "note": "Drop the Label on pnlHeader."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblInstruction",
+          "settings": [
+           "AutoSize = False",
+           "Location = 18, 33",
+           "Size = 700, 20",
+           "Font = Segoe UI, 10pt",
+           "ForeColor = 207, 216, 220",
+           "Text = Click the answer you think is right. Then click See my score."
+          ],
+          "note": "Drop the Label on pnlHeader."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblScore",
+          "settings": [
+           "AutoSize = False",
+           "Location = 576, 8",
+           "Size = 136, 24",
+           "Font = Segoe UI Semibold, 12pt",
+           "ForeColor = 255, 255, 255",
+           "TextAlign = MiddleRight",
+           "Text = Points: 0"
+          ],
+          "note": "Drop the Label on pnlHeader."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picSound",
+          "settings": [
+           "Location = 720, 12",
+           "Size = 32, 32",
+           "SizeMode = Zoom",
+           "Cursor = Hand"
+          ],
+          "note": "Drop the PictureBox on pnlHeader."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnBack",
+          "settings": [
+           "Location = 800, 6",
+           "Size = 190, 44",
+           "Text = Back to the map",
+           "BackColor = 38, 50, 56",
+           "ForeColor = 255, 255, 255",
+           "Font = Segoe UI Semibold, 11pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderSize = 1",
+           "FlatAppearance BorderColor = 255, 255, 255",
+           "Cursor = Hand"
+          ],
+          "note": "Drop the Button on pnlHeader. FlatAppearance has a small arrow beside it. Click the arrow to see BorderSize and BorderColor.",
+          "then": "**Back to the map** sits at the right end of the strip."
+         }
+        ],
+        "done": {
+         "see": "The dark strip along the top of frmPractice holds the title, the instruction, Points: 0, an empty picture box and **Back to the map**.",
+         "img": {
+          "img": "img/cap/c158.png",
+          "alt": "The dark strip on frmPractice with every control from the table on it",
+          "w": 1078,
+          "h": 624,
+          "marks": []
+         }
+        }
+       }
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Add the Round over box",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmPractice has the white Round over box, which shows the score when a round ends."
+      },
+      {
+       "p": "You add the box before the play area. If you dropped the box on the play area, the box would sit inside the play area, not on the form."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Panel",
+          "name": "pnlRoundOver",
+          "settings": [
+           "Location = 180, 120",
+           "Size = 640, 420",
+           "BackColor = 255, 255, 255",
+           "BorderStyle = FixedSingle",
+           "Visible = False"
+          ],
+          "note": "Drop the Panel on frmPractice, under the dark strip. The designer still shows the box when Visible is False.",
+          "then": "A white box sits in the middle of frmPractice."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblRoundTitle",
+          "settings": [
+           "AutoSize = False",
+           "Location = 28, 22",
+           "Size = 400, 34",
+           "Font = Segoe UI Semibold, 18pt",
+           "ForeColor = 38, 50, 56",
+           "Text = Round over"
+          ],
+          "note": "Drop the Label on pnlRoundOver."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblRoundScore",
+          "settings": [
+           "AutoSize = False",
+           "Location = 28, 60",
+           "Size = 560, 28",
+           "Font = Segoe UI, 13pt",
+           "ForeColor = 38, 50, 56",
+           "Text = You scored 0 out of 100 points."
+          ],
+          "note": "Drop the Label on pnlRoundOver."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblWellHead",
+          "settings": [
+           "AutoSize = False",
+           "Location = 28, 100",
+           "Size = 560, 24",
+           "Font = Segoe UI Semibold, 11pt",
+           "ForeColor = 62, 142, 65",
+           "Text = What went well"
+          ],
+          "note": "Drop the Label on pnlRoundOver."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblWellList",
+          "settings": [
+           "AutoSize = False",
+           "Location = 28, 126",
+           "Size = 580, 100",
+           "Font = Segoe UI, 10.5pt",
+           "ForeColor = 38, 50, 56",
+           "Text = (empty)"
+          ],
+          "note": "Drop the Label on pnlRoundOver. To empty its Text, triple-click the Text box and press Delete."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblWrongHead",
+          "settings": [
+           "AutoSize = False",
+           "Location = 28, 232",
+           "Size = 560, 24",
+           "Font = Segoe UI Semibold, 11pt",
+           "ForeColor = 178, 58, 46",
+           "Text = What went wrong"
+          ],
+          "note": "Drop the Label on pnlRoundOver."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblWrongList",
+          "settings": [
+           "AutoSize = False",
+           "Location = 28, 258",
+           "Size = 580, 92",
+           "Font = Segoe UI, 10.5pt",
+           "ForeColor = 38, 50, 56",
+           "Text = (empty)"
+          ],
+          "note": "Drop the Label on pnlRoundOver. Empty its Text, the same as lblWellList."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnDone",
+          "settings": [
+           "Location = 430, 354",
+           "Size = 182, 44",
+           "Text = Back to the map",
+           "BackColor = 242, 183, 5",
+           "ForeColor = 38, 50, 56",
+           "Font = Segoe UI Semibold, 11pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderSize = 0",
+           "Cursor = Hand"
+          ],
+          "note": "Drop the Button on pnlRoundOver.",
+          "then": "A gold **Back to the map** button sits in the bottom right corner of the white box."
+         }
+        ],
+        "done": {
+         "see": "The white box in the middle of frmPractice says **Round over** and the score line. Under them are **What went well** in green, **What went wrong** in red and a gold button.",
+         "img": {
+          "img": "img/cap/c159.png",
+          "alt": "The Round over box on frmPractice with every control from the table on it",
+          "w": 1078,
+          "h": 624,
+          "marks": []
+         }
+        }
+       }
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Add the play area, with the question and 3 answers",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmPractice has a play area with one question and 3 answer buttons. It also has a result label and a **See my score** button."
+      },
+      {
+       "p": "The play area is a Panel that fills the window under the strip. Each game chapter builds its own play area, so only the practice game has these controls."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Panel",
+          "name": "pnlPlay",
+          "settings": [
+           "Location = 0, 56",
+           "Size = 1000, 604"
+          ],
+          "note": "Drop the Panel in the bottom left corner of frmPractice, outside the white box. After you set Size, right-click pnlPlay and click **Send to Back**, so the white box shows in front.",
+          "then": "The play area fills the window under the strip, and the white box shows in front of it."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblQuestion",
+          "settings": [
+           "AutoSize = False",
+           "Location = 40, 40",
+           "Size = 900, 40",
+           "Font = Segoe UI Semibold, 15pt",
+           "ForeColor = 38, 50, 56",
+           "Text = How high is Slieve Donard, the highest summit in the Mournes?"
+          ],
+          "note": "Drop the Label on pnlPlay, to the left of the white box."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnAnswer1",
+          "settings": [
+           "Location = 40, 110",
+           "Size = 200, 60",
+           "Text = 746 m",
+           "BackColor = 255, 255, 255",
+           "ForeColor = 38, 50, 56",
+           "Font = Segoe UI Semibold, 14pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderColor = 92, 107, 115",
+           "Cursor = Hand"
+          ],
+          "note": "Drop the Button on pnlPlay, to the left of the white box."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnAnswer2",
+          "settings": [
+           "Location = 260, 110",
+           "Size = 200, 60",
+           "Text = 850 m",
+           "BackColor = 255, 255, 255",
+           "ForeColor = 38, 50, 56",
+           "Font = Segoe UI Semibold, 14pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderColor = 92, 107, 115",
+           "Cursor = Hand"
+          ],
+          "note": "Drop the Button on pnlPlay, to the left of the white box. It goes behind the white box when you set its Location. That is fine."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnAnswer3",
+          "settings": [
+           "Location = 480, 110",
+           "Size = 200, 60",
+           "Text = 702 m",
+           "BackColor = 255, 255, 255",
+           "ForeColor = 38, 50, 56",
+           "Font = Segoe UI Semibold, 14pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderColor = 92, 107, 115",
+           "Cursor = Hand"
+          ],
+          "note": "Drop the Button on pnlPlay, to the left of the white box."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblResult",
+          "settings": [
+           "AutoSize = False",
+           "Location = 40, 200",
+           "Size = 900, 40",
+           "Font = Segoe UI, 13pt",
+           "ForeColor = 38, 50, 56",
+           "Text = (empty)"
+          ],
+          "note": "Drop the Label on pnlPlay, to the left of the white box. Empty its Text."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnScore",
+          "settings": [
+           "Location = 40, 260",
+           "Size = 220, 44",
+           "Text = See my score",
+           "BackColor = 242, 183, 5",
+           "ForeColor = 38, 50, 56",
+           "Font = Segoe UI Semibold, 11pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderSize = 0",
+           "Cursor = Hand",
+           "Visible = False"
+          ],
+          "note": "Drop the Button on pnlPlay, to the left of the white box."
+         }
+        ],
+        "done": {
+         "see": "The question runs across the top of the play area. The white box covers part of the answers in the designer. When the game runs, the box is hidden until the round ends.",
+         "img": {
+          "img": "img/cap/c160.png",
+          "alt": "frmPractice in the designer with the strip, the play area and the white box",
+          "w": 1078,
+          "h": 624,
+          "marks": []
+         }
+        }
+       }
+      },
+      {
+       "box": {
+        "title": "If a control lands inside the white box",
+        "text": "Press Ctrl and Z together to undo the drop. Then drop the control again, on a part of the play area to the left of the white box.",
+        "fold": true
+       }
+      }
+     ],
+     "id": "3"
+    }
+   ],
+   "id": "3"
+  },
+  {
+   "title": "Write the practice game code",
+   "screens": [
+    {
+     "title": "Type the fields and fill in frmPractice_Load",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmPractice has its fields, and its Load method shows the speaker picture."
+      },
+      {
+       "p": "Every game form has the same 3 fields, which are stored values. Each game chapter copies them from here, so keep the comment line above them exactly as it is."
+      },
+      {
+       "code": {
+        "id": "c09-fields",
+        "kind": "type",
+        "title": "The game-form fields, and the practice game's answer",
+        "lang": "cs",
+        "text": "// ---------- the game-form fields from chapter 9 ----------\nprivate int gameNumber = 0;      // the practice game uses place 0\nprivate GameResult result;       // made when the round ends\nprivate bool finished = false;   // true once the result is kept\n\n// ---------- the practice game ----------\nprivate string rightAnswer = \"850 m\";   // the answer that scores",
+        "partLines": [
+         [
+          1,
+          4,
+          "The 3 game-form fields",
+          "`gameNumber` is the game's place number on the map. `result` holds the score and the feedback once the round ends. `finished` turns true once the result is kept."
+         ],
+         [
+          6,
+          7,
+          "The practice game's own field",
+          "Only the practice game has `rightAnswer`. Each game has its own fields under its own comment line."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          7
+         ]
+        ],
+        "typed": 4
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Press F7.",
+         "see": "The code of frmPractice shows in the code editor.",
+         "img": {
+          "img": "img/cap/c161.png",
+          "alt": "frmPractice.cs, with the fields typed under the class line",
+          "w": 1102,
+          "h": 414,
+          "marks": [
+           {
+            "n": 1,
+            "x": 5.0,
+            "y": 2.4,
+            "say": "Press F7."
+           },
+           {
+            "n": 2,
+            "x": 15.4,
+            "y": 62.7,
+            "say": "Click at the end of the `{` under `public partial class frmPractice : Form`."
+           },
+           {
+            "n": 3,
+            "x": 16.6,
+            "y": 66.6,
+            "say": "Press Enter."
+           },
+           {
+            "n": 4,
+            "x": 15.7,
+            "y": 63.9,
+            "w": 43.4,
+            "h": 28.7,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-1.1",
+         "n": 1
+        },
+        {
+         "do": "Click at the end of the `{` under `public partial class frmPractice : Form`.",
+         "see": "The flashing cursor is after the `{`.",
+         "id": "4-1.2",
+         "n": 2
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the `{`.",
+         "id": "4-1.3",
+         "n": 3
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The fields sit above `public frmPractice()`. `GameResult` has no red underline.",
+         "id": "4-1.4",
+         "n": 4
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c09-load",
+        "kind": "type",
+        "title": "frmPractice_Load",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "private void frmPractice_Load(object sender, EventArgs e)\n{\n    // Runs once, right before the window first appears\n    ShowSpeaker();                 // the speaker picture, on or muted\n}",
+        "partLines": [
+         [
+          1,
+          5,
+          "The speaker picture",
+          "ShowSpeaker shows the speaker on or muted, the same as on the map. You copy it into this form at the end of this stage."
+         ]
+        ],
+        "focusLines": [
+         [
+          3,
+          4
+         ]
+        ],
+        "typed": 1
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `{` under `private void frmPractice_Load(object sender, EventArgs e)`.",
+         "see": "The flashing cursor is after the `{`.",
+         "img": {
+          "img": "img/cap/c162.png",
+          "alt": "frmPractice.cs, with the 2 lines typed inside frmPractice_Load",
+          "w": 1102,
+          "h": 574,
+          "marks": [
+           {
+            "n": 5,
+            "x": 18.0,
+            "y": 87.0,
+            "say": "Click at the end of the `{` under `private void frmPractice_Load(object sender, EventArgs e)`."
+           },
+           {
+            "n": 6,
+            "x": 19.1,
+            "y": 89.8,
+            "say": "Press Enter."
+           },
+           {
+            "n": 7,
+            "x": 18.2,
+            "y": 87.8,
+            "w": 43.4,
+            "h": 6.8,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "4-1.5",
+         "n": 5
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens inside the method.",
+         "id": "4-1.6",
+         "n": 6
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "`ShowSpeaker` has a red underline. That is normal for now.",
+         "id": "4-1.7",
+         "n": 7
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Mark the answer and keep the result",
+     "blocks": [
+      {
+       "p": "By the end of this screen, a click on an answer marks it, and the result goes to the map."
+      },
+      {
+       "p": "The 3 answer buttons all run one method, Answer_Click. The Text of the button that was clicked is the answer the player picked."
+      },
+      {
+       "code": {
+        "id": "c09-answer",
+        "kind": "type",
+        "title": "Answer_Click",
+        "lang": "cs",
+        "text": "// Any answer button: the Text on the button is the answer picked\nprivate void Answer_Click(object sender, EventArgs e)\n{\n    Button picked = (Button)sender;\n    btnAnswer1.Enabled = false;    // one try only\n    btnAnswer2.Enabled = false;\n    btnAnswer3.Enabled = false;\n    if (picked.Text == rightAnswer)\n    {\n        lblResult.Text = \"Right! Slieve Donard is 850 m high.\";\n    }\n    else\n    {\n        lblResult.Text = \"Not quite. Slieve Donard is 850 m high.\";\n    }\n    RecordResult(picked.Text);\n    btnScore.Visible = true;\n}",
+        "partLines": [
+         [
+          2,
+          7,
+          "One try only",
+          "`(Button)sender` is the button that was clicked. All 3 buttons stop working, so the player gets one try."
+         ],
+         [
+          8,
+          15,
+          "Right or not",
+          "lblResult says whether the answer was right, and gives the right height either way."
+         ],
+         [
+          16,
+          18,
+          "Keep the result",
+          "RecordResult works out the score. Then **See my score** appears."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          18
+         ]
+        ],
+        "typed": 11,
+        "wordMarks": [
+         [
+          5,
+          14,
+          22,
+          1
+         ],
+         [
+          17,
+          12,
+          20,
+          2
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmPractice_Load`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-2.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-2.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "Answer_Click sits under frmPractice_Load. `RecordResult` has a red underline for now.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "4-2.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "p": "RecordResult makes the GameResult. A right answer scores 100 points and a line about what went well. A wrong answer scores 0 points and a line about what went wrong."
+      },
+      {
+       "code": {
+        "id": "c09-record",
+        "kind": "type",
+        "title": "RecordResult",
+        "lang": "cs",
+        "text": "// Works out the score, adds the feedback, then keeps the result\nprivate void RecordResult(string answer)\n{\n    if (answer == rightAnswer)\n    {\n        result = new GameResult(\"Practice game\", 100);\n        result.WentWell.Add(\"You knew how high Slieve Donard is.\");\n    }\n    else\n    {\n        result = new GameResult(\"Practice game\", 0);\n        result.WentWrong.Add(\"You picked \" + answer\n            + \", but Slieve Donard is 850 m high.\");\n    }\n    KeepResult();\n}",
+        "partLines": [
+         [
+          2,
+          8,
+          "A right answer",
+          "A new GameResult with 100 points, and one line on the What went well list."
+         ],
+         [
+          9,
+          14,
+          "A wrong answer",
+          "A new GameResult with 0 points. The What went wrong line names the answer the player picked."
+         ],
+         [
+          15,
+          16,
+          "Keep it",
+          "KeepResult hands the result to the map. You type it on the next screen."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          16
+         ]
+        ],
+        "typed": 9
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `Answer_Click`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-2.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-2.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "RecordResult sits under Answer_Click. `KeepResult` has a red underline for now.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "4-2.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c09-score",
+        "kind": "type",
+        "title": "btnScore_Click",
+        "lang": "cs",
+        "text": "// See my score opens the Round over panel\nprivate void btnScore_Click(object sender, EventArgs e)\n{\n    ShowRoundOver();\n}",
+        "partLines": [
+         [
+          2,
+          5,
+          "See my score",
+          "**See my score** shows the Round over box."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          5
+         ]
+        ],
+        "typed": 2
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `RecordResult`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-2.7",
+         "n": 7
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-2.8",
+         "n": 8
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "btnScore_Click sits under RecordResult.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "4-2.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Type the methods that every game shares",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmPractice keeps its result on the map and fills in the Round over box."
+      },
+      {
+       "p": "Every game form has the same methods from here to the end of the class. Each game chapter copies them from here, so keep the comment line above them exactly as it is."
+      },
+      {
+       "p": "KeepResult runs as soon as the round ends, before the player clicks anything. So the result is kept even if the player closes the window at once."
+      },
+      {
+       "code": {
+        "id": "c09-keep",
+        "kind": "type",
+        "title": "KeepResult and ShowRoundOver",
+        "lang": "cs",
+        "text": "// ---------- the game-form methods from chapter 9 ----------\n\n// Keeps the result on the map, even if the window is then closed\nprivate void KeepResult()\n{\n    Expedition.Finish(gameNumber, result);\n    finished = true;\n    lblScore.Text = \"Points: \" + result.Score;\n}\n\n// Fills in the Round over panel and brings it to the front\nprivate void ShowRoundOver()\n{\n    lblRoundScore.Text = \"You scored \" + result.Score\n        + \" out of 100 points.\";\n    lblWellList.Text = ListText(result.WentWell,\n        \"thing that went well\", \"things that went well\");\n    lblWrongList.Text = ListText(result.WentWrong,\n        \"thing that went wrong\", \"things that went wrong\");\n    if (result.Score >= 60) Sound.Play(\"win.wav\");\n    else Sound.Play(\"lose.wav\");\n    pnlRoundOver.Visible = true;\n    pnlRoundOver.BringToFront();\n}",
+        "partLines": [
+         [
+          1,
+          9,
+          "KeepResult",
+          "`Expedition.Finish` from chapter 8 keeps the result and ticks the summit. `finished` turns true, and Points shows the score."
+         ],
+         [
+          12,
+          15,
+          "The score",
+          "The Round over box says the score, out of 100 points."
+         ],
+         [
+          16,
+          19,
+          "The 2 lists",
+          "ListText turns each list into lines of words. You type it next."
+         ],
+         [
+          20,
+          24,
+          "Sound, then show the box",
+          "60 points or more plays the win sound. Otherwise the lose sound plays. Then the box shows, in front of the play area."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          24
+         ]
+        ],
+        "typed": 15,
+        "wordMarks": [
+         [
+          22,
+          16,
+          24,
+          2
+         ],
+         [
+          23,
+          17,
+          29,
+          3
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `btnScore_Click`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-3.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-3.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "KeepResult and ShowRoundOver sit under btnScore_Click. `ListText` has a red underline for now.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "4-3.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "p": "The Round over box has room for 3 lines in each list. ListText gives up to 3 lines, then one line that counts the rest. It says **1 more thing** or **2 more things**, so the words always fit the number."
+      },
+      {
+       "code": {
+        "id": "c09-list",
+        "kind": "type",
+        "title": "ListText",
+        "lang": "cs",
+        "text": "// Up to 3 lines from a list, then how many more there are\nprivate string ListText(List<string> lines, string one, string many)\n{\n    if (lines.Count == 0) return \"Nothing this time.\";\n    string text = \"\";\n    for (int i = 0; i < lines.Count && i < 3; i++)\n    {\n        text = text + \"- \" + lines[i] + Environment.NewLine;\n    }\n    int more = lines.Count - 3;\n    if (more == 1) text = text + \"And 1 more \" + one + \".\";\n    if (more > 1) text = text + \"And \" + more + \" more \" + many + \".\";\n    return text;\n}",
+        "partLines": [
+         [
+          2,
+          4,
+          "An empty list",
+          "An empty list gives **Nothing this time.**"
+         ],
+         [
+          5,
+          9,
+          "Up to 3 lines",
+          "The loop, which repeats the same steps for each line, stops at the end of the list or after 3 lines. Each line starts with a dash and ends with a new line."
+         ],
+         [
+          10,
+          14,
+          "The rest",
+          "`more` is how many lines did not fit. If it is 1, the line says **1 more thing**. If it is 2 or more, it says **2 more things**."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          14
+         ]
+        ],
+        "typed": 9,
+        "wordMarks": [
+         [
+          2,
+          24,
+          36,
+          0
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `ShowRoundOver`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-3.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-3.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "ListText sits under ShowRoundOver.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "4-3.6",
+         "n": 6
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Type the code for the Back to the map buttons, and the speaker picture",
+     "blocks": [
+      {
+       "p": "By the end of this screen, both **Back to the map** buttons close the window, and the window asks first if the round is not over."
+      },
+      {
+       "p": "A player who leaves before the round ends scores nothing for that summit. So FormClosing, the code that runs as the window closes, asks first, unless the result is already kept."
+      },
+      {
+       "code": {
+        "id": "c09-close",
+        "kind": "type",
+        "title": "btnBack_Click, btnDone_Click and frmPractice_FormClosing",
+        "lang": "cs",
+        "text": "// Back to the map: closing the window runs FormClosing\nprivate void btnBack_Click(object sender, EventArgs e)\n{\n    this.Close();\n}\n\n// The Round over panel's Back to the map button\nprivate void btnDone_Click(object sender, EventArgs e)\n{\n    this.Close();\n}\n\n// Runs as the window closes, by Back, by Done or by the X\nprivate void frmPractice_FormClosing(object sender,\n    FormClosingEventArgs e)\n{\n    if (finished) return;    // a finished round closes at once\n    DialogResult answer = MessageBox.Show(\"Leave the practice game? \"\n        + \"It will score nothing, but you can come back and climb it \"\n        + \"again.\", \"Summit Ready\", MessageBoxButtons.YesNo);\n    if (answer == DialogResult.No) e.Cancel = true;   // stay\n}",
+        "partLines": [
+         [
+          2,
+          5,
+          "Back on the strip",
+          "**Back to the map** on the strip closes the window, which runs FormClosing."
+         ],
+         [
+          8,
+          11,
+          "Back in the Round over box",
+          "The gold button in the Round over box does the same."
+         ],
+         [
+          14,
+          22,
+          "Ask first",
+          "A finished round closes at once. Otherwise a Yes and No message asks. No sets `e.Cancel` to true, which keeps the window open."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          22
+         ]
+        ],
+        "typed": 11
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `ListText`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-4.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-4.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The 3 methods sit under ListText.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "4-4.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "p": "Every game window has the speaker picture on its strip, so it needs the 2 speaker methods from the map."
+      },
+      {
+       "code": {
+        "id": "c09-speaker",
+        "kind": "copy",
+        "title": "ShowSpeaker and picSound_Click",
+        "lang": "cs",
+        "taught": "08",
+        "why": "You typed these 2 methods into frmMap in chapter 8. They are the same in every window with a speaker picture.",
+        "text": "// Shows the speaker picture that matches the sound being on or off\nprivate void ShowSpeaker()\n{\n    string icon = \"icon-speaker-on-64.png\";\n    if (Sound.Muted) icon = \"icon-speaker-muted-64.png\";\n    picSound.Image = Files.Picture(\"Icons\", icon);\n}\n\n// The speaker picture turns the sound off, or back on\nprivate void picSound_Click(object sender, EventArgs e)\n{\n    Sound.Muted = !Sound.Muted;\n    ShowSpeaker();\n}",
+        "partLines": [
+         [
+          2,
+          7,
+          "ShowSpeaker",
+          "Shows the speaker picture that matches the sound: on, or muted."
+         ],
+         [
+          10,
+          14,
+          "picSound_Click",
+          "Turns the sound off, or back on, then shows the matching picture."
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmPractice_FormClosing`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-4.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-4.5",
+         "n": 5
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c09-speaker",
+         "id": "4-4.6",
+         "n": 6
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The 2 methods appear at the bottom of the class. No line in frmPractice.cs has a red underline.",
+         "id": "4-4.7",
+         "n": 7
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after the file's name on the tab at the top of the editor disappears.",
+         "id": "4-4.8",
+         "n": 8
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Connect the practice game's events, then build",
+     "blocks": [
+      {
+       "p": "By the end of this screen, every button on frmPractice runs its method, and your project builds."
+      },
+      {
+       "p": "All 3 answer buttons connect to the same method, Answer_Click. Connect each event in the table, in the same way as on the map."
+      },
+      {
+       "controls": {
+        "props": [
+         "btnAnswer1: Click = Answer_Click",
+         "btnAnswer2: Click = Answer_Click",
+         "btnAnswer3: Click = Answer_Click",
+         "btnScore: Click = btnScore_Click",
+         "btnBack: Click = btnBack_Click",
+         "btnDone: Click = btnDone_Click",
+         "picSound: Click = picSound_Click",
+         "frmPractice (click its title bar): FormClosing = frmPractice_FormClosing"
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "If you have forgotten how to connect an event",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "Click the control in the designer. Click the lightning bolt at the top of the Properties window. Click the box beside the event, then click the small arrow at the right end of the box. Click the method."
+         },
+         {
+          "p": "Do not double-click the box. Double-clicking makes a new empty method with `_1` at the end of its name."
+         }
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "If you cannot click btnDone, because it is hidden",
+        "text": "Click the small arrow at the top of the Properties window, above the list of properties. A list of every control on frmPractice drops down. Click `btnDone` in the list.",
+        "fold": true
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Shift and F7 together.",
+         "see": "The designer shows frmPractice.",
+         "img": {
+          "img": "img/cap/c170.png",
+          "alt": "frmPractice in the designer, with the events list of btnAnswer1",
+          "w": 1568,
+          "h": 517,
+          "marks": [
+           {
+            "n": 1,
+            "x": 11.7,
+            "y": 1.6,
+            "say": "Press Shift and F7 together."
+           }
+          ]
+         },
+         "id": "4-5.1",
+         "n": 1
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "img": "img/cap/c010.png",
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 610,
+          "h": 223,
+          "marks": [
+           {
+            "n": 2,
+            "x": 11.5,
+            "y": 94.9,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows errors",
+           "Double-click the first error in the Error List. Visual Studio 2019 jumps to the line with the error. Check that line letter by letter against the code in this chapter."
+          ]
+         ],
+         "id": "4-5.2",
+         "n": 2
+        }
+       ]
+      }
+     ],
+     "id": "5"
+    }
+   ],
+   "id": "4"
+  },
+  {
+   "title": "Open the practice game from the map, and test it",
+   "screens": [
+    {
+     "title": "Add the practice game to the map",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the first summit on the map, Slieve Binnian, opens the practice game."
+      },
+      {
+       "p": "The map uses a switch, which picks one action from several by number. The practice game is place number 0, so its case says `case 0:`."
+      },
+      {
+       "code": {
+        "id": "c09-case",
+        "kind": "type",
+        "title": "frmMap.cs: the practice game's case",
+        "lang": "cs",
+        "text": "// each game chapter adds its own case below this line\ncase 0: game = new frmPractice(); break;",
+        "noCopy": true,
+        "partLines": [
+         [
+          1,
+          2,
+          "Place 0 opens the practice game",
+          "When `i` is 0, `game` becomes a new practice window. `break` ends the case."
+         ]
+        ],
+        "focusLines": [
+         [
+          2,
+          2
+         ]
+        ],
+        "typed": 1
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `frmMap.cs` in Solution Explorer.",
+         "see": "The design of frmMap shows.",
+         "img": {
+          "img": "img/cap/c171.png",
+          "alt": "frmMap.cs, with the new case line under the comment line in OpenGame",
+          "w": 1102,
+          "h": 430,
+          "marks": [
+           {
+            "n": 1,
+            "x": 5.0,
+            "y": 2.3,
+            "say": "Double-click `frmMap.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "x": 5.0,
+            "y": 2.3,
+            "say": "Press F7."
+           },
+           {
+            "n": 3,
+            "x": 56.8,
+            "y": 86.3,
+            "say": "Click at the end of the line `// each game chapter adds its own case below this line`"
+           },
+           {
+            "n": 4,
+            "x": 21.7,
+            "y": 90.0,
+            "say": "Press Enter."
+           },
+           {
+            "n": 5,
+            "x": 20.8,
+            "y": 87.5,
+            "w": 26.9,
+            "h": 5.4,
+            "say": "Type `case 0: game = new frmPractice(); break;`"
+           }
+          ]
+         },
+         "id": "5-1.1",
+         "n": 1
+        },
+        {
+         "do": "Press F7.",
+         "see": "The code of frmMap shows.",
+         "id": "5-1.2",
+         "n": 2
+        },
+        {
+         "do": "Click at the end of the line `// each game chapter adds its own case below this line`",
+         "see": "The flashing cursor is at the end of the comment line.",
+         "id": "5-1.3",
+         "n": 3
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the comment line.",
+         "id": "5-1.4",
+         "n": 4
+        },
+        {
+         "do": "Type `case 0: game = new frmPractice(); break;`",
+         "see": "The new line says `case 0: game = new frmPractice(); break;`",
+         "id": "5-1.5",
+         "n": 5
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "img": "img/cap/c010.png",
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 610,
+          "h": 223,
+          "marks": [
+           {
+            "n": 6,
+            "x": 11.5,
+            "y": 94.9,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows errors",
+           "Double-click the first error in the Error List. Visual Studio 2019 jumps to the line with the error. Check that line letter by letter against the code in this chapter."
+          ]
+         ],
+         "id": "5-1.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "p": "Chapter 11 builds Pack the Rucksack, the real game for place 0. That chapter replaces this line with its own."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Play the practice game from the map",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have played a whole round, from the map and back."
+      },
+      {
+       "p": "Play it once with a wrong answer and once with the right answer, so you see both kinds of feedback."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press F5 to run the game.",
+         "see": "The login window opens.",
+         "img": {
+          "img": "img/cap/c172.png",
+          "alt": "The map, with the card for Slieve Binnian at the top of the right side",
+          "w": 1000,
+          "h": 681,
+          "marks": [
+           {
+            "n": 1,
+            "x": 7.0,
+            "y": 2.0,
+            "say": "Press F5 to run the game."
+           },
+           {
+            "n": 2,
+            "x": 8.9,
+            "y": 7.5,
+            "say": "Log in with your username and password."
+           },
+           {
+            "n": 3,
+            "x": 20.1,
+            "y": 10.6,
+            "say": "Click **Start the expedition**."
+           },
+           {
+            "n": 4,
+            "x": 62.7,
+            "y": 13.6,
+            "w": 36.2,
+            "h": 8.6,
+            "say": "Click the card for Slieve Binnian, at the top of the right side."
+           }
+          ]
+         },
+         "id": "5-2.1",
+         "n": 1
+        },
+        {
+         "do": "Log in with your username and password.",
+         "see": "The welcome screen shows the **Start the expedition** button.",
+         "id": "5-2.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Start the expedition**.",
+         "see": "The map opens.",
+         "id": "5-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click the card for Slieve Binnian, at the top of the right side.",
+         "see": "The map hides, and the practice game opens with its question and 3 answers.",
+         "wrong": [
+          [
+           "Nothing opens",
+           "Check the case line in OpenGame. It must say `case 0:` and `new frmPractice()`."
+          ]
+         ],
+         "id": "5-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click **746 m**.",
+         "see": "All 3 answers turn grey. The result line says **Not quite. Slieve Donard is 850 m high.** Points says 0, and **See my score** appears.",
+         "img": {
+          "img": "img/cap/c173.png",
+          "alt": "The practice game after a wrong answer, with See my score showing",
+          "w": 1000,
+          "h": 689,
+          "marks": [
+           {
+            "n": 5,
+            "x": 13.8,
+            "y": 32.7,
+            "say": "Click **746 m**."
+           },
+           {
+            "n": 6,
+            "x": 15.0,
+            "y": 53.3,
+            "say": "Click **See my score**."
+           }
+          ]
+         },
+         "id": "5-2.5",
+         "n": 5
+        },
+        {
+         "do": "Click **See my score**.",
+         "see": "The Round over box shows. It says **You scored 0 out of 100 points.**, with one line under What went wrong.",
+         "wrong": [
+          [
+           "The Round over box does not appear",
+           "Check that pnlRoundOver sits on frmPractice, not inside pnlPlay. Click the white box in the designer. Check that the top of the Properties window does not say pnlPlay. If it does, cut the box with Ctrl and X. Click the title bar of frmPractice, then paste with Ctrl and V."
+          ]
+         ],
+         "id": "5-2.6",
+         "n": 6
+        },
+        {
+         "do": "Click the gold **Back to the map**.",
+         "see": "The practice game closes with no question. On the map, Slieve Binnian has a tick and a green card.",
+         "img": {
+          "img": "img/cap/c174.png",
+          "alt": "The map with a tick on Slieve Binnian and its green card",
+          "w": 1000,
+          "h": 689,
+          "marks": [
+           {
+            "n": 7,
+            "x": 31.2,
+            "y": 87.4,
+            "say": "Click the gold **Back to the map**."
+           },
+           {
+            "n": 8,
+            "x": 87.9,
+            "y": 8.3,
+            "say": "Click **Back to the welcome screen**."
+           },
+           {
+            "n": 9,
+            "x": 7.0,
+            "y": 2.0,
+            "say": "Click **Yes**."
+           },
+           {
+            "n": 10,
+            "x": 8.9,
+            "y": 7.5,
+            "say": "Click **Start the expedition** again."
+           },
+           {
+            "n": 11,
+            "x": 62.7,
+            "y": 13.5,
+            "w": 36.2,
+            "h": 8.5,
+            "say": "Click the card for Slieve Binnian."
+           },
+           {
+            "n": 12,
+            "x": 77.1,
+            "y": 19.0,
+            "say": "Click **850 m**."
+           },
+           {
+            "n": 13,
+            "x": 67.6,
+            "y": 7.1,
+            "say": "Click **See my score**."
+           }
+          ]
+         },
+         "id": "5-2.7",
+         "n": 7
+        },
+        {
+         "do": "Click **Back to the welcome screen**.",
+         "see": "A message asks if you are sure.",
+         "id": "5-2.8",
+         "n": 8
+        },
+        {
+         "do": "Click **Yes**.",
+         "see": "The welcome screen shows.",
+         "id": "5-2.9",
+         "n": 9
+        },
+        {
+         "do": "Click **Start the expedition** again.",
+         "see": "A new expedition starts, and Slieve Binnian has its flag again.",
+         "id": "5-2.10",
+         "n": 10
+        },
+        {
+         "do": "Click the card for Slieve Binnian.",
+         "see": "The practice game opens with its question and 3 answers.",
+         "id": "5-2.11",
+         "n": 11
+        },
+        {
+         "do": "Click **850 m**.",
+         "see": "The right answer turns green and **See my score** appears.",
+         "id": "5-2.12",
+         "n": 12
+        },
+        {
+         "do": "Click **See my score**.",
+         "see": "The Round over box says **You scored 100 out of 100 points.**, with one line under What went well.",
+         "id": "5-2.13",
+         "n": 13
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Your turn: ask a different question",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have changed the practice game's question and answers on your own, and tested it."
+      },
+      {
+       "p": "Change the practice game to ask how high Slieve Binnian is. The right answer is 746 m."
+      },
+      {
+       "code": {
+        "id": "c09-turn",
+        "kind": "turn",
+        "title": "A question about Slieve Binnian",
+        "lang": "cs",
+        "text": "private string rightAnswer = \"746 m\";   // the answer that scores",
+        "task": [
+         "Change the Text of lblQuestion to ask how high Slieve Binnian is.",
+         "Change `rightAnswer` to `\"746 m\"`.",
+         "Change the 2 result lines in Answer_Click, and the 2 feedback lines in RecordResult, to name Slieve Binnian and 746 m."
+        ],
+        "test": "Press F5, open the practice game from the map and click **746 m**.",
+        "expect": "The result line says the answer is right, and **See my score** shows 100 out of 100 points.",
+        "hint": "Every line that says 850 m or Slieve Donard needs to change. There are 5 of them in the code."
+       }
+      },
+      {
+       "p": "When the test passes, keep the new question or put the old one back. Later chapters work either way."
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Check that the practice game works",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that every part of the practice game works, including the click it must refuse."
+      },
+      {
+       "p": "Run each test with F5. Tick each test when it passes. The test marked as a click to refuse must do nothing, and that counts as a pass."
+      },
+      {
+       "check": [
+        {
+         "what": "Open the practice game from the map, then click **Back to the map** on the strip before answering.",
+         "expect": "allowed",
+         "how": "A message asks whether to leave. **No** keeps the game open. **Yes** goes back to the map with no tick.",
+         "must": "Must happen",
+         "fix": "Check the code of frmPractice_FormClosing. Then click frmPractice in the designer, click the lightning bolt in Properties and check that frmPractice_FormClosing is beside **FormClosing**.",
+         "id": "5-4.t1"
+        },
+        {
+         "what": "Click one answer, then click a different answer.",
+         "expect": "control",
+         "how": "The second click does nothing. The answers are grey after the first click.",
+         "fix": "Check the 3 lines in Answer_Click that set `Enabled = false`.",
+         "id": "5-4.t2"
+        },
+        {
+         "what": "Click an answer, then **See my score**.",
+         "expect": "allowed",
+         "how": "The Round over box shows the score, with a line under What went well or What went wrong.",
+         "must": "Must happen",
+         "fix": "Check the code of btnScore_Click and ShowRoundOver. Then click btnScore in the designer, click the lightning bolt in Properties and check that btnScore_Click is beside **Click**.",
+         "id": "5-4.t3"
+        },
+        {
+         "what": "Click an answer, then close the window with the X before clicking **See my score**.",
+         "expect": "allowed",
+         "how": "The window closes with no question. The map shows a tick on Slieve Binnian.",
+         "must": "Must happen",
+         "fix": "Check that RecordResult ends with `KeepResult();`, and that KeepResult sets `finished = true;`.",
+         "id": "5-4.t4"
+        },
+        {
+         "what": "Click the speaker picture on the practice game's strip.",
+         "expect": "allowed",
+         "how": "The picture changes to the muted speaker. It stays muted on the map.",
+         "must": "Must happen",
+         "fix": "Click picSound on frmPractice in the designer, click the lightning bolt in Properties and check that picSound_Click is beside **Click**.",
+         "id": "5-4.t5"
+        }
+       ]
+      },
+      {
+       "box": {
+        "title": "Evidence to keep",
+        "blocks": [
+         {
+          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
+         },
+         {
+          "p": "Paste each screenshot into your testing document, under the test it shows."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "4"
+    }
+   ],
+   "id": "5"
+  }
+ ],
+ "glossary": [
+  [
+   "list",
+   "A `List<string>` holds any number of pieces of text, in order. It can grow: `.Add` puts one more piece on the end."
+  ],
+  [
+   "Enabled",
+   "A button with `Enabled = false` is greyed out, and clicking it does nothing."
+  ],
+  [
+   "Visible",
+   "A control with `Visible = false` is hidden while the game runs. The designer still shows it, so you can change it."
+  ],
+  [
+   "BringToFront",
+   "Puts a control in front of every other control on the window."
+  ],
+  [
+   "play area",
+   "The part of a game window under the dark strip, where the game itself is played."
+  ],
+  [
+   "Round over box",
+   "The white box that shows the score and the feedback when a round ends."
+  ]
+ ]
+}

@@ -35,13 +35,13 @@
        "p": "First you build Knot Pairs exactly as it is in Summit Ready. Then, in stage 5, you change it into a memory game on your own topic."
       },
       {
-       "p": "A round starts with 16 [[cards|0]] face down, in 4 rows of 4. Every card back shows a coiled rope on a blue square."
+       "p": "A round starts with 16 [[cards|1]] face down, in 4 rows of 4. Every card back shows a coiled rope on a blue square."
       },
       {
        "p": "Turned over, 8 of the cards show a photo of a knot, and 8 show the name of a knot. Each knot has one photo card and one name card."
       },
       {
-       "p": "You click two cards to turn them over, and that uses one [[try|2]]. If the photo and the name are the same knot, you have found a [[pair|1]]."
+       "p": "You click two cards to turn them over, and that uses one [[try|3]]. If the photo and the name are the same knot, you have found a [[pair|2]]."
       },
       {
        "p": "A pair stays face up with a green border. The box on the right then says what that knot is for."
@@ -225,7 +225,7 @@
        "need": [
         "Your Summit Ready project, with the practice game opening from the map (chapter 9).",
         "The Files class that finds files, the Sound class that plays sounds and the Mix class that shuffles numbers (chapter 2).",
-        "The Data, Images and Sounds folders in your project's [[bin\\Debug|3]] folder, from `summit-ready-files.zip` (chapter 2). They already hold every file that Knot Pairs needs.",
+        "The Data, Images and Sounds folders in your project's [[bin\\Debug|4]] folder, from `summit-ready-files.zip` (chapter 2). They already hold every file that Knot Pairs needs.",
         "The line `// each game chapter adds its own case below this line` in `frmMap.cs` (chapter 8).",
         "File name extensions turned on in File Explorer, so `knots.txt` shows as `knots.txt` and not as `knots` (chapter 2).",
         "About 2 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
@@ -233,6 +233,12 @@
       },
       {
        "words": [
+        [
+         "Height",
+         "How tall a control is, in pixels.",
+         "4-14",
+         true
+        ],
         [
          "card",
          "One of the 16 squares you click in Knot Pairs. In the code, each card is a button.",
@@ -499,7 +505,7 @@
           "p": "If a sound is missing, that moment is silent, and the game carries on."
          },
          {
-          "p": "To put a missing file back, you download the [[zip file|4]] again and paste its folders into bin\\Debug. When Windows asks about the files you already have, you click **Skip these files**."
+          "p": "To put a missing file back, you download the [[zip file|5]] again and paste its folders into bin\\Debug. When Windows asks about the files you already have, you click **Skip these files**."
          },
          {
           "p": "Skipping keeps every file you already have, including any file you changed. Only the missing files are copied in."
@@ -512,7 +518,7 @@
             "download": {
              "file": "summit-ready-files.zip",
              "label": "Download summit-ready-files.zip",
-             "size": "8.2 MB"
+             "size": "7.8 MB"
             },
             "id": "2-1.1",
             "n": 1
@@ -521,25 +527,41 @@
             "do": "Press the Windows key and the E key together.",
             "see": "File Explorer opens.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c012.png",
              "alt": "File Explorer open on Downloads, with the menu that opens on summit-ready-files.zip",
-             "w": 800,
-             "h": 450,
+             "w": 818,
+             "h": 565,
              "marks": [
               {
                "n": 2,
+               "x": 0.2,
+               "y": 0.4,
+               "w": 78.0,
+               "h": 10.8,
                "say": "Press the Windows key and the E key together."
               },
               {
                "n": 3,
+               "x": 2.9,
+               "y": 21.2,
+               "w": 12.5,
+               "h": 3.2,
                "say": "Click **Downloads** in the list down the left side of File Explorer."
               },
               {
                "n": 4,
+               "x": 17.5,
+               "y": 20.5,
+               "w": 59.5,
+               "h": 3.0,
                "say": "Right-click `summit-ready-files.zip`."
               },
               {
                "n": 5,
+               "x": 36.2,
+               "y": 36.6,
+               "w": 26.8,
+               "h": 3.0,
                "say": "Click **Extract All...** in the menu."
               }
              ]
@@ -581,13 +603,17 @@
             "do": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window.",
             "see": "A new File Explorer window opens. It shows 3 folders, Data, Images and Sounds, and one file, `credits.txt`.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c013.png",
              "alt": "The Extract Compressed (Zipped) Folders window, with its Extract button",
-             "w": 640,
-             "h": 480,
+             "w": 622,
+             "h": 470,
              "marks": [
               {
                "n": 6,
+               "x": 68.5,
+               "y": 81.3,
+               "w": 10.0,
+               "h": 4.7,
                "say": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window."
               }
              ]
@@ -599,17 +625,25 @@
             "do": "Press Ctrl and A together.",
             "see": "The 3 folders and `credits.txt` turn blue.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c014.png",
              "alt": "The unpacked folder, with Data, Images, Sounds and credits.txt highlighted",
-             "w": 800,
-             "h": 360,
+             "w": 920,
+             "h": 486,
              "marks": [
               {
                "n": 7,
+               "x": 15.7,
+               "y": 36.0,
+               "w": 53.0,
+               "h": 14.0,
                "say": "Press Ctrl and A together."
               },
               {
                "n": 8,
+               "x": 6.7,
+               "y": 10.3,
+               "w": 3.5,
+               "h": 10.7,
                "say": "Press Ctrl and C together."
               }
              ]
@@ -627,13 +661,15 @@
             "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
             "see": "Visual Studio 2019 comes to the front, with your project open.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c015.png",
              "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
-             "w": 800,
-             "h": 60,
+             "w": 960,
+             "h": 41,
              "marks": [
               {
                "n": 9,
+               "x": 63.9,
+               "y": 50.0,
                "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
               }
              ]
@@ -645,17 +681,21 @@
             "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
             "see": "A long menu opens.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c016.png",
              "alt": "Solution Explorer, with the menu that opens on the project line",
-             "w": 360,
-             "h": 420,
+             "w": 635,
+             "h": 616,
              "marks": [
               {
                "n": 10,
+               "x": 59.8,
+               "y": 5.4,
                "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
               },
               {
                "n": 11,
+               "x": 18.8,
+               "y": 89.1,
                "say": "Click **Open Folder in File Explorer**, near the bottom of the menu."
               }
              ]
@@ -673,13 +713,15 @@
             "do": "Double-click the **bin** folder.",
             "see": "The bin folder holds a folder called Debug.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c017.png",
              "alt": "File Explorer on the project folder, with the bin folder",
-             "w": 640,
-             "h": 300,
+             "w": 960,
+             "h": 279,
              "marks": [
               {
                "n": 12,
+               "x": 21.3,
+               "y": 27.7,
                "say": "Double-click the **bin** folder."
               }
              ]
@@ -691,13 +733,15 @@
             "do": "Double-click the **Debug** folder.",
             "see": "The Debug folder holds the Data, Images and Sounds folders, and your program, whose name ends in .exe.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c018.png",
              "alt": "File Explorer on the bin folder, with the Debug folder",
-             "w": 640,
-             "h": 300,
+             "w": 960,
+             "h": 279,
              "marks": [
               {
                "n": 13,
+               "x": 22.4,
+               "y": 27.7,
                "say": "Double-click the **Debug** folder."
               }
              ]
@@ -709,17 +753,25 @@
             "do": "Press Ctrl and V together.",
             "see": "A window called Replace or Skip Files opens, because most of the files are already there.",
             "img": {
-             "missing": true,
+             "img": "img/cap/c194.png",
              "alt": "The Replace or Skip Files window, with Skip these files",
-             "w": 640,
-             "h": 400,
+             "w": 1123,
+             "h": 600,
              "marks": [
               {
                "n": 14,
+               "x": 15.1,
+               "y": 35.0,
+               "w": 62.3,
+               "h": 25.8,
                "say": "Press Ctrl and V together."
               },
               {
                "n": 15,
+               "x": 31.7,
+               "y": 27.7,
+               "w": 35.1,
+               "h": 5.3,
                "say": "Click **Skip these files**."
               }
              ]
@@ -759,13 +811,15 @@
          "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
          "see": "Visual Studio 2019 comes to the front, with your project open.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c015.png",
           "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
-          "w": 800,
-          "h": 60,
+          "w": 960,
+          "h": 41,
           "marks": [
            {
             "n": 1,
+            "x": 63.9,
+            "y": 50.0,
             "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
            }
           ]
@@ -777,21 +831,27 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
-          "alt": "The project menu, with Add pointed at and Class... in the second menu",
-          "w": 640,
-          "h": 420,
+          "img": "img/cap/c023.png",
+          "alt": "The project menu, with Add pointed at and Class in the second menu",
+          "w": 959,
+          "h": 616,
           "marks": [
            {
             "n": 2,
+            "x": 73.0,
+            "y": 5.4,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 3,
+            "x": 39.6,
+            "y": 38.6,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 4,
+            "x": 6.2,
+            "y": 93.2,
             "say": "Click **Class...** at the bottom of the second menu."
            }
           ]
@@ -815,21 +875,27 @@
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Class1.cs` turns blue, so what you type next replaces it.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c024.png",
           "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
-          "w": 800,
-          "h": 450,
+          "w": 948,
+          "h": 660,
           "marks": [
            {
             "n": 5,
+            "x": 16.9,
+            "y": 92.1,
             "say": "Triple-click the Name box at the bottom of the Add New Item window."
            },
            {
             "n": 6,
+            "x": 42.2,
+            "y": 92.1,
             "say": "Type `Knot.cs`"
            },
            {
             "n": 7,
+            "x": 85.7,
+            "y": 96.5,
             "say": "Click **Add**."
            }
           ]
@@ -852,26 +918,6 @@
         {
          "do": "Click at the end of the line `using System.Threading.Tasks;`",
          "see": "The flashing cursor is after the semicolon.",
-         "img": {
-          "missing": true,
-          "alt": "Knot.cs as Visual Studio 2019 makes it, with using System.IO; added",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 8,
-            "say": "Click at the end of the line `using System.Threading.Tasks;`"
-           },
-           {
-            "n": 9,
-            "say": "Press Enter."
-           },
-           {
-            "n": 10,
-            "say": "Type `using System.IO;`"
-           }
-          ]
-         },
          "id": "2-2.8",
          "n": 8
         },
@@ -945,31 +991,31 @@
           4,
           26,
           39,
-          5
+          6
          ],
          [
           9,
           4,
           16,
-          6
+          7
          ],
          [
           17,
           11,
           17,
-          7
+          8
          ],
          [
           17,
           18,
           28,
-          8
+          9
          ],
          [
           27,
           35,
           43,
-          9
+          10
          ]
         ]
        }
@@ -979,22 +1025,6 @@
         {
          "do": "Drag from the start of `class Knot` down to the end of the `}` two lines below it.",
          "see": "`class Knot` and its empty `{` and `}` turn blue. The last `}` in the file stays white. That is right: the last `}` closes the namespace, and it must stay.",
-         "img": {
-          "missing": true,
-          "alt": "Knot.cs, with class Knot and its empty braces highlighted",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 11,
-            "say": "Drag from the start of `class Knot` down to the end of the `}` two lines below it."
-           },
-           {
-            "n": 13,
-            "say": "Press Ctrl and V together."
-           }
-          ]
-         },
          "id": "2-2.11",
          "n": 11
         },
@@ -1014,34 +1044,6 @@
         {
          "do": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it.",
          "see": "The whole line turns blue.",
-         "img": {
-          "missing": true,
-          "alt": "Knot.cs, with the yellow lines typed in place of the two YOU TYPE THIS PART lines",
-          "w": 800,
-          "h": 360,
-          "marks": [
-           {
-            "n": 14,
-            "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it."
-           },
-           {
-            "n": 15,
-            "say": "Type the 3 yellow lines that start with `public string`. Press Enter at the end of each line."
-           },
-           {
-            "n": 16,
-            "say": "Triple-click the other line that starts with `// YOU TYPE THIS PART`."
-           },
-           {
-            "n": 17,
-            "say": "Type the 3 yellow lines that start with `Picture`, `Name` and `Use`. Press Enter at the end of each line."
-           },
-           {
-            "n": 18,
-            "say": "Press Ctrl and S together."
-           }
-          ]
-         },
          "id": "2-2.14",
          "n": 14
         },
@@ -1059,7 +1061,7 @@
         },
         {
          "do": "Type the 3 yellow lines that start with `Picture`, `Name` and `Use`. Press Enter at the end of each line.",
-         "see": "No line in `Knot.cs` has a [[red underline|31]].",
+         "see": "No line in `Knot.cs` has a [[red underline|32]].",
          "id": "2-2.17",
          "n": 17
         },
@@ -1095,21 +1097,27 @@
          "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
          "see": "A long menu opens.",
          "img": {
-          "missing": true,
-          "alt": "The project menu, with Add pointed at and Form (Windows Forms)... in the second menu",
-          "w": 640,
-          "h": 420,
+          "img": "img/cap/c068.png",
+          "alt": "The project menu, with Add pointed at and Form (Windows Forms) in the second menu",
+          "w": 949,
+          "h": 605,
           "marks": [
            {
             "n": 1,
+            "x": 73.8,
+            "y": 4.6,
             "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
            },
            {
             "n": 2,
+            "x": 40.6,
+            "y": 37.8,
             "say": "Point at **Add**, near the top of the menu."
            },
            {
             "n": 3,
+            "x": 11.6,
+            "y": 81.0,
             "say": "Click **Form (Windows Forms)...** in the second menu."
            }
           ]
@@ -1133,21 +1141,29 @@
          "do": "Triple-click the Name box at the bottom of the Add New Item window.",
          "see": "`Form1.cs` turns blue, so what you type next replaces it.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c069.png",
           "alt": "The Add New Item window, with Form (Windows Forms) picked",
-          "w": 800,
-          "h": 450,
+          "w": 943,
+          "h": 592,
           "marks": [
            {
             "n": 4,
+            "x": 42.5,
+            "y": 91.1,
             "say": "Triple-click the Name box at the bottom of the Add New Item window."
            },
            {
             "n": 5,
+            "x": 13.8,
+            "y": 89.5,
+            "w": 57.4,
+            "h": 3.5,
             "say": "Type `frmKnots.cs`"
            },
            {
             "n": 6,
+            "x": 86.0,
+            "y": 96.3,
             "say": "Click **Add**."
            }
           ]
@@ -1170,16 +1186,16 @@
        ]
       },
       {
-       "p": "Now set the form's properties in the Properties window, using the table below. Set **Font** first. If you change Font later, Visual Studio 2019 stretches the form to fit the new font, and its size (ClientSize) changes."
+       "p": "Now set the form's properties in the Properties window, using the table below. Set **Font** first. If you change Font later, Visual Studio 2019 stretches the form to fit the new font, and its Size changes."
       },
       {
        "controls": {
         "props": [
          "Font = Segoe UI, 11pt",
          "Text = Summit Ready - Knot Pairs",
-         "ClientSize = 1000, 660",
          "StartPosition = CenterScreen",
          "FormBorderStyle = FixedSingle",
+         "Size = 1016, 699",
          "MaximizeBox = False",
          "BackColor = 243, 245, 242"
         ]
@@ -1211,24 +1227,32 @@
       {
        "steps": [
         {
-         "do": "Click the [[lightning bolt|10]] at the top of the Properties window.",
+         "do": "Click the [[lightning bolt|11]] at the top of the Properties window.",
          "see": "The Properties window now lists the form's events in place of its properties.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c249.png",
           "alt": "The Properties window showing the events of frmKnots, with the lightning bolt, Load and the Properties button",
-          "w": 360,
-          "h": 480,
+          "w": 352,
+          "h": 422,
           "marks": [
            {
             "n": 7,
-            "say": "Click the [[lightning bolt|10]] at the top of the Properties window."
+            "x": 25.6,
+            "y": 12.8,
+            "say": "Click the [[lightning bolt|11]] at the top of the Properties window."
            },
            {
             "n": 8,
+            "x": 42.6,
+            "y": 57.1,
+            "w": 52.6,
+            "h": 4.5,
             "say": "Double-click the empty box beside **Load**. Load comes after Leave, so scroll down the list a little if you cannot see it."
            },
            {
             "n": 10,
+            "x": 18.8,
+            "y": 12.8,
             "say": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window."
            }
           ]
@@ -1246,13 +1270,17 @@
          "do": "Press Shift and F7 together.",
          "see": "The designer shows frmKnots.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c250.png",
           "alt": "The designer showing frmKnots, with the frmKnots.cs [Design] tab",
-          "w": 800,
-          "h": 300,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 9,
+            "x": 25.5,
+            "y": 0.2,
+            "w": 13.0,
+            "h": 2.9,
             "say": "Press Shift and F7 together."
            }
           ]
@@ -1289,13 +1317,17 @@
          "do": "Double-click `frmPractice.cs` in Solution Explorer.",
          "see": "frmPractice opens in the designer.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c200.png",
           "alt": "Solution Explorer, with frmPractice.cs",
-          "w": 360,
-          "h": 300,
+          "w": 352,
+          "h": 138,
           "marks": [
            {
             "n": 1,
+            "x": 14.6,
+            "y": 77.9,
+            "w": 31.4,
+            "h": 13.3,
             "say": "Double-click `frmPractice.cs` in Solution Explorer."
            }
           ]
@@ -1307,17 +1339,23 @@
          "do": "Click a dark part of the header strip that has no words on it.",
          "see": "The Properties window shows pnlHeader at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c201.png",
           "alt": "frmPractice in the designer, with the dark header strip picked",
-          "w": 800,
-          "h": 450,
+          "w": 1078,
+          "h": 624,
           "marks": [
            {
             "n": 2,
+            "x": 77.0,
+            "y": 18.8,
             "say": "Click a dark part of the header strip that has no words on it."
            },
            {
             "n": 3,
+            "x": 5.0,
+            "y": 10.6,
+            "w": 93.1,
+            "h": 9.6,
             "say": "Press Ctrl and C together."
            }
           ]
@@ -1341,17 +1379,25 @@
          "do": "Click the **frmKnots.cs [Design]** tab at the top of the editor.",
          "see": "The empty frmKnots form shows again.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c251.png",
           "alt": "The empty frmKnots form, with the frmKnots.cs [Design] tab and the title bar of frmKnots",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 4,
+            "x": 28.7,
+            "y": 1.2,
+            "w": 14.9,
+            "h": 6.2,
             "say": "Click the **frmKnots.cs [Design]** tab at the top of the editor."
            },
            {
             "n": 5,
+            "x": 4.7,
+            "y": 15.7,
+            "w": 91.6,
+            "h": 8.3,
             "say": "Click the title bar of frmKnots."
            }
           ]
@@ -1369,25 +1415,37 @@
          "do": "Press Ctrl and V together.",
          "see": "The dark header strip appears on frmKnots, with small white squares at its corners. The Properties window shows pnlHeader.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c252.png",
           "alt": "frmKnots with the pasted header strip, and the Location box in the Properties window",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 6,
+            "x": 2.8,
+            "y": 10.9,
+            "w": 52.9,
+            "h": 8.6,
             "say": "Press Ctrl and V together."
            },
            {
             "n": 7,
+            "x": 89.3,
+            "y": 87.8,
+            "w": 10.4,
+            "h": 2.8,
             "say": "Triple-click the box beside **Location** in the Properties window."
            },
            {
             "n": 8,
+            "x": 94.5,
+            "y": 89.1,
             "say": "Type `0, 0`"
            },
            {
             "n": 9,
+            "x": 90.3,
+            "y": 89.1,
             "say": "Press Enter."
            }
           ]
@@ -1445,21 +1503,31 @@
          "do": "Click the **frmPractice.cs [Design]** tab at the top of the editor.",
          "see": "frmPractice shows again.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c204.png",
           "alt": "frmPractice in the designer, with the white Round over box picked",
-          "w": 800,
-          "h": 450,
+          "w": 1078,
+          "h": 624,
           "marks": [
            {
             "n": 1,
+            "x": 3.0,
+            "y": 0.2,
+            "w": 15.8,
+            "h": 2.9,
             "say": "Click the **frmPractice.cs [Design]** tab at the top of the editor."
            },
            {
             "n": 2,
-            "say": "Click a white part of the Round over box that has no words on it."
+            "x": 34.1,
+            "y": 93.7,
+            "say": "Click the white space to the right of the words Round over, at the top of the box. (The empty space lower down holds hidden labels, so a click there picks a label, not the box.)"
            },
            {
             "n": 3,
+            "x": 21.7,
+            "y": 29.8,
+            "w": 59.8,
+            "h": 67.8,
             "say": "Press Ctrl and C together."
            }
           ]
@@ -1468,7 +1536,7 @@
          "n": 1
         },
         {
-         "do": "Click a white part of the Round over box that has no words on it.",
+         "do": "Click the white space to the right of the words Round over, at the top of the box. (The empty space lower down holds hidden labels, so a click there picks a label, not the box.)",
          "see": "The Properties window shows pnlRoundOver at the top.",
          "wrong": [
           [
@@ -1489,33 +1557,53 @@
          "do": "Click the **frmKnots.cs [Design]** tab at the top of the editor.",
          "see": "frmKnots shows again, with the header strip.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c253.png",
           "alt": "frmKnots with the pasted Round over box in the middle",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 4,
+            "x": 16.7,
+            "y": 0.6,
+            "w": 8.7,
+            "h": 2.8,
             "say": "Click the **frmKnots.cs [Design]** tab at the top of the editor."
            },
            {
             "n": 5,
+            "x": 2.7,
+            "y": 7.1,
+            "w": 53.3,
+            "h": 3.8,
             "say": "Click the title bar of frmKnots."
            },
            {
             "n": 6,
+            "x": 12.4,
+            "y": 28.9,
+            "w": 34.0,
+            "h": 65.0,
             "say": "Press Ctrl and V together."
            },
            {
             "n": 7,
+            "x": 89.3,
+            "y": 79.1,
+            "w": 10.4,
+            "h": 2.8,
             "say": "Triple-click the box beside **Location** in the Properties window."
            },
            {
             "n": 8,
+            "x": 94.5,
+            "y": 80.5,
             "say": "Type `180, 120`"
            },
            {
             "n": 9,
+            "x": 90.3,
+            "y": 80.5,
             "say": "Press Enter."
            }
           ]
@@ -1579,25 +1667,37 @@
          "do": "Click the title at the left of the header strip.",
          "see": "The Properties window shows lblTitle at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c254.png",
           "alt": "The header strip on frmKnots, with lblTitle picked and its Text box in the Properties window",
-          "w": 800,
-          "h": 300,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 1,
+            "x": 3.6,
+            "y": 11.5,
+            "w": 29.4,
+            "h": 5.1,
             "say": "Click the title at the left of the header strip."
            },
            {
             "n": 2,
+            "x": 89.3,
+            "y": 79.1,
+            "w": 10.4,
+            "h": 2.8,
             "say": "Triple-click the box beside **Text** in the Properties window."
            },
            {
             "n": 3,
+            "x": 94.5,
+            "y": 80.5,
             "say": "Type `Slieve Lamagan - Knot Pairs`"
            },
            {
             "n": 4,
+            "x": 90.3,
+            "y": 80.5,
             "say": "Press Enter."
            }
           ]
@@ -1627,25 +1727,37 @@
          "do": "Click the instruction under the title.",
          "see": "The Properties window shows lblInstruction at the top.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c255.png",
           "alt": "The header strip on frmKnots, with lblInstruction picked and its Text box in the Properties window",
-          "w": 800,
-          "h": 300,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 5,
+            "x": 3.8,
+            "y": 15.8,
+            "w": 37.3,
+            "h": 3.4,
             "say": "Click the instruction under the title."
            },
            {
             "n": 6,
+            "x": 89.3,
+            "y": 79.1,
+            "w": 10.4,
+            "h": 2.8,
             "say": "Triple-click the box beside **Text** in the Properties window."
            },
            {
             "n": 7,
+            "x": 94.5,
+            "y": 80.5,
             "say": "Type `Turn over two cards at a time to match each knot to its name. You have 24 tries before the rope snaps.`"
            },
            {
             "n": 8,
+            "x": 90.3,
+            "y": 80.5,
             "say": "Press Enter."
            }
           ]
@@ -1692,7 +1804,7 @@
        "p": "pnlPlay covers the Round over box in the designer. This is normal: the code brings the Round over box to the front when a round ends."
       },
       {
-       "p": "A Timer never shows on the window. When you drop a Timer on the form, it appears in the grey strip under the form. Its [[Interval|28]] is how long it waits, in thousandths of a second, so 900 is 0.9 seconds."
+       "p": "A Timer never shows on the window. When you drop a Timer on the form, it appears in the grey strip under the form. Its [[Interval|29]] is how long it waits, in thousandths of a second, so 900 is 0.9 seconds."
       },
       {
        "controls": {
@@ -1793,13 +1905,13 @@
          }
         ],
         "done": {
-         "see": "The dark header strip along the top of frmKnots. Under it, pnlPlay fills the rest of the form, with lblTries, lblRope, prgRope, lblPairs, lblUse and btnScore down its right-hand side. The left-hand side of pnlPlay stays empty, because the code puts the 16 cards there. tmrFlipBack and tmrDone sit in the grey strip under the form.",
+         "see": "The dark header strip along the top of frmKnots. Under it, pnlPlay fills the rest of the form, with lblTries, lblRope, prgRope, lblPairs, lblUse and btnScore down its right-hand side. The left-hand side of pnlPlay stays empty, because the code puts the 16 cards there. The Timers tmrFlipBack and tmrDone sit in the grey strip under the form.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c256.png",
           "alt": "frmKnots in the designer with every control from the table on it, and the two Timers in the grey strip under the form",
-          "w": 800,
-          "h": 450,
-          "at": []
+          "w": 1568,
+          "h": 675,
+          "marks": []
          }
         }
        }
@@ -1838,6 +1950,7 @@
         "kind": "copy",
         "title": "The game-form fields from chapter 9",
         "lang": "cs",
+        "taught": "09",
         "why": "The 3 fields are the same in every game form, and you typed them in chapter 9. Only the number in `gameNumber` changes. The places on the map are numbered from 0, so Knot Pairs, the second place, is number 1.",
         "text": "// ---------- the game-form fields from chapter 9 ----------\nprivate int gameNumber = 1;      // Knot Pairs is place 1 (0 is first)\nprivate GameResult result;       // made when the round ends\nprivate bool finished = false;   // true once the result is kept",
         "partLines": [
@@ -1855,30 +1968,6 @@
         {
          "do": "Click the **frmKnots.cs** tab at the top of the editor, the one without [Design].",
          "see": "The code of frmKnots shows, with `frmKnots_Load` near the bottom.",
-         "img": {
-          "missing": true,
-          "alt": "frmKnots.cs in the code editor, with the 3 pasted fields under the class line",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click the **frmKnots.cs** tab at the top of the editor, the one without [Design]."
-           },
-           {
-            "n": 2,
-            "say": "Click at the end of the `{` under `public partial class frmKnots : Form`."
-           },
-           {
-            "n": 3,
-            "say": "Press Enter."
-           },
-           {
-            "n": 5,
-            "say": "Press Ctrl and V together."
-           }
-          ]
-         },
          "id": "4-1.1",
          "n": 1
         },
@@ -1915,6 +2004,7 @@
         "kind": "copy",
         "title": "The game-form methods from chapter 9",
         "lang": "cs",
+        "taught": "09",
         "why": "The 8 methods are the same in every game form, and you typed and tested them in chapter 9. Only the question that FormClosing asks names Knot Pairs.",
         "text": "// ---------- the game-form methods from chapter 9 ----------\n\n// Keeps the result on the map, even if the window is then closed\nprivate void KeepResult()\n{\n    Expedition.Finish(gameNumber, result);\n    finished = true;\n    lblScore.Text = \"Points: \" + result.Score;\n}\n\n// Fills in the Round over panel and brings it to the front\nprivate void ShowRoundOver()\n{\n    lblRoundScore.Text = \"You scored \" + result.Score\n        + \" out of 100 points.\";\n    lblWellList.Text = ListText(result.WentWell,\n        \"thing that went well\", \"things that went well\");\n    lblWrongList.Text = ListText(result.WentWrong,\n        \"thing that went wrong\", \"things that went wrong\");\n    if (result.Score >= 60) Sound.Play(\"win.wav\");\n    else Sound.Play(\"lose.wav\");\n    pnlRoundOver.Visible = true;\n    pnlRoundOver.BringToFront();\n}\n\n// Up to 3 lines from a list, then how many more there are\nprivate string ListText(List<string> lines, string one, string many)\n{\n    if (lines.Count == 0) return \"Nothing this time.\";\n    string text = \"\";\n    for (int i = 0; i < lines.Count && i < 3; i++)\n    {\n        text = text + \"- \" + lines[i] + Environment.NewLine;\n    }\n    int more = lines.Count - 3;\n    if (more == 1) text = text + \"And 1 more \" + one + \".\";\n    if (more > 1) text = text + \"And \" + more + \" more \" + many + \".\";\n    return text;\n}\n\n// Back to the map: closing the window runs FormClosing\nprivate void btnBack_Click(object sender, EventArgs e)\n{\n    this.Close();\n}\n\n// The Round over panel's Back to the map button\nprivate void btnDone_Click(object sender, EventArgs e)\n{\n    this.Close();\n}\n\n// Runs as the window closes, by Back, by Done or by the X\nprivate void frmKnots_FormClosing(object sender,\n    FormClosingEventArgs e)\n{\n    if (finished) return;    // a finished round closes at once\n    DialogResult answer = MessageBox.Show(\"Leave Knot Pairs? It will \"\n        + \"score nothing, but you can come back and climb it again.\",\n        \"Summit Ready\", MessageBoxButtons.YesNo);\n    if (answer == DialogResult.No) e.Cancel = true;   // stay\n}\n\n// Shows the speaker picture that matches the sound being on or off\nprivate void ShowSpeaker()\n{\n    string icon = \"icon-speaker-on-64.png\";\n    if (Sound.Muted) icon = \"icon-speaker-muted-64.png\";\n    picSound.Image = Files.Picture(\"Icons\", icon);\n}\n\n// The speaker picture turns the sound off, or back on\nprivate void picSound_Click(object sender, EventArgs e)\n{\n    Sound.Muted = !Sound.Muted;\n    ShowSpeaker();\n}",
         "partLines": [
@@ -1972,13 +2062,13 @@
           42,
           34,
           40,
-          21
+          22
          ],
          [
           31,
           36,
           38,
-          24
+          25
          ]
         ]
        }
@@ -1988,30 +2078,6 @@
         {
          "do": "Click at the end of the `}` that closes `frmKnots_Load`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmKnots.cs, with the 8 pasted methods under frmKnots_Load",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 6,
-            "say": "Click at the end of the `}` that closes `frmKnots_Load`."
-           },
-           {
-            "n": 7,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 9,
-            "say": "Press Ctrl and V together."
-           },
-           {
-            "n": 10,
-            "say": "Press Ctrl and S together."
-           }
-          ]
-         },
          "id": "4-1.6",
          "n": 6
         },
@@ -2052,7 +2118,7 @@
        "p": "By the end of this screen, both **Back to the map** buttons on frmKnots close the window."
       },
       {
-       "p": "A pasted method does nothing until it is connected to an [[event|17]]. A pasted control keeps its name, but its events do not always come with it. So you check each event in the Properties window, and connect it."
+       "p": "A pasted method does nothing until it is connected to an [[event|18]]. A pasted control keeps its name, but its events do not always come with it. So you check each event in the Properties window, and connect it."
       },
       {
        "p": "You connect each event with the small arrow beside it. Do not double-click the box beside the event, because double-clicking makes a second, empty method."
@@ -2063,17 +2129,23 @@
          "do": "Press Shift and F7 together.",
          "see": "The designer shows frmKnots.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c259.png",
           "alt": "frmKnots in the designer, with Back to the map picked on the header strip",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 1,
+            "x": 19.7,
+            "y": 1.9,
             "say": "Press Shift and F7 together."
            },
            {
             "n": 2,
+            "x": 45.0,
+            "y": 11.3,
+            "w": 10.4,
+            "h": 7.7,
             "say": "Click **Back to the map** on the header strip."
            }
           ]
@@ -2091,25 +2163,35 @@
          "do": "Click the lightning bolt at the top of the Properties window.",
          "see": "The Properties window lists the events of btnBack.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c212.png",
           "alt": "The Properties window showing the events of btnBack, with the list open beside Click",
-          "w": 360,
-          "h": 480,
+          "w": 352,
+          "h": 489,
           "marks": [
            {
             "n": 3,
+            "x": 25.3,
+            "y": 11.2,
             "say": "Click the lightning bolt at the top of the Properties window."
            },
            {
             "n": 4,
+            "x": 42.0,
+            "y": 14.7,
+            "w": 47.2,
+            "h": 3.7,
             "say": "Click the box beside **Click**."
            },
            {
             "n": 5,
+            "x": 92.0,
+            "y": 16.6,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 6,
+            "x": 54.0,
+            "y": 32.7,
             "say": "Click `btnBack_Click` in the list."
            }
           ]
@@ -2158,17 +2240,23 @@
          "do": "Click the arrow at the right end of the box at the very top of the Properties window.",
          "see": "A list of every control on frmKnots drops down.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c213.png",
           "alt": "The Properties window, with the list of every control open at the top",
-          "w": 360,
-          "h": 480,
+          "w": 352,
+          "h": 489,
           "marks": [
            {
             "n": 7,
+            "x": 96.6,
+            "y": 6.5,
             "say": "Click the arrow at the right end of the box at the very top of the Properties window."
            },
            {
             "n": 8,
+            "x": 1.1,
+            "y": 16.8,
+            "w": 69.9,
+            "h": 3.3,
             "say": "Click **btnDone** in the list."
            }
           ]
@@ -2186,21 +2274,31 @@
          "do": "Click the box beside **Click**.",
          "see": "A small arrow appears at the right end of the box.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c214.png",
           "alt": "The Properties window showing the events of btnDone, with btnDone_Click beside Click",
-          "w": 360,
-          "h": 480,
+          "w": 352,
+          "h": 489,
           "marks": [
            {
             "n": 9,
+            "x": 4.5,
+            "y": 14.7,
+            "w": 89.2,
+            "h": 3.7,
             "say": "Click the box beside **Click**."
            },
            {
             "n": 10,
+            "x": 95.2,
+            "y": 16.4,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 11,
+            "x": 42.3,
+            "y": 35.2,
+            "w": 51.4,
+            "h": 3.7,
             "say": "Click `btnDone_Click` in the list."
            }
           ]
@@ -2240,25 +2338,37 @@
          "do": "Click the speaker picture on the header strip.",
          "see": "The Properties window shows the events of picSound.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c215.png",
           "alt": "The Properties window showing the events of picSound, with picSound_Click beside Click",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 1,
+            "x": 41.8,
+            "y": 15.1,
             "say": "Click the speaker picture on the header strip."
            },
            {
             "n": 2,
+            "x": 82.3,
+            "y": 51.4,
+            "w": 15.6,
+            "h": 2.9,
             "say": "Click the box beside **Click**."
            },
            {
             "n": 3,
+            "x": 98.4,
+            "y": 52.7,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 4,
+            "x": 89.3,
+            "y": 70.6,
+            "w": 9.6,
+            "h": 2.9,
             "say": "Click `picSound_Click` in the list."
            }
           ]
@@ -2288,25 +2398,37 @@
          "do": "Click the title bar of frmKnots.",
          "see": "The Properties window shows the events of frmKnots.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c260.png",
           "alt": "The Properties window showing the events of frmKnots, with frmKnots_FormClosing beside FormClosing",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 5,
+            "x": 19.4,
+            "y": 9.0,
             "say": "Click the title bar of frmKnots."
            },
            {
             "n": 6,
+            "x": 82.2,
+            "y": 70.1,
+            "w": 16.8,
+            "h": 3.2,
             "say": "Click the box beside **FormClosing**. Scroll down the list a little if you cannot see it."
            },
            {
             "n": 7,
+            "x": 98.4,
+            "y": 71.8,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 8,
+            "x": 89.3,
+            "y": 70.3,
+            "w": 8.5,
+            "h": 2.8,
             "say": "Click `frmKnots_FormClosing` in the list."
            }
           ]
@@ -2336,13 +2458,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 9,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -2368,7 +2492,7 @@
        "p": "By the end of this screen, frmKnots has the variables that remember the cards, the tries and the pairs while a round plays."
       },
       {
-       "p": "These variables are called [[fields|11]]. They sit at the top of the class, outside every method, so every method in the form can use them."
+       "p": "These variables are called [[fields|12]]. They sit at the top of the class, outside every method, so every method in the form can use them."
       },
       {
        "p": "Every field below is new in this chapter, so you type every one."
@@ -2424,13 +2548,13 @@
           2,
           8,
           18,
-          8
+          9
          ],
          [
           3,
           8,
           16,
-          12
+          13
          ]
         ]
        }
@@ -2459,26 +2583,6 @@
         {
          "do": "Click at the end of the line `private bool finished = false;   // true once the result is kept`",
          "see": "The flashing cursor is at the end of the comment.",
-         "img": {
-          "missing": true,
-          "alt": "frmKnots.cs, with the Knot Pairs fields typed under the chapter 9 fields",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the line `private bool finished = false;   // true once the result is kept`"
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-4.1",
          "n": 1
         },
@@ -2553,7 +2657,7 @@
           4,
           25,
           39,
-          14
+          15
          ]
         ]
        }
@@ -2563,26 +2667,6 @@
         {
          "do": "Click at the end of the `}` that closes `frmKnots_Load`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmKnots.cs, with ShowBack and ShowFace typed under frmKnots_Load",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `frmKnots_Load`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-5.1",
          "n": 1
         },
@@ -2602,13 +2686,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**. The Error List may show warnings. This is normal for now.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 4,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -2706,43 +2792,43 @@
           12,
           4,
           11,
-          13
+          14
          ],
          [
           6,
           38,
           39,
-          15
+          16
          ],
          [
           7,
           16,
           17,
-          16
+          17
          ],
          [
           11,
           9,
           14,
-          17
+          18
          ],
          [
           11,
           15,
           17,
-          18
+          19
          ],
          [
           11,
           18,
           28,
-          19
+          20
          ],
          [
           12,
           12,
           24,
-          20
+          21
          ]
         ]
        }
@@ -2752,26 +2838,6 @@
         {
          "do": "Click at the end of the `}` that closes `ShowFace`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmKnots.cs, with MakeCard typed under ShowFace",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `ShowFace`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-6.1",
          "n": 1
         },
@@ -2852,13 +2918,13 @@
           4,
           4,
           9,
-          12
+          13
          ],
          [
           7,
           29,
           30,
-          15
+          16
          ]
         ]
        }
@@ -2868,26 +2934,6 @@
         {
          "do": "Click at the end of the `}` that closes `MakeCard`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmKnots.cs, with MakeCards typed under MakeCard",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `MakeCard`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-7.1",
          "n": 1
         },
@@ -2963,7 +3009,7 @@
           1,
           34,
           40,
-          21
+          22
          ]
         ]
        }
@@ -2973,26 +3019,6 @@
         {
          "do": "Click at the end of the `{` on the line under `private void frmKnots_Load`.",
          "see": "The flashing cursor is after the `{`.",
-         "img": {
-          "missing": true,
-          "alt": "frmKnots.cs, with the yellow lines typed inside frmKnots_Load",
-          "w": 800,
-          "h": 360,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `{` on the line under `private void frmKnots_Load`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-8.1",
          "n": 1
         },
@@ -3055,13 +3081,13 @@
           2,
           30,
           36,
-          21
+          22
          ],
          [
           4,
           21,
           29,
-          22
+          23
          ]
         ]
        }
@@ -3071,26 +3097,6 @@
         {
          "do": "Click at the end of the `}` that closes `MakeCards`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmKnots.cs, with CardNumber typed under MakeCards",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `MakeCards`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-9.1",
          "n": 1
         },
@@ -3177,25 +3183,25 @@
           2,
           13,
           23,
-          19
+          20
          ],
          [
           2,
           31,
           37,
-          21
+          22
          ],
          [
           5,
           15,
           17,
-          23
+          24
          ],
          [
           15,
           4,
           11,
-          25
+          26
          ]
         ]
        }
@@ -3205,26 +3211,6 @@
         {
          "do": "Click at the end of the `}` that closes `CardNumber`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmKnots.cs, with Card_Click typed under CardNumber",
-          "w": 800,
-          "h": 360,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `CardNumber`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-10.1",
          "n": 1
         },
@@ -3310,13 +3296,13 @@
           4,
           17,
           31,
-          14
+          15
          ],
          [
           16,
           40,
           47,
-          26
+          27
          ]
         ]
        }
@@ -3326,42 +3312,6 @@
         {
          "do": "Click at the end of the `}` that closes `Card_Click`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmKnots.cs, with Match pasted and typed under Card_Click",
-          "w": 800,
-          "h": 400,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `Card_Click`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 4,
-            "say": "Press Ctrl and V together."
-           },
-           {
-            "n": 5,
-            "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it."
-           },
-           {
-            "n": 6,
-            "say": "Type the first group of yellow lines, from `// The two cards show the same knot` down to `cards[first].FlatAppearance.BorderSize = 4;`. Press Enter at the end of each line."
-           },
-           {
-            "n": 7,
-            "say": "Triple-click the line that starts with `// YOU TYPE THIS PART`."
-           },
-           {
-            "n": 8,
-            "say": "Type the second group of yellow lines, from `first = -1;` down to the `}` that closes Match."
-           }
-          ]
-         },
          "id": "4-11.1",
          "n": 1
         },
@@ -3473,19 +3423,19 @@
           11,
           37,
           43,
-          21
+          22
          ],
          [
           7,
           4,
           15,
-          27
+          28
          ],
          [
           11,
           13,
           29,
-          29
+          30
          ]
         ]
        }
@@ -3495,26 +3445,6 @@
         {
          "do": "Click at the end of the `}` that closes `Match`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmKnots.cs, with NoMatch and tmrFlipBack_Tick typed under Match",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `Match`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-12.1",
          "n": 1
         },
@@ -3583,13 +3513,13 @@
           9,
           24,
           32,
-          9
+          10
          ],
          [
           5,
           25,
           39,
-          14
+          15
          ]
         ]
        }
@@ -3599,26 +3529,6 @@
         {
          "do": "Click at the end of the `}` that closes `tmrFlipBack_Tick`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmKnots.cs, with RopeSnaps typed under tmrFlipBack_Tick",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `tmrFlipBack_Tick`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-13.1",
          "n": 1
         },
@@ -3690,22 +3600,28 @@
         "typed": 9,
         "wordMarks": [
          [
+          7,
+          10,
+          16,
+          0
+         ],
+         [
           8,
           22,
           36,
-          14
+          15
          ],
          [
           11,
           13,
           25,
-          20
+          21
          ],
          [
           6,
           10,
           14,
-          30
+          31
          ]
         ]
        }
@@ -3715,26 +3631,6 @@
         {
          "do": "Click at the end of the `}` that closes `RopeSnaps`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmKnots.cs, with AddNameStrip typed under RopeSnaps",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `RopeSnaps`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-14.1",
          "n": 1
         },
@@ -3803,7 +3699,7 @@
           5,
           19,
           21,
-          24
+          25
          ]
         ]
        }
@@ -3813,26 +3709,6 @@
         {
          "do": "Click at the end of the `}` that closes `AddNameStrip`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmKnots.cs, with RecordResult typed under AddNameStrip",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `AddNameStrip`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-15.1",
          "n": 1
         },
@@ -3907,7 +3783,7 @@
           22,
           19,
           21,
-          24
+          25
          ]
         ]
        }
@@ -3917,26 +3793,6 @@
         {
          "do": "Click at the end of the `}` that closes `RecordResult`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmKnots.cs, with AddFeedback typed under RecordResult",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `RecordResult`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-16.1",
          "n": 1
         },
@@ -3993,7 +3849,7 @@
           6,
           27,
           29,
-          24
+          25
          ]
         ]
        }
@@ -4003,26 +3859,6 @@
         {
          "do": "Click at the end of the `}` that closes `AddFeedback`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmKnots.cs, with KnotMatched typed under AddFeedback",
-          "w": 800,
-          "h": 300,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `AddFeedback`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-17.1",
          "n": 1
         },
@@ -4091,19 +3927,19 @@
           9,
           33,
           39,
-          21
+          22
          ],
          [
           5,
           4,
           11,
-          27
+          28
          ],
          [
           9,
           13,
           25,
-          29
+          30
          ]
         ]
        }
@@ -4113,26 +3949,6 @@
         {
          "do": "Click at the end of the `}` that closes `KnotMatched`.",
          "see": "The flashing cursor is after the `}`.",
-         "img": {
-          "missing": true,
-          "alt": "frmKnots.cs, with AllMatched, tmrDone_Tick and btnScore_Click typed under KnotMatched",
-          "w": 800,
-          "h": 360,
-          "marks": [
-           {
-            "n": 1,
-            "say": "Click at the end of the `}` that closes `KnotMatched`."
-           },
-           {
-            "n": 2,
-            "say": "Press Enter twice."
-           },
-           {
-            "n": 3,
-            "say": "Type the yellow lines from the code above."
-           }
-          ]
-         },
          "id": "4-18.1",
          "n": 1
         },
@@ -4152,13 +3968,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 4,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -4195,33 +4013,51 @@
          "do": "Press Shift and F7 together.",
          "see": "The designer shows frmKnots.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c276.png",
           "alt": "frmKnots in the designer, with tmrFlipBack picked in the grey strip under the form, and the Properties window showing the Tick event of tmrFlipBack",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 1,
+            "x": 4.9,
+            "y": 2.1,
             "say": "Press Shift and F7 together."
            },
            {
             "n": 2,
+            "x": 2.5,
+            "y": 86.1,
+            "w": 5.4,
+            "h": 3.8,
             "say": "Click **tmrFlipBack** in the grey strip under frmKnots."
            },
            {
             "n": 3,
+            "x": 86.1,
+            "y": 38.9,
             "say": "Click the lightning bolt at the top of the Properties window."
            },
            {
             "n": 4,
+            "x": 82.2,
+            "y": 41.0,
+            "w": 17.6,
+            "h": 3.0,
             "say": "Click the box beside **Tick**."
            },
            {
             "n": 5,
+            "x": 99.2,
+            "y": 42.5,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 6,
+            "x": 89.3,
+            "y": 41.2,
+            "w": 9.4,
+            "h": 2.6,
             "say": "Click `tmrFlipBack_Tick` in the list."
            }
           ]
@@ -4263,25 +4099,39 @@
          "do": "Click **tmrDone** in the grey strip under frmKnots.",
          "see": "The Properties window shows tmrDone at the top, and still lists events. tmrDone has one event, Tick.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c277.png",
           "alt": "The Properties window showing the Tick event of tmrDone, with tmrDone_Tick beside Tick",
-          "w": 360,
-          "h": 300,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 7,
+            "x": 8.5,
+            "y": 85.9,
+            "w": 4.7,
+            "h": 4.1,
             "say": "Click **tmrDone** in the grey strip under frmKnots."
            },
            {
             "n": 8,
+            "x": 82.2,
+            "y": 41.0,
+            "w": 17.6,
+            "h": 3.0,
             "say": "Click the box beside **Tick**."
            },
            {
             "n": 9,
+            "x": 99.2,
+            "y": 42.5,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 10,
+            "x": 89.3,
+            "y": 41.2,
+            "w": 9.4,
+            "h": 2.6,
             "say": "Click `tmrDone_Tick` in the list."
            }
           ]
@@ -4311,25 +4161,39 @@
          "do": "Click **See my score** on pnlPlay.",
          "see": "The Properties window lists the events of btnScore.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c278.png",
           "alt": "The Properties window showing the events of btnScore, with btnScore_Click beside Click",
-          "w": 360,
-          "h": 480,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 11,
+            "x": 36.5,
+            "y": 71.1,
+            "w": 12.0,
+            "h": 8.1,
             "say": "Click **See my score** on pnlPlay."
            },
            {
             "n": 12,
+            "x": 82.2,
+            "y": 64.3,
+            "w": 16.8,
+            "h": 3.0,
             "say": "Click the box beside **Click**."
            },
            {
             "n": 13,
+            "x": 98.4,
+            "y": 65.8,
             "say": "Click the small arrow at the right end of the box."
            },
            {
             "n": 14,
+            "x": 89.3,
+            "y": 64.5,
+            "w": 8.5,
+            "h": 2.6,
             "say": "Click `btnScore_Click` in the list."
            }
           ]
@@ -4359,13 +4223,15 @@
          "do": "Press Ctrl, Shift and B together.",
          "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c010.png",
           "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
-          "w": 800,
-          "h": 60,
+          "w": 610,
+          "h": 223,
           "marks": [
            {
             "n": 15,
+            "x": 11.5,
+            "y": 94.9,
             "say": "Press Ctrl, Shift and B together."
            }
           ]
@@ -4388,46 +4254,95 @@
        "p": "Your map opens each game with a list of cases in frmMap.cs, one case for each place. Knot Pairs is place number 1, so its case says `case 1:`."
       },
       {
+       "code": {
+        "id": "c12-map",
+        "kind": "type",
+        "title": "The case line for Knot Pairs in frmMap.cs",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "case 1: game = new frmKnots(); break;",
+        "partLines": [
+         [
+          1,
+          1,
+          "Open Knot Pairs",
+          "When the player clicks place number 1, `game` becomes a new frmKnots window. `break;` ends this case. The map then opens the window."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          1
+         ]
+        ],
+        "typed": 1
+       }
+      },
+      {
        "steps": [
         {
          "do": "Double-click `frmMap.cs` in Solution Explorer.",
          "see": "frmMap opens in the designer.",
          "img": {
-          "missing": true,
-          "alt": "Visual Studio 2019 with frmMap.cs in the code editor, the search box open, the new case line typed, and frmMap.cs picked in Solution Explorer on the right",
-          "w": 800,
-          "h": 450,
+          "img": "img/cap/c236.png",
+          "alt": "Visual Studio 2019 with frmMap.cs in the code editor. The search box is open and the new case line is typed. frmMap.cs is picked in Solution Explorer on the right",
+          "w": 1568,
+          "h": 510,
           "marks": [
            {
             "n": 1,
+            "x": 86.7,
+            "y": 19.2,
             "say": "Double-click `frmMap.cs` in Solution Explorer."
            },
            {
             "n": 2,
+            "x": 1.7,
+            "y": 0.2,
+            "w": 5.4,
+            "h": 2.9,
             "say": "Press F7."
            },
            {
             "n": 3,
+            "x": 66.3,
+            "y": 7.8,
+            "w": 10.0,
+            "h": 3.1,
             "say": "Press Ctrl and F together."
            },
            {
             "n": 4,
+            "x": 13.5,
+            "y": 50.6,
+            "w": 8.3,
+            "h": 2.5,
             "say": "Type `each game chapter adds`"
            },
            {
             "n": 5,
+            "x": 79.4,
+            "y": 9.2,
             "say": "Press Escape."
            },
            {
             "n": 6,
+            "x": 6.5,
+            "y": 54.5,
             "say": "Press End."
            },
            {
             "n": 7,
+            "x": 12.4,
+            "y": 54.5,
             "say": "Press Enter."
            },
            {
             "n": 8,
+            "x": 12.3,
+            "y": 53.1,
+            "w": 15.0,
+            "h": 2.7,
             "say": "Type `case 1: game = new frmKnots(); break;`"
            }
           ]
@@ -4487,17 +4402,23 @@
          "do": "Press F5.",
          "see": "Your game starts and shows the login window.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c237.png",
           "alt": "The login window of your game, with a player's name and password typed in",
-          "w": 640,
-          "h": 400,
+          "w": 999,
+          "h": 690,
           "marks": [
            {
             "n": 9,
+            "x": 8.0,
+            "y": 1.9,
             "say": "Press F5."
            },
            {
             "n": 10,
+            "x": 33.0,
+            "y": 63.8,
+            "w": 33.8,
+            "h": 29.7,
             "say": "Log in with a player you registered in chapter 5."
            }
           ]
@@ -4515,13 +4436,17 @@
          "do": "Click **Start the expedition**.",
          "see": "The map opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c238.png",
           "alt": "The Welcome screen of your game, with the Start the expedition button",
-          "w": 640,
-          "h": 400,
+          "w": 999,
+          "h": 690,
           "marks": [
            {
             "n": 11,
+            "x": 3.4,
+            "y": 87.5,
+            "w": 28.0,
+            "h": 7.5,
             "say": "Click **Start the expedition**."
            }
           ]
@@ -4533,13 +4458,15 @@
          "do": "Click place number 1 on the map, the second place.",
          "see": "Knot Pairs opens, with 16 rope cards face down.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c279.png",
           "alt": "The map, with place number 1 picked",
-          "w": 800,
-          "h": 450,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 12,
+            "x": 80.8,
+            "y": 27.0,
             "say": "Click place number 1 on the map, the second place."
            }
           ]
@@ -4759,17 +4686,23 @@
          "do": "Right-click `Knot.cs` in Solution Explorer.",
          "see": "A menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c280.png",
           "alt": "Solution Explorer, with the right-click menu of Knot.cs open",
-          "w": 360,
-          "h": 420,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 1,
+            "x": 57.1,
+            "y": 75.9,
             "say": "Right-click `Knot.cs` in Solution Explorer."
            },
            {
             "n": 2,
+            "x": 2.2,
+            "y": 88.1,
+            "w": 50.5,
+            "h": 2.9,
             "say": "Click **Rename**."
            }
           ]
@@ -4779,25 +4712,31 @@
         },
         {
          "do": "Click **Rename**.",
-         "see": "The name `Knot.cs` becomes a box that you can type in.",
+         "see": "The name `Knot.cs` becomes a box, with `Knot` highlighted.",
          "id": "5-2.2",
          "n": 2
         },
         {
-         "do": "Type your class's new name, such as `Element.cs`",
-         "see": "The box shows the new name.",
+         "do": "Type your class's new name, such as `Element`",
+         "see": "The box shows `Element.cs`. Visual Studio keeps the `.cs` on the end for you.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c281.png",
           "alt": "Solution Explorer, with the name Knot.cs turned into a box and Element.cs typed in it",
-          "w": 360,
-          "h": 200,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 3,
-            "say": "Type your class's new name, such as `Element.cs`"
+            "x": 19.7,
+            "y": 81.0,
+            "w": 23.4,
+            "h": 2.9,
+            "say": "Type your class's new name, such as `Element`"
            },
            {
             "n": 4,
+            "x": 48.3,
+            "y": 82.5,
             "say": "Press Enter."
            }
           ]
@@ -4815,13 +4754,15 @@
          "do": "Click **Yes**.",
          "see": "Every use of the class Knot in your code changes to the new name. For example, `List<Knot>` becomes `List<Element>`.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c282.png",
           "alt": "The message that asks whether to rename every use of Knot",
-          "w": 480,
-          "h": 200,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 5,
+            "x": 61.1,
+            "y": 76.1,
             "say": "Click **Yes**."
            }
           ]
@@ -4833,17 +4774,23 @@
          "do": "Right-click `frmKnots.cs` in Solution Explorer.",
          "see": "A menu opens.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c283.png",
           "alt": "Solution Explorer, with the right-click menu of frmKnots.cs open",
-          "w": 360,
-          "h": 420,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 6,
+            "x": 51.7,
+            "y": 44.1,
             "say": "Right-click `frmKnots.cs` in Solution Explorer."
            },
            {
             "n": 7,
+            "x": 2.2,
+            "y": 88.1,
+            "w": 51.7,
+            "h": 2.9,
             "say": "Click **Rename**."
            }
           ]
@@ -4853,25 +4800,31 @@
         },
         {
          "do": "Click **Rename**.",
-         "see": "The name `frmKnots.cs` becomes a box that you can type in.",
+         "see": "The name `frmKnots.cs` becomes a box, with `frmKnots` highlighted.",
          "id": "5-2.7",
          "n": 7
         },
         {
-         "do": "Type your form's new name, such as `frmElements.cs`",
-         "see": "The box shows the new name.",
+         "do": "Type your form's new name, such as `frmElements`",
+         "see": "The box shows `frmElements.cs`. Visual Studio keeps the `.cs` on the end for you.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c284.png",
           "alt": "Solution Explorer, with the name frmKnots.cs turned into a box and frmElements.cs typed in it",
-          "w": 360,
-          "h": 200,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 8,
-            "say": "Type your form's new name, such as `frmElements.cs`"
+            "x": 19.7,
+            "y": 46.5,
+            "w": 26.9,
+            "h": 2.9,
+            "say": "Type your form's new name, such as `frmElements`"
            },
            {
             "n": 9,
+            "x": 51.7,
+            "y": 48.0,
             "say": "Press Enter."
            }
           ]
@@ -4889,13 +4842,15 @@
          "do": "Click **Yes**.",
          "see": "Every use of the class frmKnots changes to the new name, including the case line in frmMap.cs.",
          "img": {
-          "missing": true,
+          "img": "img/cap/c285.png",
           "alt": "The message that asks whether to rename every use of frmKnots",
-          "w": 480,
-          "h": 200,
+          "w": 1568,
+          "h": 675,
           "marks": [
            {
             "n": 10,
+            "x": 61.1,
+            "y": 76.1,
             "say": "Click **Yes**."
            }
           ]
@@ -5058,6 +5013,10 @@
   }
  ],
  "glossary": [
+  [
+   "Height",
+   "How tall a control is, in pixels."
+  ],
   [
    "card",
    "One of the 16 squares you click in Knot Pairs. In the code, each card is a button."

@@ -1,0 +1,2073 @@
+{
+ "id": "04",
+ "n": 4,
+ "of": 20,
+ "title": "Your own exceptions",
+ "kind": "a core chapter: every rule in the register form, the log in and the games uses what you make here",
+ "one": "You make your own exceptions, one for each way a player can break a rule. Then the Player class checks every rule as each value is set, and throws the right exception.",
+ "prev": {
+  "id": "03",
+  "n": 3,
+  "title": "Players in a text file"
+ },
+ "next": {
+  "id": "05",
+  "n": 5,
+  "title": "Register with an avatar"
+ },
+ "stages": [
+  {
+   "title": "See the rules, and what an exception is",
+   "screens": [
+    {
+     "title": "See what this chapter makes, and the words it uses",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know what an exception is, and why Summit Ready has its own exceptions."
+      },
+      {
+       "p": "At the moment, Player takes any username at all, even a blank one. This chapter gives Player its rules, so a bad username or password is refused at once."
+      },
+      {
+       "p": "When a rule is broken, the code throws an exception. The exception stops the code, and carries a message that tells the player what to fix."
+      },
+      {
+       "need": [
+        "Your Player and PlayerFile classes (chapter 3).",
+        "The Test button on frmLogin (chapter 3).",
+        "About 2 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
+       ]
+      },
+      {
+       "words": [
+        [
+         "char.IsDigit",
+         "Says whether one letter of some text is a digit, from 0 to 9.",
+         "3-2",
+         true
+        ],
+        [
+         "Contains",
+         "`value.Contains(\"|\")` is true when the bar is anywhere in the text.",
+         "3-2",
+         true
+        ],
+        [
+         "try and catch",
+         "Code inside `try` runs. If it throws an exception, the matching `catch` runs, and the program does not crash.",
+         "4-1",
+         true
+        ],
+        [
+         "exception",
+         "A message the code sends out when something has gone wrong. It stops the code until a `catch` deals with it.",
+         "2-1",
+         true
+        ],
+        [
+         "throw",
+         "`throw` stops the method at once, and hands an exception to whatever code called it.",
+         "3-1",
+         true
+        ],
+        [
+         "inherit",
+         "A class that inherits from another class gets everything the other class has. `: SummitException` after a class name means it inherits from SummitException.",
+         "2-1",
+         true
+        ],
+        [
+         "base",
+         "`: base(message)` hands the message to the class it inherits from, which keeps it.",
+         "2-1",
+         true
+        ],
+        [
+         "try",
+         "A `try` block holds code that might throw an exception.",
+         "4-1",
+         true
+        ],
+        [
+         "catch",
+         "A `catch` block runs when code in the `try` block throws an exception.",
+         "4-1",
+         true
+        ],
+        [
+         "Message",
+         "The words an exception carries, such as **Type a username.**",
+         "4-1",
+         true
+        ],
+        [
+         "Trim",
+         "Takes the spaces off the start and the end of some words.",
+         "3-1",
+         true
+        ],
+        [
+         "Length",
+         "How many characters some words have.",
+         "3-1",
+         true
+        ],
+        [
+         "char",
+         "One character, such as a letter, a digit or a space.",
+         "3-1",
+         true
+        ],
+        [
+         "rule",
+         "Something a player must do, such as type a username of 3 to 12 characters. Each rule is checked in the code.",
+         "1-2",
+         false
+        ]
+       ],
+       "intro": "You do not need to learn these words now. Where you first meet each one in the chapter, it has a dotted line under it. Hover over it or tap it to see what it means."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Read the 11 register rules",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know the 11 rules a new player must follow, and which class checks each one."
+      },
+      {
+       "p": "Each [[rule|13]] has a number. The notes in the code, called comments, use those numbers. Rules 12 to 14 are for logging in, and chapter 6 adds them."
+      },
+      {
+       "box": {
+        "title": "The 11 register rules",
+        "blocks": [
+         {
+          "p": "Rules 1, 2 and 3: the username is not blank, has 3 to 12 characters, and uses only letters and numbers."
+         },
+         {
+          "p": "Rule 4: nobody else has the username. PlayerFile checks this one, because only PlayerFile reads the file."
+         },
+         {
+          "p": "Rules 5 and 6: the password is not blank, and has 6 to 20 characters."
+         },
+         {
+          "p": "Rules 7 and 8: the password has a letter and a number, and has no bar `|` in it."
+         },
+         {
+          "p": "Rules 9 and 10: the second password box is not blank, and matches the first one."
+         },
+         {
+          "p": "Rule 11: the player has clicked an avatar."
+         }
+        ]
+       }
+      },
+      {
+       "p": "A bar `|` in a password would break `players.txt`, because the bar splits each line into its parts. That is why rule 8 is there."
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "1"
+  },
+  {
+   "title": "Make the exceptions",
+   "screens": [
+    {
+     "title": "Add Exceptions.cs, and type the first 2 exceptions",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has SummitException, and a BlankFieldException that inherits from it."
+      },
+      {
+       "p": "C# has its own Exception class. SummitException [[inherits|5]] from it, and every other exception in the game inherits from SummitException. So one `catch` for SummitException catches them all."
+      },
+      {
+       "code": {
+        "id": "c04-exc-base",
+        "kind": "type",
+        "title": "Exceptions.cs: SummitException",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// Every rule in Summit Ready throws one of these (chapter 4).\n// They all inherit from SummitException, so one catch catches them all.\nclass SummitException : Exception\n{\n    public SummitException(string message) : base(message) { }\n}",
+        "partLines": [
+         [
+          1,
+          6,
+          "SummitException",
+          "`: Exception` means SummitException inherits from C#'s own Exception class. The constructor is the part that sets up a new exception. It takes the message, and `: base(message)` hands it to Exception, which keeps it. The empty `{ }` means it needs no lines of its own."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          6
+         ]
+        ],
+        "typed": 2,
+        "wordMarks": [
+         [
+          3,
+          24,
+          33,
+          3
+         ],
+         [
+          5,
+          43,
+          50,
+          6
+         ]
+        ]
+       }
+      },
+      {
+       "code": {
+        "id": "c04-exc-blank",
+        "kind": "type",
+        "title": "BlankFieldException",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// A box was left empty\nclass BlankFieldException : SummitException\n{\n    public BlankFieldException(string message) : base(message) { }\n}",
+        "partLines": [
+         [
+          1,
+          5,
+          "BlankFieldException",
+          "BlankFieldException inherits from SummitException. It is thrown when a box is empty, with a message that names the box, such as **Type a username.**"
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          5
+         ]
+        ],
+        "typed": 2,
+        "wordMarks": [
+         [
+          2,
+          26,
+          43,
+          5
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "img": "img/cap/c023.png",
+          "alt": "The project menu, with Add pointed at and Class in the second menu",
+          "w": 959,
+          "h": 616,
+          "marks": [
+           {
+            "n": 1,
+            "x": 73.0,
+            "y": 5.4,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 2,
+            "x": 39.6,
+            "y": 38.6,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 3,
+            "x": 6.2,
+            "y": 93.2,
+            "say": "Click **Class...** at the bottom of the second menu."
+           }
+          ]
+         },
+         "id": "2-1.1",
+         "n": 1
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "2-1.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Class...** at the bottom of the second menu.",
+         "see": "The Add New Item window opens. Class is picked, and the Name box at the bottom says `Class1.cs`.",
+         "id": "2-1.3",
+         "n": 3
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "img": "img/cap/c024.png",
+          "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
+          "w": 948,
+          "h": 660,
+          "marks": [
+           {
+            "n": 4,
+            "x": 16.9,
+            "y": 92.1,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "x": 42.2,
+            "y": 92.1,
+            "say": "Type `Exceptions.cs`"
+           },
+           {
+            "n": 6,
+            "x": 85.7,
+            "y": 96.5,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "2-1.4",
+         "n": 4
+        },
+        {
+         "do": "Type `Exceptions.cs`",
+         "see": "The Name box shows `Exceptions.cs`.",
+         "id": "2-1.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "`Exceptions.cs` opens in the code editor, with `class Exceptions` and an empty pair of curly brackets.",
+         "id": "2-1.6",
+         "n": 6
+        },
+        {
+         "do": "Drag from the start of `class Exceptions` down to the end of the `}` two lines below it, so your typing replaces them.",
+         "see": "`class Exceptions` and its empty `{` and `}` turn blue. The last `}` in the file stays white, because it closes the namespace, the outer box that holds all your project's code.",
+         "img": {
+          "img": "img/cap/c056.png",
+          "alt": "Exceptions.cs, with SummitException and BlankFieldException typed",
+          "w": 1102,
+          "h": 679,
+          "marks": [
+           {
+            "n": 7,
+            "x": 14.0,
+            "y": 26.3,
+            "say": "Drag from the start of `class Exceptions` down to the end of the `}` two lines below it, so your typing replaces them."
+           },
+           {
+            "n": 8,
+            "x": 13.1,
+            "y": 24.7,
+            "w": 47.2,
+            "h": 29.4,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 9,
+            "x": 5.0,
+            "y": 1.4,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 10,
+            "x": 6.4,
+            "y": 97.7,
+            "say": "Press Ctrl, Shift and B together. This checks the whole project for mistakes."
+           }
+          ]
+         },
+         "id": "2-1.7",
+         "n": 7
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "SummitException and BlankFieldException are where `class Exceptions` was. The file holds no class called Exceptions. That is right: the file holds many classes, and its name says what they are.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "2-1.8",
+         "n": 8
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `Exceptions.cs` on the tab disappears.",
+         "id": "2-1.9",
+         "n": 9
+        },
+        {
+         "do": "Press Ctrl, Shift and B together. This checks the whole project for mistakes.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "2-1.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Copy the other 10 exceptions",
+     "blocks": [
+      {
+       "p": "By the end of this screen, Exceptions.cs holds all 12 exceptions that Summit Ready throws."
+      },
+      {
+       "p": "The other 10 exceptions have the same shape as BlankFieldException. Some of them make their own message, so the code that throws them only says what went wrong."
+      },
+      {
+       "code": {
+        "id": "c04-exc-players",
+        "kind": "copy",
+        "title": "The 7 exceptions for players",
+        "lang": "cs",
+        "repeats": "c04-exc-blank",
+        "why": "Each exception has the same shape as BlankFieldException, which you typed. Only the name and the message change.",
+        "text": "// The username is too short or too long\nclass UsernameLengthException : SummitException\n{\n    public UsernameLengthException(int length)\n        : base(LengthMessage(length)) { }\n\n    // \"1 character\" but \"2 characters\"\n    private static string LengthMessage(int length)\n    {\n        string count = length + \" characters.\";\n        if (length == 1) count = \"1 character.\";\n        return \"Your username has \" + count + \" It needs 3 to 12.\";\n    }\n}\n\n// A character that is not allowed in that box\nclass InvalidCharacterException : SummitException\n{\n    public InvalidCharacterException(char badCharacter, string field)\n        : base(CharacterMessage(badCharacter, field)) { }\n\n    // Names the character to take out (a space is \"the space\")\n    private static string CharacterMessage(char badCharacter,\n        string field)\n    {\n        if (field == \"password\")\n        {\n            return \"Your password cannot use the \" + badCharacter\n                + \" character.\";\n        }\n        string name = \"the \" + badCharacter;\n        if (badCharacter == ' ') name = \"the space\";\n        return \"Your username can only use letters and numbers. \"\n            + \"Take out \" + name + \".\";\n    }\n}\n\n// Somebody already has that username\nclass PlayerExistsException : SummitException\n{\n    public PlayerExistsException(string username)\n        : base(\"The username \" + username + \" is already taken. \"\n            + \"Try another one.\") { }\n}\n\n// The password breaks one of the password rules\nclass WeakPasswordException : SummitException\n{\n    public WeakPasswordException(string message) : base(message) { }\n}\n\n// The two password boxes are different\nclass PasswordMismatchException : SummitException\n{\n    public PasswordMismatchException()\n        : base(\"The two passwords are different. \"\n            + \"Type them both again.\") { }\n}\n\n// No avatar picture was clicked\nclass AvatarNotChosenException : SummitException\n{\n    public AvatarNotChosenException()\n        : base(\"Click a picture to choose your avatar.\") { }\n}\n\n// The username and password do not match a player\nclass LoginFailedException : SummitException\n{\n    public LoginFailedException()\n        : base(\"That username and password do not match a player. \"\n            + \"Check both and try again.\") { }\n}",
+        "partLines": [
+         [
+          1,
+          14,
+          "UsernameLengthException",
+          "The constructor takes the length of the username, not a message. `LengthMessage` makes the message from the length, so a player sees 1 character but 2 characters."
+         ],
+         [
+          16,
+          36,
+          "InvalidCharacterException",
+          "The constructor takes the bad character and the box it was in. `CharacterMessage` makes a message for the password box or the username box. A space is hard to see in a message, so it is named as **the space**."
+         ],
+         [
+          38,
+          44,
+          "PlayerExistsException",
+          "PlayerFile throws this when a username is taken. The message names the username."
+         ],
+         [
+          46,
+          50,
+          "WeakPasswordException",
+          "The code that throws it says which password rule was broken."
+         ],
+         [
+          52,
+          58,
+          "PasswordMismatchException",
+          "Its message is always the same, so its constructor takes nothing."
+         ],
+         [
+          60,
+          65,
+          "AvatarNotChosenException",
+          "This one has the same message every time too, so it needs nothing passed in."
+         ],
+         [
+          67,
+          73,
+          "LoginFailedException",
+          "Chapter 6 throws this when a login fails."
+         ]
+        ],
+        "wordMarks": [
+         [
+          2,
+          30,
+          47,
+          5
+         ],
+         [
+          5,
+          8,
+          15,
+          6
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes BlankFieldException.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "img": "img/cap/c057.png",
+          "alt": "Exceptions.cs, with the 7 exceptions for players pasted under BlankFieldException",
+          "w": 1102,
+          "h": 612,
+          "marks": [
+           {
+            "n": 1,
+            "x": 15.4,
+            "y": 58.0,
+            "say": "Click at the end of the `}` that closes BlankFieldException."
+           },
+           {
+            "n": 2,
+            "x": 14.0,
+            "y": 63.2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 4,
+            "x": 13.1,
+            "y": 61.4,
+            "w": 44.1,
+            "h": 37.8,
+            "say": "Press Ctrl and V together."
+           }
+          ]
+         },
+         "id": "2-2.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under it. The flashing cursor is on the new empty line.",
+         "id": "2-2.2",
+         "n": 2
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c04-exc-players",
+         "id": "2-2.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The 7 exceptions appear under BlankFieldException, from UsernameLengthException down to LoginFailedException.",
+         "id": "2-2.4",
+         "n": 4
+        }
+       ]
+      },
+      {
+       "p": "The last 3 exceptions are for 2 of the games. They are here now, so every exception lives in one file."
+      },
+      {
+       "code": {
+        "id": "c04-exc-games",
+        "kind": "copy",
+        "title": "The 3 exceptions for the games",
+        "lang": "cs",
+        "repeats": "c04-exc-blank",
+        "why": "Each exception has the same shape as BlankFieldException. Chapters 14 and 17 throw them.",
+        "text": "// A grid reference that is not four numbers\nclass GridRefFormatException : SummitException\n{\n    public GridRefFormatException()\n        : base(\"A grid reference here is four numbers, like 3127: \"\n            + \"two from the top of the map, then two from the left \"\n            + \"side.\") { }\n}\n\n// A grid reference that is not on the map\nclass OffMapException : SummitException\n{\n    public OffMapException(string gridRef)\n        : base(gridRef + \" is not on this map. The numbers along the \"\n            + \"top go from 27 to 36, and the numbers down the left \"\n            + \"side go from 22 to 31.\") { }\n}\n\n// A letter that was already tried in Whiteout\nclass LetterAlreadyTriedException : SummitException\n{\n    public LetterAlreadyTriedException(char letter)\n        : base(\"You have already tried \" + letter\n            + \". Pick another letter.\") { }\n}",
+        "partLines": [
+         [
+          1,
+          8,
+          "GridRefFormatException",
+          "Thrown when a grid reference is not 4 numbers."
+         ],
+         [
+          10,
+          17,
+          "OffMapException",
+          "Thrown when a grid reference is off the map. The message names the grid reference."
+         ],
+         [
+          19,
+          25,
+          "LetterAlreadyTriedException",
+          "Thrown in Whiteout when a letter has been tried before."
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes LoginFailedException.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "img": "img/cap/c058.png",
+          "alt": "Exceptions.cs, with the 3 exceptions for the games under LoginFailedException",
+          "w": 1102,
+          "h": 679,
+          "marks": [
+           {
+            "n": 5,
+            "x": 15.4,
+            "y": 59.3,
+            "say": "Click at the end of the `}` that closes LoginFailedException."
+           },
+           {
+            "n": 6,
+            "x": 14.0,
+            "y": 64.0,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 8,
+            "x": 13.1,
+            "y": 62.3,
+            "w": 44.7,
+            "h": 27.0,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 9,
+            "x": 5.0,
+            "y": 1.4,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 10,
+            "x": 6.4,
+            "y": 97.7,
+            "say": "Press Ctrl, Shift and B together. This checks the whole project for mistakes."
+           }
+          ]
+         },
+         "id": "2-2.5",
+         "n": 5
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under it. The flashing cursor is on the new empty line.",
+         "id": "2-2.6",
+         "n": 6
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c04-exc-games",
+         "id": "2-2.7",
+         "n": 7
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The 3 exceptions appear under LoginFailedException. The `}` that closes the namespace is still the last line.",
+         "id": "2-2.8",
+         "n": 8
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `Exceptions.cs` on the tab disappears.",
+         "id": "2-2.9",
+         "n": 9
+        },
+        {
+         "do": "Press Ctrl, Shift and B together. This checks the whole project for mistakes.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "2-2.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "2"
+  },
+  {
+   "title": "Add the rules to Player and PlayerFile",
+   "screens": [
+    {
+     "title": "Add rules 1, 2 and 3 to Username",
+     "blocks": [
+      {
+       "p": "By the end of this screen, Username throws an exception if the username is blank, too short, too long or has a bad symbol."
+      },
+      {
+       "p": "The rules go in the `set` part, so a bad username is refused the moment code tries to set it. The new version of Username comes in a copy with a gap, and you type the rules into the gap."
+      },
+      {
+       "code": {
+        "id": "c04-username",
+        "kind": "type",
+        "title": "Username, with rules 1, 2 and 3",
+        "lang": "cs",
+        "why": "The comment, get and set lines are the same shape as the Username you typed in chapter 3.",
+        "text": "// The username: checked by rules 1, 2 and 3 as it is set\npublic string Username\n{\n    get { return username; }\n    set\n    {\n        string name = value.Trim();\n        if (name == \"\")\n        {\n            throw new BlankFieldException(\"Type a username.\");\n        }\n        if (name.Length < 3 || name.Length > 12)\n        {\n            throw new UsernameLengthException(name.Length);\n        }\n        foreach (char c in name)\n        {\n            if (!char.IsLetterOrDigit(c))\n            {\n                throw new InvalidCharacterException(c, \"username\");\n            }\n        }\n        username = name;\n    }\n}",
+        "partLines": [
+         [
+          1,
+          6,
+          "Get and set",
+          "The comment now names the rules. `get` is the same as in chapter 3."
+         ],
+         [
+          7,
+          11,
+          "Rule 1",
+          "`Trim()` takes off any spaces at the start and the end. If nothing is left, the username is blank."
+         ],
+         [
+          12,
+          15,
+          "Rule 2",
+          "`||` means or: too short or too long. The exception is handed the length, and makes its own message."
+         ],
+         [
+          16,
+          22,
+          "Rule 3",
+          "The loop looks at each character in turn. `char.IsLetterOrDigit` is true for a letter or a digit. `!` means not, so a space or a `|` is caught."
+         ],
+         [
+          23,
+          25,
+          "Keep it",
+          "The field is set only if every rule passed, because each `throw` stops the method first. The trimmed name is kept, without its spaces."
+         ]
+        ],
+        "focusLines": [
+         [
+          7,
+          23
+         ]
+        ],
+        "typed": 9,
+        "wordMarks": [
+         [
+          10,
+          12,
+          21,
+          4
+         ],
+         [
+          7,
+          28,
+          34,
+          10
+         ],
+         [
+          12,
+          16,
+          23,
+          11
+         ],
+         [
+          16,
+          17,
+          23,
+          12
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **Player.cs** tab at the top of the editor.",
+         "see": "The code of Player shows.",
+         "img": {
+          "img": "img/cap/c059.png",
+          "alt": "Player.cs, with the rules typed into Username",
+          "w": 1102,
+          "h": 679,
+          "marks": [
+           {
+            "n": 1,
+            "x": 35.8,
+            "y": 1.4,
+            "say": "Click the **Player.cs** tab at the top of the editor."
+           },
+           {
+            "n": 2,
+            "x": 16.6,
+            "y": 14.6,
+            "say": "Drag from the start of the comment above `public string Username` down to the end of the `}` that closes Username."
+           },
+           {
+            "n": 4,
+            "x": 15.7,
+            "y": 13.0,
+            "w": 44.0,
+            "h": 59.8,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 5,
+            "x": 21.7,
+            "y": 28.6,
+            "say": "Triple-click the line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it."
+           },
+           {
+            "n": 6,
+            "x": 20.8,
+            "y": 27.0,
+            "w": 38.9,
+            "h": 41.1,
+            "say": "Type the yellow lines. Press Enter at the end of each line, but not after the last one."
+           },
+           {
+            "n": 7,
+            "x": 39.9,
+            "y": 1.4,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 8,
+            "x": 6.4,
+            "y": 97.7,
+            "say": "Press Ctrl, Shift and B together. This checks the whole project for mistakes."
+           }
+          ]
+         },
+         "id": "3-1.1",
+         "n": 1
+        },
+        {
+         "do": "Drag from the start of the comment above `public string Username` down to the end of the `}` that closes Username.",
+         "see": "The comment and the whole Username property turn blue.",
+         "id": "3-1.2",
+         "n": 2
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c04-username",
+         "id": "3-1.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The new Username appears in place of the blue lines, with a line that starts with `// YOU TYPE THIS PART`.",
+         "id": "3-1.4",
+         "n": 4
+        },
+        {
+         "do": "Triple-click the line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it.",
+         "see": "The whole line turns blue.",
+         "id": "3-1.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines. Press Enter at the end of each line, but not after the last one.",
+         "see": "The yellow lines are where the `// YOU TYPE THIS PART` line was. No line has a red underline.",
+         "wrong": [
+          [
+           "The `// YOU TYPE THIS PART` line is still there after you type",
+           "Triple-click the line, so the whole line turns blue. Then press Delete."
+          ],
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "3-1.6",
+         "n": 6
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `Player.cs` on the tab disappears.",
+         "id": "3-1.7",
+         "n": 7
+        },
+        {
+         "do": "Press Ctrl, Shift and B together. This checks the whole project for mistakes.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "3-1.8",
+         "n": 8
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Add rules 5 to 8 to Password, and rule 11 to Avatar",
+     "blocks": [
+      {
+       "p": "By the end of this screen, Password and Avatar throw an exception when one of their rules is broken."
+      },
+      {
+       "p": "Password has 4 rules. Rule 7 needs 2 `bool` values (a `bool` is either true or false). They start false and turn true when the loop finds a letter or a number."
+      },
+      {
+       "code": {
+        "id": "c04-password",
+        "kind": "type",
+        "title": "Password, with rules 5, 6, 7 and 8",
+        "lang": "cs",
+        "why": "The comment, get, set and the last line are the same shape as the Password you typed in chapter 3.",
+        "text": "// The password: checked by rules 5, 6, 7 and 8 as it is set\npublic string Password\n{\n    get { return password; }\n    set\n    {\n        if (value == \"\")\n        {\n            throw new BlankFieldException(\"Type a password.\");\n        }\n        if (value.Length < 6 || value.Length > 20)\n        {\n            throw new WeakPasswordException(\n                \"Your password needs 6 to 20 characters.\");\n        }\n        bool hasLetter = false;\n        bool hasNumber = false;\n        foreach (char c in value)\n        {\n            if (char.IsLetter(c)) hasLetter = true;\n            if (char.IsDigit(c)) hasNumber = true;\n        }\n        if (!hasLetter || !hasNumber)\n        {\n            throw new WeakPasswordException(\"Your password needs at \"\n                + \"least one letter and one number.\");\n        }\n        if (value.Contains(\"|\"))\n        {\n            throw new InvalidCharacterException('|', \"password\");\n        }\n        password = value;\n    }\n}",
+        "partLines": [
+         [
+          1,
+          6,
+          "Get and set",
+          "The comment now names the rules. A password is never trimmed, because a space can be part of it."
+         ],
+         [
+          7,
+          10,
+          "Rule 5",
+          "A blank password throws BlankFieldException."
+         ],
+         [
+          11,
+          15,
+          "Rule 6",
+          "The message is long, so it goes on a second line. C# reads both lines as one, up to the `;`."
+         ],
+         [
+          16,
+          27,
+          "Rule 7",
+          "`hasLetter` and `hasNumber` start false. The loop turns each one true when it finds a letter or a digit. If either is still false after the loop, the password needs a letter or a number."
+         ],
+         [
+          28,
+          31,
+          "Rule 8",
+          "`Contains` is true if the bar is anywhere in the password. The bar is in single quotes, because it is one `char`."
+         ],
+         [
+          32,
+          34,
+          "Keep it",
+          "The field is set only if all 4 rules passed."
+         ]
+        ],
+        "focusLines": [
+         [
+          7,
+          30
+         ]
+        ],
+        "typed": 15,
+        "wordMarks": [
+         [
+          21,
+          16,
+          28,
+          0
+         ],
+         [
+          28,
+          18,
+          26,
+          1
+         ],
+         [
+          9,
+          12,
+          21,
+          4
+         ],
+         [
+          11,
+          17,
+          24,
+          11
+         ],
+         [
+          18,
+          17,
+          23,
+          12
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **Player.cs** tab at the top of the editor.",
+         "see": "The code of Player shows.",
+         "img": {
+          "img": "img/cap/c060.png",
+          "alt": "Player.cs, with the rules typed into Password",
+          "w": 1102,
+          "h": 679,
+          "marks": [
+           {
+            "n": 1,
+            "x": 35.8,
+            "y": 1.4,
+            "say": "Click the **Player.cs** tab at the top of the editor."
+           },
+           {
+            "n": 2,
+            "x": 16.6,
+            "y": 9.9,
+            "say": "Drag from the start of the comment above `public string Password` down to the end of the `}` that closes Password."
+           },
+           {
+            "n": 4,
+            "x": 15.7,
+            "y": 8.3,
+            "w": 45.3,
+            "h": 81.1,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 5,
+            "x": 21.7,
+            "y": 24.0,
+            "say": "Triple-click the line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it."
+           },
+           {
+            "n": 6,
+            "x": 20.8,
+            "y": 22.3,
+            "w": 40.2,
+            "h": 62.3,
+            "say": "Type the yellow lines. Press Enter at the end of each line, but not after the last one."
+           },
+           {
+            "n": 7,
+            "x": 39.9,
+            "y": 1.4,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 8,
+            "x": 6.4,
+            "y": 97.7,
+            "say": "Press Ctrl, Shift and B together. This checks the whole project for mistakes."
+           }
+          ]
+         },
+         "id": "3-2.1",
+         "n": 1
+        },
+        {
+         "do": "Drag from the start of the comment above `public string Password` down to the end of the `}` that closes Password.",
+         "see": "The comment and the whole Password property turn blue.",
+         "id": "3-2.2",
+         "n": 2
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c04-password",
+         "id": "3-2.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The new Password appears in place of the blue lines, with a line that starts with `// YOU TYPE THIS PART`.",
+         "id": "3-2.4",
+         "n": 4
+        },
+        {
+         "do": "Triple-click the line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it.",
+         "see": "The whole line turns blue.",
+         "id": "3-2.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines. Press Enter at the end of each line, but not after the last one.",
+         "see": "The yellow lines are where the `// YOU TYPE THIS PART` line was. No line has a red underline.",
+         "wrong": [
+          [
+           "The `// YOU TYPE THIS PART` line is still there after you type",
+           "Triple-click the line, so the whole line turns blue. Then press Delete."
+          ],
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "3-2.6",
+         "n": 6
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `Player.cs` on the tab disappears.",
+         "id": "3-2.7",
+         "n": 7
+        },
+        {
+         "do": "Press Ctrl, Shift and B together. This checks the whole project for mistakes.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "3-2.8",
+         "n": 8
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c04-avatar",
+        "kind": "type",
+        "title": "Avatar, with rule 11",
+        "lang": "cs",
+        "why": "Everything but the rule is the same as the Avatar you typed in chapter 3.",
+        "text": "// The avatar's file name: checked by rule 11 as it is set\npublic string Avatar\n{\n    get { return avatar; }\n    set\n    {\n        if (value == \"\") throw new AvatarNotChosenException();\n        avatar = value;\n    }\n}",
+        "partLines": [
+         [
+          1,
+          10,
+          "Avatar",
+          "An avatar is blank until the player clicks a picture. The `if` and its `throw` fit on one line, because there is only one thing to do."
+         ]
+        ],
+        "focusLines": [
+         [
+          7,
+          7
+         ]
+        ],
+        "typed": 1
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **Player.cs** tab at the top of the editor.",
+         "see": "The code of Player shows.",
+         "img": {
+          "img": "img/cap/c061.png",
+          "alt": "Player.cs, with the rule typed into Avatar",
+          "w": 1102,
+          "h": 679,
+          "marks": [
+           {
+            "n": 9,
+            "x": 35.8,
+            "y": 1.4,
+            "say": "Click the **Player.cs** tab at the top of the editor."
+           },
+           {
+            "n": 10,
+            "x": 16.6,
+            "y": 45.2,
+            "say": "Drag from the start of the comment above `public string Avatar` down to the end of the `}` that closes Avatar."
+           },
+           {
+            "n": 12,
+            "x": 15.7,
+            "y": 43.6,
+            "w": 40.9,
+            "h": 24.5,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 13,
+            "x": 21.7,
+            "y": 59.3,
+            "say": "Triple-click the line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it."
+           },
+           {
+            "n": 14,
+            "x": 20.8,
+            "y": 57.7,
+            "w": 35.8,
+            "h": 5.8,
+            "say": "Type the yellow lines. Press Enter at the end of each line, but not after the last one."
+           },
+           {
+            "n": 15,
+            "x": 39.9,
+            "y": 1.4,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 16,
+            "x": 6.4,
+            "y": 97.7,
+            "say": "Press Ctrl, Shift and B together. This checks the whole project for mistakes."
+           }
+          ]
+         },
+         "id": "3-2.9",
+         "n": 9
+        },
+        {
+         "do": "Drag from the start of the comment above `public string Avatar` down to the end of the `}` that closes Avatar.",
+         "see": "The comment and the whole Avatar property turn blue.",
+         "id": "3-2.10",
+         "n": 10
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c04-avatar",
+         "id": "3-2.11",
+         "n": 11
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The new Avatar appears in place of the blue lines, with a line that starts with `// YOU TYPE THIS PART`.",
+         "id": "3-2.12",
+         "n": 12
+        },
+        {
+         "do": "Triple-click the line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it.",
+         "see": "The whole line turns blue.",
+         "id": "3-2.13",
+         "n": 13
+        },
+        {
+         "do": "Type the yellow lines. Press Enter at the end of each line, but not after the last one.",
+         "see": "The yellow lines are where the `// YOU TYPE THIS PART` line was. No line has a red underline.",
+         "wrong": [
+          [
+           "The `// YOU TYPE THIS PART` line is still there after you type",
+           "Triple-click the line, so the whole line turns blue. Then press Delete."
+          ],
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "3-2.14",
+         "n": 14
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `Player.cs` on the tab disappears.",
+         "id": "3-2.15",
+         "n": 15
+        },
+        {
+         "do": "Press Ctrl, Shift and B together. This checks the whole project for mistakes.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "3-2.16",
+         "n": 16
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Type CheckPasswordsMatch, for rules 9 and 10",
+     "blocks": [
+      {
+       "p": "By the end of this screen, Player can check that the 2 password boxes on the register form match."
+      },
+      {
+       "p": "The register form asks for the password twice. The second box is not part of a player, so the check is a `static` method. You call it on the class itself: `Player.CheckPasswordsMatch`."
+      },
+      {
+       "code": {
+        "id": "c04-match",
+        "kind": "type",
+        "title": "CheckPasswordsMatch",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// Checks the two password boxes: rules 9 and 10\npublic static void CheckPasswordsMatch(string first, string second)\n{\n    if (second == \"\")\n    {\n        throw new BlankFieldException(\"Type your password again.\");\n    }\n    if (first != second) throw new PasswordMismatchException();\n}",
+        "partLines": [
+         [
+          1,
+          9,
+          "CheckPasswordsMatch",
+          "Rule 9: the second box is not blank. Rule 10: the 2 boxes match. `!=` means is not equal to. The method hands nothing back. It only throws when a rule is broken."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          9
+         ]
+        ],
+        "typed": 4,
+        "wordMarks": [
+         [
+          6,
+          8,
+          17,
+          4
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes Joined.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "img": "img/cap/c062.png",
+          "alt": "Player.cs, with CheckPasswordsMatch between Joined and ToString",
+          "w": 1102,
+          "h": 679,
+          "marks": [
+           {
+            "n": 1,
+            "x": 18.0,
+            "y": 49.9,
+            "say": "Click at the end of the `}` that closes Joined."
+           },
+           {
+            "n": 2,
+            "x": 16.6,
+            "y": 54.6,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "x": 15.7,
+            "y": 53.0,
+            "w": 44.0,
+            "h": 22.3,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 4,
+            "x": 39.9,
+            "y": 1.4,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 5,
+            "x": 6.4,
+            "y": 97.7,
+            "say": "Press Ctrl, Shift and B together. This checks the whole project for mistakes."
+           }
+          ]
+         },
+         "id": "3-3.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under it. The flashing cursor is on the new empty line.",
+         "id": "3-3.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "CheckPasswordsMatch is between Joined and ToString. No line has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "3-3.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `Player.cs` on the tab disappears.",
+         "id": "3-3.4",
+         "n": 4
+        },
+        {
+         "do": "Press Ctrl, Shift and B together. This checks the whole project for mistakes.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "3-3.5",
+         "n": 5
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Add rule 4 to PlayerFile.Add",
+     "blocks": [
+      {
+       "p": "By the end of this screen, Add refuses to add a player whose username is taken."
+      },
+      {
+       "p": "Only PlayerFile reads the file, so PlayerFile checks rule 4. Add calls Exists first, and throws PlayerExistsException if the username is there."
+      },
+      {
+       "code": {
+        "id": "c04-add",
+        "kind": "type",
+        "title": "Add, with rule 4",
+        "lang": "cs",
+        "why": "The StreamWriter lines are the ones you typed in chapter 3.",
+        "text": "// Adds a new player to the end of players.txt: rule 4\npublic static void Add(Player p)\n{\n    if (Exists(p.Username))\n    {\n        throw new PlayerExistsException(p.Username);\n    }\n    StreamWriter writer = new StreamWriter(Files.Data(\"players.txt\"),\n        true);                                // true: add to the end\n    writer.WriteLine(p.ToString());\n    writer.Close();\n}",
+        "partLines": [
+         [
+          1,
+          7,
+          "Rule 4",
+          "The comment now names rule 4. The `throw` stops Add before the StreamWriter opens the file, so a taken username is never written."
+         ],
+         [
+          8,
+          12,
+          "Write the line",
+          "The same as in chapter 3."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          1
+         ],
+         [
+          4,
+          6
+         ]
+        ],
+        "typed": 2,
+        "wordMarks": [
+         [
+          6,
+          8,
+          17,
+          4
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **PlayerFile.cs** tab at the top of the editor.",
+         "see": "The code of PlayerFile shows.",
+         "img": {
+          "img": "img/cap/c063.png",
+          "alt": "PlayerFile.cs, with rule 4 typed into Add",
+          "w": 1102,
+          "h": 679,
+          "marks": [
+           {
+            "n": 1,
+            "x": 27.1,
+            "y": 1.4,
+            "say": "Click the **PlayerFile.cs** tab at the top of the editor."
+           },
+           {
+            "n": 2,
+            "x": 16.6,
+            "y": 59.3,
+            "say": "Drag from the start of the comment above `public static void Add` down to the end of the `}` that closes Add."
+           },
+           {
+            "n": 4,
+            "x": 15.7,
+            "y": 57.7,
+            "w": 45.3,
+            "h": 29.4,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 5,
+            "x": 15.7,
+            "y": 57.7,
+            "w": 35.8,
+            "h": 3.4,
+            "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, then type the yellow comment line."
+           },
+           {
+            "n": 6,
+            "x": 18.2,
+            "y": 64.7,
+            "w": 32.0,
+            "h": 10.6,
+            "say": "Triple-click the second line that starts with `// YOU TYPE THIS PART`, then type the other yellow lines."
+           },
+           {
+            "n": 7,
+            "x": 31.3,
+            "y": 1.4,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 8,
+            "x": 6.4,
+            "y": 97.7,
+            "say": "Press Ctrl, Shift and B together. This checks the whole project for mistakes."
+           }
+          ]
+         },
+         "id": "3-4.1",
+         "n": 1
+        },
+        {
+         "do": "Drag from the start of the comment above `public static void Add` down to the end of the `}` that closes Add.",
+         "see": "The comment and the whole of Add turn blue.",
+         "id": "3-4.2",
+         "n": 2
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c04-add",
+         "id": "3-4.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The new Add appears, with 2 lines that start with `// YOU TYPE THIS PART`.",
+         "id": "3-4.4",
+         "n": 4
+        },
+        {
+         "do": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, then type the yellow comment line.",
+         "see": "The comment is where the first `// YOU TYPE THIS PART` line was.",
+         "id": "3-4.5",
+         "n": 5
+        },
+        {
+         "do": "Triple-click the second line that starts with `// YOU TYPE THIS PART`, then type the other yellow lines.",
+         "see": "The `if` and its `throw` are where the second line was. No line has a red underline.",
+         "wrong": [
+          [
+           "The `// YOU TYPE THIS PART` line is still there after you type",
+           "Triple-click the line, so the whole line turns blue. Then press Delete."
+          ],
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "3-4.6",
+         "n": 6
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `PlayerFile.cs` on the tab disappears.",
+         "id": "3-4.7",
+         "n": 7
+        },
+        {
+         "do": "Press Ctrl, Shift and B together. This checks the whole project for mistakes.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "3-4.8",
+         "n": 8
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    }
+   ],
+   "id": "3"
+  },
+  {
+   "title": "Catch the exceptions, and test every rule",
+   "screens": [
+    {
+     "title": "Change the Test button so it catches the exceptions",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the Test button shows the message of any rule that a test player breaks."
+      },
+      {
+       "p": "Code that might throw goes in a [[try|7]] block. If anything in it throws a SummitException, the `catch` block runs and shows the message. The game carries on, with no crash."
+      },
+      {
+       "code": {
+        "id": "c04-test",
+        "kind": "type",
+        "title": "btnTest_Click, with try and catch",
+        "lang": "cs",
+        "text": "private void btnTest_Click(object sender, EventArgs e)\n{\n    try\n    {\n        Player p = new Player();\n        p.Username = \"ab\";\n        p.Password = \"rope2026\";\n        p.Avatar = \"avatar-fox.png\";\n        PlayerFile.Add(p);\n        MessageBox.Show(\"Added: \" + p.ToString());\n    }\n    catch (SummitException ex)\n    {\n        MessageBox.Show(ex.Message, \"Rule broken\");\n    }\n}",
+        "noCopy": true,
+        "partLines": [
+         [
+          1,
+          11,
+          "Try to add a player",
+          "The username `ab` breaks rule 2, so the line that sets it throws. The lines after it in the `try` block never run."
+         ],
+         [
+          12,
+          16,
+          "Catch it",
+          "`ex` is the exception that was thrown. `ex.Message` is its message. The title of the box says **Rule broken**."
+         ]
+        ],
+        "focusLines": [
+         [
+          3,
+          14
+         ]
+        ],
+        "typed": 9,
+        "wordMarks": [
+         [
+          12,
+          4,
+          9,
+          2
+         ],
+         [
+          3,
+          4,
+          7,
+          7
+         ],
+         [
+          12,
+          4,
+          9,
+          8
+         ],
+         [
+          14,
+          24,
+          34,
+          9
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmLogin.cs** tab at the top of the editor.",
+         "see": "The code of frmLogin shows.",
+         "img": {
+          "img": "img/cap/c064.png",
+          "alt": "btnTest_Click with try and catch typed",
+          "w": 1102,
+          "h": 575,
+          "marks": [
+           {
+            "n": 1,
+            "x": 16.7,
+            "y": 1.7,
+            "say": "Click the **frmLogin.cs** tab at the top of the editor."
+           },
+           {
+            "n": 2,
+            "x": 18.2,
+            "y": 54.3,
+            "w": 31.3,
+            "h": 37.4,
+            "say": "Drag from the start of the line under the `{` of btnTest_Click down to the end of the line above its `}`."
+           },
+           {
+            "n": 3,
+            "x": 19.1,
+            "y": 56.2,
+            "say": "Press Delete."
+           },
+           {
+            "n": 4,
+            "x": 18.2,
+            "y": 54.3,
+            "w": 31.3,
+            "h": 37.4,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 5,
+            "x": 21.0,
+            "y": 1.7,
+            "say": "Press Ctrl and S together."
+           }
+          ]
+         },
+         "id": "4-1.1",
+         "n": 1
+        },
+        {
+         "do": "Drag from the start of the line under the `{` of btnTest_Click down to the end of the line above its `}`.",
+         "see": "Every line inside btnTest_Click turns blue.",
+         "id": "4-1.2",
+         "n": 2
+        },
+        {
+         "do": "Press Delete.",
+         "see": "btnTest_Click is empty.",
+         "id": "4-1.3",
+         "n": 3
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The try and catch blocks are inside btnTest_Click. No line has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` near the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{`. This is normal. Delete the extra `}` lines, so that your code ends the same way as the code above."
+          ],
+          [
+           "A red underline stays under a word",
+           "Compare that line with the yellow line above it, letter by letter. Capital letters matter in C#, and so does every `;` at the end of a line."
+          ]
+         ],
+         "id": "4-1.4",
+         "n": 4
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `frmLogin.cs` on the tab disappears.",
+         "id": "4-1.5",
+         "n": 5
+        },
+        {
+         "do": "Press F5, then click **Test**.",
+         "see": "A box with the title **Rule broken** says **Your username has 2 characters. It needs 3 to 12.**",
+         "img": {
+          "img": "img/cap/c065.png",
+          "alt": "The Rule broken message for a username of 2 characters",
+          "w": 1001,
+          "h": 691,
+          "marks": [
+           {
+            "n": 6,
+            "x": 65.9,
+            "y": 37.7,
+            "say": "Press F5, then click **Test**."
+           },
+           {
+            "n": 7,
+            "x": 60.0,
+            "y": 61.1,
+            "say": "Click **OK** on the **Rule broken** box."
+           },
+           {
+            "n": 8,
+            "x": 97.6,
+            "y": 2.1,
+            "say": "Close the Summit Ready - Log in window."
+           }
+          ]
+         },
+         "id": "4-1.6",
+         "n": 6
+        },
+        {
+         "do": "Click **OK** on the **Rule broken** box.",
+         "see": "The box closes.",
+         "id": "4-1.7",
+         "n": 7
+        },
+        {
+         "do": "Close the Summit Ready - Log in window.",
+         "see": "Visual Studio 2019 comes back.",
+         "id": "4-1.8",
+         "n": 8
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Test every rule with the Test button",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that every rule throws the right message, and that a good player is still added."
+      },
+      {
+       "p": "Change one value in btnTest_Click, press F5, then click Test. A row marked **Must be refused** must show its message and not add the player."
+      },
+      {
+       "check": [
+        {
+         "what": "Set the username to `\"\"`.",
+         "expect": "control",
+         "how": "The message must say **Type a username.**",
+         "fix": "Check rule 1 in Username, and the `Trim()` on its first line.",
+         "id": "4-2.t1"
+        },
+        {
+         "what": "Set the username to `fell walker`, with a space in it.",
+         "expect": "control",
+         "how": "The message must say **Your username can only use letters and numbers. Take out the space.**",
+         "fix": "Check rule 3 in Username. The `!` before `char.IsLetterOrDigit` must be there.",
+         "id": "4-2.t2"
+        },
+        {
+         "what": "Set the username to `testClimber`.",
+         "expect": "control",
+         "how": "The message must say **The username testClimber is already taken. Try another one.**",
+         "fix": "Check rule 4 in Add, and that `Exists` is called before the StreamWriter.",
+         "id": "4-2.t3"
+        },
+        {
+         "what": "Set the username to `rulesTester`, and the password to `ropeclimb`.",
+         "expect": "control",
+         "how": "The message must say **Your password needs at least one letter and one number.**",
+         "fix": "Check rule 7 in Password: `hasNumber` turns true only in the `char.IsDigit` line.",
+         "id": "4-2.t4"
+        },
+        {
+         "what": "Keep `rulesTester`, and set the password to `rope|26`.",
+         "expect": "control",
+         "how": "The message must say **Your password cannot use the | character.**",
+         "fix": "Check rule 8 in Password: `value.Contains(\"|\")`.",
+         "id": "4-2.t5"
+        },
+        {
+         "what": "Keep `rulesTester`, set the password back to `rope2026`, and set the avatar to `\"\"`.",
+         "expect": "control",
+         "how": "The message must say **Click a picture to choose your avatar.**",
+         "fix": "Check rule 11 in Avatar.",
+         "id": "4-2.t6"
+        },
+        {
+         "what": "Keep `rulesTester` and `rope2026`, and set the avatar back to `avatar-fox.png`.",
+         "expect": "allowed",
+         "how": "The message says **Added:** and shows the line for rulesTester. The player is at the end of `players.txt`.",
+         "must": "Must happen",
+         "fix": "If a rule message shows instead, check that rule against its yellow lines.",
+         "id": "4-2.t7"
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "turn-match",
+        "kind": "turn",
+        "title": "Test rules 9 and 10",
+        "lang": "cs",
+        "text": "Player.CheckPasswordsMatch(\"rope2026\", \"rope2027\");",
+        "task": [
+         "In btnTest_Click, set the username to one that is not taken yet.",
+         "Add the yellow line above `PlayerFile.Add(p);`, inside the try block.",
+         "Make the two passwords different and run the test. Then make the second password blank and run it again.",
+         "Then make the 2 passwords the same, and run it a third time."
+        ],
+        "test": "Press F5 and click Test after each change.",
+        "expect": "First: **The two passwords are different. Type them both again.** Then: **Type your password again.** Then: **Added:**, with the new player's line.",
+        "hint": "CheckPasswordsMatch is `static`, which means you call it by its class name. Start the line with Player, not with `p`."
+       }
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Delete the Test button, and check the chapter",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the temporary Test button is gone, and your project builds with every rule in place."
+      },
+      {
+       "p": "The Test button was only for testing. Chapter 5 makes the register form, which uses the same rules."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmLogin.cs [Design]** tab at the top of the editor.",
+         "see": "The designer shows frmLogin.",
+         "img": {
+          "img": "img/cap/c066.png",
+          "alt": "frmLogin in the designer, with the Test button picked",
+          "w": 1537,
+          "h": 626,
+          "marks": [
+           {
+            "n": 1,
+            "x": 51.8,
+            "y": 2.0,
+            "say": "Click the **frmLogin.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 2,
+            "x": 46.5,
+            "y": 47.9,
+            "say": "Click the Test button on frmLogin, then press Delete."
+           }
+          ]
+         },
+         "id": "4-3.1",
+         "n": 1
+        },
+        {
+         "do": "Click the Test button on frmLogin, then press Delete.",
+         "see": "The Test button has gone. Visual Studio 2019 also takes out the line that linked it to btnTest_Click.",
+         "id": "4-3.2",
+         "n": 2
+        },
+        {
+         "do": "Click the **frmLogin.cs** tab, the one without [Design].",
+         "see": "The code of frmLogin shows.",
+         "img": {
+          "img": "img/cap/c067.png",
+          "alt": "frmLogin.cs with btnTest_Click deleted, and the 3 menu methods still there",
+          "w": 1102,
+          "h": 679,
+          "marks": [
+           {
+            "n": 3,
+            "x": 16.7,
+            "y": 1.4,
+            "say": "Click the **frmLogin.cs** tab, the one without [Design]."
+           },
+           {
+            "n": 4,
+            "x": 15.6,
+            "y": 79.3,
+            "w": 46.7,
+            "h": 2.5,
+            "say": "Drag from the start of `private void btnTest_Click` down to the end of the `}` that closes it."
+           },
+           {
+            "n": 5,
+            "x": 16.2,
+            "y": 80.5,
+            "say": "Press Delete."
+           },
+           {
+            "n": 6,
+            "x": 21.0,
+            "y": 1.4,
+            "say": "Press Ctrl and S together."
+           },
+           {
+            "n": 7,
+            "x": 6.4,
+            "y": 97.7,
+            "say": "Press Ctrl, Shift and B together. This checks the whole project for mistakes."
+           }
+          ]
+         },
+         "id": "4-3.3",
+         "n": 3
+        },
+        {
+         "do": "Drag from the start of `private void btnTest_Click` down to the end of the `}` that closes it.",
+         "see": "The whole of btnTest_Click turns blue.",
+         "id": "4-3.4",
+         "n": 4
+        },
+        {
+         "do": "Press Delete.",
+         "see": "btnTest_Click has gone. mnuExit_Click, mnuHow_Click and mnuAbout_Click are still there.",
+         "wrong": [
+          [
+           "A red underline shows in frmLogin.Designer.cs, under btnTest_Click",
+           "You deleted the method before the button. Press Ctrl and Z together until btnTest_Click is back. Delete the button in the designer first, then the method."
+          ]
+         ],
+         "id": "4-3.5",
+         "n": 5
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `frmLogin.cs` on the tab disappears.",
+         "id": "4-3.6",
+         "n": 6
+        },
+        {
+         "do": "Press Ctrl, Shift and B together. This checks the whole project for mistakes.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "id": "4-3.7",
+         "n": 7
+        }
+       ]
+      },
+      {
+       "check": [
+        {
+         "what": "Press F5.",
+         "expect": "allowed",
+         "how": "frmLogin opens with its menu bar, and no Test button.",
+         "must": "Must happen",
+         "fix": "Delete the button in the designer, then btnTest_Click in the code.",
+         "id": "4-3.t1"
+        },
+        {
+         "what": "Open `players.txt` in Notepad.",
+         "expect": "control",
+         "how": "There must be no line for `ab`, `fell walker` or a blank username. Only the players that passed every rule are there.",
+         "fix": "Check that each rule is checked before the value is stored, and that Add checks before the StreamWriter.",
+         "id": "4-3.t2"
+        }
+       ]
+      },
+      {
+       "p": "testClimber and rulesTester stay in `players.txt`. Chapter 6 uses them to test the log in."
+      },
+      {
+       "box": {
+        "title": "Evidence to keep",
+        "blocks": [
+         {
+          "p": "Take a screenshot of each **Rule broken** message from the tests, and of the **Added:** message."
+         },
+         {
+          "p": "Paste each screenshot into your testing document, beside the test data that caused it. Each test is a row: the data, what should happen, and what did happen."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "3"
+    }
+   ],
+   "id": "4"
+  }
+ ],
+ "glossary": [
+  [
+   "char.IsDigit",
+   "Says whether one letter of some text is a digit, from 0 to 9."
+  ],
+  [
+   "Contains",
+   "`value.Contains(\"|\")` is true when the bar is anywhere in the text."
+  ],
+  [
+   "try and catch",
+   "Code inside `try` runs. If it throws an exception, the matching `catch` runs, and the program does not crash."
+  ],
+  [
+   "exception",
+   "A message the code sends out when something has gone wrong. It stops the code until a `catch` deals with it."
+  ],
+  [
+   "throw",
+   "`throw` stops the method at once, and hands an exception to whatever code called it."
+  ],
+  [
+   "inherit",
+   "A class that inherits from another class gets everything the other class has. `: SummitException` after a class name means it inherits from SummitException."
+  ],
+  [
+   "base",
+   "`: base(message)` hands the message to the class it inherits from, which keeps it."
+  ],
+  [
+   "try",
+   "A `try` block holds code that might throw an exception."
+  ],
+  [
+   "catch",
+   "A `catch` block runs when code in the `try` block throws an exception."
+  ],
+  [
+   "Message",
+   "The words an exception carries, such as **Type a username.**"
+  ],
+  [
+   "Trim",
+   "Takes the spaces off the start and the end of some words."
+  ],
+  [
+   "Length",
+   "How many characters some words have."
+  ],
+  [
+   "char",
+   "One character, such as a letter, a digit or a space."
+  ],
+  [
+   "rule",
+   "Something a player must do, such as type a username of 3 to 12 characters. Each rule is checked in the code."
+  ]
+ ]
+}

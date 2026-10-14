@@ -1,0 +1,2538 @@
+{
+ "id": "05",
+ "n": 5,
+ "of": 20,
+ "title": "Register a new player with an avatar",
+ "kind": "a build chapter: the windows every player sees before the map",
+ "one": "You build the Register window. It checks every box, shows a message under each box that is wrong, and adds the new player to `players.txt`.",
+ "prev": {
+  "id": "04",
+  "n": 4,
+  "title": "Exceptions and the Player rules"
+ },
+ "next": {
+  "id": "06",
+  "n": 6,
+  "title": "Log in"
+ },
+ "stages": [
+  {
+   "title": "See what the Register window does",
+   "screens": [
+    {
+     "title": "Look at the Register window and what each box checks",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know what the Register window does when a player clicks **Create my player**."
+      },
+      {
+       "p": "A new player registers once, in the Register window. They choose a username and a password, and they click one of 8 animal pictures. That picture is their [[avatar|3]]."
+      },
+      {
+       "screenshot": {
+        "img": "img/ch00-register.png",
+        "w": 490,
+        "h": 338,
+        "alt": "The Register window, with 3 boxes on the left and 8 avatar pictures on the right",
+        "cap": "The Register window that you build in this chapter."
+       }
+      },
+      {
+       "p": "When the player clicks **Create my player**, the window checks all 4 things at once: the username, the password, the password typed again, and the avatar."
+      },
+      {
+       "p": "Each thing that is wrong gets its own red message, straight under its own box. So a player with 3 mistakes sees 3 messages, and can fix all 3 before clicking again."
+      },
+      {
+       "p": "The rules come from the Player class in chapter 4. The Register window checks nothing itself. It gives each box to the Player class, and shows any error message the class sends back."
+      },
+      {
+       "p": "When every box is right, the new player is added to the end of `players.txt`. A message says the player is ready, and the window closes."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Check that your project is ready, and see the words this chapter uses",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know that your project has everything the Register window needs."
+      },
+      {
+       "p": "The Register window uses things you made in earlier chapters. Check that each one is in your project."
+      },
+      {
+       "need": [
+        "The Files class that finds pictures, in your project (chapter 2).",
+        "The Avatars folder inside bin\\Debug\\Images, with 8 pictures from `summit-ready-files.zip` (chapter 2).",
+        "The Player class with its rules, and the exception classes such as SummitException (chapter 4).",
+        "The PlayerFile class, with LoadAll and Add for `players.txt` (chapters 3 and 4).",
+        "About 2 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
+       ]
+      },
+      {
+       "words": [
+        [
+         "Parent",
+         "The control that another control sits on. Each avatar picture has its panel as its Parent.",
+         "3-2",
+         true
+        ],
+        [
+         "PictureBox",
+         "A control that shows a picture. Each avatar is a PictureBox.",
+         "3-1",
+         true
+        ],
+        [
+         "Transparent",
+         "`Color.Transparent` lets whatever is behind a control show through it.",
+         "3-2",
+         true
+        ],
+        [
+         "avatar",
+         "The picture a player chooses to stand for them. Summit Ready has 8 animal avatars.",
+         "1-1",
+         false
+        ],
+        [
+         "panel",
+         "A control that holds other controls. Each avatar picture sits inside its own panel.",
+         "3-2",
+         true
+        ],
+        [
+         "Tag",
+         "A spare property on every control, for any value you want to keep with it. Each avatar picture keeps its file name in its Tag.",
+         "3-1",
+         true
+        ],
+        [
+         "cast",
+         "A type in brackets in front of a value tells C# what the value really is. `(PictureBox)sender` tells C# that `sender` is a picture.",
+         "3-1",
+         true
+        ],
+        [
+         "colour from red, green and blue",
+         "`Color.FromArgb(242, 183, 5)` mixes a colour from red, green and blue. Each number is from 0 to 255.",
+         "3-2",
+         true
+        ],
+        [
+         "lightning bolt",
+         "The button at the top of the Properties window that shows a control's events in place of its properties.",
+         "3-1",
+         false
+        ],
+        [
+         "Load",
+         "Load is what happens a moment before a form's window first appears. Code you put in it runs once.",
+         "3-1",
+         true
+        ]
+       ],
+       "intro": "You do not need to learn these words now. Where you first meet each one in the chapter, it has a dotted line under it. Hover over it or tap it to see what it means."
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "1"
+  },
+  {
+   "title": "Make the Register window and its controls",
+   "screens": [
+    {
+     "title": "Add the Register form and set the form's properties",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has an empty Register window, called frmRegister, at the right size and colour."
+      },
+      {
+       "p": "Every window in Summit Ready is a form. You add a new form for the Register window."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
+         "see": "Visual Studio 2019 comes to the front, with your project open.",
+         "img": {
+          "img": "img/cap/c015.png",
+          "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
+          "w": 960,
+          "h": 41,
+          "marks": [
+           {
+            "n": 1,
+            "x": 63.9,
+            "y": 50.0,
+            "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
+           }
+          ]
+         },
+         "id": "2-1.1",
+         "n": 1
+        },
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "img": "img/cap/c068.png",
+          "alt": "The project menu, with Add pointed at and Form (Windows Forms) in the second menu",
+          "w": 949,
+          "h": 605,
+          "marks": [
+           {
+            "n": 2,
+            "x": 73.8,
+            "y": 4.6,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 3,
+            "x": 40.6,
+            "y": 37.8,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 4,
+            "x": 11.6,
+            "y": 81.0,
+            "say": "Click **Form (Windows Forms)...** in the second menu."
+           }
+          ]
+         },
+         "id": "2-1.2",
+         "n": 2
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "2-1.3",
+         "n": 3
+        },
+        {
+         "do": "Click **Form (Windows Forms)...** in the second menu.",
+         "see": "The Add New Item window opens. Form (Windows Forms) is picked, and the Name box says `Form1.cs`.",
+         "id": "2-1.4",
+         "n": 4
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Form1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "img": "img/cap/c069.png",
+          "alt": "The Add New Item window, with Form (Windows Forms) picked",
+          "w": 943,
+          "h": 592,
+          "marks": [
+           {
+            "n": 5,
+            "x": 42.5,
+            "y": 91.1,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 6,
+            "x": 13.8,
+            "y": 89.5,
+            "w": 57.4,
+            "h": 3.5,
+            "say": "Type `frmRegister.cs`"
+           },
+           {
+            "n": 7,
+            "x": 86.0,
+            "y": 96.3,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "2-1.5",
+         "n": 5
+        },
+        {
+         "do": "Type `frmRegister.cs`",
+         "see": "The Name box shows `frmRegister.cs`.",
+         "id": "2-1.6",
+         "n": 6
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "A new empty form called frmRegister opens in the designer. `frmRegister.cs` appears in Solution Explorer.",
+         "id": "2-1.7",
+         "n": 7
+        }
+       ]
+      },
+      {
+       "p": "Now set the form's properties in the Properties window, using the table below. Set **Font** first. If you change Font later, Visual Studio 2019 stretches the form, and its Size changes."
+      },
+      {
+       "controls": {
+        "props": [
+         "Font = Segoe UI, 11pt",
+         "Text = Summit Ready - Register",
+         "StartPosition = CenterScreen",
+         "FormBorderStyle = FixedSingle",
+         "Size = 1016, 699",
+         "MaximizeBox = False",
+         "BackColor = 243, 245, 242"
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "If you have forgotten how to set a property",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "Click the box beside the property's name in the Properties window. Type the new value, then press Enter."
+         },
+         {
+          "p": "For **Font**, click the box beside Font, then click the small button with 3 dots at the right of the box. Pick Segoe UI and size 11, then click **OK**."
+         },
+         {
+          "p": "For **BackColor**, type `243, 245, 242` in the box beside BackColor, then press Enter."
+         },
+         {
+          "p": "For **MaximizeBox**, click the arrow at the right of the box, then click **False**."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Add the dark header strip along the top",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmRegister has a dark strip along the top with its title and instruction."
+      },
+      {
+       "p": "Every Summit Ready window has the same dark strip along the top. The strip is a [[panel|4]], and the title and the instruction are labels that sit on it."
+      },
+      {
+       "p": "Add the controls in the order of the table. Drop each Label on the dark panel, not on the form."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Panel",
+          "name": "pnlHeader",
+          "settings": [
+           "Location = 0, 0",
+           "Size = 1000, 56",
+           "BackColor = 38, 50, 56"
+          ],
+          "then": "A dark strip runs right across the top of frmRegister."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblTitle",
+          "settings": [
+           "AutoSize = False",
+           "Location = 16, 6",
+           "Size = 600, 28",
+           "Font = Segoe UI Semibold, 15pt",
+           "ForeColor = 255, 255, 255",
+           "Text = Register a new player"
+          ],
+          "note": "Drop the Label on pnlHeader."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblInstruction",
+          "settings": [
+           "AutoSize = False",
+           "Location = 18, 33",
+           "Size = 700, 20",
+           "Font = Segoe UI, 10pt",
+           "ForeColor = 207, 216, 220",
+           "Text = Fill in all three boxes and click a picture to choose your avatar."
+          ],
+          "note": "Drop the Label on pnlHeader."
+         }
+        ],
+        "done": {
+         "see": "A dark strip along the top of frmRegister, with **Register a new player** in white and the instruction in light grey under it.",
+         "img": {
+          "img": "img/cap/c070.png",
+          "alt": "frmRegister in the designer with the dark header strip, its title and its instruction",
+          "w": 1053,
+          "h": 357,
+          "marks": []
+         }
+        }
+       }
+      },
+      {
+       "box": {
+        "title": "How to find a control in the Toolbox",
+        "text": "The Toolbox is down the left side of Visual Studio 2019. Click the search box at the top of the Toolbox, then type the control's name, such as `Panel`. The control shows in the list under the search box.",
+        "fold": true
+       }
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Add the 3 boxes, with a hint and a message space under each one",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmRegister has the Username, Password and Type your password again boxes."
+      },
+      {
+       "p": "Each box has a label above it. The Username and Password boxes also have a grey hint under them, which says what the box needs."
+      },
+      {
+       "p": "Under each box is an empty red label, for the message when the box is wrong. An empty label shows nothing, so it is invisible until the code puts a message in it."
+      },
+      {
+       "p": "`UseSystemPasswordChar = True` makes a box show a dot for each letter, so nobody can read the password."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Label",
+          "name": "lblUsername",
+          "settings": [
+           "AutoSize = False",
+           "Location = 40, 72",
+           "Size = 360, 22",
+           "Font = Segoe UI, 10.5pt",
+           "ForeColor = 38, 50, 56",
+           "Text = Username"
+          ]
+         },
+         {
+          "toolbox": "TextBox",
+          "name": "txtUsername",
+          "settings": [
+           "Location = 40, 96",
+           "Size = 340, 27",
+           "TabIndex = 0"
+          ]
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblUsernameHint",
+          "settings": [
+           "AutoSize = False",
+           "Location = 40, 127",
+           "Size = 380, 20",
+           "Font = Segoe UI, 9.5pt",
+           "ForeColor = 92, 107, 115",
+           "Text = 3 to 12 letters or numbers, no spaces."
+          ]
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblUsernameError",
+          "settings": [
+           "AutoSize = False",
+           "Location = 40, 147",
+           "Size = 360, 38",
+           "Font = Segoe UI, 9.5pt",
+           "ForeColor = 178, 58, 46",
+           "Text = (empty)"
+          ],
+          "note": "To empty Text, delete the words in the box beside Text, then press Enter.",
+          "then": "lblUsernameError shows as an empty space with no words."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblPassword",
+          "settings": [
+           "AutoSize = False",
+           "Location = 40, 189",
+           "Size = 360, 22",
+           "Font = Segoe UI, 10.5pt",
+           "ForeColor = 38, 50, 56",
+           "Text = Password"
+          ]
+         },
+         {
+          "toolbox": "TextBox",
+          "name": "txtPassword",
+          "settings": [
+           "Location = 40, 213",
+           "Size = 340, 27",
+           "UseSystemPasswordChar = True",
+           "TabIndex = 1"
+          ]
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblPasswordHint",
+          "settings": [
+           "AutoSize = False",
+           "Location = 40, 244",
+           "Size = 380, 20",
+           "Font = Segoe UI, 9.5pt",
+           "ForeColor = 92, 107, 115",
+           "Text = 6 to 20 characters, with at least one letter and one number."
+          ]
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblPasswordError",
+          "settings": [
+           "AutoSize = False",
+           "Location = 40, 264",
+           "Size = 360, 38",
+           "Font = Segoe UI, 9.5pt",
+           "ForeColor = 178, 58, 46",
+           "Text = (empty)"
+          ]
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblAgain",
+          "settings": [
+           "AutoSize = False",
+           "Location = 40, 306",
+           "Size = 360, 22",
+           "Font = Segoe UI, 10.5pt",
+           "ForeColor = 38, 50, 56",
+           "Text = Type your password again"
+          ]
+         },
+         {
+          "toolbox": "TextBox",
+          "name": "txtAgain",
+          "settings": [
+           "Location = 40, 330",
+           "Size = 340, 27",
+           "UseSystemPasswordChar = True",
+           "TabIndex = 2"
+          ]
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblAgainError",
+          "settings": [
+           "AutoSize = False",
+           "Location = 40, 361",
+           "Size = 360, 38",
+           "Font = Segoe UI, 9.5pt",
+           "ForeColor = 178, 58, 46",
+           "Text = (empty)"
+          ]
+         }
+        ],
+        "done": {
+         "see": "Down the left side of frmRegister: Username, its box and its grey hint. Then Password, its box and its grey hint. Then Type your password again and its box. The 3 red message labels are empty, so they show as empty spaces.",
+         "img": {
+          "img": "img/cap/c071.png",
+          "alt": "frmRegister in the designer with the 3 boxes, their labels and their hints down the left side",
+          "w": 1053,
+          "h": 602,
+          "marks": []
+         }
+        }
+       }
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Add the top row of 4 avatars: Goat, Eagle, Fox and Hare",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmRegister has a heading and the first 4 avatar pictures, each in its own frame."
+      },
+      {
+       "p": "Each avatar is a picture inside a panel that is a little bigger than the picture. The edge of the panel shows all round the picture, like a frame."
+      },
+      {
+       "p": "When a player clicks a picture, the code turns its frame gold. That is why each picture needs its own panel."
+      },
+      {
+       "p": "Each picture's [[Tag|5]] holds the file name of its avatar, such as `avatar-goat.png`. The code reads the Tag to load the right picture from the Avatars folder."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Label",
+          "name": "lblAvatar",
+          "settings": [
+           "AutoSize = False",
+           "Location = 430, 72",
+           "Size = 300, 22",
+           "Font = Segoe UI, 10.5pt",
+           "ForeColor = 38, 50, 56",
+           "Text = Choose your avatar"
+          ]
+         },
+         {
+          "toolbox": "Panel",
+          "name": "pnlGoat",
+          "settings": [
+           "Location = 430, 100",
+           "Size = 104, 104"
+          ],
+          "note": "Drop the Panel on frmRegister, in an empty space."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picGoat",
+          "settings": [
+           "Location = 4, 4",
+           "Size = 96, 96",
+           "BackColor = 255, 255, 255",
+           "Cursor = Hand",
+           "SizeMode = Zoom",
+           "Tag = avatar-goat.png"
+          ],
+          "note": "Drop the PictureBox inside pnlGoat. Its Location counts from the top left corner of pnlGoat, not of the form.",
+          "then": "A white square sits inside pnlGoat, with a thin edge of the panel showing all round it."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblGoat",
+          "settings": [
+           "AutoSize = False",
+           "Location = 430, 206",
+           "Size = 104, 22",
+           "Font = Segoe UI, 9.5pt",
+           "ForeColor = 38, 50, 56",
+           "TextAlign = TopCenter",
+           "Text = Goat"
+          ],
+          "note": "Drop the Label on frmRegister, under pnlGoat, not inside it."
+         },
+         {
+          "toolbox": "Panel",
+          "name": "pnlEagle",
+          "settings": [
+           "Location = 566, 100",
+           "Size = 104, 104"
+          ],
+          "note": "Drop the Panel on frmRegister, in an empty space."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picEagle",
+          "settings": [
+           "Location = 4, 4",
+           "Size = 96, 96",
+           "BackColor = 255, 255, 255",
+           "Cursor = Hand",
+           "SizeMode = Zoom",
+           "Tag = avatar-eagle.png"
+          ],
+          "note": "Drop the PictureBox inside pnlEagle. Its Location counts from the top left corner of pnlEagle, not of the form.",
+          "then": "A white square sits inside pnlEagle, with a thin edge of the panel showing all round it."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblEagle",
+          "settings": [
+           "AutoSize = False",
+           "Location = 566, 206",
+           "Size = 104, 22",
+           "Font = Segoe UI, 9.5pt",
+           "ForeColor = 38, 50, 56",
+           "TextAlign = TopCenter",
+           "Text = Eagle"
+          ],
+          "note": "Drop the Label on frmRegister, under pnlEagle, not inside it."
+         },
+         {
+          "toolbox": "Panel",
+          "name": "pnlFox",
+          "settings": [
+           "Location = 702, 100",
+           "Size = 104, 104"
+          ],
+          "note": "Drop the Panel on frmRegister, in an empty space."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picFox",
+          "settings": [
+           "Location = 4, 4",
+           "Size = 96, 96",
+           "BackColor = 255, 255, 255",
+           "Cursor = Hand",
+           "SizeMode = Zoom",
+           "Tag = avatar-fox.png"
+          ],
+          "note": "Drop the PictureBox inside pnlFox. Its Location counts from the top left corner of pnlFox, not of the form.",
+          "then": "A white square sits inside pnlFox, with a thin edge of the panel showing all round it."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblFox",
+          "settings": [
+           "AutoSize = False",
+           "Location = 702, 206",
+           "Size = 104, 22",
+           "Font = Segoe UI, 9.5pt",
+           "ForeColor = 38, 50, 56",
+           "TextAlign = TopCenter",
+           "Text = Fox"
+          ],
+          "note": "Drop the Label on frmRegister, under pnlFox, not inside it."
+         },
+         {
+          "toolbox": "Panel",
+          "name": "pnlHare",
+          "settings": [
+           "Location = 838, 100",
+           "Size = 104, 104"
+          ],
+          "note": "Drop the Panel on frmRegister, in an empty space."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picHare",
+          "settings": [
+           "Location = 4, 4",
+           "Size = 96, 96",
+           "BackColor = 255, 255, 255",
+           "Cursor = Hand",
+           "SizeMode = Zoom",
+           "Tag = avatar-hare.png"
+          ],
+          "note": "Drop the PictureBox inside pnlHare. Its Location counts from the top left corner of pnlHare, not of the form.",
+          "then": "A white square sits inside pnlHare, with a thin edge of the panel showing all round it."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblHare",
+          "settings": [
+           "AutoSize = False",
+           "Location = 838, 206",
+           "Size = 104, 22",
+           "Font = Segoe UI, 9.5pt",
+           "ForeColor = 38, 50, 56",
+           "TextAlign = TopCenter",
+           "Text = Hare"
+          ],
+          "note": "Drop the Label on frmRegister, under pnlHare, not inside it."
+         }
+        ],
+        "done": {
+         "see": "**Choose your avatar** on the right of frmRegister. Under it, a row of 4 white squares, each inside its own panel, with Goat, Eagle, Fox and Hare under them. The squares are empty, because the code loads the pictures.",
+         "img": {
+          "img": "img/cap/c072.png",
+          "alt": "frmRegister in the designer with the top row of 4 avatar frames and their names",
+          "w": 1053,
+          "h": 602,
+          "marks": []
+         }
+        }
+       }
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Add the bottom row of 4 avatars and the 2 buttons",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmRegister has all 8 avatars, the red message space for the avatar, and the 2 buttons."
+      },
+      {
+       "p": "The bottom row is the same as the top row, 140 pixels lower down."
+      },
+      {
+       "p": "`AcceptButton` makes the Enter key click **Create my player**, so a player can press Enter after the last box."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Panel",
+          "name": "pnlDeer",
+          "settings": [
+           "Location = 430, 240",
+           "Size = 104, 104"
+          ],
+          "note": "Drop the Panel on frmRegister, in an empty space."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picDeer",
+          "settings": [
+           "Location = 4, 4",
+           "Size = 96, 96",
+           "BackColor = 255, 255, 255",
+           "Cursor = Hand",
+           "SizeMode = Zoom",
+           "Tag = avatar-deer.png"
+          ],
+          "note": "Drop the PictureBox inside pnlDeer. Its Location counts from the top left corner of pnlDeer, not of the form.",
+          "then": "A white square sits inside pnlDeer, with a thin edge of the panel showing all round it."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblDeer",
+          "settings": [
+           "AutoSize = False",
+           "Location = 430, 346",
+           "Size = 104, 22",
+           "Font = Segoe UI, 9.5pt",
+           "ForeColor = 38, 50, 56",
+           "TextAlign = TopCenter",
+           "Text = Deer"
+          ],
+          "note": "Drop the Label on frmRegister, under pnlDeer, not inside it."
+         },
+         {
+          "toolbox": "Panel",
+          "name": "pnlOwl",
+          "settings": [
+           "Location = 566, 240",
+           "Size = 104, 104"
+          ],
+          "note": "Drop the Panel on frmRegister, in an empty space."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picOwl",
+          "settings": [
+           "Location = 4, 4",
+           "Size = 96, 96",
+           "BackColor = 255, 255, 255",
+           "Cursor = Hand",
+           "SizeMode = Zoom",
+           "Tag = avatar-owl.png"
+          ],
+          "note": "Drop the PictureBox inside pnlOwl. Its Location counts from the top left corner of pnlOwl, not of the form.",
+          "then": "A white square sits inside pnlOwl, with a thin edge of the panel showing all round it."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblOwl",
+          "settings": [
+           "AutoSize = False",
+           "Location = 566, 346",
+           "Size = 104, 22",
+           "Font = Segoe UI, 9.5pt",
+           "ForeColor = 38, 50, 56",
+           "TextAlign = TopCenter",
+           "Text = Owl"
+          ],
+          "note": "Drop the Label on frmRegister, under pnlOwl, not inside it."
+         },
+         {
+          "toolbox": "Panel",
+          "name": "pnlBadger",
+          "settings": [
+           "Location = 702, 240",
+           "Size = 104, 104"
+          ],
+          "note": "Drop the Panel on frmRegister, in an empty space."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picBadger",
+          "settings": [
+           "Location = 4, 4",
+           "Size = 96, 96",
+           "BackColor = 255, 255, 255",
+           "Cursor = Hand",
+           "SizeMode = Zoom",
+           "Tag = avatar-badger.png"
+          ],
+          "note": "Drop the PictureBox inside pnlBadger. Its Location counts from the top left corner of pnlBadger, not of the form.",
+          "then": "A white square sits inside pnlBadger, with a thin edge of the panel showing all round it."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblBadger",
+          "settings": [
+           "AutoSize = False",
+           "Location = 702, 346",
+           "Size = 104, 22",
+           "Font = Segoe UI, 9.5pt",
+           "ForeColor = 38, 50, 56",
+           "TextAlign = TopCenter",
+           "Text = Badger"
+          ],
+          "note": "Drop the Label on frmRegister, under pnlBadger, not inside it."
+         },
+         {
+          "toolbox": "Panel",
+          "name": "pnlRaven",
+          "settings": [
+           "Location = 838, 240",
+           "Size = 104, 104"
+          ],
+          "note": "Drop the Panel on frmRegister, in an empty space."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picRaven",
+          "settings": [
+           "Location = 4, 4",
+           "Size = 96, 96",
+           "BackColor = 255, 255, 255",
+           "Cursor = Hand",
+           "SizeMode = Zoom",
+           "Tag = avatar-raven.png"
+          ],
+          "note": "Drop the PictureBox inside pnlRaven. Its Location counts from the top left corner of pnlRaven, not of the form.",
+          "then": "A white square sits inside pnlRaven, with a thin edge of the panel showing all round it."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblRaven",
+          "settings": [
+           "AutoSize = False",
+           "Location = 838, 346",
+           "Size = 104, 22",
+           "Font = Segoe UI, 9.5pt",
+           "ForeColor = 38, 50, 56",
+           "TextAlign = TopCenter",
+           "Text = Raven"
+          ],
+          "note": "Drop the Label on frmRegister, under pnlRaven, not inside it."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblAvatarError",
+          "settings": [
+           "AutoSize = False",
+           "Location = 430, 384",
+           "Size = 520, 24",
+           "Font = Segoe UI, 9.5pt",
+           "ForeColor = 178, 58, 46",
+           "Text = (empty)"
+          ]
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnCreate",
+          "settings": [
+           "Location = 40, 590",
+           "Size = 220, 44",
+           "Text = Create my player",
+           "BackColor = 242, 183, 5",
+           "ForeColor = 38, 50, 56",
+           "Font = Segoe UI Semibold, 11pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderSize = 0",
+           "Cursor = Hand",
+           "TabIndex = 3"
+          ],
+          "note": "Click the small arrow beside FlatAppearance in the Properties window. BorderSize then shows under it."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnBack",
+          "settings": [
+           "Location = 274, 590",
+           "Size = 180, 44",
+           "Text = Back to log in",
+           "BackColor = 255, 255, 255",
+           "ForeColor = 38, 50, 56",
+           "Font = Segoe UI Semibold, 11pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderSize = 1",
+           "Cursor = Hand",
+           "TabIndex = 4"
+          ]
+         },
+         {
+          "toolbox": "(the form)",
+          "name": "frmRegister",
+          "settings": [
+           "AcceptButton = btnCreate"
+          ],
+          "note": "Click the title bar of frmRegister. In the Properties window, click the arrow beside AcceptButton, then pick the **Create my player** button."
+         }
+        ],
+        "done": {
+         "see": "frmRegister looks like the picture at the start of this chapter, with empty white squares where the animals go.",
+         "img": {
+          "img": "img/cap/c073.png",
+          "alt": "frmRegister in the designer with every control on it",
+          "w": 1053,
+          "h": 732,
+          "marks": []
+         }
+        }
+       }
+      }
+     ],
+     "id": "5"
+    }
+   ],
+   "id": "2"
+  },
+  {
+   "title": "Write the code, one method at a time",
+   "screens": [
+    {
+     "title": "Type the fields, and the Load method that shows the 8 pictures",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the 8 avatar pictures appear when frmRegister opens."
+      },
+      {
+       "p": "frmRegister needs 3 fields. A field is a value that the whole window keeps. They sit at the top of the class, outside every method."
+      },
+      {
+       "code": {
+        "id": "c05-fields",
+        "kind": "type",
+        "title": "The 3 fields of frmRegister",
+        "lang": "cs",
+        "text": "public string NewUsername = \"\";    // read by frmLogin afterwards\nprivate string chosenAvatar = \"\";  // the avatar file, once clicked\nprivate PictureBox[] pictures;     // the eight avatar pictures",
+        "partLines": [
+         [
+          1,
+          1,
+          "NewUsername",
+          "`NewUsername` stays empty until the code creates a player. It is `public`, so the Log in window can read it in chapter 6 and fill in the new username."
+         ],
+         [
+          2,
+          2,
+          "chosenAvatar",
+          "`chosenAvatar` holds the file name of the avatar the player clicked. It is empty until they click one."
+         ],
+         [
+          3,
+          3,
+          "pictures",
+          "`pictures` is an array, a numbered list, of the 8 avatar pictures. It lets one loop, a block that repeats, deal with all 8."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          3
+         ]
+        ],
+        "typed": 3,
+        "wordMarks": [
+         [
+          3,
+          8,
+          18,
+          1
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Press F7.",
+         "see": "The code of frmRegister shows in the code editor.",
+         "img": {
+          "img": "img/cap/c074.png",
+          "alt": "frmRegister.cs, with the 3 fields typed under the class line",
+          "w": 1102,
+          "h": 393,
+          "marks": [
+           {
+            "n": 1,
+            "x": 5.0,
+            "y": 2.5,
+            "say": "Press F7."
+           },
+           {
+            "n": 2,
+            "x": 15.4,
+            "y": 66.0,
+            "say": "Click at the end of the `{` under `public partial class frmRegister : Form`."
+           },
+           {
+            "n": 3,
+            "x": 16.6,
+            "y": 70.1,
+            "say": "Press Enter."
+           },
+           {
+            "n": 4,
+            "x": 15.7,
+            "y": 67.3,
+            "w": 44.0,
+            "h": 14.0,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "3-1.1",
+         "n": 1
+        },
+        {
+         "do": "Click at the end of the `{` under `public partial class frmRegister : Form`.",
+         "see": "The flashing cursor is after the `{`.",
+         "id": "3-1.2",
+         "n": 2
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the `{`.",
+         "id": "3-1.3",
+         "n": 3
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The 3 fields are under the `{`. `pictures` has no red underline.",
+         "id": "3-1.4",
+         "n": 4
+        }
+       ]
+      },
+      {
+       "p": "The pictures load when the window opens, in the form's [[Load|9]] event. So you make an empty Load method first, then type the yellow lines inside it."
+      },
+      {
+       "code": {
+        "id": "c05-load",
+        "kind": "type",
+        "title": "frmRegister_Load",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "private void frmRegister_Load(object sender, EventArgs e)\n{\n    // Each picture's Tag holds its file name, set in Properties\n    pictures = new PictureBox[] { picGoat, picEagle, picFox, picHare,\n        picDeer, picOwl, picBadger, picRaven };\n    foreach (PictureBox pic in pictures)\n    {\n        pic.Image = Files.Picture(\"Avatars\", (string)pic.Tag);\n    }\n}",
+        "partLines": [
+         [
+          1,
+          5,
+          "Keep the 8 pictures in the array",
+          "`new PictureBox[] { ... }` makes the array, with the 8 pictures in it from Goat to Raven."
+         ],
+         [
+          6,
+          10,
+          "Load each picture",
+          "The loop runs once for each of the 8 pictures. `pic.Tag` holds the file name, such as `avatar-goat.png`. `(string)` tells C# that the Tag is text. `Files.Picture` from chapter 2 loads that file from the Avatars folder."
+         ]
+        ],
+        "focusLines": [
+         [
+          3,
+          8
+         ]
+        ],
+        "typed": 4,
+        "wordMarks": [
+         [
+          8,
+          57,
+          60,
+          5
+         ],
+         [
+          8,
+          45,
+          53,
+          6
+         ],
+         [
+          1,
+          13,
+          29,
+          9
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Shift and F7 together.",
+         "see": "The designer shows frmRegister.",
+         "img": {
+          "img": "img/cap/c075.png",
+          "alt": "The Properties window showing the events of frmRegister, with the lightning bolt and Load",
+          "w": 1568,
+          "h": 521,
+          "marks": [
+           {
+            "n": 5,
+            "x": 11.6,
+            "y": 2.5,
+            "say": "Press Shift and F7 together."
+           },
+           {
+            "n": 6,
+            "x": 19.4,
+            "y": 9.9,
+            "say": "Click the title bar of frmRegister."
+           },
+           {
+            "n": 7,
+            "x": 86.0,
+            "y": 59.6,
+            "say": "Click the [[lightning bolt|8]] at the top of the Properties window."
+           },
+           {
+            "n": 8,
+            "x": 93.7,
+            "y": 63.3,
+            "say": "Double-click the empty box beside **Load**. Scroll down the list a little if you cannot see it."
+           }
+          ]
+         },
+         "id": "3-1.5",
+         "n": 5
+        },
+        {
+         "do": "Click the title bar of frmRegister.",
+         "see": "The Properties window shows frmRegister at the top.",
+         "id": "3-1.6",
+         "n": 6
+        },
+        {
+         "do": "Click the [[lightning bolt|8]] at the top of the Properties window.",
+         "see": "The Properties window now lists the form's events in place of its properties.",
+         "id": "3-1.7",
+         "n": 7
+        },
+        {
+         "do": "Double-click the empty box beside **Load**. Scroll down the list a little if you cannot see it.",
+         "see": "The code editor opens `frmRegister.cs`, with a new empty method called `frmRegister_Load`.",
+         "id": "3-1.8",
+         "n": 8
+        },
+        {
+         "do": "Click at the end of the `{` on the line under `private void frmRegister_Load`.",
+         "see": "The flashing cursor is after the `{`.",
+         "img": {
+          "img": "img/cap/c076.png",
+          "alt": "frmRegister.cs, with the yellow lines typed inside frmRegister_Load",
+          "w": 1102,
+          "h": 488,
+          "marks": [
+           {
+            "n": 9,
+            "x": 18.0,
+            "y": 62.9,
+            "say": "Click at the end of the `{` on the line under `private void frmRegister_Load`."
+           },
+           {
+            "n": 10,
+            "x": 19.1,
+            "y": 66.2,
+            "say": "Press Enter."
+           },
+           {
+            "n": 11,
+            "x": 18.2,
+            "y": 63.9,
+            "w": 42.8,
+            "h": 21.1,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "3-1.9",
+         "n": 9
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens inside frmRegister_Load.",
+         "id": "3-1.10",
+         "n": 10
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The yellow lines are inside frmRegister_Load. No line has a red underline.",
+         "id": "3-1.11",
+         "n": 11
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Type Avatar_Click, which puts a gold frame round the clicked picture",
+     "blocks": [
+      {
+       "p": "By the end of this screen, clicking any avatar picture gives it a gold frame and remembers the choice."
+      },
+      {
+       "p": "All 8 pictures run the same method when they are clicked. `sender` is the picture that was clicked, so one method works for every picture."
+      },
+      {
+       "p": "Each picture sits inside a panel, so the picture's `Parent` is its panel. Changing the panel's `BackColor`, its background colour, changes the frame round the picture."
+      },
+      {
+       "code": {
+        "id": "c05-avatar",
+        "kind": "type",
+        "title": "Avatar_Click",
+        "lang": "cs",
+        "text": "// Every avatar picture runs this: its frame turns gold\nprivate void Avatar_Click(object sender, EventArgs e)\n{\n    PictureBox clicked = (PictureBox)sender;\n    foreach (PictureBox pic in pictures)\n    {\n        pic.Parent.BackColor = Color.Transparent;   // no frame\n    }\n    clicked.Parent.BackColor = Color.FromArgb(242, 183, 5);\n    chosenAvatar = (string)clicked.Tag;\n    lblAvatarError.Text = \"\";\n}",
+        "partLines": [
+         [
+          2,
+          4,
+          "Which picture was clicked",
+          "`(PictureBox)sender` is a [[cast|6]]. It tells C# that `sender` is a picture, so `clicked` can use the picture's properties."
+         ],
+         [
+          5,
+          8,
+          "Take every frame away",
+          "The loop makes every panel see-through, so no picture has a gold frame."
+         ],
+         [
+          9,
+          12,
+          "Frame the clicked picture",
+          "The clicked picture's panel turns gold, made from red 242, green 183 and blue 5. `chosenAvatar` keeps the picture's file name from its Tag. The avatar message is emptied, because the player has now chosen."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          12
+         ]
+        ],
+        "typed": 7,
+        "wordMarks": [
+         [
+          7,
+          12,
+          18,
+          0
+         ],
+         [
+          4,
+          4,
+          14,
+          1
+         ],
+         [
+          7,
+          37,
+          48,
+          2
+         ],
+         [
+          7,
+          12,
+          18,
+          4
+         ],
+         [
+          10,
+          35,
+          38,
+          5
+         ],
+         [
+          4,
+          25,
+          37,
+          6
+         ],
+         [
+          9,
+          31,
+          45,
+          7
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmRegister_Load`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "img": "img/cap/c077.png",
+          "alt": "frmRegister.cs, with Avatar_Click typed under frmRegister_Load",
+          "w": 1102,
+          "h": 575,
+          "marks": [
+           {
+            "n": 1,
+            "x": 18.0,
+            "y": 58.9,
+            "say": "Click at the end of the `}` that closes `frmRegister_Load`."
+           },
+           {
+            "n": 2,
+            "x": 16.6,
+            "y": 64.5,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "x": 15.7,
+            "y": 62.6,
+            "w": 41.6,
+            "h": 34.7,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "3-2.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "3-2.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "Avatar_Click sits under frmRegister_Load. No line has a red underline.",
+         "id": "3-2.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "p": "Now connect all 8 pictures to Avatar_Click at once. Holding Ctrl while you click picks more than one control."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Shift and F7 together.",
+         "see": "The designer shows frmRegister.",
+         "img": {
+          "img": "img/cap/c078.png",
+          "alt": "frmRegister in the designer with all 8 pictures picked, and Avatar_Click beside Click",
+          "w": 1568,
+          "h": 521,
+          "marks": [
+           {
+            "n": 4,
+            "x": 11.6,
+            "y": 2.5,
+            "say": "Press Shift and F7 together."
+           },
+           {
+            "n": 5,
+            "x": 28.3,
+            "y": 35.5,
+            "say": "Click the Goat picture."
+           },
+           {
+            "n": 6,
+            "x": 35.5,
+            "y": 35.5,
+            "say": "Hold Ctrl and click each of the other 7 pictures, one at a time."
+           },
+           {
+            "n": 7,
+            "x": 86.0,
+            "y": 59.6,
+            "say": "Click the lightning bolt at the top of the Properties window."
+           },
+           {
+            "n": 8,
+            "x": 93.7,
+            "y": 78.4,
+            "say": "Click the box beside **Click**, then click the small arrow at the right end of the box."
+           },
+           {
+            "n": 9,
+            "x": 89.3,
+            "y": 76.9,
+            "w": 9.6,
+            "h": 3.1,
+            "say": "Click `Avatar_Click` in the list."
+           }
+          ]
+         },
+         "id": "3-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click the Goat picture.",
+         "see": "The Properties window shows picGoat at the top.",
+         "wrong": [
+          [
+           "The Properties window shows pnlGoat",
+           "You clicked the edge of the panel. Click the middle of the white square."
+          ]
+         ],
+         "id": "3-2.5",
+         "n": 5
+        },
+        {
+         "do": "Hold Ctrl and click each of the other 7 pictures, one at a time.",
+         "see": "All 8 pictures have small white squares at their corners. The top of the Properties window is empty, because more than one control is picked.",
+         "id": "3-2.6",
+         "n": 6
+        },
+        {
+         "do": "Click the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists the events.",
+         "id": "3-2.7",
+         "n": 7
+        },
+        {
+         "do": "Click the box beside **Click**, then click the small arrow at the right end of the box.",
+         "see": "A list drops down with the methods that can handle a click.",
+         "id": "3-2.8",
+         "n": 8
+        },
+        {
+         "do": "Click `Avatar_Click` in the list.",
+         "see": "The box beside Click shows `Avatar_Click`. All 8 pictures now run Avatar_Click when they are clicked.",
+         "id": "3-2.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Type the start of btnCreate_Click, which checks the username",
+     "blocks": [
+      {
+       "p": "By the end of this screen, **Create my player** checks the username and shows its message."
+      },
+      {
+       "p": "btnCreate_Click checks the 4 things one at a time. Each check has its own `try` and `catch` from chapter 4, so one mistake does not stop the other checks."
+      },
+      {
+       "p": "`allRight` starts true. Any check that fails sets it to false, so the code knows not to save the player."
+      },
+      {
+       "code": {
+        "id": "c05-create-user",
+        "kind": "type",
+        "title": "btnCreate_Click: the username",
+        "lang": "cs",
+        "text": "// Checks every box, shows each box's own message, then saves\nprivate void btnCreate_Click(object sender, EventArgs e)\n{\n    lblUsernameError.Text = \"\";\n    lblPasswordError.Text = \"\";\n    lblAgainError.Text = \"\";\n    lblAvatarError.Text = \"\";\n    bool allRight = true;\n    Player player = new Player();\n    try\n    {\n        player.Username = txtUsername.Text;   // rules 1, 2 and 3\n    }\n    catch (SummitException ex)\n    {\n        lblUsernameError.Text = ex.Message;\n        allRight = false;\n    }",
+        "partLines": [
+         [
+          2,
+          7,
+          "Empty the old messages",
+          "The 4 message labels are emptied first, so a message from the last click does not stay."
+         ],
+         [
+          8,
+          9,
+          "A new player",
+          "`player` is a new, empty Player object from chapter 4. The checks fill it in."
+         ],
+         [
+          10,
+          13,
+          "Try the username",
+          "Setting `Username` runs the username rules in the Player class."
+         ],
+         [
+          14,
+          18,
+          "Show the message",
+          "If a rule throws an exception, `catch` shows its message under the Username box. `ex.Message` is the exception's message. `allRight` becomes false."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          18
+         ]
+        ],
+        "typed": 12
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `Avatar_Click`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "img": "img/cap/c079.png",
+          "alt": "frmRegister.cs, with the start of btnCreate_Click typed under Avatar_Click",
+          "w": 1102,
+          "h": 606,
+          "marks": [
+           {
+            "n": 1,
+            "x": 18.0,
+            "y": 45.5,
+            "say": "Click at the end of the `}` that closes `Avatar_Click`."
+           },
+           {
+            "n": 2,
+            "x": 16.6,
+            "y": 50.7,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "x": 15.7,
+            "y": 48.9,
+            "w": 42.8,
+            "h": 48.7,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "3-3.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "3-3.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The start of btnCreate_Click sits under Avatar_Click. Visual Studio 2019 added the `}` that closes btnCreate_Click when you typed its `{`.",
+         "wrong": [
+          [
+           "btnCreate_Click has no `}` at the end",
+           "Press Enter after the last yellow line, then type `}`."
+          ]
+         ],
+         "id": "3-3.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Add the password and avatar checks to btnCreate_Click",
+     "blocks": [
+      {
+       "p": "By the end of this screen, **Create my player** checks the password, the password typed again and the avatar."
+      },
+      {
+       "p": "The other 3 checks have the same shape as the username check. So the copy below holds the whole of btnCreate_Click so far, with gaps. You replace the start you typed, then type the lines that are new."
+      },
+      {
+       "p": "The password typed again needs 2 `catch` blocks. When the two passwords are different, both boxes are emptied so the player types both again. A blank box only gets its message."
+      },
+      {
+       "p": "`PasswordMismatchException` is a narrower kind of `SummitException`, which catches every error of that sort. So its `catch` must come first. C# uses the first `catch` that fits."
+      },
+      {
+       "code": {
+        "id": "c05-create-checks",
+        "kind": "type",
+        "title": "btnCreate_Click: the password and avatar checks",
+        "lang": "cs",
+        "why": "The username check, and the `try` and `catch` lines round each check, are the same as the lines you typed on the last screen. So they come in the copy, and you type the lines that are new.",
+        "text": "// Checks every box, shows each box's own message, then saves\nprivate void btnCreate_Click(object sender, EventArgs e)\n{\n    lblUsernameError.Text = \"\";\n    lblPasswordError.Text = \"\";\n    lblAgainError.Text = \"\";\n    lblAvatarError.Text = \"\";\n    bool allRight = true;\n    Player player = new Player();\n    try\n    {\n        player.Username = txtUsername.Text;   // rules 1, 2 and 3\n    }\n    catch (SummitException ex)\n    {\n        lblUsernameError.Text = ex.Message;\n        allRight = false;\n    }\n    try\n    {\n        player.Password = txtPassword.Text;   // rules 5 to 8\n    }\n    catch (SummitException ex)\n    {\n        lblPasswordError.Text = ex.Message;\n        allRight = false;\n    }\n    try\n    {\n        Player.CheckPasswordsMatch(txtPassword.Text, txtAgain.Text);\n    }\n    catch (PasswordMismatchException ex)\n    {\n        lblAgainError.Text = ex.Message;      // rule 10\n        txtPassword.Text = \"\";\n        txtAgain.Text = \"\";\n        allRight = false;\n    }\n    catch (SummitException ex)\n    {\n        lblAgainError.Text = ex.Message;      // rule 9\n        allRight = false;\n    }\n    try\n    {\n        player.Avatar = chosenAvatar;         // rule 11\n    }\n    catch (SummitException ex)\n    {\n        lblAvatarError.Text = ex.Message;\n        allRight = false;\n    }",
+        "partLines": [
+         [
+          1,
+          18,
+          "The username, as before",
+          "This is the start of btnCreate_Click that you typed on the last screen."
+         ],
+         [
+          19,
+          25,
+          "Try the password",
+          "Setting `Password` runs the password rules in the Player class. A broken rule shows its message under the Password box."
+         ],
+         [
+          26,
+          31,
+          "Compare the two passwords",
+          "`CheckPasswordsMatch` from chapter 4 throws an exception if the second box is blank, or if the two passwords are different."
+         ],
+         [
+          32,
+          36,
+          "Different passwords",
+          "The message goes under the second box, and both password boxes are emptied."
+         ],
+         [
+          37,
+          41,
+          "A blank second box",
+          "Any other exception means the second box is blank. Its message goes under the second box."
+         ],
+         [
+          42,
+          52,
+          "The avatar",
+          "Setting `Avatar` throws an exception if `chosenAvatar` is still empty, because no picture was clicked. The message goes under the pictures."
+         ]
+        ],
+        "focusLines": [
+         [
+          21,
+          21
+         ],
+         [
+          25,
+          25
+         ],
+         [
+          30,
+          30
+         ],
+         [
+          32,
+          41
+         ]
+        ],
+        "typed": 10
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the start of the line `// Checks every box, shows each box's own message, then saves`.",
+         "see": "The flashing cursor is at the start of that line.",
+         "img": {
+          "img": "img/cap/c534.png",
+          "alt": "btnCreate_Click, with a box from its comment line down to the } under the username check",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 1,
+            "x": 9.1,
+            "y": 23.4,
+            "say": "Click at the start of the line `// Checks every box, shows each box's own message, then saves`."
+           },
+           {
+            "n": 2,
+            "x": 8.8,
+            "y": 22.2,
+            "w": 25.0,
+            "h": 35.3,
+            "say": "Hold Shift and click at the end of the `}` under the line `allRight = false;`."
+           }
+          ]
+         },
+         "id": "3-4.1",
+         "n": 1
+        },
+        {
+         "do": "Hold Shift and click at the end of the `}` under the line `allRight = false;`.",
+         "see": "Everything you typed on the last screen is blue, from the comment line down to that `}`. The last `}` of btnCreate_Click is not blue.",
+         "id": "3-4.2",
+         "n": 2
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c05-create-checks",
+         "id": "3-4.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The copy replaces the blue lines. It has 4 lines that start with `// YOU TYPE THIS PART`.",
+         "img": {
+          "img": "img/cap/c081.png",
+          "alt": "btnCreate_Click after the paste, with 4 lines that start with // YOU TYPE THIS PART",
+          "w": 1102,
+          "h": 606,
+          "marks": [
+           {
+            "n": 4,
+            "x": 15.7,
+            "y": 6.7,
+            "w": 42.8,
+            "h": 90.9,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 5,
+            "x": 21.7,
+            "y": 61.2,
+            "say": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, then type the first yellow line."
+           },
+           {
+            "n": 6,
+            "x": 21.7,
+            "y": 71.7,
+            "say": "Triple-click the next line that starts with `// YOU TYPE THIS PART`, then type the next yellow line."
+           },
+           {
+            "n": 7,
+            "x": 21.7,
+            "y": 85.1,
+            "say": "Triple-click the next line that starts with `// YOU TYPE THIS PART`, then type the next yellow line."
+           },
+           {
+            "n": 8,
+            "x": 19.1,
+            "y": 90.3,
+            "say": "Triple-click the last line that starts with `// YOU TYPE THIS PART`, then type the last group of yellow lines."
+           }
+          ]
+         },
+         "id": "3-4.4",
+         "n": 4
+        },
+        {
+         "do": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, then type the first yellow line.",
+         "see": "The line says `player.Password = txtPassword.Text;   // rules 5 to 8`.",
+         "wrong": [
+          [
+           "The old `// YOU TYPE THIS PART` line is still there after you type",
+           "Click the old `// YOU TYPE THIS PART` line, then press Home. Hold Shift and press End, so the whole line turns blue. Press Delete."
+          ]
+         ],
+         "id": "3-4.5",
+         "n": 5
+        },
+        {
+         "do": "Triple-click the next line that starts with `// YOU TYPE THIS PART`, then type the next yellow line.",
+         "see": "The line says `lblPasswordError.Text = ex.Message;`.",
+         "id": "3-4.6",
+         "n": 6
+        },
+        {
+         "do": "Triple-click the next line that starts with `// YOU TYPE THIS PART`, then type the next yellow line.",
+         "see": "The line says `Player.CheckPasswordsMatch(txtPassword.Text, txtAgain.Text);`.",
+         "id": "3-4.7",
+         "n": 7
+        },
+        {
+         "do": "Triple-click the last line that starts with `// YOU TYPE THIS PART`, then type the last group of yellow lines.",
+         "see": "The 2 `catch` blocks sit under the line `Player.CheckPasswordsMatch`. No line has a red underline.",
+         "id": "3-4.8",
+         "n": 8
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Finish btnCreate_Click, which saves the new player",
+     "blocks": [
+      {
+       "p": "By the end of this screen, **Create my player** adds a good player to `players.txt`."
+      },
+      {
+       "p": "If any check failed, `return` stops the method, so nothing is saved. Otherwise PlayerFile.Add from chapter 4 adds the player to `players.txt`."
+      },
+      {
+       "code": {
+        "id": "c05-create-save",
+        "kind": "type",
+        "title": "btnCreate_Click: save the player",
+        "lang": "cs",
+        "text": "if (!allRight) return;\ntry\n{\n    PlayerFile.Add(player);               // rule 4\n}\ncatch (PlayerExistsException ex)\n{\n    lblUsernameError.Text = ex.Message;\n    return;\n}\nNewUsername = player.Username;\nMessageBox.Show(\"Your player \" + player.Username + \" is ready. \"\n    + \"Log in to start your expedition.\", \"Player created\");\nthis.Close();",
+        "partLines": [
+         [
+          1,
+          1,
+          "Stop if anything is wrong",
+          "`!allRight` means that allRight is false. Every message is already showing, so the method stops."
+         ],
+         [
+          2,
+          10,
+          "Add the player",
+          "`PlayerFile.Add` throws PlayerExistsException if the username is taken already. Then the message goes under the Username box, and `return` stops the method."
+         ],
+         [
+          11,
+          14,
+          "Say so and close",
+          "`NewUsername` keeps the new username for the Log in window. A MessageBox says the player is ready. `this.Close()` closes the Register window."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          14
+         ]
+        ],
+        "typed": 10
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` under the line `lblAvatarError.Text = ex.Message;` and its `allRight = false;`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "img": "img/cap/c082.png",
+          "alt": "btnCreate_Click, with the save typed at the end",
+          "w": 1102,
+          "h": 509,
+          "marks": [
+           {
+            "n": 1,
+            "x": 20.6,
+            "y": 47.6,
+            "say": "Click at the end of the `}` under the line `lblAvatarError.Text = ex.Message;` and its `allRight = false;`."
+           },
+           {
+            "n": 2,
+            "x": 19.1,
+            "y": 51.0,
+            "say": "Press Enter."
+           },
+           {
+            "n": 3,
+            "x": 18.2,
+            "y": 48.8,
+            "w": 42.1,
+            "h": 45.2,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "3-5.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens, above the last `}` of btnCreate_Click.",
+         "id": "3-5.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "btnCreate_Click ends with `this.Close();` and one `}`.",
+         "id": "3-5.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "5"
+    },
+    {
+     "title": "Type btnBack_Click, then connect both buttons and build",
+     "blocks": [
+      {
+       "p": "By the end of this screen, both buttons run their methods, and your project builds with no errors."
+      },
+      {
+       "p": "**Back to log in** closes the window without saving anything. `NewUsername` stays empty."
+      },
+      {
+       "code": {
+        "id": "c05-back",
+        "kind": "type",
+        "title": "btnBack_Click",
+        "lang": "cs",
+        "text": "// Back to the log in form, with no new player\nprivate void btnBack_Click(object sender, EventArgs e)\n{\n    this.Close();\n}",
+        "partLines": [
+         [
+          2,
+          5,
+          "Close the window",
+          "`this.Close()` closes the Register window."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          5
+         ]
+        ],
+        "typed": 2
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `btnCreate_Click`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "img": "img/cap/c083.png",
+          "alt": "frmRegister.cs, with btnBack_Click typed under btnCreate_Click",
+          "w": 1102,
+          "h": 606,
+          "marks": [
+           {
+            "n": 1,
+            "x": 18.0,
+            "y": 79.6,
+            "say": "Click at the end of the `}` that closes `btnCreate_Click`."
+           },
+           {
+            "n": 2,
+            "x": 16.6,
+            "y": 85.1,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "x": 15.7,
+            "y": 83.2,
+            "w": 35.8,
+            "h": 14.3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "3-6.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "3-6.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "btnBack_Click is the last method in frmRegister.cs.",
+         "id": "3-6.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "p": "A typed method does nothing until it is connected to an event. Connect each button's Click event."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Shift and F7 together.",
+         "see": "The designer shows frmRegister.",
+         "img": {
+          "img": "img/cap/c084.png",
+          "alt": "The Properties window showing the events of btnCreate, with btnCreate_Click beside Click",
+          "w": 1568,
+          "h": 521,
+          "marks": [
+           {
+            "n": 4,
+            "x": 11.6,
+            "y": 2.5,
+            "say": "Press Shift and F7 together."
+           },
+           {
+            "n": 5,
+            "x": 10.7,
+            "y": 88.3,
+            "say": "Click **Create my player** on frmRegister."
+           },
+           {
+            "n": 6,
+            "x": 86.0,
+            "y": 59.6,
+            "say": "Click the lightning bolt at the top of the Properties window."
+           },
+           {
+            "n": 7,
+            "x": 93.7,
+            "y": 87.6,
+            "say": "Click the box beside **Click**, then click the small arrow at the right end of the box."
+           },
+           {
+            "n": 8,
+            "x": 89.3,
+            "y": 86.0,
+            "w": 9.6,
+            "h": 3.1,
+            "say": "Click `btnCreate_Click` in the list."
+           }
+          ]
+         },
+         "id": "3-6.4",
+         "n": 4
+        },
+        {
+         "do": "Click **Create my player** on frmRegister.",
+         "see": "The Properties window shows btnCreate at the top.",
+         "id": "3-6.5",
+         "n": 5
+        },
+        {
+         "do": "Click the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists the events of btnCreate.",
+         "id": "3-6.6",
+         "n": 6
+        },
+        {
+         "do": "Click the box beside **Click**, then click the small arrow at the right end of the box.",
+         "see": "A list drops down with the methods that can handle a click.",
+         "id": "3-6.7",
+         "n": 7
+        },
+        {
+         "do": "Click `btnCreate_Click` in the list.",
+         "see": "The box beside Click shows `btnCreate_Click`.",
+         "wrong": [
+          [
+           "Visual Studio 2019 made a new method called `btnCreate_Click_1`",
+           "You double-clicked the box. Click the arrow beside Click and pick `btnCreate_Click`. Then, in `frmRegister.cs`, delete the empty method `btnCreate_Click_1`, from its first line down to its `}`."
+          ]
+         ],
+         "id": "3-6.8",
+         "n": 8
+        }
+       ]
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Shift and F7 together.",
+         "see": "The designer shows frmRegister.",
+         "img": {
+          "img": "img/cap/c085.png",
+          "alt": "The Properties window showing the events of btnBack, with btnBack_Click beside Click",
+          "w": 1568,
+          "h": 521,
+          "marks": [
+           {
+            "n": 9,
+            "x": 11.6,
+            "y": 2.5,
+            "say": "Press Shift and F7 together."
+           },
+           {
+            "n": 10,
+            "x": 22.0,
+            "y": 88.2,
+            "say": "Click **Back to log in** on frmRegister."
+           },
+           {
+            "n": 11,
+            "x": 86.0,
+            "y": 59.6,
+            "say": "Click the lightning bolt at the top of the Properties window."
+           },
+           {
+            "n": 12,
+            "x": 93.0,
+            "y": 87.4,
+            "say": "Click the box beside **Click**, then click the small arrow at the right end of the box."
+           },
+           {
+            "n": 13,
+            "x": 89.3,
+            "y": 86.0,
+            "w": 9.6,
+            "h": 3.1,
+            "say": "Click `btnBack_Click` in the list."
+           }
+          ]
+         },
+         "id": "3-6.9",
+         "n": 9
+        },
+        {
+         "do": "Click **Back to log in** on frmRegister.",
+         "see": "The Properties window shows btnBack at the top.",
+         "id": "3-6.10",
+         "n": 10
+        },
+        {
+         "do": "Click the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists the events of btnBack.",
+         "id": "3-6.11",
+         "n": 11
+        },
+        {
+         "do": "Click the box beside **Click**, then click the small arrow at the right end of the box.",
+         "see": "A list drops down with the methods that can handle a click.",
+         "id": "3-6.12",
+         "n": 12
+        },
+        {
+         "do": "Click `btnBack_Click` in the list.",
+         "see": "The box beside Click shows `btnBack_Click`.",
+         "wrong": [
+          [
+           "Visual Studio 2019 made a new method called `btnBack_Click_1`",
+           "You double-clicked the box. Click the arrow beside Click and pick `btnBack_Click`. Then, in `frmRegister.cs`, delete the empty method `btnBack_Click_1`, from its first line down to its `}`."
+          ]
+         ],
+         "id": "3-6.13",
+         "n": 13
+        }
+       ]
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "img": "img/cap/c010.png",
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 610,
+          "h": 223,
+          "marks": [
+           {
+            "n": 14,
+            "x": 11.5,
+            "y": 94.9,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows errors",
+           "Double-click the first error in the Error List. Visual Studio 2019 jumps to the line with the error. Check that line letter by letter against the code in this chapter."
+          ]
+         ],
+         "id": "3-6.14",
+         "n": 14
+        }
+       ]
+      }
+     ],
+     "id": "6"
+    }
+   ],
+   "id": "3"
+  },
+  {
+   "title": "Test the Register window, then make one change of your own",
+   "screens": [
+    {
+     "title": "Open the Register window when the program starts",
+     "blocks": [
+      {
+       "p": "By the end of this screen, pressing F5 opens the Register window, so that you can test it."
+      },
+      {
+       "p": "The program starts on the Log in window. Chapter 6 adds the link from the Log in window to Register. Until then, you make the program start on Register for a while."
+      },
+      {
+       "p": "The line that picks the first window is in `Program.cs`. You change one word in it."
+      },
+      {
+       "code": {
+        "id": "c05-program",
+        "kind": "read",
+        "title": "Program.cs: the first window, for now",
+        "lang": "cs",
+        "text": "Application.Run(new frmRegister());",
+        "partLines": [
+         [
+          1,
+          1,
+          "The first window",
+          "`Application.Run` opens the first window and keeps the program running until that window closes."
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `Program.cs` in Solution Explorer.",
+         "see": "`Program.cs` opens in the code editor.",
+         "img": {
+          "img": "img/cap/c086.png",
+          "alt": "Program.cs, with frmLogin picked in the Application.Run line",
+          "w": 1568,
+          "h": 370,
+          "marks": [
+           {
+            "n": 1,
+            "x": 86.6,
+            "y": 56.2,
+            "say": "Double-click `Program.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "x": 19.8,
+            "y": 77.3,
+            "say": "Double-click the word `frmLogin` in the line `Application.Run(new frmLogin());`"
+           },
+           {
+            "n": 3,
+            "x": 18.2,
+            "y": 75.3,
+            "w": 3.2,
+            "h": 4.1,
+            "say": "Type `frmRegister`"
+           }
+          ]
+         },
+         "id": "4-1.1",
+         "n": 1
+        },
+        {
+         "do": "Double-click the word `frmLogin` in the line `Application.Run(new frmLogin());`",
+         "see": "The word `frmLogin` turns blue.",
+         "id": "4-1.2",
+         "n": 2
+        },
+        {
+         "do": "Type `frmRegister`",
+         "see": "The line says `Application.Run(new frmRegister());`",
+         "id": "4-1.3",
+         "n": 3
+        },
+        {
+         "do": "Press F5.",
+         "see": "The Register window opens, with the 8 avatar pictures.",
+         "img": {
+          "img": "img/cap/c087.png",
+          "alt": "The Register window running, with all 8 avatar pictures",
+          "w": 1002,
+          "h": 692,
+          "marks": [
+           {
+            "n": 4,
+            "x": 10.3,
+            "y": 2.1,
+            "say": "Press F5."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The 8 squares are empty",
+           "Check that the Avatars folder inside bin\\Debug\\Images holds the 8 avatar files. Then check each picture's Tag in the Properties window, letter by letter."
+          ]
+         ],
+         "id": "4-1.4",
+         "n": 4
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Your turn: make the frame round the chosen avatar green",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have changed the colour of the frame, and tested it, on your own."
+      },
+      {
+       "p": "The frame round the chosen avatar is gold. Change it to the moss green that Summit Ready uses for a good answer: red 62, green 142 and blue 65."
+      },
+      {
+       "code": {
+        "id": "turn-frame",
+        "kind": "turn",
+        "title": "Make the frame green",
+        "lang": "cs",
+        "text": "clicked.Parent.BackColor = Color.FromArgb(62, 142, 65);",
+        "task": [
+         "Open `frmRegister.cs`. Then find the line in `Avatar_Click` that turns the clicked picture's panel gold.",
+         "Change the 3 numbers to 62, 142 and 65."
+        ],
+        "test": "Press F5, then click the Fox picture, then click the Owl picture.",
+        "expect": "Only the Owl picture has a frame, and the frame is green.",
+        "hint": "The 3 numbers are inside `Color.FromArgb( )`, in the order red, green, blue."
+       }
+      },
+      {
+       "p": "When the test passes, change the 3 numbers back to 242, 183 and 5, because the frame is meant to be gold."
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Check that the Register window works",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that every part of the Register window works, including the players it must refuse."
+      },
+      {
+       "p": "Run each test with F5. Tick each test when it passes. The tests marked as players to refuse must not create a player, and that counts as a pass."
+      },
+      {
+       "check": [
+        {
+         "what": "Click Create my player with all 3 boxes empty and no avatar chosen.",
+         "expect": "control",
+         "how": "A red message shows under each of the 3 boxes and under the pictures. No message box opens.",
+         "fix": "Check that each of the 4 checks in btnCreate_Click fills in its own red message, and that `if (!allRight) return;` comes before `PlayerFile.Add`.",
+         "id": "4-3.t1"
+        },
+        {
+         "what": "Type `ab` as the username, fill the other boxes well, choose an avatar, then click Create my player.",
+         "expect": "control",
+         "how": "The message under Username says **Your username has 2 characters. It needs 3 to 12.** No message box opens.",
+         "fix": "Compare your username check with the yellow lines on the earlier screen where you typed the start of `btnCreate_Click`.",
+         "id": "4-3.t2"
+        },
+        {
+         "what": "Type `summitSeeker` as the username, fill the other boxes well, choose an avatar, then click Create my player.",
+         "expect": "control",
+         "how": "The message under Username says **The username summitSeeker is already taken. Try another one.**",
+         "fix": "Check the `catch (PlayerExistsException ex)` lines in btnCreate_Click.",
+         "id": "4-3.t3"
+        },
+        {
+         "what": "Type two different passwords, then click Create my player.",
+         "expect": "control",
+         "how": "The message under the second box says **The two passwords are different. Type them both again.** Both password boxes are empty.",
+         "fix": "Check that `catch (PasswordMismatchException ex)` comes before `catch (SummitException ex)`, and that it empties both boxes.",
+         "id": "4-3.t4"
+        },
+        {
+         "what": "Click the Goat picture, then click the Fox picture.",
+         "expect": "allowed",
+         "how": "Only the Fox picture has a gold frame.",
+         "must": "Must happen",
+         "fix": "Check the `foreach` loop in Avatar_Click. Then check that all 8 pictures show `Avatar_Click` beside Click in the events list.",
+         "id": "4-3.t5"
+        },
+        {
+         "what": "Fill in every box well, choose an avatar, then click Create my player.",
+         "expect": "allowed",
+         "how": "A message box says **Your player** with your username **is ready. Log in to start your expedition.** After OK, the window closes.",
+         "must": "Must happen",
+         "fix": "Check the last part of btnCreate_Click against its yellow lines.",
+         "id": "4-3.t6"
+        },
+        {
+         "what": "In File Explorer, open `players.txt`. It is in the Data folder inside your project's bin\\Debug folder.",
+         "expect": "allowed",
+         "how": "The last line holds your new username, password, avatar file and today's date, with a bar `|` between them.",
+         "must": "Must happen",
+         "fix": "Check PlayerFile.Add from chapter 4.",
+         "id": "4-3.t7"
+        }
+       ]
+      },
+      {
+       "box": {
+        "title": "Evidence to keep",
+        "blocks": [
+         {
+          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
+         },
+         {
+          "p": "Paste each screenshot into your testing document, under the test it shows."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Make the program start on the Log in window again",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the program starts on the Log in window again."
+      },
+      {
+       "p": "Chapter 6 opens the Register window from the Log in window. So the first window goes back to frmLogin now."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **Program.cs** tab at the top of the editor.",
+         "see": "`Program.cs` shows in the code editor.",
+         "img": {
+          "img": "img/cap/c088.png",
+          "alt": "Program.cs, with frmLogin back in the Application.Run line",
+          "w": 1568,
+          "h": 370,
+          "marks": [
+           {
+            "n": 1,
+            "x": 3.2,
+            "y": 3.6,
+            "say": "Click the **Program.cs** tab at the top of the editor."
+           },
+           {
+            "n": 2,
+            "x": 19.8,
+            "y": 77.3,
+            "say": "Double-click the word `frmRegister` in the line `Application.Run(new frmRegister());`"
+           },
+           {
+            "n": 3,
+            "x": 18.2,
+            "y": 75.3,
+            "w": 3.2,
+            "h": 4.1,
+            "say": "Type `frmLogin`"
+           },
+           {
+            "n": 4,
+            "x": 1.8,
+            "y": 1.4,
+            "w": 5.4,
+            "h": 4.4,
+            "say": "Press Ctrl and S together."
+           }
+          ]
+         },
+         "id": "4-4.1",
+         "n": 1
+        },
+        {
+         "do": "Double-click the word `frmRegister` in the line `Application.Run(new frmRegister());`",
+         "see": "The word `frmRegister` turns blue.",
+         "id": "4-4.2",
+         "n": 2
+        },
+        {
+         "do": "Type `frmLogin`",
+         "see": "The line says `Application.Run(new frmLogin());`",
+         "id": "4-4.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `Program.cs` on the tab at the top of the editor disappears.",
+         "id": "4-4.4",
+         "n": 4
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    }
+   ],
+   "id": "4"
+  }
+ ],
+ "glossary": [
+  [
+   "Parent",
+   "The control that another control sits on. Each avatar picture has its panel as its Parent."
+  ],
+  [
+   "PictureBox",
+   "A control that shows a picture. Each avatar is a PictureBox."
+  ],
+  [
+   "Transparent",
+   "`Color.Transparent` lets whatever is behind a control show through it."
+  ],
+  [
+   "avatar",
+   "The picture a player chooses to stand for them. Summit Ready has 8 animal avatars."
+  ],
+  [
+   "panel",
+   "A control that holds other controls. Each avatar picture sits inside its own panel."
+  ],
+  [
+   "Tag",
+   "A spare property on every control, for any value you want to keep with it. Each avatar picture keeps its file name in its Tag."
+  ],
+  [
+   "cast",
+   "A type in brackets in front of a value tells C# what the value really is. `(PictureBox)sender` tells C# that `sender` is a picture."
+  ],
+  [
+   "colour from red, green and blue",
+   "`Color.FromArgb(242, 183, 5)` mixes a colour from red, green and blue. Each number is from 0 to 255."
+  ],
+  [
+   "lightning bolt",
+   "The button at the top of the Properties window that shows a control's events in place of its properties."
+  ],
+  [
+   "Load",
+   "Load is what happens a moment before a form's window first appears. Code you put in it runs once."
+  ]
+ ]
+}

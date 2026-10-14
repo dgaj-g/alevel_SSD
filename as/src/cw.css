@@ -423,7 +423,8 @@ details.cw-box>div{margin-top:8px}
 /* Phone width: one property to a row, so each value stays whole */
 @media (max-width:600px){
   .cw-controls .fp-props ul{grid-template-columns:minmax(0,1fr)}
-  .cw-controls .fp-props code{overflow-wrap:normal;text-align:right}
+  .cw-controls .fp-props li>span{flex:none}
+  .cw-controls .fp-props code{overflow-wrap:anywhere;text-align:right;min-width:0}
 }
 /* Phone width: each control in the table becomes its own card, each part under its own label */
 @media (max-width:600px){

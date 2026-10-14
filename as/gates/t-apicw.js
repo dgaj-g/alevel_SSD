@@ -36,7 +36,7 @@ const seen = async () => ((await post('/api/apiStaff', { cls: CLS, op: 'coursewo
   await cw({ op: 'download', file: f }); await cw({ op: 'download', file: f });
   ok('T5', 'download counts D[file]', (await W()).D[f] === 2, JSON.stringify((await W()).D));
   const len = (await raw()).length;
-  const bad = [await cw({ op: 'open', ch: '21' }), await cw({ op: 'open', ch: '13' }), await cw({ op: 'open', ch: 'xx' }), await cw({ op: 'tick', ch: '12', id: '99.99.99', on: true }),
+  const bad = [await cw({ op: 'open', ch: '21' }), await cw({ op: 'open', ch: '22' }), await cw({ op: 'open', ch: 'xx' }), await cw({ op: 'tick', ch: '12', id: '99.99.99', on: true }),
     await cw({ op: 'tick', ch: '12', id: 'x'.repeat(20000), on: true }), await cw({ op: 'download', file: 'Code.gs' }), await cw({ op: 'screen', ch: '12', key: 'y'.repeat(5000) })];
   ok('T6', 'unknown or unbuilt chapter, bad step, oversize payload, unknown file refused with bad-key', bad.every((r) => r.ok === false && r.error === 'bad-key'), bad.map((r) => r.error).join(','));
   ok('T6', 'stored value length unchanged after the refusals', (await raw()).length === len, len + ' → ' + (await raw()).length);

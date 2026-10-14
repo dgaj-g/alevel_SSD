@@ -1,0 +1,4821 @@
+{
+ "id": "15",
+ "n": 15,
+ "of": 20,
+ "title": "Build Whiteout, a hidden word with the cloud coming down",
+ "kind": "a game chapter: build one game from each pair, and this pair is chapters 13 and 15",
+ "one": "You build Whiteout in your own project, exactly as it is in Summit Ready, and test it. Then you change it into a hidden-word game on your own topic.",
+ "prev": {
+  "id": "14",
+  "n": 14,
+  "title": "Read the Sky"
+ },
+ "next": {
+  "id": "16",
+  "n": 16,
+  "title": "Grid Ref Rescue"
+ },
+ "stages": [
+  {
+   "title": "See what Whiteout does and how a round plays",
+   "screens": [
+    {
+     "title": "Look at a round of Whiteout, from the first word to the score",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know how a round of Whiteout plays and how it scores."
+      },
+      {
+       "p": "Whiteout is a hidden-word game. It is on Slieve Bearnagh, the fifth place on the Summit Ready map."
+      },
+      {
+       "p": "You build one game from each pair of game chapters. Whiteout is paired with Leave No Trace, so you build one of those two."
+      },
+      {
+       "p": "First you build Whiteout exactly as it is in Summit Ready. Then, in stage 5, you change it into a hidden-word game on your own topic."
+      },
+      {
+       "p": "A round has 4 words. Each word starts as a row of lines, one line for each letter, with a clue above it."
+      },
+      {
+       "p": "You guess one letter at a time, by clicking a letter button or typing the letter on the keyboard. A right letter shows in every place it comes in the word."
+      },
+      {
+       "screenshot": {
+        "img": "img/cap/se70dfcbb.png",
+        "alt": "Whiteout part-way through a word. The mountain photo is on the left with some cloud over its top. The clue, the word with some letters found, and the wrong-letter count are on the right. The 26 letter buttons are along the bottom, with the tried letters grey",
+        "w": 818,
+        "h": 565,
+        "marks": [],
+        "cap": "Part-way through a word. Two wrong letters have brought the cloud down over the top of the mountain."
+       }
+      },
+      {
+       "p": "A wrong letter brings the cloud down over the mountain photo, one step at a time. Six wrong letters and the cloud hides the whole mountain. That is a whiteout, and the word shows in red."
+      },
+      {
+       "p": "A word is worth 25 points, less 4 points for each wrong letter, but never less than 5 points. A whiteout scores 0. So the best score for a round is 100 points."
+      },
+      {
+       "screenshot": {
+        "img": "img/cap/s22fb18c8.png",
+        "alt": "Whiteout after a whiteout, with the cloud covering the whole photo and the word shown in red",
+        "w": 818,
+        "h": 565,
+        "marks": [],
+        "cap": "A whiteout. The word shows in red, and it scores 0."
+       }
+      },
+      {
+       "p": "A letter you have tried turns grey and cannot be clicked again. If you type a letter you have already tried, a message says so, and it costs nothing."
+      },
+      {
+       "p": "After the 4th word, the button says **See my score**. It opens the Round over box, and the flag on Slieve Bearnagh gets a tick on the map."
+      },
+      {
+       "screenshot": {
+        "img": "img/cap/scd3e4876.png",
+        "alt": "The Round over box at the end of a round of Whiteout",
+        "w": 818,
+        "h": 565,
+        "marks": [],
+        "cap": "The Round over box at the end of a round."
+       }
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Check that your project is ready, and see the words this chapter uses",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know that your project has everything Whiteout needs."
+      },
+      {
+       "p": "Whiteout uses things you made in earlier chapters. Check that each one is in your project before you start."
+      },
+      {
+       "need": [
+        "Your Summit Ready project, with the practice game opening from the map (chapter 9).",
+        "The Files class that finds files, the Sound class that plays sounds and the Mix class that shuffles numbers (chapter 2).",
+        "The Data, Images and Sounds folders in your project's [[bin\\Debug|0]] folder, from `summit-ready-files.zip` (chapter 2). They already hold every file that Whiteout needs.",
+        "The LetterAlreadyTriedException class in `Exceptions.cs` (chapter 4).",
+        "The line `// each game chapter adds its own case below this line` in `frmMap.cs` (chapter 8).",
+        "File name extensions turned on in File Explorer, so `words.txt` shows as `words.txt` and not as `words` (chapter 2).",
+        "About 2 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
+       ]
+      },
+      {
+       "words": [
+        [
+         "bin\\Debug",
+         "The folder inside your project where Visual Studio 2019 puts the program it builds. Summit Ready reads its data, pictures and sounds from there.",
+         "1-2",
+         false
+        ],
+        [
+         "zip file",
+         "One file with other files and folders packed inside it.",
+         "2-1",
+         false
+        ],
+        [
+         "property",
+         "A named value that an object carries, such as `Clue` on a WordClue. `{ get; set; }` lets other code read the value and change it.",
+         "2-2",
+         true
+        ],
+        [
+         "constructor",
+         "A method with the same name as its class. It runs once, when code makes a new object with `new`.",
+         "2-2",
+         true
+        ],
+        [
+         "static",
+         "A method marked `static` belongs to the class itself. You call it on the class name, as in `WordClue.LoadAll()`.",
+         "2-2",
+         true
+        ],
+        [
+         "List",
+         "A list that grows as you add to it. `List<WordClue>` is a list that holds WordClue objects.",
+         "2-2",
+         true
+        ],
+        [
+         "continue",
+         "Inside a loop, `continue` skips the rest of this turn of the loop. The loop goes straight on to its next turn.",
+         "2-2",
+         true
+        ],
+        [
+         "not equal",
+         "`!=` means is not equal to. `parts.Length != 2` is true when a line does not have exactly 2 parts.",
+         "2-2",
+         true
+        ],
+        [
+         "char",
+         "One letter, digit or other character. A `char` is written in single quotes, such as `'A'`.",
+         "4-4",
+         true
+        ],
+        [
+         "array",
+         "A row of values of the same type, kept together under one name and numbered from 0. `letters[0]` is the A button, and `letters[25]` is the Z button.",
+         "4-4",
+         true
+        ],
+        [
+         "cast",
+         "A type in brackets in front of a value turns the value into that type. `(char)` turns a number into a letter, and `(Button)` treats `sender` as a button.",
+         "4-6",
+         true
+        ],
+        [
+         "lightning bolt",
+         "The button at the top of the Properties window that shows a control's events in place of its properties.",
+         "3-1",
+         false
+        ],
+        [
+         "field",
+         "A variable written at the top of the class, outside every method. Every method in the form can use it, and it keeps its value until the window closes.",
+         "4-4",
+         false
+        ],
+        [
+         "panel",
+         "A control that holds other controls, or covers part of the window. `pnlFog` is the cloud that comes down over the mountain.",
+         "4-5",
+         true
+        ],
+        [
+         "PictureBox",
+         "A control that shows a picture. `picPeak` shows the photo of the mountain.",
+         "4-5",
+         true
+        ],
+        [
+         "FlowLayoutPanel",
+         "A panel that lines up the controls inside it in rows, one after another. `flpLetters` holds the 26 letter buttons.",
+         "4-6",
+         true
+        ],
+        [
+         "SetFlowBreak",
+         "Tells a FlowLayoutPanel to start a new row after one control.",
+         "4-6",
+         true
+        ],
+        [
+         "Controls.Add",
+         "Puts a control made in code onto a form or a panel, so it shows.",
+         "4-6",
+         true
+        ],
+        [
+         "connect with +=",
+         "`b.Click += Letter_Click;` connects the button's Click event to Letter_Click in code. It does the same job as picking the method in the Properties window.",
+         "4-6",
+         true
+        ],
+        [
+         "event",
+         "Something that happens to a control, such as a click on a button, or a key typed on the keyboard.",
+         "4-2",
+         false
+        ],
+        [
+         "handler",
+         "The method that runs when an event happens. `Letter_Click` is the handler for a click on any of the 26 letter buttons.",
+         "4-6",
+         true
+        ],
+        [
+         "sender",
+         "Every handler is given `sender`: the control that the event happened to, such as the letter button that was clicked.",
+         "4-1",
+         true
+        ],
+        [
+         "KeyPreview",
+         "A form property. When it is True, the form hears every key typed, even when a button in the form is the one selected.",
+         "3-1",
+         false
+        ],
+        [
+         "KeyPress",
+         "The event that happens when a key that makes a character is typed. `frmWhiteout_KeyPress` is its handler.",
+         "4-8",
+         true
+        ],
+        [
+         "Handled",
+         "`e.Handled = true;` tells Windows that the key has been dealt with, so no other control acts on it.",
+         "4-8",
+         true
+        ],
+        [
+         "ToUpper",
+         "Gives a copy in capital letters. `char.ToUpper('e')` gives `'E'`.",
+         "4-7",
+         true
+        ],
+        [
+         "or",
+         "`||` means or. The `if` is true when any one of its parts is true.",
+         "4-8",
+         true
+        ],
+        [
+         "exception",
+         "An error that stops your code on the spot. The code then jumps to the nearest `catch` that handles that kind of error.",
+         "4-8",
+         false
+        ],
+        [
+         "throw",
+         "`throw` starts an exception, which stops the method at once.",
+         "4-9",
+         true
+        ],
+        [
+         "try and catch",
+         "Code inside `try` runs as normal. If it throws an exception, the code inside `catch` runs in place of a crash.",
+         "4-8",
+         true
+        ],
+        [
+         "IndexOf",
+         "Finds a letter in some text, and gives its place, counting from 0. It gives -1 when the letter is not there.",
+         "4-9",
+         true
+        ],
+        [
+         "Enabled",
+         "When a control's Enabled is false, it cannot be clicked.",
+         "4-7",
+         true
+        ],
+        [
+         "Height",
+         "How tall a control is, in pixels. Whiteout makes the cloud taller with each wrong letter.",
+         "4-7",
+         true
+        ],
+        [
+         "new string",
+         "`new string(found)` joins an array of chars into one piece of text.",
+         "4-9",
+         true
+        ],
+        [
+         "count up with ++",
+         "`++` adds 1 to a whole number. `wrong++` means wrong becomes one more than it was.",
+         "4-1",
+         true
+        ],
+        [
+         "colour from red, green and blue",
+         "`Color.FromArgb(62, 142, 65)` mixes a colour from red, green and blue. Each number is from 0 to 255.",
+         "4-6",
+         true
+        ],
+        [
+         "Cursor",
+         "The mouse pointer's shape over a control. `Cursors.Hand` is a pointing hand.",
+         "4-6",
+         true
+        ],
+        [
+         "Focus",
+         "`btnNext.Focus()` makes btnNext the control that the Enter key presses.",
+         "4-11",
+         true
+        ],
+        [
+         "AddRange",
+         "Adds every item of one list to the end of another list in one go.",
+         "4-11",
+         true
+        ],
+        [
+         "red underline",
+         "The wavy red line Visual Studio 2019 draws under code it does not understand yet. Often it means a method you have not written yet.",
+         "2-2",
+         false
+        ]
+       ],
+       "intro": "You do not need to learn these words now. Where you first meet each one in the chapter, it has a dotted line under it. Hover over it or tap it to see what it means."
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "1"
+  },
+  {
+   "title": "Look at the list of words, and add the WordClue class that reads it",
+   "screens": [
+    {
+     "title": "Read words.txt, the list of the 14 words and their clues",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know what each line of `words.txt` holds."
+      },
+      {
+       "p": "Whiteout gets its words from a text file, `words.txt`. The file is already in your bin\\Debug\\Data folder, because `summit-ready-files.zip` put it there in chapter 2."
+      },
+      {
+       "p": "The file has 14 words, and each round picks 4 of them in a random order. So rounds are usually different."
+      },
+      {
+       "p": "You do not type `words.txt`. You read it here, so that the code in stage 4 makes sense."
+      },
+      {
+       "code": {
+        "id": "c15-words-txt",
+        "kind": "read",
+        "title": "words.txt: the 14 words, one on each line",
+        "lang": "txt",
+        "text": "CAIRN|A pile of stones that marks a path or a summit.\nCOMPASS|It points north and helps you follow a bearing.\nGAITERS|They cover your lower legs and keep mud and water out of your boots.\nBEARING|The direction you walk in, measured in degrees with a compass.\nCONTOUR|A line on a map joining places of the same height.\nSUMMIT|The highest point of a hill or mountain.\nWHISTLE|Blow it six times if you need help.\nSTILE|Steps that let you climb over a wall or a fence.\nTORCH|It lights your way if you are still walking after dark.\nRIDGE|A long, narrow strip of high ground.\nGULLY|A steep, narrow channel cut into the side of a mountain.\nSADDLE|The low dip between two summits.\nBOTHY|A small, simple shelter in the hills that anyone can use.\nLAYERS|Several thin pieces of clothing instead of one thick one.",
+        "partLines": [
+         [
+          1,
+          1,
+          "The first word",
+          "Each line is one word and its clue, in 2 parts with a bar `|` between them. Part 1, `CAIRN`, is the word, in capital letters. Part 2 is the clue, which shows above the word."
+         ],
+         [
+          2,
+          14,
+          "The other 13 words",
+          "The other 13 lines have the same 2 parts, in the same order."
+         ]
+        ]
+       }
+      },
+      {
+       "p": "To type a bar `|`, hold Shift and press the key to the left of Z."
+      },
+      {
+       "box": {
+        "title": "If a file is missing or broken",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "Whiteout never crashes because a file is missing. This is what you see instead."
+         },
+         {
+          "p": "If `words.txt` is missing, or has fewer than 4 good lines, no word appears. The clue says **Whiteout needs 4 words in Data\\words.txt, each written as WORD|clue.**"
+         },
+         {
+          "p": "If a line of `words.txt` does not have exactly 2 parts, Whiteout skips that line."
+         },
+         {
+          "p": "If the mountain photo is missing, the photo box is empty. If the cloud picture is missing, the cloud is plain grey."
+         },
+         {
+          "p": "If a sound is missing, that moment is silent, and the game carries on."
+         },
+         {
+          "p": "To put a missing file back, you download the [[zip file|1]] again and paste its folders into bin\\Debug. When Windows asks about the files you already have, you click **Skip these files**."
+         },
+         {
+          "p": "Skipping keeps every file you already have, including any file you changed. Only the missing files are copied in."
+         },
+         {
+          "steps": [
+           {
+            "do": "Click the download button below.",
+            "see": "Your browser shows that `summit-ready-files.zip` has downloaded.",
+            "download": {
+             "file": "summit-ready-files.zip",
+             "label": "Download summit-ready-files.zip",
+             "size": "7.8 MB"
+            },
+            "id": "2-1.1",
+            "n": 1
+           },
+           {
+            "do": "Press the Windows key and the E key together.",
+            "see": "File Explorer opens.",
+            "img": {
+             "img": "img/cap/c012.png",
+             "alt": "File Explorer open on Downloads, with the menu that opens on summit-ready-files.zip",
+             "w": 818,
+             "h": 565,
+             "marks": [
+              {
+               "n": 2,
+               "x": 0.2,
+               "y": 0.4,
+               "w": 78.0,
+               "h": 10.8,
+               "say": "Press the Windows key and the E key together."
+              },
+              {
+               "n": 3,
+               "x": 2.9,
+               "y": 21.2,
+               "w": 12.5,
+               "h": 3.2,
+               "say": "Click **Downloads** in the list down the left side of File Explorer."
+              },
+              {
+               "n": 4,
+               "x": 17.5,
+               "y": 20.5,
+               "w": 59.5,
+               "h": 3.0,
+               "say": "Right-click `summit-ready-files.zip`."
+              },
+              {
+               "n": 5,
+               "x": 36.2,
+               "y": 36.6,
+               "w": 26.8,
+               "h": 3.0,
+               "say": "Click **Extract All...** in the menu."
+              }
+             ]
+            },
+            "id": "2-1.2",
+            "n": 2
+           },
+           {
+            "do": "Click **Downloads** in the list down the left side of File Explorer.",
+            "see": "`summit-ready-files.zip` is in the list of files.",
+            "wrong": [
+             [
+              "There is also a file called `summit-ready-files (1).zip`",
+              "Your browser added (1) because you downloaded the zip file before, in chapter 2. Use the file that ends in (1), because it is the newest one."
+             ]
+            ],
+            "id": "2-1.3",
+            "n": 3
+           },
+           {
+            "do": "Right-click `summit-ready-files.zip`.",
+            "see": "A menu opens.",
+            "id": "2-1.4",
+            "n": 4
+           },
+           {
+            "do": "Click **Extract All...** in the menu.",
+            "see": "A window called Extract Compressed (Zipped) Folders opens.",
+            "wrong": [
+             [
+              "The menu has no **Extract All...**",
+              "Press Escape to close the menu. Double-click `summit-ready-files.zip`. Then click **Extract all** in the bar along the top of File Explorer."
+             ]
+            ],
+            "id": "2-1.5",
+            "n": 5
+           },
+           {
+            "do": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window.",
+            "see": "A new File Explorer window opens. It shows 3 folders, Data, Images and Sounds, and one file, `credits.txt`.",
+            "img": {
+             "img": "img/cap/c013.png",
+             "alt": "The Extract Compressed (Zipped) Folders window, with its Extract button",
+             "w": 622,
+             "h": 470,
+             "marks": [
+              {
+               "n": 6,
+               "x": 68.5,
+               "y": 81.3,
+               "w": 10.0,
+               "h": 4.7,
+               "say": "Click **Extract** at the bottom of the Extract Compressed (Zipped) Folders window."
+              }
+             ]
+            },
+            "id": "2-1.6",
+            "n": 6
+           },
+           {
+            "do": "Press Ctrl and A together.",
+            "see": "The 3 folders and `credits.txt` turn blue.",
+            "img": {
+             "img": "img/cap/c014.png",
+             "alt": "The unpacked folder, with Data, Images, Sounds and credits.txt highlighted",
+             "w": 920,
+             "h": 486,
+             "marks": [
+              {
+               "n": 7,
+               "x": 15.7,
+               "y": 36.0,
+               "w": 53.0,
+               "h": 14.0,
+               "say": "Press Ctrl and A together."
+              },
+              {
+               "n": 8,
+               "x": 6.7,
+               "y": 10.3,
+               "w": 3.5,
+               "h": 10.7,
+               "say": "Press Ctrl and C together."
+              }
+             ]
+            },
+            "id": "2-1.7",
+            "n": 7
+           },
+           {
+            "do": "Press Ctrl and C together.",
+            "see": "Nothing changes on the screen. That is normal: Windows has copied the 3 folders and `credits.txt`.",
+            "id": "2-1.8",
+            "n": 8
+           },
+           {
+            "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
+            "see": "Visual Studio 2019 comes to the front, with your project open.",
+            "img": {
+             "img": "img/cap/c015.png",
+             "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
+             "w": 960,
+             "h": 41,
+             "marks": [
+              {
+               "n": 9,
+               "x": 63.9,
+               "y": 50.0,
+               "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
+              }
+             ]
+            },
+            "id": "2-1.9",
+            "n": 9
+           },
+           {
+            "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+            "see": "A long menu opens.",
+            "img": {
+             "img": "img/cap/c016.png",
+             "alt": "Solution Explorer, with the menu that opens on the project line",
+             "w": 635,
+             "h": 616,
+             "marks": [
+              {
+               "n": 10,
+               "x": 59.8,
+               "y": 5.4,
+               "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+              },
+              {
+               "n": 11,
+               "x": 18.8,
+               "y": 89.1,
+               "say": "Click **Open Folder in File Explorer**, near the bottom of the menu."
+              }
+             ]
+            },
+            "id": "2-1.10",
+            "n": 10
+           },
+           {
+            "do": "Click **Open Folder in File Explorer**, near the bottom of the menu.",
+            "see": "File Explorer opens on your project's folder. You can see the bin and obj folders and your .cs files.",
+            "id": "2-1.11",
+            "n": 11
+           },
+           {
+            "do": "Double-click the **bin** folder.",
+            "see": "The bin folder holds a folder called Debug.",
+            "img": {
+             "img": "img/cap/c017.png",
+             "alt": "File Explorer on the project folder, with the bin folder",
+             "w": 960,
+             "h": 279,
+             "marks": [
+              {
+               "n": 12,
+               "x": 21.3,
+               "y": 27.7,
+               "say": "Double-click the **bin** folder."
+              }
+             ]
+            },
+            "id": "2-1.12",
+            "n": 12
+           },
+           {
+            "do": "Double-click the **Debug** folder.",
+            "see": "The Debug folder holds the Data, Images and Sounds folders, and your program, whose name ends in .exe.",
+            "img": {
+             "img": "img/cap/c018.png",
+             "alt": "File Explorer on the bin folder, with the Debug folder",
+             "w": 960,
+             "h": 279,
+             "marks": [
+              {
+               "n": 13,
+               "x": 22.4,
+               "y": 27.7,
+               "say": "Double-click the **Debug** folder."
+              }
+             ]
+            },
+            "id": "2-1.13",
+            "n": 13
+           },
+           {
+            "do": "Press Ctrl and V together.",
+            "see": "A window called Replace or Skip Files opens, because most of the files are already there.",
+            "img": {
+             "img": "img/cap/c194.png",
+             "alt": "The Replace or Skip Files window, with Skip these files",
+             "w": 1123,
+             "h": 600,
+             "marks": [
+              {
+               "n": 14,
+               "x": 15.1,
+               "y": 35.0,
+               "w": 62.3,
+               "h": 25.8,
+               "say": "Press Ctrl and V together."
+              },
+              {
+               "n": 15,
+               "x": 31.7,
+               "y": 27.7,
+               "w": 35.1,
+               "h": 5.3,
+               "say": "Click **Skip these files**."
+              }
+             ]
+            },
+            "id": "2-1.14",
+            "n": 14
+           },
+           {
+            "do": "Click **Skip these files**.",
+            "see": "The window closes. Windows has copied in only the missing files.",
+            "id": "2-1.15",
+            "n": 15
+           }
+          ]
+         }
+        ]
+       }
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Add the WordClue class, which reads words.txt",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has a WordClue class that reads every word from `words.txt`."
+      },
+      {
+       "p": "The game needs its words before it can show the first clue. So you add a class called WordClue, which holds one word and its clue, and reads the file."
+      },
+      {
+       "p": "One WordClue object holds one line of `words.txt`. The WordClue class also has a method, `LoadAll`, that reads every line into a list of WordClue objects."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen.",
+         "see": "Visual Studio 2019 comes to the front, with your project open.",
+         "img": {
+          "img": "img/cap/c015.png",
+          "alt": "The Windows taskbar, with Visual Studio 2019 on the taskbar",
+          "w": 960,
+          "h": 41,
+          "marks": [
+           {
+            "n": 1,
+            "x": 63.9,
+            "y": 50.0,
+            "say": "Click **Visual Studio 2019** on the taskbar along the bottom of the screen."
+           }
+          ]
+         },
+         "id": "2-2.1",
+         "n": 1
+        },
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "img": "img/cap/c023.png",
+          "alt": "The project menu, with Add pointed at and Class in the second menu",
+          "w": 959,
+          "h": 616,
+          "marks": [
+           {
+            "n": 2,
+            "x": 73.0,
+            "y": 5.4,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 3,
+            "x": 39.6,
+            "y": 38.6,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 4,
+            "x": 6.2,
+            "y": 93.2,
+            "say": "Click **Class...** at the bottom of the second menu."
+           }
+          ]
+         },
+         "id": "2-2.2",
+         "n": 2
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "2-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click **Class...** at the bottom of the second menu.",
+         "see": "The Add New Item window opens. Class is picked, and the Name box at the bottom says `Class1.cs`.",
+         "id": "2-2.4",
+         "n": 4
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "img": "img/cap/c024.png",
+          "alt": "The Add New Item window, with Class picked and the Name box at the bottom",
+          "w": 948,
+          "h": 660,
+          "marks": [
+           {
+            "n": 5,
+            "x": 16.9,
+            "y": 92.1,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 6,
+            "x": 42.2,
+            "y": 92.1,
+            "say": "Type `WordClue.cs`"
+           },
+           {
+            "n": 7,
+            "x": 85.7,
+            "y": 96.5,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "2-2.5",
+         "n": 5
+        },
+        {
+         "do": "Type `WordClue.cs`",
+         "see": "The Name box shows `WordClue.cs`.",
+         "id": "2-2.6",
+         "n": 6
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "`WordClue.cs` opens in the code editor. At the top are 5 lines that start with `using`. Further down is `class WordClue`, with an empty pair of curly brackets under it.",
+         "id": "2-2.7",
+         "n": 7
+        },
+        {
+         "do": "Click at the end of the line `using System.Threading.Tasks;`",
+         "see": "The flashing cursor is after the semicolon.",
+         "id": "2-2.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under `using System.Threading.Tasks;`.",
+         "id": "2-2.9",
+         "n": 9
+        },
+        {
+         "do": "Type `using System.IO;`",
+         "see": "The new line says `using System.IO;`. The WordClue class needs this line, because it reads a file.",
+         "id": "2-2.10",
+         "n": 10
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c15-clue-class",
+        "kind": "type",
+        "title": "WordClue.cs: the WordClue class",
+        "lang": "cs",
+        "why": "You type the 2 properties, and the 2 lines that put a value into each one, because they are new. The rest reads a file the same way as `LoadAll` in chapter 3, so it comes in the copy.",
+        "text": "// One word from words.txt and its clue\nclass WordClue\n{\n    public string Word { get; set; }   // the word, in capitals\n    public string Clue { get; set; }   // a one-sentence clue\n\n    // Makes one WordClue from a line of words.txt, split at each |\n    public WordClue(string[] parts)\n    {\n        Word = parts[0];\n        Clue = parts[1];\n    }\n\n    // Reads every word in words.txt into a list\n    public static List<WordClue> LoadAll()\n    {\n        List<WordClue> words = new List<WordClue>();\n        string path = Files.Data(\"words.txt\");\n        if (!File.Exists(path)) return words;   // no file: an empty list\n        StreamReader reader = new StreamReader(path);\n        while (!reader.EndOfStream)\n        {\n            string line = reader.ReadLine();\n            string[] parts = line.Split('|');\n            if (parts.Length != 2) continue;    // skip a broken line\n            words.Add(new WordClue(parts));\n        }\n        reader.Close();\n        return words;\n    }\n}",
+        "partLines": [
+         [
+          2,
+          5,
+          "The class and its 2 properties",
+          "`class WordClue` starts the class. `Word` holds the word, and `Clue` holds its clue. `{ get; set; }` lets other code read each property and change it."
+         ],
+         [
+          8,
+          12,
+          "The constructor",
+          "This part is the constructor. It runs when code writes `new WordClue(parts)`. `parts` is one line of `words.txt`, already cut into 2 pieces at the bar. The first piece goes into `Word`, and the second piece goes into `Clue`."
+         ],
+         [
+          15,
+          19,
+          "The start of LoadAll",
+          "`static` means that you call LoadAll on the class itself, as `WordClue.LoadAll()`. LoadAll starts with an empty list. `Files.Data` from chapter 2 gives the full path of `words.txt` in the Data folder. If `words.txt` is not there, LoadAll hands back the empty list, so the game shows a message and does not crash."
+         ],
+         [
+          20,
+          27,
+          "Read every line",
+          "The StreamReader, which reads a text file one line at a time, opens `words.txt`. The loop goes round once for each line, until the end of the file. `Split('|')` cuts each line at the bar into `parts`. If a line does not have exactly 2 parts, `continue` skips it. Every good line becomes a new WordClue, and `words.Add` puts it on the end of the list."
+         ],
+         [
+          28,
+          31,
+          "Close the file and hand back the list",
+          "`reader.Close()` closes `words.txt`, so that other programs can open it again. `return words;` hands the full list back to the code that called LoadAll."
+         ]
+        ],
+        "focusLines": [
+         [
+          4,
+          5
+         ],
+         [
+          10,
+          11
+         ]
+        ],
+        "typed": 4,
+        "wordMarks": [
+         [
+          4,
+          23,
+          36,
+          2
+         ],
+         [
+          8,
+          4,
+          20,
+          3
+         ],
+         [
+          15,
+          11,
+          17,
+          4
+         ],
+         [
+          15,
+          18,
+          32,
+          5
+         ],
+         [
+          25,
+          35,
+          43,
+          6
+         ],
+         [
+          25,
+          29,
+          31,
+          7
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Drag from the start of `class WordClue` down to the end of the `}` two lines below it.",
+         "see": "`class WordClue` and its empty `{` and `}` turn blue. The last `}` in the file stays white. That is right: the last `}` closes the namespace, and it must stay.",
+         "id": "2-2.11",
+         "n": 11
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c15-clue-class",
+         "id": "2-2.12",
+         "n": 12
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The WordClue class appears in place of the blue lines. Two lines start with `// YOU TYPE THIS PART`, and your typing goes there.",
+         "id": "2-2.13",
+         "n": 13
+        },
+        {
+         "do": "Triple-click the first line that starts with `// YOU TYPE THIS PART`, so that your typing replaces it.",
+         "see": "The whole line turns blue.",
+         "wrong": [
+          [
+           "The old `// YOU TYPE THIS PART` line is still there after you type",
+           "Click the old `// YOU TYPE THIS PART` line, then press Home. Hold Shift and press End, so the whole line turns blue. Press Delete."
+          ]
+         ],
+         "id": "2-2.14",
+         "n": 14
+        },
+        {
+         "do": "Type the 2 yellow lines that start with `public`. Press Enter at the end of each line.",
+         "see": "The 2 properties are where the `// YOU TYPE THIS PART` line was. A red underline may show while you type. This is normal: it goes when the line is finished.",
+         "id": "2-2.15",
+         "n": 15
+        },
+        {
+         "do": "Triple-click the other line that starts with `// YOU TYPE THIS PART`.",
+         "see": "The whole line turns blue.",
+         "id": "2-2.16",
+         "n": 16
+        },
+        {
+         "do": "Type the 2 yellow lines, `Word = parts[0];` and `Clue = parts[1];`. Press Enter at the end of each line.",
+         "see": "No line in `WordClue.cs` has a [[red underline|39]].",
+         "id": "2-2.17",
+         "n": 17
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `WordClue.cs` on the tab at the top of the code editor disappears. Your WordClue class is saved.",
+         "id": "2-2.18",
+         "n": 18
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "2"
+  },
+  {
+   "title": "Make the Whiteout form and set the form's controls",
+   "screens": [
+    {
+     "title": "Add the Whiteout form and set the form's properties",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has an empty Whiteout window, called frmWhiteout, at the right size and colour."
+      },
+      {
+       "p": "Whiteout needs its own window to play in. In Visual Studio 2019, a window is called a form."
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "img": "img/cap/c068.png",
+          "alt": "The project menu, with Add pointed at and Form (Windows Forms) in the second menu",
+          "w": 949,
+          "h": 605,
+          "marks": [
+           {
+            "n": 1,
+            "x": 73.8,
+            "y": 4.6,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 2,
+            "x": 40.6,
+            "y": 37.8,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 3,
+            "x": 11.6,
+            "y": 81.0,
+            "say": "Click **Form (Windows Forms)...** in the second menu."
+           }
+          ]
+         },
+         "id": "3-1.1",
+         "n": 1
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "3-1.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Form (Windows Forms)...** in the second menu.",
+         "see": "The Add New Item window opens. Form (Windows Forms) is picked, and the Name box says `Form1.cs`.",
+         "id": "3-1.3",
+         "n": 3
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Form1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "img": "img/cap/c069.png",
+          "alt": "The Add New Item window, with Form (Windows Forms) picked",
+          "w": 943,
+          "h": 592,
+          "marks": [
+           {
+            "n": 4,
+            "x": 42.5,
+            "y": 91.1,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "x": 13.8,
+            "y": 89.5,
+            "w": 57.4,
+            "h": 3.5,
+            "say": "Type `frmWhiteout.cs`"
+           },
+           {
+            "n": 6,
+            "x": 86.0,
+            "y": 96.3,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "3-1.4",
+         "n": 4
+        },
+        {
+         "do": "Type `frmWhiteout.cs`",
+         "see": "The Name box shows `frmWhiteout.cs`.",
+         "id": "3-1.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "A new empty form called frmWhiteout opens in the designer. `frmWhiteout.cs` appears in Solution Explorer.",
+         "id": "3-1.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "p": "Now set the form's properties in the Properties window, using the table below. Set **Font** first. If you change Font later, Visual Studio 2019 stretches the form to fit the new font, and its Size changes."
+      },
+      {
+       "p": "[[KeyPreview|22]] is new. When it is True, the form hears every key the player types, even while a letter button has the focus. Without it, typing a letter on the keyboard does nothing."
+      },
+      {
+       "controls": {
+        "props": [
+         "Font = Segoe UI, 11pt",
+         "Text = Summit Ready - Whiteout",
+         "StartPosition = CenterScreen",
+         "FormBorderStyle = FixedSingle",
+         "Size = 1016, 699",
+         "MaximizeBox = False",
+         "BackColor = 243, 245, 242",
+         "KeyPreview = True"
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "If you have forgotten how to set a property",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "Click the box beside the property's name in the Properties window. Type the new value, then press Enter."
+         },
+         {
+          "p": "For **Font**, click the box beside Font, then click the small button with 3 dots at the right of the box. Pick Segoe UI and size 11, then click **OK**."
+         },
+         {
+          "p": "For **BackColor**, type `243, 245, 242` in the box beside BackColor, then press Enter."
+         },
+         {
+          "p": "For **MaximizeBox** and **KeyPreview**, click the arrow at the right of the box, then click **False** or **True**."
+         }
+        ]
+       }
+      },
+      {
+       "p": "Whiteout reads its words when the window opens. The form's Load event runs once, right before the window first appears. So you make an empty Load method now, and you fill it in during stage 4."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the [[lightning bolt|11]] at the top of the Properties window.",
+         "see": "The Properties window now lists the form's events in place of its properties.",
+         "img": {
+          "img": "img/cap/c371.png",
+          "alt": "The Properties window showing the events of frmWhiteout, with the lightning bolt, Load and the Properties button",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 7,
+            "x": 84.9,
+            "y": 48.4,
+            "say": "Click the [[lightning bolt|11]] at the top of the Properties window."
+           },
+           {
+            "n": 8,
+            "x": 81.0,
+            "y": 87.0,
+            "w": 16.6,
+            "h": 2.2,
+            "say": "Double-click the empty box beside **Load**. Load comes after Leave, so scroll down the list a little if you cannot see it."
+           },
+           {
+            "n": 10,
+            "x": 83.6,
+            "y": 48.4,
+            "say": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window."
+           }
+          ]
+         },
+         "id": "3-1.7",
+         "n": 7
+        },
+        {
+         "do": "Double-click the empty box beside **Load**. Load comes after Leave, so scroll down the list a little if you cannot see it.",
+         "see": "The code editor opens `frmWhiteout.cs`, with a new empty method called `frmWhiteout_Load`. An empty method is normal here: you fill it in during stage 4.",
+         "id": "3-1.8",
+         "n": 8
+        },
+        {
+         "do": "Press Shift and F7 together.",
+         "see": "The designer shows frmWhiteout.",
+         "img": {
+          "img": "img/cap/c372.png",
+          "alt": "The designer showing frmWhiteout, with the frmWhiteout.cs [Design] tab",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 9,
+            "x": 8.6,
+            "y": 13.3,
+            "w": 9.2,
+            "h": 2.4,
+            "say": "Press Shift and F7 together."
+           }
+          ]
+         },
+         "id": "3-1.9",
+         "n": 9
+        },
+        {
+         "do": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists properties again.",
+         "id": "3-1.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Copy the dark header strip from frmPractice onto frmWhiteout",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmWhiteout has the same dark header strip as your practice game."
+      },
+      {
+       "p": "frmPractice from chapter 9 already has a dark strip along the top. The strip holds the title, the instruction, Points, the speaker picture and **Back to the map**."
+      },
+      {
+       "p": "You copy the strip, so that every game looks the same. The copied controls keep their names, such as `lblScore` and `btnBack`, and the chapter 9 code needs those names."
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `frmPractice.cs` in Solution Explorer.",
+         "see": "frmPractice opens in the designer.",
+         "img": {
+          "img": "img/cap/c200.png",
+          "alt": "Solution Explorer, with frmPractice.cs",
+          "w": 352,
+          "h": 138,
+          "marks": [
+           {
+            "n": 1,
+            "x": 14.6,
+            "y": 77.9,
+            "w": 31.4,
+            "h": 13.3,
+            "say": "Double-click `frmPractice.cs` in Solution Explorer."
+           }
+          ]
+         },
+         "id": "3-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click a dark part of the header strip that has no words on it.",
+         "see": "The Properties window shows pnlHeader at the top.",
+         "img": {
+          "img": "img/cap/c201.png",
+          "alt": "frmPractice in the designer, with the dark header strip picked",
+          "w": 1078,
+          "h": 624,
+          "marks": [
+           {
+            "n": 2,
+            "x": 77.0,
+            "y": 18.8,
+            "say": "Click a dark part of the header strip that has no words on it."
+           },
+           {
+            "n": 3,
+            "x": 5.0,
+            "y": 10.6,
+            "w": 93.1,
+            "h": 9.6,
+            "say": "Press Ctrl and C together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Properties window shows lblTitle or another name, not pnlHeader",
+           "You clicked a control on the strip. Click a dark part of the strip with no words on it."
+          ]
+         ],
+         "id": "3-2.2",
+         "n": 2
+        },
+        {
+         "do": "Press Ctrl and C together.",
+         "see": "Nothing changes on the screen. That is normal: Visual Studio 2019 has copied the control and everything on it.",
+         "id": "3-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click the **frmWhiteout.cs [Design]** tab at the top of the editor.",
+         "see": "The empty frmWhiteout form shows again.",
+         "img": {
+          "img": "img/cap/c373.png",
+          "alt": "The empty frmWhiteout form, with the frmWhiteout.cs [Design] tab and the title bar of frmWhiteout",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 4,
+            "x": 8.6,
+            "y": 13.3,
+            "w": 9.2,
+            "h": 2.4,
+            "say": "Click the **frmWhiteout.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 5,
+            "x": 19.1,
+            "y": 20.1,
+            "say": "Click the title bar of frmWhiteout."
+           }
+          ]
+         },
+         "id": "3-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click the title bar of frmWhiteout.",
+         "see": "The Properties window shows frmWhiteout at the top. The form must be picked, because Visual Studio 2019 pastes onto whatever is picked.",
+         "id": "3-2.5",
+         "n": 5
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The dark header strip appears on frmWhiteout, with small white squares at its corners. The Properties window shows pnlHeader.",
+         "img": {
+          "img": "img/cap/c374.png",
+          "alt": "frmWhiteout with the pasted header strip, and the Location box in the Properties window",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 6,
+            "x": 2.8,
+            "y": 21.5,
+            "w": 52.3,
+            "h": 7.0,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 7,
+            "x": 81.0,
+            "y": 88.6,
+            "w": 16.6,
+            "h": 2.4,
+            "say": "Triple-click the box beside **Location** in the Properties window."
+           },
+           {
+            "n": 8,
+            "x": 88.0,
+            "y": 88.6,
+            "w": 9.6,
+            "h": 2.4,
+            "say": "Type `0, 0`"
+           },
+           {
+            "n": 9,
+            "x": 92.5,
+            "y": 89.8,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The pasted strip landed inside another control",
+           "Press Ctrl and Z together to undo the paste. Click the title bar of frmWhiteout, then press Ctrl and V together again."
+          ]
+         ],
+         "id": "3-2.6",
+         "n": 6
+        },
+        {
+         "do": "Triple-click the box beside **Location** in the Properties window.",
+         "see": "The numbers in the box turn blue.",
+         "wrong": [
+          [
+           "The old value is still in the box after you type",
+           "Click the box, then press Home. Hold Shift and press End, so the whole value turns blue. Type the new value, then press Enter."
+          ]
+         ],
+         "id": "3-2.7",
+         "n": 7
+        },
+        {
+         "do": "Type `0, 0`",
+         "see": "The box shows `0, 0`.",
+         "id": "3-2.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The strip moves to the top left corner of frmWhiteout and stretches right across the top.",
+         "id": "3-2.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Copy the Round over box from frmPractice onto frmWhiteout",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmWhiteout has the white Round over box that shows the score when a round ends."
+      },
+      {
+       "p": "frmPractice already has the Round over box. It is a panel called `pnlRoundOver`, and it stays hidden until a round ends. You copy it, the same way as the strip."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmPractice.cs [Design]** tab at the top of the editor.",
+         "see": "frmPractice shows again.",
+         "img": {
+          "img": "img/cap/c204.png",
+          "alt": "frmPractice in the designer, with the white Round over box picked",
+          "w": 1078,
+          "h": 624,
+          "marks": [
+           {
+            "n": 1,
+            "x": 3.0,
+            "y": 0.2,
+            "w": 15.8,
+            "h": 2.9,
+            "say": "Click the **frmPractice.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 2,
+            "x": 34.1,
+            "y": 93.7,
+            "say": "Click the white space to the right of the words Round over, at the top of the box. (The empty space lower down holds hidden labels, so a click there picks a label, not the box.)"
+           },
+           {
+            "n": 3,
+            "x": 21.7,
+            "y": 29.8,
+            "w": 59.8,
+            "h": 67.8,
+            "say": "Press Ctrl and C together."
+           }
+          ]
+         },
+         "id": "3-3.1",
+         "n": 1
+        },
+        {
+         "do": "Click the white space to the right of the words Round over, at the top of the box. (The empty space lower down holds hidden labels, so a click there picks a label, not the box.)",
+         "see": "The Properties window shows pnlRoundOver at the top.",
+         "wrong": [
+          [
+           "You cannot see the white Round over box on frmPractice",
+           "Another control is covering it. Right-click the control that covers the box, then click **Send to Back**. The Round over box comes into view."
+          ]
+         ],
+         "id": "3-3.2",
+         "n": 2
+        },
+        {
+         "do": "Press Ctrl and C together.",
+         "see": "Nothing changes on the screen. That is normal: Visual Studio 2019 has copied the control and everything on it.",
+         "id": "3-3.3",
+         "n": 3
+        },
+        {
+         "do": "Click the **frmWhiteout.cs [Design]** tab at the top of the editor.",
+         "see": "frmWhiteout shows again, with the header strip.",
+         "img": {
+          "img": "img/cap/c375.png",
+          "alt": "frmWhiteout with the pasted Round over box in the middle",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 4,
+            "x": 8.6,
+            "y": 13.3,
+            "w": 9.2,
+            "h": 2.4,
+            "say": "Click the **frmWhiteout.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 5,
+            "x": 19.1,
+            "y": 20.1,
+            "say": "Click the title bar of frmWhiteout."
+           },
+           {
+            "n": 6,
+            "x": 12.2,
+            "y": 35.9,
+            "w": 33.5,
+            "h": 51.3,
+            "say": "Press Ctrl and V together."
+           },
+           {
+            "n": 7,
+            "x": 81.0,
+            "y": 88.6,
+            "w": 16.6,
+            "h": 2.4,
+            "say": "Triple-click the box beside **Location** in the Properties window."
+           },
+           {
+            "n": 8,
+            "x": 88.0,
+            "y": 88.6,
+            "w": 9.6,
+            "h": 2.4,
+            "say": "Type `180, 120`"
+           },
+           {
+            "n": 9,
+            "x": 92.5,
+            "y": 89.8,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "3-3.4",
+         "n": 4
+        },
+        {
+         "do": "Click the title bar of frmWhiteout.",
+         "see": "The Properties window shows frmWhiteout at the top.",
+         "id": "3-3.5",
+         "n": 5
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The white Round over box appears on frmWhiteout. The Properties window shows pnlRoundOver.",
+         "wrong": [
+          [
+           "The pasted box landed inside another control",
+           "Press Ctrl and Z together to undo the paste. Click the title bar of frmWhiteout, then press Ctrl and V together again."
+          ]
+         ],
+         "id": "3-3.6",
+         "n": 6
+        },
+        {
+         "do": "Triple-click the box beside **Location** in the Properties window.",
+         "see": "The numbers in the box turn blue.",
+         "id": "3-3.7",
+         "n": 7
+        },
+        {
+         "do": "Type `180, 120`",
+         "see": "The box shows `180, 120`.",
+         "id": "3-3.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The Round over box moves to the middle of frmWhiteout, below the header strip.",
+         "id": "3-3.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Change the title and the instruction on the header strip",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the header strip says Whiteout and tells the player what to do."
+      },
+      {
+       "p": "The copied strip still has the practice game's words. You change its title and its instruction for Whiteout."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the title at the left of the header strip.",
+         "see": "The Properties window shows lblTitle at the top.",
+         "img": {
+          "img": "img/cap/c376.png",
+          "alt": "The header strip on frmWhiteout, with lblTitle picked and its Text box in the Properties window",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 1,
+            "x": 3.5,
+            "y": 22.5,
+            "w": 29.0,
+            "h": 3.6,
+            "say": "Click the title at the left of the header strip."
+           },
+           {
+            "n": 2,
+            "x": 88.0,
+            "y": 86.4,
+            "w": 9.6,
+            "h": 2.4,
+            "say": "Triple-click the box beside **Text** in the Properties window."
+           },
+           {
+            "n": 3,
+            "x": 88.0,
+            "y": 86.4,
+            "w": 9.6,
+            "h": 2.4,
+            "say": "Type `Slieve Bearnagh - Whiteout`"
+           },
+           {
+            "n": 4,
+            "x": 92.5,
+            "y": 87.6,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "3-4.1",
+         "n": 1
+        },
+        {
+         "do": "Triple-click the box beside **Text** in the Properties window.",
+         "see": "The title's words turn blue.",
+         "id": "3-4.2",
+         "n": 2
+        },
+        {
+         "do": "Type `Slieve Bearnagh - Whiteout`",
+         "see": "The box shows `Slieve Bearnagh - Whiteout`.",
+         "id": "3-4.3",
+         "n": 3
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The title on the header strip says **Slieve Bearnagh - Whiteout**.",
+         "id": "3-4.4",
+         "n": 4
+        },
+        {
+         "do": "Click the instruction under the title.",
+         "see": "The Properties window shows lblInstruction at the top.",
+         "img": {
+          "img": "img/cap/c377.png",
+          "alt": "The header strip on frmWhiteout, with lblInstruction picked and its Text box in the Properties window",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 5,
+            "x": 3.5,
+            "y": 25.5,
+            "w": 37.0,
+            "h": 2.7,
+            "say": "Click the instruction under the title."
+           },
+           {
+            "n": 6,
+            "x": 88.0,
+            "y": 86.4,
+            "w": 9.6,
+            "h": 2.4,
+            "say": "Triple-click the box beside **Text** in the Properties window."
+           },
+           {
+            "n": 7,
+            "x": 88.0,
+            "y": 86.4,
+            "w": 9.6,
+            "h": 2.4,
+            "say": "Type `Guess the word one letter at a time. Six wrong letters and the cloud hides the mountain.`"
+           },
+           {
+            "n": 8,
+            "x": 92.5,
+            "y": 87.6,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "3-4.5",
+         "n": 5
+        },
+        {
+         "do": "Triple-click the box beside **Text** in the Properties window.",
+         "see": "The instruction's words turn blue.",
+         "id": "3-4.6",
+         "n": 6
+        },
+        {
+         "do": "Type `Guess the word one letter at a time. Six wrong letters and the cloud hides the mountain.`",
+         "see": "The box shows the new instruction.",
+         "id": "3-4.7",
+         "n": 7
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The instruction on the header strip shows the new words.",
+         "id": "3-4.8",
+         "n": 8
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Add the play area, the photo, the cloud, the labels, the button and the letter panel",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmWhiteout has every control that Whiteout needs."
+      },
+      {
+       "p": "Add the controls in the order of the table. The first control, pnlPlay, is a [[panel|13]]: a control that holds other controls. Every other control sits on pnlPlay, so pnlPlay goes first."
+      },
+      {
+       "p": "pnlPlay covers the Round over box in the designer. This is normal: the code brings the Round over box to the front when a round ends."
+      },
+      {
+       "p": "pnlFog is the cloud. It sits over the top of the photo, and it starts with a height of 0, so it cannot be seen. The code makes it taller with each wrong letter."
+      },
+      {
+       "p": "There are no letter buttons in the table. The code makes all 26 of them inside flpLetters when the window opens."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Panel",
+          "name": "pnlPlay",
+          "settings": [
+           "Location = 0, 56",
+           "Size = 1000, 604"
+          ],
+          "note": "Drop the Panel near the bottom left corner of frmWhiteout, outside the white Round over box, so it does not land inside that box.",
+          "then": "pnlPlay covers the Round over box."
+         },
+         {
+          "toolbox": "PictureBox",
+          "name": "picPeak",
+          "settings": [
+           "Location = 20, 8",
+           "Size = 480, 360",
+           "SizeMode = StretchImage"
+          ],
+          "note": "Drop the PictureBox on pnlPlay."
+         },
+         {
+          "toolbox": "Panel",
+          "name": "pnlFog",
+          "settings": [
+           "Location = 20, 8",
+           "Size = 480, 0",
+           "BackgroundImageLayout = Stretch"
+          ],
+          "note": "Drop the Panel on pnlPlay, away from picPeak, so it does not land inside the picture. Set its Name first, then its Location, then its Size last, because a height of 0 makes it vanish.",
+          "then": "pnlFog has a height of 0, so it disappears from the designer. That is right."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblWordCount",
+          "settings": [
+           "AutoSize = False",
+           "Location = 530, 8",
+           "Size = 450, 30",
+           "Font = Segoe UI Semibold, 13pt",
+           "ForeColor = 38, 50, 56",
+           "Text = Word 1 of 4"
+          ],
+          "note": "Drop the Label on pnlPlay."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblClue",
+          "settings": [
+           "AutoSize = False",
+           "Location = 530, 44",
+           "Size = 450, 80",
+           "Font = Segoe UI, 11.5pt",
+           "ForeColor = 38, 50, 56",
+           "Text = (empty)"
+          ],
+          "note": "Drop the Label on pnlPlay. To empty Text, delete the words in the box beside Text, then press Enter."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblWord",
+          "settings": [
+           "AutoSize = False",
+           "Location = 530, 128",
+           "Size = 450, 64",
+           "Font = Consolas, 32pt, Bold",
+           "ForeColor = 38, 50, 56",
+           "Text = (empty)"
+          ],
+          "note": "Drop the Label on pnlPlay."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblWrong",
+          "settings": [
+           "AutoSize = False",
+           "Location = 530, 204",
+           "Size = 450, 28",
+           "Font = Segoe UI Semibold, 12pt",
+           "ForeColor = 38, 50, 56",
+           "Text = Wrong letters: 0 of 6"
+          ],
+          "note": "Drop the Label on pnlPlay."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblMessage",
+          "settings": [
+           "AutoSize = False",
+           "Location = 530, 240",
+           "Size = 450, 60",
+           "ForeColor = 38, 50, 56",
+           "Text = (empty)"
+          ],
+          "note": "Drop the Label on pnlPlay."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnNext",
+          "settings": [
+           "Location = 530, 310",
+           "Size = 220, 44",
+           "Text = Next word",
+           "BackColor = 242, 183, 5",
+           "ForeColor = 38, 50, 56",
+           "Font = Segoe UI Semibold, 11pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderSize = 0",
+           "Cursor = Hand",
+           "Visible = False"
+          ],
+          "note": "Drop the Button on pnlPlay.",
+          "then": "btnNext still shows in the designer. Visible = False hides it only while the game runs."
+         },
+         {
+          "toolbox": "FlowLayoutPanel",
+          "name": "flpLetters",
+          "settings": [
+           "Location = 20, 390",
+           "Size = 960, 110"
+          ],
+          "note": "Drop the FlowLayoutPanel on pnlPlay, under picPeak.",
+          "then": "flpLetters is an empty space with a dotted edge in the designer."
+         }
+        ],
+        "done": {
+         "see": "The dark header strip along the top of frmWhiteout. Under it, pnlPlay fills the rest of the form. picPeak is a box on the left, and flpLetters is a wide dotted box under it. Down the right-hand side are lblWordCount, lblClue, lblWord, lblWrong, lblMessage and btnNext.",
+         "img": {
+          "img": "img/cap/c378.png",
+          "alt": "frmWhiteout in the designer with every control from the table on it",
+          "w": 1568,
+          "h": 675,
+          "marks": []
+         }
+        }
+       }
+      },
+      {
+       "box": {
+        "title": "How to find a control in the Toolbox",
+        "text": "The Toolbox is down the left side of Visual Studio 2019. Click the search box at the top of the Toolbox, then type the control's name, such as `FlowLayoutPanel`. The control shows in the list under the search box.",
+        "fold": true
+       }
+      },
+      {
+       "box": {
+        "title": "How to find pnlFog again once it has a height of 0",
+        "text": "Click the arrow at the right end of the box at the very top of the Properties window. A list of every control on frmWhiteout drops down. Click **pnlFog** in the list.",
+        "fold": true
+       }
+      }
+     ],
+     "id": "5"
+    }
+   ],
+   "id": "3"
+  },
+  {
+   "title": "Write the game code, one method at a time",
+   "screens": [
+    {
+     "title": "Copy the chapter 9 fields and methods into frmWhiteout.cs",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmWhiteout has the same score, Round over and Back to the map code as your practice game."
+      },
+      {
+       "p": "Every game form has the same 3 fields and the same 8 methods from chapter 9. You typed and tested them in frmPractice, so here you copy them."
+      },
+      {
+       "p": "Red underlines come and go as you work through this stage. This is normal: by the end of the stage, every red underline has gone."
+      },
+      {
+       "code": {
+        "id": "c15-patfields",
+        "kind": "copy",
+        "title": "The game-form fields from chapter 9",
+        "lang": "cs",
+        "taught": "09",
+        "why": "The 3 fields are the same in every game form, and you typed them in chapter 9. Only the number in `gameNumber` changes. The places on the map are numbered from 0, so Whiteout, the fifth place, is number 4.",
+        "text": "// ---------- the game-form fields from chapter 9 ----------\nprivate int gameNumber = 4;      // Whiteout is place 4\nprivate GameResult result;       // made when the round ends\nprivate bool finished = false;   // true once the result is kept",
+        "partLines": [
+         [
+          1,
+          4,
+          "The 3 game-form fields",
+          "`gameNumber` is the game's place number on the map. `result` holds the score and the feedback once the round ends. `finished` turns true once the result is kept."
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmWhiteout.cs** tab at the top of the editor, the one without [Design].",
+         "see": "The code of frmWhiteout shows, with `frmWhiteout_Load` near the bottom.",
+         "id": "4-1.1",
+         "n": 1
+        },
+        {
+         "do": "Click at the end of the `{` under `public partial class frmWhiteout : Form`.",
+         "see": "The flashing cursor is after the `{`.",
+         "id": "4-1.2",
+         "n": 2
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the `{`.",
+         "id": "4-1.3",
+         "n": 3
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c15-patfields",
+         "id": "4-1.4",
+         "n": 4
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The 3 fields appear under the `{`, with a comment line above them that says they come from chapter 9.",
+         "id": "4-1.5",
+         "n": 5
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c15-patmethods",
+        "kind": "copy",
+        "title": "The game-form methods from chapter 9",
+        "lang": "cs",
+        "taught": "09",
+        "why": "The 8 methods are the same in every game form, and you typed and tested them in chapter 9. Only the question asked when the window closes names Whiteout.",
+        "text": "// ---------- the game-form methods from chapter 9 ----------\n\n// Keeps the result on the map, even if the window is then closed\nprivate void KeepResult()\n{\n    Expedition.Finish(gameNumber, result);\n    finished = true;\n    lblScore.Text = \"Points: \" + result.Score;\n}\n\n// Fills in the Round over panel and brings it to the front\nprivate void ShowRoundOver()\n{\n    lblRoundScore.Text = \"You scored \" + result.Score\n        + \" out of 100 points.\";\n    lblWellList.Text = ListText(result.WentWell,\n        \"thing that went well\", \"things that went well\");\n    lblWrongList.Text = ListText(result.WentWrong,\n        \"thing that went wrong\", \"things that went wrong\");\n    if (result.Score >= 60) Sound.Play(\"win.wav\");\n    else Sound.Play(\"lose.wav\");\n    pnlRoundOver.Visible = true;\n    pnlRoundOver.BringToFront();\n}\n\n// Up to 3 lines from a list, then how many more there are\nprivate string ListText(List<string> lines, string one, string many)\n{\n    if (lines.Count == 0) return \"Nothing this time.\";\n    string text = \"\";\n    for (int i = 0; i < lines.Count && i < 3; i++)\n    {\n        text = text + \"- \" + lines[i] + Environment.NewLine;\n    }\n    int more = lines.Count - 3;\n    if (more == 1) text = text + \"And 1 more \" + one + \".\";\n    if (more > 1) text = text + \"And \" + more + \" more \" + many + \".\";\n    return text;\n}\n\n// Back to the map: closing the window runs FormClosing\nprivate void btnBack_Click(object sender, EventArgs e)\n{\n    this.Close();\n}\n\n// The Round over panel's Back to the map button\nprivate void btnDone_Click(object sender, EventArgs e)\n{\n    this.Close();\n}\n\n// Runs as the window closes, by Back, by Done or by the X\nprivate void frmWhiteout_FormClosing(object sender,\n    FormClosingEventArgs e)\n{\n    if (finished) return;    // a finished round closes at once\n    DialogResult answer = MessageBox.Show(\"Leave Whiteout? It will \"\n        + \"score nothing, but you can come back and climb it again.\",\n        \"Summit Ready\", MessageBoxButtons.YesNo);\n    if (answer == DialogResult.No) e.Cancel = true;   // stay\n}\n\n// Shows the speaker picture that matches the sound being on or off\nprivate void ShowSpeaker()\n{\n    string icon = \"icon-speaker-on-64.png\";\n    if (Sound.Muted) icon = \"icon-speaker-muted-64.png\";\n    picSound.Image = Files.Picture(\"Icons\", icon);\n}\n\n// The speaker picture turns the sound off, or back on\nprivate void picSound_Click(object sender, EventArgs e)\n{\n    Sound.Muted = !Sound.Muted;\n    ShowSpeaker();\n}",
+        "partLines": [
+         [
+          1,
+          9,
+          "KeepResult",
+          "KeepResult tells the map that the round has ended, and hands it the result. `finished` turns true, and Points shows the final score."
+         ],
+         [
+          12,
+          24,
+          "ShowRoundOver",
+          "ShowRoundOver fills in the Round over box and plays the win or lose sound. Then it shows the Round over box in front of everything else."
+         ],
+         [
+          27,
+          39,
+          "ListText",
+          "ListText makes the words for What went well or What went wrong. It gives up to 3 lines, then a line that counts the rest."
+         ],
+         [
+          42,
+          45,
+          "btnBack_Click",
+          "**Back to the map** on the header strip closes the window. Closing the window also runs `frmWhiteout_FormClosing`, which checks the player means to leave."
+         ],
+         [
+          48,
+          51,
+          "btnDone_Click",
+          "**Back to the map** in the Round over box closes the window in the same way."
+         ],
+         [
+          54,
+          62,
+          "frmWhiteout_FormClosing",
+          "If the round is not finished, a message asks the player whether to leave. Clicking **No** sets `e.Cancel` to true, which keeps the window open."
+         ],
+         [
+          65,
+          70,
+          "ShowSpeaker",
+          "ShowSpeaker shows the speaker picture that matches the sound: on, or muted."
+         ],
+         [
+          73,
+          77,
+          "picSound_Click",
+          "Clicking the speaker picture turns the sound off, or back on. Then it shows the matching picture."
+         ]
+        ],
+        "wordMarks": [
+         [
+          42,
+          34,
+          40,
+          21
+         ],
+         [
+          31,
+          47,
+          49,
+          34
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmWhiteout_Load`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-1.6",
+         "n": 6
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-1.7",
+         "n": 7
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c15-patmethods",
+         "id": "4-1.8",
+         "n": 8
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The 8 methods appear under `frmWhiteout_Load`, with a comment line above them that says they come from chapter 9.",
+         "id": "4-1.9",
+         "n": 9
+        },
+        {
+         "do": "Press Ctrl and S together.",
+         "see": "The star after `frmWhiteout.cs` on the tab at the top of the editor disappears.",
+         "id": "4-1.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Connect Back to the map and the Round over box's button to their methods",
+     "blocks": [
+      {
+       "p": "By the end of this screen, both **Back to the map** buttons on frmWhiteout close the window."
+      },
+      {
+       "p": "A pasted method does nothing until it is connected to an [[event|19]]. A pasted control keeps its name, but its events do not always come with it. So you check each event in the Properties window, and connect it."
+      },
+      {
+       "p": "You connect each event with the small arrow beside it. Do not double-click the box beside the event, because double-clicking makes a second, empty method."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Shift and F7 together.",
+         "see": "The designer shows frmWhiteout.",
+         "img": {
+          "img": "img/cap/c381.png",
+          "alt": "frmWhiteout in the designer, with Back to the map picked on the header strip",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 1,
+            "x": 8.6,
+            "y": 13.3,
+            "w": 9.2,
+            "h": 2.4,
+            "say": "Press Shift and F7 together."
+           },
+           {
+            "n": 2,
+            "x": 44.5,
+            "y": 22.2,
+            "w": 10.0,
+            "h": 5.5,
+            "say": "Click **Back to the map** on the header strip."
+           }
+          ]
+         },
+         "id": "4-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click **Back to the map** on the header strip.",
+         "see": "The Properties window shows btnBack at the top.",
+         "id": "4-2.2",
+         "n": 2
+        },
+        {
+         "do": "Click the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists the events of btnBack.",
+         "img": {
+          "img": "img/cap/c212.png",
+          "alt": "The Properties window showing the events of btnBack, with the list open beside Click",
+          "w": 352,
+          "h": 489,
+          "marks": [
+           {
+            "n": 3,
+            "x": 25.3,
+            "y": 11.2,
+            "say": "Click the lightning bolt at the top of the Properties window."
+           },
+           {
+            "n": 4,
+            "x": 42.0,
+            "y": 14.7,
+            "w": 47.2,
+            "h": 3.7,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 5,
+            "x": 92.0,
+            "y": 16.6,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 6,
+            "x": 54.0,
+            "y": 32.7,
+            "say": "Click `btnBack_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-2.3",
+         "n": 3
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "wrong": [
+          [
+           "`btnBack_Click` is already in the box beside Click",
+           "The paste kept the event, so there is nothing to connect. Go on to btnDone."
+          ]
+         ],
+         "id": "4-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list drops down with the methods that can handle a click, including `btnBack_Click`.",
+         "id": "4-2.5",
+         "n": 5
+        },
+        {
+         "do": "Click `btnBack_Click` in the list.",
+         "see": "The box beside Click shows `btnBack_Click`.",
+         "wrong": [
+          [
+           "Visual Studio 2019 made a new method called `btnBack_Click_1`",
+           "You double-clicked the box. Click the arrow beside Click and pick `btnBack_Click`. Then, in `frmWhiteout.cs`, delete the empty method `btnBack_Click_1`, from its first line down to its `}`."
+          ]
+         ],
+         "id": "4-2.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "p": "The Round over box's **Back to the map** button is called btnDone. pnlPlay covers btnDone in the designer. So you pick btnDone from the list at the top of the Properties window."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the arrow at the right end of the box at the very top of the Properties window.",
+         "see": "A list of every control on frmWhiteout drops down.",
+         "img": {
+          "img": "img/cap/c213.png",
+          "alt": "The Properties window, with the list of every control open at the top",
+          "w": 352,
+          "h": 489,
+          "marks": [
+           {
+            "n": 7,
+            "x": 96.6,
+            "y": 6.5,
+            "say": "Click the arrow at the right end of the box at the very top of the Properties window."
+           },
+           {
+            "n": 8,
+            "x": 1.1,
+            "y": 16.8,
+            "w": 69.9,
+            "h": 3.3,
+            "say": "Click **btnDone** in the list."
+           }
+          ]
+         },
+         "id": "4-2.7",
+         "n": 7
+        },
+        {
+         "do": "Click **btnDone** in the list.",
+         "see": "The Properties window shows the events of btnDone.",
+         "id": "4-2.8",
+         "n": 8
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "img": {
+          "img": "img/cap/c214.png",
+          "alt": "The Properties window showing the events of btnDone, with btnDone_Click beside Click",
+          "w": 352,
+          "h": 489,
+          "marks": [
+           {
+            "n": 9,
+            "x": 4.5,
+            "y": 14.7,
+            "w": 89.2,
+            "h": 3.7,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 10,
+            "x": 95.2,
+            "y": 16.4,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 11,
+            "x": 42.3,
+            "y": 35.2,
+            "w": 51.4,
+            "h": 3.7,
+            "say": "Click `btnDone_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-2.9",
+         "n": 9
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-2.10",
+         "n": 10
+        },
+        {
+         "do": "Click `btnDone_Click` in the list.",
+         "see": "The box beside Click shows `btnDone_Click`.",
+         "id": "4-2.11",
+         "n": 11
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Connect the speaker picture and the closing of the window, then build",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the speaker picture and the window's close button (the X) both work, and your project builds with no errors."
+      },
+      {
+       "p": "The speaker picture and the closing of the window need connecting too, in the same way."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the speaker picture on the header strip.",
+         "see": "The Properties window shows the events of picSound.",
+         "img": {
+          "img": "img/cap/c215.png",
+          "alt": "The Properties window showing the events of picSound, with picSound_Click beside Click",
+          "w": 1568,
+          "h": 510,
+          "marks": [
+           {
+            "n": 1,
+            "x": 41.8,
+            "y": 15.1,
+            "say": "Click the speaker picture on the header strip."
+           },
+           {
+            "n": 2,
+            "x": 82.3,
+            "y": 51.4,
+            "w": 15.6,
+            "h": 2.9,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 3,
+            "x": 98.4,
+            "y": 52.7,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 4,
+            "x": 89.3,
+            "y": 70.6,
+            "w": 9.6,
+            "h": 2.9,
+            "say": "Click `picSound_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-3.1",
+         "n": 1
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-3.2",
+         "n": 2
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-3.3",
+         "n": 3
+        },
+        {
+         "do": "Click `picSound_Click` in the list.",
+         "see": "The box beside Click shows `picSound_Click`.",
+         "id": "4-3.4",
+         "n": 4
+        },
+        {
+         "do": "Click the title bar of frmWhiteout.",
+         "see": "The Properties window shows the events of frmWhiteout.",
+         "img": {
+          "img": "img/cap/c382.png",
+          "alt": "The Properties window showing the events of frmWhiteout, with frmWhiteout_FormClosing beside FormClosing",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 5,
+            "x": 19.1,
+            "y": 20.1,
+            "say": "Click the title bar of frmWhiteout."
+           },
+           {
+            "n": 6,
+            "x": 88.0,
+            "y": 63.4,
+            "w": 9.6,
+            "h": 2.4,
+            "say": "Click the box beside **FormClosing**. Scroll down the list a little if you cannot see it."
+           },
+           {
+            "n": 7,
+            "x": 96.9,
+            "y": 64.6,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 8,
+            "x": 91.8,
+            "y": 64.6,
+            "say": "Click `frmWhiteout_FormClosing` in the list."
+           }
+          ]
+         },
+         "id": "4-3.5",
+         "n": 5
+        },
+        {
+         "do": "Click the box beside **FormClosing**. Scroll down the list a little if you cannot see it.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-3.6",
+         "n": 6
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "The list shows one method, `frmWhiteout_FormClosing`.",
+         "id": "4-3.7",
+         "n": 7
+        },
+        {
+         "do": "Click `frmWhiteout_FormClosing` in the list.",
+         "see": "The box beside FormClosing shows `frmWhiteout_FormClosing`.",
+         "id": "4-3.8",
+         "n": 8
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "img": "img/cap/c010.png",
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 610,
+          "h": 223,
+          "marks": [
+           {
+            "n": 9,
+            "x": 11.5,
+            "y": 94.9,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows errors",
+           "Double-click the first error in the Error List. Visual Studio 2019 jumps to the line with the error. Check that line letter by letter against the code in this chapter."
+          ]
+         ],
+         "id": "4-3.9",
+         "n": 9
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Type the Whiteout fields",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmWhiteout has the variables that remember the words, the letters and the score while a round plays."
+      },
+      {
+       "p": "These variables are called [[fields|12]]. They sit at the top of the class, outside every method, so every method in the form can use them."
+      },
+      {
+       "p": "Every field below is new in this chapter, so you type every one."
+      },
+      {
+       "code": {
+        "id": "c15-fields",
+        "kind": "type",
+        "title": "The Whiteout fields",
+        "lang": "cs",
+        "text": "// ---------- Whiteout ----------\nprivate List<WordClue> words;          // every word in words.txt\nprivate int[] order;                   // the words, mixed up\nprivate int number = 0;                // this word, 0 to 3\nprivate string word;                   // the word being guessed\nprivate char[] found;                  // letters found, '_' if not\nprivate string tried = \"\";             // every letter tried so far\nprivate int wrong = 0;                 // wrong letters on this word\nprivate bool wordOver = false;         // true once solved or lost\nprivate int total = 0;                 // points from every word\nprivate Button[] letters = new Button[26];\nprivate List<string> wellLines = new List<string>();\nprivate List<string> wrongLines = new List<string>();",
+        "partLines": [
+         [
+          2,
+          4,
+          "The words",
+          "`words` holds every word that LoadAll reads from `words.txt`. `order` holds the word numbers in a random order. `number` counts the words in this round, from 0 to 3."
+         ],
+         [
+          5,
+          7,
+          "This word",
+          "`word` is the word being guessed. `found` is an array of chars, one for each letter of the word. A letter not found yet is an underscore, `_`. `tried` collects every letter tried on this word, such as `\"EAS\"`."
+         ],
+         [
+          8,
+          10,
+          "The state of the word",
+          "`wrong` counts the wrong letters on this word. `wordOver` turns true once the word is found or lost. `total` adds up the points from every word."
+         ],
+         [
+          11,
+          11,
+          "The letter buttons",
+          "`letters` is an array with room for 26 buttons, one for each letter from A to Z. The code fills it in when the window opens."
+         ],
+         [
+          12,
+          13,
+          "The feedback",
+          "`wellLines` and `wrongLines` collect the lines for What went well and What went wrong, one line for each word."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          13
+         ]
+        ],
+        "typed": 12,
+        "wordMarks": [
+         [
+          2,
+          8,
+          22,
+          5
+         ],
+         [
+          6,
+          8,
+          12,
+          8
+         ],
+         [
+          3,
+          8,
+          13,
+          9
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the line `private bool finished = false;   // true once the result is kept`",
+         "see": "The flashing cursor is at the end of the comment.",
+         "id": "4-4.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under that line. The flashing cursor is on the new empty line.",
+         "id": "4-4.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The 12 fields are under the chapter 9 fields. None of the 12 lines has a red underline.",
+         "id": "4-4.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Fill in frmWhiteout_Load, which sets up the round when the window opens",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmWhiteout shows the mountain, makes the letter buttons and reads the words as the window opens."
+      },
+      {
+       "p": "frmWhiteout_Load is the empty method you made in stage 3. It runs once, right before the window first appears. You type the yellow lines inside it."
+      },
+      {
+       "code": {
+        "id": "c15-load",
+        "kind": "type",
+        "title": "frmWhiteout_Load",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "private void frmWhiteout_Load(object sender, EventArgs e)\n{\n    // Runs once, right before the window first appears\n    ShowSpeaker();\n    picPeak.Image = Files.Picture(\"Summits\", \"summit-bearnagh.jpg\");\n    pnlFog.BackgroundImage = Files.Picture(\"\", \"fog.jpg\");\n    MakeLetters();\n    words = WordClue.LoadAll();\n    if (words.Count < 4)\n    {\n        lblClue.Text = \"Whiteout needs 4 words in Data\\\\words.txt, \"\n            + \"each written as WORD|clue.\";\n        return;\n    }\n    order = Mix.ShuffledNumbers(words.Count);\n    ShowWord();\n}",
+        "partLines": [
+         [
+          1,
+          4,
+          "Show the speaker",
+          "ShowSpeaker, from chapter 9, puts the right speaker picture on the header strip."
+         ],
+         [
+          5,
+          6,
+          "The mountain and the cloud",
+          "`Files.Picture` from chapter 2 loads the photo of Slieve Bearnagh into picPeak. The cloud picture, `fog.jpg`, sits straight in the Images folder, so its folder name is empty, `\"\"`. It fills pnlFog."
+         ],
+         [
+          7,
+          7,
+          "The letter buttons",
+          "MakeLetters makes the 26 letter buttons. You write it on the next screen."
+         ],
+         [
+          8,
+          14,
+          "Read the words",
+          "`WordClue.LoadAll()` reads `words.txt` and gives back a list, with one WordClue for each line. A round needs 4 words. With fewer than 4, lblClue shows a message, and `return` stops frmWhiteout_Load early. Inside quotes, `\\\\` stands for one backslash, so the message shows Data\\words.txt."
+         ],
+         [
+          15,
+          17,
+          "Mix the order, then show the first word",
+          "`Mix.ShuffledNumbers` from chapter 2 gives the word numbers in a random order. Then ShowWord puts the first word on the screen."
+         ]
+        ],
+        "focusLines": [
+         [
+          3,
+          16
+         ]
+        ],
+        "typed": 11,
+        "wordMarks": [
+         [
+          6,
+          4,
+          10,
+          13
+         ],
+         [
+          5,
+          4,
+          11,
+          14
+         ],
+         [
+          1,
+          37,
+          43,
+          21
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `{` on the line under `private void frmWhiteout_Load`.",
+         "see": "The flashing cursor is after the `{`.",
+         "id": "4-5.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens inside frmWhiteout_Load.",
+         "id": "4-5.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The yellow lines are inside frmWhiteout_Load. `MakeLetters` and `ShowWord` have red underlines. This is normal, because you have not written them yet.",
+         "id": "4-5.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "5"
+    },
+    {
+     "title": "Type MakeLetters, which makes the 26 letter buttons",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmWhiteout makes its own 26 letter buttons, A to Z, in 2 rows of 13."
+      },
+      {
+       "p": "Dropping 26 buttons from the Toolbox and setting each one would take a long time. So a loop makes them in code, all the same, in a few lines."
+      },
+      {
+       "code": {
+        "id": "c15-letters",
+        "kind": "type",
+        "title": "MakeLetters",
+        "lang": "cs",
+        "text": "// Makes the 26 letter buttons, A to Z, in two rows of 13\nprivate void MakeLetters()\n{\n    for (int i = 0; i < 26; i++)\n    {\n        Button b = new Button();\n        b.Text = ((char)('A' + i)).ToString();\n        b.Size = new Size(44, 44);\n        b.Margin = new Padding(3);\n        b.FlatStyle = FlatStyle.Flat;\n        b.BackColor = Color.White;\n        b.ForeColor = Color.FromArgb(38, 50, 56);\n        b.Font = new Font(\"Segoe UI Semibold\", 12);\n        b.Cursor = Cursors.Hand;\n        b.Click += Letter_Click;\n        letters[i] = b;\n        flpLetters.Controls.Add(b);\n        if (i == 12) flpLetters.SetFlowBreak(b, true);\n    }\n}",
+        "partLines": [
+         [
+          2,
+          6,
+          "A new button each time round",
+          "The loop goes round 26 times, once for each letter. Each time, `new Button()` makes a new button in code."
+         ],
+         [
+          7,
+          7,
+          "The button's letter",
+          "A `char` is stored as a number, and the letters A to Z are numbered in order. So `'A' + i` is the number of the letter `i` places after A. `(char)` turns that number back into a letter, and `ToString()` turns the letter into text."
+         ],
+         [
+          8,
+          14,
+          "The button's look",
+          "These lines set the same things you set in the Properties window for a dropped button. `Margin` is the gap round the button, 3 pixels on each side."
+         ],
+         [
+          15,
+          15,
+          "Connect the click",
+          "`+=` connects the button's Click event to Letter_Click, in code. It does the same job as picking the method in the Properties window."
+         ],
+         [
+          16,
+          20,
+          "Put the button on the form",
+          "`letters[i] = b;` keeps the button in the array. `flpLetters.Controls.Add(b)` puts it in the letter panel, after the one before. After the 13th button, M, `SetFlowBreak` starts a new row."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          20
+         ]
+        ],
+        "typed": 15,
+        "wordMarks": [
+         [
+          7,
+          19,
+          23,
+          8
+         ],
+         [
+          7,
+          18,
+          24,
+          10
+         ],
+         [
+          17,
+          8,
+          18,
+          15
+         ],
+         [
+          18,
+          32,
+          44,
+          16
+         ],
+         [
+          17,
+          19,
+          31,
+          17
+         ],
+         [
+          15,
+          16,
+          18,
+          18
+         ],
+         [
+          15,
+          19,
+          31,
+          20
+         ],
+         [
+          4,
+          29,
+          31,
+          34
+         ],
+         [
+          12,
+          22,
+          36,
+          35
+         ],
+         [
+          14,
+          19,
+          31,
+          36
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmWhiteout_Load`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-6.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-6.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "`Letter_Click` has a red underline. This is normal, because you have not written Letter_Click yet.",
+         "id": "4-6.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "6"
+    },
+    {
+     "title": "Type ShowWord, ShowFound and Letter_Click, which put a word on the screen",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmWhiteout shows each word as a row of underscores, and hears a click on a letter."
+      },
+      {
+       "p": "ShowWord is long, so you type it in 2 parts. The first part stops part-way through ShowWord, and the second part carries on from there."
+      },
+      {
+       "code": {
+        "id": "c15-showword",
+        "kind": "type",
+        "title": "ShowWord, part 1: the new word",
+        "lang": "cs",
+        "text": "// Puts the next word on the screen with every letter hidden\nprivate void ShowWord()\n{\n    word = words[order[number]].Word.ToUpper();\n    lblClue.Text = words[order[number]].Clue;\n    lblWordCount.Text = \"Word \" + (number + 1) + \" of 4\";\n    found = new char[word.Length];\n    for (int i = 0; i < word.Length; i++)\n    {\n        found[i] = '_';\n    }\n    tried = \"\";\n    wrong = 0;\n    wordOver = false;\n    pnlFog.Height = 0;\n    lblWord.ForeColor = Color.FromArgb(38, 50, 56);\n    lblWrong.Text = \"Wrong letters: 0 of 6\";\n    lblMessage.Text = \"\";",
+        "partLines": [
+         [
+          2,
+          6,
+          "The word and its clue",
+          "`order[number]` picks this word from the mixed order. `ToUpper()` makes the word capital letters, to match the letter buttons. lblClue shows the clue, and lblWordCount shows the word's place in the round."
+         ],
+         [
+          7,
+          11,
+          "Every letter hidden",
+          "`found` gets one char for each letter of the word. The loop sets each one to an underscore, `_`."
+         ],
+         [
+          12,
+          14,
+          "A fresh start",
+          "No letters are tried yet, there are no wrong letters, and the word is not over."
+         ],
+         [
+          15,
+          18,
+          "Clear the screen",
+          "The cloud goes back up to a height of 0. The word goes back to its dark colour, the wrong-letter count goes back to 0, and the message is emptied."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          18
+         ]
+        ],
+        "typed": 14,
+        "wordMarks": [
+         [
+          7,
+          16,
+          20,
+          8
+         ],
+         [
+          15,
+          4,
+          10,
+          13
+         ],
+         [
+          4,
+          37,
+          44,
+          25
+         ],
+         [
+          15,
+          11,
+          17,
+          32
+         ],
+         [
+          8,
+          38,
+          40,
+          34
+         ],
+         [
+          16,
+          24,
+          38,
+          35
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `MakeLetters`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-7.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-7.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The first part of ShowWord is under MakeLetters. ShowWord has no `}` at its end yet, so red underlines show further down. This is normal.",
+         "id": "4-7.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c15-showfound",
+        "kind": "type",
+        "title": "ShowWord, part 2, then ShowFound and Letter_Click",
+        "lang": "cs",
+        "text": "    btnNext.Visible = false;\n    for (int i = 0; i < 26; i++)\n    {\n        letters[i].Enabled = true;\n        letters[i].BackColor = Color.White;\n    }\n    ShowFound();\n}\n\n// Writes the letters found so far, with a space between each one\nprivate void ShowFound()\n{\n    string shown = \"\";\n    for (int i = 0; i < found.Length; i++)\n    {\n        if (i > 0) shown = shown + \" \";\n        shown = shown + found[i];\n    }\n    lblWord.Text = shown;\n}\n\n// A letter button was clicked\nprivate void Letter_Click(object sender, EventArgs e)\n{\n    Button b = (Button)sender;\n    TryLetter(b.Text[0]);\n}",
+        "partLines": [
+         [
+          1,
+          8,
+          "The letters ready to click",
+          "The Next word button hides. The loop turns every letter button back on and makes it white again, ready for the new word. Then ShowFound shows the row of underscores."
+         ],
+         [
+          11,
+          20,
+          "ShowFound",
+          "ShowFound builds the text for lblWord from `found`, one char at a time. It puts a space before every char except the first, so `C_I_N` shows as `C _ I _ N`."
+         ],
+         [
+          23,
+          27,
+          "Letter_Click",
+          "All 26 letter buttons run Letter_Click. `sender` is the button that was clicked, and `(Button)sender` lets the code use it as a button. `b.Text[0]` is the first char of its text, the letter itself."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          27
+         ]
+        ],
+        "typed": 14,
+        "wordMarks": [
+         [
+          25,
+          15,
+          23,
+          10
+         ],
+         [
+          23,
+          13,
+          25,
+          20
+         ],
+         [
+          23,
+          33,
+          39,
+          21
+         ],
+         [
+          4,
+          19,
+          26,
+          31
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the line `lblMessage.Text = \"\";` near the end of ShowWord.",
+         "see": "The flashing cursor is after the semicolon.",
+         "id": "4-7.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under `lblMessage.Text = \"\";`.",
+         "id": "4-7.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The red underlines under `ShowWord` and `Letter_Click` have gone. `TryLetter` has a red underline, because you have not written TryLetter yet.",
+         "id": "4-7.6",
+         "n": 6
+        }
+       ]
+      }
+     ],
+     "id": "7"
+    },
+    {
+     "title": "Type frmWhiteout_KeyPress, which lets the player type a letter",
+     "blocks": [
+      {
+       "p": "By the end of this screen, a letter typed on the keyboard counts the same as a click on its button."
+      },
+      {
+       "p": "You cannot click a letter you have tried, because its button is turned off. But you can type it again. So TryLetter refuses it with an [[exception|27]], the LetterAlreadyTriedException from chapter 4. KeyPress catches the exception and shows its message."
+      },
+      {
+       "code": {
+        "id": "c15-keypress",
+        "kind": "type",
+        "title": "frmWhiteout_KeyPress",
+        "lang": "cs",
+        "text": "// A key was typed: KeyPreview lets the form hear it first\nprivate void frmWhiteout_KeyPress(object sender, KeyPressEventArgs e)\n{\n    char letter = char.ToUpper(e.KeyChar);\n    if (letter < 'A' || letter > 'Z') return;   // not a letter\n    e.Handled = true;\n    try\n    {\n        TryLetter(letter);\n    }\n    catch (LetterAlreadyTriedException ex)\n    {\n        lblMessage.Text = ex.Message;   // costs nothing\n    }\n}",
+        "partLines": [
+         [
+          2,
+          4,
+          "The key as a capital letter",
+          "frmWhiteout_KeyPress runs every time the player types a character, because KeyPreview is True. `e.KeyChar` is the character typed, and `char.ToUpper` makes it a capital letter."
+         ],
+         [
+          5,
+          6,
+          "Letters only",
+          "Anything that is not a letter from A to Z is ignored. For a letter, `e.Handled = true;` stops the letter going on to the button that has the focus."
+         ],
+         [
+          7,
+          15,
+          "Try the letter",
+          "Inside `try`, TryLetter checks the letter. If the letter was tried already, TryLetter throws a LetterAlreadyTriedException. The `catch` shows its message, **You have already tried E. Pick another letter.** The letter costs nothing."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          15
+         ]
+        ],
+        "typed": 8,
+        "wordMarks": [
+         [
+          4,
+          4,
+          8,
+          8
+         ],
+         [
+          2,
+          41,
+          47,
+          21
+         ],
+         [
+          2,
+          13,
+          33,
+          23
+         ],
+         [
+          6,
+          4,
+          13,
+          24
+         ],
+         [
+          4,
+          23,
+          30,
+          25
+         ],
+         [
+          5,
+          21,
+          23,
+          26
+         ],
+         [
+          7,
+          4,
+          7,
+          29
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `Letter_Click`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-8.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-8.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "`TryLetter` still has a red underline. This is normal, because you write TryLetter next.",
+         "id": "4-8.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "8"
+    },
+    {
+     "title": "Type TryLetter, which checks a letter against the word",
+     "blocks": [
+      {
+       "p": "By the end of this screen, a right letter shows in the word, and a wrong letter brings the cloud down."
+      },
+      {
+       "p": "TryLetter is the heart of the game, and it is long. So you type it in 2 parts. The first part stops part-way through TryLetter, and the second part carries on from there."
+      },
+      {
+       "code": {
+        "id": "c15-try-1",
+        "kind": "type",
+        "title": "TryLetter, part 1: find the letter",
+        "lang": "cs",
+        "text": "// Checks one letter against the word\nprivate void TryLetter(char letter)\n{\n    if (wordOver || word == null) return;\n    if (tried.IndexOf(letter) >= 0)\n    {\n        throw new LetterAlreadyTriedException(letter);\n    }\n    tried = tried + letter;\n    letters[letter - 'A'].Enabled = false;\n    // A flat button looks the same when off, so grey it\n    letters[letter - 'A'].BackColor = Color.FromArgb(207, 216, 220);\n    lblMessage.Text = \"\";\n    bool inWord = false;\n    for (int i = 0; i < word.Length; i++)\n    {\n        if (word[i] == letter)\n        {\n            found[i] = letter;\n            inWord = true;\n        }\n    }",
+        "partLines": [
+         [
+          2,
+          4,
+          "Is there a word to guess?",
+          "If this word is over, or no word was ever shown, TryLetter does nothing."
+         ],
+         [
+          5,
+          8,
+          "Tried already?",
+          "`tried.IndexOf(letter)` is 0 or more when the letter is in `tried` already. Then `throw` stops TryLetter with a LetterAlreadyTriedException, so the letter costs nothing."
+         ],
+         [
+          9,
+          12,
+          "Grey the button",
+          "The letter joins `tried`. `letter - 'A'` is the letter's place in the alphabet, from 0 to 25. So `letters[letter - 'A']` is its button, which is turned off and greyed."
+         ],
+         [
+          13,
+          22,
+          "Is it in the word?",
+          "The loop looks at every letter of the word. Each place where the letter matches gets the letter in `found`, and `inWord` turns true. So a letter that comes twice shows in both places."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          22
+         ]
+        ],
+        "typed": 13,
+        "wordMarks": [
+         [
+          2,
+          23,
+          27,
+          8
+         ],
+         [
+          4,
+          17,
+          19,
+          26
+         ],
+         [
+          7,
+          8,
+          13,
+          28
+         ],
+         [
+          5,
+          14,
+          21,
+          30
+         ],
+         [
+          10,
+          26,
+          33,
+          31
+         ],
+         [
+          15,
+          38,
+          40,
+          34
+         ],
+         [
+          12,
+          38,
+          52,
+          35
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmWhiteout_KeyPress`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-9.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-9.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The first part of TryLetter is under frmWhiteout_KeyPress. TryLetter has no `}` at its end yet, so red underlines show further down. This is normal.",
+         "id": "4-9.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "p": "The second part of TryLetter does something different for a right letter and a wrong letter. Then WordPoints works out a word's points."
+      },
+      {
+       "code": {
+        "id": "c15-try-2",
+        "kind": "type",
+        "title": "TryLetter, part 2, then WordPoints",
+        "lang": "cs",
+        "text": "    if (inWord)\n    {\n        Sound.Play(\"key.wav\");\n        ShowFound();\n        if (new string(found) == word) WordSolved();\n    }\n    else\n    {\n        wrong++;\n        Sound.Play(\"whoosh.wav\");\n        pnlFog.Height = wrong * 60;    // the cloud comes down\n        lblWrong.Text = \"Wrong letters: \" + wrong + \" of 6\";\n        if (wrong == 6) Whiteout();\n    }\n}\n\n// Points for one word: 25 take away 4 for each wrong letter\nprivate int WordPoints()\n{\n    if (wrong == 6) return 0;\n    int points = 25 - 4 * wrong;\n    if (points < 5) points = 5;\n    return points;\n}",
+        "partLines": [
+         [
+          1,
+          6,
+          "A right letter",
+          "The key sound plays, and ShowFound shows the new letters. `new string(found)` joins the chars in `found` into one word. If it is the whole word, the word is solved."
+         ],
+         [
+          7,
+          11,
+          "A wrong letter",
+          "`wrong++` adds 1 to the wrong letters, and the whoosh sound plays. The cloud's height is 60 pixels for each wrong letter, so it comes down a step."
+         ],
+         [
+          12,
+          15,
+          "Six wrong letters",
+          "lblWrong shows the new count. At 6 wrong letters the cloud is 360 pixels tall, which covers the whole photo, and Whiteout runs."
+         ],
+         [
+          18,
+          24,
+          "WordPoints",
+          "A whiteout scores 0. Otherwise a word scores 25, take away 4 for each wrong letter. If that comes to less than 5, it scores 5."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          24
+         ]
+        ],
+        "typed": 15,
+        "wordMarks": [
+         [
+          11,
+          8,
+          14,
+          13
+         ],
+         [
+          11,
+          15,
+          21,
+          32
+         ],
+         [
+          5,
+          12,
+          23,
+          33
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the second `}` under `inWord = true;`. It closes the loop.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-9.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the `}`.",
+         "id": "4-9.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "`WordSolved` and `Whiteout` have red underlines. This is normal, because you have not written them yet.",
+         "wrong": [
+          [
+           "Every method under TryLetter has a red underline",
+           "TryLetter has one `}` too few, or one too many. Count the `{` and `}` in TryLetter against the code above. Visual Studio 2019 sometimes adds a `}` by itself when you type a `{`."
+          ]
+         ],
+         "id": "4-9.6",
+         "n": 6
+        }
+       ]
+      }
+     ],
+     "id": "9"
+    },
+    {
+     "title": "Type WordSolved and Whiteout, the two ways a word ends",
+     "blocks": [
+      {
+       "p": "By the end of this screen, a found word turns green and scores, and a whiteout turns the word red."
+      },
+      {
+       "p": "A word ends in one of 2 ways, so each way gets its own method. TryLetter already calls both of them."
+      },
+      {
+       "code": {
+        "id": "c15-solved",
+        "kind": "type",
+        "title": "WordSolved",
+        "lang": "cs",
+        "text": "// The whole word is found\nprivate void WordSolved()\n{\n    int points = WordPoints();\n    total = total + points;\n    lblWord.ForeColor = Color.FromArgb(62, 142, 65);\n    lblMessage.Text = \"You found the word \" + word + \". It scores \"\n        + points + \" points.\";\n    if (wrong == 1)\n    {\n        wellLines.Add(\"You found \" + word + \" with 1 wrong letter.\");\n    }\n    else\n    {\n        wellLines.Add(\"You found \" + word + \" with \" + wrong\n            + \" wrong letters.\");\n    }\n    Sound.Play(\"correct.wav\");\n    EndWord();\n}",
+        "partLines": [
+         [
+          2,
+          6,
+          "Score the word",
+          "WordPoints gives this word's points, and `total` adds them on. The word turns green."
+         ],
+         [
+          7,
+          8,
+          "Say the points",
+          "lblMessage says which word was found, and its points."
+         ],
+         [
+          9,
+          17,
+          "The feedback line",
+          "A line goes into What went well. With 1 wrong letter the line says letter, and otherwise it says letters."
+         ],
+         [
+          18,
+          20,
+          "End the word",
+          "The correct sound plays, and EndWord ends the word."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          20
+         ]
+        ],
+        "typed": 13,
+        "wordMarks": [
+         [
+          6,
+          24,
+          38,
+          35
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `WordPoints`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-10.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-10.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "`EndWord` has a red underline. This is normal, because you have not written EndWord yet.",
+         "id": "4-10.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c15-whiteout",
+        "kind": "type",
+        "title": "Whiteout",
+        "lang": "cs",
+        "text": "// The sixth wrong letter: the cloud hides the mountain\nprivate void Whiteout()\n{\n    for (int i = 0; i < word.Length; i++)\n    {\n        found[i] = word[i];\n    }\n    ShowFound();\n    lblWord.ForeColor = Color.FromArgb(178, 58, 46);\n    lblMessage.Text = \"Whiteout! The word was \" + word + \".\";\n    wrongLines.Add(\"The cloud came down on \" + word + \".\");\n    Sound.Play(\"lose.wav\");\n    EndWord();\n}",
+        "partLines": [
+         [
+          2,
+          8,
+          "Show the whole word",
+          "The loop copies every letter of the word into `found`, so ShowFound shows the whole word."
+         ],
+         [
+          9,
+          14,
+          "Say what happened",
+          "The word turns red. lblMessage says **Whiteout!** and gives the word. A line goes into What went wrong, the lose sound plays, and EndWord ends the word."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          14
+         ]
+        ],
+        "typed": 9,
+        "wordMarks": [
+         [
+          4,
+          38,
+          40,
+          34
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `WordSolved`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-10.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-10.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The red underline under `Whiteout` in TryLetter has gone.",
+         "id": "4-10.6",
+         "n": 6
+        }
+       ]
+      }
+     ],
+     "id": "10"
+    },
+    {
+     "title": "Type EndWord, btnNext_Click and RecordResult, then build",
+     "blocks": [
+      {
+       "p": "By the end of this screen, every method in Whiteout is written, and your project builds with no errors."
+      },
+      {
+       "p": "A word that ends needs a way on to the next word, and the round needs a way to keep its score. These last 3 methods do both."
+      },
+      {
+       "code": {
+        "id": "c15-endword",
+        "kind": "type",
+        "title": "EndWord",
+        "lang": "cs",
+        "text": "// Stops this word and shows the Next word button\nprivate void EndWord()\n{\n    wordOver = true;\n    for (int i = 0; i < 26; i++)\n    {\n        letters[i].Enabled = false;\n    }\n    if (number == 3)\n    {\n        btnNext.Text = \"See my score\";\n        RecordResult();\n    }\n    else\n    {\n        btnNext.Text = \"Next word\";\n    }\n    lblScore.Text = \"Points: \" + total;\n    btnNext.Visible = true;\n    btnNext.Focus();\n}",
+        "partLines": [
+         [
+          2,
+          8,
+          "No more letters",
+          "`wordOver` turns true, and the loop turns off all 26 letter buttons."
+         ],
+         [
+          9,
+          17,
+          "Next word or See my score",
+          "Word number 3 is the 4th word, because `number` counts from 0. After it, the button says See my score, and RecordResult keeps the result at once."
+         ],
+         [
+          18,
+          21,
+          "Show the button",
+          "Points on the header strip shows the total so far. The button appears. `btnNext.Focus()` means the player can press Enter to move on."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          21
+         ]
+        ],
+        "typed": 12,
+        "wordMarks": [
+         [
+          7,
+          19,
+          26,
+          31
+         ],
+         [
+          5,
+          29,
+          31,
+          34
+         ],
+         [
+          20,
+          12,
+          17,
+          37
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `Whiteout`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-11.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-11.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The red underline under `EndWord` has gone. `RecordResult` has a red underline.",
+         "id": "4-11.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "code": {
+        "id": "c15-record",
+        "kind": "type",
+        "title": "btnNext_Click and RecordResult",
+        "lang": "cs",
+        "text": "// Next word, or See my score after word 4\nprivate void btnNext_Click(object sender, EventArgs e)\n{\n    if (number == 3)\n    {\n        ShowRoundOver();\n        return;\n    }\n    number++;\n    ShowWord();\n}\n\n// Adds the feedback to the result, then keeps it\nprivate void RecordResult()\n{\n    result = new GameResult(\"Whiteout\", total);\n    result.WentWell.AddRange(wellLines);\n    result.WentWrong.AddRange(wrongLines);\n    KeepResult();\n}",
+        "partLines": [
+         [
+          2,
+          8,
+          "After the last word",
+          "btnNext_Click runs when the player clicks the button. After the 4th word it shows the Round over box and stops."
+         ],
+         [
+          9,
+          11,
+          "The next word",
+          "Otherwise `number` goes up by 1, and ShowWord shows the next word."
+         ],
+         [
+          14,
+          20,
+          "RecordResult",
+          "`new GameResult` from chapter 9 makes the result, with the game's name and the total. `AddRange` adds all the lines in `wellLines` and `wrongLines` to the result in one go. KeepResult, from chapter 9, keeps the result for the map."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          20
+         ]
+        ],
+        "typed": 11,
+        "wordMarks": [
+         [
+          2,
+          34,
+          40,
+          21
+         ],
+         [
+          17,
+          20,
+          28,
+          38
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `EndWord`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "img": "img/cap/c394.png",
+          "alt": "frmWhiteout.cs, with btnNext_Click and RecordResult typed under EndWord",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 4,
+            "x": 9.8,
+            "y": 25.3,
+            "say": "Click at the end of the `}` that closes `EndWord`."
+           },
+           {
+            "n": 5,
+            "x": 9.6,
+            "y": 27.3,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 6,
+            "x": 8.9,
+            "y": 28.1,
+            "w": 26.8,
+            "h": 38.8,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 7,
+            "x": 0.1,
+            "y": 92.7,
+            "w": 12.6,
+            "h": 2.1,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "id": "4-11.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-11.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "No line in frmWhiteout.cs has a red underline.",
+         "id": "4-11.6",
+         "n": 6
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "wrong": [
+          [
+           "The Error List shows CS0246: The type or namespace name 'LetterAlreadyTriedException' could not be found",
+           "Your `Exceptions.cs` from chapter 4 has no LetterAlreadyTriedException class. Open `Exceptions.cs` and check its class names letter by letter. Capital letters count."
+          ],
+          [
+           "The Error List shows warnings, such as CS0414",
+           "A warning is not an error. The warnings go away once every method is connected."
+          ]
+         ],
+         "id": "4-11.7",
+         "n": 7
+        }
+       ]
+      }
+     ],
+     "id": "11"
+    },
+    {
+     "title": "Connect Next word and the typed keys to their methods",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the Next word button moves on, and typed letters reach the game."
+      },
+      {
+       "p": "The letter buttons are connected in MakeLetters, by `+=`. Next word and the form's [[KeyPress|23]] event still need connecting in the Properties window."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Shift and F7 together.",
+         "see": "The designer shows frmWhiteout.",
+         "img": {
+          "img": "img/cap/c395.png",
+          "alt": "frmWhiteout in the designer, with Next word picked and the Properties window showing its events",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 1,
+            "x": 8.6,
+            "y": 13.3,
+            "w": 9.2,
+            "h": 2.4,
+            "say": "Press Shift and F7 together."
+           },
+           {
+            "n": 2,
+            "x": 30.4,
+            "y": 65.8,
+            "w": 11.5,
+            "h": 5.6,
+            "say": "Click **Next word** on pnlPlay."
+           },
+           {
+            "n": 3,
+            "x": 84.9,
+            "y": 38.5,
+            "say": "Click the lightning bolt at the top of the Properties window."
+           },
+           {
+            "n": 4,
+            "x": 88.0,
+            "y": 58.8,
+            "w": 9.6,
+            "h": 2.4,
+            "say": "Click the box beside **Click**."
+           },
+           {
+            "n": 5,
+            "x": 96.9,
+            "y": 60.0,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 6,
+            "x": 91.8,
+            "y": 60.0,
+            "say": "Click `btnNext_Click` in the list."
+           }
+          ]
+         },
+         "id": "4-12.1",
+         "n": 1
+        },
+        {
+         "do": "Click **Next word** on pnlPlay.",
+         "see": "The Properties window shows btnNext at the top.",
+         "id": "4-12.2",
+         "n": 2
+        },
+        {
+         "do": "Click the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists the events of btnNext.",
+         "id": "4-12.3",
+         "n": 3
+        },
+        {
+         "do": "Click the box beside **Click**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-12.4",
+         "n": 4
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-12.5",
+         "n": 5
+        },
+        {
+         "do": "Click `btnNext_Click` in the list.",
+         "see": "The box beside Click shows `btnNext_Click`.",
+         "id": "4-12.6",
+         "n": 6
+        },
+        {
+         "do": "Click the title bar of frmWhiteout.",
+         "see": "The Properties window lists the events of frmWhiteout.",
+         "img": {
+          "img": "img/cap/c396.png",
+          "alt": "The Properties window showing the events of frmWhiteout, with frmWhiteout_KeyPress beside KeyPress",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 7,
+            "x": 19.1,
+            "y": 20.1,
+            "say": "Click the title bar of frmWhiteout."
+           },
+           {
+            "n": 8,
+            "x": 88.0,
+            "y": 81.8,
+            "w": 9.6,
+            "h": 2.4,
+            "say": "Click the box beside **KeyPress**."
+           },
+           {
+            "n": 9,
+            "x": 96.9,
+            "y": 83.0,
+            "say": "Click the small arrow at the right end of the box."
+           },
+           {
+            "n": 10,
+            "x": 91.8,
+            "y": 83.0,
+            "say": "Click `frmWhiteout_KeyPress` in the list."
+           }
+          ]
+         },
+         "id": "4-12.7",
+         "n": 7
+        },
+        {
+         "do": "Click the box beside **KeyPress**.",
+         "see": "A small arrow appears at the right end of the box.",
+         "id": "4-12.8",
+         "n": 8
+        },
+        {
+         "do": "Click the small arrow at the right end of the box.",
+         "see": "A list of methods drops down.",
+         "id": "4-12.9",
+         "n": 9
+        },
+        {
+         "do": "Click `frmWhiteout_KeyPress` in the list.",
+         "see": "The box beside KeyPress shows `frmWhiteout_KeyPress`.",
+         "id": "4-12.10",
+         "n": 10
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "img": "img/cap/c010.png",
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 610,
+          "h": 223,
+          "marks": [
+           {
+            "n": 11,
+            "x": 11.5,
+            "y": 94.9,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "id": "4-12.11",
+         "n": 11
+        }
+       ]
+      }
+     ],
+     "id": "12"
+    },
+    {
+     "title": "Open Whiteout from the map and play a round",
+     "blocks": [
+      {
+       "p": "By the end of this screen, place number 4 on your map opens Whiteout, and you have played a whole round."
+      },
+      {
+       "p": "Your map opens each game with a list of cases in frmMap.cs, one case for each place. Whiteout is place number 4, so its case says `case 4:`."
+      },
+      {
+       "code": {
+        "id": "c15-map",
+        "kind": "type",
+        "title": "The case line for Whiteout in frmMap.cs",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "case 4: game = new frmWhiteout(); break;",
+        "partLines": [
+         [
+          1,
+          1,
+          "Open Whiteout",
+          "When the player clicks place number 4, `game` becomes a new frmWhiteout window. `break;` ends this case. The map then opens the window."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          1
+         ]
+        ],
+        "typed": 1
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `frmMap.cs` in Solution Explorer.",
+         "see": "frmMap opens in the designer.",
+         "img": {
+          "img": "img/cap/c236.png",
+          "alt": "Visual Studio 2019 with frmMap.cs in the code editor. The search box is open and the new case line is typed. frmMap.cs is picked in Solution Explorer on the right",
+          "w": 1568,
+          "h": 510,
+          "marks": [
+           {
+            "n": 1,
+            "x": 86.7,
+            "y": 19.2,
+            "say": "Double-click `frmMap.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "x": 1.7,
+            "y": 0.2,
+            "w": 5.4,
+            "h": 2.9,
+            "say": "Press F7."
+           },
+           {
+            "n": 3,
+            "x": 66.3,
+            "y": 7.8,
+            "w": 10.0,
+            "h": 3.1,
+            "say": "Press Ctrl and F together."
+           },
+           {
+            "n": 4,
+            "x": 13.5,
+            "y": 50.6,
+            "w": 8.3,
+            "h": 2.5,
+            "say": "Type `each game chapter adds`"
+           },
+           {
+            "n": 5,
+            "x": 79.4,
+            "y": 9.2,
+            "say": "Press Escape."
+           },
+           {
+            "n": 6,
+            "x": 6.5,
+            "y": 54.5,
+            "say": "Press End."
+           },
+           {
+            "n": 7,
+            "x": 12.4,
+            "y": 54.5,
+            "say": "Press Enter."
+           },
+           {
+            "n": 8,
+            "x": 12.3,
+            "y": 53.1,
+            "w": 15.0,
+            "h": 2.7,
+            "say": "Type the yellow line from the code above."
+           }
+          ]
+         },
+         "id": "4-13.1",
+         "n": 1
+        },
+        {
+         "do": "Press F7.",
+         "see": "The code of frmMap shows.",
+         "id": "4-13.2",
+         "n": 2
+        },
+        {
+         "do": "Press Ctrl and F together.",
+         "see": "A small search box opens at the top right of the code.",
+         "id": "4-13.3",
+         "n": 3
+        },
+        {
+         "do": "Type `each game chapter adds`",
+         "see": "The line `// each game chapter adds its own case below this line` is highlighted.",
+         "id": "4-13.4",
+         "n": 4
+        },
+        {
+         "do": "Press Escape.",
+         "see": "The search box closes. The words you searched for stay highlighted.",
+         "id": "4-13.5",
+         "n": 5
+        },
+        {
+         "do": "Press End.",
+         "see": "The flashing cursor moves to the end of the comment line.",
+         "id": "4-13.6",
+         "n": 6
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the comment line.",
+         "id": "4-13.7",
+         "n": 7
+        },
+        {
+         "do": "Type the yellow line from the code above.",
+         "see": "The new line says `case 4: game = new frmWhiteout(); break;`.",
+         "wrong": [
+          [
+           "The Error List shows CS0152: The switch statement contains multiple cases with the label value '4'",
+           "Your map already uses place number 4 for another game. Change the 4 in the new case line to a place number that your map does not use yet. Then change `gameNumber` in frmWhiteout.cs to the same number."
+          ]
+         ],
+         "id": "4-13.8",
+         "n": 8
+        },
+        {
+         "do": "Press F5.",
+         "see": "Your game starts and shows the login window.",
+         "img": {
+          "img": "img/cap/c237.png",
+          "alt": "The login window of your game, with a player's name and password typed in",
+          "w": 999,
+          "h": 690,
+          "marks": [
+           {
+            "n": 9,
+            "x": 8.0,
+            "y": 1.9,
+            "say": "Press F5."
+           },
+           {
+            "n": 10,
+            "x": 33.0,
+            "y": 63.8,
+            "w": 33.8,
+            "h": 29.7,
+            "say": "Log in with a player you registered in chapter 5."
+           }
+          ]
+         },
+         "id": "4-13.9",
+         "n": 9
+        },
+        {
+         "do": "Log in with a player you registered in chapter 5.",
+         "see": "The Welcome screen opens.",
+         "id": "4-13.10",
+         "n": 10
+        },
+        {
+         "do": "Click **Start the expedition**.",
+         "see": "The map opens.",
+         "img": {
+          "img": "img/cap/c238.png",
+          "alt": "The Welcome screen of your game, with the Start the expedition button",
+          "w": 999,
+          "h": 690,
+          "marks": [
+           {
+            "n": 11,
+            "x": 3.4,
+            "y": 87.5,
+            "w": 28.0,
+            "h": 7.5,
+            "say": "Click **Start the expedition**."
+           }
+          ]
+         },
+         "id": "4-13.11",
+         "n": 11
+        },
+        {
+         "do": "Click place number 4 on the map, the fifth place.",
+         "see": "Whiteout opens, with the mountain photo, a clue, a row of underscores and 26 letter buttons.",
+         "img": {
+          "img": "img/cap/c397.png",
+          "alt": "The map, with place number 4 picked",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 12,
+            "x": 56.6,
+            "y": 49.2,
+            "w": 18.8,
+            "h": 7.0,
+            "say": "Click place number 4 on the map, the fifth place."
+           }
+          ]
+         },
+         "id": "4-13.12",
+         "n": 12
+        },
+        {
+         "do": "Play a whole round. Try some letters with the mouse and some on the keyboard.",
+         "see": "After the 4th word, See my score opens the Round over box.",
+         "img": {
+          "img": "img/cap/c398.png",
+          "alt": "Whiteout part-way through a word, with some cloud over the mountain",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 13,
+            "x": 25.0,
+            "y": 65.5,
+            "w": 33.8,
+            "h": 11.9,
+            "say": "Play a whole round. Try some letters with the mouse and some on the keyboard."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "No word appears, and the clue says **Whiteout needs 4 words**",
+           "Whiteout cannot find 4 good lines in `words.txt`. Check that the Data folder inside bin\\Debug holds `words.txt`. Then check that each line has 2 parts split by a bar `|`."
+          ],
+          [
+           "There are no letter buttons along the bottom",
+           "Check that frmWhiteout_Load calls `MakeLetters();`, and that MakeLetters ends with `flpLetters.Controls.Add(b);` and the SetFlowBreak line."
+          ],
+          [
+           "Typing a letter on the keyboard does nothing",
+           "Click the title bar of frmWhiteout in the designer. Check that KeyPreview is True, and that the events list shows `frmWhiteout_KeyPress` beside KeyPress."
+          ],
+          [
+           "A wrong letter counts, but no cloud comes down",
+           "pnlFog may have landed inside another control. Pick pnlFog from the list at the top of the Properties window. Check that its Location is `20, 8`. Then right-click picPeak and click **Send to Back**."
+          ],
+          [
+           "A different game opens, or nothing opens, when you click place number 4",
+           "Check the new line in frmMap.cs. It must say `case 4:` and `new frmWhiteout()`."
+          ]
+         ],
+         "id": "4-13.13",
+         "n": 13
+        }
+       ]
+      }
+     ],
+     "id": "13"
+    },
+    {
+     "title": "Your turn: make the cloud come down in 5 wrong letters",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have changed how many wrong letters make a whiteout, and tested it, on your own."
+      },
+      {
+       "p": "Six wrong letters make a whiteout. Change Whiteout so that 5 wrong letters make a whiteout, and the cloud still covers the whole photo at the end."
+      },
+      {
+       "code": {
+        "id": "c15-turn-fog",
+        "kind": "turn",
+        "title": "A whiteout after 5 wrong letters",
+        "lang": "cs",
+        "text": "pnlFog.Height = wrong * 72;\nif (wrong == 5) Whiteout();",
+        "task": [
+         "In TryLetter, change the line `if (wrong == 6) Whiteout();` so that 5 wrong letters make a whiteout.",
+         "In TryLetter, make each step of the cloud 72 pixels, so that 5 steps cover the 360-pixel photo.",
+         "In WordPoints, change `wrong == 6` so that a whiteout still scores 0.",
+         "Change every `of 6` the player can read to `of 5`: in ShowWord, in TryLetter, and in the Text of lblWrong."
+        ],
+        "test": "Press F5, open Whiteout from the map, and try wrong letters until the word ends.",
+        "expect": "The count goes up to **Wrong letters: 5 of 5**. On the 5th wrong letter the cloud covers the whole photo, and the message says **Whiteout!**",
+        "hint": "Press Ctrl and F together, then type `6` to find every 6 in frmWhiteout.cs. Not every 6 is about wrong letters, so read each line before you change it."
+       }
+      },
+      {
+       "p": "When the test passes, change everything back to 6 and 60, because Whiteout is meant to allow 6 wrong letters."
+      }
+     ],
+     "id": "14"
+    },
+    {
+     "title": "Check that Whiteout works",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that every part of Whiteout works, including the letters it must refuse."
+      },
+      {
+       "p": "Run each test with F5. Tick each test when it passes. The 2 tests marked as letters to refuse must do nothing, and that counts as a pass."
+      },
+      {
+       "check": [
+        {
+         "what": "Click a letter that is in the word.",
+         "expect": "allowed",
+         "how": "The letter shows in every place it comes in the word. Its button turns grey.",
+         "must": "Must happen",
+         "fix": "Check the first part of TryLetter against its yellow lines, one line at a time.",
+         "id": "4-15.t1"
+        },
+        {
+         "what": "Click a letter that is not in the word.",
+         "expect": "allowed",
+         "how": "The cloud comes down a step over the photo, and the count says **Wrong letters: 1 of 6**.",
+         "must": "Must happen",
+         "fix": "Check the line `pnlFog.Height = wrong * 60;` in TryLetter. Then check that pnlFog is in front of picPeak.",
+         "id": "4-15.t2"
+        },
+        {
+         "what": "Type a letter on the keyboard.",
+         "expect": "allowed",
+         "how": "It counts the same as a click on its button.",
+         "must": "Must happen",
+         "fix": "Check that KeyPreview is True on frmWhiteout, and that KeyPress shows `frmWhiteout_KeyPress`.",
+         "id": "4-15.t3"
+        },
+        {
+         "what": "Type a letter you have already tried.",
+         "expect": "control",
+         "how": "The message says **You have already tried** and names the letter. The wrong-letter count must not change.",
+         "fix": "Check the `if (tried.IndexOf(letter) >= 0)` lines at the top of TryLetter, and the `try` and `catch` in KeyPress.",
+         "id": "4-15.t4"
+        },
+        {
+         "what": "Type letters after a word has ended, before you click Next word.",
+         "expect": "control",
+         "how": "Nothing must change.",
+         "fix": "Check that EndWord sets `wordOver = true;`, and that TryLetter starts with `if (wordOver || word == null) return;`.",
+         "id": "4-15.t5"
+        },
+        {
+         "what": "Find a word with no wrong letters.",
+         "expect": "allowed",
+         "how": "The word turns green, and the message says **It scores 25 points.**",
+         "must": "Must happen",
+         "fix": "Check WordPoints against its yellow lines.",
+         "id": "4-15.t6"
+        },
+        {
+         "what": "Try 6 wrong letters on one word.",
+         "expect": "allowed",
+         "how": "The cloud covers the whole photo, the word shows in red, and the message starts with **Whiteout!**",
+         "must": "Must happen",
+         "fix": "Check the line `if (wrong == 6) Whiteout();` in TryLetter, then check the Whiteout method.",
+         "id": "4-15.t7"
+        },
+        {
+         "what": "Click Back to the map in the middle of a round, then click No.",
+         "expect": "allowed",
+         "how": "The question **Leave Whiteout?** appears. After No, Whiteout stays open.",
+         "must": "Must happen",
+         "fix": "Click the form itself, open the events list in the Properties window, and check that FormClosing shows `frmWhiteout_FormClosing`.",
+         "id": "4-15.t8"
+        },
+        {
+         "what": "Finish a round, then click Back to the map.",
+         "expect": "allowed",
+         "how": "The map shows again, and the flag on place number 4 shows a tick.",
+         "must": "Must happen",
+         "fix": "Check that the first field at the top of frmWhiteout is `private int gameNumber = 4;`. Then check that frmMap opens Whiteout for `case 4:`.",
+         "id": "4-15.t9"
+        }
+       ]
+      }
+     ],
+     "id": "15"
+    }
+   ],
+   "id": "4"
+  },
+  {
+   "title": "Change Whiteout into a game on your own topic",
+   "screens": [
+    {
+     "title": "Choose your own words, and 2 more things to change",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have chosen your own words, and 2 more things to change."
+      },
+      {
+       "p": "Your own game keeps the Whiteout code, but uses your own topic. Each word is one word with a clue, so any topic with key words works."
+      },
+      {
+       "box": {
+        "title": "3 topics that work",
+        "blocks": [
+         {
+          "p": "Science: the name of a part of a cell or a plant, with what it does as the clue."
+         },
+         {
+          "p": "Computing: a key word such as ROUTER or BINARY, with its meaning as the clue."
+         },
+         {
+          "p": "Spanish or French: a word in the language, with its English meaning as the clue."
+         }
+        ]
+       }
+      },
+      {
+       "p": "Each word must be one word, using only the letters A to Z, with no spaces. Keep each word to 9 letters or fewer, so it fits on the screen."
+      },
+      {
+       "p": "You need at least 4 words, because a round uses 4. More is better, so the rounds differ."
+      },
+      {
+       "p": "Change at least 2 more things as well, so that your game plays differently from Whiteout. For example, change the number of wrong letters allowed, the points, the number of words or the pictures."
+      },
+      {
+       "p": "Every picture and sound you use must be free to use. Each one gets a line in `credits.txt`, saying who made it, its licence and a link."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Rename the WordClue class and the Whiteout form",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your class and your form have names that fit your topic."
+      },
+      {
+       "p": "A form called frmWhiteout in a game about cells would confuse anyone who reads your code. Visual Studio 2019 can rename a file, and every use of its class, in one go."
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click `WordClue.cs` in Solution Explorer.",
+         "see": "A menu opens.",
+         "img": {
+          "img": "img/cap/c399.png",
+          "alt": "Solution Explorer, with the right-click menu of WordClue.cs open",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 1,
+            "x": 85.8,
+            "y": 84.4,
+            "say": "Right-click `WordClue.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "x": 68.5,
+            "y": 85.6,
+            "w": 14.5,
+            "h": 2.7,
+            "say": "Click **Rename**."
+           }
+          ]
+         },
+         "id": "5-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click **Rename**.",
+         "see": "The name `WordClue.cs` becomes a box, with `WordClue` highlighted.",
+         "id": "5-2.2",
+         "n": 2
+        },
+        {
+         "do": "Type your class's new name, such as `CellWord`",
+         "see": "The box shows `CellWord.cs`. Visual Studio keeps the `.cs` on the end for you.",
+         "img": {
+          "img": "img/cap/c400.png",
+          "alt": "Solution Explorer, with the name WordClue.cs turned into a box and CellWord.cs typed in it",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 3,
+            "x": 83.7,
+            "y": 83.1,
+            "w": 4.1,
+            "h": 2.5,
+            "say": "Type your class's new name, such as `CellWord`"
+           },
+           {
+            "n": 4,
+            "x": 88.8,
+            "y": 84.3,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "5-2.3",
+         "n": 3
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A message asks: You are renaming a file. Would you also like to perform a rename in this project of all references to the code element 'WordClue'?",
+         "id": "5-2.4",
+         "n": 4
+        },
+        {
+         "do": "Click **Yes**.",
+         "see": "Every use of the class WordClue in your code changes to the new name. For example, `List<WordClue>` becomes `List<CellWord>`.",
+         "img": {
+          "img": "img/cap/c401.png",
+          "alt": "The message that asks whether to rename every use of WordClue",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 5,
+            "x": 53.6,
+            "y": 60.3,
+            "say": "Click **Yes**."
+           }
+          ]
+         },
+         "id": "5-2.5",
+         "n": 5
+        },
+        {
+         "do": "Right-click `frmWhiteout.cs` in Solution Explorer.",
+         "see": "A menu opens.",
+         "img": {
+          "img": "img/cap/c402.png",
+          "alt": "Solution Explorer, with the right-click menu of frmWhiteout.cs open",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 6,
+            "x": 86.1,
+            "y": 60.4,
+            "say": "Right-click `frmWhiteout.cs` in Solution Explorer."
+           },
+           {
+            "n": 7,
+            "x": 68.5,
+            "y": 85.6,
+            "w": 14.5,
+            "h": 2.7,
+            "say": "Click **Rename**."
+           }
+          ]
+         },
+         "id": "5-2.6",
+         "n": 6
+        },
+        {
+         "do": "Click **Rename**.",
+         "see": "The name `frmWhiteout.cs` becomes a box, with `frmWhiteout` highlighted.",
+         "id": "5-2.7",
+         "n": 7
+        },
+        {
+         "do": "Type your form's new name, such as `frmCells`",
+         "see": "The box shows `frmCells.cs`. Visual Studio keeps the `.cs` on the end for you.",
+         "img": {
+          "img": "img/cap/c403.png",
+          "alt": "Solution Explorer, with the name frmWhiteout.cs turned into a box and frmCells.cs typed in it",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 8,
+            "x": 83.8,
+            "y": 59.3,
+            "w": 3.3,
+            "h": 2.4,
+            "say": "Type your form's new name, such as `frmCells`"
+           },
+           {
+            "n": 9,
+            "x": 88.0,
+            "y": 60.4,
+            "say": "Press Enter."
+           }
+          ]
+         },
+         "id": "5-2.8",
+         "n": 8
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The same message asks about every use of 'frmWhiteout'.",
+         "id": "5-2.9",
+         "n": 9
+        },
+        {
+         "do": "Click **Yes**.",
+         "see": "Every use of the class frmWhiteout changes to the new name, including the line in frmMap.cs that opens your game.",
+         "img": {
+          "img": "img/cap/c404.png",
+          "alt": "The message that asks whether to rename every use of frmWhiteout",
+          "w": 1568,
+          "h": 675,
+          "marks": [
+           {
+            "n": 10,
+            "x": 53.6,
+            "y": 60.3,
+            "say": "Click **Yes**."
+           }
+          ]
+         },
+         "id": "5-2.10",
+         "n": 10
+        }
+       ]
+      },
+      {
+       "p": "Names such as `picPeak`, `frmWhiteout_Load` and the method `Whiteout` keep their old names. This is normal, and the old names still work. Rename them only if you want to."
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Put your own data file and pictures into bin\\Debug",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your game reads your own data file and shows your own pictures."
+      },
+      {
+       "p": "Your own files go in the same folders as the Summit Ready files, inside bin\\Debug. Your data file goes in Data, your pictures go in a folder inside Images, and any new sounds go in Sounds."
+      },
+      {
+       "code": {
+        "id": "c15-turn-data",
+        "kind": "turn",
+        "title": "Use your own data file and pictures",
+        "lang": "cs",
+        "text": "string path = Files.Data(\"cells.txt\");\npicPeak.Image = Files.Picture(\"Cells\", \"cell-diagram.jpg\");",
+        "task": [
+         "Open Notepad and type at least 4 lines. On each line put a word, a bar `|`, then its clue, like `words.txt`.",
+         "Save the text file in the Data folder inside bin\\Debug, with your own name, such as `cells.txt`.",
+         "Open your class file, `WordClue.cs`. Find the LoadAll method and change `words.txt` to the name of your text file.",
+         "Make a folder for your picture inside bin\\Debug\\Images, such as Cells, and put your picture in the folder.",
+         "Change the line in frmWhiteout_Load that loads `summit-bearnagh.jpg`, so it loads your picture from your folder.",
+         "Add a line to `credits.txt` for each new picture and each new sound."
+        ],
+        "test": "Press F5 and open your game from the map.",
+        "expect": "The first word has your own clue, and your own picture is on the left.",
+        "hint": "LoadAll is the only method that opens the text file. frmWhiteout_Load is the only method that opens the picture."
+       }
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Change the words on the screen to fit your topic",
+     "blocks": [
+      {
+       "p": "By the end of this screen, every word on the screen and in the Round over box fits your topic."
+      },
+      {
+       "p": "A player of your game should never read about the mountain or the cloud, unless your topic is the weather. The words are in 2 places: the Properties window, and the messages in the code."
+      },
+      {
+       "code": {
+        "id": "c15-turn-words",
+        "kind": "turn",
+        "title": "Change every word about the cloud",
+        "lang": "cs",
+        "text": "lblMessage.Text = \"Out of guesses! The word was \" + word + \".\";\nresult = new GameResult(\"Cell Words\", total);",
+        "task": [
+         "Click lblTitle on the form, then change its Text in the Properties window. Do the same for lblInstruction.",
+         "Click an empty part of the form, then change its Text in the Properties window. This shows in the title bar of the window.",
+         "Change the message in frmWhiteout_Load that says **Whiteout needs 4 words**.",
+         "Change the 2 lines in the Whiteout method that say **Whiteout!** and **The cloud came down on**.",
+         "Find frmWhiteout_FormClosing in your form's code. It runs when the window closes. Change the question it asks.",
+         "Change the game's name, `\"Whiteout\"`, in RecordResult."
+        ],
+        "test": "Play a round to the end, with at least one word lost, and read every word on the screen and in the Round over box.",
+        "expect": "No word on the screen is about the cloud or the mountain, unless your topic is the weather.",
+        "hint": "Press Ctrl, Shift and F together, then type `Whiteout` to find every place the old name is still used. Do the same for `cloud`."
+       }
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Test your game, and keep the evidence",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that your own game works, and you have the evidence for your coursework."
+      },
+      {
+       "p": "Run each test with F5 on your own game. Tick each test when it passes. In the 2 tests marked Must be refused, the game refusing the letter counts as a pass."
+      },
+      {
+       "check": [
+        {
+         "what": "Click a letter that is in the word.",
+         "expect": "allowed",
+         "how": "The letter shows in every place it comes in the word.",
+         "must": "Must happen",
+         "id": "5-5.t1"
+        },
+        {
+         "what": "Click a letter that is not in the word.",
+         "expect": "allowed",
+         "how": "The cloud comes down a step, and the wrong-letter count goes up by 1.",
+         "must": "Must happen",
+         "id": "5-5.t2"
+        },
+        {
+         "what": "Find a whole word.",
+         "expect": "allowed",
+         "how": "The word turns green, and the message gives its points.",
+         "must": "Must happen",
+         "id": "5-5.t3"
+        },
+        {
+         "what": "Type a letter you have already tried.",
+         "expect": "control",
+         "how": "The message says you have already tried it. The wrong-letter count must not change.",
+         "id": "5-5.t4"
+        },
+        {
+         "what": "Type letters after a word has ended.",
+         "expect": "control",
+         "how": "Nothing must change.",
+         "id": "5-5.t5"
+        },
+        {
+         "what": "Finish a round, then go back to the map.",
+         "expect": "allowed",
+         "how": "The flag on your game's place shows a tick.",
+         "must": "Must happen",
+         "id": "5-5.t6"
+        }
+       ]
+      },
+      {
+       "p": "Every test passed in Whiteout. So if a test fails now, the fault is in something you changed in this stage. Look back over your changes one at a time, starting with the last one."
+      },
+      {
+       "box": {
+        "title": "Evidence to keep",
+        "blocks": [
+         {
+          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
+         },
+         {
+          "p": "Paste each screenshot into your testing document, under the test it shows."
+         },
+         {
+          "p": "Keep your data file and your `credits.txt` with your project."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "5"
+    }
+   ],
+   "id": "5"
+  }
+ ],
+ "glossary": [
+  [
+   "bin\\Debug",
+   "The folder inside your project where Visual Studio 2019 puts the program it builds. Summit Ready reads its data, pictures and sounds from there."
+  ],
+  [
+   "zip file",
+   "One file with other files and folders packed inside it."
+  ],
+  [
+   "property",
+   "A named value that an object carries, such as `Clue` on a WordClue. `{ get; set; }` lets other code read the value and change it."
+  ],
+  [
+   "constructor",
+   "A method with the same name as its class. It runs once, when code makes a new object with `new`."
+  ],
+  [
+   "static",
+   "A method marked `static` belongs to the class itself. You call it on the class name, as in `WordClue.LoadAll()`."
+  ],
+  [
+   "List",
+   "A list that grows as you add to it. `List<WordClue>` is a list that holds WordClue objects."
+  ],
+  [
+   "continue",
+   "Inside a loop, `continue` skips the rest of this turn of the loop. The loop goes straight on to its next turn."
+  ],
+  [
+   "not equal",
+   "`!=` means is not equal to. `parts.Length != 2` is true when a line does not have exactly 2 parts."
+  ],
+  [
+   "char",
+   "One letter, digit or other character. A `char` is written in single quotes, such as `'A'`."
+  ],
+  [
+   "array",
+   "A row of values of the same type, kept together under one name and numbered from 0. `letters[0]` is the A button, and `letters[25]` is the Z button."
+  ],
+  [
+   "cast",
+   "A type in brackets in front of a value turns the value into that type. `(char)` turns a number into a letter, and `(Button)` treats `sender` as a button."
+  ],
+  [
+   "lightning bolt",
+   "The button at the top of the Properties window that shows a control's events in place of its properties."
+  ],
+  [
+   "field",
+   "A variable written at the top of the class, outside every method. Every method in the form can use it, and it keeps its value until the window closes."
+  ],
+  [
+   "panel",
+   "A control that holds other controls, or covers part of the window. `pnlFog` is the cloud that comes down over the mountain."
+  ],
+  [
+   "PictureBox",
+   "A control that shows a picture. `picPeak` shows the photo of the mountain."
+  ],
+  [
+   "FlowLayoutPanel",
+   "A panel that lines up the controls inside it in rows, one after another. `flpLetters` holds the 26 letter buttons."
+  ],
+  [
+   "SetFlowBreak",
+   "Tells a FlowLayoutPanel to start a new row after one control."
+  ],
+  [
+   "Controls.Add",
+   "Puts a control made in code onto a form or a panel, so it shows."
+  ],
+  [
+   "connect with +=",
+   "`b.Click += Letter_Click;` connects the button's Click event to Letter_Click in code. It does the same job as picking the method in the Properties window."
+  ],
+  [
+   "event",
+   "Something that happens to a control, such as a click on a button, or a key typed on the keyboard."
+  ],
+  [
+   "handler",
+   "The method that runs when an event happens. `Letter_Click` is the handler for a click on any of the 26 letter buttons."
+  ],
+  [
+   "sender",
+   "Every handler is given `sender`: the control that the event happened to, such as the letter button that was clicked."
+  ],
+  [
+   "KeyPreview",
+   "A form property. When it is True, the form hears every key typed, even when a button in the form is the one selected."
+  ],
+  [
+   "KeyPress",
+   "The event that happens when a key that makes a character is typed. `frmWhiteout_KeyPress` is its handler."
+  ],
+  [
+   "Handled",
+   "`e.Handled = true;` tells Windows that the key has been dealt with, so no other control acts on it."
+  ],
+  [
+   "ToUpper",
+   "Gives a copy in capital letters. `char.ToUpper('e')` gives `'E'`."
+  ],
+  [
+   "or",
+   "`||` means or. The `if` is true when any one of its parts is true."
+  ],
+  [
+   "exception",
+   "An error that stops your code on the spot. The code then jumps to the nearest `catch` that handles that kind of error."
+  ],
+  [
+   "throw",
+   "`throw` starts an exception, which stops the method at once."
+  ],
+  [
+   "try and catch",
+   "Code inside `try` runs as normal. If it throws an exception, the code inside `catch` runs in place of a crash."
+  ],
+  [
+   "IndexOf",
+   "Finds a letter in some text, and gives its place, counting from 0. It gives -1 when the letter is not there."
+  ],
+  [
+   "Enabled",
+   "When a control's Enabled is false, it cannot be clicked."
+  ],
+  [
+   "Height",
+   "How tall a control is, in pixels. Whiteout makes the cloud taller with each wrong letter."
+  ],
+  [
+   "new string",
+   "`new string(found)` joins an array of chars into one piece of text."
+  ],
+  [
+   "count up with ++",
+   "`++` adds 1 to a whole number. `wrong++` means wrong becomes one more than it was."
+  ],
+  [
+   "colour from red, green and blue",
+   "`Color.FromArgb(62, 142, 65)` mixes a colour from red, green and blue. Each number is from 0 to 255."
+  ],
+  [
+   "Cursor",
+   "The mouse pointer's shape over a control. `Cursors.Hand` is a pointing hand."
+  ],
+  [
+   "Focus",
+   "`btnNext.Focus()` makes btnNext the control that the Enter key presses."
+  ],
+  [
+   "AddRange",
+   "Adds every item of one list to the end of another list in one go."
+  ],
+  [
+   "red underline",
+   "The wavy red line Visual Studio 2019 draws under code it does not understand yet. Often it means a method you have not written yet."
+  ]
+ ]
+}

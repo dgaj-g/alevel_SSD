@@ -1,0 +1,2097 @@
+{
+ "id": "06",
+ "n": 6,
+ "of": 20,
+ "title": "Log in",
+ "kind": "a build chapter: the windows every player sees before the map",
+ "one": "You turn frmLogin into the Log in window. It checks the username and password, locks for 30 seconds after 3 wrong tries, and opens the Register window from chapter 5.",
+ "prev": {
+  "id": "05",
+  "n": 5,
+  "title": "Register a new player with an avatar"
+ },
+ "next": {
+  "id": "07",
+  "n": 7,
+  "title": "Scores, the Welcome window and the Top 10"
+ },
+ "stages": [
+  {
+   "title": "See what the Log in window does",
+   "screens": [
+    {
+     "title": "Look at the Log in window and what it checks",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know what happens when a player clicks **Log in**."
+      },
+      {
+       "p": "Summit Ready starts on the Log in window. A player types their username and password, then clicks **Log in**."
+      },
+      {
+       "screenshot": {
+        "img": "img/ch00-login.png",
+        "w": 490,
+        "h": 338,
+        "alt": "The Log in window, with the Mourne banner along the top and the log in box under the title",
+        "cap": "The Log in window that you build in this chapter."
+       }
+      },
+      {
+       "p": "If a box is blank, a red message says which box to fill in. If the username and password do not match a player in `players.txt`, a red message says so."
+      },
+      {
+       "p": "After 3 wrong tries in a row, the **Log in** button stops working for 30 seconds, and counts down each second. That slows down anyone who tries to guess a password."
+      },
+      {
+       "p": "When the username and password match, the Log in window hides and the Welcome window opens. The Welcome window is empty for now. Chapter 7 fills it."
+      },
+      {
+       "p": "**Register a new player** opens the Register window from chapter 5. After a player registers, their new username is already typed in the Username box."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Check that your project is ready, and see the words this chapter uses",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know that your project has everything the Log in window needs."
+      },
+      {
+       "need": [
+        "You need frmLogin with its menu bar, File and Help (chapter 2).",
+        "The file `banner.jpg` in the Images folder inside bin\\Debug (chapter 2).",
+        "The two error types BlankFieldException and LoginFailedException, which you made earlier (chapter 4).",
+        "The Register window, frmRegister, which holds the new player's username in `NewUsername` (chapter 5).",
+        "About 2 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
+       ]
+      },
+      {
+       "words": [
+        [
+         "and",
+         "`&&` means and. The `if` is true only when both of its parts are true.",
+         "3-2",
+         true
+        ],
+        [
+         "timer",
+         "A control that runs a method again and again, after the same wait each time. You cannot see a timer on the window when the program runs.",
+         "3-6",
+         true
+        ],
+        [
+         "Interval",
+         "The wait of a timer between one tick and the next, in thousandths of a second. 1000 is one second.",
+         "2-3",
+         false
+        ],
+        [
+         "Tick",
+         "The event a timer has each time its Interval runs out.",
+         "3-6",
+         true
+        ],
+        [
+         "Enabled",
+         "A control with Enabled set to false is grey, and clicking it does nothing.",
+         "3-6",
+         true
+        ],
+        [
+         "LinkLabel",
+         "A label whose words work like a link on a web page.",
+         "2-3",
+         false
+        ],
+        [
+         "ShowDialog",
+         "Opens a window and waits. The next line runs only after that window closes.",
+         "3-4",
+         true
+        ],
+        [
+         "Hide",
+         "`this.Hide()` hides the window without closing it. `this.Show()` brings it back.",
+         "3-4",
+         true
+        ],
+        [
+         "Focus",
+         "`txtPassword.Focus()` puts the flashing cursor in the Password box, ready to type.",
+         "3-5",
+         true
+        ],
+        [
+         "ToLower",
+         "Gives the same text with every capital letter made small, so `Bog` and `bog` compare as equal.",
+         "3-2",
+         true
+        ]
+       ],
+       "intro": "You do not need to learn these words now. Where you first meet each one in the chapter, it has a dotted line under it. Hover over it or tap it to see what it means."
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "1"
+  },
+  {
+   "title": "Put the Log in controls on frmLogin",
+   "screens": [
+    {
+     "title": "Add the Mourne banner and the title",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmLogin has the Mourne banner across the top, with the title and subtitle under it."
+      },
+      {
+       "p": "Chapter 2 set the size and colour of frmLogin. Check its properties against this table, and change any that are different."
+      },
+      {
+       "controls": {
+        "props": [
+         "Font = Segoe UI, 11pt",
+         "Text = Summit Ready - Log in",
+         "StartPosition = CenterScreen",
+         "FormBorderStyle = FixedSingle",
+         "Size = 1016, 699",
+         "MaximizeBox = False",
+         "BackColor = 243, 245, 242"
+        ]
+       }
+      },
+      {
+       "p": "The banner is a PictureBox as wide as the window. The code loads `banner.jpg` into it when the window opens."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "PictureBox",
+          "name": "picBanner",
+          "settings": [
+           "Location = 0, 0",
+           "Size = 1000, 312",
+           "SizeMode = Zoom"
+          ],
+          "note": "The banner sits behind the menu bar. Right-click picBanner and click **Send to Back**, so the menu bar shows on top of it.",
+          "then": "A large empty box fills the top half of frmLogin. The menu bar still shows along the top."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblTitle",
+          "settings": [
+           "AutoSize = False",
+           "Location = 330, 330",
+           "Size = 400, 50",
+           "Font = Segoe UI Semibold, 28pt",
+           "ForeColor = 38, 50, 56",
+           "Text = Summit Ready"
+          ]
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblSubtitle",
+          "settings": [
+           "AutoSize = False",
+           "Location = 333, 382",
+           "Size = 620, 24",
+           "Font = Segoe UI, 11pt",
+           "ForeColor = 92, 107, 115",
+           "Text = Practise eight hill-walking expedition skills on eight Mourne summits."
+          ]
+         }
+        ],
+        "done": {
+         "see": "An empty box across the top of frmLogin, with **Summit Ready** in large letters under it, and the grey subtitle under that.",
+         "img": {
+          "img": "img/cap/c089.png",
+          "alt": "frmLogin in the designer with the empty banner box, the title and the subtitle",
+          "w": 1041,
+          "h": 505,
+          "marks": []
+         }
+        }
+       }
+      },
+      {
+       "box": {
+        "title": "If you have forgotten how to set a property",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "Click the box beside the property's name in the Properties window. Type the new value, then press Enter."
+         },
+         {
+          "p": "For **Font**, click the box beside Font, then click the small button with 3 dots at the right of the box. Pick the font and the size, then click **OK**."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Add the white log in box with its 2 boxes and its button",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmLogin has a white box with Username, Password, a space for messages, and the **Log in** button."
+      },
+      {
+       "p": "The white box is a panel. Drop each control in this table inside pnlLogin. Their Locations count from the top left corner of pnlLogin, not of the form."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Panel",
+          "name": "pnlLogin",
+          "settings": [
+           "Location = 330, 410",
+           "Size = 340, 206",
+           "BackColor = 255, 255, 255",
+           "BorderStyle = FixedSingle"
+          ],
+          "note": "Drop the Panel on frmLogin, under the subtitle."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblUsername",
+          "settings": [
+           "AutoSize = False",
+           "Location = 18, 6",
+           "Size = 300, 22",
+           "Font = Segoe UI, 10.5pt",
+           "ForeColor = 38, 50, 56",
+           "Text = Username"
+          ]
+         },
+         {
+          "toolbox": "TextBox",
+          "name": "txtUsername",
+          "settings": [
+           "Location = 18, 30",
+           "Size = 302, 27",
+           "TabIndex = 0"
+          ]
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblPassword",
+          "settings": [
+           "AutoSize = False",
+           "Location = 18, 62",
+           "Size = 300, 22",
+           "Font = Segoe UI, 10.5pt",
+           "ForeColor = 38, 50, 56",
+           "Text = Password"
+          ]
+         },
+         {
+          "toolbox": "TextBox",
+          "name": "txtPassword",
+          "settings": [
+           "Location = 18, 86",
+           "Size = 302, 27",
+           "UseSystemPasswordChar = True",
+           "TabIndex = 1"
+          ]
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblError",
+          "settings": [
+           "AutoSize = False",
+           "Location = 18, 116",
+           "Size = 302, 34",
+           "Font = Segoe UI, 9.5pt",
+           "ForeColor = 178, 58, 46",
+           "Text = (empty)"
+          ],
+          "note": "To empty Text, delete the words in the box beside Text, then press Enter."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnLogIn",
+          "settings": [
+           "Location = 18, 152",
+           "Size = 302, 44",
+           "Text = Log in",
+           "BackColor = 242, 183, 5",
+           "ForeColor = 38, 50, 56",
+           "Font = Segoe UI Semibold, 11pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderSize = 0",
+           "Cursor = Hand",
+           "TabIndex = 2"
+          ],
+          "note": "FlatAppearance has a small arrow beside it. Click the arrow to see BorderSize."
+         }
+        ],
+        "done": {
+         "see": "A white box under the subtitle, holding Username and its box, Password and its box, an empty space, and the gold **Log in** button.",
+         "img": {
+          "img": "img/cap/c090.png",
+          "alt": "frmLogin in the designer with the white log in box and everything inside it",
+          "w": 1041,
+          "h": 510,
+          "marks": []
+         }
+        }
+       }
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Add the Register link, the timer, and the Enter key",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmLogin has its **Register a new player** link and a timer for the 30-second wait."
+      },
+      {
+       "p": "A [[LinkLabel|5]] looks like a link on a web page. A [[timer|1]] does not show on the window. Visual Studio 2019 puts it in a strip under the form."
+      },
+      {
+       "p": "Its [[Interval|2]] of 1000 makes it tick once a second."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Label",
+          "name": "lblNew",
+          "settings": [
+           "AutoSize = False",
+           "Location = 333, 626",
+           "Size = 80, 22",
+           "Font = Segoe UI, 10pt",
+           "ForeColor = 38, 50, 56",
+           "Text = New here?"
+          ],
+          "note": "Drop the Label on frmLogin, under the white box, not inside it."
+         },
+         {
+          "toolbox": "LinkLabel",
+          "name": "lnkRegister",
+          "settings": [
+           "Location = 410, 626",
+           "Size = 200, 22",
+           "Font = Segoe UI, 10pt",
+           "LinkColor = 47, 111, 143",
+           "Text = Register a new player",
+           "TabIndex = 3"
+          ]
+         },
+         {
+          "toolbox": "Timer",
+          "name": "tmrWait",
+          "settings": [
+           "Interval = 1000"
+          ],
+          "note": "Drop the Timer anywhere on frmLogin.",
+          "then": "tmrWait shows in a strip under frmLogin, not on the form."
+         },
+         {
+          "toolbox": "(the form)",
+          "name": "frmLogin",
+          "settings": [
+           "AcceptButton = btnLogIn"
+          ],
+          "note": "Click the title bar of frmLogin. Set AcceptButton to btnLogIn, so pressing Enter clicks the Log in button."
+         }
+        ],
+        "done": {
+         "see": "frmLogin looks like the picture at the start of this chapter, with an empty box where the banner goes.",
+         "img": {
+          "img": "img/cap/c091.png",
+          "alt": "frmLogin in the designer with every control on it, and tmrWait in the strip under it",
+          "w": 1041,
+          "h": 572,
+          "marks": []
+         }
+        }
+       }
+      }
+     ],
+     "id": "3"
+    }
+   ],
+   "id": "2"
+  },
+  {
+   "title": "Write the code that logs a player in",
+   "screens": [
+    {
+     "title": "Type the Load method that shows the banner",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the Mourne banner appears when frmLogin opens."
+      },
+      {
+       "p": "`banner.jpg` sits in the Images folder itself, not in a folder inside it. So the folder name is empty: `\"\"`."
+      },
+      {
+       "code": {
+        "id": "c06-load",
+        "kind": "type",
+        "title": "frmLogin_Load",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "private void frmLogin_Load(object sender, EventArgs e)\n{\n    // The banner sits in the Images folder itself, so no folder name\n    picBanner.Image = Files.Picture(\"\", \"banner.jpg\");\n}",
+        "partLines": [
+         [
+          1,
+          5,
+          "Load the banner",
+          "`Files.Picture` from chapter 2 loads `banner.jpg` into picBanner."
+         ]
+        ],
+        "focusLines": [
+         [
+          3,
+          4
+         ]
+        ],
+        "typed": 1
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmLogin.cs [Design]** tab at the top of the editor.",
+         "see": "The designer shows frmLogin.",
+         "img": {
+          "img": "img/cap/c092.png",
+          "alt": "The Properties window showing the events of frmLogin, with Load",
+          "w": 1568,
+          "h": 521,
+          "marks": [
+           {
+            "n": 1,
+            "x": 63.3,
+            "y": 2.5,
+            "say": "Click the **frmLogin.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 2,
+            "x": 29.1,
+            "y": 9.9,
+            "say": "Click the title bar of frmLogin."
+           },
+           {
+            "n": 3,
+            "x": 86.0,
+            "y": 59.6,
+            "say": "Click the lightning bolt at the top of the Properties window."
+           },
+           {
+            "n": 4,
+            "x": 93.7,
+            "y": 63.3,
+            "say": "Double-click the empty box beside **Load**. Scroll down the list a little if you cannot see it."
+           }
+          ]
+         },
+         "id": "3-1.1",
+         "n": 1
+        },
+        {
+         "do": "Click the title bar of frmLogin.",
+         "see": "The Properties window shows frmLogin at the top.",
+         "id": "3-1.2",
+         "n": 2
+        },
+        {
+         "do": "Click the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window now lists the form's events in place of its properties.",
+         "id": "3-1.3",
+         "n": 3
+        },
+        {
+         "do": "Double-click the empty box beside **Load**. Scroll down the list a little if you cannot see it.",
+         "see": "The code editor opens `frmLogin.cs`, with a new empty method called `frmLogin_Load`.",
+         "id": "3-1.4",
+         "n": 4
+        },
+        {
+         "do": "Click at the end of the `{` on the line under `private void frmLogin_Load`.",
+         "see": "The flashing cursor is after the `{`.",
+         "img": {
+          "img": "img/cap/c093.png",
+          "alt": "frmLogin.cs, with the 2 yellow lines typed inside frmLogin_Load",
+          "w": 1102,
+          "h": 382,
+          "marks": [
+           {
+            "n": 5,
+            "x": 18.0,
+            "y": 80.4,
+            "say": "Click at the end of the `{` on the line under `private void frmLogin_Load`."
+           },
+           {
+            "n": 6,
+            "x": 19.1,
+            "y": 84.6,
+            "say": "Press Enter."
+           },
+           {
+            "n": 7,
+            "x": 18.2,
+            "y": 81.7,
+            "w": 42.8,
+            "h": 10.3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "3-1.5",
+         "n": 5
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens inside frmLogin_Load.",
+         "id": "3-1.6",
+         "n": 6
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The 2 yellow lines are inside frmLogin_Load. No line has a red underline.",
+         "id": "3-1.7",
+         "n": 7
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Add LogIn to the PlayerFile class",
+     "blocks": [
+      {
+       "p": "By the end of this screen, PlayerFile can find the player with a username and password."
+      },
+      {
+       "p": "LogIn checks for blank boxes first. If both boxes are blank, the message asks for both. Then it looks through every player in `players.txt` for one that matches."
+      },
+      {
+       "p": "The username matches with or without capital letters, so `Bogtrotter` finds bogTrotter. The password must match exactly."
+      },
+      {
+       "code": {
+        "id": "c06-login-file",
+        "kind": "type",
+        "title": "PlayerFile.LogIn",
+        "lang": "cs",
+        "text": "// Finds the player with this username and password: rules 12-14\npublic static Player LogIn(string username, string password)\n{\n    string blank = \"\";\n    if (username.Trim() == \"\") blank = \"Type your username.\";\n    if (password == \"\")\n    {\n        if (blank != \"\") blank = blank + \" \";\n        blank = blank + \"Type your password.\";\n    }\n    if (blank != \"\") throw new BlankFieldException(blank);\n    List<Player> players = LoadAll();\n    foreach (Player p in players)\n    {\n        if (p.Username.ToLower() == username.Trim().ToLower()\n            && p.Password == password)\n        {\n            return p;\n        }\n    }\n    throw new LoginFailedException();",
+        "partLines": [
+         [
+          1,
+          3,
+          "The method",
+          "LogIn is given the 2 boxes, and gives back a Player."
+         ],
+         [
+          4,
+          11,
+          "Blank boxes",
+          "`blank` collects a message for each blank box. If it is not empty, LogIn throws a BlankFieldException with that message. `Trim` ignores spaces, so a username of spaces counts as blank."
+         ],
+         [
+          12,
+          20,
+          "Look for the player",
+          "`LoadAll` from chapter 3 reads every player. [[ToLower|9]] makes both usernames small letters, so capitals do not matter. The first player that matches is given back."
+         ],
+         [
+          21,
+          21,
+          "No match",
+          "If no player matches, LogIn throws a LoginFailedException."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          21
+         ]
+        ],
+        "typed": 13,
+        "wordMarks": [
+         [
+          16,
+          12,
+          14,
+          0
+         ],
+         [
+          15,
+          23,
+          30,
+          9
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `PlayerFile.cs` in Solution Explorer.",
+         "see": "`PlayerFile.cs` opens in the code editor.",
+         "img": {
+          "img": "img/cap/c094.png",
+          "alt": "PlayerFile.cs, with LogIn typed under Add",
+          "w": 1568,
+          "h": 501,
+          "marks": [
+           {
+            "n": 1,
+            "x": 86.8,
+            "y": 37.6,
+            "say": "Double-click `PlayerFile.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "x": 10.5,
+            "y": 34.7,
+            "say": "Click at the end of the `}` that closes `Add`."
+           },
+           {
+            "n": 3,
+            "x": 9.6,
+            "y": 40.0,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 4,
+            "x": 9.1,
+            "y": 38.2,
+            "w": 24.5,
+            "h": 59.4,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "3-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click at the end of the `}` that closes `Add`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "3-2.2",
+         "n": 2
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "3-2.3",
+         "n": 3
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "LogIn sits under Add, inside the PlayerFile class. No line has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "3-2.4",
+         "n": 4
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Add the Expedition class and an empty Welcome window",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has an Expedition class that remembers who is logged in, and an empty Welcome window."
+      },
+      {
+       "p": "Every window needs to know who is logged in. A `static` field belongs to the class itself, so every window reads the same `Expedition.CurrentPlayer`."
+      },
+      {
+       "p": "This is the first line of the Expedition class. Chapter 8 adds the rest of it."
+      },
+      {
+       "code": {
+        "id": "c06-expedition",
+        "kind": "type",
+        "title": "The Expedition class, for now",
+        "lang": "cs",
+        "text": "static class Expedition\n{\n    public static Player CurrentPlayer;   // who is logged in\n}",
+        "noCopy": true,
+        "partLines": [
+         [
+          1,
+          4,
+          "Who is logged in",
+          "`CurrentPlayer` holds the Player who logged in. It stays empty until someone logs in."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          1
+         ],
+         [
+          3,
+          3
+         ]
+        ],
+        "typed": 2
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "img": "img/cap/c023.png",
+          "alt": "The project menu, with Add pointed at and Class in the second menu",
+          "w": 959,
+          "h": 616,
+          "marks": [
+           {
+            "n": 1,
+            "x": 73.0,
+            "y": 5.4,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 2,
+            "x": 39.6,
+            "y": 38.6,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 3,
+            "x": 6.2,
+            "y": 93.2,
+            "say": "Click **Class...** in the second menu."
+           }
+          ]
+         },
+         "id": "3-3.1",
+         "n": 1
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "3-3.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Class...** in the second menu.",
+         "see": "The Add New Item window opens. Class is picked, and the Name box says `Class1.cs`.",
+         "id": "3-3.3",
+         "n": 3
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Class1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "img": "img/cap/c095.png",
+          "alt": "The Add New Item window, with Class picked and Expedition.cs in the Name box",
+          "w": 940,
+          "h": 590,
+          "marks": [
+           {
+            "n": 4,
+            "x": 42.4,
+            "y": 91.3,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "x": 13.8,
+            "y": 89.8,
+            "w": 57.3,
+            "h": 3.1,
+            "say": "Type `Expedition.cs`"
+           },
+           {
+            "n": 6,
+            "x": 86.1,
+            "y": 96.5,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "3-3.4",
+         "n": 4
+        },
+        {
+         "do": "Type `Expedition.cs`",
+         "see": "The Name box shows `Expedition.cs`.",
+         "id": "3-3.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "`Expedition.cs` opens in the code editor, with an empty class called Expedition.",
+         "id": "3-3.6",
+         "n": 6
+        },
+        {
+         "do": "Click at the start of the word `class` in the line `class Expedition`.",
+         "see": "The flashing cursor is in front of `class`.",
+         "img": {
+          "img": "img/cap/c096.png",
+          "alt": "Expedition.cs, with static in front of class and the CurrentPlayer field typed",
+          "w": 1102,
+          "h": 306,
+          "marks": [
+           {
+            "n": 7,
+            "x": 18.2,
+            "y": 58.4,
+            "say": "Click at the start of the word `class` in the line `class Expedition`."
+           },
+           {
+            "n": 8,
+            "x": 13.3,
+            "y": 54.8,
+            "w": 4.7,
+            "h": 7.2,
+            "say": "Type `static` and a space."
+           },
+           {
+            "n": 9,
+            "x": 15.4,
+            "y": 63.6,
+            "say": "Click at the end of the `{` on the line under `static class Expedition`."
+           },
+           {
+            "n": 10,
+            "x": 14.0,
+            "y": 68.8,
+            "say": "Press Enter."
+           },
+           {
+            "n": 11,
+            "x": 15.7,
+            "y": 65.2,
+            "w": 37.7,
+            "h": 7.6,
+            "say": "Type the yellow line `public static Player CurrentPlayer;` and its comment."
+           }
+          ]
+         },
+         "id": "3-3.7",
+         "n": 7
+        },
+        {
+         "do": "Type `static` and a space.",
+         "see": "The line says `static class Expedition`.",
+         "id": "3-3.8",
+         "n": 8
+        },
+        {
+         "do": "Click at the end of the `{` on the line under `static class Expedition`.",
+         "see": "The flashing cursor is after the `{`.",
+         "id": "3-3.9",
+         "n": 9
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens inside the class.",
+         "id": "3-3.10",
+         "n": 10
+        },
+        {
+         "do": "Type the yellow line `public static Player CurrentPlayer;` and its comment.",
+         "see": "The field is inside the class. No line has a red underline.",
+         "id": "3-3.11",
+         "n": 11
+        }
+       ]
+      },
+      {
+       "p": "The Log in window opens the Welcome window. So the Welcome window must exist, even though it is empty until chapter 7."
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "img": "img/cap/c068.png",
+          "alt": "The project menu, with Add pointed at and Form (Windows Forms) in the second menu",
+          "w": 949,
+          "h": 605,
+          "marks": [
+           {
+            "n": 12,
+            "x": 73.8,
+            "y": 4.6,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 13,
+            "x": 40.6,
+            "y": 37.8,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 14,
+            "x": 11.6,
+            "y": 81.0,
+            "say": "Click **Form (Windows Forms)...** in the second menu."
+           }
+          ]
+         },
+         "id": "3-3.12",
+         "n": 12
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "3-3.13",
+         "n": 13
+        },
+        {
+         "do": "Click **Form (Windows Forms)...** in the second menu.",
+         "see": "The Add New Item window opens. Form (Windows Forms) is picked, and the Name box says `Form1.cs`.",
+         "id": "3-3.14",
+         "n": 14
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Form1.cs` turns blue.",
+         "img": {
+          "img": "img/cap/c097.png",
+          "alt": "The Add New Item window, with frmWelcome.cs in the Name box",
+          "w": 940,
+          "h": 590,
+          "marks": [
+           {
+            "n": 15,
+            "x": 42.4,
+            "y": 91.3,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 16,
+            "x": 13.8,
+            "y": 89.8,
+            "w": 57.3,
+            "h": 3.1,
+            "say": "Type `frmWelcome.cs`"
+           },
+           {
+            "n": 17,
+            "x": 86.1,
+            "y": 96.5,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "3-3.15",
+         "n": 15
+        },
+        {
+         "do": "Type `frmWelcome.cs`",
+         "see": "The Name box shows `frmWelcome.cs`.",
+         "id": "3-3.16",
+         "n": 16
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "A new empty form called frmWelcome opens in the designer. Chapter 7 fills it.",
+         "id": "3-3.17",
+         "n": 17
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Type the 2 fields and the start of btnLogIn_Click",
+     "blocks": [
+      {
+       "p": "By the end of this screen, a player with the right username and password goes on to the Welcome window."
+      },
+      {
+       "p": "frmLogin counts the wrong tries in a row, and the seconds left to wait. Both are fields, so they keep their values between clicks."
+      },
+      {
+       "code": {
+        "id": "c06-fields",
+        "kind": "type",
+        "title": "The 2 fields of frmLogin",
+        "lang": "cs",
+        "text": "private int wrongTries = 0;     // wrong log-ins in a row: rule 15\nprivate int waitLeft = 30;      // seconds left before the next try",
+        "partLines": [
+         [
+          1,
+          2,
+          "Two counters",
+          "`wrongTries` counts wrong log-ins in a row. `waitLeft` counts down the 30 seconds."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          2
+         ]
+        ],
+        "typed": 2
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmLogin.cs** tab, the one without [Design].",
+         "see": "The code of frmLogin shows in the code editor.",
+         "img": {
+          "img": "img/cap/c098.png",
+          "alt": "frmLogin.cs, with the 2 fields typed under the class line",
+          "w": 1102,
+          "h": 318,
+          "marks": [
+           {
+            "n": 1,
+            "x": 80.8,
+            "y": 3.5,
+            "say": "Click the **frmLogin.cs** tab, the one without [Design]."
+           },
+           {
+            "n": 2,
+            "x": 15.4,
+            "y": 81.5,
+            "say": "Click at the end of the `{` under `public partial class frmLogin : Form`."
+           },
+           {
+            "n": 3,
+            "x": 14.0,
+            "y": 86.5,
+            "say": "Press Enter."
+           },
+           {
+            "n": 4,
+            "x": 15.7,
+            "y": 83.1,
+            "w": 44.0,
+            "h": 12.3,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "3-4.1",
+         "n": 1
+        },
+        {
+         "do": "Click at the end of the `{` under `public partial class frmLogin : Form`.",
+         "see": "The flashing cursor is after the `{`.",
+         "id": "3-4.2",
+         "n": 2
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the `{`.",
+         "id": "3-4.3",
+         "n": 3
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The 2 fields are under the `{`.",
+         "id": "3-4.4",
+         "n": 4
+        }
+       ]
+      },
+      {
+       "p": "A good log in sets `Expedition.CurrentPlayer`, then hides the Log in window and opens the Welcome window. [[ShowDialog|6]] waits until the Welcome window closes. Then the Log in window comes back, ready for the next player."
+      },
+      {
+       "code": {
+        "id": "c06-login-good",
+        "kind": "type",
+        "title": "btnLogIn_Click: a good log in",
+        "lang": "cs",
+        "text": "// Log in: rules 12, 13 and 14, then the welcome screen\nprivate void btnLogIn_Click(object sender, EventArgs e)\n{\n    lblError.Text = \"\";\n    try\n    {\n        Player player = PlayerFile.LogIn(txtUsername.Text,\n            txtPassword.Text);\n        wrongTries = 0;\n        Expedition.CurrentPlayer = player;\n        this.Hide();\n        frmWelcome welcome = new frmWelcome();\n        welcome.ShowDialog();       // waits until welcome closes\n        txtPassword.Text = \"\";\n        this.Show();\n    }",
+        "partLines": [
+         [
+          1,
+          4,
+          "Empty the old message",
+          "The old message goes, so it does not stay after the next click."
+         ],
+         [
+          5,
+          8,
+          "Find the player",
+          "`PlayerFile.LogIn` gives back the player, or throws an exception. The line is long, so it carries on onto the next line."
+         ],
+         [
+          9,
+          10,
+          "Remember who it is",
+          "A good log in starts the count of wrong tries again."
+         ],
+         [
+          11,
+          16,
+          "Open the Welcome window",
+          "The Log in window hides while the Welcome window is open. After it closes, the password box is emptied and the Log in window shows again."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          16
+         ]
+        ],
+        "typed": 12,
+        "wordMarks": [
+         [
+          13,
+          16,
+          26,
+          6
+         ],
+         [
+          11,
+          13,
+          17,
+          7
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmLogin_Load`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "img": "img/cap/c099.png",
+          "alt": "frmLogin.cs, with the start of btnLogIn_Click typed under frmLogin_Load",
+          "w": 1102,
+          "h": 558,
+          "marks": [
+           {
+            "n": 5,
+            "x": 18.0,
+            "y": 40.6,
+            "say": "Click at the end of the `}` that closes `frmLogin_Load`."
+           },
+           {
+            "n": 6,
+            "x": 16.6,
+            "y": 46.5,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 7,
+            "x": 15.7,
+            "y": 44.5,
+            "w": 42.8,
+            "h": 50.0,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "3-4.5",
+         "n": 5
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "3-4.6",
+         "n": 6
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The start of btnLogIn_Click sits under frmLogin_Load. Visual Studio 2019 added the `}` that closes btnLogIn_Click when you typed its `{`.",
+         "wrong": [
+          [
+           "btnLogIn_Click has no `}` at the end",
+           "Press Enter after the last yellow line, then type `}`."
+          ]
+         ],
+         "id": "3-4.7",
+         "n": 7
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Finish btnLogIn_Click, which counts the wrong tries",
+     "blocks": [
+      {
+       "p": "By the end of this screen, a wrong log in shows a message, and the third wrong try in a row starts the wait."
+      },
+      {
+       "p": "A wrong username or password throws a LoginFailedException. A blank box throws a BlankFieldException, a kind of SummitException. C# uses the first `catch` that fits, so the LoginFailedException `catch` goes first."
+      },
+      {
+       "p": "A blank box is not counted as a wrong try."
+      },
+      {
+       "code": {
+        "id": "c06-login-wrong",
+        "kind": "type",
+        "title": "btnLogIn_Click: a wrong log in",
+        "lang": "cs",
+        "text": "catch (LoginFailedException ex)\n{\n    wrongTries++;\n    txtPassword.Text = \"\";         // a fresh box for the next try\n    txtPassword.Focus();\n    if (wrongTries == 3) StartWait();\n    else lblError.Text = ex.Message;\n}\ncatch (SummitException ex)\n{\n    lblError.Text = ex.Message;    // a blank box\n}",
+        "partLines": [
+         [
+          1,
+          5,
+          "One more wrong try",
+          "`wrongTries++` adds one to the count. The password box is emptied, and [[Focus|8]] puts the cursor in it."
+         ],
+         [
+          6,
+          8,
+          "Wait, or show the message",
+          "On the third wrong try in a row, StartWait begins the 30 seconds. Otherwise the message shows."
+         ],
+         [
+          9,
+          12,
+          "A blank box",
+          "The message says which box to fill in."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          12
+         ]
+        ],
+        "typed": 8,
+        "wordMarks": [
+         [
+          5,
+          16,
+          21,
+          8
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` under the line `this.Show();`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "img": "img/cap/c100.png",
+          "alt": "btnLogIn_Click, with the 2 catch blocks typed after the try",
+          "w": 1102,
+          "h": 558,
+          "marks": [
+           {
+            "n": 1,
+            "x": 20.6,
+            "y": 57.9,
+            "say": "Click at the end of the `}` under the line `this.Show();`."
+           },
+           {
+            "n": 2,
+            "x": 19.1,
+            "y": 60.7,
+            "say": "Press Enter."
+           },
+           {
+            "n": 3,
+            "x": 18.2,
+            "y": 58.8,
+            "w": 43.4,
+            "h": 35.7,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "3-5.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens, above the last `}` of btnLogIn_Click.",
+         "id": "3-5.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The 2 `catch` blocks sit under the `try`. `StartWait` has a red underline, because you type StartWait on the next screen.",
+         "id": "3-5.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "5"
+    },
+    {
+     "title": "Type StartWait and tmrWait_Tick, which make the 30-second wait",
+     "blocks": [
+      {
+       "p": "By the end of this screen, 3 wrong tries in a row turn off the **Log in** button for 30 seconds."
+      },
+      {
+       "p": "StartWait sets [[Enabled|4]] to false, so the button turns grey and clicking it does nothing. Then it starts the timer."
+      },
+      {
+       "code": {
+        "id": "c06-startwait",
+        "kind": "type",
+        "title": "StartWait",
+        "lang": "cs",
+        "text": "// Three wrong tries in a row: the button waits 30 seconds\nprivate void StartWait()\n{\n    lblError.Text = \"Three wrong tries. Wait 30 seconds, then try \"\n        + \"again.\";\n    waitLeft = 30;\n    btnLogIn.Enabled = false;\n    btnLogIn.Text = \"Try again in \" + waitLeft + \" seconds\";\n    tmrWait.Start();                   // ticks once a second\n}",
+        "partLines": [
+         [
+          1,
+          5,
+          "The message",
+          "The message is long, so it is 2 pieces of text joined with `+`."
+         ],
+         [
+          6,
+          10,
+          "Turn off the button",
+          "The button shows how long is left, and `tmrWait.Start()` starts the ticks."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          10
+         ]
+        ],
+        "typed": 7,
+        "wordMarks": [
+         [
+          9,
+          4,
+          11,
+          1
+         ],
+         [
+          7,
+          13,
+          20,
+          4
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `btnLogIn_Click`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "img": "img/cap/c101.png",
+          "alt": "frmLogin.cs, with StartWait and tmrWait_Tick typed",
+          "w": 1102,
+          "h": 606,
+          "marks": [
+           {
+            "n": 1,
+            "x": 18.0,
+            "y": 26.9,
+            "say": "Click at the end of the `}` that closes `btnLogIn_Click`."
+           },
+           {
+            "n": 2,
+            "x": 16.6,
+            "y": 32.1,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "x": 15.7,
+            "y": 30.3,
+            "w": 44.0,
+            "h": 27.7,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 4,
+            "x": 18.0,
+            "y": 56.0,
+            "say": "Click at the end of the `}` that closes `StartWait`."
+           },
+           {
+            "n": 5,
+            "x": 16.6,
+            "y": 61.2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 6,
+            "x": 15.7,
+            "y": 59.4,
+            "w": 39.6,
+            "h": 38.2,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "3-6.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "3-6.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "StartWait sits under btnLogIn_Click. The red underline under `StartWait` has gone.",
+         "id": "3-6.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "p": "Each [[Tick|3]] takes one second off `waitLeft` and shows it on the button. At 0, the timer stops and the button works again."
+      },
+      {
+       "code": {
+        "id": "c06-tick",
+        "kind": "type",
+        "title": "tmrWait_Tick",
+        "lang": "cs",
+        "text": "// Runs every second while the button waits\nprivate void tmrWait_Tick(object sender, EventArgs e)\n{\n    waitLeft--;\n    btnLogIn.Text = \"Try again in \" + waitLeft + \" seconds\";\n    if (waitLeft == 0)\n    {\n        tmrWait.Stop();\n        wrongTries = 0;\n        lblError.Text = \"\";\n        btnLogIn.Text = \"Log in\";\n        btnLogIn.Enabled = true;\n    }",
+        "partLines": [
+         [
+          1,
+          5,
+          "One second less",
+          "`waitLeft--` takes one away from waitLeft."
+         ],
+         [
+          6,
+          13,
+          "The wait is over",
+          "The timer stops, the count of wrong tries starts again, and the button says **Log in** again."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          13
+         ]
+        ],
+        "typed": 9,
+        "wordMarks": [
+         [
+          2,
+          13,
+          25,
+          3
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `StartWait`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "3-6.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "3-6.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "tmrWait_Tick sits under StartWait.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "3-6.6",
+         "n": 6
+        }
+       ]
+      }
+     ],
+     "id": "6"
+    },
+    {
+     "title": "Type lnkRegister_LinkClicked, which opens the Register window",
+     "blocks": [
+      {
+       "p": "By the end of this screen, **Register a new player** opens the Register window, and a new username comes back into the Username box."
+      },
+      {
+       "p": "The Register window keeps the new username in its `NewUsername` field from chapter 5. It is empty if the player clicked **Back to log in**."
+      },
+      {
+       "code": {
+        "id": "c06-register",
+        "kind": "type",
+        "title": "lnkRegister_LinkClicked",
+        "lang": "cs",
+        "text": "// Opens the register form; a new player's name comes back\nprivate void lnkRegister_LinkClicked(object sender,\n    LinkLabelLinkClickedEventArgs e)\n{\n    this.Hide();\n    frmRegister register = new frmRegister();\n    register.ShowDialog();\n    this.Show();\n    lblError.Text = \"\";            // an old message would confuse\n    if (register.NewUsername != \"\")\n    {\n        txtUsername.Text = register.NewUsername;\n        txtPassword.Text = \"\";\n        txtPassword.Focus();       // the cursor waits in Password\n    }\n}",
+        "partLines": [
+         [
+          1,
+          4,
+          "The method",
+          "A LinkLabel has its own event, LinkClicked. Its first line looks a little different from a button's, so copy it exactly."
+         ],
+         [
+          5,
+          8,
+          "Open the Register window",
+          "[[Hide|7]] hides the Log in window while the Register window is open."
+         ],
+         [
+          9,
+          16,
+          "Fill in the new username",
+          "If the Register window made a player, their username goes in the Username box, and the cursor waits in the Password box."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          16
+         ]
+        ],
+        "typed": 11,
+        "wordMarks": [
+         [
+          7,
+          13,
+          23,
+          6
+         ],
+         [
+          5,
+          9,
+          13,
+          7
+         ],
+         [
+          14,
+          20,
+          25,
+          8
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `tmrWait_Tick`.",
+         "see": "The flashing cursor is after the `}`.",
+         "img": {
+          "img": "img/cap/c102.png",
+          "alt": "frmLogin.cs, with lnkRegister_LinkClicked typed under tmrWait_Tick",
+          "w": 1102,
+          "h": 590,
+          "marks": [
+           {
+            "n": 1,
+            "x": 18.0,
+            "y": 46.7,
+            "say": "Click at the end of the `}` that closes `tmrWait_Tick`."
+           },
+           {
+            "n": 2,
+            "x": 16.6,
+            "y": 52.1,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 3,
+            "x": 15.7,
+            "y": 50.2,
+            "w": 43.4,
+            "h": 44.6,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "3-7.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "3-7.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "lnkRegister_LinkClicked sits under tmrWait_Tick. No line has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "3-7.3",
+         "n": 3
+        }
+       ]
+      }
+     ],
+     "id": "7"
+    },
+    {
+     "title": "Connect the button, the timer and the link, then build",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the button, the timer and the link each run their method, and your project builds with no errors."
+      },
+      {
+       "p": "A typed method does nothing until it is connected to an event. Connect the 3 events one at a time."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmLogin.cs [Design]** tab at the top of the editor.",
+         "see": "The designer shows frmLogin.",
+         "img": {
+          "img": "img/cap/c103.png",
+          "alt": "The Properties window showing the events of btnLogIn, with btnLogIn_Click beside Click",
+          "w": 1568,
+          "h": 516,
+          "marks": [
+           {
+            "n": 1,
+            "x": 72.5,
+            "y": 1.8,
+            "say": "Click the **frmLogin.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 2,
+            "x": 29.2,
+            "y": 70.6,
+            "say": "Click the **Log in** button on frmLogin."
+           },
+           {
+            "n": 3,
+            "x": 86.0,
+            "y": 59.2,
+            "say": "Click the lightning bolt at the top of the Properties window."
+           },
+           {
+            "n": 4,
+            "x": 98.2,
+            "y": 87.3,
+            "say": "Click the box beside **Click**, then click the small arrow at the right end of the box."
+           },
+           {
+            "n": 5,
+            "x": 89.1,
+            "y": 85.9,
+            "w": 8.5,
+            "h": 2.9,
+            "say": "Click `btnLogIn_Click` in the list."
+           }
+          ]
+         },
+         "id": "3-8.1",
+         "n": 1
+        },
+        {
+         "do": "Click the **Log in** button on frmLogin.",
+         "see": "The Properties window shows btnLogIn at the top.",
+         "id": "3-8.2",
+         "n": 2
+        },
+        {
+         "do": "Click the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists the events of btnLogIn.",
+         "id": "3-8.3",
+         "n": 3
+        },
+        {
+         "do": "Click the box beside **Click**, then click the small arrow at the right end of the box.",
+         "see": "A list drops down with the methods that fit this event.",
+         "id": "3-8.4",
+         "n": 4
+        },
+        {
+         "do": "Click `btnLogIn_Click` in the list.",
+         "see": "The box beside Click shows `btnLogIn_Click`.",
+         "wrong": [
+          [
+           "Visual Studio 2019 made a new method called `btnLogIn_Click_1`",
+           "You double-clicked the box. Click the arrow beside Click and pick `btnLogIn_Click`. Then, in `frmLogin.cs`, delete the empty method `btnLogIn_Click_1`, from its first line down to its `}`."
+          ]
+         ],
+         "id": "3-8.5",
+         "n": 5
+        }
+       ]
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmLogin.cs [Design]** tab at the top of the editor.",
+         "see": "The designer shows frmLogin.",
+         "img": {
+          "img": "img/cap/c104.png",
+          "alt": "The Properties window showing the events of tmrWait, with tmrWait_Tick beside Tick",
+          "w": 1568,
+          "h": 516,
+          "marks": [
+           {
+            "n": 6,
+            "x": 72.5,
+            "y": 1.8,
+            "say": "Click the **frmLogin.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 7,
+            "x": 4.7,
+            "y": 91.2,
+            "say": "Click **tmrWait** in the strip under the form on frmLogin."
+           },
+           {
+            "n": 8,
+            "x": 86.0,
+            "y": 59.2,
+            "say": "Click the lightning bolt at the top of the Properties window."
+           },
+           {
+            "n": 9,
+            "x": 83.3,
+            "y": 61.6,
+            "w": 16.1,
+            "h": 2.7,
+            "say": "Click the box beside **Tick**, then click the small arrow at the right end of the box."
+           },
+           {
+            "n": 10,
+            "x": 91.1,
+            "y": 82.2,
+            "say": "Click `tmrWait_Tick` in the list."
+           }
+          ]
+         },
+         "id": "3-8.6",
+         "n": 6
+        },
+        {
+         "do": "Click **tmrWait** in the strip under the form on frmLogin.",
+         "see": "The Properties window shows tmrWait at the top.",
+         "id": "3-8.7",
+         "n": 7
+        },
+        {
+         "do": "Click the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists the events of tmrWait.",
+         "id": "3-8.8",
+         "n": 8
+        },
+        {
+         "do": "Click the box beside **Tick**, then click the small arrow at the right end of the box.",
+         "see": "A list drops down with the methods that fit this event.",
+         "id": "3-8.9",
+         "n": 9
+        },
+        {
+         "do": "Click `tmrWait_Tick` in the list.",
+         "see": "The box beside Tick shows `tmrWait_Tick`.",
+         "wrong": [
+          [
+           "Visual Studio 2019 made a new method called `tmrWait_Tick_1`",
+           "You double-clicked the box. Click the arrow beside Tick and pick `tmrWait_Tick`. Then, in `frmLogin.cs`, delete the empty method `tmrWait_Tick_1`, from its first line down to its `}`."
+          ]
+         ],
+         "id": "3-8.10",
+         "n": 10
+        }
+       ]
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the **frmLogin.cs [Design]** tab at the top of the editor.",
+         "see": "The designer shows frmLogin.",
+         "img": {
+          "img": "img/cap/c105.png",
+          "alt": "The Properties window showing the events of lnkRegister, with lnkRegister_LinkClicked beside LinkClicked",
+          "w": 1568,
+          "h": 516,
+          "marks": [
+           {
+            "n": 11,
+            "x": 72.5,
+            "y": 1.8,
+            "say": "Click the **frmLogin.cs [Design]** tab at the top of the editor."
+           },
+           {
+            "n": 12,
+            "x": 28.2,
+            "y": 78.6,
+            "say": "Click **Register a new player** on frmLogin."
+           },
+           {
+            "n": 13,
+            "x": 86.0,
+            "y": 59.2,
+            "say": "Click the lightning bolt at the top of the Properties window."
+           },
+           {
+            "n": 14,
+            "x": 83.3,
+            "y": 82.7,
+            "w": 15.4,
+            "h": 2.7,
+            "say": "Click the box beside **LinkClicked**, then click the small arrow at the right end of the box."
+           },
+           {
+            "n": 15,
+            "x": 92.4,
+            "y": 87.5,
+            "say": "Click `lnkRegister_LinkClicked` in the list."
+           }
+          ]
+         },
+         "id": "3-8.11",
+         "n": 11
+        },
+        {
+         "do": "Click **Register a new player** on frmLogin.",
+         "see": "The Properties window shows lnkRegister at the top.",
+         "id": "3-8.12",
+         "n": 12
+        },
+        {
+         "do": "Click the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists the events of lnkRegister.",
+         "id": "3-8.13",
+         "n": 13
+        },
+        {
+         "do": "Click the box beside **LinkClicked**, then click the small arrow at the right end of the box.",
+         "see": "A list drops down with the methods that fit this event.",
+         "id": "3-8.14",
+         "n": 14
+        },
+        {
+         "do": "Click `lnkRegister_LinkClicked` in the list.",
+         "see": "The box beside LinkClicked shows `lnkRegister_LinkClicked`.",
+         "wrong": [
+          [
+           "Visual Studio 2019 made a new method called `lnkRegister_LinkClicked_1`",
+           "You double-clicked the box. Click the arrow beside LinkClicked and pick `lnkRegister_LinkClicked`. Then, in `frmLogin.cs`, delete the empty method `lnkRegister_LinkClicked_1`, from its first line down to its `}`."
+          ]
+         ],
+         "id": "3-8.15",
+         "n": 15
+        }
+       ]
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "img": "img/cap/c010.png",
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 610,
+          "h": 223,
+          "marks": [
+           {
+            "n": 16,
+            "x": 11.5,
+            "y": 94.9,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows errors",
+           "Double-click the first error in the Error List. Visual Studio 2019 jumps to the line with the error. Check that line letter by letter against the code in this chapter."
+          ]
+         ],
+         "id": "3-8.16",
+         "n": 16
+        }
+       ]
+      }
+     ],
+     "id": "8"
+    }
+   ],
+   "id": "3"
+  },
+  {
+   "title": "Test the Log in window, then make one change of your own",
+   "screens": [
+    {
+     "title": "Check that the Log in window works",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that every part of the Log in window works, including the log-ins it must refuse."
+      },
+      {
+       "p": "Run each test with F5. The sample players in `players.txt` include summitSeeker, whose password is `peaks2026`."
+      },
+      {
+       "check": [
+        {
+         "what": "Leave both boxes blank, then click Log in.",
+         "expect": "control",
+         "how": "The message says **Type your username. Type your password.** The button still says Log in.",
+         "fix": "Check the blank-box lines at the start of PlayerFile.LogIn.",
+         "id": "4-1.t1"
+        },
+        {
+         "what": "Type `summitSeeker` and the password `wrong1`, then click Log in.",
+         "expect": "control",
+         "how": "The message says **That username and password do not match a player. Check both and try again.** The Password box is empty.",
+         "fix": "Check the `catch (LoginFailedException ex)` lines in btnLogIn_Click.",
+         "id": "4-1.t2"
+        },
+        {
+         "what": "Type `summitSeeker` and a wrong password, then click Log in. Do this 3 times in a row.",
+         "expect": "control",
+         "how": "The button turns grey and says **Try again in 30 seconds**, then counts down. Clicking it does nothing until it says Log in again.",
+         "fix": "Check `if (wrongTries == 3)` in btnLogIn_Click, then StartWait. Then click tmrWait and check `tmrWait_Tick` sits beside Tick in the Properties events list.",
+         "id": "4-1.t3"
+        },
+        {
+         "what": "Type `SUMMITSEEKER` and the password `peaks2026`, then click Log in.",
+         "expect": "allowed",
+         "how": "The Log in window hides and the empty Welcome window opens.",
+         "must": "Must happen",
+         "fix": "Check the `ToLower` line in PlayerFile.LogIn.",
+         "id": "4-1.t4"
+        },
+        {
+         "what": "Close the Welcome window.",
+         "expect": "allowed",
+         "how": "The Log in window comes back, with the Password box empty.",
+         "must": "Must happen",
+         "fix": "Check the 2 lines after `welcome.ShowDialog();` in btnLogIn_Click.",
+         "id": "4-1.t5"
+        },
+        {
+         "what": "Click Register a new player. Fill in the Register window with new details, then click OK.",
+         "expect": "allowed",
+         "how": "The Log in window comes back, with the new username in the Username box and the cursor in Password.",
+         "must": "Must happen",
+         "fix": "Check the `if (register.NewUsername != \"\")` lines in lnkRegister_LinkClicked.",
+         "id": "4-1.t6"
+        }
+       ]
+      },
+      {
+       "box": {
+        "title": "Evidence to keep",
+        "blocks": [
+         {
+          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
+         },
+         {
+          "p": "Paste each screenshot into your testing document, under the test it shows."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Your turn: make the wait 10 seconds",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have changed the length of the wait, and tested it, on your own."
+      },
+      {
+       "p": "30 seconds is a long wait when you are testing. Change the wait to 10 seconds, test it, then change it back."
+      },
+      {
+       "code": {
+        "id": "turn-wait",
+        "kind": "turn",
+        "title": "Make the wait 10 seconds",
+        "lang": "cs",
+        "text": "lblError.Text = \"Three wrong tries. Wait 10 seconds, then try \"\n    + \"again.\";\nwaitLeft = 10;",
+        "task": [
+         "In StartWait, change 30 to 10 in the text that says **Try again in 30 seconds**.",
+         "In StartWait, change `waitLeft = 30;` to `waitLeft = 10;`"
+        ],
+        "test": "Press F5. Type `summitSeeker` and a wrong password, then click Log in. Do this 3 times in a row.",
+        "expect": "The button says **Try again in 10 seconds** and counts down to Log in.",
+        "hint": "StartWait has 2 places with 30 in them. The line at the top of frmLogin that sets the wait stays as it is."
+       }
+      },
+      {
+       "p": "When the test passes, change both back to 30, because the rule says 30 seconds."
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "4"
+  }
+ ],
+ "glossary": [
+  [
+   "and",
+   "`&&` means and. The `if` is true only when both of its parts are true."
+  ],
+  [
+   "timer",
+   "A control that runs a method again and again, after the same wait each time. You cannot see a timer on the window when the program runs."
+  ],
+  [
+   "Interval",
+   "The wait of a timer between one tick and the next, in thousandths of a second. 1000 is one second."
+  ],
+  [
+   "Tick",
+   "The event a timer has each time its Interval runs out."
+  ],
+  [
+   "Enabled",
+   "A control with Enabled set to false is grey, and clicking it does nothing."
+  ],
+  [
+   "LinkLabel",
+   "A label whose words work like a link on a web page."
+  ],
+  [
+   "ShowDialog",
+   "Opens a window and waits. The next line runs only after that window closes."
+  ],
+  [
+   "Hide",
+   "`this.Hide()` hides the window without closing it. `this.Show()` brings it back."
+  ],
+  [
+   "Focus",
+   "`txtPassword.Focus()` puts the flashing cursor in the Password box, ready to type."
+  ],
+  [
+   "ToLower",
+   "Gives the same text with every capital letter made small, so `Bog` and `bog` compare as equal."
+  ]
+ ]
+}

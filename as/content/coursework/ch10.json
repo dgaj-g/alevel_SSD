@@ -1,0 +1,2052 @@
+{
+ "id": "10",
+ "n": 10,
+ "of": 20,
+ "title": "The finish line",
+ "kind": "a build chapter: the feedback window, the saved score and the banner",
+ "one": "You build the feedback window that shows how every summit went. Save my score puts the score on the Top 10, and a banner on the Welcome window says what it means.",
+ "prev": {
+  "id": "09",
+  "n": 9,
+  "title": "The shape of every game"
+ },
+ "next": {
+  "id": "11",
+  "n": 11,
+  "title": "Pack the Rucksack"
+ },
+ "stages": [
+  {
+   "title": "See what happens at the finish line",
+   "screens": [
+    {
+     "title": "Look at the feedback window and the banner",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know what the player sees from the last summit to the Top 10."
+      },
+      {
+       "p": "An expedition ends when all 8 summits are climbed, or when the player clicks **Finish the expedition**. Then the feedback window opens."
+      },
+      {
+       "screenshot": {
+        "img": "img/ch00-feedback.png",
+        "w": 703,
+        "h": 480,
+        "alt": "The feedback window, with the total at the top, the 8 summits down the left, and the feedback for one summit on the right",
+        "cap": "The feedback window that you build in this chapter."
+       }
+      },
+      {
+       "p": "The total is at the top, out of 800 points. Down the left is a [[ListBox|0]] with one line for each summit and its score."
+      },
+      {
+       "p": "Clicking a summit shows its feedback on the right: the score, a bar that fills to match it, what went well and what went wrong."
+      },
+      {
+       "p": "**Save my score** saves the score to the scores file. The map closes, and the Welcome window shows again."
+      },
+      {
+       "p": "Straight after a save, a gold banner shows on the Welcome window, above the Top 10. It shows only once, and it says one of 4 things."
+      },
+      {
+       "p": "**Case A:** the player was not on the Top 10 before, and now is. The heading says **You made the Top 10!**"
+      },
+      {
+       "p": "**Case B:** the player was on the Top 10, and this is a new best score. The heading says **New best score!**"
+      },
+      {
+       "p": "**Case C:** the player is still on the Top 10, but this score is not their best. The heading says **Still in the Top 10**."
+      },
+      {
+       "p": "**Case D:** the player is not on the Top 10. The heading says **Expedition saved**, and the message says the score needed to get on."
+      },
+      {
+       "p": "In cases A, B and C, the player's row on the board is highlighted. You typed that in chapter 7."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Check that your project is ready, and see the words this chapter uses",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know that your project has everything the finish line needs."
+      },
+      {
+       "p": "The finish line uses the map, the practice game and the Welcome window, so check each one first."
+      },
+      {
+       "need": [
+        "Your project, with the practice game opening from the map (chapter 9).",
+        "The Welcome window, with the gold banner, ShowBanner and MoveBoard (chapter 7).",
+        "ScoreFile, with Save, BestScore, PlaceOf and TenthPlaceScore (chapters 5 and 7).",
+        "About 2 hours. Your ticks are kept, so you can stop at the end of any screen and come back later."
+       ]
+      },
+      {
+       "words": [
+        [
+         "ListBox",
+         "A box that shows a list of lines. The player clicks a line to pick it.",
+         "1-1",
+         false
+        ],
+        [
+         "SelectedIndex",
+         "The number of the line picked in a ListBox, from 0. It is -1 when no line is picked.",
+         "4-2",
+         true
+        ],
+        [
+         "ProgressBar",
+         "A bar that fills from left to right. Its Value says how full it is, from 0 to 100.",
+         "4-2",
+         false
+        ],
+        [
+         "AppendText",
+         "Adds words to the end of what a TextBox already shows.",
+         "4-2",
+         true
+        ],
+        [
+         "foreach",
+         "Runs the lines inside it once for each item in a list.",
+         "4-2",
+         true
+        ],
+        [
+         "char",
+         "One single character, such as a letter. A char goes in single quotes, such as `'A'`.",
+         "2-1",
+         true
+        ]
+       ],
+       "intro": "You do not need to learn these words now. Where you first meet each one in the chapter, it has a dotted line under it. Hover over it or tap it to see what it means."
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "1"
+  },
+  {
+   "title": "Teach Expedition about the banner",
+   "screens": [
+    {
+     "title": "Add the banner fields, and work out which case it is",
+     "blocks": [
+      {
+       "p": "By the end of this screen, Expedition remembers the save, and can work out which of the 4 cases it is."
+      },
+      {
+       "p": "The feedback window saves the score, but the Welcome window shows the banner. So the facts the banner needs go in Expedition, where every window can read them."
+      },
+      {
+       "code": {
+        "id": "c10-exp-fields",
+        "kind": "type",
+        "title": "The banner fields",
+        "lang": "cs",
+        "text": "// Read by the welcome screen for its banner (chapter 10)\npublic static bool JustSaved = false;\npublic static int LastSavedScore = 0;\npublic static int PreviousBest = -1;   // best score before the save\npublic static int PreviousPlace = 0;   // place before the save",
+        "partLines": [
+         [
+          2,
+          3,
+          "The save",
+          "`JustSaved` turns true when a score is saved, so the banner shows once. `LastSavedScore` is the score that was saved."
+         ],
+         [
+          4,
+          5,
+          "Before the save",
+          "The player's best score and place before this save. -1 means no score yet, and place 0 means not on the board."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          5
+         ]
+        ],
+        "typed": 4
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `Expedition.cs` in Solution Explorer.",
+         "see": "Expedition.cs opens in the code editor.",
+         "img": {
+          "img": "img/cap/c175.png",
+          "alt": "Expedition.cs, with the banner fields typed under the Results line",
+          "w": 1102,
+          "h": 574,
+          "marks": [
+           {
+            "n": 1,
+            "x": 5.0,
+            "y": 1.7,
+            "say": "Double-click `Expedition.cs` in Solution Explorer."
+           },
+           {
+            "n": 2,
+            "x": 52.3,
+            "y": 75.7,
+            "say": "Click at the end of the line `public static GameResult[] Results = new GameResult[8];`"
+           },
+           {
+            "n": 3,
+            "x": 16.6,
+            "y": 81.2,
+            "say": "Press Enter twice."
+           },
+           {
+            "n": 4,
+            "x": 15.7,
+            "y": 79.3,
+            "w": 44.7,
+            "h": 15.4,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "2-1.1",
+         "n": 1
+        },
+        {
+         "do": "Click at the end of the line `public static GameResult[] Results = new GameResult[8];`",
+         "see": "The flashing cursor is after the `;`.",
+         "id": "2-1.2",
+         "n": 2
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under that line.",
+         "id": "2-1.3",
+         "n": 3
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The 4 fields sit between the Results line and Start.",
+         "id": "2-1.4",
+         "n": 4
+        }
+       ]
+      },
+      {
+       "p": "BannerCase gives back a [[char|5]]: one letter, A, B, C or D. Each `if` checks one case and gives back its letter at once, so the order of the checks matters."
+      },
+      {
+       "code": {
+        "id": "c10-case",
+        "kind": "type",
+        "title": "BannerCase",
+        "lang": "cs",
+        "text": "// Which banner shows after a save: A, B, C or D (chapter 10)\npublic static char BannerCase()\n{\n    int place = ScoreFile.PlaceOf(CurrentPlayer.Username);\n    if (place == 0) return 'D';\n    if (PreviousPlace == 0) return 'A';\n    if (LastSavedScore > PreviousBest) return 'B';\n    return 'C';\n}",
+        "partLines": [
+         [
+          2,
+          5,
+          "Not on the board",
+          "`PlaceOf` from chapter 7 gives the player's place now. Place 0 means not on the Top 10, which is case D."
+         ],
+         [
+          6,
+          6,
+          "New on the board",
+          "On the board now, but not before the save: case A."
+         ],
+         [
+          7,
+          9,
+          "A new best, or not",
+          "A score higher than the best before is case B. Anything else is case C."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          9
+         ]
+        ],
+        "typed": 6,
+        "wordMarks": [
+         [
+          2,
+          14,
+          18,
+          5
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `DoneCount`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "2-1.5",
+         "n": 5
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "2-1.6",
+         "n": 6
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "BannerCase sits under DoneCount.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "2-1.7",
+         "n": 7
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Write the banner's heading and its message",
+     "blocks": [
+      {
+       "p": "By the end of this screen, Expedition gives the words for the banner, for each of the 4 cases."
+      },
+      {
+       "p": "Each method looks at the case letter and picks the words that match it, the same way the map picks a game."
+      },
+      {
+       "code": {
+        "id": "c10-heading",
+        "kind": "type",
+        "title": "BannerHeading",
+        "lang": "cs",
+        "text": "// The banner's heading\npublic static string BannerHeading()\n{\n    switch (BannerCase())\n    {\n        case 'A': return \"You made the Top 10!\";\n        case 'B': return \"New best score!\";\n        case 'C': return \"Still in the Top 10\";\n        default: return \"Expedition saved\";\n    }\n}",
+        "partLines": [
+         [
+          2,
+          11,
+          "One heading for each case",
+          "`default` catches every letter not named above it, which is D."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          11
+         ]
+        ],
+        "typed": 6
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `BannerCase`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "2-2.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "2-2.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "BannerHeading sits under BannerCase.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "2-2.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "p": "The message names the player's place, such as 3rd, with `Mix.Ordinal` from chapter 2. Cases A, B and C end by saying that the row is highlighted."
+      },
+      {
+       "code": {
+        "id": "c10-message",
+        "kind": "type",
+        "title": "BannerMessage",
+        "lang": "cs",
+        "why": "The first 4 lines get the facts the message needs. The copy gives you those lines and case D. You type cases A, B and C, which change with the player's place.",
+        "text": "// The banner's message\npublic static string BannerMessage()\n{\n    string name = CurrentPlayer.Username;\n    int place = ScoreFile.PlaceOf(name);\n    string ordinal = Mix.Ordinal(place);\n    string row = \" Your row is highlighted on the board.\";\n    switch (BannerCase())\n    {\n        case 'A':\n            return \"Your score of \" + LastSavedScore\n                + \" points puts you \" + ordinal + \".\" + row;\n        case 'B':\n            string move = \"moves you up to \";\n            if (place == PreviousPlace) move = \"keeps you \";\n            return \"Your new best of \" + LastSavedScore + \" points \"\n                + move + ordinal + \".\" + row;\n        case 'C':\n            return \"You scored \" + LastSavedScore + \" points this \"\n                + \"time. Your best of \" + ScoreFile.BestScore(name)\n                + \" points keeps you \" + ordinal + \".\" + row;\n        default:\n            return \"You scored \" + LastSavedScore + \" points. The \"\n                + \"Top 10 starts at \" + ScoreFile.TenthPlaceScore()\n                + \" points. Beat that to get on the board.\";\n    }\n}",
+        "partLines": [
+         [
+          2,
+          7,
+          "The facts",
+          "The player's name, their place now, the place in words such as 3rd, and the sentence about the highlighted row."
+         ],
+         [
+          8,
+          12,
+          "Case A",
+          "The score, and the place it puts the player in."
+         ],
+         [
+          13,
+          17,
+          "Case B",
+          "`move` says **moves you up to**, unless the place is the same as before. Then it says **keeps you**."
+         ],
+         [
+          18,
+          21,
+          "Case C",
+          "This score, then the best score, which is what keeps the player on the board."
+         ],
+         [
+          22,
+          27,
+          "Case D",
+          "`TenthPlaceScore` from chapter 7 gives the score to beat to get on the board."
+         ]
+        ],
+        "focusLines": [
+         [
+          10,
+          21
+         ]
+        ],
+        "typed": 12
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `BannerHeading`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "2-2.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "2-2.5",
+         "n": 5
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c10-message",
+         "id": "2-2.6",
+         "n": 6
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "BannerMessage appears, with 3 lines that start with `// YOU TYPE THIS PART`.",
+         "id": "2-2.7",
+         "n": 7
+        },
+        {
+         "do": "Triple-click the first line that starts with `// YOU TYPE THIS PART`.",
+         "see": "The whole line turns blue.",
+         "id": "2-2.8",
+         "n": 8
+        },
+        {
+         "do": "Type the yellow lines that go in that gap. If another `// YOU TYPE THIS PART` line is left, triple-click it and type its yellow lines.",
+         "see": "BannerMessage is complete. No line in Expedition.cs has a red underline.",
+         "wrong": [
+          [
+           "The `// YOU TYPE THIS PART` line is still there after you type",
+           "Click the old `// YOU TYPE THIS PART` line, then press Home. Hold Shift and press End, so the whole line turns blue. Press Delete."
+          ]
+         ],
+         "id": "2-2.9",
+         "n": 9
+        }
+       ]
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "img": "img/cap/c010.png",
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 610,
+          "h": 223,
+          "marks": [
+           {
+            "n": 10,
+            "x": 11.5,
+            "y": 94.9,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows errors",
+           "Double-click the first error in the Error List. Visual Studio 2019 jumps to the line with the error. Check that line letter by letter against the code in this chapter."
+          ]
+         ],
+         "id": "2-2.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "2"
+  },
+  {
+   "title": "Make the feedback window",
+   "screens": [
+    {
+     "title": "Add the feedback form and set its properties",
+     "blocks": [
+      {
+       "p": "By the end of this screen, your project has an empty feedback window, called frmFeedback."
+      },
+      {
+       "p": "The feedback is a window of its own, the same size as the map, so it needs a new form."
+      },
+      {
+       "steps": [
+        {
+         "do": "Right-click your project's name in Solution Explorer. It is the second line, in bold.",
+         "see": "A long menu opens.",
+         "img": {
+          "img": "img/cap/c068.png",
+          "alt": "The project menu, with Add pointed at and Form (Windows Forms) in the second menu",
+          "w": 949,
+          "h": 605,
+          "marks": [
+           {
+            "n": 1,
+            "x": 73.8,
+            "y": 4.6,
+            "say": "Right-click your project's name in Solution Explorer. It is the second line, in bold."
+           },
+           {
+            "n": 2,
+            "x": 40.6,
+            "y": 37.8,
+            "say": "Point at **Add**, near the top of the menu."
+           },
+           {
+            "n": 3,
+            "x": 11.6,
+            "y": 81.0,
+            "say": "Click **Form (Windows Forms)...** in the second menu."
+           }
+          ]
+         },
+         "id": "3-1.1",
+         "n": 1
+        },
+        {
+         "do": "Point at **Add**, near the top of the menu.",
+         "see": "A second menu opens beside the first one.",
+         "id": "3-1.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Form (Windows Forms)...** in the second menu.",
+         "see": "The Add New Item window opens, and the Name box says `Form1.cs`.",
+         "id": "3-1.3",
+         "n": 3
+        },
+        {
+         "do": "Triple-click the Name box at the bottom of the Add New Item window.",
+         "see": "`Form1.cs` turns blue, so what you type next replaces it.",
+         "img": {
+          "img": "img/cap/c069.png",
+          "alt": "The Add New Item window, with Form (Windows Forms) picked",
+          "w": 943,
+          "h": 592,
+          "marks": [
+           {
+            "n": 4,
+            "x": 42.5,
+            "y": 91.1,
+            "say": "Triple-click the Name box at the bottom of the Add New Item window."
+           },
+           {
+            "n": 5,
+            "x": 13.8,
+            "y": 89.5,
+            "w": 57.4,
+            "h": 3.5,
+            "say": "Type `frmFeedback.cs`"
+           },
+           {
+            "n": 6,
+            "x": 86.0,
+            "y": 96.3,
+            "say": "Click **Add**."
+           }
+          ]
+         },
+         "id": "3-1.4",
+         "n": 4
+        },
+        {
+         "do": "Type `frmFeedback.cs`",
+         "see": "The Name box shows `frmFeedback.cs`.",
+         "id": "3-1.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Add**.",
+         "see": "`frmFeedback.cs` opens, and it is in Solution Explorer.",
+         "id": "3-1.6",
+         "n": 6
+        }
+       ]
+      },
+      {
+       "p": "Set the form's properties with the table below. Set **Font** first, so the size does not change later."
+      },
+      {
+       "controls": {
+        "props": [
+         "Font = Segoe UI, 11pt",
+         "Text = Summit Ready - Expedition complete",
+         "StartPosition = CenterScreen",
+         "FormBorderStyle = FixedSingle",
+         "Size = 1016, 699",
+         "MaximizeBox = False",
+         "BackColor = 243, 245, 242",
+         "ForeColor = 38, 50, 56"
+        ]
+       }
+      },
+      {
+       "p": "The window fills in the total and the list when it opens, so it needs an empty Load method now."
+      },
+      {
+       "steps": [
+        {
+         "do": "Click the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists the form's events in place of its properties.",
+         "img": {
+          "img": "img/cap/c179.png",
+          "alt": "The Properties window showing the events of frmFeedback, with the lightning bolt, Load and the Properties button",
+          "w": 353,
+          "h": 514,
+          "marks": [
+           {
+            "n": 7,
+            "x": 25.7,
+            "y": 9.8,
+            "say": "Click the lightning bolt at the top of the Properties window."
+           },
+           {
+            "n": 8,
+            "x": 42.4,
+            "y": 45.7,
+            "w": 52.8,
+            "h": 4.0,
+            "say": "Double-click the empty box beside **Load**. Scroll down the list a little if you cannot see it."
+           },
+           {
+            "n": 10,
+            "x": 18.8,
+            "y": 9.8,
+            "say": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window."
+           }
+          ]
+         },
+         "id": "3-1.7",
+         "n": 7
+        },
+        {
+         "do": "Double-click the empty box beside **Load**. Scroll down the list a little if you cannot see it.",
+         "see": "The code editor opens `frmFeedback.cs`, with a new empty method called `frmFeedback_Load`.",
+         "id": "3-1.8",
+         "n": 8
+        },
+        {
+         "do": "Press Shift and F7 together.",
+         "see": "The designer shows frmFeedback.",
+         "img": {
+          "img": "img/cap/c180.png",
+          "alt": "The designer showing frmFeedback",
+          "w": 1078,
+          "h": 624,
+          "marks": [
+           {
+            "n": 9,
+            "x": 22.2,
+            "y": 1.6,
+            "say": "Press Shift and F7 together."
+           }
+          ]
+         },
+         "id": "3-1.9",
+         "n": 9
+        },
+        {
+         "do": "Click the Properties button, to the left of the lightning bolt at the top of the Properties window.",
+         "see": "The Properties window lists properties again.",
+         "id": "3-1.10",
+         "n": 10
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Add the strip, the total, the list and the Save button",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmFeedback has everything down its left side and along its top."
+      },
+      {
+       "p": "The feedback strip has no points, no speaker and no Back button. The player leaves by saving, or by closing the window."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Panel",
+          "name": "pnlHeader",
+          "settings": [
+           "Location = 0, 0",
+           "Size = 1000, 56",
+           "BackColor = 38, 50, 56"
+          ],
+          "note": "Drop the Panel near the top of frmFeedback."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblTitle",
+          "settings": [
+           "AutoSize = False",
+           "Location = 16, 6",
+           "Size = 600, 28",
+           "Font = Segoe UI Semibold, 15pt",
+           "ForeColor = 255, 255, 255",
+           "Text = Expedition complete"
+          ],
+          "note": "Drop the Label on pnlHeader."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblInstruction",
+          "settings": [
+           "AutoSize = False",
+           "Location = 18, 33",
+           "Size = 700, 20",
+           "Font = Segoe UI, 10pt",
+           "ForeColor = 207, 216, 220",
+           "Text = Click a summit to see what went well and what went wrong."
+          ],
+          "note": "Drop the Label on pnlHeader."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblTotal",
+          "settings": [
+           "AutoSize = False",
+           "Location = 20, 68",
+           "Size = 700, 36",
+           "Font = Segoe UI Semibold, 18pt",
+           "ForeColor = 38, 50, 56",
+           "Text = You scored 0 out of 800 points."
+          ],
+          "note": "Drop the Label on frmFeedback, under the strip."
+         },
+         {
+          "toolbox": "ListBox",
+          "name": "lstGames",
+          "settings": [
+           "Location = 20, 112",
+           "Size = 360, 480",
+           "Font = Segoe UI, 10.5pt"
+          ],
+          "note": "Drop the ListBox on frmFeedback, on the left side."
+         },
+         {
+          "toolbox": "Button",
+          "name": "btnSave",
+          "settings": [
+           "Location = 780, 604",
+           "Size = 200, 44",
+           "Text = Save my score",
+           "BackColor = 242, 183, 5",
+           "ForeColor = 38, 50, 56",
+           "Font = Segoe UI Semibold, 11pt",
+           "FlatStyle = Flat",
+           "FlatAppearance BorderSize = 0",
+           "Cursor = Hand"
+          ],
+          "note": "Drop the Button on frmFeedback, in the bottom right corner.",
+          "then": "The gold **Save my score** button sits in the bottom right corner."
+         }
+        ],
+        "done": {
+         "see": "The dark strip has the title and the instruction. Under it is the total, with a tall white list down the left side. The gold Save button sits in the bottom right corner.",
+         "img": {
+          "img": "img/cap/c181.png",
+          "alt": "frmFeedback in the designer, with the strip, the total, the list and the Save button",
+          "w": 1041,
+          "h": 730,
+          "marks": []
+         }
+        }
+       }
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Add the white box that shows one summit's feedback",
+     "blocks": [
+      {
+       "p": "By the end of this screen, frmFeedback has the white box on the right that shows one summit's feedback."
+      },
+      {
+       "p": "The 2 feedback boxes are TextBoxes that the player cannot type in. A long list of feedback gets a scroll bar, so no line is ever cut off."
+      },
+      {
+       "controls": {
+        "rows": [
+         {
+          "toolbox": "Panel",
+          "name": "pnlDetail",
+          "settings": [
+           "Location = 400, 112",
+           "Size = 580, 480",
+           "BackColor = 255, 255, 255",
+           "BorderStyle = FixedSingle"
+          ],
+          "note": "Drop the Panel on frmFeedback, to the right of the list."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblGameName",
+          "settings": [
+           "AutoSize = False",
+           "Location = 20, 14",
+           "Size = 540, 32",
+           "Font = Segoe UI Semibold, 15pt",
+           "ForeColor = 38, 50, 56",
+           "Text = Click a summit on the left."
+          ],
+          "note": "Drop the Label on pnlDetail."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblGameScore",
+          "settings": [
+           "AutoSize = False",
+           "Location = 20, 52",
+           "Size = 540, 26",
+           "Font = Segoe UI, 11pt",
+           "ForeColor = 38, 50, 56",
+           "Text = (empty)"
+          ],
+          "note": "Drop the Label on pnlDetail. To empty its Text, triple-click the Text box and press Delete."
+         },
+         {
+          "toolbox": "ProgressBar",
+          "name": "prgGame",
+          "settings": [
+           "Location = 20, 80",
+           "Size = 540, 20",
+           "Visible = False"
+          ],
+          "note": "Drop the ProgressBar on pnlDetail."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblWellHead",
+          "settings": [
+           "AutoSize = False",
+           "Location = 20, 112",
+           "Size = 540, 24",
+           "Font = Segoe UI Semibold, 11pt",
+           "ForeColor = 62, 142, 65",
+           "Text = What went well"
+          ],
+          "note": "Drop the Label on pnlDetail."
+         },
+         {
+          "toolbox": "TextBox",
+          "name": "txtWell",
+          "settings": [
+           "Multiline = True",
+           "Location = 20, 138",
+           "Size = 540, 140",
+           "Font = Segoe UI, 10pt",
+           "ReadOnly = True",
+           "BackColor = 255, 255, 255",
+           "ScrollBars = Vertical"
+          ],
+          "note": "Drop the TextBox on pnlDetail. Set Multiline first, or the TextBox cannot be made taller. Set BackColor after ReadOnly, because ReadOnly turns the box grey."
+         },
+         {
+          "toolbox": "Label",
+          "name": "lblWrongHead",
+          "settings": [
+           "AutoSize = False",
+           "Location = 20, 290",
+           "Size = 540, 24",
+           "Font = Segoe UI Semibold, 11pt",
+           "ForeColor = 178, 58, 46",
+           "Text = What went wrong"
+          ],
+          "note": "Drop the Label on pnlDetail."
+         },
+         {
+          "toolbox": "TextBox",
+          "name": "txtWrong",
+          "settings": [
+           "Multiline = True",
+           "Location = 20, 316",
+           "Size = 540, 146",
+           "Font = Segoe UI, 10pt",
+           "ReadOnly = True",
+           "BackColor = 255, 255, 255",
+           "ScrollBars = Vertical"
+          ],
+          "note": "Drop the TextBox on pnlDetail. Set the properties in the same order as txtWell.",
+          "then": "Two white feedback boxes sit inside the white box, under their green and red headings."
+         }
+        ],
+        "done": {
+         "see": "The white box on the right says **Click a summit on the left.** at the top. Under it are the bar, then the 2 headings, each with a feedback box under it.",
+         "img": {
+          "img": "img/cap/c182.png",
+          "alt": "frmFeedback in the designer with every control from both tables on it",
+          "w": 1041,
+          "h": 730,
+          "marks": []
+         }
+        }
+       }
+      }
+     ],
+     "id": "3"
+    }
+   ],
+   "id": "3"
+  },
+  {
+   "title": "Write the feedback window code",
+   "screens": [
+    {
+     "title": "Fill in the list when the window opens",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the feedback window shows the total and one line for each of the 8 summits."
+      },
+      {
+       "p": "The map reads `Saved` when the feedback window closes. If it is true, the map closes too."
+      },
+      {
+       "code": {
+        "id": "c10-f-saved",
+        "kind": "type",
+        "title": "The Saved field",
+        "lang": "cs",
+        "text": "public bool Saved = false;     // read by the map when this closes",
+        "partLines": [
+         [
+          1,
+          1,
+          "Saved",
+          "`public` lets the map read it. It turns true when the score is saved."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          1
+         ]
+        ],
+        "typed": 1
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Press F7.",
+         "see": "The code of frmFeedback shows in the code editor.",
+         "img": {
+          "img": "img/cap/c183.png",
+          "alt": "frmFeedback.cs, with the Saved field and the lines of frmFeedback_Load typed",
+          "w": 1102,
+          "h": 574,
+          "marks": [
+           {
+            "n": 1,
+            "x": 5.0,
+            "y": 1.7,
+            "say": "Press F7."
+           },
+           {
+            "n": 2,
+            "x": 15.4,
+            "y": 11.7,
+            "say": "Click at the end of the `{` under `public partial class frmFeedback : Form`."
+           },
+           {
+            "n": 3,
+            "x": 16.6,
+            "y": 14.5,
+            "say": "Press Enter."
+           },
+           {
+            "n": 4,
+            "x": 15.7,
+            "y": 12.6,
+            "w": 43.4,
+            "h": 4.1,
+            "say": "Type the yellow lines from the code above."
+           },
+           {
+            "n": 5,
+            "x": 16.6,
+            "y": 36.7,
+            "say": "Click before the word `private` in the line `private void frmFeedback_Load(object sender, EventArgs e)`."
+           },
+           {
+            "n": 6,
+            "x": 16.6,
+            "y": 33.9,
+            "say": "Press Enter."
+           },
+           {
+            "n": 7,
+            "x": 56.1,
+            "y": 33.9,
+            "say": "Press the Up arrow key."
+           },
+           {
+            "n": 8,
+            "x": 15.7,
+            "y": 32.0,
+            "w": 40.2,
+            "h": 4.1,
+            "say": "Type the yellow comment line."
+           },
+           {
+            "n": 9,
+            "x": 18.0,
+            "y": 39.4,
+            "say": "Click at the end of the `{` under `private void frmFeedback_Load(object sender, EventArgs e)`."
+           },
+           {
+            "n": 10,
+            "x": 19.1,
+            "y": 42.2,
+            "say": "Press Enter."
+           },
+           {
+            "n": 11,
+            "x": 18.2,
+            "y": 40.3,
+            "w": 43.4,
+            "h": 54.4,
+            "say": "Type the rest of the yellow lines."
+           }
+          ]
+         },
+         "id": "4-1.1",
+         "n": 1
+        },
+        {
+         "do": "Click at the end of the `{` under `public partial class frmFeedback : Form`.",
+         "see": "The flashing cursor is after the `{`.",
+         "id": "4-1.2",
+         "n": 2
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens under the `{`.",
+         "id": "4-1.3",
+         "n": 3
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The field sits above `public frmFeedback()`.",
+         "id": "4-1.4",
+         "n": 4
+        }
+       ]
+      },
+      {
+       "p": "When the feedback window opens, frmFeedback_Load runs. It changes the title if you did not climb all 8 summits, then adds one line for each summit."
+      },
+      {
+       "code": {
+        "id": "c10-f-load",
+        "kind": "type",
+        "title": "frmFeedback_Load",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// Fills in the title, the total and one line for each summit\nprivate void frmFeedback_Load(object sender, EventArgs e)\n{\n    if (Expedition.DoneCount() < 8)\n    {\n        lblTitle.Text = \"Expedition finished early\";\n    }\n    this.Text = lblTitle.Text;\n    lblTotal.Text = \"You scored \" + Expedition.Total()\n        + \" out of 800 points.\";\n    for (int i = 0; i < 8; i++)\n    {\n        if (Expedition.Done[i])\n        {\n            lstGames.Items.Add(Expedition.Games[i] + \": \"\n                + Expedition.Results[i].Score + \" out of 100 points\");\n        }\n        else\n        {\n            lstGames.Items.Add(Expedition.Games[i] + \": not climbed\");\n        }\n    }\n}",
+        "partLines": [
+         [
+          2,
+          8,
+          "The title",
+          "With fewer than 8 summits climbed, the title says the expedition finished early. The title bar of the window says the same."
+         ],
+         [
+          9,
+          10,
+          "The total",
+          "This line shows the total score, out of 800 points."
+         ],
+         [
+          11,
+          23,
+          "One line for each summit",
+          "`Items.Add` adds a line to the ListBox. A climbed summit shows its score. Any other summit says **not climbed**."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          1
+         ],
+         [
+          4,
+          20
+         ]
+        ],
+        "typed": 11
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click before the word `private` in the line `private void frmFeedback_Load(object sender, EventArgs e)`.",
+         "see": "The flashing cursor is before `private`.",
+         "id": "4-1.5",
+         "n": 5
+        },
+        {
+         "do": "Press Enter.",
+         "see": "The method moves down one line.",
+         "id": "4-1.6",
+         "n": 6
+        },
+        {
+         "do": "Press the Up arrow key.",
+         "see": "The flashing cursor is on the new empty line above `private void frmFeedback_Load`.",
+         "id": "4-1.7",
+         "n": 7
+        },
+        {
+         "do": "Type the yellow comment line.",
+         "see": "The comment sits above `private void frmFeedback_Load`.",
+         "id": "4-1.8",
+         "n": 8
+        },
+        {
+         "do": "Click at the end of the `{` under `private void frmFeedback_Load(object sender, EventArgs e)`.",
+         "see": "The flashing cursor is after the `{`.",
+         "id": "4-1.9",
+         "n": 9
+        },
+        {
+         "do": "Press Enter.",
+         "see": "A new empty line opens inside the method.",
+         "id": "4-1.10",
+         "n": 10
+        },
+        {
+         "do": "Type the rest of the yellow lines.",
+         "see": "No line has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "4-1.11",
+         "n": 11
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Show one summit's feedback when it is clicked",
+     "blocks": [
+      {
+       "p": "By the end of this screen, clicking a summit in the list shows its score and its feedback on the right."
+      },
+      {
+       "p": "The list shows the summits in order, 1st to 8th. So [[SelectedIndex|1]], the number of the line you click, is also the summit's place. It picks that summit's GameResult, its saved result."
+      },
+      {
+       "p": "A [[foreach|4]] loop goes through every line in a list, so you do not have to count. [[AppendText|3]] adds each line to the box."
+      },
+      {
+       "code": {
+        "id": "c10-f-select",
+        "kind": "type",
+        "title": "lstGames_SelectedIndexChanged",
+        "lang": "cs",
+        "why": "The copy already has the lines in the middle, for a summit not climbed. You have written lines like these many times, so you do not retype them.",
+        "text": "// Shows the chosen summit's score and every line about it\nprivate void lstGames_SelectedIndexChanged(object sender,\n    EventArgs e)\n{\n    int i = lstGames.SelectedIndex;\n    if (i == -1) return;           // nothing is selected\n    lblGameName.Text = Expedition.Games[i];\n    txtWell.Clear();\n    txtWrong.Clear();\n    if (!Expedition.Done[i])\n    {\n        lblGameScore.Text = \"You did not climb this summit, so it \"\n            + \"scored 0.\";\n        prgGame.Visible = false;\n        return;\n    }\n    GameResult result = Expedition.Results[i];\n    lblGameScore.Text = \"You scored \" + result.Score\n        + \" out of 100 points.\";\n    prgGame.Value = result.Score;\n    prgGame.Visible = true;\n    foreach (string line in result.WentWell)\n    {\n        txtWell.AppendText(\"• \" + line + Environment.NewLine);\n    }\n    foreach (string line in result.WentWrong)\n    {\n        txtWrong.AppendText(\"• \" + line + Environment.NewLine);\n    }\n}",
+        "partLines": [
+         [
+          2,
+          9,
+          "Which summit",
+          "A click with no line picked gives -1, so the method stops. Otherwise the summit's game name shows, and both feedback boxes are emptied."
+         ],
+         [
+          10,
+          16,
+          "Not climbed",
+          "A summit not climbed scored 0, and has no bar and no feedback."
+         ],
+         [
+          17,
+          21,
+          "The score and the bar",
+          "The score shows in words, and the [[ProgressBar|2]] fills to match it, out of 100."
+         ],
+         [
+          22,
+          30,
+          "The feedback",
+          "Each line about what went well goes in the green box. Each line about what went wrong goes in the red box."
+         ]
+        ],
+        "focusLines": [
+         [
+          5,
+          9
+         ],
+         [
+          17,
+          28
+         ]
+        ],
+        "typed": 14,
+        "wordMarks": [
+         [
+          5,
+          20,
+          34,
+          1
+         ],
+         [
+          24,
+          16,
+          26,
+          3
+         ],
+         [
+          22,
+          4,
+          11,
+          4
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `frmFeedback_Load`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-2.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-2.2",
+         "n": 2
+        },
+        {
+         "do": "Click the copy button below.",
+         "see": "The button says **Copied** for a moment.",
+         "copy": "c10-f-select",
+         "id": "4-2.3",
+         "n": 3
+        },
+        {
+         "do": "Press Ctrl and V together.",
+         "see": "The method appears, with 2 lines that start with `// YOU TYPE THIS PART`.",
+         "id": "4-2.4",
+         "n": 4
+        },
+        {
+         "do": "Triple-click the first line that starts with `// YOU TYPE THIS PART`.",
+         "see": "The whole line turns blue.",
+         "id": "4-2.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines that go in that gap. If another `// YOU TYPE THIS PART` line is left, triple-click it and type its yellow lines.",
+         "see": "The method is complete. No line has a red underline.",
+         "wrong": [
+          [
+           "The `// YOU TYPE THIS PART` line is still there after you type",
+           "Click the old `// YOU TYPE THIS PART` line, then press Home. Hold Shift and press End, so the whole line turns blue. Press Delete."
+          ]
+         ],
+         "id": "4-2.6",
+         "n": 6
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Save the score, and ask before leaving without saving",
+     "blocks": [
+      {
+       "p": "By the end of this screen, **Save my score** saves the score and closes the window."
+      },
+      {
+       "p": "The banner needs the player's best score and place from before the save. So btnSave_Click reads them first, then saves."
+      },
+      {
+       "code": {
+        "id": "c10-f-save",
+        "kind": "type",
+        "title": "btnSave_Click",
+        "lang": "cs",
+        "text": "// Saves the score, and remembers what the banner needs to know\nprivate void btnSave_Click(object sender, EventArgs e)\n{\n    string name = Expedition.CurrentPlayer.Username;\n    Expedition.PreviousBest = ScoreFile.BestScore(name);\n    Expedition.PreviousPlace = ScoreFile.PlaceOf(name);\n    string date = DateTime.Now.ToString(\"dd/MM/yyyy HH:mm\");\n    ScoreFile.Save(new ScoreEntry(name, Expedition.Total(), date));\n    Expedition.JustSaved = true;\n    Expedition.LastSavedScore = Expedition.Total();\n    Saved = true;\n    this.Close();\n}",
+        "partLines": [
+         [
+          2,
+          6,
+          "Before the save",
+          "The best score and the place before this save, from ScoreFile in chapters 5 and 7."
+         ],
+         [
+          7,
+          8,
+          "Save",
+          "`DateTime.Now` gives the date and time, such as 14/10/2026 10:35. A new ScoreEntry goes into the scores file."
+         ],
+         [
+          9,
+          13,
+          "Tell the banner, then close",
+          "The banner now knows a score was saved, and what it was. `Saved` tells the map, then the window closes."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          13
+         ]
+        ],
+        "typed": 10
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `lstGames_SelectedIndexChanged`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-3.1",
+         "n": 1
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-3.2",
+         "n": 2
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "btnSave_Click sits under lstGames_SelectedIndexChanged.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "4-3.3",
+         "n": 3
+        }
+       ]
+      },
+      {
+       "p": "A player who closes the window without saving loses the expedition. So FormClosing, the code that runs as the window closes, asks first."
+      },
+      {
+       "code": {
+        "id": "c10-f-close",
+        "kind": "type",
+        "title": "frmFeedback_FormClosing",
+        "lang": "cs",
+        "text": "// Runs as the window closes: asks first if nothing was saved\nprivate void frmFeedback_FormClosing(object sender,\n    FormClosingEventArgs e)\n{\n    if (Saved) return;\n    DialogResult answer = MessageBox.Show(\"Leave without saving your \"\n        + \"score? This expedition will not count.\", \"Summit Ready\",\n        MessageBoxButtons.YesNo);\n    if (answer == DialogResult.No) e.Cancel = true;   // stay\n}",
+        "partLines": [
+         [
+          2,
+          10,
+          "Ask first",
+          "If the score is saved, the window closes at once. If not, a question appears, and **No** sets `e.Cancel` to true, which keeps the window open."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          10
+         ]
+        ],
+        "typed": 7
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Click at the end of the `}` that closes `btnSave_Click`.",
+         "see": "The flashing cursor is after the `}`.",
+         "id": "4-3.4",
+         "n": 4
+        },
+        {
+         "do": "Press Enter twice.",
+         "see": "A blank line, then a new empty line, open under the `}`. The flashing cursor is on the new empty line.",
+         "id": "4-3.5",
+         "n": 5
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "frmFeedback_FormClosing sits under btnSave_Click.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "4-3.6",
+         "n": 6
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Connect the feedback window's events, then build",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the list, the Save button and the closing question all work, and your project builds."
+      },
+      {
+       "p": "Connect each event in the table to its method, in the same way as on the map."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Shift and F7 together.",
+         "see": "The designer shows frmFeedback.",
+         "img": {
+          "img": "img/cap/c187.png",
+          "alt": "frmFeedback in the designer, with the events list of lstGames",
+          "w": 1568,
+          "h": 510,
+          "marks": [
+           {
+            "n": 1,
+            "x": 12.1,
+            "y": 1.6,
+            "say": "Press Shift and F7 together."
+           }
+          ]
+         },
+         "id": "4-4.1",
+         "n": 1
+        }
+       ]
+      },
+      {
+       "controls": {
+        "props": [
+         "lstGames: SelectedIndexChanged = lstGames_SelectedIndexChanged",
+         "btnSave: Click = btnSave_Click",
+         "frmFeedback (click its title bar): FormClosing = frmFeedback_FormClosing"
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "If you have forgotten how to connect an event",
+        "fold": true,
+        "blocks": [
+         {
+          "p": "Click the control in the designer. Click the lightning bolt at the top of the Properties window. Click the box beside the event, then click the small arrow at the right end of the box. Click the method."
+         },
+         {
+          "p": "Do not double-click the box. Double-clicking makes a new empty method with `_1` at the end of its name."
+         }
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "img": "img/cap/c010.png",
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 610,
+          "h": 223,
+          "marks": [
+           {
+            "n": 2,
+            "x": 11.5,
+            "y": 94.9,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows errors",
+           "Double-click the first error in the Error List. Visual Studio 2019 jumps to the line with the error. Check that line letter by letter against the code in this chapter."
+          ]
+         ],
+         "id": "4-4.2",
+         "n": 2
+        }
+       ]
+      }
+     ],
+     "id": "4"
+    }
+   ],
+   "id": "4"
+  },
+  {
+   "title": "Open the feedback window, and show the banner",
+   "screens": [
+    {
+     "title": "Make the map open the feedback window",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the map opens the feedback window, and closes once the score is saved."
+      },
+      {
+       "p": "In chapter 8, OpenFeedback showed the total in a message. Now you replace it with the real one."
+      },
+      {
+       "code": {
+        "id": "c10-m-open",
+        "kind": "type",
+        "title": "OpenFeedback, the real one",
+        "lang": "cs",
+        "text": "// Shows how it went; once the score is saved, the map closes\nprivate void OpenFeedback()\n{\n    this.Hide();\n    frmFeedback feedback = new frmFeedback();\n    feedback.ShowDialog();\n    if (feedback.Saved)\n    {\n        saved = true;\n        this.Close();\n    }\n    else\n    {\n        this.Show();\n    }\n}",
+        "partLines": [
+         [
+          2,
+          6,
+          "Open the feedback",
+          "The map hides, and the feedback window opens and waits."
+         ],
+         [
+          7,
+          16,
+          "Saved, or not",
+          "A saved score closes the map, with no question, because `saved` is true. Otherwise the map shows again, and the player can carry on."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          16
+         ]
+        ],
+        "typed": 9
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `frmMap.cs` in Solution Explorer, then press F7.",
+         "see": "The code of frmMap shows.",
+         "img": {
+          "img": "img/cap/c188.png",
+          "alt": "frmMap.cs, with the old OpenFeedback picked in blue",
+          "w": 1102,
+          "h": 433,
+          "marks": [
+           {
+            "n": 1,
+            "x": 5.0,
+            "y": 2.3,
+            "say": "Double-click `frmMap.cs` in Solution Explorer, then press F7."
+           },
+           {
+            "n": 2,
+            "x": 16.6,
+            "y": 74.6,
+            "say": "Click before the `//` at the start of the line `// Shows the total for now (chapter 10 adds the feedback window)`."
+           },
+           {
+            "n": 3,
+            "x": 18.0,
+            "y": 92.9,
+            "say": "Hold Shift and click after the `}` that closes `OpenFeedback`."
+           }
+          ]
+         },
+         "id": "5-1.1",
+         "n": 1
+        },
+        {
+         "do": "Click before the `//` at the start of the line `// Shows the total for now (chapter 10 adds the feedback window)`.",
+         "see": "The flashing cursor is before the `//`.",
+         "id": "5-1.2",
+         "n": 2
+        },
+        {
+         "do": "Hold Shift and click after the `}` that closes `OpenFeedback`.",
+         "see": "The whole of the old OpenFeedback, from its comment to its `}`, turns blue.",
+         "id": "5-1.3",
+         "n": 3
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The new OpenFeedback replaces the old one. No line has a red underline.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "5-1.4",
+         "n": 4
+        }
+       ]
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Make ShowBanner show the banner",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the gold banner shows on the Welcome window straight after a save."
+      },
+      {
+       "p": "In chapter 7, ShowBanner only hid the banner. Now it shows the banner once, after a save. Cases A to D are the four ways a score can rank on the Top 10. The trophy shows in A, B and C, and the win sound plays in A and B."
+      },
+      {
+       "code": {
+        "id": "c10-w-banner",
+        "kind": "type",
+        "title": "ShowBanner, the real one",
+        "lang": "cs",
+        "noCopy": true,
+        "text": "// The banner shows once, straight after a saved expedition\nprivate void ShowBanner()\n{\n    if (!Expedition.JustSaved)\n    {\n        MoveBoard(false);\n        return;\n    }\n    Expedition.JustSaved = false;      // once only\n    char bannerCase = Expedition.BannerCase();\n    lblBannerHead.Text = Expedition.BannerHeading();\n    lblBannerMessage.Text = Expedition.BannerMessage();\n    picTrophy.Visible = bannerCase != 'D';\n    if (bannerCase == 'A' || bannerCase == 'B') Sound.Play(\"win.wav\");\n    MoveBoard(true);\n}",
+        "partLines": [
+         [
+          2,
+          8,
+          "No save, no banner",
+          "With no save made, the banner stays hidden, the same as before."
+         ],
+         [
+          9,
+          12,
+          "Once only, with its words",
+          "`JustSaved` turns false, so the banner never shows twice. Then the heading and the message go on the banner."
+         ],
+         [
+          13,
+          16,
+          "Trophy, sound, show",
+          "`!=` means is not. The trophy shows unless it is case D. Then MoveBoard shows the banner and moves the board down."
+         ]
+        ],
+        "focusLines": [
+         [
+          4,
+          15
+         ]
+        ],
+        "typed": 10,
+        "wordMarks": [
+         [
+          10,
+          4,
+          8,
+          5
+         ]
+        ]
+       }
+      },
+      {
+       "steps": [
+        {
+         "do": "Double-click `frmWelcome.cs` in Solution Explorer, then press F7.",
+         "see": "The code of frmWelcome shows.",
+         "img": {
+          "img": "img/cap/c190.png",
+          "alt": "frmWelcome.cs, with the new lines of ShowBanner typed",
+          "w": 1102,
+          "h": 477,
+          "marks": [
+           {
+            "n": 1,
+            "x": 5.0,
+            "y": 2.1,
+            "say": "Double-click `frmWelcome.cs` in Solution Explorer, then press F7."
+           },
+           {
+            "n": 2,
+            "x": 33.2,
+            "y": 61.0,
+            "say": "Click at the end of the line `MoveBoard(false);` inside ShowBanner."
+           },
+           {
+            "n": 3,
+            "x": 21.7,
+            "y": 61.0,
+            "say": "Hold Shift and press Home."
+           },
+           {
+            "n": 4,
+            "x": 18.2,
+            "y": 52.1,
+            "w": 43.4,
+            "h": 41.5,
+            "say": "Type the yellow lines from the code above."
+           }
+          ]
+         },
+         "id": "5-2.1",
+         "n": 1
+        },
+        {
+         "do": "Click at the end of the line `MoveBoard(false);` inside ShowBanner.",
+         "see": "The flashing cursor is after the `;`.",
+         "id": "5-2.2",
+         "n": 2
+        },
+        {
+         "do": "Hold Shift and press Home.",
+         "see": "`MoveBoard(false);` turns blue.",
+         "id": "5-2.3",
+         "n": 3
+        },
+        {
+         "do": "Type the yellow lines from the code above.",
+         "see": "The yellow lines replace the old line. The new lines still use `MoveBoard(false);` inside the `if`.",
+         "wrong": [
+          [
+           "There is an extra `}` at the end of what you typed",
+           "Visual Studio 2019 adds a `}` each time you type a `{` and press Enter. Delete the extra `}`, so each `{` has one `}`."
+          ]
+         ],
+         "id": "5-2.4",
+         "n": 4
+        },
+        {
+         "do": "Press Ctrl, Shift and B together.",
+         "see": "The bottom left corner of Visual Studio 2019 says **Build succeeded**.",
+         "img": {
+          "img": "img/cap/c010.png",
+          "alt": "The bottom left corner of Visual Studio 2019, saying Build succeeded",
+          "w": 610,
+          "h": 223,
+          "marks": [
+           {
+            "n": 5,
+            "x": 11.5,
+            "y": 94.9,
+            "say": "Press Ctrl, Shift and B together."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Error List shows errors",
+           "Double-click the first error in the Error List. Visual Studio 2019 jumps to the line with the error. Check that line letter by letter against the code in this chapter."
+          ]
+         ],
+         "id": "5-2.5",
+         "n": 5
+        }
+       ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Finish an expedition and save it",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have finished an expedition, read its feedback and seen the banner."
+      },
+      {
+       "p": "Run the whole expedition once, from the Welcome window and back, so you see every part working together."
+      },
+      {
+       "steps": [
+        {
+         "do": "Press F5, log in, then click **Start the expedition**.",
+         "see": "The map opens.",
+         "img": {
+          "img": "img/cap/c529.png",
+          "alt": "The map at the start of an expedition, with the Slieve Binnian card at the top of the right side",
+          "w": 818,
+          "h": 565,
+          "marks": [
+           {
+            "n": 1,
+            "x": 1.0,
+            "y": 5.3,
+            "w": 39.4,
+            "h": 7.4,
+            "say": "Press F5, log in, then click **Start the expedition**."
+           },
+           {
+            "n": 2,
+            "x": 62.6,
+            "y": 13.5,
+            "w": 36.2,
+            "h": 8.8,
+            "say": "Open the practice game from Slieve Binnian. Click your answer to the question, then click the gold **Back to the map**."
+           },
+           {
+            "n": 3,
+            "x": 80.7,
+            "y": 94.9,
+            "say": "Click **Finish the expedition**, then click **Yes**."
+           }
+          ]
+         },
+         "id": "5-3.1",
+         "n": 1
+        },
+        {
+         "do": "Open the practice game from Slieve Binnian. Click your answer to the question, then click the gold **Back to the map**.",
+         "see": "The map shows a tick on Slieve Binnian.",
+         "id": "5-3.2",
+         "n": 2
+        },
+        {
+         "do": "Click **Finish the expedition**, then click **Yes**.",
+         "see": "The feedback window opens. Its title says **Expedition finished early**, and the list has 8 lines.",
+         "id": "5-3.3",
+         "n": 3
+        },
+        {
+         "do": "Click the first line in the list.",
+         "see": "The white box shows the practice game's score, the bar and one line of feedback.",
+         "img": {
+          "img": "img/cap/c191.png",
+          "alt": "The feedback window, with the first summit picked and its feedback on the right",
+          "w": 1000,
+          "h": 689,
+          "marks": [
+           {
+            "n": 4,
+            "x": 15.0,
+            "y": 22.2,
+            "say": "Click the first line in the list."
+           },
+           {
+            "n": 5,
+            "x": 11.5,
+            "y": 24.9,
+            "say": "Click the second line in the list."
+           }
+          ]
+         },
+         "id": "5-3.4",
+         "n": 4
+        },
+        {
+         "do": "Click the second line in the list.",
+         "see": "The white box says **You did not climb this summit, so it scored 0.**",
+         "id": "5-3.5",
+         "n": 5
+        },
+        {
+         "do": "Click **Save my score**.",
+         "see": "The feedback window and the map close. The Welcome window shows the gold banner above the Top 10.",
+         "img": {
+          "img": "img/cap/c192.png",
+          "alt": "The Welcome window with the gold banner and the highlighted row on the Top 10",
+          "w": 1000,
+          "h": 689,
+          "marks": [
+           {
+            "n": 6,
+            "x": 35.2,
+            "y": 9.8,
+            "w": 63.4,
+            "h": 15.3,
+            "say": "Click **Save my score**."
+           }
+          ]
+         },
+         "wrong": [
+          [
+           "The Welcome window shows no banner",
+           "Check that btnSave_Click sets `Expedition.JustSaved = true;`. Then check that ShowEverything in frmWelcome calls ShowBanner."
+          ]
+         ],
+         "id": "5-3.6",
+         "n": 6
+        }
+       ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Your turn: change the heading for case A",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you have changed one of the banner's words on your own, and tested it."
+      },
+      {
+       "p": "Change the heading for case A, so that it welcomes the player to the board."
+      },
+      {
+       "code": {
+        "id": "c10-turn",
+        "kind": "turn",
+        "title": "A new heading for case A",
+        "lang": "cs",
+        "text": "case 'A': return \"Welcome to the Top 10!\";",
+        "task": [
+         "Find the line for case A in BannerHeading, in Expedition.cs.",
+         "Change its words to `Welcome to the Top 10!`"
+        ],
+        "test": "Register a new player, then finish and save an expedition with that player.",
+        "expect": "The banner heading says **Welcome to the Top 10!**",
+        "hint": "A new player is not on the board before the save, so the save is case A while the board has fewer than 10 players."
+       }
+      },
+      {
+       "p": "When the test passes, put the heading back to **You made the Top 10!**"
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Check that the finish line works",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know every part of the finish line works, including refusing to close without saving."
+      },
+      {
+       "p": "Run each test with F5. Tick each test when it passes. A test marked \"Must be refused\" should do nothing, and that counts as a pass."
+      },
+      {
+       "check": [
+        {
+         "what": "Finish with 1 summit climbed, then click **Yes**.",
+         "expect": "allowed",
+         "how": "The feedback window opens with the title **Expedition finished early**.",
+         "must": "Must happen",
+         "fix": "Check the first `if` in frmFeedback_Load, then check that frmFeedback_Load is in the box beside **Load** in the Properties window.",
+         "id": "5-5.t1"
+        },
+        {
+         "what": "Click a summit that was not climbed.",
+         "expect": "allowed",
+         "how": "The white box says **You did not climb this summit, so it scored 0.** and the bar is hidden.",
+         "must": "Must happen",
+         "fix": "Check the `if (!Expedition.Done[i])` part of lstGames_SelectedIndexChanged.",
+         "id": "5-5.t2"
+        },
+        {
+         "what": "Click the X on the feedback window, then click **No**.",
+         "expect": "control",
+         "how": "The feedback window stays open. Nothing is saved.",
+         "fix": "Check frmFeedback_FormClosing, then check that it is in the box beside **FormClosing** in the Properties window.",
+         "id": "5-5.t3"
+        },
+        {
+         "what": "Click **Save my score**.",
+         "expect": "allowed",
+         "how": "The map closes. The Welcome window shows the banner, and your row on the Top 10 is highlighted.",
+         "must": "Must happen",
+         "fix": "Check btnSave_Click, OpenFeedback in frmMap.cs and ShowBanner in frmWelcome.cs.",
+         "id": "5-5.t4"
+        },
+        {
+         "what": "Click **Start the expedition**, then **Back to the welcome screen**.",
+         "expect": "allowed",
+         "how": "The banner has gone, because it shows only once after each save.",
+         "must": "Must happen",
+         "fix": "Check that ShowBanner sets `Expedition.JustSaved = false;`.",
+         "id": "5-5.t5"
+        }
+       ]
+      },
+      {
+       "box": {
+        "title": "Evidence to keep",
+        "blocks": [
+         {
+          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
+         },
+         {
+          "p": "Paste each screenshot into your testing document, under the test it shows."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "5"
+    }
+   ],
+   "id": "5"
+  }
+ ],
+ "glossary": [
+  [
+   "ListBox",
+   "A box that shows a list of lines. The player clicks a line to pick it."
+  ],
+  [
+   "SelectedIndex",
+   "The number of the line picked in a ListBox, from 0. It is -1 when no line is picked."
+  ],
+  [
+   "ProgressBar",
+   "A bar that fills from left to right. Its Value says how full it is, from 0 to 100."
+  ],
+  [
+   "AppendText",
+   "Adds words to the end of what a TextBox already shows."
+  ],
+  [
+   "foreach",
+   "Runs the lines inside it once for each item in a list."
+  ],
+  [
+   "char",
+   "One single character, such as a letter. A char goes in single quotes, such as `'A'`."
+  ]
+ ]
+}

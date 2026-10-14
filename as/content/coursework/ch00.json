@@ -1,0 +1,590 @@
+{
+ "id": "00",
+ "n": 0,
+ "of": 20,
+ "title": "Start here: what Summit Ready is, and how this guide works",
+ "kind": "the chapter to read before you open Visual Studio 2019",
+ "one": "You meet Summit Ready, the game this guide builds, and the topics your own game may not use. You find out how the 50 marks are given, and how the code blocks and ticks in this guide work.",
+ "next": {
+  "id": "01",
+  "n": 1,
+  "title": "Plan your game"
+ },
+ "noTurn": true,
+ "stages": [
+  {
+   "title": "Meet Summit Ready, the game this guide builds",
+   "screens": [
+    {
+     "title": "See every window of Summit Ready, from logging in to saving a score",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know every window of Summit Ready, in the order a player meets them."
+      },
+      {
+       "p": "Summit Ready is a game made in Visual Studio 2019 with C#. This guide shows you how to build it, one chapter at a time. Then you change it into a game on your own topic."
+      },
+      {
+       "words": [
+        [
+         "MessageBox",
+         "A small window with a message and an OK button. `MessageBox.Show` opens one.",
+         "4-1",
+         true
+        ],
+        [
+         "client",
+         "The person you make the game for. They tell you what the game must do, and they try it at the end.",
+         "1-1",
+         false
+        ],
+        [
+         "form",
+         "One window of your game. Summit Ready has a form for logging in, a form for the map, and a form for each game.",
+         "1-1",
+         false
+        ],
+        [
+         "topic",
+         "What your game teaches or practises, such as French verbs or the parts of a cell.",
+         "2-1",
+         false
+        ],
+        [
+         "assessment objective",
+         "One of the 3 parts that the 50 marks are split into. Each one is called AO for short: AO1, AO2 and AO3.",
+         "3-1",
+         false
+        ],
+        [
+         "level",
+         "A band of marks inside one assessment objective. Each assessment objective has 4 levels, and level 4 has the top marks.",
+         "3-1",
+         false
+        ],
+        [
+         "portfolio",
+         "The written document you hand in with your game. It holds your plan, your screenshots, your tests and your evaluation.",
+         "2-1",
+         false
+        ]
+       ],
+       "intro": "You do not need to learn these words now. Where you first meet each one in the chapter, it has a dotted line under it. Hover over it or tap it to see what it means."
+      },
+      {
+       "p": "Every game in this coursework is made for a [[client|1]]. The client for Summit Ready is pretend: the teacher who leads the school's hill-walking expeditions."
+      },
+      {
+       "p": "The client said: \"Pupils going on their first expedition find the skills tricky: what to pack, reading the weather, grid references, timing a route, knots.\""
+      },
+      {
+       "p": "The client also said: \"They forget it all between the training evening and the hill. Can you make a game that makes them practise?\""
+      },
+      {
+       "p": "Each window of the game is called a [[form|2]]. A player meets the forms in the order on this screen."
+      },
+      {
+       "p": "The first form is Log in. A player types a username and a password, then clicks **Log in**. After 3 wrong tries in a row, the form makes the player wait 30 seconds."
+      },
+      {
+       "screenshot": {
+        "img": "img/ch00-login.png",
+        "alt": "The Summit Ready Log in form, with a photo of the Mourne Mountains, a Username box, a Password box and a gold Log in button.",
+        "w": 490,
+        "h": 338,
+        "marks": [],
+        "cap": "The Log in form. A new player clicks **Register a new player** under the Log in button."
+       }
+      },
+      {
+       "p": "A new player signs up on the Register form. The player picks a username, types a password twice, and clicks a picture."
+      },
+      {
+       "p": "The picture is the player's avatar. An avatar is the small picture that stands for the player in the game."
+      },
+      {
+       "screenshot": {
+        "img": "img/ch00-register.png",
+        "alt": "The Register a new player form, with 3 boxes on the left and 8 animal pictures on the right.",
+        "w": 490,
+        "h": 338,
+        "marks": [],
+        "cap": "The Register form. The 8 avatars are a goat, an eagle, a fox, a hare, a deer, an owl, a badger and a raven."
+       }
+      },
+      {
+       "p": "After logging in, the player sees the Welcome form. It shows the player's avatar, their best score, and the Top 10 climbers."
+      },
+      {
+       "screenshot": {
+        "img": "img/ch00-welcome.png",
+        "alt": "The Welcome form, with a fox avatar on the left and a Top 10 climbers table on the right.",
+        "w": 490,
+        "h": 338,
+        "marks": [],
+        "cap": "The Welcome form. The **Start the expedition** button opens the map."
+       }
+      },
+      {
+       "p": "The map shows 8 real summits in the Mourne Mountains. Each summit is one game, and the player can climb them in any order."
+      },
+      {
+       "screenshot": {
+        "img": "img/cap/c000.png",
+        "alt": "The Your expedition map, with 8 red flags on the left and a list of the 8 summits on the right.",
+        "w": 1000,
+        "h": 689,
+        "marks": [],
+        "cap": "The map. Each summit in the list on the right opens its game."
+       }
+      },
+      {
+       "p": "When the player clicks **Finish the expedition**, the Feedback form shows the score for each game. It says what went well and what went wrong, in full sentences."
+      },
+      {
+       "screenshot": {
+        "img": "img/ch00-feedback.png",
+        "alt": "The Feedback form. The player scored 83 out of 800 points, and Pack the Rucksack is picked in the list.",
+        "w": 703,
+        "h": 480,
+        "marks": [],
+        "cap": "The Feedback form after one game. Clicking **Save my score** saves the score and goes back to the Welcome form."
+       }
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "See the 8 games, and choose the 4 you will build",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know the 8 games in Summit Ready, and which 4 of them you will build."
+      },
+      {
+       "p": "Each game scores up to 100 points, so a perfect expedition scores 800 points. Each game is played in a different way, so each game teaches you a different piece of C#."
+      },
+      {
+       "p": "The 8 games come in 4 pairs. You build one game from each pair, so you build 4 games. You may build more than 4 if you have time."
+      },
+      {
+       "p": "Pair 1 is Pack the Rucksack (chapter 11) and Knot Pairs (chapter 12)."
+      },
+      {
+       "screenshot": {
+        "img": "img/ch00-rucksack.png",
+        "alt": "Pack the Rucksack after Check my rucksack. Each item has a tick or a cross, and the bottom line says 10 of 12 in the right place.",
+        "w": 803,
+        "h": 549,
+        "marks": [],
+        "cap": "Pack the Rucksack: drag each item to **Pack it** or **Leave it at home**."
+       }
+      },
+      {
+       "screenshot": {
+        "img": "img/ch00-knots.png",
+        "alt": "Knot Pairs at the start of a round, with 16 cards face down and Tries: 0 of 24.",
+        "w": 803,
+        "h": 549,
+        "marks": [],
+        "cap": "Knot Pairs: turn over two cards at a time to match each knot to its name."
+       }
+      },
+      {
+       "p": "Pair 2 is Leave No Trace (chapter 13) and Whiteout (chapter 15)."
+      },
+      {
+       "screenshot": {
+        "img": "img/ch00-litter.jpg",
+        "alt": "Leave No Trace before the walk starts, with a fox avatar on a field of grass, 8 pieces of litter and 3 sheep.",
+        "w": 803,
+        "h": 549,
+        "marks": [],
+        "cap": "Leave No Trace: walk with the arrow keys, pick up the litter, and keep away from the sheep."
+       }
+      },
+      {
+       "screenshot": {
+        "img": "img/cap/c001.png",
+        "alt": "Whiteout during a round, with the hidden word, the letter buttons and the cloud coming down over the picture.",
+        "w": 1000,
+        "h": 599,
+        "marks": [],
+        "cap": "Whiteout: guess the hidden word one letter at a time, before the cloud comes all the way down."
+       }
+      },
+      {
+       "p": "Pair 3 is Read the Sky (chapter 14) and Route Timer (chapter 17)."
+      },
+      {
+       "screenshot": {
+        "img": "img/ch00-sky.png",
+        "alt": "Read the Sky on question 1 of 10, with a photo of a ring of light round the sun and 3 answer buttons.",
+        "w": 803,
+        "h": 549,
+        "marks": [],
+        "cap": "Read the Sky: pick the best answer before the time bar runs out."
+       }
+      },
+      {
+       "screenshot": {
+        "img": "img/ch00-routetimer.png",
+        "alt": "Route Timer on leg 1 of 5, with a photo of a hill, a slider and the line Your guess: 1 hour 10 minutes.",
+        "w": 703,
+        "h": 480,
+        "marks": [],
+        "cap": "Route Timer: slide to your guess of how long a walk takes, then lock it in."
+       }
+      },
+      {
+       "p": "Pair 4 is Grid Ref Rescue (chapter 16) and Listen Out (chapter 18)."
+      },
+      {
+       "screenshot": {
+        "img": "img/ch00-gridref.png",
+        "alt": "Grid Ref Rescue on rescue 1 of 5, with a map with numbered grid lines and a radio message.",
+        "w": 703,
+        "h": 480,
+        "marks": [],
+        "cap": "Grid Ref Rescue: click the grid square that the radio message gives you."
+       }
+      },
+      {
+       "screenshot": {
+        "img": "img/ch00-listen.png",
+        "alt": "Listen Out on sound 1 of 10, with a gold Play the sound button and 4 pictures.",
+        "w": 602,
+        "h": 412,
+        "marks": [],
+        "cap": "Listen Out: play the sound, then click the picture that made it."
+       }
+      },
+      {
+       "p": "You do not need to pick your 4 games yet. Chapters 1 to 10 come first, and every game needs them."
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "1"
+  },
+  {
+   "title": "Choose a topic that Summit Ready does not use",
+   "screens": [
+    {
+     "title": "Keep your own game away from the Summit Ready topics",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know which topics your own game may not use."
+      },
+      {
+       "p": "Your game must be your own work. So your game may not use the topic of Summit Ready, or any topic close to it."
+      },
+      {
+       "p": "Your game may not be about mountains, hill-walking, expeditions or the Duke of Edinburgh's Award. It may not be about camping, outdoor pursuits, map reading or navigation, knots, or weather forecasting."
+      },
+      {
+       "p": "The pictures, questions and words in Summit Ready may not appear in your game or in your [[portfolio|6]] either."
+      },
+      {
+       "p": "A good [[topic|3]] starts with a real problem. For example, a teacher tells you that pupils find a part of their subject tricky."
+      },
+      {
+       "p": "Topics like these would work well. You could choose the elements of the periodic table, or French verbs. You could choose key dates in a history topic, or the parts of a plant cell."
+      },
+      {
+       "p": "In chapter 1, you choose your own client and your own topic, and you plan your game."
+      }
+     ],
+     "id": "1"
+    }
+   ],
+   "id": "2"
+  },
+  {
+   "title": "Find out how the 50 marks are given",
+   "screens": [
+    {
+     "title": "See what earns each of the 50 marks",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know what the 50 marks are given for, and which chapters help with each part."
+      },
+      {
+       "p": "This coursework is marked out of 50. The 50 marks are split into 3 parts. Each part is called an [[assessment objective|4]], or AO for short."
+      },
+      {
+       "box": {
+        "title": "AO1: 14 marks for knowing what to build, and planning it",
+        "blocks": [
+         {
+          "p": "You earn these marks with a full list of requirements, which says everything your game must do."
+         },
+         {
+          "p": "You also need a very detailed storyboard. A storyboard is a drawing of every form, and yours must show the changes you made and why."
+         },
+         {
+          "p": "You show that you understand events (what happens when a player clicks or types), more than one form, menus, and reading and writing text files."
+         },
+         {
+          "p": "You also need a full test plan that tests every way of moving between forms, and every box the player types into."
+         }
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "AO2: 22 marks for building the game and testing it",
+        "blocks": [
+         {
+          "p": "You earn these marks with a wide range of screenshots and pictures of your game."
+         },
+         {
+          "p": "Your forms must be right for your client. You show this by letting real users try them, and acting on what they say."
+         },
+         {
+          "p": "Your game must meet every requirement. Your portfolio must show where in your code each requirement is met."
+         },
+         {
+          "p": "You also need screenshots that show every test from your test plan, with what happened."
+         }
+        ]
+       }
+      },
+      {
+       "box": {
+        "title": "AO3: 14 marks for judging your game and your own work",
+        "blocks": [
+         {
+          "p": "You earn these marks by explaining what your tests showed, and what you fixed."
+         },
+         {
+          "p": "You write a final report that checks your game against each of your requirements."
+         },
+         {
+          "p": "You judge your own work: how you used your time, what skills you used, and what you would do better next time."
+         },
+         {
+          "p": "Your writing must be clear and well organised, with the right technical words, and good spelling, punctuation and grammar."
+         }
+        ]
+       }
+      },
+      {
+       "p": "Each assessment objective is marked in 4 [[levels|5]]. Level 4 has the top marks. The words for level 4 are \"comprehensive\", \"highly detailed\" and \"thorough\", so a short answer stays in a low level."
+      },
+      {
+       "p": "The marker reads your portfolio. The game on its own earns very few marks. Your code only earns marks when your portfolio shows it and says what it does."
+      },
+      {
+       "p": "Chapter 1 is for AO1. Chapters 2 to 18 build the game for AO2. Chapter 19 tests the game for all 3 parts, and chapter 20 is for AO2 and AO3."
+      },
+      {
+       "p": "These marks come from the CCEA mark scheme for this coursework. Your teacher has the full mark scheme if you want to read it."
+      }
+     ],
+     "id": "1"
+    }
+   ],
+   "id": "3"
+  },
+  {
+   "title": "Learn how the code blocks and ticks in this guide work",
+   "screens": [
+    {
+     "title": "Read the four kinds of code block",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know what to do with each kind of code block in this guide."
+      },
+      {
+       "p": "Every code block has a label in its top left corner. The label tells you what to do with the code."
+      },
+      {
+       "p": "A block labelled **Type this one** has yellow lines. You type the yellow lines yourself, because typing new code is how you learn it."
+      },
+      {
+       "p": "You do not type anything now. The block below is only to show you what a **Type this one** block looks like."
+      },
+      {
+       "code": {
+        "id": "c00-type-example",
+        "kind": "type",
+        "title": "An example of a block you type",
+        "lang": "cs",
+        "text": "MessageBox.Show(\"Player created\");",
+        "partLines": [
+         [
+          1,
+          1,
+          "Show a message box",
+          "This line shows a small window with the words **Player created** and an OK button."
+         ]
+        ],
+        "focusLines": [
+         [
+          1,
+          1
+         ]
+        ],
+        "typed": 1,
+        "wordMarks": [
+         [
+          1,
+          0,
+          15,
+          0
+         ]
+        ]
+       }
+      },
+      {
+       "p": "Click **Walk me through it** under any block to see what each part of the code does, one part at a time."
+      },
+      {
+       "p": "A block labelled **Copy this one** has a **Copy it** button. You copy code that you have already typed somewhere earlier in the guide."
+      },
+      {
+       "p": "Some blocks give you the code with a gap. You copy the block, then type the missing part yourself, where it says `// YOU TYPE THIS PART`."
+      },
+      {
+       "p": "A block labelled **Read this one** is there to read. It shows code or a data file that you need to understand, but do not type."
+      },
+      {
+       "code": {
+        "id": "c00-read-example",
+        "kind": "read",
+        "title": "An example of a block you read: one line of players.txt",
+        "lang": "txt",
+        "text": "ridgeRunner|summit42|avatar-goat.png|03/09/2026",
+        "noCopy": true,
+        "partLines": [
+         [
+          1,
+          1,
+          "One player on one line",
+          "This line is one player. The bar `|` splits it into 4 parts: the username, the password, the avatar picture and the date the player joined."
+         ]
+        ]
+       }
+      },
+      {
+       "p": "A block labelled **Your turn** is a task for your own game. Try it yourself first."
+      },
+      {
+       "p": "If you are stuck, click **Stuck? Show me the finished code** under the task to see an answer."
+      },
+      {
+       "p": "Your teacher can see which blocks you copied and which answers you opened. That is normal and it is not a punishment. It shows your teacher where the guide needs to help more."
+      },
+      {
+       "p": "Each new piece of C# follows the same order. The first time you meet it, you type it. The second time, you copy it with a gap. After that, you copy it."
+      }
+     ],
+     "id": "1"
+    },
+    {
+     "title": "Tick each step and test as you finish it",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you will know how to tick your work, and where to find your place next time."
+      },
+      {
+       "p": "Each step in the guide has a numbered tick button on its left. Click the tick button when you have done the step."
+      },
+      {
+       "p": "Each test in a test table has a tick button too. Tick a test when it has passed."
+      },
+      {
+       "p": "Your ticks save, because you signed in. The next time you open a chapter, its button says **Carry on**, and the top of the chapter shows how many steps are ticked."
+      },
+      {
+       "p": "There is no printed copy of this guide. You always use it signed in, so your ticks and your place are saved."
+      },
+      {
+       "p": "When you finish a chapter, click **Mark chapter 0 as done** at the bottom of its last screen. If you want to start a chapter again, click **Clear my ticks**."
+      },
+      {
+       "p": "Some words have a dotted line under them. Hover over the word, or tap it, to see what it means."
+      },
+      {
+       "p": "Under many steps there is a line that starts **If it goes wrong**. Click it if your screen does not match the step."
+      },
+      {
+       "p": "Run each check below before you go on to chapter 1. Tick each check when it is true for you."
+      },
+      {
+       "check": [
+        {
+         "what": "Your topic is about a school subject or a skill that a real person finds tricky.",
+         "expect": "allowed",
+         "how": "Write one sentence that names your topic and who finds it tricky.",
+         "must": "Must be true",
+         "id": "4-2.t1"
+        },
+        {
+         "what": "Your topic is on the list of Summit Ready topics.",
+         "expect": "control",
+         "how": "If your game is about camping, knots or the weather, it is too close to Summit Ready. Pick another topic.",
+         "fix": "Read the list of topics again on the screen called **Keep your own game away from the Summit Ready topics**.",
+         "id": "4-2.t2"
+        },
+        {
+         "what": "You know which chapter gives each assessment objective its marks.",
+         "expect": "allowed",
+         "how": "Chapter 1 is AO1, chapters 2 to 18 are AO2, chapter 19 is all 3 parts, and chapter 20 is AO2 and AO3.",
+         "must": "Must be true",
+         "id": "4-2.t3"
+        }
+       ]
+      },
+      {
+       "box": {
+        "title": "Evidence to keep",
+        "blocks": [
+         {
+          "p": "Make a folder for your coursework in your OneDrive. Your portfolio, your screenshots and your project will all go in it."
+         },
+         {
+          "p": "Write your topic and your client in one sentence at the top of a new Word document. That document becomes your portfolio."
+         }
+        ]
+       }
+      }
+     ],
+     "id": "2"
+    }
+   ],
+   "id": "4"
+  }
+ ],
+ "glossary": [
+  [
+   "MessageBox",
+   "A small window with a message and an OK button. `MessageBox.Show` opens one."
+  ],
+  [
+   "client",
+   "The person you make the game for. They tell you what the game must do, and they try it at the end."
+  ],
+  [
+   "form",
+   "One window of your game. Summit Ready has a form for logging in, a form for the map, and a form for each game."
+  ],
+  [
+   "topic",
+   "What your game teaches or practises, such as French verbs or the parts of a cell."
+  ],
+  [
+   "assessment objective",
+   "One of the 3 parts that the 50 marks are split into. Each one is called AO for short: AO1, AO2 and AO3."
+  ],
+  [
+   "level",
+   "A band of marks inside one assessment objective. Each assessment objective has 4 levels, and level 4 has the top marks."
+  ],
+  [
+   "portfolio",
+   "The written document you hand in with your game. It holds your plan, your screenshots, your tests and your evaluation."
+  ]
+ ]
+}
