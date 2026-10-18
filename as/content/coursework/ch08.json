@@ -3368,7 +3368,7 @@
        "p": "Summit Ready's map is the Mourne Mountains, with a flag on each of 8 summits. Your map can be any picture with 8 places to click, such as a stage with 8 spots on it for a dance game."
       },
       {
-       "p": "Your game keeps 8 places. Each game you build fills one place. A place with no game yet does nothing when it is clicked."
+       "p": "Your game keeps all 8 places, so you can build more than 4 games if you have time. Each game you build fills one place. For now, a place with no game does nothing when it is clicked. Chapter 10 makes those places look tidy."
       },
       {
        "p": "Find a square picture for your map. Make it 600 pixels wide and 600 high, so it fills picMap exactly. Open it in Paint and click **Resize**. Click **Pixels**, untick **Maintain aspect ratio**, type 600 in both boxes, then click **OK**."
