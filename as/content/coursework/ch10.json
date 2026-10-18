@@ -2014,6 +2014,114 @@
       }
      ],
      "id": "5"
+    },
+    {
+     "title": "Your turn: let the map find the places with a game",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the map knows which of its 8 places have a game."
+      },
+      {
+       "p": "You build 4 games, or more if you have time, so some places have no game. Before the map can tidy those places, it must find out which ones they are."
+      },
+      {
+       "p": "The new method MakeGame holds the switch from OpenGame. It makes the game's window for a place, without showing it, or gives back `null`. The map uses MakeGame at the start, to check each place, and again when a place is clicked."
+      },
+      {
+       "code": {
+        "id": "c10-turn-find",
+        "kind": "turn",
+        "title": "Move the switch into MakeGame, and check each place",
+        "lang": "cs",
+        "text": "// Makes the window of the game at place i, or null if it has none\nprivate Form MakeGame(int i)\n{\n    Form game = null;\n    switch (i)\n    {\n        // each game chapter adds its own case below this line\n        case 0: game = new frmPractice(); break;\n    }\n    return game;\n}\n\n// In frmMap_Load, inside the for loop, under MakeFlag(i);\nForm game = MakeGame(i);\nif (game != null)\n{\n    Expedition.HasGame[i] = true;\n    game.Dispose();      // made only to check, so throw it away\n}",
+        "task": [
+         "In `Expedition.cs`, under the line that makes `Done`, type `public static bool[] HasGame = new bool[8];`",
+         "Copy DoneCount, with its comment line, and paste the copy under DoneCount. In the copy, change `DoneCount` to `GameCount` and `Done[i]` to `HasGame[i]`. Change its comment to say it counts the places with a game.",
+         "In `frmMap.cs`, in OpenGame, select the lines from `Form game = null;` down to the `}` that closes the switch. Press Ctrl and X together to cut them.",
+         "Where the lines were, type `Form game = MakeGame(i);`",
+         "Under the `}` that closes OpenGame, type the first 3 lines of MakeGame from the code. Press Ctrl and V together to paste the cut lines. Then type `return game;` and the last `}`.",
+         "In frmMap_Load, type the 6 lines at the bottom of the code inside the for loop, under `MakeFlag(i);`."
+        ],
+        "test": "Press F5, log in and open the map. Click the place for the practice game.",
+        "expect": "The practice game opens, the same as before.",
+        "hint": "`Dispose` throws away a window that was made but never shown. If `HasGame` has a red underline, check the line you typed in `Expedition.cs`."
+       }
+      },
+      {
+       "p": "Each game chapter still adds its case line under the comment line. The comment line is now in MakeGame, so search for it in the same way."
+      }
+     ],
+     "id": "6"
+    },
+    {
+     "title": "Your turn: make the places with no game look tidy",
+     "blocks": [
+      {
+       "p": "By the end of this screen, each place with no game says **No game yet**, in grey, with no flag on the map."
+      },
+      {
+       "p": "The map also finishes when every game on it is played, not only when all 8 are played."
+      },
+      {
+       "code": {
+        "id": "c10-turn-tidy",
+        "kind": "turn",
+        "title": "Grey out the places with no game, and finish when every game is played",
+        "lang": "cs",
+        "text": "// In ShowProgress, between the if part and the else part\nelse if (!Expedition.HasGame[i])\n{\n    cards[i].Text = top + Environment.NewLine + \"No game yet\";\n    cards[i].Enabled = false;\n    cards[i].BackColor = Color.FromArgb(240, 240, 240);\n    flags[i].Visible = false;\n}\n\n// In btnFinish_Click\nif (done < Expedition.GameCount())\n{\n    DialogResult answer = MessageBox.Show(\"You have played \" + done\n        + \" of your \" + Expedition.GameCount() + \" dances. Finish now?\",\n        \"Dance Steps\", MessageBoxButtons.YesNo);",
+        "task": [
+         "In ShowProgress, type the `else if` part from the code between the `if (Expedition.Done[i])` part and the `else` part.",
+         "In btnFinish_Click, change `done < 8` to `done < Expedition.GameCount()`.",
+         "In the message under it, change the 8 to `\" + Expedition.GameCount() + \"`, so the message counts your own games.",
+         "In OpenGame, change `Expedition.DoneCount() == 8` to `Expedition.DoneCount() == Expedition.GameCount()`.",
+         "In the message under it, change **all eight** to words such as **all your games**."
+        ],
+        "test": "Press F5, log in and open the map.",
+        "expect": "Only the practice game's place has a flag. The other 7 cards say **No game yet**, in grey, and nothing happens when they are clicked.",
+        "hint": "`!` means not, so `!Expedition.HasGame[i]` is true for a place with no game."
+       }
+      },
+      {
+       "p": "The finished code shows the message of a dance game. Your own words go in its place."
+      },
+      {
+       "p": "From now on, the map finishes by itself once every game on it is played. While you build, with only 1 or 2 games, this happens often. To go back to the map, close the feedback window and click **Yes**."
+      },
+      {
+       "p": "The practice game keeps place 0 until chapter 11 replaces it. If you do not build chapter 11, you can delete the practice game's case line, and place 0 then says **No game yet**."
+      }
+     ],
+     "id": "7"
+    },
+    {
+     "title": "Your turn: leave the places with no game off the feedback list",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the feedback list has one line for each game you have built, and no others."
+      },
+      {
+       "p": "At the moment, the list has a line for all 8 places. A new list, `places`, keeps the place number of each line, so a click on a line still finds the right game."
+      },
+      {
+       "code": {
+        "id": "c10-turn-list",
+        "kind": "turn",
+        "title": "Leave out the places with no game",
+        "lang": "cs",
+        "text": "private List<int> places = new List<int>();   // the place of each line\n\n// In frmFeedback_Load, at the start of the for loop\nif (!Expedition.HasGame[i]) continue;          // no game at this place\nplaces.Add(i);\n\n// In lstGames_SelectedIndexChanged, in place of its first 2 lines\nif (lstGames.SelectedIndex == -1) return;      // nothing is selected\nint i = places[lstGames.SelectedIndex];",
+        "task": [
+         "In `frmFeedback.cs`, type the line that makes `places` under the line `public bool Saved = false;`.",
+         "In frmFeedback_Load, change `Expedition.DoneCount() < 8` to `Expedition.DoneCount() < Expedition.GameCount()`.",
+         "Inside the for loop, above `if (Expedition.Done[i])`, type the 2 lines that start with `if (!Expedition.HasGame[i])` and `places.Add`.",
+         "In lstGames_SelectedIndexChanged, delete the first 2 lines inside the method. Type the last 2 lines of the code in their place."
+        ],
+        "test": "Press F5, log in, and play the practice game to the end. When the map says every game is played, click **OK**.",
+        "expect": "The feedback window opens. Its list has 1 line, for the practice game. Clicking the line shows its score and feedback.",
+        "hint": "`continue` skips the rest of the loop for this place, and goes on to the next place. If `List<int>` has a red underline, type `using System.Collections.Generic;` under the other using lines at the top."
+       }
+      }
+     ],
+     "id": "8"
     }
    ],
    "id": "5"

@@ -3994,7 +3994,7 @@
        ]
       },
       {
-       "p": "A few lines above the cases, OpenGame already checks the sound before Listen Out opens. You wrote these lines in chapter 8, so you read them here and do not type them."
+       "p": "At the start of OpenGame, the map already checks the sound before Listen Out opens. You wrote these lines in chapter 8, so you read them here and do not type them."
       },
       {
        "code": {
