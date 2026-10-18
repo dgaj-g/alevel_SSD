@@ -1,7 +1,7 @@
 {
  "id": "04",
  "n": 4,
- "of": 20,
+ "of": 18,
  "title": "Your own exceptions",
  "kind": "a core chapter: every rule in the register form, the log in and the games uses what you make here",
  "one": "You make your own exceptions, one for each way a player can break a rule. Then the Player class checks every rule as each value is set, and throws the right exception.",
@@ -1775,7 +1775,7 @@
        "p": "By the end of this screen, you know that every rule throws the right message, and that a good player is still added."
       },
       {
-       "p": "Change one value in btnTest_Click, press F5, then click Test. After each test, close the Summit Ready - Log in window before you change the next value. A row marked **Must be refused** must show its message and not add the player. Take a screenshot of each message, **Rule broken** or **Added:**, before you click OK on it. You need them for your testing document."
+       "p": "Change one value in btnTest_Click, press F5, then click Test. After each test, close the Summit Ready - Log in window before you change the next value. A row marked **Must be refused** must show its message and not add the player."
       },
       {
        "p": "Test rules 5 and 6 as well, before the row that sets the password to `ropeclimb`. Set the password to `\"\"`, and the message must say **Type a password.** Then set it to `abc1`, and the message must say **Your password needs 6 to 20 characters.**"
@@ -1997,19 +1997,6 @@
       },
       {
        "p": "testClimber and rulesTester stay in `players.txt`."
-      },
-      {
-       "box": {
-        "title": "Evidence to keep",
-        "blocks": [
-         {
-          "p": "Use the screenshots you took on the last screen, one of each **Rule broken** message and of the **Added:** message."
-         },
-         {
-          "p": "Paste each screenshot into your testing document, beside the test data that caused it. Each test is a row: the data, what should happen, and what did happen."
-         }
-        ]
-       }
       }
      ],
      "id": "3"

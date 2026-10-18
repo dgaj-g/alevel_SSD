@@ -1,9 +1,9 @@
 {
  "id": "12",
  "n": 12,
- "of": 20,
+ "of": 18,
  "title": "Build Knot Pairs, a memory game with cards made by code",
- "kind": "a game chapter: build one game from each pair, and this pair is chapters 11 and 12",
+ "kind": "a game chapter: build any 4 of the 8 game chapters",
  "one": "You build Knot Pairs in your own project, exactly as it is in Summit Ready, and test it. Then you change it into a memory game on your own topic.",
  "prev": {
   "id": "11",
@@ -29,7 +29,7 @@
        "p": "Knot Pairs is a memory game. It is on Slieve Lamagan, the second place on the Summit Ready map."
       },
       {
-       "p": "You build one game from each pair of game chapters. Knot Pairs is paired with Pack the Rucksack, so you build one of those two."
+       "p": "You choose any 4 of the 8 game chapters to build. You may build more than 4 if you have time."
       },
       {
        "p": "First you build Knot Pairs exactly as it is in Summit Ready. Then, in stage 5, you change it into a memory game on your own topic."
@@ -4638,7 +4638,7 @@
        }
       },
       {
-       "p": "When the test passes, change all 5 things back to 24, because Knot Pairs is meant to give 24 tries. Change the Maximum of prgRope back before the Value. The Value can never be bigger than the Maximum."
+       "p": "When the test passes, change all 5 things back to 24 for now, because the next screen tests Summit Ready's own game. You make your own changes in stage 5. Change the Maximum of prgRope back before the Value. The Value can never be bigger than the Maximum."
       }
      ],
      "id": "21"
@@ -4756,7 +4756,7 @@
        "p": "Change at least 2 more things as well, so that your game plays differently from Knot Pairs. For example, change the number of tries, the points for a pair, the bonus rules, the colours or the size of the cards."
       },
       {
-       "p": "Every picture and sound you use must be free to use. Each one gets a line in `credits.txt`, saying who made it, its licence and a link."
+       "p": "Every picture and sound you use must be free to use. Add a line for each one to `credits.txt`, so its maker gets the credit. Say who made it, its licence (the rules for using it) and a link."
       }
      ],
      "id": "1"
@@ -5024,10 +5024,52 @@
      "id": "4"
     },
     {
-     "title": "Test your game, and keep the evidence",
+     "title": "Your turn: choose how many points your game gives",
      "blocks": [
       {
-       "p": "By the end of this screen, you know that your own game works, and you have the evidence for your coursework."
+       "p": "By the end of this screen, you have chosen how many points your game gives, and every total fits."
+      },
+      {
+       "p": "You choose how many points each pair found is worth. Summit Ready gives 10 points for each pair, and a bonus of up to 20 for few tries."
+      },
+      {
+       "p": "Your top score is what a perfect round earns. For example, 8 pairs at 5 points each, and a bonus of 20, gives a top score of 60."
+      },
+      {
+       "code": {
+        "id": "c12-turn-points",
+        "kind": "turn",
+        "title": "Choose the points, and make every total fit",
+        "lang": "cs",
+        "text": "lblScore.Text = \"Points: \" + pairs * 5;\nresult = new GameResult(\"Element Pairs\", pairs * 5 + bonus);",
+        "task": [
+         "In Match, change `pairs * 10` to the points you choose for each pair.",
+         "In RecordResult, change `pairs * 10` in the same way.",
+         "In RecordResult, change the 2 bonus numbers, 20 and 10. Change both to 0 if you want no bonus.",
+         "In ShowRoundOver, change **out of 100 points** to your own top score.",
+         "In ShowRoundOver, change 60 to the score that earns the happy sound.",
+         "In Expedition.cs, change `\"Knot Pairs\"` in the `Games` list to your game's name.",
+         "In frmMap.cs, change **800** in ShowProgress to the top scores of all your games added together.",
+         "In frmFeedback.cs, change **800** in frmFeedback_Load in the same way.",
+         "In frmFeedback.cs, change **out of 100 points** to **points** in the 2 places it appears. Skip this if you did it for an earlier game.",
+         "If any of your games can score more than 100, open frmFeedback in the designer and click the bar prgGame. In the Properties window, set Maximum to your biggest top score."
+        ],
+        "test": "Play a round to the end. Then go back to the map, and read **Points so far**.",
+        "expect": "The Round over box gives your score out of your own top score, and the map gives your own total.",
+        "hint": "The 800 is in 2 files, frmMap.cs and frmFeedback.cs. In each one, press Ctrl and F together, then type `800`."
+       }
+      },
+      {
+       "p": "Each time you finish another game, add its top score to the 2 totals you changed in frmMap.cs and frmFeedback.cs."
+      }
+     ],
+     "id": "5"
+    },
+    {
+     "title": "Test your game",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that your own game works."
       },
       {
        "p": "Run each test with F5 on your own game. Tick each test when it passes. The 2 tests marked as clicks to refuse must do nothing, and that counts as a pass."
@@ -5039,40 +5081,40 @@
          "expect": "allowed",
          "how": "Both cards stay face up with green borders, and Pairs found goes up by 1.",
          "must": "Must happen",
-         "id": "5-5.t1"
+         "id": "5-6.t1"
         },
         {
          "what": "Turn over two cards that are not a pair.",
          "expect": "allowed",
          "how": "Both cards show for about 1 second, then both cards turn face down.",
          "must": "Must happen",
-         "id": "5-5.t2"
+         "id": "5-6.t2"
         },
         {
          "what": "Click the same card twice.",
          "expect": "control",
          "how": "Start a new round. Click one card, then click the same card again. The Tries label must not change.",
-         "id": "5-5.t3"
+         "id": "5-6.t3"
         },
         {
          "what": "Click a third card while a wrong pair is showing.",
          "expect": "control",
          "how": "The third card must stay face down.",
-         "id": "5-5.t4"
+         "id": "5-6.t4"
         },
         {
          "what": "Use up every try.",
          "expect": "allowed",
          "how": "The message you wrote for running out of tries shows. Every unmatched card is face up, and See my score appears.",
          "must": "Must happen",
-         "id": "5-5.t5"
+         "id": "5-6.t5"
         },
         {
          "what": "Finish a round, then go back to the map.",
          "expect": "allowed",
          "how": "The flag on your game's place shows a tick.",
          "must": "Must happen",
-         "id": "5-5.t6"
+         "id": "5-6.t6"
         }
        ]
       },
@@ -5080,23 +5122,10 @@
        "p": "Every test passed in Knot Pairs. So if a test fails now, the fault is in something you changed in this stage. Look back over your changes one at a time, starting with the last one."
       },
       {
-       "box": {
-        "title": "Evidence to keep",
-        "blocks": [
-         {
-          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
-         },
-         {
-          "p": "Paste each screenshot into your testing document, under the test it shows."
-         },
-         {
-          "p": "Keep your data file and your `credits.txt` with your project."
-         }
-        ]
-       }
+       "p": "Keep your data file and your `credits.txt` with your project."
       }
      ],
-     "id": "5"
+     "id": "6"
     }
    ],
    "id": "5"

@@ -5,5 +5,14 @@
   "staff.archived": "These attempts are kept in the AS SSD - Archive Sheet.",
   "staff.act.archived": "Older answers kept in the AS SSD - Archive Sheet are not listed here.",
   "cw.crumbHome": "AS SSD",
-  "home.cwSub": "Build your own game in Visual Studio 2019, one chapter at a time."
+  "home.cwSub": "Build your own game in Visual Studio 2019, one chapter at a time.",
+  "notice.why1": "This guide is now only about building your game. The write-up is a separate job, so chapters 19 and 20 have been taken out.",
+  "notice.why2": "Your game can be about anything you know well, in school or out of it, such as the moves taught at a local dance class.",
+  "notice.why3": "You make each part your own as you build it, so you change things all the way through, not only at the end.",
+  "notice.means1": "Any step you have already ticked is still ticked.",
+  "notice.means2": "No step asks you for screenshots, templates or written evidence any more.",
+  "notice.means3": "Chapters 0 and 1 have been rewritten. Read them again before you carry on.",
+  "notice.means4": "Build any 4 of the 8 game chapters, 11 to 18. You do not have to pick them in pairs.",
+  "notice.means5": "You choose how many points each question is worth. Each game chapter has a new screen that shows you how.",
+  "notice.means6": "From chapter 5, the Your turn screens show you how to change Summit Ready to suit your own game as you build it."
 }

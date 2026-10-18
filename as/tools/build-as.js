@@ -4,7 +4,7 @@
  *   1. the two :root token lines in style.css (as/src/tokens-as.css: deep teal, amber, AS tints) and the print line's name,
  *   2. the strings (as/src/strings-as.json), the content (no SQL papers; the AS coursework guide) and the content address,
  *   3. the home page (the coursework tile only: AS has no SQL past papers), the staff tabs (no Papers or Live) and
- *      the chapter count (00 to 20),
+ *      the chapter count (00 to 18) and the one-off "guide has changed" message (its own id and time),
  *   4. the guide renderer: as/src/cw.js and cw.css, the newer copy the AS guide was designed with (same tokens).
  * Writes  as/server/Index.html            PUBLIC (committed)
  *         <AS_PRIVATE>/deploy/Code.gs     the Apps Script server (never committed), plus appsscript.json and BUILD.txt
@@ -51,7 +51,8 @@ function guardScriptlets(name, text) {
 // ---- 1. the stylesheets
 let style = need(path.join(A2, 'platform', 'style.css'));
 const lines = style.split('\n'), roots = lines.map((l, i) => (l.startsWith(':root{') ? i : -1)).filter((i) => i >= 0);
-if (roots.length !== 2 || roots[1] !== roots[0] + 1) { console.error('A2 style.css: expected the two :root token lines (is A2 tokenised?)'); process.exit(1); }
+// the token lines are the first two :root lines, side by side (A2 v12 added a later :root line for the message's dark backdrop, kept as is)
+if (roots.length < 2 || roots[1] !== roots[0] + 1) { console.error('A2 style.css: expected the two :root token lines (is A2 tokenised?)'); process.exit(1); }
 const tokens = need(path.join(AS, 'src', 'tokens-as.css')).trim().split('\n');
 if (tokens.length !== 2 || !tokens.every((l) => /^:root\{[^}]*\}$/.test(l))) { console.error('tokens-as.css: expected two :root lines'); process.exit(1); }
 lines.splice(roots[0], 2, tokens[0], tokens[1]);
@@ -88,13 +89,23 @@ function tickIds(node) {
 CWIX.chapters.filter((c) => c.built).forEach((c) => {
   const ids = tickIds(JSON.parse(need(path.join(AS, 'content', 'coursework', 'ch' + c.id + '.json'))).stages);
   if (!ids.length || new Set(ids).size !== ids.length) { console.error('ch' + c.id + ': no steps, or a step id twice'); process.exit(1); }
-  CWMETA[c.id] = ids;
   // the published index carries steps and stages for each built chapter, as A2's does (staff.js reads them)
   const chj = JSON.parse(need(path.join(AS, 'content', 'coursework', 'ch' + c.id + '.json')));
   c.steps = ids;
   c.stages = chj.stages.map((st, i) => [String(i + 1), st.title, st.screens.length]);
 });
 fs.writeFileSync(path.join(AS, 'content', 'coursework', 'index.json'), JSON.stringify(CWIX, null, 1) + '\n');
+// A pupil's ticks are a bitmap over as/server/cw-slots.json, which only ever grows (as A2's does): a retired row keeps its slot
+// as null, so no old tick lands on a new row; a new row goes at the END of its chapter. Made 18 Oct 2026 by the guide
+// folder's _build/rewrite-18oct/make_slots.py when the write-up was taken out (chapters 19 and 20 are retired, all null).
+const SLOTS = JSON.parse(need(path.join(AS, 'server', 'cw-slots.json')));
+const BUILT = CWIX.chapters.filter((c) => c.built);
+BUILT.forEach((c) => {
+  const miss = c.steps.filter((id) => !(SLOTS[c.id] || []).includes(id));
+  if (miss.length) { console.error('as/server/cw-slots.json: chapter ' + c.id + ' has no slot for ' + miss.length + ' row(s), first ' + miss[0] + '. Add them at the END of that chapter, never in the middle.'); process.exit(1); }
+  const live = new Set(c.steps);
+  CWMETA[c.id] = SLOTS[c.id].map((id) => (live.has(id) ? id : null));
+});
 CWMETA.files = CWIX.files.map((f) => f.name);
 
 // ---- 3. the page scripts
@@ -103,7 +114,9 @@ const sqlTile = app.slice(app.indexOf("'<button class=\"tile live\" data-go=\"#s
 app = swap('app.js', app, sqlTile, '');
 const soon = app.slice(app.indexOf("'<div class=\"tile soon\""), app.indexOf("</div></div>');", app.indexOf("'<div class=\"tile soon\"")));
 app = swap('app.js', app, soon, "'");
-app = swap('app.js', app, 'for (let i = 0; i <= 12; i++) {', 'for (let i = 0; i <= 20; i++) {');
+app = swap('app.js', app, 'for (let i = 0; i <= 12; i++) {', 'for (let i = 0; i <= 18; i++) {');
+// the "guide has changed" message: AS's own id and time (18 Oct 2026 13:00 Irish time, in server minutes); its words are in strings-as.json
+app = swap('app.js', app, "const NOTICE = { id: 'guide-2026-10', at: 417240, secs: 30 };", "const NOTICE = { id: 'as-guide-2026-10', at: 418320, secs: 30 };");
 // staff: AS has no SQL papers, so no Papers or Live tab; the Coursework tab opens first
 let staff = need(path.join(A2, 'platform', 'staff.js'));
 staff = swap('staff.js', staff, "['papers', 'staff.tabPapers'], ['live', 'staff.tabLive'], ", '');

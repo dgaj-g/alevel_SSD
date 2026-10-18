@@ -1,9 +1,9 @@
 {
  "id": "11",
  "n": 11,
- "of": 20,
+ "of": 18,
  "title": "Build Pack the Rucksack, a sorting game with drag and drop",
- "kind": "a game chapter: build one game from each pair, and this pair is chapters 11 and 12",
+ "kind": "a game chapter: build any 4 of the 8 game chapters",
  "one": "You build Pack the Rucksack in your own project, exactly as it is in Summit Ready, and test it. Then you change it into a sorting game on your own topic.",
  "prev": {
   "id": "10",
@@ -29,7 +29,7 @@
        "p": "Pack the Rucksack is a sorting game. It is on Slieve Binnian, the first place on the Summit Ready map."
       },
       {
-       "p": "You build one game from each pair of game chapters. Pack the Rucksack is paired with Knot Pairs, so you build one of those two."
+       "p": "You choose any 4 of the 8 game chapters to build. You may build more than 4 if you have time."
       },
       {
        "p": "First you build Pack the Rucksack exactly as it is in Summit Ready. Then, in stage 5, you change it into a sorting game on your own topic."
@@ -117,7 +117,7 @@
        "p": "After the check, you click any card to see why it belongs where it does. The reason shows in the box at the top, such as why jeans are no good on a hill."
       },
       {
-       "p": "Count the cards in the right zone. Multiply by 100, then divide by 12. So 12 right scores 100 points, 11 right scores 91 points and 10 right scores 83 points."
+       "p": "The score is the number of cards in the right zone, times 100, divided by 12 and rounded down. So 12 right scores 100 points, 11 right scores 91 points and 10 right scores 83 points."
       },
       {
        "screenshot": {
@@ -5198,7 +5198,7 @@
        "p": "By the end of this screen, you have changed when the happy sound plays, and tested it, on your own."
       },
       {
-       "p": "After the check, the correct sound plays for 9 or more right. Change Pack the Rucksack so that it needs 11 or more right."
+       "p": "After the check, the happy sound plays for 9 or more right. Change Pack the Rucksack so that it needs 11 or more right."
       },
       {
        "code": {
@@ -5217,7 +5217,7 @@
        }
       },
       {
-       "p": "When the test passes, change 11 back to 9, because Pack the Rucksack is meant to play the happy sound for 9 or more."
+       "p": "When the test passes, change 11 back to 9 for now, because the next screen tests Summit Ready's own game. You make your own changes in stage 5."
       }
      ],
      "id": "21"
@@ -5354,7 +5354,7 @@
        "p": "Change at least 2 more things as well, so that your game plays differently from Pack the Rucksack. For example, change the pass mark for the happy sound, the colours, the size of the cards or the feedback lines."
       },
       {
-       "p": "Every picture and sound you use must be free to use. Each one gets a line in `credits.txt`, saying who made it, its licence and a link."
+       "p": "Every picture and sound you use must be free to use. Add a line for each one to `credits.txt`, so its maker gets the credit. Say who made it, its licence (the rules for using it) and a link."
       }
      ],
      "id": "1"
@@ -5635,10 +5635,50 @@
      "id": "4"
     },
     {
-     "title": "Test your game, and keep the evidence",
+     "title": "Your turn: choose how many points your game gives",
      "blocks": [
       {
-       "p": "By the end of this screen, you know that your own game works, and you have the evidence for your coursework."
+       "p": "By the end of this screen, you have chosen how many points your game gives, and every total fits."
+      },
+      {
+       "p": "You choose how many points each item sorted into the right zone is worth. Summit Ready gives 100 points for all 12 items right."
+      },
+      {
+       "p": "Your top score is what a perfect round earns. For example, 12 items at 5 points each gives a top score of 60."
+      },
+      {
+       "code": {
+        "id": "c11-turn-points",
+        "kind": "turn",
+        "title": "Choose the points, and make every total fit",
+        "lang": "cs",
+        "text": "int score = right * 5;   // 5 points for each item in the right zone",
+        "task": [
+         "In RecordResult, change the line that starts `int score`, so that each item in the right zone earns the points you choose.",
+         "In ShowRoundOver, change **out of 100 points** to your own top score.",
+         "In ShowRoundOver, change 60 to the score that earns the happy sound.",
+         "In Expedition.cs, change `\"Pack the Rucksack\"` in the `Games` list to your game's name.",
+         "In frmMap.cs, change **800** in ShowProgress to the top scores of all your games added together.",
+         "In frmFeedback.cs, change **800** in frmFeedback_Load in the same way.",
+         "In frmFeedback.cs, change **out of 100 points** to **points** in the 2 places it appears. Skip this if you did it for an earlier game.",
+         "If any of your games can score more than 100, open frmFeedback in the designer and click the bar prgGame. In the Properties window, set Maximum to your biggest top score."
+        ],
+        "test": "Play a round to the end. Then go back to the map, and read **Points so far**.",
+        "expect": "The Round over box gives your score out of your own top score, and the map gives your own total.",
+        "hint": "The 800 is in 2 files, frmMap.cs and frmFeedback.cs. In each one, press Ctrl and F together, then type `800`."
+       }
+      },
+      {
+       "p": "Each time you finish another game, add its top score to the 2 totals you changed in frmMap.cs and frmFeedback.cs."
+      }
+     ],
+     "id": "5"
+    },
+    {
+     "title": "Test your game",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that your own game works."
       },
       {
        "p": "Press F5 to run each test on your own game. Tick each test when it passes. Where the game must refuse the move, doing nothing is a pass."
@@ -5650,40 +5690,40 @@
          "expect": "allowed",
          "how": "Each card moves into the zone it is dropped on, and the count of items left goes down.",
          "must": "Must happen",
-         "id": "5-5.t1"
+         "id": "5-6.t1"
         },
         {
          "what": "Drop a card on each zone's heading.",
          "expect": "allowed",
          "how": "The card lands in that heading's zone.",
          "must": "Must happen",
-         "id": "5-5.t2"
+         "id": "5-6.t2"
         },
         {
          "what": "Press the check button with items still on the pile.",
          "expect": "control",
          "how": "No card gets marked right or wrong, and the message you wrote about sorting every item first shows.",
-         "id": "5-5.t3"
+         "id": "5-6.t3"
         },
         {
          "what": "Sort every item, then press the check button.",
          "expect": "allowed",
          "how": "Every card is marked right or wrong, and clicking a card shows your own reason.",
          "must": "Must happen",
-         "id": "5-5.t4"
+         "id": "5-6.t4"
         },
         {
          "what": "Try to drag a card after the check.",
          "expect": "control",
          "how": "The card must stay where it was.",
-         "id": "5-5.t5"
+         "id": "5-6.t5"
         },
         {
          "what": "Finish a round, then go back to the map.",
          "expect": "allowed",
          "how": "The flag on your game's place shows a tick.",
          "must": "Must happen",
-         "id": "5-5.t6"
+         "id": "5-6.t6"
         }
        ]
       },
@@ -5691,23 +5731,10 @@
        "p": "Every test passed in Pack the Rucksack. So if a test fails now, the fault is in something you changed in this stage. Look back over your changes one at a time, starting with the last one."
       },
       {
-       "box": {
-        "title": "Evidence to keep",
-        "blocks": [
-         {
-          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
-         },
-         {
-          "p": "Paste each screenshot into your testing document, under the test it shows."
-         },
-         {
-          "p": "Keep your data file and your `credits.txt` with your project."
-         }
-        ]
-       }
+       "p": "Keep your data file and your `credits.txt` with your project."
       }
      ],
-     "id": "5"
+     "id": "6"
     }
    ],
    "id": "5"

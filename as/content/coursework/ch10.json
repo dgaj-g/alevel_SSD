@@ -1,7 +1,7 @@
 {
  "id": "10",
  "n": 10,
- "of": 20,
+ "of": 18,
  "title": "The finish line",
  "kind": "a build chapter: the feedback window, the saved score and the banner",
  "one": "You build the feedback window that shows how every summit went. Save my score puts the score on the Top 10, and a banner on the Welcome window says what it means.",
@@ -1925,37 +1925,6 @@
      "id": "3"
     },
     {
-     "title": "Your turn: change the heading for case A",
-     "blocks": [
-      {
-       "p": "By the end of this screen, you have changed one of the banner's words on your own, and tested it."
-      },
-      {
-       "p": "Change the heading for case A, so that it welcomes the player to the board."
-      },
-      {
-       "code": {
-        "id": "c10-turn",
-        "kind": "turn",
-        "title": "A new heading for case A",
-        "lang": "cs",
-        "text": "case 'A': return \"Welcome to the Top 10!\";",
-        "task": [
-         "Find the line for case A in BannerHeading, in Expedition.cs.",
-         "Change its words to `Welcome to the Top 10!`"
-        ],
-        "test": "Register a new player, then finish and save an expedition with that player.",
-        "expect": "The banner heading says **Welcome to the Top 10!**",
-        "hint": "A new player is not on the board before the save, so the save is case A while the board has fewer than 10 players."
-       }
-      },
-      {
-       "p": "When the test passes, put the heading back to **You made the Top 10!**"
-      }
-     ],
-     "id": "4"
-    },
-    {
      "title": "Check that the finish line works",
      "blocks": [
       {
@@ -1972,7 +1941,7 @@
          "how": "The feedback window opens with the title **Expedition finished early**.",
          "must": "Must happen",
          "fix": "Check the first `if` in frmFeedback_Load, then check that frmFeedback_Load is in the box beside **Load** in the Properties window.",
-         "id": "5-5.t1"
+         "id": "5-4.t1"
         },
         {
          "what": "Click a summit that was not climbed.",
@@ -1980,14 +1949,14 @@
          "how": "The white box says **You did not climb this summit, so it scored 0.** and the bar is hidden.",
          "must": "Must happen",
          "fix": "Check the `if (!Expedition.Done[i])` part of lstGames_SelectedIndexChanged.",
-         "id": "5-5.t2"
+         "id": "5-4.t2"
         },
         {
          "what": "Click the X on the feedback window, then click **No**.",
          "expect": "control",
          "how": "The feedback window stays open. Nothing is saved.",
          "fix": "Check frmFeedback_FormClosing, then check that it is in the box beside **FormClosing** in the Properties window.",
-         "id": "5-5.t3"
+         "id": "5-4.t3"
         },
         {
          "what": "Click **Save my score**.",
@@ -1995,7 +1964,7 @@
          "how": "The map closes. The Welcome window shows the banner, and your row on the Top 10 is highlighted.",
          "must": "Must happen",
          "fix": "Check btnSave_Click, OpenFeedback in frmMap.cs and ShowBanner in frmWelcome.cs.",
-         "id": "5-5.t4"
+         "id": "5-4.t4"
         },
         {
          "what": "Click **Start the expedition**, then **Back to the welcome screen**.",
@@ -2003,22 +1972,45 @@
          "how": "The banner has gone, because it shows only once after each save.",
          "must": "Must happen",
          "fix": "Check that ShowBanner sets `Expedition.JustSaved = false;`.",
-         "id": "5-5.t5"
+         "id": "5-4.t5"
         }
        ]
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Your turn: make the feedback window and the banner your own",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the feedback window and the Top 10 banner use your own words, and you have tested them."
       },
       {
-       "box": {
-        "title": "Evidence to keep",
-        "blocks": [
-         {
-          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
-         },
-         {
-          "p": "Paste each screenshot into your testing document, under the test it shows."
-         }
-        ]
+       "p": "The feedback window and the banner still talk about summits and an expedition. Change their words so they fit your own game."
+      },
+      {
+       "code": {
+        "id": "c10-turn",
+        "kind": "turn",
+        "title": "Put your own words on the feedback window and the banner",
+        "lang": "cs",
+        "text": "case 'A': return \"You made the Top 10 dancers!\";",
+        "task": [
+         "In `Expedition.cs`, change the 3 headings in BannerHeading and the messages in BannerMessage, so they fit your game.",
+         "On frmFeedback, change the Text of lblTitle, lblInstruction and lblGameName, so they fit your game.",
+         "Click the title bar of frmFeedback, and change its Text to your game's name, then a dash and the window's name.",
+         "In `frmFeedback.cs`, change every line that says expedition, summit or climb, so it fits your game."
+        ],
+        "test": "Log in as `peakBagger`, with the password `tick800`. Play one game, finish, and click **Save my score**.",
+        "expect": "The feedback window and the banner on the Welcome window show your own words.",
+        "hint": "Press Ctrl and F together in each file, then type `summit`, then `expedition`, then `climb`, to find the words still to change."
        }
+      },
+      {
+       "p": "The finished code shows one heading for a dance game. Your own headings go in its place."
+      },
+      {
+       "p": "The total, 800, changes later. You choose your own points in the game chapters."
       }
      ],
      "id": "5"

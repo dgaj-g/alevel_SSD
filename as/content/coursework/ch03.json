@@ -1,7 +1,7 @@
 {
  "id": "03",
  "n": 3,
- "of": 20,
+ "of": 18,
  "title": "Players in a text file",
  "kind": "a core chapter: the log in, the register form and the Top 10 all use what you make here",
  "one": "You make a Player class that holds one player, and a PlayerFile class that reads every player from players.txt and adds new ones. A test button shows that both work.",
@@ -2000,22 +2000,6 @@
       },
       {
        "p": "Keep the Test button for now. Chapter 4 uses it to test the rules, and then deletes it."
-      },
-      {
-       "box": {
-        "title": "Evidence to keep",
-        "blocks": [
-         {
-          "p": "Take a screenshot of the message that says **Added:**, and of the message with the count."
-         },
-         {
-          "p": "Take a screenshot of `players.txt` in Notepad, showing your new players at the end."
-         },
-         {
-          "p": "Paste each screenshot into your testing document, with a line above it that says which test it shows."
-         }
-        ]
-       }
       }
      ],
      "id": "3"

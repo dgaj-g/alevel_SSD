@@ -1,19 +1,14 @@
 {
  "id": "18",
  "n": 18,
- "of": 20,
+ "of": 18,
  "title": "Build Listen Out, a game where a sound is the question",
- "kind": "a game chapter: build one game from each pair, and this pair is chapters 16 and 18",
+ "kind": "a game chapter: build any 4 of the 8 game chapters",
  "one": "You build Listen Out in your own project, exactly as it is in Summit Ready, and test it. Then you change it into a listening game on your own topic.",
  "prev": {
   "id": "17",
   "n": 17,
   "title": "Route Timer"
- },
- "next": {
-  "id": "19",
-  "n": 19,
-  "title": "Test it"
  },
  "stages": [
   {
@@ -29,7 +24,7 @@
        "p": "Listen Out is a listening game. It is on Slieve Donard, the last and highest place on the Summit Ready map."
       },
       {
-       "p": "You build one game from each pair of game chapters. Listen Out is paired with Grid Ref Rescue, so you build one of those two."
+       "p": "You choose any 4 of the 8 game chapters to build. You may build more than 4 if you have time."
       },
       {
        "p": "First you build Listen Out exactly as it is in Summit Ready. Then, in stage 5, you change it into a listening game on your own topic."
@@ -4199,7 +4194,7 @@
        }
       },
       {
-       "p": "When the test passes, change everything back to 3 plays, because Listen Out is meant to give 3."
+       "p": "When the test passes, change everything back to 3 plays for now, because the next screen tests Summit Ready's own game. You make your own changes in stage 5."
       }
      ],
      "id": "17"
@@ -4296,13 +4291,13 @@
       },
       {
        "box": {
-        "title": "Something to write about in your evaluation",
+        "title": "Why a sound can stop early",
         "blocks": [
          {
           "p": "Windows plays one sound at a time. If you click a picture while the sound is still playing, the right or wrong sound cuts it off."
          },
          {
-          "p": "That is a real limit of the way Summit Ready plays sounds. Say what it does to the player, and how a later version could wait for the sound to finish."
+          "p": "Summit Ready does this too, so it is not a fault in your code."
          }
         ]
        }
@@ -4345,7 +4340,7 @@
        "p": "Change at least 2 more things as well, so that your game plays differently from Listen Out. For example, change the score that plays the win sound, the colours or the feedback lines."
       },
       {
-       "p": "Every picture and sound you use must be free to use. Each one gets a line in `credits.txt`, saying who made it, its licence and a link."
+       "p": "Every picture and sound you use must be free to use. Add a line for each one to `credits.txt`, so its maker gets the credit. Say who made it, its licence (the rules for using it) and a link."
       },
       {
        "p": "Each sound must be a .wav file. Windows Forms plays .wav files, but not .mp3 files."
@@ -4623,10 +4618,51 @@
      "id": "4"
     },
     {
-     "title": "Test your game, and keep the evidence",
+     "title": "Your turn: choose how many points your game gives",
      "blocks": [
       {
-       "p": "By the end of this screen, you know that your own game works, and you have the evidence for your coursework."
+       "p": "By the end of this screen, you have chosen how many points your game gives, and every total fits."
+      },
+      {
+       "p": "You choose how many points each right answer is worth. Summit Ready gives 10 points for each right answer."
+      },
+      {
+       "p": "Your top score is what a perfect round earns. For example, 10 sounds at 3 points each gives a top score of 30."
+      },
+      {
+       "code": {
+        "id": "c18-turn-points",
+        "kind": "turn",
+        "title": "Choose the points, and make every total fit",
+        "lang": "cs",
+        "text": "lblScore.Text = \"Points: \" + right * 3;\nint score = right * 3;",
+        "task": [
+         "In Answer, change `right * 10` to the points you choose for each right answer.",
+         "In RecordResult, change `right * 10` in the same way.",
+         "In ShowRoundOver, change **out of 100 points** to your own top score.",
+         "In ShowRoundOver, change 60 to the score that earns the happy sound.",
+         "In Expedition.cs, change `\"Listen Out\"` in the `Games` list to your game's name.",
+         "In frmMap.cs, change **800** in ShowProgress to the top scores of all your games added together.",
+         "In frmFeedback.cs, change **800** in frmFeedback_Load in the same way.",
+         "In frmFeedback.cs, change **out of 100 points** to **points** in the 2 places it appears. Skip this if you did it for an earlier game.",
+         "If any of your games can score more than 100, open frmFeedback in the designer and click the bar prgGame. In the Properties window, set Maximum to your biggest top score."
+        ],
+        "test": "Play a round to the end. Then go back to the map, and read **Points so far**.",
+        "expect": "The Round over box gives your score out of your own top score, and the map gives your own total.",
+        "hint": "The 800 is in 2 files, frmMap.cs and frmFeedback.cs. In each one, press Ctrl and F together, then type `800`."
+       }
+      },
+      {
+       "p": "Each time you finish another game, add its top score to the 2 totals you changed in frmMap.cs and frmFeedback.cs."
+      }
+     ],
+     "id": "5"
+    },
+    {
+     "title": "Test your game",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that your own game works."
       },
       {
        "p": "Run each test with F5 on your own game. Tick each test when it passes. Where the game must refuse, it does nothing, and that counts as a pass."
@@ -4637,40 +4673,40 @@
          "what": "Click a picture before you play the sound.",
          "expect": "control",
          "how": "Start a new round, then click any picture straight away. Nothing must happen.",
-         "id": "5-5.t1"
+         "id": "5-6.t1"
         },
         {
          "what": "Play the sound as many times as your game allows.",
          "expect": "allowed",
          "how": "You hear your sound each time. After the last play, the button turns grey.",
          "must": "Must happen",
-         "id": "5-5.t2"
+         "id": "5-6.t2"
         },
         {
          "what": "Click the play button once more after the last play.",
          "expect": "control",
          "how": "No sound must play.",
-         "id": "5-5.t3"
+         "id": "5-6.t3"
         },
         {
          "what": "Click the right picture.",
          "expect": "allowed",
          "how": "The picture turns green, your fact shows, and Points goes up.",
          "must": "Must happen",
-         "id": "5-5.t4"
+         "id": "5-6.t4"
         },
         {
          "what": "After answering, click a different picture.",
          "expect": "control",
          "how": "Nothing must change.",
-         "id": "5-5.t5"
+         "id": "5-6.t5"
         },
         {
          "what": "Finish a round, then go back to the map.",
          "expect": "allowed",
          "how": "The flag on your game's place shows a tick.",
          "must": "Must happen",
-         "id": "5-5.t6"
+         "id": "5-6.t6"
         }
        ]
       },
@@ -4678,23 +4714,10 @@
        "p": "Every test passed in Listen Out. So if a test fails now, the fault is in something you changed in this stage. Look back over your changes one at a time, starting with the last one."
       },
       {
-       "box": {
-        "title": "Evidence to keep",
-        "blocks": [
-         {
-          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
-         },
-         {
-          "p": "Paste each screenshot into your testing document, under the test it shows."
-         },
-         {
-          "p": "Keep your data file and your `credits.txt` with your project."
-         }
-        ]
-       }
+       "p": "Keep your data file and your `credits.txt` with your project."
       }
      ],
-     "id": "5"
+     "id": "6"
     }
    ],
    "id": "5"

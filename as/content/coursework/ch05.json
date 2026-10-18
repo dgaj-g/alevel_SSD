@@ -1,7 +1,7 @@
 {
  "id": "05",
  "n": 5,
- "of": 20,
+ "of": 18,
  "title": "Register a new player with an avatar",
  "kind": "a build chapter: the windows every player sees before the map",
  "one": "You build the Register window. It checks every box, shows a message under each box that is wrong, and adds the new player to `players.txt`.",
@@ -2255,7 +2255,7 @@
    "id": "3"
   },
   {
-   "title": "Test the Register window, then make one change of your own",
+   "title": "Test the Register window, then make it your own",
    "screens": [
     {
      "title": "Open the Register window when the program starts",
@@ -2366,37 +2366,6 @@
      "id": "1"
     },
     {
-     "title": "Your turn: make the frame round the chosen avatar green",
-     "blocks": [
-      {
-       "p": "By the end of this screen, you have changed the colour of the frame, and tested it, on your own."
-      },
-      {
-       "p": "The frame round the chosen avatar is gold. Change it to the moss green that Summit Ready uses for a good answer: red 62, green 142 and blue 65."
-      },
-      {
-       "code": {
-        "id": "turn-frame",
-        "kind": "turn",
-        "title": "Make the frame green",
-        "lang": "cs",
-        "text": "clicked.Parent.BackColor = Color.FromArgb(62, 142, 65);",
-        "task": [
-         "Open `frmRegister.cs`. Then find the line in `Avatar_Click` that turns the clicked picture's panel gold.",
-         "Change the 3 numbers to 62, 142 and 65."
-        ],
-        "test": "Press F5, then click the Fox picture, then click the Owl picture.",
-        "expect": "Only the Owl picture has a frame, and the frame is green.",
-        "hint": "The 3 numbers are inside `Color.FromArgb( )`, in the order red, green, blue."
-       }
-      },
-      {
-       "p": "When the test passes, change the 3 numbers back to 242, 183 and 5, because the frame is meant to be gold."
-      }
-     ],
-     "id": "2"
-    },
-    {
      "title": "Check that the Register window works",
      "blocks": [
       {
@@ -2412,28 +2381,28 @@
          "expect": "control",
          "how": "A red message shows under each of the 3 boxes and under the pictures. No message box opens.",
          "fix": "Check that each of the 4 checks in btnCreate_Click fills in its own red message, and that `if (!allRight) return;` comes before `PlayerFile.Add`.",
-         "id": "4-3.t1"
+         "id": "4-2.t1"
         },
         {
          "what": "Type `ab` as the username, fill the other boxes well, choose an avatar, then click Create my player.",
          "expect": "control",
          "how": "The message under Username says **Your username has 2 characters. It needs 3 to 12.** No message box opens.",
          "fix": "Compare your username check with the yellow lines on the earlier screen where you typed the start of `btnCreate_Click`.",
-         "id": "4-3.t2"
+         "id": "4-2.t2"
         },
         {
          "what": "Type `summitSeeker` as the username, fill the other boxes well, choose an avatar, then click Create my player.",
          "expect": "control",
          "how": "The message under Username says **The username summitSeeker is already taken. Try another one.**",
          "fix": "Check the `catch (PlayerExistsException ex)` lines in btnCreate_Click.",
-         "id": "4-3.t3"
+         "id": "4-2.t3"
         },
         {
          "what": "Type two different passwords, then click Create my player.",
          "expect": "control",
          "how": "The message under the second box says **The two passwords are different. Type them both again.** Both password boxes are empty.",
          "fix": "Check that `catch (PasswordMismatchException ex)` comes before `catch (SummitException ex)`, and that it empties both boxes.",
-         "id": "4-3.t4"
+         "id": "4-2.t4"
         },
         {
          "what": "Click the Goat picture, then click the Fox picture.",
@@ -2441,7 +2410,7 @@
          "how": "Only the Fox picture has a gold frame.",
          "must": "Must happen",
          "fix": "Check the `foreach` loop in Avatar_Click. Then check that all 8 pictures show `Avatar_Click` beside Click in the events list.",
-         "id": "4-3.t5"
+         "id": "4-2.t5"
         },
         {
          "what": "Fill in every box well, choose an avatar, then click Create my player.",
@@ -2449,7 +2418,7 @@
          "how": "A message box says **Your player** with your username **is ready. Log in to start your expedition.** After OK, the window closes.",
          "must": "Must happen",
          "fix": "Check the last part of btnCreate_Click against its yellow lines.",
-         "id": "4-3.t6"
+         "id": "4-2.t6"
         },
         {
          "what": "In File Explorer, open `players.txt`. It is in the Data folder inside your project's bin\\Debug folder.",
@@ -2457,22 +2426,49 @@
          "how": "The last line holds your new username, password, avatar file and today's date, with a bar `|` between them.",
          "must": "Must happen",
          "fix": "Check PlayerFile.Add from chapter 4.",
-         "id": "4-3.t7"
+         "id": "4-2.t7"
         }
        ]
+      }
+     ],
+     "id": "2"
+    },
+    {
+     "title": "Your turn: make the avatars your own",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the Register window shows your own 8 avatars, with a frame in a colour you choose."
       },
       {
-       "box": {
-        "title": "Evidence to keep",
-        "blocks": [
-         {
-          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
-         },
-         {
-          "p": "Paste each screenshot into your testing document, under the test it shows."
-         }
-        ]
+       "p": "Summit Ready's avatars are mountain animals. Your game needs avatars that suit your topic and the people who will play it."
+      },
+      {
+       "p": "Find 8 pictures on the websites from chapter 2. Save each one in bin\\Debug\\Images\\Avatars, with a name such as `avatar-otter.png`."
+      },
+      {
+       "p": "Leave the 8 Summit Ready avatar files in the Avatars folder. The players already in `players.txt` still use them."
+      },
+      {
+       "code": {
+        "id": "turn-frame",
+        "kind": "turn",
+        "title": "Put in your own avatars and your own frame colour",
+        "lang": "cs",
+        "text": "clicked.Parent.BackColor = Color.FromArgb(62, 142, 65);",
+        "task": [
+         "Click the first avatar picture on frmRegister. In the Properties window, change its Tag to the file name of your first picture. The code uses the Tag to find the picture.",
+         "Change the Text of the label under that picture to the name of your picture, such as Otter.",
+         "Do the same for the other 7 pictures and their labels.",
+         "Open `frmRegister.cs`. In `Avatar_Click`, change the 3 numbers in `Color.FromArgb( )` to the colour you want for the frame.",
+         "Add a line to `credits.txt` for each of your 8 pictures, the same way as in chapter 2."
+        ],
+        "test": "Press F5. Click your first picture, then click your second picture.",
+        "expect": "The window shows your 8 pictures, each with its own name under it. Only your second picture has a frame, in your colour.",
+        "hint": "Each Tag must match its file name letter by letter, with `.png` or `.jpg` at the end. The 3 numbers are red, green and blue, and each one is from 0 to 255."
        }
+      },
+      {
+       "p": "The finished code shows one colour, moss green. Your own 3 numbers can be different."
       }
      ],
      "id": "3"

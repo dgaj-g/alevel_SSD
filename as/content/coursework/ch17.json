@@ -1,9 +1,9 @@
 {
  "id": "17",
  "n": 17,
- "of": 20,
+ "of": 18,
  "title": "Build Route Timer, a slider game where you estimate how long a walk takes",
- "kind": "a game chapter: build one game from each pair, and this pair is chapters 14 and 17",
+ "kind": "a game chapter: build any 4 of the 8 game chapters",
  "one": "You build Route Timer in your own project, exactly as it is in Summit Ready, and test it. Then you change it into an estimating game on your own topic.",
  "prev": {
   "id": "16",
@@ -29,7 +29,7 @@
        "p": "Route Timer is an estimating game. It is on Slieve Muck, the seventh place on the Summit Ready map."
       },
       {
-       "p": "You build one game from each pair of game chapters. Route Timer is paired with Read the Sky, so you build one of those two."
+       "p": "You choose any 4 of the 8 game chapters to build. You may build more than 4 if you have time."
       },
       {
        "p": "First you build Route Timer exactly as it is in Summit Ready. Then, in stage 5, you change it into an estimating game on your own topic."
@@ -4288,7 +4288,7 @@
        }
       },
       {
-       "p": "When the test passes, change the line back to how it was, because Route Timer is meant to snap to 5 minutes."
+       "p": "When the test passes, change the line back to how it was for now, because the next screen tests Summit Ready's own game. You make your own changes in stage 5."
       }
      ],
      "id": "15"
@@ -4406,7 +4406,7 @@
        "p": "Change at least 2 more things as well, so that your game plays differently from Route Timer. For example, change the bands (how close a guess must be), the points, the number of rounds or the slider's range."
       },
       {
-       "p": "Every picture and sound you use must be free to use. Each one gets a line in `credits.txt`, saying who made it, its licence and a link."
+       "p": "Every picture and sound you use must be free to use. Add a line for each one to `credits.txt`, so its maker gets the credit. Say who made it, its licence (the rules for using it) and a link."
       }
      ],
      "id": "1"
@@ -4680,10 +4680,51 @@
      "id": "4"
     },
     {
-     "title": "Test your game, and keep the evidence",
+     "title": "Your turn: choose how many points your game gives",
      "blocks": [
       {
-       "p": "By the end of this screen, you know that your own game works, and you have the evidence for your coursework."
+       "p": "By the end of this screen, you have chosen how many points your game gives, and every total fits."
+      },
+      {
+       "p": "You choose how many points each guess is worth. Summit Ready gives 20 points for a guess within 10 minutes, 12 within 20 and 5 within 30."
+      },
+      {
+       "p": "Your top score is what a perfect round earns. For example, 5 guesses at up to 8 points each gives a top score of 40."
+      },
+      {
+       "code": {
+        "id": "c17-turn-points",
+        "kind": "turn",
+        "title": "Choose the points, and make every total fit",
+        "lang": "cs",
+        "text": "if (diff <= 10) return 8;",
+        "task": [
+         "In LegPoints, change 20, 12 and 5, the points for a guess within 10, 20 and 30 of the right answer.",
+         "If your topic's answers are not minutes, for example years or grams, change 10, 20 and 30 in LegPoints to suit them.",
+         "In ShowRoundOver, change **out of 100 points** to your own top score.",
+         "In ShowRoundOver, change 60 to the score that earns the happy sound.",
+         "In Expedition.cs, change `\"Route Timer\"` in the `Games` list to your game's name.",
+         "In frmMap.cs, change **800** in ShowProgress to the top scores of all your games added together.",
+         "In frmFeedback.cs, change **800** in frmFeedback_Load in the same way.",
+         "In frmFeedback.cs, change **out of 100 points** to **points** in the 2 places it appears. Skip this if you did it for an earlier game.",
+         "If any of your games can score more than 100, open frmFeedback in the designer and click the bar prgGame. In the Properties window, set Maximum to your biggest top score."
+        ],
+        "test": "Play a round to the end. Then go back to the map, and read **Points so far**.",
+        "expect": "The Round over box gives your score out of your own top score, and the map gives your own total.",
+        "hint": "The 800 is in 2 files, frmMap.cs and frmFeedback.cs. In each one, press Ctrl and F together, then type `800`."
+       }
+      },
+      {
+       "p": "Each time you finish another game, add its top score to the 2 totals you changed in frmMap.cs and frmFeedback.cs."
+      }
+     ],
+     "id": "5"
+    },
+    {
+     "title": "Test your game",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that your own game works."
       },
       {
        "p": "Run each test with F5 on your own game. Tick each test when it passes. Two tests are guesses that must score 0 points, and scoring 0 on those counts as a pass."
@@ -4695,40 +4736,40 @@
          "expect": "allowed",
          "how": "The verdict says **Spot on.** with 20 points, in green.",
          "must": "Must happen",
-         "id": "5-5.t1"
+         "id": "5-6.t1"
         },
         {
          "what": "Lock in a guess 15 under the right answer.",
          "expect": "allowed",
          "how": "The verdict says **Close.** with 12 points.",
          "must": "Must happen",
-         "id": "5-5.t2"
+         "id": "5-6.t2"
         },
         {
          "what": "Lock in the lowest value on the slider.",
          "expect": "control",
          "how": "Your too-short message shows, with 0 points in red.",
-         "id": "5-5.t3"
+         "id": "5-6.t3"
         },
         {
          "what": "Lock in the highest value on the slider.",
          "expect": "control",
          "how": "Your too-long message shows, with 0 points in red.",
-         "id": "5-5.t4"
+         "id": "5-6.t4"
         },
         {
          "what": "Lock in a guess, then try to drag the slider.",
          "expect": "allowed",
          "how": "The slider does not move.",
          "must": "Must happen",
-         "id": "5-5.t5"
+         "id": "5-6.t5"
         },
         {
          "what": "Finish a round, then go back to the map.",
          "expect": "allowed",
          "how": "The flag on your game's place shows a tick.",
          "must": "Must happen",
-         "id": "5-5.t6"
+         "id": "5-6.t6"
         }
        ]
       },
@@ -4736,23 +4777,10 @@
        "p": "Every test passed in Route Timer. So if a test fails now, the fault is in something you changed in this stage. Look back over your changes one at a time, starting with the last one."
       },
       {
-       "box": {
-        "title": "Evidence to keep",
-        "blocks": [
-         {
-          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
-         },
-         {
-          "p": "Paste each screenshot into your testing document, under the test it shows."
-         },
-         {
-          "p": "Keep your data file and your `credits.txt` with your project."
-         }
-        ]
-       }
+       "p": "Keep your data file and your `credits.txt` with your project."
       }
      ],
-     "id": "5"
+     "id": "6"
     }
    ],
    "id": "5"

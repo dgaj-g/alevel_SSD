@@ -1,7 +1,7 @@
 {
  "id": "06",
  "n": 6,
- "of": 20,
+ "of": 18,
  "title": "Log in",
  "kind": "a build chapter: the windows every player sees before the map",
  "one": "You turn frmLogin into the Log in window. It checks the username and password, locks for 30 seconds after 3 wrong tries, and opens the Register window from chapter 5.",
@@ -1979,7 +1979,7 @@
    "id": "3"
   },
   {
-   "title": "Test the Log in window, then make one change of your own",
+   "title": "Test the Log in window, then make it your own",
    "screens": [
     {
      "title": "Check that the Log in window works",
@@ -2038,50 +2038,49 @@
          "id": "4-1.t6"
         }
        ]
-      },
-      {
-       "box": {
-        "title": "Evidence to keep",
-        "blocks": [
-         {
-          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
-         },
-         {
-          "p": "Paste each screenshot into your testing document, under the test it shows."
-         }
-        ]
-       }
       }
      ],
      "id": "1"
     },
     {
-     "title": "Your turn: make the wait 10 seconds",
+     "title": "Your turn: make the Log in window your own",
      "blocks": [
       {
-       "p": "By the end of this screen, you have changed the length of the wait, and tested it, on your own."
+       "p": "By the end of this screen, the Log in window shows your own game's name, words and banner picture."
       },
       {
-       "p": "30 seconds is a long wait when you are testing. Change the wait to 10 seconds, test it, then change it back."
+       "p": "The Log in window is the first thing a player sees. Right now it says Summit Ready, and shows the Mourne Mountains."
+      },
+      {
+       "p": "Find a wide picture for your banner on the websites from chapter 2. A picture about 1000 pixels wide and 312 pixels high fits best."
+      },
+      {
+       "p": "Save it in the Images folder inside bin\\Debug, with a name such as `banner-dance.jpg`."
       },
       {
        "code": {
         "id": "turn-wait",
         "kind": "turn",
-        "title": "Make the wait 10 seconds",
+        "title": "Put in your own name, words and banner",
         "lang": "cs",
-        "text": "lblError.Text = \"Three wrong tries. Wait 10 seconds, then try \"\n    + \"again.\";\nwaitLeft = 10;",
+        "text": "picBanner.Image = Files.Picture(\"\", \"banner-dance.jpg\");",
         "task": [
-         "In StartWait, change 30 to 10 in the red message that says **Three wrong tries. Wait 30 seconds, then try again.**",
-         "In StartWait, change `waitLeft = 30;` to `waitLeft = 10;`"
+         "On frmLogin, change the Text of lblTitle to your game's name.",
+         "Change the Text of lblSubtitle to one sentence that says what a player practises in your game.",
+         "Click the title bar of frmLogin, and change its Text to your game's name, then ` - Log in`.",
+         "In frmLogin_Load, change `banner.jpg` to the file name of your own banner.",
+         "Add a line to `credits.txt` for your banner, the same way as in chapter 2."
         ],
-        "test": "Press F5. Type `summitSeeker` and a wrong password, then click Log in. Do this 3 times in a row.",
-        "expect": "The button says **Try again in 10 seconds** and counts down to Log in.",
-        "hint": "StartWait has 2 places with 30 in them. The line at the top of frmLogin that sets the wait stays as it is."
+        "test": "Press F5.",
+        "expect": "The Log in window shows your banner, your game's name and your sentence. Its title bar shows your game's name.",
+        "hint": "The file name in frmLogin_Load must match your banner's file name letter by letter, with `.jpg` or `.png` at the end."
        }
       },
       {
-       "p": "When the test passes, change both back to 30, because the rule says 30 seconds."
+       "p": "The finished code shows a banner called `banner-dance.jpg`. Your own file name can be different."
+      },
+      {
+       "p": "The wait after 3 wrong tries is your choice too. To change it, change 30 in both places in StartWait to the number of seconds you want."
       }
      ],
      "id": "2"
