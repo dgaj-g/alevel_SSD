@@ -1,9 +1,9 @@
 {
  "id": "16",
  "n": 16,
- "of": 20,
+ "of": 18,
  "title": "Build Grid Ref Rescue, a map game where you find and give grid references",
- "kind": "a game chapter: build one game from each pair, and this pair is chapters 16 and 18",
+ "kind": "a game chapter: build any 4 of the 8 game chapters",
  "one": "You build Grid Ref Rescue in your own project, exactly as it is in Summit Ready, and test it. Then you change it into a grid game on your own topic.",
  "prev": {
   "id": "15",
@@ -29,7 +29,7 @@
        "p": "Grid Ref Rescue is a map game. It is on Chimney Rock Mountain, the sixth place on the Summit Ready map."
       },
       {
-       "p": "You build one game from each pair of game chapters. Grid Ref Rescue is paired with Listen Out, so you build one of those two."
+       "p": "You choose any 4 of the 8 game chapters to build. You may build more than 4 if you have time."
       },
       {
        "p": "First you build Grid Ref Rescue exactly as it is in Summit Ready. Then, in stage 5, you change it into a grid game on your own topic."
@@ -5118,7 +5118,7 @@
        }
       },
       {
-       "p": "When the test passes, change `gridPen` back to how it was, because Grid Ref Rescue is meant to have thin blue lines."
+       "p": "When the test passes, change `gridPen` back to how it was for now, because the next screen tests Summit Ready's own game. You make your own changes in stage 5."
       }
      ],
      "id": "21"
@@ -5235,7 +5235,7 @@
        "p": "Change at least 2 more things as well, so that your game plays differently from Grid Ref Rescue. For example, change the points, the number of tries, the colours of the squares or the number of rescues."
       },
       {
-       "p": "Every picture and sound you use must be free to use. Each one gets a line in `credits.txt`, saying who made it, its licence and a link."
+       "p": "Every picture and sound you use must be free to use. Add a line for each one to `credits.txt`, so its maker gets the credit. Say who made it, its licence (the rules for using it) and a link."
       }
      ],
      "id": "1"
@@ -5513,10 +5513,51 @@
      "id": "4"
     },
     {
-     "title": "Test your game, and keep the evidence",
+     "title": "Your turn: choose how many points your game gives",
      "blocks": [
       {
-       "p": "By the end of this screen, you know that your own game works, and you have the evidence for your coursework."
+       "p": "By the end of this screen, you have chosen how many points your game gives, and every total fits."
+      },
+      {
+       "p": "You choose how many points each right answer is worth. Summit Ready gives 20 points for a right answer at the first try, and 10 after that."
+      },
+      {
+       "p": "Your top score is what a perfect round earns. For example, 5 questions at 4 points each gives a top score of 20."
+      },
+      {
+       "code": {
+        "id": "c16-turn-points",
+        "kind": "turn",
+        "title": "Choose the points, and make every total fit",
+        "lang": "cs",
+        "text": "if (tries == 1) return 4;\nreturn 2;",
+        "task": [
+         "In RescuePoints, change 20, the points for a right answer at the first try.",
+         "Change 10, the points for a right answer after more tries.",
+         "In ShowRoundOver, change **out of 100 points** to your own top score.",
+         "In ShowRoundOver, change 60 to the score that earns the happy sound.",
+         "In Expedition.cs, change `\"Grid Ref Rescue\"` in the `Games` list to your game's name.",
+         "In frmMap.cs, change **800** in ShowProgress to the top scores of all your games added together.",
+         "In frmFeedback.cs, change **800** in frmFeedback_Load in the same way.",
+         "In frmFeedback.cs, change **out of 100 points** to **points** in the 2 places it appears. Skip this if you did it for an earlier game.",
+         "If any of your games can score more than 100, open frmFeedback in the designer and click the bar prgGame. In the Properties window, set Maximum to your biggest top score."
+        ],
+        "test": "Play a round to the end. Then go back to the map, and read **Points so far**.",
+        "expect": "The Round over box gives your score out of your own top score, and the map gives your own total.",
+        "hint": "The 800 is in 2 files, frmMap.cs and frmFeedback.cs. In each one, press Ctrl and F together, then type `800`."
+       }
+      },
+      {
+       "p": "Each time you finish another game, add its top score to the 2 totals you changed in frmMap.cs and frmFeedback.cs."
+      }
+     ],
+     "id": "5"
+    },
+    {
+     "title": "Test your game",
+     "blocks": [
+      {
+       "p": "By the end of this screen, you know that your own game works."
       },
       {
        "p": "Run each test with F5 on your own game. Tick each test when it passes. In the 2 tests marked **Must be refused**, the game turns the answer away and it costs nothing. That counts as a pass."
@@ -5528,40 +5569,40 @@
          "expect": "allowed",
          "how": "The square turns green, and the box under the button says **20 points**.",
          "must": "Must happen",
-         "id": "5-5.t1"
+         "id": "5-6.t1"
         },
         {
          "what": "Click 2 wrong squares on one question.",
          "expect": "allowed",
          "how": "The right square turns green, and the next button appears.",
          "must": "Must happen",
-         "id": "5-5.t2"
+         "id": "5-6.t2"
         },
         {
          "what": "On a tell question, type 3 letters and press Enter.",
          "expect": "control",
          "how": "Your message about the right way to write a grid reference shows. A right answer straight after must still score 20 points.",
-         "id": "5-5.t3"
+         "id": "5-6.t3"
         },
         {
          "what": "On a tell question, type a grid reference that is off your grid.",
          "expect": "control",
          "how": "Your off-the-grid message shows. A right answer straight after must still score 20 points.",
-         "id": "5-5.t4"
+         "id": "5-6.t4"
         },
         {
          "what": "On a tell question, type the right numbers the wrong way round.",
          "expect": "allowed",
          "how": "The hint about the wrong way round shows.",
          "must": "Must happen",
-         "id": "5-5.t5"
+         "id": "5-6.t5"
         },
         {
          "what": "Finish a round, then go back to the map.",
          "expect": "allowed",
          "how": "The flag on your game's place shows a tick.",
          "must": "Must happen",
-         "id": "5-5.t6"
+         "id": "5-6.t6"
         }
        ]
       },
@@ -5569,23 +5610,10 @@
        "p": "Every test passed in Grid Ref Rescue. So if a test fails now, the fault is in something you changed in this stage. Look back over your changes one at a time, starting with the last one."
       },
       {
-       "box": {
-        "title": "Evidence to keep",
-        "blocks": [
-         {
-          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
-         },
-         {
-          "p": "Paste each screenshot into your testing document, under the test it shows."
-         },
-         {
-          "p": "Keep your data file and your `credits.txt` with your project."
-         }
-        ]
-       }
+       "p": "Keep your data file and your `credits.txt` with your project."
       }
      ],
-     "id": "5"
+     "id": "6"
     }
    ],
    "id": "5"

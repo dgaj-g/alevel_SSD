@@ -1,7 +1,7 @@
 {
  "id": "09",
  "n": 9,
- "of": 20,
+ "of": 18,
  "title": "The shape of every game",
  "kind": "a build chapter: the practice game, with the parts every game shares",
  "one": "You build a short practice game with the 3 parts that every game in Summit Ready shares. They are the dark strip along the top, the play area and the Round over box. Then the map opens it from the first summit.",
@@ -203,7 +203,7 @@
             "n": 2,
             "x": 12.9,
             "y": 51.2,
-            "say": "Click at the end of the `{` under `namespace SummitReady`."
+            "say": "Click at the end of the `{` under the line that starts `namespace`."
            },
            {
             "n": 3,
@@ -251,7 +251,7 @@
          "n": 1
         },
         {
-         "do": "Click at the end of the `{` under `namespace SummitReady`.",
+         "do": "Click at the end of the `{` under the line that starts `namespace`.",
          "see": "The flashing cursor is after the `{`.",
          "id": "2-1.2",
          "n": 2
@@ -2042,38 +2042,6 @@
      "id": "2"
     },
     {
-     "title": "Your turn: ask a different question",
-     "blocks": [
-      {
-       "p": "By the end of this screen, you have changed the practice game's question and answers on your own, and tested it."
-      },
-      {
-       "p": "Change the practice game to ask how high Slieve Binnian is. The right answer is 746 m."
-      },
-      {
-       "code": {
-        "id": "c09-turn",
-        "kind": "turn",
-        "title": "A question about Slieve Binnian",
-        "lang": "cs",
-        "text": "private string rightAnswer = \"746 m\";   // the answer that scores",
-        "task": [
-         "Change the Text of lblQuestion to ask how high Slieve Binnian is.",
-         "Change `rightAnswer` to `\"746 m\"`.",
-         "Change the 2 result lines in Answer_Click, and the 2 feedback lines in RecordResult, to name Slieve Binnian and 746 m."
-        ],
-        "test": "Press F5, open the practice game from the map and click **746 m**.",
-        "expect": "The result line says the answer is right, and **See my score** shows 100 out of 100 points.",
-        "hint": "Every line that says 850 m or Slieve Donard needs to change. There are 5 of them in the code."
-       }
-      },
-      {
-       "p": "When the test passes, keep the new question or put the old one back. Later chapters work either way."
-      }
-     ],
-     "id": "3"
-    },
-    {
      "title": "Check that the practice game works",
      "blocks": [
       {
@@ -2090,14 +2058,14 @@
          "how": "A message asks whether to leave. **No** keeps the game open. **Yes** goes back to the map with no tick.",
          "must": "Must happen",
          "fix": "Check the code of frmPractice_FormClosing. Then click frmPractice in the designer, click the lightning bolt in Properties and check that frmPractice_FormClosing is beside **FormClosing**.",
-         "id": "5-4.t1"
+         "id": "5-3.t1"
         },
         {
          "what": "Click one answer, then click a different answer.",
          "expect": "control",
          "how": "The second click does nothing. The answers are grey after the first click.",
          "fix": "Check the 3 lines in Answer_Click that set `Enabled = false`.",
-         "id": "5-4.t2"
+         "id": "5-3.t2"
         },
         {
          "what": "Click an answer, then **See my score**.",
@@ -2105,7 +2073,7 @@
          "how": "The Round over box shows the score, with a line under What went well or What went wrong.",
          "must": "Must happen",
          "fix": "Check the code of btnScore_Click and ShowRoundOver. Then click btnScore in the designer, click the lightning bolt in Properties and check that btnScore_Click is beside **Click**.",
-         "id": "5-4.t3"
+         "id": "5-3.t3"
         },
         {
          "what": "Click an answer, then close the window with the X before clicking **See my score**.",
@@ -2113,7 +2081,7 @@
          "how": "The window closes with no question. The map shows a tick on Slieve Binnian.",
          "must": "Must happen",
          "fix": "Check that RecordResult ends with `KeepResult();`, and that KeepResult sets `finished = true;`.",
-         "id": "5-4.t4"
+         "id": "5-3.t4"
         },
         {
          "what": "Click the speaker picture on the practice game's strip.",
@@ -2121,22 +2089,45 @@
          "how": "The picture changes to the muted speaker. It stays muted on the map.",
          "must": "Must happen",
          "fix": "Click picSound on frmPractice in the designer, click the lightning bolt in Properties and check that picSound_Click is beside **Click**.",
-         "id": "5-4.t5"
+         "id": "5-3.t5"
         }
        ]
+      }
+     ],
+     "id": "3"
+    },
+    {
+     "title": "Your turn: ask a question from your own topic",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the practice game asks a question from your own topic, and you have tested it."
       },
       {
-       "box": {
-        "title": "Evidence to keep",
-        "blocks": [
-         {
-          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
-         },
-         {
-          "p": "Paste each screenshot into your testing document, under the test it shows."
-         }
-        ]
+       "p": "The practice game asks how high Slieve Donard is. Change it to a question from your own topic, with 3 answers to pick from."
+      },
+      {
+       "code": {
+        "id": "c09-turn",
+        "kind": "turn",
+        "title": "A question from your own topic",
+        "lang": "cs",
+        "text": "private string rightAnswer = \"Salsa\";   // the answer that scores",
+        "task": [
+         "Change the Text of lblQuestion to your own question.",
+         "Change the Text of btnAnswer1, btnAnswer2 and btnAnswer3 to your 3 answers. Only one of them is right.",
+         "Change `rightAnswer` to the right answer, typed exactly as it is on its button.",
+         "Change the 2 result lines in Answer_Click, and the 2 feedback lines in RecordResult, so they fit your question."
+        ],
+        "test": "Press F5, open the practice game from the map and click your right answer.",
+        "expect": "The result line says the answer is right, and **See my score** shows 100 out of 100 points.",
+        "hint": "Every line that says 850 m or Slieve Donard needs to change. There are 5 of them in the code."
        }
+      },
+      {
+       "p": "The finished code shows the right answer for a dance game. Your own right answer goes in its place."
+      },
+      {
+       "p": "Chapter 11 replaces the practice game, if you build that chapter. So keep this question short."
       }
      ],
      "id": "4"

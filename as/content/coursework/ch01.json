@@ -1,10 +1,10 @@
 {
  "id": "01",
  "n": 1,
- "of": 20,
- "title": "Plan your game: your client, your requirements, your storyboard and your data files",
- "kind": "a planning chapter: it earns AO1 marks",
- "one": "You choose a client and a topic, and you write numbered requirements that a test can check. Then you draw a storyboard of every form, a navigation map, and a table for each data file. You plan it all before you open Visual Studio 2019.",
+ "of": 18,
+ "title": "Plan your game: your topic, who it is for, and your 4 games",
+ "kind": "a planning chapter, before you open Visual Studio 2019",
+ "one": "You choose the topic of your game and who will play it, and you give your game a name. Then you pick the 4 games you will build, and say what each one becomes in your game.",
  "prev": {
   "id": "00",
   "n": 0,
@@ -13,93 +13,72 @@
  "next": {
   "id": "02",
   "n": 2,
-  "title": "Set up Visual Studio"
+  "title": "Set up Visual Studio 2019"
  },
  "noTurn": true,
  "stages": [
   {
-   "title": "Choose your client and your topic",
+   "title": "Choose your topic, who your game is for, and its name",
    "screens": [
     {
-     "title": "Find a client who has a real problem for your game to solve",
+     "title": "Choose a topic and the people who will play your game",
      "blocks": [
       {
-       "p": "By the end of this screen, you will have a client, a topic, and one paragraph that says what your client wants."
-      },
-      {
-       "p": "Every plan in this chapter goes into your portfolio. The marker gives marks for these plans (the AO1 marks) before you write any code."
+       "p": "By the end of this screen, you will know the topic of your game, who it is for, and what it is called."
       },
       {
        "words": [
         [
-         "requirement",
-         "One thing your game must do, written as one numbered sentence, such as R3.",
-         "2-1",
+         "topic",
+         "What your game teaches or practises, such as French verbs, the parts of a cell or the steps of a dance.",
+         "1-1",
          false
         ],
         [
-         "testable",
-         "Written so that a test can show it is true or false. \"The game is fun\" is not testable.",
-         "2-1",
-         false
-        ],
-        [
-         "storyboard",
-         "A drawing of every form in your game, with every button, box and menu named, and what each one does.",
-         "3-1",
-         false
-        ],
-        [
-         "navigation map",
-         "A drawing of how the forms link together: which form opens which, and how the player gets back.",
-         "4-1",
-         false
-        ],
-        [
-         "data file",
-         "A text file that your game reads from or writes to, such as `players.txt`.",
-         "4-2",
-         false
-        ],
-        [
-         "field",
-         "One part of a line in a data file. In `players.txt`, the username is the first field.",
-         "4-2",
+         "audience",
+         "The people who will play your game, such as primary school pupils, KS3 pupils or the members of a club.",
+         "1-1",
          false
         ]
        ],
        "intro": "You do not need to learn these words now. Where you first meet each one in the chapter, it has a dotted line under it. Hover over it or tap it to see what it means."
       },
       {
-       "p": "Your client is a real person who wants your game. A teacher is a good client, because teachers know what pupils find tricky."
+       "p": "Your [[topic|0]] is what your game teaches or practises. Pick something that people find tricky, or want to get better at."
       },
       {
-       "p": "Ask a teacher one question: \"What do pupils find tricky in your subject?\" Their answer is your topic."
+       "p": "It can be a school subject and a topic in it, such as the parts of a plant cell in KS3 Science."
       },
       {
-       "p": "Choose a topic that is different from the Summit Ready topics in chapter 0. A game about knots, camping or the weather is not allowed."
+       "p": "It can also be something outside school, such as the steps taught at a local dance class, or the rules of a sport."
       },
       {
-       "p": "Write what your client wants as one short paragraph, in their words if you can. Put the paragraph at the start of your portfolio."
+       "p": "Your [[audience|1]] is the people who will play your game. For example, primary school pupils, KS3, GCSE or A-level pupils, or the members of a club."
+      },
+      {
+       "p": "Your audience changes how you write your game. Words for primary school pupils are shorter and simpler than words for A-level pupils."
       },
       {
        "box": {
-        "title": "An example to read: what the client for Summit Ready said",
+        "title": "An example to read: the topic and audience of Summit Ready",
         "blocks": [
          {
-          "p": "\"Pupils going on their first expedition find the skills tricky: what to pack, reading the weather, grid references, timing a route, knots.\""
+          "p": "**Topic:** the skills for a first hill-walking expedition, such as what to pack, grid references and timing a route."
          },
          {
-          "p": "\"They forget it all between the training evening and the hill. Can you make a game that makes them practise?\""
+          "p": "**Audience:** pupils aged 14 to 16 going on their first expedition."
+         },
+         {
+          "p": "**Name:** Summit Ready."
          }
         ]
        }
       },
       {
-       "p": "Notice that the client names the problem, and names who has it. They do not design the game. You do that."
+       "p": "Give your game a short name with no spaces. In chapter 2, it becomes the name of your Visual Studio 2019 project, the folder that holds your game's files."
       },
       {
-       "p": "Your words must be your own. The Summit Ready plan in this chapter is there to show you the kind of thing to write. Never copy it into your portfolio."
+       "p": "For example, a game called Dance Steps is a project called `DanceSteps`."
       }
      ],
      "id": "1"
@@ -108,432 +87,120 @@
    "id": "1"
   },
   {
-   "title": "Write numbered requirements that a test can check",
+   "title": "Pick your 4 games",
    "screens": [
     {
-     "title": "Write requirements for moving between forms, typing in boxes, and what the game shows",
+     "title": "Pick 4 of the 8 games, and say what each one becomes",
      "blocks": [
       {
-       "p": "By the end of this screen, you will have a numbered list of [[requirements|0]] for your own game."
+       "p": "By the end of this screen, you will know which 4 games you will build, and what each one is about in your game."
       },
       {
-       "p": "A requirement is one thing your game must do. Number each one, R1, R2 and so on, because your tests and your evaluation point back to the numbers."
+       "p": "Chapters 11 to 18 each build one game. You build any 4 of them. You may build more than 4 if you have time."
       },
       {
-       "steps": [
-        {
-         "do": "Click the download button below. Then open `requirements-template.docx` in Word, click **File**, then **Save As**, and save it in your `Coursework` folder.",
-         "see": "Your browser shows that `requirements-template.docx` has downloaded, and Word shows the heading **My requirements** and an empty table.",
-         "download": {
-          "file": "requirements-template.docx",
-          "label": "Download the requirements template",
-          "size": "37 KB"
+       "p": "Pick the games that suit your topic best. Here is what each game is, without the hill-walking."
+      },
+      {
+       "p": "**Chapter 11, Pack the Rucksack:** a sorting game. The player drags each thing into the right group."
+      },
+      {
+       "p": "**Chapter 12, Knot Pairs:** a memory game. The player turns over cards to find the pairs."
+      },
+      {
+       "p": "**Chapter 13, Leave No Trace:** an arcade game. The player moves with the keyboard, picks up the right things and keeps away from the others."
+      },
+      {
+       "p": "**Chapter 14, Read the Sky:** a picture quiz against the clock."
+      },
+      {
+       "p": "**Chapter 15, Whiteout:** a hidden-word game. The player guesses the word one letter at a time, from a clue."
+      },
+      {
+       "p": "**Chapter 16, Grid Ref Rescue:** a grid game. A picture is cut into a 10 by 10 grid, and the player finds a square."
+      },
+      {
+       "p": "**Chapter 17, Route Timer:** an estimating game. The player moves a slider to estimate a number, such as how long a walk takes."
+      },
+      {
+       "p": "**Chapter 18, Listen Out:** a listening game. A sound plays, and the player picks what made it."
+      },
+      {
+       "box": {
+        "title": "An example to read: 4 games for a game about a local dance class",
+        "blocks": [
+         {
+          "p": "**Pack the Rucksack** becomes sorting each move into the dance it belongs to."
          },
-         "id": "2-1.1",
-         "n": 1
+         {
+          "p": "**Knot Pairs** becomes matching each step to its name."
+         },
+         {
+          "p": "**Route Timer** becomes estimating how many counts a move takes."
+         },
+         {
+          "p": "**Listen Out** becomes playing a piece of music, and picking the dance it is for."
+         }
+        ]
+       }
+      },
+      {
+       "p": "You can change your mind about a game at any time before chapter 11."
+      },
+      {
+       "p": "You also choose how many points each question in your game is worth. The game chapters show you where to set them."
+      },
+      {
+       "p": "Run each check below before you go on to chapter 2. Tick each check when it is true for you."
+      },
+      {
+       "check": [
+        {
+         "what": "Your topic is NOT on the list of Summit Ready topics.",
+         "expect": "control",
+         "how": "If your game is about mountains, camping, knots or the weather, it is too close to Summit Ready. Pick another topic.",
+         "must": "Must be true",
+         "fix": "Read the list of topics again in chapter 0, on the screen called **Keep your own game away from the Summit Ready topics**.",
+         "id": "2-1.t1"
+        },
+        {
+         "what": "You can say who will play your game.",
+         "expect": "allowed",
+         "how": "Say your audience in a few words, such as KS3 pupils or the members of a dance class.",
+         "must": "Must be true",
+         "id": "2-1.t2"
+        },
+        {
+         "what": "Your game has a name, and you know its project name with no spaces.",
+         "expect": "allowed",
+         "how": "Write the project name down, such as `DanceSteps`. You need it in chapter 2.",
+         "must": "Must be true",
+         "id": "2-1.t3"
+        },
+        {
+         "what": "You have picked 4 games, and you know what each one becomes in your game.",
+         "expect": "allowed",
+         "how": "Say one sentence for each game, like the dance class example above.",
+         "must": "Must be true",
+         "id": "2-1.t4"
         }
        ]
-      },
-      {
-       "p": "Each requirement must be [[testable|1]]. A test must be able to show that the requirement is met, or that it is not."
-      },
-      {
-       "p": "For example, the requirement **The game is fun** is not testable. Two people can try it and give different answers."
-      },
-      {
-       "p": "The requirement **After 3 wrong tries in a row, the Log in button stays off for 30 seconds** is testable. You can try it and watch."
-      },
-      {
-       "p": "The mark scheme looks for 3 kinds of requirement: moving between forms, what the player types, and what the game shows and saves. Write some of each."
-      },
-      {
-       "box": {
-        "title": "An example to read: Summit Ready's requirements for moving between forms",
-        "blocks": [
-         {
-          "p": "**R1.** The Log in form has a link, **Register a new player**, that opens the Register form. The Register form has a **Back to log in** button that goes back."
-         },
-         {
-          "p": "**R2.** A player who logs in sees the Welcome form, with their avatar, their last score, their best score and the Top 10."
-         },
-         {
-          "p": "**R3.** The **Start the expedition** button opens a map of 8 summits. Each summit opens its own game, in any order."
-         },
-         {
-          "p": "**R4.** Every game has a **Back to the map** button. It asks the player before leaving, because leaving scores nothing."
-         },
-         {
-          "p": "**R5.** The **Finish the expedition** button opens the Feedback form. Its **Save my score** button saves the score and goes back to the Welcome form."
-         },
-         {
-          "p": "**R6.** The Log in form has a File menu with Exit, and a Help menu with How to play and About Summit Ready."
-         }
-        ]
-       }
-      },
-      {
-       "box": {
-        "title": "An example to read: Summit Ready's requirements for what the player types",
-        "blocks": [
-         {
-          "p": "**R7.** The Register form refuses a username that is blank, or is not 3 to 12 characters long. It also refuses a username with anything but letters and numbers, or one that is already taken."
-         },
-         {
-          "p": "**R8.** The Register form refuses a password that is not 6 to 20 characters long. It also refuses a password with no letter, no number, or the bar character `|`."
-         },
-         {
-          "p": "**R9.** Each refused box shows a message under it that says what is wrong and how to fix it."
-         },
-         {
-          "p": "**R10.** A new player is saved as one line in `players.txt`, so the player can log in next time."
-         },
-         {
-          "p": "**R11.** After 3 wrong tries in a row, the Log in button stays off for 30 seconds and counts down."
-         }
-        ]
-       }
-      },
-      {
-       "box": {
-        "title": "An example to read: Summit Ready's requirements for what the game shows and saves",
-        "blocks": [
-         {
-          "p": "**R12.** Each game scores from 0 to 100 points, so the whole expedition scores up to 800 points."
-         },
-         {
-          "p": "**R13.** The Feedback form shows each game's score, with what went well and what went wrong, in full sentences."
-         },
-         {
-          "p": "**R14.** Each saved score is added as one line in `scores.txt`. The Welcome form shows the 10 best scores as the Top 10."
-         },
-         {
-          "p": "**R15.** Every game has a sound button that turns the sound on and off."
-         }
-        ]
-       }
-      },
-      {
-       "p": "Your list will be different, because your game is different. Aim for at least 12 requirements, spread over the 3 kinds."
-      },
-      {
-       "p": "Each rule for a box is its own requirement, or part of one. In chapter 19, you test each rule with data that should pass and data that should be refused."
-      },
-      {
-       "p": "It is normal to add requirements later, when you think of something new. Number the new one at the end, and say when you added it."
       }
      ],
      "id": "1"
     }
    ],
    "id": "2"
-  },
-  {
-   "title": "Draw a storyboard of every form, with the changes you made",
-   "screens": [
-    {
-     "title": "Draw every form, with every control named and what it does",
-     "blocks": [
-      {
-       "p": "By the end of this screen, you will have a storyboard page for each form in your game."
-      },
-      {
-       "p": "A [[storyboard|2]] shows every form before you build it. The marker wants plenty of detail, so show every button, box and menu, and what happens when the player uses each one."
-      },
-      {
-       "p": "Draw one page for each form. You can draw by hand and take a photo, or draw in Word with shapes."
-      },
-      {
-       "steps": [
-        {
-         "do": "Click the download button below. Then open `storyboard-template.docx` in Word, click **File**, then **Save As**, and save it in your `Coursework` folder.",
-         "see": "Your browser shows that `storyboard-template.docx` has downloaded, and Word shows the heading **My storyboard** with 3 windows to fill in.",
-         "download": {
-          "file": "storyboard-template.docx",
-          "label": "Download the storyboard template",
-          "size": "38 KB"
-         },
-         "id": "3-1.1",
-         "n": 1
-        }
-       ]
-      },
-      {
-       "p": "Next to each button, box and menu, write its name, such as `btnLogIn`, and the words on it, such as **Log in**. Your code uses these names."
-      },
-      {
-       "p": "Beside each button, link and menu item, write what happens when the player clicks it, and which form opens."
-      },
-      {
-       "p": "Beside each box the player types into, write its rules and the message the player sees when a rule is broken."
-      },
-      {
-       "box": {
-        "title": "An example to read: the storyboard notes for the Summit Ready Log in form",
-        "blocks": [
-         {
-          "p": "**Top:** a photo of the Mourne Mountains, the title **Summit Ready**, and one line that says what the game is."
-         },
-         {
-          "p": "**Menu:** File, with Exit. Help, with How to play and About Summit Ready. Each Help item shows a message box."
-         },
-         {
-          "p": "**txtUsername and txtPassword:** 2 boxes. The password box shows dots, not letters."
-         },
-         {
-          "p": "**btnLogIn, Log in:** if a box is blank, a red message says which box to fill in. If the username and password match a player, the Welcome form opens."
-         },
-         {
-          "p": "**btnLogIn, after 3 wrong tries in a row:** the button stays off for 30 seconds and counts down, such as **Try again in 27 seconds**."
-         },
-         {
-          "p": "**lnkRegister, Register a new player:** opens the Register form. When it closes, the Log in form shows again."
-         }
-        ]
-       }
-      },
-      {
-       "p": "Draw a form for each game you plan to build too, even before you know all of the code. If you have not chosen your games yet, draw each game's form when you reach its chapter, and add it to your storyboard. You can add detail as you build them."
-      }
-     ],
-     "id": "1"
-    },
-    {
-     "title": "Show the changes you made to your storyboard, and why",
-     "blocks": [
-      {
-       "p": "By the end of this screen, you will know how to record each change to your storyboard, with the reason for it."
-      },
-      {
-       "p": "The top level of the mark scheme asks for a storyboard that shows the changes you made, and what you did about each one."
-      },
-      {
-       "p": "So keep your first drawings. When you change a form, draw the new version next to the old one, or write the change under it."
-      },
-      {
-       "p": "For each change, write 3 things: what was wrong, what you changed, and why the change is better."
-      },
-      {
-       "p": "Changes come from testing your game and from your client trying it. A change is a good thing to show. It is not a mistake to hide."
-      },
-      {
-       "box": {
-        "title": "An example to read: real changes made to Summit Ready after a test run",
-        "blocks": [
-         {
-          "p": "**Pack the Rucksack.** What was wrong: the pictures covered the names of the items. What changed: the pictures are drawn smaller, at 64 pixels. Why: a player must read each name to choose."
-         },
-         {
-          "p": "**The map.** What was wrong: the title covered the score at the top of the form. What changed: the title is smaller. Why: the player must see the score at all times."
-         },
-         {
-          "p": "**Whiteout.** What was wrong: letters already tried looked the same as new ones. What changed: tried letters turn grey. Why: the player can see which letters are left."
-         },
-         {
-          "p": "**Listen Out.** What was wrong: clicking a picture before playing the sound did nothing, with no reason given. What changed: the first line now says **Play the sound first. You can play it 3 times.** Why: the player knows what to do first."
-         },
-         {
-          "p": "**The Log in form.** What was wrong: after a wrong password, the wrong password stayed in the box. What changed: the box is cleared and ready for the next try. Why: the player does not have to delete it."
-         }
-        ]
-       }
-      }
-     ],
-     "id": "2"
-    }
-   ],
-   "id": "3"
-  },
-  {
-   "title": "Draw how your forms link, and plan your data files",
-   "screens": [
-    {
-     "title": "Draw a navigation map of every form in your game",
-     "blocks": [
-      {
-       "p": "By the end of this screen, you will have a navigation map that shows how a player moves between your forms."
-      },
-      {
-       "p": "A [[navigation map|3]] is one drawing of every form as a box, with an arrow for each way to move between them."
-      },
-      {
-       "p": "In chapter 19 you write a test plan, which is a list of tests. The marker checks that it tests every arrow, so draw the map first."
-      },
-      {
-       "p": "Label each arrow with the button, link or menu item that moves the player, in bold, such as **Start the expedition**."
-      },
-      {
-       "box": {
-        "title": "An example to read: the Summit Ready navigation map, written out arrow by arrow",
-        "blocks": [
-         {
-          "p": "Log in to Register, by **Register a new player**. Register back to Log in, by **Back to log in** or **Create my player**."
-         },
-         {
-          "p": "Log in to Welcome, by **Log in**. Welcome back to Log in, by **Log out** on the Game menu."
-         },
-         {
-          "p": "Welcome to the map, by **Start the expedition**. The map back to Welcome, by **Back to the welcome screen**."
-         },
-         {
-          "p": "The map to each of the 8 games, by clicking a summit. Each game back to the map, by **Back to the map**."
-         },
-         {
-          "p": "The map to Feedback, by **Finish the expedition**. Feedback back to Welcome, by **Save my score**."
-         }
-        ]
-       }
-      },
-      {
-       "p": "In Summit Ready, every form goes back to the form that opened it. That keeps the map simple, and it is a good shape for your game too."
-      }
-     ],
-     "id": "1"
-    },
-    {
-     "title": "Plan each data file as a table of fields",
-     "blocks": [
-      {
-       "p": "By the end of this screen, you will have a table for each data file your game reads or writes."
-      },
-      {
-       "p": "Your game keeps its players, its scores and its questions in [[data files|4]]. Each line of a data file is one thing, such as one player."
-      },
-      {
-       "p": "The bar `|` splits each line into [[fields|5]]. Your table lists the fields of each line, in order."
-      },
-      {
-       "code": {
-        "id": "c01-players-line",
-        "kind": "read",
-        "title": "An example to read: one line of players.txt in Summit Ready",
-        "lang": "txt",
-        "text": "ridgeRunner|summit42|avatar-goat.png|03/09/2026",
-        "noCopy": true,
-        "partLines": [
-         [
-          1,
-          1,
-          "One player, in 4 fields",
-          "Field 1 is the username, field 2 is the password, field 3 is the avatar picture, and field 4 is the date the player joined."
-         ]
-        ]
-       }
-      },
-      {
-       "p": "For each data file, write its name, what one line holds, each field in order, and one real example line. Do this now for the files you already know, such as players and scores. Add a table for each game's own file when you reach that game's chapter."
-      },
-      {
-       "box": {
-        "title": "An example to read: the Summit Ready data-file table",
-        "blocks": [
-         {
-          "p": "`players.txt`: one line for each player. Fields: username, password, avatar picture, date joined."
-         },
-         {
-          "p": "`scores.txt`: one line for each saved expedition. Fields: username, total points, date and time."
-         },
-         {
-          "p": "`kit.txt`: one line for each item in Pack the Rucksack. Fields: picture, name, pack or leave, reason."
-         },
-         {
-          "p": "`knots.txt`: one line for each knot in Knot Pairs. Fields: picture, name, what the knot is for."
-         }
-        ]
-       }
-      },
-      {
-       "p": "A username or a password may not hold the bar `|`. If it did, the game would split the line in the wrong place."
-      },
-      {
-       "p": "Write that rule into your requirements, so that you remember to test it in chapter 19."
-      },
-      {
-       "p": "Run each check below on your plan before you go on to chapter 2."
-      },
-      {
-       "check": [
-        {
-         "what": "Each requirement has a number, and a test could show it is met.",
-         "expect": "allowed",
-         "how": "Beside each requirement, write one line that says how you would test it. Rewrite any requirement that you cannot test.",
-         "must": "Must be true",
-         "id": "4-2.t1"
-        },
-        {
-         "what": "None of your requirements is like \"The game looks good\".",
-         "expect": "control",
-         "how": "Read each requirement. If no test could check it, rewrite it so that it names something a player can see or do.",
-         "must": "Must be true",
-         "fix": "Change it to say exactly what must be on the screen, such as the words on a button.",
-         "id": "4-2.t2"
-        },
-        {
-         "what": "Every form has a storyboard page, with every control named.",
-         "expect": "allowed",
-         "how": "Count the forms on your navigation map, then count your storyboard pages. The 2 numbers match.",
-         "must": "Must be true",
-         "id": "4-2.t3"
-        },
-        {
-         "what": "Every arrow on your navigation map names its button, link or menu item.",
-         "expect": "allowed",
-         "how": "Look at each arrow. Each one has the exact words the player clicks, in bold.",
-         "must": "Must be true",
-         "id": "4-2.t4"
-        },
-        {
-         "what": "Each data file has a table with every field in order and one example line.",
-         "expect": "allowed",
-         "how": "Compare your example line with your table. Each field in the line matches the table.",
-         "must": "Must be true",
-         "id": "4-2.t5"
-        }
-       ]
-      },
-      {
-       "box": {
-        "title": "Evidence to keep",
-        "blocks": [
-         {
-          "p": "Your portfolio now holds your client's words, your numbered requirements, your storyboard, your navigation map and your data-file tables."
-         },
-         {
-          "p": "Keep every first drawing of your storyboard. You add the changes beside them as you build and test your game."
-         }
-        ]
-       }
-      }
-     ],
-     "id": "2"
-    }
-   ],
-   "id": "4"
   }
  ],
  "glossary": [
   [
-   "requirement",
-   "One thing your game must do, written as one numbered sentence, such as R3."
+   "topic",
+   "What your game teaches or practises, such as French verbs, the parts of a cell or the steps of a dance."
   ],
   [
-   "testable",
-   "Written so that a test can show it is true or false. \"The game is fun\" is not testable."
-  ],
-  [
-   "storyboard",
-   "A drawing of every form in your game, with every button, box and menu named, and what each one does."
-  ],
-  [
-   "navigation map",
-   "A drawing of how the forms link together: which form opens which, and how the player gets back."
-  ],
-  [
-   "data file",
-   "A text file that your game reads from or writes to, such as `players.txt`."
-  ],
-  [
-   "field",
-   "One part of a line in a data file. In `players.txt`, the username is the first field."
+   "audience",
+   "The people who will play your game, such as primary school pupils, KS3 pupils or the members of a club."
   ]
  ]
 }

@@ -5,12 +5,12 @@
    "id": "00",
    "n": 0,
    "title": "Start here: what Summit Ready is, and how this guide works",
-   "one": "You meet Summit Ready, the game this guide builds, and the topics your own game may not use. You find out how the 50 marks are given, and how the code blocks and ticks in this guide work.",
+   "one": "You meet Summit Ready, the game this guide builds, and the topics your own game may not use. You find out how the code blocks, the Your turn screens and the ticks in this guide work.",
    "built": true,
    "steps": [
-    "4-2.t1",
-    "4-2.t2",
-    "4-2.t3"
+    "3-3.t1",
+    "3-3.t2",
+    "3-3.t3"
    ],
    "stages": [
     [
@@ -25,51 +25,33 @@
     ],
     [
      "3",
-     "Find out how the 50 marks are given",
-     1
-    ],
-    [
-     "4",
-     "Learn how the code blocks and ticks in this guide work",
-     2
+     "Learn how the code blocks, the Your turn screens and the ticks work",
+     3
     ]
    ]
   },
   {
    "id": "01",
    "n": 1,
-   "title": "Plan your game: your client, your requirements, your storyboard and your data files",
-   "one": "You choose a client and a topic, and you write numbered requirements that a test can check. Then you draw a storyboard of every form, a navigation map, and a table for each data file. You plan it all before you open Visual Studio 2019.",
+   "title": "Plan your game: your topic, who it is for, and your 4 games",
+   "one": "You choose the topic of your game and who will play it, and you give your game a name. Then you pick the 4 games you will build, and say what each one becomes in your game.",
    "built": true,
    "steps": [
-    "2-1.1",
-    "3-1.1",
-    "4-2.t1",
-    "4-2.t2",
-    "4-2.t3",
-    "4-2.t4",
-    "4-2.t5"
+    "2-1.t1",
+    "2-1.t2",
+    "2-1.t3",
+    "2-1.t4"
    ],
    "stages": [
     [
      "1",
-     "Choose your client and your topic",
+     "Choose your topic, who your game is for, and its name",
      1
     ],
     [
      "2",
-     "Write numbered requirements that a test can check",
+     "Pick your 4 games",
      1
-    ],
-    [
-     "3",
-     "Draw a storyboard of every form, with the changes you made",
-     2
-    ],
-    [
-     "4",
-     "Draw how your forms link, and plan your data files",
-     2
     ]
    ]
   },
@@ -509,13 +491,13 @@
     "4-1.2",
     "4-1.3",
     "4-1.4",
-    "4-3.t1",
-    "4-3.t2",
-    "4-3.t3",
-    "4-3.t4",
-    "4-3.t5",
-    "4-3.t6",
-    "4-3.t7",
+    "4-2.t1",
+    "4-2.t2",
+    "4-2.t3",
+    "4-2.t4",
+    "4-2.t5",
+    "4-2.t6",
+    "4-2.t7",
     "4-4.1",
     "4-4.2",
     "4-4.3",
@@ -539,7 +521,7 @@
     ],
     [
      "4",
-     "Test the Register window, then make one change of your own",
+     "Test the Register window, then make it your own",
      4
     ]
    ]
@@ -639,7 +621,7 @@
     ],
     [
      "4",
-     "Test the Log in window, then make one change of your own",
+     "Test the Log in window, then make it your own",
      2
     ]
    ]
@@ -771,7 +753,7 @@
     ],
     [
      "5",
-     "Test the Welcome window, then make one change of your own",
+     "Test the Welcome window, then make it your own",
      2
     ]
    ]
@@ -888,11 +870,11 @@
     "5-2.6",
     "5-2.7",
     "5-2.8",
-    "5-5.t1",
-    "5-5.t2",
-    "5-5.t3",
-    "5-5.t4",
-    "5-5.t5"
+    "5-4.t1",
+    "5-4.t2",
+    "5-4.t3",
+    "5-4.t4",
+    "5-4.t5"
    ],
    "stages": [
     [
@@ -918,7 +900,7 @@
     [
      "5",
      "Open the map from the Welcome window, and test it",
-     5
+     6
     ]
    ]
   },
@@ -998,11 +980,11 @@
     "5-2.11",
     "5-2.12",
     "5-2.13",
-    "5-4.t1",
-    "5-4.t2",
-    "5-4.t3",
-    "5-4.t4",
-    "5-4.t5"
+    "5-3.t1",
+    "5-3.t2",
+    "5-3.t3",
+    "5-3.t4",
+    "5-3.t5"
    ],
    "stages": [
     [
@@ -1106,11 +1088,11 @@
     "5-3.4",
     "5-3.5",
     "5-3.6",
-    "5-5.t1",
-    "5-5.t2",
-    "5-5.t3",
-    "5-5.t4",
-    "5-5.t5"
+    "5-4.t1",
+    "5-4.t2",
+    "5-4.t3",
+    "5-4.t4",
+    "5-4.t5"
    ],
    "stages": [
     [
@@ -1377,12 +1359,12 @@
     "5-2.8",
     "5-2.9",
     "5-2.10",
-    "5-5.t1",
-    "5-5.t2",
-    "5-5.t3",
-    "5-5.t4",
-    "5-5.t5",
-    "5-5.t6"
+    "5-6.t1",
+    "5-6.t2",
+    "5-6.t3",
+    "5-6.t4",
+    "5-6.t5",
+    "5-6.t6"
    ],
    "stages": [
     [
@@ -1408,7 +1390,7 @@
     [
      "5",
      "Change Pack the Rucksack into a game on your own topic",
-     5
+     6
     ]
    ]
   },
@@ -1616,12 +1598,12 @@
     "5-2.8",
     "5-2.9",
     "5-2.10",
-    "5-5.t1",
-    "5-5.t2",
-    "5-5.t3",
-    "5-5.t4",
-    "5-5.t5",
-    "5-5.t6"
+    "5-6.t1",
+    "5-6.t2",
+    "5-6.t3",
+    "5-6.t4",
+    "5-6.t5",
+    "5-6.t6"
    ],
    "stages": [
     [
@@ -1647,7 +1629,7 @@
     [
      "5",
      "Change Knot Pairs into a game on your own topic",
-     5
+     6
     ]
    ]
   },
@@ -1852,12 +1834,12 @@
     "5-2.3",
     "5-2.4",
     "5-2.5",
-    "5-5.t1",
-    "5-5.t2",
-    "5-5.t3",
-    "5-5.t4",
-    "5-5.t5",
-    "5-5.t6"
+    "5-6.t1",
+    "5-6.t2",
+    "5-6.t3",
+    "5-6.t4",
+    "5-6.t5",
+    "5-6.t6"
    ],
    "stages": [
     [
@@ -1883,7 +1865,7 @@
     [
      "5",
      "Change Leave No Trace into a game on your own topic",
-     5
+     6
     ]
    ]
   },
@@ -2079,12 +2061,12 @@
     "5-2.8",
     "5-2.9",
     "5-2.10",
-    "5-5.t1",
-    "5-5.t2",
-    "5-5.t3",
-    "5-5.t4",
-    "5-5.t5",
-    "5-5.t6"
+    "5-6.t1",
+    "5-6.t2",
+    "5-6.t3",
+    "5-6.t4",
+    "5-6.t5",
+    "5-6.t6"
    ],
    "stages": [
     [
@@ -2110,7 +2092,7 @@
     [
      "5",
      "Change Read the Sky into a game on your own topic",
-     5
+     6
     ]
    ]
   },
@@ -2300,12 +2282,12 @@
     "5-2.8",
     "5-2.9",
     "5-2.10",
-    "5-5.t1",
-    "5-5.t2",
-    "5-5.t3",
-    "5-5.t4",
-    "5-5.t5",
-    "5-5.t6"
+    "5-6.t1",
+    "5-6.t2",
+    "5-6.t3",
+    "5-6.t4",
+    "5-6.t5",
+    "5-6.t6"
    ],
    "stages": [
     [
@@ -2331,7 +2313,7 @@
     [
      "5",
      "Change Whiteout into a game on your own topic",
-     5
+     6
     ]
    ]
   },
@@ -2555,12 +2537,12 @@
     "5-2.8",
     "5-2.9",
     "5-2.10",
-    "5-5.t1",
-    "5-5.t2",
-    "5-5.t3",
-    "5-5.t4",
-    "5-5.t5",
-    "5-5.t6"
+    "5-6.t1",
+    "5-6.t2",
+    "5-6.t3",
+    "5-6.t4",
+    "5-6.t5",
+    "5-6.t6"
    ],
    "stages": [
     [
@@ -2586,7 +2568,7 @@
     [
      "5",
      "Change Grid Ref Rescue into a game on your own topic",
-     5
+     6
     ]
    ]
   },
@@ -2774,12 +2756,12 @@
     "5-2.8",
     "5-2.9",
     "5-2.10",
-    "5-5.t1",
-    "5-5.t2",
-    "5-5.t3",
-    "5-5.t4",
-    "5-5.t5",
-    "5-5.t6"
+    "5-6.t1",
+    "5-6.t2",
+    "5-6.t3",
+    "5-6.t4",
+    "5-6.t5",
+    "5-6.t6"
    ],
    "stages": [
     [
@@ -2805,7 +2787,7 @@
     [
      "5",
      "Change Route Timer into a game on your own topic",
-     5
+     6
     ]
    ]
   },
@@ -3001,12 +2983,12 @@
     "5-2.8",
     "5-2.9",
     "5-2.10",
-    "5-5.t1",
-    "5-5.t2",
-    "5-5.t3",
-    "5-5.t4",
-    "5-5.t5",
-    "5-5.t6"
+    "5-6.t1",
+    "5-6.t2",
+    "5-6.t3",
+    "5-6.t4",
+    "5-6.t5",
+    "5-6.t6"
    ],
    "stages": [
     [
@@ -3032,107 +3014,17 @@
     [
      "5",
      "Change Listen Out into a game on your own topic",
-     5
-    ]
-   ]
-  },
-  {
-   "id": "19",
-   "n": 19,
-   "title": "Test it: a test plan for every button and every box, with evidence and a retest log",
-   "one": "You write a test plan that tries every button, link and menu item on every form, and every rule on every box. Then you run each test in Visual Studio 2019, keep a screenshot for each one, fix what fails and test it again.",
-   "built": true,
-   "steps": [
-    "1-1.1",
-    "3-1.1",
-    "3-1.2",
-    "3-1.3",
-    "3-1.4",
-    "3-3.t1",
-    "3-3.t2",
-    "3-3.t3",
-    "3-3.t4",
-    "3-3.t5"
-   ],
-   "stages": [
-    [
-     "1",
-     "Plan a test for every way to move between forms",
-     2
-    ],
-    [
-     "2",
-     "Plan a test for every rule on every box",
-     3
-    ],
-    [
-     "3",
-     "Run your tests, keep the evidence, and fix what fails",
-     3
-    ]
-   ]
-  },
-  {
-   "id": "20",
-   "n": 20,
-   "title": "Evaluate and hand in: your client's feedback, your evaluation, and a final check of your portfolio",
-   "one": "You ask your client to try your game, and you check your game against each of your requirements. Then you write about your own work, add your code to your portfolio, and check everything before you hand it in.",
-   "built": true,
-   "steps": [
-    "1-2.1",
-    "1-2.2",
-    "1-2.3",
-    "2-2.1",
-    "2-2.2",
-    "2-2.3",
-    "3-2.t1",
-    "3-2.t2",
-    "3-2.t3",
-    "3-2.t4",
-    "3-2.t5",
-    "3-2.t6"
-   ],
-   "stages": [
-    [
-     "1",
-     "Ask your client, and check your game against your plan",
-     3
-    ],
-    [
-     "2",
-     "Write about your own work, and add your code",
-     2
-    ],
-    [
-     "3",
-     "Check everything, then hand it in",
-     2
+     6
     ]
    ]
   }
  ],
  "filesTitle": "Files for the chapters",
- "filesNote": "One zip holds every data file, picture and sound that Summit Ready uses. You download it once, in chapter 2. It never holds code: you write all of the code yourself. The 4 Word templates are pages for your portfolio, ready for you to fill in.",
+ "filesNote": "One zip holds every data file, picture and sound that Summit Ready uses. You download it once, in chapter 2. It never holds code: you write all of the code yourself.",
  "files": [
   {
    "name": "summit-ready-files.zip",
    "what": "The Data, Images and Sounds folders, and credits.txt, for every chapter (7.8 MB)."
-  },
-  {
-   "name": "requirements-template.docx",
-   "what": "A Word table for your requirements, for chapter 1 (37 KB)."
-  },
-  {
-   "name": "storyboard-template.docx",
-   "what": "A Word page for drawing each window of your game, for chapter 1 (38 KB)."
-  },
-  {
-   "name": "test-plan-template.docx",
-   "what": "A Word table for your test plan and your fix-and-retest log, for chapter 19 (37 KB)."
-  },
-  {
-   "name": "evaluation-template.docx",
-   "what": "A Word table for judging your game against each requirement, for chapter 20 (37 KB)."
   }
  ]
 }

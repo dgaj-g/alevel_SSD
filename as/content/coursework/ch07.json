@@ -1,7 +1,7 @@
 {
  "id": "07",
  "n": 7,
- "of": 20,
+ "of": 18,
  "title": "Scores, the Welcome window and the Top 10",
  "kind": "a build chapter: the windows every player sees before the map",
  "one": "You read the scores in `scores.txt`, and build the Welcome window. It shows the player's last and best scores, and a Top 10 board with one row for each player.",
@@ -2951,7 +2951,7 @@
    "id": "4"
   },
   {
-   "title": "Test the Welcome window, then make one change of your own",
+   "title": "Test the Welcome window, then make it your own",
    "screens": [
     {
      "title": "Check that the Welcome window and the Top 10 work",
@@ -3018,50 +3018,41 @@
          "id": "5-1.t7"
         }
        ]
-      },
-      {
-       "box": {
-        "title": "Evidence to keep",
-        "blocks": [
-         {
-          "p": "Take a screenshot of the Welcome window for summitSeeker, and one for your new player. Press the Windows key, Shift and S together, then drag a box around the window."
-         },
-         {
-          "p": "Paste each screenshot into your testing document, under the test it shows."
-         }
-        ]
-       }
       }
      ],
      "id": "1"
     },
     {
-     "title": "Your turn: show a Top 5",
+     "title": "Your turn: make the Welcome window your own",
      "blocks": [
       {
-       "p": "By the end of this screen, you have changed the size of the board, and tested it, on your own."
+       "p": "By the end of this screen, the Welcome window uses your own game's name and words, and you have tested it."
       },
       {
-       "p": "Make the board show only the 5 best players. Then change it back."
+       "p": "The Welcome window still talks about climbers, summits and an expedition. Change its words so they fit your own game."
       },
       {
        "code": {
         "id": "turn-top5",
         "kind": "turn",
-        "title": "Show a Top 5",
+        "title": "Put your own words on the Welcome window",
         "lang": "cs",
-        "text": "for (int i = 0; i < 5; i++)",
+        "text": "lblHello.Text = \"Welcome to Dance Steps, \" + name + \".\";",
         "task": [
-         "Find the `for` line in ShowBoard.",
-         "Change 10 to 5."
+         "In ShowPlayer, change `Summit Ready` in the line that sets `lblHello.Text` to your game's name.",
+         "Change the Text of lblAbout to 2 or 3 sentences that say what a player does in your game.",
+         "Change the Text of btnStart, and of the menu item under Game, to words that fit your game, such as Start the game.",
+         "Change the Text of lblTopTitle and lblNoScores, so they fit your game. For example, Top 10 dancers.",
+         "Click the title bar of frmWelcome, and change its Text to your game's name, then ` - Welcome`.",
+         "Change `Summit Ready` to your game's name in each MessageBox line in `frmWelcome.cs`."
         ],
-        "test": "Press F5, then log in as summitSeeker.",
-        "expect": "The board has 5 rows, from summitSeeker in 1st place to cairnKing in 5th place.",
-        "hint": "Change only ShowBoard. TopTen still works out 10 places, and ShowBoard shows the first 5 of them."
+        "test": "Press F5, then log in as summitSeeker, password `peaks2026`. Click **Help**, then click **How to play**.",
+        "expect": "The Welcome window and its message boxes show your own game's name and your own words. The Top 10 still shows 10 players.",
+        "hint": "To find each `Summit Ready` in the code, press Ctrl and F together, then type `Summit Ready`. Press Enter to jump to the next one."
        }
       },
       {
-       "p": "When the test passes, change 5 back to 10, because the board is a Top 10."
+       "p": "The finished code shows a game called Dance Steps. Your own game's name goes in its place."
       }
      ],
      "id": "2"

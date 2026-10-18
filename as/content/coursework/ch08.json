@@ -1,7 +1,7 @@
 {
  "id": "08",
  "n": 8,
- "of": 20,
+ "of": 18,
  "title": "The map",
  "kind": "a build chapter: the map that every game opens from",
  "one": "You build the map of the Mournes, with a card and a flag for each of the 8 summits. The player climbs the summits in any order, sees a tick on each one, and can finish or leave.",
@@ -502,7 +502,7 @@
             "n": 2,
             "x": 7.5,
             "y": 26.9,
-            "say": "Click at the end of the `{` under `namespace SummitReady`."
+            "say": "Click at the end of the `{` under the line that starts `namespace`."
            },
            {
             "n": 3,
@@ -550,7 +550,7 @@
          "n": 1
         },
         {
-         "do": "Click at the end of the `{` under `namespace SummitReady`.",
+         "do": "Click at the end of the `{` under the line that starts `namespace`.",
          "see": "The flashing cursor is after the `{`.",
          "id": "2-2.2",
          "n": 2
@@ -3296,47 +3296,12 @@
          },
          {
           "p": "Choose any order if each level stands on its own, as the 8 games in Summit Ready do."
-         },
-         {
-          "p": "Say which way you chose, and why, in your design write-up."
          }
         ]
        }
       }
      ],
      "id": "3"
-    },
-    {
-     "title": "Your turn: show how many summits are left",
-     "blocks": [
-      {
-       "p": "By the end of this screen, you have changed the map's strip on your own, and tested it."
-      },
-      {
-       "p": "The strip shows the points so far. Make it also say how many summits are left to climb."
-      },
-      {
-       "code": {
-        "id": "c08-turn",
-        "kind": "turn",
-        "title": "Show the summits left on the strip",
-        "lang": "cs",
-        "text": "lblScore.Text = \"Points so far: \" + Expedition.Total()\n    + \" of 800. Summits left: \" + (8 - Expedition.DoneCount());",
-        "task": [
-         "Find the line in ShowProgress that sets `lblScore.Text`.",
-         "Add the words `Summits left:` and the number of summits not yet climbed to the end.",
-         "Make lblScore wider on its left side, so the words do not go under the speaker picture. In the Properties window, set Location to `380, 8` and Size to `336, 24`."
-        ],
-        "test": "Press F5, log in and click **Start the expedition**.",
-        "expect": "The strip says **Points so far: 0 of 800. Summits left: 8**.",
-        "hint": "`Expedition.DoneCount()` gives the summits climbed. Take it away from 8."
-       }
-      },
-      {
-       "p": "When the test passes, keep the change or put the line back. Later chapters work either way."
-      }
-     ],
-     "id": "4"
     },
     {
      "title": "Check that the map works",
@@ -3355,7 +3320,7 @@
          "how": "The map opens with 8 cards and 8 flags. The strip says **Points so far: 0 of 800**.",
          "must": "Must happen",
          "fix": "Check btnStart_Click, then check that btnStart_Click shows beside Click in the events list of btnStart.",
-         "id": "5-5.t1"
+         "id": "5-4.t1"
         },
         {
          "what": "Click **Game**, then **Start the expedition**, on the Welcome window.",
@@ -3363,14 +3328,14 @@
          "how": "The map opens, the same as with the gold button.",
          "must": "Must happen",
          "fix": "Check that mnuStart_Click shows beside Click in the events list of Start the expedition.",
-         "id": "5-5.t2"
+         "id": "5-4.t2"
         },
         {
          "what": "Click **Finish the expedition** with no summit climbed.",
          "expect": "control",
          "how": "Only the message **Climb at least one summit first.** shows. Nothing else opens.",
          "fix": "Check the first `if` in btnFinish_Click. It must end with `return;` inside its braces.",
-         "id": "5-5.t3"
+         "id": "5-4.t3"
         },
         {
          "what": "Click the speaker picture twice.",
@@ -3378,7 +3343,7 @@
          "how": "The picture changes to the muted speaker, then back.",
          "must": "Must happen",
          "fix": "Check ShowSpeaker and picSound_Click, then check that picSound_Click shows beside Click for picSound.",
-         "id": "5-5.t4"
+         "id": "5-4.t4"
         },
         {
          "what": "Click **Back to the welcome screen**.",
@@ -3386,25 +3351,92 @@
          "how": "The map closes with no question, and the Welcome window shows again.",
          "must": "Must happen",
          "fix": "Check btnBack_Click, then check that frmMap_FormClosing shows beside FormClosing for frmMap.",
-         "id": "5-5.t5"
+         "id": "5-4.t5"
         }
        ]
+      }
+     ],
+     "id": "4"
+    },
+    {
+     "title": "Your turn: put your own picture and places on the map",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the map shows your own picture, with a flag on each of your own 8 places."
       },
       {
-       "box": {
-        "title": "Evidence to keep",
-        "blocks": [
-         {
-          "p": "Take a screenshot of each test as it passes. Press the Windows key, Shift and S together, then drag a box around the part of the screen to keep."
-         },
-         {
-          "p": "Paste each screenshot into your testing document, under the test it shows."
-         }
-        ]
+       "p": "Summit Ready's map is the Mourne Mountains, with a flag on each of 8 summits. Your map can be any picture with 8 places to click, such as a stage with 8 spots on it for a dance game."
+      },
+      {
+       "p": "Your game keeps 8 places. Each game you build fills one place. A place with no game yet does nothing when it is clicked."
+      },
+      {
+       "p": "Find a square picture for your map. Make it 600 pixels wide and 600 high, so it fills picMap exactly. Open it in Paint and click **Resize**. Click **Pixels**, untick **Maintain aspect ratio**, type 600 in both boxes, then click **OK**."
+      },
+      {
+       "p": "Save it in the Map folder inside bin\\Debug\\Images, with a name such as `map-stage.png`."
+      },
+      {
+       "p": "Find 8 small photos, one for each place. Save them in the Summits folder inside bin\\Debug\\Images."
+      },
+      {
+       "code": {
+        "id": "c08-turn",
+        "kind": "turn",
+        "title": "Put in your own map, places and photos",
+        "lang": "cs",
+        "text": "public static string[] Summits = { \"Warm-up\", \"Salsa\", \"Jive\",\n    \"Waltz\", \"Tango\", \"Cha-cha\", \"Foxtrot\", \"Final bow\" };",
+        "task": [
+         "In frmMap_Load, change `mournes-grid-600.png` to the file name of your map.",
+         "In `Expedition.cs`, change the 8 names in `Summits` to the names of your 8 places.",
+         "In `frmMap.cs`, change the 8 file names in `photoNames` to the file names of your 8 photos.",
+         "Change the 8 numbers in `flagX` and the 8 numbers in `flagY`, so each flag sits on one of your places.",
+         "Each card shows a height in metres after the name. In ShowProgress, delete `+ \" · \" + Expedition.Heights[i] + \" m\"` if your places have no number.",
+         "Add a line to `credits.txt` for your map and for each photo."
+        ],
+        "test": "Press F5, log in and click the button that opens the map.",
+        "expect": "The map shows your picture, with a flag on each of your 8 places. Each card shows your own place name and photo.",
+        "hint": "To find the numbers for a flag, open your map in Paint and point at the place. The bottom left corner of Paint shows how far across, then how far down, such as 300, 516px."
        }
+      },
+      {
+       "p": "The finished code shows the 8 places of a dance game. Your own 8 names go in their place."
       }
      ],
      "id": "5"
+    },
+    {
+     "title": "Your turn: put your own words on the map",
+     "blocks": [
+      {
+       "p": "By the end of this screen, the map window uses your own words, and you have tested it."
+      },
+      {
+       "p": "The map window still talks about summits, climbing and an expedition. Change its words so they fit your own game."
+      },
+      {
+       "code": {
+        "id": "c08-turn-words",
+        "kind": "turn",
+        "title": "Put your own words on the map window",
+        "lang": "cs",
+        "text": "MessageBox.Show(\"Play at least one level first. Click a \"\n    + \"spot on the stage to start.\", \"Dance Steps\");",
+        "task": [
+         "Change the Text of lblTitle, lblInstruction, btnBack and btnFinish, so they fit your game.",
+         "Click the title bar of frmMap, and change its Text to your game's name, then a dash and the window's name.",
+         "In `frmMap.cs`, change the words in each MessageBox line, so they fit your game and name it.",
+         "In ShowProgress, change `Climbed:` to a word that fits your game, such as Played."
+        ],
+        "test": "Press F5, open the map, and click the finish button before you play any game.",
+        "expect": "Every word on the map window fits your own game. The message tells the player to play a game first, and names your game.",
+        "hint": "Press Ctrl and F together, then type `summit`, to find each place in the code that still says summit."
+       }
+      },
+      {
+       "p": "The points total shown on the map, 800, changes later. You choose your own points in the game chapters."
+      }
+     ],
+     "id": "6"
     }
    ],
    "id": "5"
