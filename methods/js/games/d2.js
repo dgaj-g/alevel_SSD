@@ -1,8 +1,8 @@
 // D2 Be the Examiner — booklet section 8's line-by-line table, then the 2014 Q2(b) mark scheme (adapted, 7 marks):
 // match the scheme to the lines, mark three pupils' answers point by point, then the why-questions.
-import { h, icon, codeSpan, codeBlock, fb, shuffle, sample, setMark, sfx, para, btn, scrollIntoViewSoft } from '../ui.js';
-import { createBoard } from '../dnd.js';
-import { runRounds, checkButton, explain, quizRound } from '../kit.js';
+import { h, icon, codeSpan, codeBlock, fb, shuffle, sample, setMark, sfx, para, btn, scrollIntoViewSoft } from '../../../arcade/engine/ui.js';
+import { createBoard } from '../../../arcade/engine/dnd.js';
+import { runRounds, checkButton, explain, quizRound } from '../../../arcade/engine/kit.js';
 import { SCHEME_ROWS, SCHEME_DECOYS, Q14B, Q14B_MODEL, PUPIL_ANSWERS, EXAM_QUIZ } from '../data/d.js';
 
 const matchRound = {

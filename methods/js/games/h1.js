@@ -1,7 +1,7 @@
 // H1 Final Challenge — thirty questions across the whole topic, three stages, three lives.
 // A wrong answer costs a life; clearing a stage wins one back. Every program's result is the real one.
-import { h, clear, icon, btn, fb, para, shuffle, sample, choiceSet, codeBlock, sfx, instr, scrollIntoViewSoft } from '../ui.js';
-import { programLines, realResult, transcript } from '../kit.js';
+import { h, clear, icon, btn, fb, para, shuffle, sample, choiceSet, codeBlock, sfx, instr, scrollIntoViewSoft } from '../../../arcade/engine/ui.js';
+import { programLines, realResult, transcript } from '../../../arcade/engine/kit.js';
 import { STAGES, PER_STAGE, LIVES, NO_BUILD } from '../data/h.js';
 
 const TOTAL = STAGES.length * PER_STAGE;

@@ -1,7 +1,7 @@
 // A3 Label the Header — booklet section 2: every word of a header has a job.
-import { h, codeSpan, fb, shuffle, sample, choiceSet, setMark, sfx, para } from '../ui.js';
-import { createBoard } from '../dnd.js';
-import { runRounds, checkButton, explain } from '../kit.js';
+import { h, codeSpan, fb, shuffle, sample, choiceSet, setMark, sfx, para } from '../../../arcade/engine/ui.js';
+import { createBoard } from '../../../arcade/engine/dnd.js';
+import { runRounds, checkButton, explain } from '../../../arcade/engine/kit.js';
 import { LABELS, LABEL_HEADERS, READ_HEADERS } from '../data/a.js';
 
 export default {

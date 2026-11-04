@@ -1,7 +1,7 @@
 // G2 Missing Words — the booklet's definitions with the mark-earning words taken out, then one word swapped.
-import { h, icon, fb, shuffle, sample, setMark, sfx, para, scrollIntoViewSoft } from '../ui.js';
-import { createBoard } from '../dnd.js';
-import { runRounds, checkButton, explain } from '../kit.js';
+import { h, icon, fb, shuffle, sample, setMark, sfx, para, scrollIntoViewSoft } from '../../../arcade/engine/ui.js';
+import { createBoard } from '../../../arcade/engine/dnd.js';
+import { runRounds, checkButton, explain } from '../../../arcade/engine/kit.js';
 import { TERM, CLOZE_SETS, TERMS } from '../data/g.js';
 
 function clozeRound(set, n) {

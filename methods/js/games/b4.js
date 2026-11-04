@@ -1,7 +1,7 @@
 // B4 Calls Become Values — booklet section 4: a call that returns a value BECOMES that value.
 // Click the call that runs first, say what it hands back, watch the line collapse.
-import { h, icon, codeSpan, codeBlock, consolePanel, fb, shuffle, choiceSet, sfx, para, btn, sameAnswer, wait, scrollIntoViewSoft } from '../ui.js';
-import { runRounds, checkButton, explain } from '../kit.js';
+import { h, icon, codeSpan, codeBlock, consolePanel, fb, shuffle, choiceSet, sfx, para, btn, sameAnswer, wait, scrollIntoViewSoft } from '../../../arcade/engine/ui.js';
+import { runRounds, checkButton, explain } from '../../../arcade/engine/kit.js';
 import { COLLAPSE, M } from '../data/b.js';
 
 const NAMES = ['Square', 'ShowSquare', 'Add', 'Half', 'Twice', 'Sign', 'Line'];

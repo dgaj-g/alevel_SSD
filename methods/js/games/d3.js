@@ -1,9 +1,9 @@
 // D3 Be the User — booklet section 8's program, run live: three EnterNumber calls, and you are the one typing.
 // Five missions (every error message, the smallest entries, crash it, crash it with a number, a sneaky number),
 // then sort entries into accepted or crash. The console follows the same rules as dotnet (SIM_CASES prove it).
-import { h, icon, codeBlock, consolePanel, fb, shuffle, sample, setMark, sfx, btn, scrollIntoViewSoft } from '../ui.js';
-import { createBoard } from '../dnd.js';
-import { runRounds, checkButton, explain, programLines, playEvents } from '../kit.js';
+import { h, icon, codeBlock, consolePanel, fb, shuffle, sample, setMark, sfx, btn, scrollIntoViewSoft } from '../../../arcade/engine/ui.js';
+import { createBoard } from '../../../arcade/engine/dnd.js';
+import { runRounds, checkButton, explain, programLines, playEvents } from '../../../arcade/engine/kit.js';
 import { ENTER_NUMBER, BOOK_CALLS, BOOK_FMT, BOOK_MAIN, runCalls, ENTRY_SORT } from '../data/d.js';
 
 // Main first, so the three calls (and their ranges) sit at the top beside the console. C# does not mind the order.

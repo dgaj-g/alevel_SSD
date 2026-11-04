@@ -1,6 +1,6 @@
 // G3 Quick-Fire Cards — say it, flip it, be honest. Cards you have not got yet come back until you have.
-import { h, icon, btn, fb, shuffle, sfx, para, scrollIntoViewSoft } from '../ui.js';
-import { runRounds } from '../kit.js';
+import { h, icon, btn, fb, shuffle, sfx, para, scrollIntoViewSoft } from '../../../arcade/engine/ui.js';
+import { runRounds } from '../../../arcade/engine/kit.js';
 import { TERMS, SELF_QUIZ } from '../data/g.js';
 
 function deckRound({ title, intro, intro2, cards, frontLabel, backLabel }) {

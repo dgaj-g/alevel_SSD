@@ -1,7 +1,7 @@
 // C4 Will It Build? — the whole topic as a compiler: headers, calls, return values, ref, overloading.
 // Pick the verdict AND the reason. Every program was built with dotnet; the Error List shows C#'s own words.
-import { h, codeBlock, shuffle, sample } from '../ui.js';
-import { runRounds, programLines, quizRound, realResult } from '../kit.js';
+import { h, codeBlock, shuffle, sample } from '../../../arcade/engine/ui.js';
+import { runRounds, programLines, quizRound, realResult } from '../../../arcade/engine/kit.js';
 import { BUILD } from '../data/c.js';
 
 export default {

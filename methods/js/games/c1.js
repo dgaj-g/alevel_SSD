@@ -1,8 +1,8 @@
 // C1 Swap Trace — booklet section 5 and deck Activity 9: trace the swap trap with new numbers every time,
 // then say why x and y never change, then judge copy-or-original programs.
-import { h, icon, codeBlock, consolePanel, fb, shuffle, sample, randInt, setMark, sfx, para, btn, sameAnswer, scrollIntoViewSoft } from '../ui.js';
-import { createBoard } from '../dnd.js';
-import { runRounds, checkButton, explain, programLines, quizRound, realResult } from '../kit.js';
+import { h, icon, codeBlock, consolePanel, fb, shuffle, sample, randInt, setMark, sfx, para, btn, sameAnswer, scrollIntoViewSoft } from '../../../arcade/engine/ui.js';
+import { createBoard } from '../../../arcade/engine/dnd.js';
+import { runRounds, checkButton, explain, programLines, quizRound, realResult } from '../../../arcade/engine/kit.js';
 import { SWAP, SWAP_MAIN, EARN, COPY } from '../data/c.js';
 
 const DASH = '–';
