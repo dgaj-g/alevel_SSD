@@ -695,12 +695,57 @@ details.cw-box>div{margin-top:8px}
 .cw-words dd .see{white-space:nowrap;font-size:13px;color:var(--navy);margin-left:4px}
 @media (max-width:600px){.cw-wds dl,.cw-words dl{grid-template-columns:1fr}.cw-wds dd,.cw-words dd{margin:0 0 6px}}
 
+/* ---- the Theory side (built from prototype/platform and prototype/staff) ---- */
+.th-lead{color:var(--mute);margin:0 0 6px}
+.th-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
+.th-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px;display:flex;flex-direction:column;gap:8px;min-height:200px}
+.th-card.open{border-color:var(--navy)}.th-card h2{margin:0;font-size:21px}
+.th-card .line{color:var(--mute)}.th-card .or{font-size:14px;min-height:40px;display:inline-flex;align-items:center;color:var(--navy)}
+.th-card .stars{font-weight:600}.th-card .btn{margin-top:auto;align-self:flex-start;text-decoration:none;display:inline-block;min-height:44px}
+.th-card.closed h2,.th-card.later h2{color:var(--mute)}.th-card .lock{margin-top:auto;color:var(--mute)}
+.th-bar{height:44px;background:var(--navy);color:#fff;display:flex;align-items:center;padding:0 16px;gap:10px;font-size:15px}
+.th-bar a{color:#fff;display:inline-flex;align-items:center;min-height:40px;white-space:nowrap}
+.th-bar .th-sep{opacity:.6}.th-bar .th-here{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.th-bar .th-saving{margin-left:auto;font-size:14px;white-space:nowrap;opacity:.9}.th-bar .th-full{font-size:14px}
+.th-frame{position:relative;height:calc(100vh - 44px);overflow:hidden}
+.th-frame iframe{width:100%;height:100%;border:0;display:block;background:#0B0716}
+.th-loading,.th-fail{position:absolute;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:var(--mute);text-align:center;padding:0 16px}
+.th-loading[hidden],.th-fail[hidden]{display:none}
+@media(max-width:900px){.th-cards{grid-template-columns:1fr}.th-bar{padding:0 10px;font-size:14px;gap:8px}.th-bar .th-home{display:none}.th-bar .th-full{font-size:13px}}
+@media(max-width:480px){.th-bar .th-saving{display:none}.th-bar .th-full{margin-left:auto}}
+.th-tools{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:14px}.th-tools label{font-size:14px;color:var(--mute)}
+.th-tools select{font:15px var(--sans,inherit);padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;min-height:40px}
+.th-tools .th-csv{margin-left:auto}
+.th-parts{display:flex;gap:8px;flex-wrap:wrap;align-items:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px}
+.th-parts .lbl{font-size:14px;color:var(--mute);margin-right:4px}
+.th-part{font:600 14px inherit;border:1px solid var(--line);border-radius:999px;padding:7px 12px;background:#fff;color:var(--mute);cursor:pointer;min-height:36px;display:flex;gap:6px;align-items:center}
+.th-part.open{border-color:var(--ok);background:#eaf6ee;color:var(--ok)}.th-part[disabled]{cursor:default;opacity:.75}
+.th-hint{font-size:13px;color:var(--mute);margin:0 0 12px}
+.th-panel{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:auto;max-width:100%;max-height:calc(100vh - 300px)}
+.th-grid{border-collapse:separate;border-spacing:0;min-width:100%;font-size:13px}
+.th-grid th,.th-grid td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;white-space:nowrap;vertical-align:top}
+.th-grid thead th{background:var(--tint,#f1f6f5);position:sticky;top:0;z-index:2;font-weight:600}
+.th-grid thead tr.grp th{text-align:center;border-left:1px solid var(--line);font-weight:700;color:#fff;background:var(--navy)}
+.th-grid thead tr.grp th.lk{background:#8a949f}
+.th-grid thead tr+tr th{top:34px}
+.th-grid .pupil{position:sticky;left:0;background:#fff;z-index:1;font-weight:600;border-right:1px solid var(--line);min-width:150px}
+.th-grid thead th.pupil{z-index:3;background:var(--tint,#f1f6f5);color:var(--ink)}
+.th-grid .pupil button{font:inherit;background:none;border:0;padding:0;color:var(--navy);text-decoration:underline;cursor:pointer;text-align:left}
+.th-grid td.cell{min-width:58px;text-align:center}.th-grid td.lk,.th-grid th.lk{background:#eef0f3}
+.th-grid .st{color:var(--gold);letter-spacing:1px;display:block}.th-grid .st .o{opacity:.25}
+.th-grid .sc{display:block;color:var(--mute);font-size:12px}
+.th-grid td.left{color:var(--bad);font-style:italic}.th-grid td.now{background:#fff7e6}.th-grid td.tot{font-weight:700;text-align:right}
+.th-att{list-style:none;padding:0;margin:0}.th-att li{padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}.th-att li.left{color:var(--bad)}
+header.bar .crumb a{display:inline-block;line-height:40px}
+.th-card.later{min-height:0}.th-card.later .lock{margin-top:8px}
+[data-all]{border:1px solid var(--navy);border-radius:10px;background:#fff;color:var(--navy);padding:8px 14px;text-decoration:none;font-weight:600;min-height:40px}
+
 </style>
 </head>
 <body>
 <script>window.OLS_BOOT = { classCode: "<?= classCode ?>", baseUrl: "<?= baseUrl ?>" };
 window.A2_VENDOR = ["https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/","https://dgaj-g.github.io/ols-digital-skills/a2-ssd/platform/vendor/"];
-window.A2_DEPLOY = "a2ssd-as-2026-11-04-bf9e5747";
+window.A2_DEPLOY = "a2ssd-as-2026-11-04-ed4ede4f";
 window.A2_CW = "https://dgaj-g.github.io/alevel_SSD/as/content/coursework/";</script>
 <div class="app" id="app"></div>
 <script>
@@ -714,7 +759,7 @@ window.OLS_TRANSPORT = {
 };
 </script>
 <script>
-window.A2CONTENT = {"papers":[],"twins":{},"sets":{},"lessons":{},"clusters":{"clusters":{},"lessonFor":{},"order":[]},"seeds":{},"strings":{"_note":"Every string a pupil or teacher reads that is not in the papers, lessons or practice questions (D5). Sources per group in _sources. {x} fills a value. The client code holds no other pupil-visible text; G4 checks it.","_sources":{"guard":"SPEC \u00a73.1; the practice-database lines are the prototype's","home":"SPEC \u00a73.2","map":"SPEC \u00a73.3","paper":"SPEC \u00a73.4; 'Another question' replaces 'Proved' (ruling 5); 'paper.lockedHere' added (a locked paper reached by its link)","part":"SPEC \u00a73.5; tab and caption wording from the prototype his look ruled on (rulings 7, 8, 10)","rail":"SPEC \u00a72, \u00a73.5; ruling 5","door":"\u00a712a doors; subs from the prototype, the cold sub reworded so it fits a written answer (no editor)","ask":"prototype Beat 1 (ruling 2)","lesson":"\u00a712a and prototype/lesson.js; the text-answer labels added for the written lessons (D46)","turn":"SPEC \u00a73.6 Beat 3; short, rows and blank labels added for the answer kinds","result":"SPEC \u00a73.6; D19 column header","verdict":"SPEC \u00a73.6 and the prototype","aq":"SPEC \u00a73.6 Beat 4 (ruling 5 names); 'aq.after' added (Another question opened before a first mark)","flag":"SPEC \u00a73.6","ev":"SPEC \u00a73.7; statements from SPEC \u00a78 (D68 maps skill tags to them)","staff":"SPEC \u00a73.8; move, copy, owner-only, clear-my-record and drawer labels added; Last seen lines and the activity drawer added (D100)","sys":"SPEC \u00a73.9; the locked-paper line added (D59)","cw":"A2 SSD Coursework Guide DESIGN \u00a76.1, \u00a76.7.6 (staff grid strings, his prototype look 11 Oct 2026)"},"app.title":"AS Software Systems Development","app.school":"Our Lady\u2019s Grammar School","app.signOut":"Sign out","guard.signing":"Signing you in with your school account","guard.nameAsk":"We could not read your name from your account. Type your first name so your teacher can see it:","guard.continue":"Continue","guard.domain":"This site is for Our Lady\u2019s pupils and staff signed in with a C2k account.","guard.noClass":"This link is not for a class. Ask your teacher for the class link.","guard.dbLoading":"Loading the practice database","guard.dbFail":"The practice database did not load. Check the internet connection and reload the page.","home.hello":"Hello, {name}.","home.sql":"SQL","home.sqlSub":"Eleven past-paper questions, 2015\u20132026, marked the way the examiner marks them.","home.sqlState":"{open} of 11 papers open \u00b7 {done} done","home.cw":"Coursework guide","home.cwSub":"Build your own game in Visual Studio 2019, one chapter at a time.","home.cwTicks":"{n} steps ticked","notice.title":"This Guide has been Changed since you were last logged in","notice.whyHead":"Why it has changed","notice.why1":"This guide is now only about building your game. The write-up is a separate job, so chapters 19 and 20 have been taken out.","notice.why2":"Your game can be about anything you know well, in school or out of it, such as the moves taught at a local dance class.","notice.why3":"You make each part your own as you build it, so you change things all the way through, not only at the end.","notice.meansHead":"What it means for you","notice.means1":"Any step you have already ticked is still ticked.","notice.means2":"No step asks you for screenshots, templates or written evidence any more.","notice.means3":"Chapters 0 and 1 have been rewritten. Read them again before you carry on.","notice.means4":"Build any 4 of the 8 game chapters, 11 to 18. You do not have to pick them in pairs.","notice.means5":"You choose how many points each question is worth. Each game chapter has a new screen that shows you how.","notice.means6":"From chapter 5, the Your turn screens show you how to change Summit Ready to suit your own game as you build it.","notice.seconds":"seconds","notice.second":"second","notice.wait":"Read the changes above. You can tick the box when the timer reaches 0.","notice.early":"You must wait until the timer reaches 0 before you tick the box.","notice.ready":"The timer has reached 0. Tick the box to say you have read the changes.","notice.go":"Click Continue.","notice.tick":"I have read these changes","notice.continue":"Continue","home.cwTick":"1 step ticked","home.cwDone":"{n} chapters marked done","home.cwDoneOne":"1 chapter marked done","home.notStarted":"Not started","home.norm":"Normalisation","home.theory":"Theory","home.theorySub":"Project initiation \u00b7 methodologies \u00b7 project management \u00b7 testing \u00b7 UML","home.soon":"Coming soon","map.crumb":"SQL","map.title":"SQL \u2014 past-paper questions","map.sub":"Work down the list. Each paper\u2019s table designs stay on screen while you answer. Your first mark on every part stands; you can then work it to full marks.","map.paper":"Summer {year} \u2014 {title}","map.marks":"{n} marks","map.parts":"{n} parts","map.locked":"Not opened yet","map.lockedSub":"Your teacher opens papers in class.","map.open":"Open","map.progress":"{n} of {of} parts \u00b7 {first} / {marks} so far","map.done":"Done \u00b7 first {first} / {marks}","map.doneBest":"Done \u00b7 first {first} / {marks} \u00b7 best {best} / {marks}","map.foot":"Papers still to be opened stay on the list so you can see what is coming.","paper.scenario":"Scenario","paper.designs":"Table designs","paper.parts":"Parts","paper.notStarted":"Not started","paper.inProgress":"In progress","paper.first":"{first} / {marks} (first)","paper.best":"{best} / {marks} (best)","paper.another":"Another question {t} / {of}","paper.start":"Start part {label}","paper.continue":"Continue part {label}","paper.review":"Review part {label}","paper.lastThing":"One last thing before this paper is done.","paper.eval":"How did it go?","paper.done":"Done. First marks {first} / {marks}. Best {best} / {marks}.","paper.lockedHere":"This paper is not open yet. Your teacher opens papers in class.","paper.backToPapers":"Back to the papers","part.crumb":"Part {label}","part.head":"Part {label} \u00b7 {marks}","part.mark1":"1 mark","part.marks":"{n} marks","part.tabDesigns":"TABLE DESIGNS","part.tabData":"DATA","part.tabLesson":"LESSON TABLES \u00b7 Tinies nursery","part.tabExam":"EXAM TABLES \u00b7 {year}","part.tabPractice":"PRACTICE TABLES","part.capLesson":"The lesson uses these tables. They are not the exam tables. Gold marks what the current step is about.","part.capExamLesson":"The exam design. The quick checks ask about these.","part.capPractice":"Practice tables \u00b7 Tinies nursery (not the exam tables)","part.capData":"Rows in the practice database. Run tries your SQL on these rows.","part.capDataPractice":"Rows in the practice database for this question. Run tries your SQL on these rows.","part.assumed":"Assumed by the question","part.noTypes":"The paper gives field names only.","part.legend":"PK primary key \u00b7 FK foreign key","part.noKeys":"The exam design prints no keys. Read the field names.","part.rows1":"1 row","part.rows":"{n} rows","part.rowsFirst":"first 30 of {n} rows","part.noData":"This question needs no practice rows.","rail.question":"The question","rail.lesson":"The lesson","rail.turn":"Your turn","rail.another":"Another question","rail.skipped":"skipped \u2014 comes after your mark","door.learn":"Learn it first","door.learnSub":"A short lesson on the SQL this part needs. It uses a different database, the Tinies nursery, so the exam answer stays yours to write. This question\u2019s answer is not shown.","door.learnSubText":"A short lesson on what this part asks about. It uses a different database, the Tinies nursery, so the exam answer stays yours to write. This question\u2019s answer is not shown.","door.cold":"Write it now","door.coldSub":"Answer now, unaided. The lesson is there after your mark. Your first mark stands either way.","door.suggested":"Suggested","door.note":"Whichever one you choose is recorded, so your teacher can see marks you earned unaided.","ask.marking":"What the examiner is marking","ask.markingNote":"The mark scheme, in plain words. Nothing to tick here.","ask.needs":"This part needs","ask.needsNote":"The lesson takes each in turn on a different database, with a quick check after each, then you write this answer yourself.","ask.habits":"Examiner\u2019s habits","ask.next":"Next: the lesson","ask.skip":"Skip the lesson, write it now","lesson.banner":"A lesson, not the answer.","lesson.step":"Step {k} of {n}","lesson.shape":"The shape","lesson.soFar":"The lesson statement so far","lesson.soFarNew":"The lesson statement so far \u00b7 new lines marked","lesson.whole":"The whole statement","lesson.soFarText":"The lesson answer so far","lesson.soFarTextNew":"The lesson answer so far \u00b7 new lines marked","lesson.wholeText":"The whole answer","lesson.why":"Why each line","lesson.marks":"Where the marks are","lesson.write":"How to write it","lesson.example":"For example","lesson.quick":"Quick check","lesson.try1":"1 try","lesson.tries":"{n} tries","lesson.clickDesign":"Click it in the design below.","lesson.notThat":"Not that. {why} Try again.","lesson.notThatOne":"Not that one.","lesson.yes":"Yes.","lesson.answerIs":"The answer is {a}. {why}","lesson.answerIsField":"The answer is {f}, in {t}. {why}","lesson.answerIsFields":"The answer is {list}. {why}","lesson.or":" or ","lesson.otherPane":"Those are the lesson tables. The question is about the exam design, now showing under EXAM TABLES.","lesson.back":"Back","lesson.backQ":"Back to the question","lesson.next":"Next: {name}","lesson.answerFirst":"Answer the quick check to go on.","lesson.toTurn":"Now write it for the exam question","lesson.qfigCap":"The exam design, Summer {year}. The same design as EXAM TABLES on the left.","lesson.nullCell":"NULL","turn.card":"Your answer","turn.placeholder":"Type your SQL here.","turn.kept":"Your unfinished answer was kept.","turn.run":"Run","turn.submit":"Submit for marking","turn.typeFirst":"Type your answer first.","turn.confirm":"This is your first attempt and it counts. Submit?","turn.yes":"Yes, mark it","turn.no":"Not yet","turn.stub":"Type the lines that complete it.","turn.cloze":"Type what goes in each numbered blank.","turn.blank":"Blank {n}","turn.prose":"Answer in a sentence or two.","turn.short":"Type your answer here.","turn.rowsField":"Field","turn.rowsName":"The constraint","turn.rowsReason":"The reason","turn.marking":"Marking\u2026","result.title":"Result","result.none":"No rows match.","result.showing":"Showing 50 of {n} rows","result.err":"Could not run this: {err}. Running is a check, not the mark \u2014 you can still submit.","result.noName":"(No column name)","result.yours":"Your rows","result.expected":"Expected rows","result.expectedNote":"Expected rows are what the examiner\u2019s answer gives on the practice database today.","result.same":"Same rows","result.diff":"Different rows","result.noRun":"Did not run","verdict.title":"Examiner\u2019s marks","verdict.first":"First attempt \u00b7 {t} / {of} \u00b7 this mark stands.","verdict.firstCold":"First attempt, unaided \u00b7 {t} / {of} \u00b7 this mark stands.","verdict.full":"Full marks, first time.","verdict.more":"You can now work it to full marks.","verdict.attempt":"Attempt {n} \u00b7 {t} / {of} \u00b7 best kept: {best} / {of}","verdict.again":"Fix it and mark again","verdict.showMs":"Show the examiner\u2019s answer","verdict.nextQ":"Next: another question","verdict.msTitle":"The examiner\u2019s answer","verdict.msNote":"Read it, then close it and write your own \u2014 the marks are for what you type.","verdict.close":"Close","verdict.wasMarking":"What the examiner was marking","verdict.lesson":"The lesson","verdict.lessonNote":"A short lesson on the SQL this part needs, on a different database. Open it, then come back and fix your answer.","verdict.lessonNoteText":"A short lesson on what this part asks about, on a different database. Open it, then come back and fix your answer.","verdict.openLesson":"Open the lesson","verdict.spell":"Read {from} as {to} \u2014 check your spelling. No mark lost.","verdict.missing":"Not found in your answer: {names}.","verdict.nofield":"Your table has no field called {names}.","verdict.remarked":"Re-marked on {date}: {which} went from {from} to {to} out of {of}.","verdict.remarkedTicks":"The ticks below are from before the re-mark. Mark it again to see the new ticks.","verdict.rm.f":"your first attempt","verdict.rm.b":"your best","verdict.rm.tf":"your first attempt","verdict.rm.tb":"your best","aq.title":"One more, unaided.","aq.recorded":"Your mark here is recorded as your mark for this question.","aq.line":"Another question \u00b7 {t} / {of}","aq.lineBest":"Another question \u00b7 {t} / {of} \u00b7 best kept: {best} / {of}","aq.doneTitle":"Already done.","aq.done":"You answered this part unaided with full marks.","aq.none":"You have already done every practice question for this skill.","aq.after":"Another question comes after your first mark on this part.","aq.toTurn":"Go to your turn","aq.back":"Back to the paper","flag.ask":"Ask your teacher to look at this","flag.on":"Flagged for your teacher \u00b7 Remove flag","ev.title":"How did it go?","ev.can":"I can","ev.getting":"Getting there","ev.not":"Not yet","ev.feel":"How did this paper feel?","ev.easy":"Easy","ev.right":"Just right","ev.tricky":"Tricky","ev.placeholder":"Anything you want your teacher to know? (optional)","ev.left":"{n} characters left","ev.left1":"1 character left","ev.full":"The box is full \u2014 0 characters left.","ev.lock":"Answer every line, and how it felt, and the button wakes up.","ev.send":"Send and finish","ev.sending":"Sending\u2026","ev.sent":"Sent. This paper is done.","ev.back":"Back to the papers","ev.already":"Already sent. Your answers went to your teacher the first time; a review never overwrites them.","ev.offline":"Saved on this machine \u2014 it will send the next time you open this paper.","ev.notYet":"How did it go? comes after the last part of this paper.","ev.backPaper":"Back to the paper","ev.line.CREATE":"I can write a CREATE TABLE with the keys and constraints the question describes.","ev.line.ALTER":"I can add a field to an existing table with ALTER TABLE.","ev.line.INSERT":"I can write an INSERT with the right values in the right places.","ev.line.UPDATE":"I can write an UPDATE that changes only the rows the question names.","ev.line.JOIN":"I can join the tables a question needs and pick the right fields.","ev.line.WHERE":"I can write the WHERE tests the question describes.","ev.line.GROUP":"I can use GROUP BY with COUNT, SUM or AVG and test the totals with HAVING.","ev.line.ORDER":"I can sort the output the way the question asks.","ev.line.DATE":"I can work with today\u2019s date, date differences and date parts.","ev.line.PROSE":"I can explain a database design decision in a sentence.","staff.title":"AS Software Systems Development \u00b7 Staff","staff.passcode":"Staff passcode","staff.enter":"Enter","staff.pupilsUse":"Pupils use the class link, not this page.","staff.bad":"Passcode not recognised.","staff.tabClasses":"Classes","staff.tabPapers":"Papers","staff.tabLive":"Live","staff.tabExport":"Export","staff.class":"Class","staff.classLine":"{name} \u00b7 {n} pupils \u00b7 created {date}","staff.classLine1":"{name} \u00b7 1 pupil \u00b7 created {date}","staff.copy":"Copy class link","staff.copied":"Class link copied.","staff.delete":"Delete class","staff.deleteConfirm":"Delete {name} and every record in it? Press again to confirm.","staff.ownerOnly":"Only the teacher who made this class can delete it.","staff.add":"Add class","staff.className":"Class name","staff.create":"Create","staff.rule":"Use letters, digits and hyphens only.","staff.taken":"That class name is taken.","staff.noClasses":"No classes yet. Add one below.","staff.papersNote":"Pupils see locked papers as \u201cNot opened yet\u201d.","staff.open":"Open","staff.lock":"Lock","staff.isOpen":"Open","staff.isLocked":"Locked","staff.openAll":"Open all","staff.resetOrder":"Reset order","staff.up":"Move up","staff.down":"Move down","staff.drag":"Drag to reorder","staff.refresh":"Refresh","staff.updated":"Updated {time} \u00b7 refreshes every 60 s while open","staff.pupil":"Pupil","staff.lastSeen":"Last seen","staff.eval":"Evaluation","staff.evalSent":"sent","staff.evalNone":"not sent","staff.justNow":"just now","staff.minAgo":"{n} min ago","staff.you":"(you)","staff.tagUnaided":"unaided","staff.tagSeen":"saw answer","staff.tagFlag":"flag","staff.legend":"Cell = first mark; a smaller number = best when higher. Tags: unaided = every part first answered through Write it now \u00b7 saw answer = opened the examiner\u2019s answer before the best mark \u00b7 flag = asked for you \u00b7 amber dot = the evaluation had a Not yet or Tricky.","staff.clearMine":"Clear my own record in this class","staff.clearConfirm":"Clear your own record in {name}? Press again to confirm.","staff.drawerPart":"Part {label}","staff.doorLearn":"Door: Learn it first","staff.doorCold":"Door: Write it now","staff.firstAnswer":"First answer \u00b7 {t} / {of}","staff.bestAnswer":"Best answer \u00b7 {t} / {of}","staff.attemptN":"Attempt {n} \u00b7 {t} / {of}","staff.attempts1":"1 attempt","staff.attempts":"{n} attempts","staff.sawAnswer":"Opened the examiner\u2019s answer.","staff.aqAnswer":"Another question ({id}) \u00b7 first {t} / {of}","staff.aqBest":"Another question best \u00b7 {t} / {of}","staff.noAnswer":"No answer yet.","staff.comment":"Comment: {c}","staff.feel":"Felt: {f}","staff.flagAt":"Flag \u00b7 Part {label} \u00b7 {beat}","staff.ack":"Acknowledge","staff.ackConfirm":"Press again to acknowledge","staff.showAll":"Show all attempts","staff.allNote":"Each attempt shows the mark it was given at the time. Where today\u2019s marking gives a different mark, both are shown.","staff.attemptThen":"Attempt {n} \u00b7 marked {t} / {of} at the time \u00b7 {now} / {of} on today\u2019s marking","staff.remarked":"Re-marked on {date}: {which} {from} \u2192 {to}","staff.rm.f":"first answer","staff.rm.b":"best answer","staff.rm.tf":"another question, first answer","staff.rm.tb":"another question, best answer","staff.spell":"Read {from} as {to} (spelling; no mark lost)","staff.missing":"not found: {names}","staff.nofield":"no field called {names}","staff.close":"Close","staff.csv":"Download CSV","staff.csvNote":"One row per pupil per part.","staff.nothing":"Nothing to show yet.","staff.beat.door":"Doors","staff.beat.ask":"The question","staff.beat.lesson":"The lesson","staff.beat.turn":"Your turn","staff.beat.another":"Another question","sys.saving":"Saving\u2026","sys.offline":"Could not reach the school server. Your work is kept on this machine and will send when the connection returns.","sys.retry":"Try again","sys.expired":"Your sign-in has expired. Reload the page.","sys.reload":"Reload","sys.stale":"The papers were updated. Reload to get the latest.","sys.locked":"This paper is locked for now, so it cannot be marked. Your answer is kept; ask your teacher to open the paper.","staff.cellParts":"{n} of {of} parts","staff.archived":"These attempts are kept in the AS SSD - Archive Sheet.","staff.today":"Today","staff.yesterday":"Yesterday","staff.day":"{day} {date} {month}","staff.days":"Sun,Mon,Tue,Wed,Thu,Fri,Sat","staff.months":"Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec","staff.act.min":"{n} min","staff.act.hm":"{h} h {m} min","staff.act.marked1":"1 answer marked","staff.act.marked":"{n} answers marked","staff.act.open":"See when this pupil worked and what they did","staff.act.title":"{name} \u00b7 Activity","staff.act.loading":"Loading\u2026","staff.act.weekTime":"time working this week","staff.act.weekSessions":"sessions this week","staff.act.weekMarked":"answers marked this week","staff.act.note":"A minute counts when the page is on screen and the pupil typed, clicked or scrolled in the last 3 minutes. Sessions that start with \u201cabout\u201d come from before time was recorded: they are worked out from when answers were marked.","staff.act.head":"{day} \u00b7 {from}\u2013{to} \u00b7 {time} working","staff.act.headAbout":"{day} \u00b7 about {from}\u2013{to}","staff.act.headAboutAt":"{day} \u00b7 about {at}","staff.act.nothingMarked":"Nothing marked in this session.","staff.act.none":"No activity recorded yet.","staff.act.archived":"Older answers kept in the AS SSD - Archive Sheet are not listed here.","staff.ev.part":"{year} Part {label}","staff.ev.first":"{part} \u00b7 first answer {t} / {of} \u00b7 chose {door}","staff.ev.again":"{part} \u00b7 tried again \u00b7 {t} / {of}","staff.ev.aq":"{part} \u00b7 another question ({id}) \u00b7 {t} / {of}","staff.ev.aqAgain":"{part} \u00b7 another question ({id}) again \u00b7 {t} / {of}","staff.ev.sawAnswer":"{part} \u00b7 opened the examiner\u2019s answer","staff.ev.sawWorked":"{part} \u00b7 opened the answer to another question ({id})","staff.ev.flag":"{part} \u00b7 raised a flag ({beat})","staff.ev.eval":"{paper} \u00b7 sent the evaluation","staff.ev.joined":"Joined the class","cw.crumbHome":"AS SSD","cw.crumb":"Coursework guide","cw.crumbCh":"{n} \u00b7 {title}","staff.tabCoursework":"Coursework","staff.cw.summary":"{n} pupils in this class \u00b7 {o} have opened the guide \u00b7 {d} have marked a chapter done.","staff.cw.pupils1":"1 pupil","staff.cw.pupils":"{n} pupils","staff.cw.opened1x":"1 has opened the guide","staff.cw.openedN":"{n} have opened the guide","staff.cw.done1x":"1 has marked a chapter done","staff.cw.doneN":"{n} have marked a chapter done","staff.cw.summaryLine":"{a} in this class \u00b7 {b} \u00b7 {c}.","staff.cw.sort":"Sort by","staff.cw.sortName":"Name","staff.cw.sortMost":"Most progress","staff.cw.sortLeast":"Least progress","staff.cw.sortSeen":"Last seen","staff.cw.pupil":"Pupil","staff.cw.seen":"Last seen","staff.cw.ch":"Ch {c}","staff.cw.whole":"Whole guide","staff.cw.class":"Whole class","staff.cw.cell":"{t}/{n}","staff.cw.cellTitle":"Chapter {c} \u00b7 {t} of {n} steps ticked \u00b7 opened {o} times \u00b7 last {when}","staff.cw.cellTitle1":"Chapter {c} \u00b7 {t} of {n} steps ticked \u00b7 opened once \u00b7 last {when}","staff.cw.notOpened":"Not opened yet","staff.cw.foot":"{d} \u00b7 {s}","staff.cw.footDone":"{n} done","staff.cw.footStarted":"{n} started","staff.cw.footNone":"none yet","staff.cw.avg":"{p} %","staff.cw.legend":"Each cell shows the steps ticked out of the steps in that chapter. Green with a tick = the pupil marked the chapter done. The gold frame is the chapter they opened most recently. Click a cell to see that chapter stage by stage.","staff.cw.notice":"The \u201cguide has changed\u201d message: {r} of {n} pupils who used the guide before the change have read it and ticked to confirm.","staff.cw.noticeNot":"These pupils have not yet read the message: {names}.","staff.cw.empty":"No one in this class has opened the coursework guide yet.","staff.cw.title":"{name} \u00b7 Chapter {c} \u00b7 {title}","staff.cw.ticked":"{t} of {n} steps ticked","staff.cw.opened":"Opened {o} times \u00b7 first {first} \u00b7 last {last}","staff.cw.opened1":"Opened once \u00b7 {first}","staff.cw.lastScreen":"Last screen open: stage {s}, screen {k} of {of}","staff.cw.done":"Marked done {when}.","staff.cw.notDone":"Not marked done yet.","staff.cw.copies":"Copied {c} code blocks \u00b7 opened {r} answers","staff.cw.downloads":"Downloaded {file} {times}.","staff.cw.once":"once","staff.cw.twice":"twice","staff.cw.nTimes":"{n} times","staff.cw.stage":"Stage {s} \u00b7 {title} \u00b7 {t} of {n}","staff.cw.never":"{name} has not opened chapter {c} yet.","staff.cw.loading":"Loading the coursework guide\u2026","ev.cwOpen":"opened chapter {c}","ev.cwTick":"ticked step {id}","ev.cwUntick":"unticked step {id}","ev.cwDone":"marked chapter {c} done","ev.cwUndone":"unmarked chapter {c}","ev.cwDownload":"downloaded {file}","ev.cwClear":"cleared chapter {c}","ev.cwNotice":"read the \u201cguide has changed\u201d message and ticked to confirm"},"BUILD":"as-2026-11-04"};
+window.A2CONTENT = {"papers":[],"twins":{},"sets":{},"lessons":{},"clusters":{"clusters":{},"lessonFor":{},"order":[]},"seeds":{},"strings":{"_note":"Every string a pupil or teacher reads that is not in the papers, lessons or practice questions (D5). Sources per group in _sources. {x} fills a value. The client code holds no other pupil-visible text; G4 checks it.","_sources":{"guard":"SPEC \u00a73.1; the practice-database lines are the prototype's","home":"SPEC \u00a73.2","map":"SPEC \u00a73.3","paper":"SPEC \u00a73.4; 'Another question' replaces 'Proved' (ruling 5); 'paper.lockedHere' added (a locked paper reached by its link)","part":"SPEC \u00a73.5; tab and caption wording from the prototype his look ruled on (rulings 7, 8, 10)","rail":"SPEC \u00a72, \u00a73.5; ruling 5","door":"\u00a712a doors; subs from the prototype, the cold sub reworded so it fits a written answer (no editor)","ask":"prototype Beat 1 (ruling 2)","lesson":"\u00a712a and prototype/lesson.js; the text-answer labels added for the written lessons (D46)","turn":"SPEC \u00a73.6 Beat 3; short, rows and blank labels added for the answer kinds","result":"SPEC \u00a73.6; D19 column header","verdict":"SPEC \u00a73.6 and the prototype","aq":"SPEC \u00a73.6 Beat 4 (ruling 5 names); 'aq.after' added (Another question opened before a first mark)","flag":"SPEC \u00a73.6","ev":"SPEC \u00a73.7; statements from SPEC \u00a78 (D68 maps skill tags to them)","staff":"SPEC \u00a73.8; move, copy, owner-only, clear-my-record and drawer labels added; Last seen lines and the activity drawer added (D100)","sys":"SPEC \u00a73.9; the locked-paper line added (D59)","cw":"A2 SSD Coursework Guide DESIGN \u00a76.1, \u00a76.7.6 (staff grid strings, his prototype look 11 Oct 2026)"},"app.title":"AS Software Systems Development","app.school":"Our Lady\u2019s Grammar School","app.signOut":"Sign out","guard.signing":"Signing you in with your school account","guard.nameAsk":"We could not read your name from your account. Type your first name so your teacher can see it:","guard.continue":"Continue","guard.domain":"This site is for Our Lady\u2019s pupils and staff signed in with a C2k account.","guard.noClass":"This link is not for a class. Ask your teacher for the class link.","guard.dbLoading":"Loading the practice database","guard.dbFail":"The practice database did not load. Check the internet connection and reload the page.","home.hello":"Hello, {name}.","home.sql":"SQL","home.sqlSub":"Eleven past-paper questions, 2015\u20132026, marked the way the examiner marks them.","home.sqlState":"{open} of 11 papers open \u00b7 {done} done","home.cw":"Coursework guide","home.cwSub":"Build your own game in Visual Studio 2019, one chapter at a time.","home.cwTicks":"{n} steps ticked","notice.title":"This Guide has been Changed since you were last logged in","notice.whyHead":"Why it has changed","notice.why1":"This guide is now only about building your game. The write-up is a separate job, so chapters 19 and 20 have been taken out.","notice.why2":"Your game can be about anything you know well, in school or out of it, such as the moves taught at a local dance class.","notice.why3":"You make each part your own as you build it, so you change things all the way through, not only at the end.","notice.meansHead":"What it means for you","notice.means1":"Any step you have already ticked is still ticked.","notice.means2":"No step asks you for screenshots, templates or written evidence any more.","notice.means3":"Chapters 0 and 1 have been rewritten. Read them again before you carry on.","notice.means4":"Build any 4 of the 8 game chapters, 11 to 18. You do not have to pick them in pairs.","notice.means5":"You choose how many points each question is worth. Each game chapter has a new screen that shows you how.","notice.means6":"From chapter 5, the Your turn screens show you how to change Summit Ready to suit your own game as you build it.","notice.seconds":"seconds","notice.second":"second","notice.wait":"Read the changes above. You can tick the box when the timer reaches 0.","notice.early":"You must wait until the timer reaches 0 before you tick the box.","notice.ready":"The timer has reached 0. Tick the box to say you have read the changes.","notice.go":"Click Continue.","notice.tick":"I have read these changes","notice.continue":"Continue","home.cwTick":"1 step ticked","home.cwDone":"{n} chapters marked done","home.cwDoneOne":"1 chapter marked done","home.notStarted":"Not started","home.norm":"Normalisation","home.theory":"Theory","home.theorySub":"Games and past-paper practice for each topic of the written paper.","home.soon":"Coming soon","map.crumb":"SQL","map.title":"SQL \u2014 past-paper questions","map.sub":"Work down the list. Each paper\u2019s table designs stay on screen while you answer. Your first mark on every part stands; you can then work it to full marks.","map.paper":"Summer {year} \u2014 {title}","map.marks":"{n} marks","map.parts":"{n} parts","map.locked":"Not opened yet","map.lockedSub":"Your teacher opens papers in class.","map.open":"Open","map.progress":"{n} of {of} parts \u00b7 {first} / {marks} so far","map.done":"Done \u00b7 first {first} / {marks}","map.doneBest":"Done \u00b7 first {first} / {marks} \u00b7 best {best} / {marks}","map.foot":"Papers still to be opened stay on the list so you can see what is coming.","paper.scenario":"Scenario","paper.designs":"Table designs","paper.parts":"Parts","paper.notStarted":"Not started","paper.inProgress":"In progress","paper.first":"{first} / {marks} (first)","paper.best":"{best} / {marks} (best)","paper.another":"Another question {t} / {of}","paper.start":"Start part {label}","paper.continue":"Continue part {label}","paper.review":"Review part {label}","paper.lastThing":"One last thing before this paper is done.","paper.eval":"How did it go?","paper.done":"Done. First marks {first} / {marks}. Best {best} / {marks}.","paper.lockedHere":"This paper is not open yet. Your teacher opens papers in class.","paper.backToPapers":"Back to the papers","part.crumb":"Part {label}","part.head":"Part {label} \u00b7 {marks}","part.mark1":"1 mark","part.marks":"{n} marks","part.tabDesigns":"TABLE DESIGNS","part.tabData":"DATA","part.tabLesson":"LESSON TABLES \u00b7 Tinies nursery","part.tabExam":"EXAM TABLES \u00b7 {year}","part.tabPractice":"PRACTICE TABLES","part.capLesson":"The lesson uses these tables. They are not the exam tables. Gold marks what the current step is about.","part.capExamLesson":"The exam design. The quick checks ask about these.","part.capPractice":"Practice tables \u00b7 Tinies nursery (not the exam tables)","part.capData":"Rows in the practice database. Run tries your SQL on these rows.","part.capDataPractice":"Rows in the practice database for this question. Run tries your SQL on these rows.","part.assumed":"Assumed by the question","part.noTypes":"The paper gives field names only.","part.legend":"PK primary key \u00b7 FK foreign key","part.noKeys":"The exam design prints no keys. Read the field names.","part.rows1":"1 row","part.rows":"{n} rows","part.rowsFirst":"first 30 of {n} rows","part.noData":"This question needs no practice rows.","rail.question":"The question","rail.lesson":"The lesson","rail.turn":"Your turn","rail.another":"Another question","rail.skipped":"skipped \u2014 comes after your mark","door.learn":"Learn it first","door.learnSub":"A short lesson on the SQL this part needs. It uses a different database, the Tinies nursery, so the exam answer stays yours to write. This question\u2019s answer is not shown.","door.learnSubText":"A short lesson on what this part asks about. It uses a different database, the Tinies nursery, so the exam answer stays yours to write. This question\u2019s answer is not shown.","door.cold":"Write it now","door.coldSub":"Answer now, unaided. The lesson is there after your mark. Your first mark stands either way.","door.suggested":"Suggested","door.note":"Whichever one you choose is recorded, so your teacher can see marks you earned unaided.","ask.marking":"What the examiner is marking","ask.markingNote":"The mark scheme, in plain words. Nothing to tick here.","ask.needs":"This part needs","ask.needsNote":"The lesson takes each in turn on a different database, with a quick check after each, then you write this answer yourself.","ask.habits":"Examiner\u2019s habits","ask.next":"Next: the lesson","ask.skip":"Skip the lesson, write it now","lesson.banner":"A lesson, not the answer.","lesson.step":"Step {k} of {n}","lesson.shape":"The shape","lesson.soFar":"The lesson statement so far","lesson.soFarNew":"The lesson statement so far \u00b7 new lines marked","lesson.whole":"The whole statement","lesson.soFarText":"The lesson answer so far","lesson.soFarTextNew":"The lesson answer so far \u00b7 new lines marked","lesson.wholeText":"The whole answer","lesson.why":"Why each line","lesson.marks":"Where the marks are","lesson.write":"How to write it","lesson.example":"For example","lesson.quick":"Quick check","lesson.try1":"1 try","lesson.tries":"{n} tries","lesson.clickDesign":"Click it in the design below.","lesson.notThat":"Not that. {why} Try again.","lesson.notThatOne":"Not that one.","lesson.yes":"Yes.","lesson.answerIs":"The answer is {a}. {why}","lesson.answerIsField":"The answer is {f}, in {t}. {why}","lesson.answerIsFields":"The answer is {list}. {why}","lesson.or":" or ","lesson.otherPane":"Those are the lesson tables. The question is about the exam design, now showing under EXAM TABLES.","lesson.back":"Back","lesson.backQ":"Back to the question","lesson.next":"Next: {name}","lesson.answerFirst":"Answer the quick check to go on.","lesson.toTurn":"Now write it for the exam question","lesson.qfigCap":"The exam design, Summer {year}. The same design as EXAM TABLES on the left.","lesson.nullCell":"NULL","turn.card":"Your answer","turn.placeholder":"Type your SQL here.","turn.kept":"Your unfinished answer was kept.","turn.run":"Run","turn.submit":"Submit for marking","turn.typeFirst":"Type your answer first.","turn.confirm":"This is your first attempt and it counts. Submit?","turn.yes":"Yes, mark it","turn.no":"Not yet","turn.stub":"Type the lines that complete it.","turn.cloze":"Type what goes in each numbered blank.","turn.blank":"Blank {n}","turn.prose":"Answer in a sentence or two.","turn.short":"Type your answer here.","turn.rowsField":"Field","turn.rowsName":"The constraint","turn.rowsReason":"The reason","turn.marking":"Marking\u2026","result.title":"Result","result.none":"No rows match.","result.showing":"Showing 50 of {n} rows","result.err":"Could not run this: {err}. Running is a check, not the mark \u2014 you can still submit.","result.noName":"(No column name)","result.yours":"Your rows","result.expected":"Expected rows","result.expectedNote":"Expected rows are what the examiner\u2019s answer gives on the practice database today.","result.same":"Same rows","result.diff":"Different rows","result.noRun":"Did not run","verdict.title":"Examiner\u2019s marks","verdict.first":"First attempt \u00b7 {t} / {of} \u00b7 this mark stands.","verdict.firstCold":"First attempt, unaided \u00b7 {t} / {of} \u00b7 this mark stands.","verdict.full":"Full marks, first time.","verdict.more":"You can now work it to full marks.","verdict.attempt":"Attempt {n} \u00b7 {t} / {of} \u00b7 best kept: {best} / {of}","verdict.again":"Fix it and mark again","verdict.showMs":"Show the examiner\u2019s answer","verdict.nextQ":"Next: another question","verdict.msTitle":"The examiner\u2019s answer","verdict.msNote":"Read it, then close it and write your own \u2014 the marks are for what you type.","verdict.close":"Close","verdict.wasMarking":"What the examiner was marking","verdict.lesson":"The lesson","verdict.lessonNote":"A short lesson on the SQL this part needs, on a different database. Open it, then come back and fix your answer.","verdict.lessonNoteText":"A short lesson on what this part asks about, on a different database. Open it, then come back and fix your answer.","verdict.openLesson":"Open the lesson","verdict.spell":"Read {from} as {to} \u2014 check your spelling. No mark lost.","verdict.missing":"Not found in your answer: {names}.","verdict.nofield":"Your table has no field called {names}.","verdict.remarked":"Re-marked on {date}: {which} went from {from} to {to} out of {of}.","verdict.remarkedTicks":"The ticks below are from before the re-mark. Mark it again to see the new ticks.","verdict.rm.f":"your first attempt","verdict.rm.b":"your best","verdict.rm.tf":"your first attempt","verdict.rm.tb":"your best","aq.title":"One more, unaided.","aq.recorded":"Your mark here is recorded as your mark for this question.","aq.line":"Another question \u00b7 {t} / {of}","aq.lineBest":"Another question \u00b7 {t} / {of} \u00b7 best kept: {best} / {of}","aq.doneTitle":"Already done.","aq.done":"You answered this part unaided with full marks.","aq.none":"You have already done every practice question for this skill.","aq.after":"Another question comes after your first mark on this part.","aq.toTurn":"Go to your turn","aq.back":"Back to the paper","flag.ask":"Ask your teacher to look at this","flag.on":"Flagged for your teacher \u00b7 Remove flag","ev.title":"How did it go?","ev.can":"I can","ev.getting":"Getting there","ev.not":"Not yet","ev.feel":"How did this paper feel?","ev.easy":"Easy","ev.right":"Just right","ev.tricky":"Tricky","ev.placeholder":"Anything you want your teacher to know? (optional)","ev.left":"{n} characters left","ev.left1":"1 character left","ev.full":"The box is full \u2014 0 characters left.","ev.lock":"Answer every line, and how it felt, and the button wakes up.","ev.send":"Send and finish","ev.sending":"Sending\u2026","ev.sent":"Sent. This paper is done.","ev.back":"Back to the papers","ev.already":"Already sent. Your answers went to your teacher the first time; a review never overwrites them.","ev.offline":"Saved on this machine \u2014 it will send the next time you open this paper.","ev.notYet":"How did it go? comes after the last part of this paper.","ev.backPaper":"Back to the paper","ev.line.CREATE":"I can write a CREATE TABLE with the keys and constraints the question describes.","ev.line.ALTER":"I can add a field to an existing table with ALTER TABLE.","ev.line.INSERT":"I can write an INSERT with the right values in the right places.","ev.line.UPDATE":"I can write an UPDATE that changes only the rows the question names.","ev.line.JOIN":"I can join the tables a question needs and pick the right fields.","ev.line.WHERE":"I can write the WHERE tests the question describes.","ev.line.GROUP":"I can use GROUP BY with COUNT, SUM or AVG and test the totals with HAVING.","ev.line.ORDER":"I can sort the output the way the question asks.","ev.line.DATE":"I can work with today\u2019s date, date differences and date parts.","ev.line.PROSE":"I can explain a database design decision in a sentence.","staff.title":"AS Software Systems Development \u00b7 Staff","staff.passcode":"Staff passcode","staff.enter":"Enter","staff.pupilsUse":"Pupils use the class link, not this page.","staff.bad":"Passcode not recognised.","staff.tabClasses":"Classes","staff.tabPapers":"Papers","staff.tabLive":"Live","staff.tabExport":"Export","staff.class":"Class","staff.classLine":"{name} \u00b7 {n} pupils \u00b7 created {date}","staff.classLine1":"{name} \u00b7 1 pupil \u00b7 created {date}","staff.copy":"Copy class link","staff.copied":"Class link copied.","staff.delete":"Delete class","staff.deleteConfirm":"Delete {name} and every record in it? Press again to confirm.","staff.ownerOnly":"Only the teacher who made this class can delete it.","staff.add":"Add class","staff.className":"Class name","staff.create":"Create","staff.rule":"Use letters, digits and hyphens only.","staff.taken":"That class name is taken.","staff.noClasses":"No classes yet. Add one below.","staff.papersNote":"Pupils see locked papers as \u201cNot opened yet\u201d.","staff.open":"Open","staff.lock":"Lock","staff.isOpen":"Open","staff.isLocked":"Locked","staff.openAll":"Open all","staff.resetOrder":"Reset order","staff.up":"Move up","staff.down":"Move down","staff.drag":"Drag to reorder","staff.refresh":"Refresh","staff.updated":"Updated {time} \u00b7 refreshes every 60 s while open","staff.pupil":"Pupil","staff.lastSeen":"Last seen","staff.eval":"Evaluation","staff.evalSent":"sent","staff.evalNone":"not sent","staff.justNow":"just now","staff.minAgo":"{n} min ago","staff.you":"(you)","staff.tagUnaided":"unaided","staff.tagSeen":"saw answer","staff.tagFlag":"flag","staff.legend":"Cell = first mark; a smaller number = best when higher. Tags: unaided = every part first answered through Write it now \u00b7 saw answer = opened the examiner\u2019s answer before the best mark \u00b7 flag = asked for you \u00b7 amber dot = the evaluation had a Not yet or Tricky.","staff.clearMine":"Clear my own record in this class","staff.clearConfirm":"Clear your own record in {name}? Press again to confirm.","staff.drawerPart":"Part {label}","staff.doorLearn":"Door: Learn it first","staff.doorCold":"Door: Write it now","staff.firstAnswer":"First answer \u00b7 {t} / {of}","staff.bestAnswer":"Best answer \u00b7 {t} / {of}","staff.attemptN":"Attempt {n} \u00b7 {t} / {of}","staff.attempts1":"1 attempt","staff.attempts":"{n} attempts","staff.sawAnswer":"Opened the examiner\u2019s answer.","staff.aqAnswer":"Another question ({id}) \u00b7 first {t} / {of}","staff.aqBest":"Another question best \u00b7 {t} / {of}","staff.noAnswer":"No answer yet.","staff.comment":"Comment: {c}","staff.feel":"Felt: {f}","staff.flagAt":"Flag \u00b7 Part {label} \u00b7 {beat}","staff.ack":"Acknowledge","staff.ackConfirm":"Press again to acknowledge","staff.showAll":"Show all attempts","staff.allNote":"Each attempt shows the mark it was given at the time. Where today\u2019s marking gives a different mark, both are shown.","staff.attemptThen":"Attempt {n} \u00b7 marked {t} / {of} at the time \u00b7 {now} / {of} on today\u2019s marking","staff.remarked":"Re-marked on {date}: {which} {from} \u2192 {to}","staff.rm.f":"first answer","staff.rm.b":"best answer","staff.rm.tf":"another question, first answer","staff.rm.tb":"another question, best answer","staff.spell":"Read {from} as {to} (spelling; no mark lost)","staff.missing":"not found: {names}","staff.nofield":"no field called {names}","staff.close":"Close","staff.csv":"Download CSV","staff.csvNote":"One row per pupil per part.","staff.nothing":"Nothing to show yet.","staff.beat.door":"Doors","staff.beat.ask":"The question","staff.beat.lesson":"The lesson","staff.beat.turn":"Your turn","staff.beat.another":"Another question","sys.saving":"Saving\u2026","sys.offline":"Could not reach the school server. Your work is kept on this machine and will send when the connection returns.","sys.retry":"Try again","sys.expired":"Your sign-in has expired. Reload the page.","sys.reload":"Reload","sys.stale":"The papers were updated. Reload to get the latest.","sys.locked":"This paper is locked for now, so it cannot be marked. Your answer is kept; ask your teacher to open the paper.","staff.cellParts":"{n} of {of} parts","staff.archived":"These attempts are kept in the AS SSD - Archive Sheet.","staff.today":"Today","staff.yesterday":"Yesterday","staff.day":"{day} {date} {month}","staff.days":"Sun,Mon,Tue,Wed,Thu,Fri,Sat","staff.months":"Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec","staff.act.min":"{n} min","staff.act.hm":"{h} h {m} min","staff.act.marked1":"1 answer marked","staff.act.marked":"{n} answers marked","staff.act.open":"See when this pupil worked and what they did","staff.act.title":"{name} \u00b7 Activity","staff.act.loading":"Loading\u2026","staff.act.weekTime":"time working this week","staff.act.weekSessions":"sessions this week","staff.act.weekMarked":"answers marked this week","staff.act.note":"A minute counts when the page is on screen and the pupil typed, clicked or scrolled in the last 3 minutes. Sessions that start with \u201cabout\u201d come from before time was recorded: they are worked out from when answers were marked.","staff.act.head":"{day} \u00b7 {from}\u2013{to} \u00b7 {time} working","staff.act.headAbout":"{day} \u00b7 about {from}\u2013{to}","staff.act.headAboutAt":"{day} \u00b7 about {at}","staff.act.nothingMarked":"Nothing marked in this session.","staff.act.none":"No activity recorded yet.","staff.act.archived":"Older answers kept in the AS SSD - Archive Sheet are not listed here.","staff.ev.part":"{year} Part {label}","staff.ev.first":"{part} \u00b7 first answer {t} / {of} \u00b7 chose {door}","staff.ev.again":"{part} \u00b7 tried again \u00b7 {t} / {of}","staff.ev.aq":"{part} \u00b7 another question ({id}) \u00b7 {t} / {of}","staff.ev.aqAgain":"{part} \u00b7 another question ({id}) again \u00b7 {t} / {of}","staff.ev.sawAnswer":"{part} \u00b7 opened the examiner\u2019s answer","staff.ev.sawWorked":"{part} \u00b7 opened the answer to another question ({id})","staff.ev.flag":"{part} \u00b7 raised a flag ({beat})","staff.ev.eval":"{paper} \u00b7 sent the evaluation","staff.ev.joined":"Joined the class","cw.crumbHome":"AS SSD","cw.crumb":"Coursework guide","cw.crumbCh":"{n} \u00b7 {title}","staff.tabCoursework":"Coursework","staff.cw.summary":"{n} pupils in this class \u00b7 {o} have opened the guide \u00b7 {d} have marked a chapter done.","staff.cw.pupils1":"1 pupil","staff.cw.pupils":"{n} pupils","staff.cw.opened1x":"1 has opened the guide","staff.cw.openedN":"{n} have opened the guide","staff.cw.done1x":"1 has marked a chapter done","staff.cw.doneN":"{n} have marked a chapter done","staff.cw.summaryLine":"{a} in this class \u00b7 {b} \u00b7 {c}.","staff.cw.sort":"Sort by","staff.cw.sortName":"Name","staff.cw.sortMost":"Most progress","staff.cw.sortLeast":"Least progress","staff.cw.sortSeen":"Last seen","staff.cw.pupil":"Pupil","staff.cw.seen":"Last seen","staff.cw.ch":"Ch {c}","staff.cw.whole":"Whole guide","staff.cw.class":"Whole class","staff.cw.cell":"{t}/{n}","staff.cw.cellTitle":"Chapter {c} \u00b7 {t} of {n} steps ticked \u00b7 opened {o} times \u00b7 last {when}","staff.cw.cellTitle1":"Chapter {c} \u00b7 {t} of {n} steps ticked \u00b7 opened once \u00b7 last {when}","staff.cw.notOpened":"Not opened yet","staff.cw.foot":"{d} \u00b7 {s}","staff.cw.footDone":"{n} done","staff.cw.footStarted":"{n} started","staff.cw.footNone":"none yet","staff.cw.avg":"{p} %","staff.cw.legend":"Each cell shows the steps ticked out of the steps in that chapter. Green with a tick = the pupil marked the chapter done. The gold frame is the chapter they opened most recently. Click a cell to see that chapter stage by stage.","staff.cw.notice":"The \u201cguide has changed\u201d message: {r} of {n} pupils who used the guide before the change have read it and ticked to confirm.","staff.cw.noticeNot":"These pupils have not yet read the message: {names}.","staff.cw.empty":"No one in this class has opened the coursework guide yet.","staff.cw.title":"{name} \u00b7 Chapter {c} \u00b7 {title}","staff.cw.ticked":"{t} of {n} steps ticked","staff.cw.opened":"Opened {o} times \u00b7 first {first} \u00b7 last {last}","staff.cw.opened1":"Opened once \u00b7 {first}","staff.cw.lastScreen":"Last screen open: stage {s}, screen {k} of {of}","staff.cw.done":"Marked done {when}.","staff.cw.notDone":"Not marked done yet.","staff.cw.copies":"Copied {c} code blocks \u00b7 opened {r} answers","staff.cw.downloads":"Downloaded {file} {times}.","staff.cw.once":"once","staff.cw.twice":"twice","staff.cw.nTimes":"{n} times","staff.cw.stage":"Stage {s} \u00b7 {title} \u00b7 {t} of {n}","staff.cw.never":"{name} has not opened chapter {c} yet.","staff.cw.loading":"Loading the coursework guide\u2026","ev.cwOpen":"opened chapter {c}","ev.cwTick":"ticked step {id}","ev.cwUntick":"unticked step {id}","ev.cwDone":"marked chapter {c} done","ev.cwUndone":"unmarked chapter {c}","ev.cwDownload":"downloaded {file}","ev.cwClear":"cleared chapter {c}","ev.cwNotice":"read the \u201cguide has changed\u201d message and ticked to confirm","home.lead":"AS Software Systems Development. Pick where you are working today.","home.theoryStars":"You have {stars} of {max} stars in {topic}.","home.theoryNone":"Nothing played yet. {topic} is open.","home.theoryClosed":"Your teacher opens the first topic in class.","theory.crumb":"AS SSD","theory.title":"Theory","theory.lead":"Pick a topic. Your stars and scores are saved to your school account.","theory.count":"{games} games in {parts} parts. {open} parts open.","theory.countOne":"{games} games in {parts} parts. 1 part open.","theory.countShut":"{games} games in {parts} parts.","theory.stars":"Your stars: {stars} of {max}.","theory.carry":"Carry on with {game}","theory.start":"Start with {game}","theory.again":"Play any game again","theory.orOpen":"Or open the topic and play any game again.","theory.closed":"Your teacher opens this topic in class.","theory.later":"Coming later.","theory.fullWindow":"Open in a full window","theory.loading":"Loading your saved stars\u2026","theory.loadFail":"Your saved stars did not load. Reload the page.","theory.reload":"Reload","theory.topic.t1":"Topic 1 \u00b7 Getting Started","theory.topic.t2":"Topic 2 \u00b7 Operators, Selection & Iteration","theory.topic.methods":"Topic 3 \u00b7 Methods","theory.topic.strings":"Topic 4 \u00b7 String manipulation","staff.tabTheory":"Theory","staff.theory.topic":"Topic","staff.theory.csv":"Download this class's scores (CSV)","staff.theory.csvAll":"Download this class's theory scores for every topic (CSV)","staff.theory.partsLabel":"Parts this class can play:","staff.theory.open":"Open","staff.theory.locked":"Locked","staff.theory.saving":"Saving\u2026","staff.theory.openAll":"Open all","staff.theory.lockAll":"Lock all","staff.theory.pupil":"Pupil","staff.theory.stars":"Stars","staff.theory.starsOf":"{stars} / {max}","staff.theory.last":"Last played","staff.theory.now":"Now","staff.theory.cell":"First {first} of {max} \u00b7 Best {best} of {max} \u00b7 {n} tries \u00b7 {when}","staff.theory.cellOne":"First {first} of {max} \u00b7 Best {best} of {max} \u00b7 1 try \u00b7 {when}","staff.theory.left":"left","staff.theory.nowLine":"{game} \u00b7 round {round} of {rounds}","staff.theory.drawerTitle":"{name} \u00b7 {topic}","staff.theory.attempt":"{when} \u00b7 {game} \u00b7 {score} of {max} \u00b7 {stars} \u00b7 {mins} min","staff.theory.attemptLeft":"{when} \u00b7 {game} \u00b7 left at round {round} of {rounds}","staff.theory.attemptLeftEarly":"{when} \u00b7 {game} \u00b7 left before the end","staff.theory.noStars":"no stars","staff.theory.noAttempts":"No attempts yet.","staff.theory.close":"Close","staff.theory.empty":"Nobody in this class has played {topic} yet.","staff.theory.noClass":"Pick a class first.","staff.theory.hint":"{open} of {parts} parts open for {cls}. A tap here opens or locks a part for the whole class within a minute; nothing a pupil has earned is lost by locking.","staff.theory.hintNone":"Nothing is open in {topic} for {cls}. Pupils see every part locked with \"Your teacher opens this part in class.\" Stars already earned stay theirs.","staff.theory.foot":"{played} of {n} pupils have played {topic}. Tap a pupil or a cell for every attempt. The grid scrolls sideways; the pupil column stays put."},"BUILD":"as-2026-11-04"};
 
 </script>
 <script>
@@ -2103,6 +2148,311 @@ window.CW = (function () {
 
 </script>
 <script>
+window.THEORY_GAMES = {"methods":{"parts":"ABCDEFGH","zones":[{"key":"A","title":"Why methods"},{"key":"B","title":"In and out"},{"key":"C","title":"How methods behave"},{"key":"D","title":"The validated-input routine"},{"key":"E","title":"Exam Room"},{"key":"F","title":"Practicals"},{"key":"G","title":"Definitions"},{"key":"H","title":"Final Challenge"}],"games":[{"id":"a1","zone":"A","title":"Squash the Copies","cap":200},{"id":"a2","zone":"A","title":"Advantages Sort","cap":200},{"id":"a3","zone":"A","title":"Label the Header","cap":200},{"id":"a4","zone":"A","title":"Follow the Calls","cap":200},{"id":"b1","zone":"B","title":"Argument or Parameter?","cap":200},{"id":"b2","zone":"B","title":"Header Builder","cap":200},{"id":"b3","zone":"B","title":"Predict the Output","cap":200},{"id":"b4","zone":"B","title":"Calls Become Values","cap":200},{"id":"c1","zone":"C","title":"Swap Trace","cap":200},{"id":"c2","zone":"C","title":"Make the Swap Work","cap":200},{"id":"c3","zone":"C","title":"Which Version Runs?","cap":200},{"id":"c4","zone":"C","title":"Will It Build?","cap":200},{"id":"d1","zone":"D","title":"Build EnterNumber","cap":200},{"id":"d2","zone":"D","title":"Be the Examiner","cap":200},{"id":"d3","zone":"D","title":"Be the User","cap":200},{"id":"e1","zone":"E","title":"2015 Q2(a)","cap":200},{"id":"e2","zone":"E","title":"2014 Q2(a)","cap":200},{"id":"e3","zone":"E","title":"2014 Q2(b)","cap":200},{"id":"e4","zone":"E","title":"2014 Q2(d)","cap":200},{"id":"e5","zone":"E","title":"Specimen Q2(c)","cap":200},{"id":"e6","zone":"E","title":"2022 Q1(a)","cap":200},{"id":"e7","zone":"E","title":"2015 Q2(b)","cap":200},{"id":"e8","zone":"E","title":"2015 Q2(c)","cap":200},{"id":"f1","zone":"F","title":"P1 Notice Board","cap":200},{"id":"f2","zone":"F","title":"P2 Quote Machine","cap":200},{"id":"f3","zone":"F","title":"P3 Swap and Twins","cap":200},{"id":"f4","zone":"F","title":"P4 Order Desk","cap":200},{"id":"f5","zone":"F","title":"Bug Clinic","cap":200},{"id":"g1","zone":"G","title":"Definition Match","cap":200},{"id":"g2","zone":"G","title":"Missing Words","cap":200},{"id":"g3","zone":"G","title":"Quick-Fire Cards","cap":200},{"id":"h1","zone":"H","title":"Final Challenge","cap":200}]},"strings":{"parts":"","zones":[],"games":[]}};
+</script>
+<script>
+// The Theory side's pupil pages: the Home tile, the Theory page, and the topic page that holds an arcade in a frame.
+// The parent page owns every server call (spec 7.5): the arcade only posts what happened; a call that cannot reach the server
+// waits in a queue on this machine and goes, in order, before anything new.
+window.Theory = (function () {
+  const TG = window.THEORY_GAMES;
+  const DEV = location.hostname === 'localhost';
+  const ORIGIN = DEV ? 'http://localhost:8852' : 'https://dgaj-g.github.io';
+  const ROOT = DEV ? ORIGIN : ORIGIN + '/alevel_SSD';
+  const ARCADE = { methods: 'methods', strings: 'strings' };
+  const LATER = ['t1', 't2'];
+  let X = null, TH = { open: {}, T: {} }, cur = null, queue = [], busy = false, hadFail = false, retry = null, refresh = null;
+  const T = (k, v) => X.T(k, v), h = (s) => X.h(s);
+  const topics = () => Object.keys(TG).filter((k) => TG[k].games.length);
+  const qKey = () => 'theory:queue:' + X.me().email;
+  function loadQueue() { try { queue = JSON.parse(localStorage.getItem(qKey()) || '[]'); } catch (e) { queue = []; } hadFail = queue.length > 0; }
+  function saveQueue() { try { if (queue.length) localStorage.setItem(qKey(), JSON.stringify(queue)); else localStorage.removeItem(qKey()); } catch (e) { /* blocked storage: the queue lasts as long as the page */ } }
+
+  // ---------- what the record says ----------
+  function starsOf(score, max) { if (!max) return 0; const p = score / max; return p >= 0.9 ? 3 : p >= 0.7 ? 2 : p >= 0.5 ? 1 : 0; }
+  const recOf = (topic) => (TH.T && TH.T[topic]) || {};
+  const openOf = (topic) => (TH.open && TH.open[topic]) || '';
+  function gameOpen(topic, g, open) {
+    if (g.part) return open.includes(g.part);
+    const z = TG[topic].zones.find((x) => x.key === g.zone) || {};
+    if (z.opens === 'any') return open.length > 0;
+    if (z.opens) return [...z.opens].every((l) => open.includes(l));
+    return open.includes(g.zone);
+  }
+  function sums(topic) {
+    const rec = recOf(topic), games = TG[topic].games;
+    let stars = 0, played = 0;
+    games.forEach((g) => { const r = rec[g.id]; if (r) { stars += starsOf(r[1], r[2]); played++; } });
+    return { stars, played, max: games.length * 3 };
+  }
+  function carryOn(topic) {
+    const rec = recOf(topic), open = openOf(topic), ids = TG[topic].games.filter((g) => gameOpen(topic, g, open));
+    const pos = rec._pos;
+    if (pos && ids.some((g) => g.id === pos) && !rec[pos]) return TG[topic].games.find((g) => g.id === pos);
+    return ids.find((g) => !rec[g.id]) || null;
+  }
+  const gameName = (g) => g.id.toUpperCase() + ' ' + g.title;
+  const topicName = (k) => T('theory.topic.' + k);
+
+  // ---------- Home ----------
+  function tile() {
+    const on = topics().filter((k) => openOf(k).length);
+    if (!on.length) return '<div class="tile soon" aria-disabled="true"><h2>' + h(T('home.theory')) + '</h2><p>' + h(T('home.theorySub')) + '</p><span class="state">' + h(T('home.theoryClosed')) + '</span></div>';
+    const k = on.find((x) => sums(x).played) || on[0], s = sums(k);
+    const line = s.played ? T('home.theoryStars', { stars: s.stars, max: s.max, topic: topicName(k) }) : T('home.theoryNone', { topic: topicName(k) });
+    return '<button class="tile live" data-go="#theory"><h2>' + h(T('home.theory')) + '</h2><p>' + h(T('home.theorySub')) + '</p><span class="state">' + h(line) + '</span></button>';
+  }
+
+  // ---------- the Theory page ----------
+  function card(k) {
+    const t = TG[k], parts = t.parts.length, games = t.games.length, open = openOf(k), s = sums(k);
+    if (!open.length) return '<div class="th-card closed"><h2>' + h(topicName(k)) + '</h2><span class="line">' + h(T('theory.countShut', { games, parts })) + '</span><span class="stars">' + h(T('theory.stars', { stars: s.stars, max: s.max })) + '</span><span class="lock">' + h(T('theory.closed')) + '</span></div>';
+    const next = carryOn(k);
+    const label = !next ? T('theory.again') : s.played ? T('theory.carry', { game: gameName(next) }) : T('theory.start', { game: gameName(next) });
+    const go = next ? '#theory/' + k + '/' + next.id : '#theory/' + k;
+    return '<div class="th-card open"><h2>' + h(topicName(k)) + '</h2><span class="line">' + h(open.length === 1 ? T('theory.countOne', { games, parts }) : T('theory.count', { games, parts, open: open.length })) + '</span>' +
+      '<span class="stars">' + h(T('theory.stars', { stars: s.stars, max: s.max })) + '</span>' +
+      '<a class="btn" data-go="' + h(go) + '" href="' + h(go) + '">' + h(label) + '</a>' +
+      (next && s.played ? '<a class="line or" data-go="#theory/' + k + '" href="#theory/' + k + '">' + h(T('theory.orOpen')) + '</a>' : '') + '</div>';
+  }
+  function later(k) { return '<div class="th-card later"><h2>' + h(topicName(k)) + '</h2><span class="lock">' + h(T('theory.later')) + '</span></div>'; }
+  function vTheory() {
+    const live = topics(), open = live.filter((k) => openOf(k).length), closed = live.filter((k) => !openOf(k).length);
+    X.frame([{ t: T('theory.crumb'), go: '#home' }, { t: T('theory.title') }],
+      '<h1>' + h(T('theory.title')) + '</h1><p class="th-lead">' + h(T('theory.lead')) + '</p><div class="th-cards">' +
+      open.map(card).join('') + closed.map(card).join('') + LATER.map(later).join('') + '</div>');
+  }
+
+  // ---------- the topic page ----------
+  function rowsFor(topic) {
+    const rec = recOf(topic), out = {};
+    Object.keys(rec).forEach((id) => { if (id[0] !== '_') out[id] = { first: rec[id][0], best: rec[id][1], max: rec[id][2], n: rec[id][3] }; });
+    return out;
+  }
+  const post = (kind, body) => { if (cur && cur.el && cur.el.contentWindow) cur.el.contentWindow.postMessage(Object.assign({ t: 'platform', v: 1, kind }, body || {}), ORIGIN); };
+  function sendState() { post('state', { name: X.me().shown(), open: openOf(cur.topic), best: rowsFor(cur.topic), pos: recOf(cur.topic)._pos || null }); }
+  function paintSaving() { const el = document.querySelector('.th-saving'); if (el) el.textContent = queue.length ? T('sys.saving') : ''; }
+  function closeTopic() {
+    if (!cur) return;
+    clearInterval(refresh); refresh = null; clearTimeout(cur.failT);
+    // she went off the page in the middle of a game: the frame is about to go, so the parent says so for it
+    if (cur.playing) enqueue({ op: 'leave', topic: cur.topic, game: cur.playing, round: 0, rounds: 0 });
+    cur = null;
+  }
+  function vTopic(k, gameId) {
+    if (!TG[k] || !TG[k].games.length || !openOf(k).length) { X.go('#theory'); return; }
+    if (cur && cur.topic === k) return; // the frame is already up; it keeps its own place
+    closeTopic();
+    const B = window.OLS_BOOT || {}, full = String(B.baseUrl || '') + '?class=' + encodeURIComponent(X.me().cls) + '#theory/' + k;
+    const src = ROOT + '/' + ARCADE[k] + '/?embed=1' + (gameId ? '#/play/' + encodeURIComponent(gameId) : '');
+    X.frame(null, '');
+    X.app().innerHTML = '<div class="th-bar"><a class="th-home" data-go="#home" href="#home">' + h(T('theory.crumb')) + '</a><span class="th-sep th-home">\u203a</span>' +
+      '<a data-go="#theory" href="#theory">' + h(T('theory.title')) + '</a><span class="th-sep">\u203a</span><span class="th-here">' + h(topicName(k)) + '</span>' +
+      '<span class="th-saving" aria-live="polite"></span><a class="th-full" href="' + h(full) + '" target="_top">' + h(T('theory.fullWindow')) + '</a></div><div id="sys"></div>' +
+      '<div class="th-frame"><iframe title="' + h(topicName(k)) + '" allow="fullscreen" src="' + h(src) + '"></iframe>' +
+      '<div class="th-loading">' + h(T('theory.loading')) + '</div>' +
+      '<div class="th-fail" hidden><span>' + h(T('theory.loadFail')) + '</span><button class="btn" data-sys="reload">' + h(T('theory.reload')) + '</button></div></div>';
+    X.paintSys();
+    const el = X.app().querySelector('iframe');
+    cur = { topic: k, el, started: {}, playing: null, ready: false };
+    cur.failT = setTimeout(() => { if (cur && !cur.ready) { X.app().querySelector('.th-loading').hidden = true; X.app().querySelector('.th-fail').hidden = false; } }, 8000);
+    refresh = setInterval(() => { if (!document.hidden && cur) refreshState(); }, 60000);
+    paintSaving();
+  }
+  function refreshState() {
+    return X.call('apiTheory', { op: 'state' }).then((r) => {
+      const before = cur ? openOf(cur.topic) : null;
+      TH = { open: r.open, T: r.T };
+      if (cur && before !== openOf(cur.topic)) post('locked', { open: openOf(cur.topic) });
+    }, () => {});
+  }
+
+  // ---------- the arcade's messages ----------
+  function onMessage(e) {
+    if (!cur || e.source !== cur.el.contentWindow || e.origin !== ORIGIN) return;
+    const m = e.data;
+    if (!m || m.t !== 'arcade' || m.v !== 1) return;
+    if (m.kind === 'ready') {
+      cur.ready = true; clearTimeout(cur.failT);
+      const l = X.app().querySelector('.th-loading'); if (l) l.hidden = true;
+      sendState(); refreshState();
+    } else if (m.kind === 'start') {
+      cur.started[m.game] = Date.now(); cur.playing = m.game;
+      enqueue({ op: 'start', topic: cur.topic, game: m.game });
+    } else if (m.kind === 'finish') {
+      const at = cur.started[m.game];
+      cur.playing = null;
+      enqueue({ op: 'finish', topic: cur.topic, game: m.game, score: m.score, max: m.max, startedAt: String(at || Date.now()), seconds: at ? Math.floor((Date.now() - at) / 1000) : 0 });
+    } else if (m.kind === 'leave') {
+      cur.playing = null;
+      enqueue({ op: 'leave', topic: cur.topic, game: m.game, round: m.round, rounds: m.rounds });
+    }
+  }
+
+  // ---------- the queue: one call at a time, in order; nothing lost when the connection drops ----------
+  function enqueue(item) { queue.push(item); saveQueue(); paintSaving(); pump(); }
+  function pump() {
+    if (busy) return;
+    if (!queue.length) { hadFail = false; paintSaving(); return; }
+    busy = true;
+    const it = queue[0], req = Object.assign({}, it);
+    delete req.told;
+    if (it.op === 'finish' && hadFail) req.resend = true;
+    X.call('apiTheory', req).then((r) => {
+      busy = false; queue.shift(); saveQueue();
+      if (it.op === 'finish' && r.row) {
+        TH.T = TH.T || {}; TH.T[it.topic] = TH.T[it.topic] || {}; TH.T[it.topic][it.game] = r.row; TH.T[it.topic]._pos = it.game;
+        if (cur && cur.topic === it.topic) post('saved', { game: it.game, first: r.row[0], best: r.row[1], max: r.row[2], n: r.row[3] });
+      } else if (it.op === 'start') { TH.T = TH.T || {}; TH.T[it.topic] = TH.T[it.topic] || {}; TH.T[it.topic]._pos = it.game; }
+      pump();
+    }, (err) => {
+      busy = false;
+      if (err.code === 'offline' || err.code === 'not-signed-in') {
+        hadFail = true;
+        if (it.op === 'finish' && !it.told) { it.told = true; saveQueue(); if (cur && cur.topic === it.topic) post('failed', { game: it.game }); }
+        // a finish behind this call has been played as well: tell the arcade it waits too
+        queue.forEach((q) => { if (q.op === 'finish' && !q.told) { q.told = true; if (cur && cur.topic === q.topic) post('failed', { game: q.game }); } });
+        saveQueue(); paintSaving();
+        clearTimeout(retry); retry = setTimeout(pump, 15000);
+        return;
+      }
+      queue.shift(); saveQueue();
+      if (it.op === 'finish' && cur && cur.topic === it.topic) post('refused', { game: it.game, code: err.code });
+      if (err.code === 'locked') refreshState();
+      pump();
+    });
+  }
+
+  // ---------- from app.js ----------
+  function init(ctx, theory) {
+    X = ctx; TH = theory || TH;
+    window.addEventListener('message', onMessage);
+    window.addEventListener('online', pump);
+    loadQueue();
+    pump();
+  }
+  // Google's outer page holds the address: a link opened in a new window carries its place in the outer hash.
+  function outerHash(cb) {
+    try { if (!location.hash && window.google && google.script && google.script.url) { google.script.url.getLocation((l) => cb(l && l.hash ? '#' + l.hash : '')); return; } } catch (e) { /* not there */ }
+    cb('');
+  }
+  function route(bits) {
+    if (bits[1]) { vTopic(bits[1], bits[2]); return; }
+    closeTopic(); vTheory();
+    X.call('apiTheory', { op: 'state' }).then((r) => { const was = JSON.stringify(TH.open); TH = { open: r.open, T: r.T }; if (was !== JSON.stringify(r.open) && location.hash === '#theory') vTheory(); }, () => {});
+  }
+  return { init, tile, route, leftPage: closeTopic, outerHash, gameOpen };
+})();
+
+</script>
+<script>
+// The staff Theory tab: the stars grid, part open/lock per class, one pupil's attempts, CSV.
+window.TheoryStaff = (function () {
+  const TG = window.THEORY_GAMES;
+  const stars = (s, m) => { if (!m) return 0; const p = s / m; return p >= 0.9 ? 3 : p >= 0.7 ? 2 : p >= 0.5 ? 1 : 0; };
+  const topics = () => Object.keys(TG).filter((k) => TG[k].games.length);
+  let topic = '';
+  function view(X) {
+    const T = X.T, h = X.h, pane = X.pane();
+    if (!X.cls()) { pane.innerHTML = '<div class="card"><p>' + h(T('staff.theory.noClass')) + '</p></div>'; return null; }
+    const list = topics();
+    if (!list.includes(topic)) topic = X.sel('thTopic') && list.includes(X.sel('thTopic')) ? X.sel('thTopic') : list[0];
+    const name = (k) => T('theory.topic.' + k), cfg = TG[topic];
+    pane.innerHTML = '<div class="th-tools"><label for="thTopic">' + h(T('staff.theory.topic')) + '</label><select id="thTopic">' +
+      list.map((k) => '<option value="' + h(k) + '"' + (k === topic ? ' selected' : '') + '>' + h(name(k)) + '</option>').join('') + '</select>' +
+      '<button class="btn ghost th-csv" data-csv>' + h(T('staff.theory.csv')) + '</button></div><div id="thBody"></div>';
+    pane.querySelector('#thTopic').addEventListener('change', (e) => { topic = e.target.value; X.keep('thTopic', topic); view(X); });
+    const csvBtn = pane.querySelector('[data-csv]');
+    csvBtn.addEventListener('click', () => { csvBtn.disabled = true; X.download({ op: 'theoryCsv', name: X.cls(), topic }).then(() => { csvBtn.disabled = false; }); });
+    const body = pane.querySelector('#thBody');
+    let DATA = null;
+    const lettersOf = () => cfg.parts.split('').filter((l) => DATA.open.includes(l)).join('');
+    const zoneOf = (key) => cfg.zones.find((z) => z.key === key) || { key, title: key };
+    function partsBar() {
+      const open = DATA.open;
+      return '<div class="th-parts"><span class="lbl">' + h(T('staff.theory.partsLabel')) + '</span>' + cfg.parts.split('').map((l) => {
+        const on = open.includes(l);
+        return '<button class="th-part' + (on ? ' open' : '') + '" data-part="' + l + '" aria-pressed="' + on + '" aria-label="' + h(l + ' \u00b7 ' + zoneOf(l).title) + '">' + h(l + ' \u00b7 ' + zoneOf(l).title + ' \u00b7 ') + h(T(on ? 'staff.theory.open' : 'staff.theory.locked')) + '</button>';
+      }).join('') + '<button class="btn ghost" data-all="1">' + h(T('staff.theory.openAll')) + '</button><button class="btn ghost" data-all="0">' + h(T('staff.theory.lockAll')) + '</button></div>' +
+      '<p class="th-hint">' + h(open.length ? T('staff.theory.hint', { open: open.length, parts: cfg.parts.length, cls: X.cls() }) : T('staff.theory.hintNone', { topic: name(topic), cls: X.cls() })) + '</p>';
+    }
+    function cell(pu, g, locked) {
+      const r = pu.T[g.id], nowHere = pu.now && pu.now[0] === g.id && DATA.at - pu.now[1] <= 3;
+      const cls = 'cell' + (locked ? ' lk' : '') + (nowHere ? ' now' : '');
+      if (!r) {
+        const left = pu.left && pu.left[g.id];
+        return '<td class="' + cls + (left ? ' left' : '') + '" data-pu="' + h(pu.email) + '">' + (left ? h(T('staff.theory.left')) : '\u2013') + '</td>';
+      }
+      const st = stars(r[1], r[2]);
+      const title = T(r[3] === 1 ? 'staff.theory.cellOne' : 'staff.theory.cell', { first: r[0], best: r[1], max: r[2], n: r[3], when: X.when(r[4]) });
+      return '<td class="' + cls + '" data-pu="' + h(pu.email) + '" title="' + h(title) + '"><span class="st">' + '\u2605'.repeat(st) + '<span class="o">' + '\u2605'.repeat(3 - st) + '</span></span><span class="sc">' + r[1] + '/' + r[2] + '</span></td>';
+    }
+    function grid() {
+      const zones = [];
+      cfg.games.forEach((g) => { let z = zones[zones.length - 1]; if (!z || z.key !== g.zone) { z = { key: g.zone, games: [] }; zones.push(z); } z.games.push(g); });
+      const gOpen = (g) => window.Theory.gameOpen(topic, g, DATA.open);
+      const head1 = '<tr class="grp"><th class="pupil" rowspan="2">' + h(T('staff.theory.pupil')) + '</th>' + zones.map((z) => {
+        const on = gOpen(z.games[0]);
+        return '<th colspan="' + z.games.length + '"' + (on ? '' : ' class="lk"') + '>' + h(z.key + ' \u00b7 ' + zoneOf(z.key).title + ' \u00b7 ' + T(on ? 'staff.theory.open' : 'staff.theory.locked')) + '</th>';
+      }).join('') + '<th rowspan="2">' + h(T('staff.theory.stars')) + '</th><th rowspan="2">' + h(T('staff.theory.last')) + '</th><th rowspan="2">' + h(T('staff.theory.now')) + '</th></tr>';
+      const head2 = '<tr>' + zones.map((z) => z.games.map((g) => '<th class="' + (gOpen(g) ? '' : 'lk') + '" title="' + h(g.title) + '">' + h(g.id.toUpperCase()) + '</th>').join('')).join('') + '</tr>';
+      const rows = DATA.pupils.map((pu) => {
+        let total = 0, last = 0;
+        cfg.games.forEach((g) => { const r = pu.T[g.id]; if (r) { total += stars(r[1], r[2]); if (r[4] > last) last = r[4]; } });
+        const live = pu.now && DATA.at - pu.now[1] <= 3;
+        const g = live && cfg.games.find((x) => x.id === pu.now[0]);
+        const nowLine = !g ? '' : pu.now[3] ? T('staff.theory.nowLine', { game: g.id.toUpperCase(), round: pu.now[2], rounds: pu.now[3] }) : g.id.toUpperCase();
+        return '<tr><td class="pupil"><button data-pu="' + h(pu.email) + '">' + h(((pu.first || pu.n || '') + ' ' + (pu.sur || '')).trim() || pu.email) + '</button></td>' + zones.map((z) => z.games.map((x) => cell(pu, x, !gOpen(x))).join('')).join('') +
+          '<td class="tot">' + h(T('staff.theory.starsOf', { stars: total, max: cfg.games.length * 3 })) + '</td><td>' + h(last ? X.when(last, true) : '\u2013') + '</td><td>' + h(nowLine) + '</td></tr>';
+      }).join('');
+      if (!DATA.pupils.length) return '<div class="card"><p>' + h(T('staff.theory.empty', { topic: name(topic) })) + '</p></div>';
+      const played = DATA.pupils.filter((pu) => Object.keys(pu.T).some((k) => k[0] !== '_')).length;
+      return '<div class="th-panel"><table class="th-grid"><thead>' + head1 + head2 + '</thead><tbody>' + rows + '</tbody></table></div>' +
+        '<p class="th-hint th-foot">' + h(T('staff.theory.foot', { played, n: DATA.pupils.length, topic: name(topic) })) + '</p>';
+    }
+    function paint() {
+      const box = body.querySelector('.th-panel'), sx = box ? box.scrollLeft : 0, sy = box ? box.scrollTop : 0;
+      body.innerHTML = partsBar() + grid();
+      const nb = body.querySelector('.th-panel'); if (nb) { nb.scrollLeft = sx; nb.scrollTop = sy; }
+    }
+    function setOpen(letters, btn) {
+      if (btn) { btn.disabled = true; btn.textContent = T('staff.theory.saving'); }
+      X.call({ op: 'theoryOpen', name: X.cls(), topic, letters }).then((r) => { DATA.open = r.open; paint(); }, (e) => { paint(); X.fail(e); });
+    }
+    function drawer(email) {
+      const pu = DATA.pupils.find((x) => x.email === email); if (!pu) return;
+      const old = X.app().querySelector('.drawer'); if (old) old.remove();
+      const title = T('staff.theory.drawerTitle', { name: ((pu.first || pu.n || '') + ' ' + (pu.sur || '')).trim() || pu.email, topic: name(topic) });
+      X.app().insertAdjacentHTML('beforeend', '<aside class="drawer th-drawer" role="dialog" aria-label="' + h(title) + '"><div class="row" style="justify-content:space-between"><h3>' + h(title) + '</h3><button class="btn ghost" data-close>' + h(T('staff.theory.close')) + '</button></div><ul class="th-att"></ul></aside>');
+      const dr = X.app().querySelector('.drawer');
+      dr.querySelector('[data-close]').addEventListener('click', () => dr.remove());
+      X.call({ op: 'theoryPupil', name: X.cls(), topic, email }).then((r) => {
+        const log = (r.log || []).slice().reverse();
+        dr.querySelector('.th-att').innerHTML = log.length ? log.map((a) => {
+          const g = cfg.games.find((x) => x.id === a[0]), game = (g ? g.id.toUpperCase() + ' ' + g.title : a[0]), when = X.when(a[1]);
+          if (a[2] === 'left') return '<li class="left">' + h(a[4] ? T('staff.theory.attemptLeft', { when, game, round: a[3], rounds: a[4] }) : T('staff.theory.attemptLeftEarly', { when, game })) + '</li>';
+          const st = stars(a[2], a[3]);
+          return '<li>' + h(T('staff.theory.attempt', { when, game, score: a[2], max: a[3], stars: st ? '\u2605'.repeat(st) : T('staff.theory.noStars'), mins: Math.max(1, Math.round((a[4] || 0) / 60)) })) + '</li>';
+        }).join('') : '<li>' + h(T('staff.theory.noAttempts')) + '</li>';
+      }, X.fail);
+    }
+    body.addEventListener('click', (e) => {
+      const p = e.target.closest('[data-part]');
+      if (p) { const l = p.dataset.part, cur = lettersOf(); setOpen(cur.includes(l) ? cur.replace(l, '') : cur + l, p); return; }
+      const a = e.target.closest('[data-all]');
+      if (a) { setOpen(a.dataset.all === '1' ? cfg.parts : '', a); return; }
+      const u = e.target.closest('[data-pu]');
+      if (u) drawer(u.dataset.pu);
+    });
+    const load = () => X.call({ op: 'theory', name: X.cls(), topic }).then((r) => { DATA = r; paint(); }, X.fail);
+    load();
+    return load;
+  }
+  return { view };
+})();
+
+</script>
+<script>
 /* platform/app.js \u2014 the pupil page (SPEC \u00a73\u2013\u00a711, \u00a712a). Every pupil string comes from strings.json (D5); every mark from the server.
  * Screens: guard \u00b7 home \u00b7 SQL map \u00b7 paper \u00b7 part (door \u00b7 the question \u00b7 the lesson \u00b7 your turn \u00b7 another question) \u00b7 How did it go?
  * The staff page is staff.js (a bare /exec link with no class). window.App.boot() starts it. */
@@ -2371,9 +2721,9 @@ window.CW = (function () {
   function vHome() {
     const open = CFG.order.filter((id) => isOpen(id)).length, done = C.papers.filter((p) => paperState(p).done).length;
     const started = Object.keys(REC.P).length > 0;
-    frame(null, '<h1>' + h(T('home.hello', { name: REC.n || ME.name })) + '</h1><div class="tiles">' +
+    frame(null, '<h1>' + h(T('home.hello', { name: REC.n || ME.name })) + '</h1><p class="th-lead">' + h(T('home.lead')) + '</p><div class="tiles">' +
       '<button class="tile live" data-go="#cw"><h2>' + h(T('home.cw')) + '</h2><p>' + h(T('home.cwSub')) + '</p><span class="state">' + h(cwState()) + '</span></button>' +
-      '</div></div>');
+      Theory.tile() + '</div></div>');
   }
 
   // ---------- coursework guide (DESIGN \u00a76.1, \u00a76.7): cw.js draws it; every pupil act goes to apiCw; the server copy wins on the first open ----------
@@ -2850,6 +3200,8 @@ window.CW = (function () {
   function route() {
     if (!ME.cls) return;
     const bits = (location.hash || '#home').slice(1).split('/'), k = bits[0];
+    if (k === 'theory') { Theory.route(bits); return; }
+    Theory.leftPage();
     if (k === 'sql') vSql();
     else if (k === 'paper') vPaper(bits[1]);
     else if (k === 'part') vPart(bits[1], BEATS.concat('door').includes(bits[2]) ? bits[2] : null);
@@ -2927,8 +3279,8 @@ window.CW = (function () {
     ['keydown', 'pointerdown', 'input', 'wheel', 'scroll', 'touchstart'].forEach((t) => window.addEventListener(t, () => { lastAct = Date.now(); }, { capture: true, passive: true }));
     setInterval(() => { if (!document.hidden) call('apiPing', { act: Date.now() - lastAct < 180000 ? 1 : 0 }).catch(() => {}); }, 60000);
     flushOutbox();
-    route();
-    notice(r.cw);
+    Theory.init({ T, h, go, call, frame, paintSys, app: () => app, me: () => ({ email: ME.email, cls: ME.cls, shown: () => REC.n || ME.name }) }, r.theory);
+    Theory.outerHash((x) => { if (x) location.hash = x; route(); notice(r.cw); });
   }
   function askName(r) {
     app.innerHTML = '<div id="sys"></div><div class="guard"><div class="box"><p>' + h(T('guard.nameAsk')) + '</p><input type="text" maxlength="40" autocomplete="given-name" aria-label="' + h(T('guard.nameAsk')) + '"><button class="btn" disabled>' + h(T('guard.continue')) + '</button></div></div>';
@@ -3044,7 +3396,7 @@ window.CW = (function () {
   }
   function paint() {
     clearInterval(timer); timer = null;
-    const tabs = [['classes', 'staff.tabClasses'], ['coursework', 'staff.tabCoursework'], ['export', 'staff.tabExport']];
+    const tabs = [['classes', 'staff.tabClasses'], ['theory', 'staff.tabTheory'], ['coursework', 'staff.tabCoursework'], ['export', 'staff.tabExport']];
     if (!CLASSES.length) TAB = 'classes';
     const pick = TAB !== 'classes' && CLASSES.length ? '<span class="cls"><label for="cls">' + h(T('staff.class')) + '</label><select id="cls">' +
       CLASSES.map((c) => '<option' + (c.name === CLS ? ' selected' : '') + '>' + h(c.name) + '</option>').join('') + '</select></span>' : '';
@@ -3052,7 +3404,7 @@ window.CW = (function () {
     app.querySelectorAll('.stabs [data-tab]').forEach((b) => b.addEventListener('click', () => { TAB = b.dataset.tab; keep('tab', TAB); paint(); }));
     const s = app.querySelector('#cls');
     if (s) s.addEventListener('change', () => { CLS = s.value; keep('cls', CLS); paint(); });
-    ({ classes: vClasses, papers: vPapers, live: vLive, coursework: vCoursework, export: vExport })[TAB]();
+    ({ classes: vClasses, papers: vPapers, live: vLive, coursework: vCoursework, export: vExport, theory: vTheory })[TAB]();
   }
   const pane = () => app.querySelector('#pane');
   function twoPress(btn, confirmText, act) { // a destructive button asks once, in its own words, then acts on the second press
@@ -3361,8 +3713,22 @@ window.CW = (function () {
   }
 
   // ---------- Export ----------
+  function download(req) {
+    return call(req).then((r) => {
+      const url = URL.createObjectURL(new Blob(['\ufeff' + r.csv], { type: 'text/csv;charset=utf-8' }));
+      const a = document.createElement('a'); a.href = url; a.download = r.file; document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 5000);
+    }, fail);
+  }
+  function vTheory() {
+    const when = (m, comma) => { const d = at(m); return T('staff.day', { day: T('staff.days').split(',')[d.getDay()], date: d.getDate(), month: T('staff.months').split(',')[d.getMonth()] }) + (comma ? ', ' : ' ') + hm(m); };
+    const load = window.TheoryStaff.view({ T, h, pane, app: () => app, cls: () => CLS, call, fail, download, when, sel, keep });
+    if (load) timer = setInterval(() => { if (!document.hidden && TAB === 'theory' && !app.querySelector('.drawer')) load(); }, 60000);
+  }
   function vExport() {
-    pane().innerHTML = '<div class="card"><p class="note">' + h(T('staff.csvNote')) + '</p><button class="btn" data-csv>' + h(T('staff.csv')) + '</button></div>';
+    pane().innerHTML = '<div class="card"><p class="note">' + h(T('staff.csvNote')) + '</p><button class="btn" data-csv>' + h(T('staff.csv')) + '</button> <button class="btn ghost" data-csvth>' + h(T('staff.theory.csvAll')) + '</button></div>';
+    const bt = pane().querySelector('[data-csvth]');
+    bt.addEventListener('click', () => { bt.disabled = true; download({ op: 'theoryCsv', name: CLS, topic: 'all' }).then(() => { bt.disabled = false; }); });
     const b = pane().querySelector('[data-csv]');
     b.addEventListener('click', () => {
       b.disabled = true;

@@ -69,6 +69,8 @@ Object.keys(over).filter((k) => k[0] !== '_').forEach((k) => {
   if (!(k in strings)) { console.error('strings-as.json: ' + k + ' is not an A2 string'); process.exit(1); }
   strings[k] = over[k];
 });
+const overT = JSON.parse(need(path.join(AS, 'src', 'strings-theory.json')));
+Object.keys(overT).filter((k) => k[0] !== '_').forEach((k) => { strings[k] = overT[k]; });
 const CWIX = JSON.parse(need(path.join(AS, 'content', 'coursework', 'index.json')));
 const CONTENT = { papers: [], twins: {}, sets: {}, lessons: {}, clusters: { clusters: {}, lessonFor: {}, order: [] }, seeds: {}, strings, BUILD: 'as-' + new Date().toISOString().slice(0, 10) };
 const contentJs = 'window.A2CONTENT = ' + JSON.stringify(CONTENT) + ';\n';
@@ -113,7 +115,10 @@ let app = need(path.join(A2, 'platform', 'app.js'));
 const sqlTile = app.slice(app.indexOf("'<button class=\"tile live\" data-go=\"#sql\">"), app.indexOf("'<button class=\"tile live\" data-go=\"#cw\">"));
 app = swap('app.js', app, sqlTile, '');
 const soon = app.slice(app.indexOf("'<div class=\"tile soon\""), app.indexOf("</div></div>');", app.indexOf("'<div class=\"tile soon\"")));
-app = swap('app.js', app, soon, "'");
+app = swap('app.js', app, soon, "Theory.tile() + '");
+app = swap('app.js', app, "{ name: REC.n || ME.name })) + '</h1><div class=\"tiles\">' +", "{ name: REC.n || ME.name })) + '</h1><p class=\"th-lead\">' + h(T('home.lead')) + '</p><div class=\"tiles\">' +");
+app = swap('app.js', app, "const bits = (location.hash || '#home').slice(1).split('/'), k = bits[0];\n    if (k === 'sql') vSql();", "const bits = (location.hash || '#home').slice(1).split('/'), k = bits[0];\n    if (k === 'theory') { Theory.route(bits); return; }\n    Theory.leftPage();\n    if (k === 'sql') vSql();");
+app = swap('app.js', app, "    flushOutbox();\n    route();\n    notice(r.cw);", "    flushOutbox();\n    Theory.init({ T, h, go, call, frame, paintSys, app: () => app, me: () => ({ email: ME.email, cls: ME.cls, shown: () => REC.n || ME.name }) }, r.theory);\n    Theory.outerHash((x) => { if (x) location.hash = x; route(); notice(r.cw); });");
 app = swap('app.js', app, 'for (let i = 0; i <= 12; i++) {', 'for (let i = 0; i <= 18; i++) {');
 // the "guide has changed" message: AS's own id and time (18 Oct 2026 13:00 Irish time, in server minutes); its words are in strings-as.json
 app = swap('app.js', app, "const NOTICE = { id: 'guide-2026-10', at: 417240, secs: 30 };", "const NOTICE = { id: 'as-guide-2026-10', at: 418320, secs: 30 };");
@@ -124,6 +129,23 @@ staff = swap('staff.js', staff, "TAB = 'live', CLS", "TAB = 'coursework', CLS");
 // AS tick ids are <stage>-<screen>.<step> (A2's are <chapter>.<stage>.<step>): group the drawer's squares by stage
 staff = swap('staff.js', staff, "const s = id.split('.')[1];", "const s = id.split('-')[0];");
 staff = swap('staff.js', staff, "TAB = sel('tab') || 'live';", "TAB = sel('tab') || 'coursework'; if (TAB === 'papers' || TAB === 'live') TAB = 'coursework';");
+staff = swap('staff.js', staff, "['coursework', 'staff.tabCoursework'], ['export', 'staff.tabExport']", "['theory', 'staff.tabTheory'], ['coursework', 'staff.tabCoursework'], ['export', 'staff.tabExport']");
+staff = swap('staff.js', staff, "coursework: vCoursework, export: vExport })[TAB]();", "coursework: vCoursework, export: vExport, theory: vTheory })[TAB]();");
+staff = swap('staff.js', staff, "  function vExport() {\n", `  function download(req) {
+    return call(req).then((r) => {
+      const url = URL.createObjectURL(new Blob(['\\ufeff' + r.csv], { type: 'text/csv;charset=utf-8' }));
+      const a = document.createElement('a'); a.href = url; a.download = r.file; document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 5000);
+    }, fail);
+  }
+  function vTheory() {
+    const when = (m, comma) => { const d = at(m); return T('staff.day', { day: T('staff.days').split(',')[d.getDay()], date: d.getDate(), month: T('staff.months').split(',')[d.getMonth()] }) + (comma ? ', ' : ' ') + hm(m); };
+    const load = window.TheoryStaff.view({ T, h, pane, app: () => app, cls: () => CLS, call, fail, download, when, sel, keep });
+    if (load) timer = setInterval(() => { if (!document.hidden && TAB === 'theory' && !app.querySelector('.drawer')) load(); }, 60000);
+  }
+  function vExport() {
+`);
+staff = swap('staff.js', staff, "<button class=\"btn\" data-csv>' + h(T('staff.csv')) + '</button></div>';", "<button class=\"btn\" data-csv>' + h(T('staff.csv')) + '</button> <button class=\"btn ghost\" data-csvth>' + h(T('staff.theory.csvAll')) + '</button></div>';\n    const bt = pane().querySelector('[data-csvth]');\n    bt.addEventListener('click', () => { bt.disabled = true; download({ op: 'theoryCsv', name: CLS, topic: 'all' }).then(() => { bt.disabled = false; }); });");
 const scripts = [
   ['content.js', contentJs],
   ['lessonview.js', need(path.join(A2, 'platform', 'lessonview.js'))],
@@ -131,6 +153,9 @@ const scripts = [
   ['editor.js', need(path.join(A2, 'platform', 'editor.js'))],
   ['lesson.js', need(path.join(A2, 'platform', 'lesson.js'))],
   ['cw.js', need(path.join(AS, 'src', 'cw.js'))],
+  ['theory-games.js', 'window.THEORY_GAMES = ' + JSON.stringify(JSON.parse(need(path.join(AS, 'server', 'theory-games.json')))) + ';'],
+  ['theory.js', need(path.join(AS, 'src', 'theory.js'))],
+  ['theory-staff.js', need(path.join(AS, 'src', 'theory-staff.js'))],
   ['app.js', app],
   ['staff.js', staff],
 ];
@@ -147,7 +172,7 @@ const shim = `window.OLS_TRANSPORT = {
 };`;
 const hashOf = (s) => crypto.createHash('sha256').update(s).digest('hex').slice(0, 10);
 const index = need(path.join(A2, 'platform', 'index.html'));
-const css = style + '\n/* ---- cw.css: the coursework guide ---- */\n' + cwcss;
+const css = style + '\n/* ---- cw.css: the coursework guide ---- */\n' + cwcss + '\n' + need(path.join(AS, 'src', 'theory.css'));
 let tpl = need(path.join(A2, 'server', 'Code.gs.template'));
 tpl = swap('Code.gs.template', tpl, "SpreadsheetApp.create('A2 SSD - Archive')", "SpreadsheetApp.create('AS SSD - Archive')");
 tpl = tpl.replace(/OLS A2 SSD Platform/g, 'OLS AS SSD Platform');
