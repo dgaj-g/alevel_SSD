@@ -231,8 +231,291 @@
   ]
  },
  "strings": {
-  "parts": "",
-  "zones": [],
-  "games": []
+  "parts": "ABCD",
+  "zones": [
+   {
+    "key": "A",
+    "title": "A string is a row of characters"
+   },
+   {
+    "key": "B",
+    "title": "Cut, search and rebuild"
+   },
+   {
+    "key": "C",
+    "title": "Text into numbers, and random numbers"
+   },
+   {
+    "key": "D",
+    "title": "The validation method"
+   },
+   {
+    "key": "E",
+    "title": "Exam room",
+    "opens": "any"
+   },
+   {
+    "key": "F",
+    "title": "Practicals",
+    "opens": "any"
+   },
+   {
+    "key": "G",
+    "title": "Definitions",
+    "opens": "any"
+   },
+   {
+    "key": "H",
+    "title": "Final challenge",
+    "opens": "ABCD"
+   }
+  ],
+  "games": [
+   {
+    "id": "a1",
+    "zone": "A",
+    "title": "Count the Boxes",
+    "cap": 200
+   },
+   {
+    "id": "a2",
+    "zone": "A",
+    "title": "char or string?",
+    "cap": 200
+   },
+   {
+    "id": "a3",
+    "zone": "A",
+    "title": "Which test passes?",
+    "cap": 200
+   },
+   {
+    "id": "a4",
+    "zone": "A",
+    "title": "Count It",
+    "cap": 200
+   },
+   {
+    "id": "b1",
+    "zone": "B",
+    "title": "Substring Surgeon",
+    "cap": 200
+   },
+   {
+    "id": "b2",
+    "zone": "B",
+    "title": "Find and Change",
+    "cap": 200
+   },
+   {
+    "id": "b3",
+    "zone": "B",
+    "title": "Store the Result",
+    "cap": 200
+   },
+   {
+    "id": "b4",
+    "zone": "B",
+    "title": "Make It Say",
+    "cap": 200
+   },
+   {
+    "id": "c1",
+    "zone": "C",
+    "title": "TryParse Table",
+    "cap": 200
+   },
+   {
+    "id": "c2",
+    "zone": "C",
+    "title": "Digit or Code?",
+    "cap": 200
+   },
+   {
+    "id": "c3",
+    "zone": "C",
+    "title": "Random Range",
+    "cap": 200
+   },
+   {
+    "id": "c4",
+    "zone": "C",
+    "title": "Build the Shape",
+    "cap": 200
+   },
+   {
+    "id": "d1",
+    "zone": "D",
+    "title": "Position Map",
+    "cap": 200
+   },
+   {
+    "id": "d2",
+    "zone": "D",
+    "title": "Validator Builder",
+    "cap": 200
+   },
+   {
+    "id": "d3",
+    "zone": "D",
+    "title": "Bug Doctors",
+    "cap": 200
+   },
+   {
+    "id": "d4",
+    "zone": "D",
+    "title": "Accept or Refuse?",
+    "cap": 200
+   },
+   {
+    "id": "e1",
+    "zone": "E",
+    "title": "2019 Q5(b)",
+    "cap": 200,
+    "part": "A"
+   },
+   {
+    "id": "e2",
+    "zone": "E",
+    "title": "2018 Q3(b)",
+    "cap": 200,
+    "part": "A"
+   },
+   {
+    "id": "e3",
+    "zone": "E",
+    "title": "2024 Q4(e)",
+    "cap": 200,
+    "part": "B"
+   },
+   {
+    "id": "e4",
+    "zone": "E",
+    "title": "2016 Q2(b)",
+    "cap": 200,
+    "part": "B"
+   },
+   {
+    "id": "e5",
+    "zone": "E",
+    "title": "2022 Q2",
+    "cap": 200,
+    "part": "C"
+   },
+   {
+    "id": "e6",
+    "zone": "E",
+    "title": "2024 Q2",
+    "cap": 200,
+    "part": "C"
+   },
+   {
+    "id": "e7",
+    "zone": "E",
+    "title": "2019 Q5(c)",
+    "cap": 200,
+    "part": "C"
+   },
+   {
+    "id": "e8",
+    "zone": "E",
+    "title": "2023 Q4(a)",
+    "cap": 200,
+    "part": "C"
+   },
+   {
+    "id": "e9",
+    "zone": "E",
+    "title": "Specimen Q4(a)",
+    "cap": 200,
+    "part": "C"
+   },
+   {
+    "id": "e10",
+    "zone": "E",
+    "title": "2014 Q2(b)",
+    "cap": 200,
+    "part": "C"
+   },
+   {
+    "id": "e11",
+    "zone": "E",
+    "title": "2025 Q2(a)(i)",
+    "cap": 200,
+    "part": "D"
+   },
+   {
+    "id": "e12",
+    "zone": "E",
+    "title": "2021 Q3(a)(ii)",
+    "cap": 200,
+    "part": "D"
+   },
+   {
+    "id": "e13",
+    "zone": "E",
+    "title": "Specimen Q4(b)",
+    "cap": 200,
+    "part": "D"
+   },
+   {
+    "id": "f1",
+    "zone": "F",
+    "title": "The Name Reader",
+    "cap": 200,
+    "part": "A"
+   },
+   {
+    "id": "f2",
+    "zone": "F",
+    "title": "String Surgery",
+    "cap": 200,
+    "part": "B"
+   },
+   {
+    "id": "f3",
+    "zone": "F",
+    "title": "Username Maker",
+    "cap": 200,
+    "part": "C"
+   },
+   {
+    "id": "f4",
+    "zone": "F",
+    "title": "The Fake ID Lab",
+    "cap": 200,
+    "part": "D"
+   },
+   {
+    "id": "f5",
+    "zone": "F",
+    "title": "Bug Clinic",
+    "cap": 200
+   },
+   {
+    "id": "g1",
+    "zone": "G",
+    "title": "Definition Match",
+    "cap": 200
+   },
+   {
+    "id": "g2",
+    "zone": "G",
+    "title": "Missing Words",
+    "cap": 200
+   },
+   {
+    "id": "g3",
+    "zone": "G",
+    "title": "Self-Quiz Cards",
+    "cap": 200
+   },
+   {
+    "id": "h1",
+    "zone": "H",
+    "title": "Final Challenge",
+    "cap": 200
+   }
+  ]
  }
 }

@@ -1,0 +1,4 @@
+verify/probe*/bin/
+verify/probe*/obj/
+verify/programs.json
+verify/captured.json
