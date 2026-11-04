@@ -1,8 +1,8 @@
 // C3 Which Version Runs? — booklet section 6: overloading. The compiler picks a version by the TYPES of the
 // arguments, never their values; return type alone is never enough. Every verdict here was checked with dotnet.
-import { h, icon, codeSpan, codeBlock, fb, shuffle, sample, setMark, sfx, para, sameAnswer, scrollIntoViewSoft, errorList } from '../ui.js';
-import { createBoard } from '../dnd.js';
-import { runRounds, checkButton, explain, programLines } from '../kit.js';
+import { h, icon, codeSpan, codeBlock, fb, shuffle, sample, setMark, sfx, para, sameAnswer, scrollIntoViewSoft, errorList } from '../../../arcade/engine/ui.js';
+import { createBoard } from '../../../arcade/engine/dnd.js';
+import { runRounds, checkButton, explain, programLines } from '../../../arcade/engine/kit.js';
 import { markHeader, parseHeader } from './b2.js';
 import { SHOW, SHOW_CALLS, MULTIPLY, MULT_ROWS, LARGER_INT, LARGER_ROWS, LARGER_ALONE, PAIRS } from '../data/c.js';
 

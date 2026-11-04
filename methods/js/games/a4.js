@@ -1,6 +1,6 @@
 // A4 Follow the Calls — click each line in the order it runs. Booklet section 2, deck Activities 1 and 4.
-import { h, codeBlock, consolePanel, fb, shuffle, choiceSet, sfx, para, wait } from '../ui.js';
-import { runRounds, checkButton, explain, programLines } from '../kit.js';
+import { h, codeBlock, consolePanel, fb, shuffle, choiceSet, sfx, para, wait } from '../../../arcade/engine/ui.js';
+import { runRounds, checkButton, explain, programLines } from '../../../arcade/engine/kit.js';
 import { FLOWS } from '../data/a.js';
 
 function flowRound(flow) {

@@ -1,7 +1,7 @@
 // C2 Make the Swap Work — booklet section 5: the two ways out of the swap trap. Switch ref on and off in the header
 // and in the call, build and run the REAL result (every one of the 16 versions was run through dotnet).
-import { h, icon, codeSpan, codeBlock, fb, sfx, btn, shuffle, scrollIntoViewSoft } from '../ui.js';
-import { runRounds, checkButton, explain, programLines, outLines, quizRound, realResult } from '../kit.js';
+import { h, icon, codeSpan, codeBlock, fb, sfx, btn, shuffle, scrollIntoViewSoft } from '../../../arcade/engine/ui.js';
+import { runRounds, checkButton, explain, programLines, outLines, quizRound, realResult } from '../../../arcade/engine/kit.js';
 import { MISSIONS, SWAPS, swapCs } from '../data/c.js';
 
 const PLACES = [

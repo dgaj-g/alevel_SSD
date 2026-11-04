@@ -1,8 +1,8 @@
 // E Past Papers — the eight exam questions on methods (booklet section 9). Each cabinet is one question:
 // round 1 is the real question, answered then marked by the pupil against the scheme; rounds 2 and 3 drill the same marks.
-import { h, icon, codeBlock, codeSpan, codeInline, consolePanel, fb, shuffle, sample, setMark, sfx, para, rich, btn, scrollIntoViewSoft } from '../ui.js';
-import { createBoard } from '../dnd.js';
-import { runRounds, checkButton, explain, quizRound, realResult, transcript, playEvents } from '../kit.js';
+import { h, icon, codeBlock, codeSpan, codeInline, consolePanel, fb, shuffle, sample, setMark, sfx, para, rich, btn, scrollIntoViewSoft } from '../../../arcade/engine/ui.js';
+import { createBoard } from '../../../arcade/engine/dnd.js';
+import { runRounds, checkButton, explain, quizRound, realResult, transcript, playEvents } from '../../../arcade/engine/kit.js';
 import { parsonsRound } from './d1.js';
 import {
   PAPERS, E1_PICK, E1_POINT_NAME, E1_MATCH, E2_HEADERS, E2_QUIZ, E2_SORT, E3_LINES, E3_FAULTS, E4_LINES, E4_VERDICTS, E4_CALLS,

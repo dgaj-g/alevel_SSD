@@ -1,8 +1,8 @@
 // D1 Build EnterNumber — booklet section 8 and P4: put the validated-input routine together line by line (traps
 // included, each with its real result), then the string version EnterSize, then type the calls that use it.
-import { h, icon, codeSpan, codeInline, fb, shuffle, sample, setMark, sfx, para, sameAnswer, scrollIntoViewSoft } from '../ui.js';
-import { createBoard } from '../dnd.js';
-import { runRounds, checkButton, explain, realResult, transcript } from '../kit.js';
+import { h, icon, codeSpan, codeInline, fb, shuffle, sample, setMark, sfx, para, sameAnswer, scrollIntoViewSoft } from '../../../arcade/engine/ui.js';
+import { createBoard } from '../../../arcade/engine/dnd.js';
+import { runRounds, checkButton, explain, realResult, transcript } from '../../../arcade/engine/kit.js';
 import { EN_BOARD, EN_TRAPS, EN_RUN, ES_BOARD, ES_TRAPS, ES_RUN, CALL_TASKS } from '../data/d.js';
 
 const pad = (d) => '    '.repeat(d);

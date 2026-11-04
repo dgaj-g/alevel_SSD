@@ -1,7 +1,7 @@
 // B2 Header Builder — deck Activity 3: write the header from a plain description. Marked like the scheme:
 // the opening and name, the return type, the number of parameters, each parameter's type in order.
-import { h, icon, codeSpan, fb, sfx, para } from '../ui.js';
-import { runRounds, checkButton, explain } from '../kit.js';
+import { h, icon, codeSpan, fb, sfx, para } from '../../../arcade/engine/ui.js';
+import { runRounds, checkButton, explain } from '../../../arcade/engine/kit.js';
 import { HEADERS, EXAM_HEADERS } from '../data/b.js';
 
 const KEYS = ['public static ', 'void ', 'int ', 'double ', 'string ', 'char ', 'bool ', '(', ')', ', '];

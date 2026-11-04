@@ -1,6 +1,6 @@
 // F5 Bug Clinic — one line of a practical program is wrong. Find it from what the program does, then choose the fix.
-import { h, icon, codeBlock, codeSpan, errorList, fb, shuffle, sample, sfx, para, choiceSet, scrollIntoViewSoft } from '../ui.js';
-import { runRounds, checkButton, explain, realResult, transcript, programLines } from '../kit.js';
+import { h, icon, codeBlock, codeSpan, errorList, fb, shuffle, sample, sfx, para, choiceSet, scrollIntoViewSoft } from '../../../arcade/engine/ui.js';
+import { runRounds, checkButton, explain, realResult, transcript, programLines } from '../../../arcade/engine/kit.js';
 import { BUGS } from '../data/f.js';
 
 const resultOf = (r) => (r.ev ? transcript(r.ev).el : realResult(r.expect));

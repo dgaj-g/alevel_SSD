@@ -1,6 +1,6 @@
 // B1 Argument or Parameter? — booklet section 3. A speed round, then "which parameter receives it?" by position.
-import { h, icon, codeSpan, codeBlock, fb, shuffle, choiceSet, sfx, para, btn, wait, scrollIntoViewSoft } from '../ui.js';
-import { runRounds, checkButton } from '../kit.js';
+import { h, icon, codeSpan, codeBlock, fb, shuffle, choiceSet, sfx, para, btn, wait, scrollIntoViewSoft } from '../../../arcade/engine/ui.js';
+import { runRounds, checkButton } from '../../../arcade/engine/kit.js';
 import { SPOT, RECEIVE } from '../data/b.js';
 
 const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

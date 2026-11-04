@@ -1,7 +1,7 @@
 // A2 Advantages Sort — "Give three advantages of using methods" (2015 Q2(a), 2019 Q2(a)).
-import { h, icon, fb, shuffle, choiceSet, setMark, sfx, para } from '../ui.js';
-import { createBoard } from '../dnd.js';
-import { runRounds, checkButton, explain } from '../kit.js';
+import { h, icon, fb, shuffle, choiceSet, setMark, sfx, para } from '../../../arcade/engine/ui.js';
+import { createBoard } from '../../../arcade/engine/dnd.js';
+import { runRounds, checkButton, explain } from '../../../arcade/engine/kit.js';
 import { ADVANTAGES, UPGRADES } from '../data/a.js';
 
 export default {

@@ -1,6 +1,6 @@
 // B3 Predict the Output — type exactly what each program prints. Every expected output was produced by dotnet.
-import { h, icon, codeBlock, consolePanel, fb, sfx, sameAnswer, scrollIntoViewSoft } from '../ui.js';
-import { runRounds, checkButton, explain, programLines, outLines } from '../kit.js';
+import { h, icon, codeBlock, consolePanel, fb, sfx, sameAnswer, scrollIntoViewSoft } from '../../../arcade/engine/ui.js';
+import { runRounds, checkButton, explain, programLines, outLines } from '../../../arcade/engine/kit.js';
 import { PREDICT } from '../data/b.js';
 
 export function predictRound(p, opts = {}) {

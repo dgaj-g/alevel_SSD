@@ -1,7 +1,7 @@
 // G1 Definition Match — booklet section 12, Activity 11: every term to its wording, then spot each one in code.
-import { h, icon, codeBlock, codeSpan, fb, shuffle, sample, setMark, sfx, para, choiceSet, scrollIntoViewSoft } from '../ui.js';
-import { createBoard } from '../dnd.js';
-import { runRounds, checkButton, explain, quizRound } from '../kit.js';
+import { h, icon, codeBlock, codeSpan, fb, shuffle, sample, setMark, sfx, para, choiceSet, scrollIntoViewSoft } from '../../../arcade/engine/ui.js';
+import { createBoard } from '../../../arcade/engine/dnd.js';
+import { runRounds, checkButton, explain, quizRound } from '../../../arcade/engine/kit.js';
 import { TERMS, SPOT, FACTS } from '../data/g.js';
 
 const match = {

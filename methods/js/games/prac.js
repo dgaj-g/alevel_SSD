@@ -1,8 +1,8 @@
 // F1–F4 The practicals — booklet section 11. Each practical is built step by step from its brief (every wrong line
 // shows what it really does), then played, then written on your own and self-marked, then its common slips.
-import { h, icon, codeBlock, codeSpan, consolePanel, fb, shuffle, sample, setMark, sfx, para, btn, choiceSet, scrollIntoViewSoft } from '../ui.js';
-import { createBoard } from '../dnd.js';
-import { runRounds, checkButton, explain, quizRound, realResult, transcript, playEvents, programLines } from '../kit.js';
+import { h, icon, codeBlock, codeSpan, consolePanel, fb, shuffle, sample, setMark, sfx, para, btn, choiceSet, scrollIntoViewSoft } from '../../../arcade/engine/ui.js';
+import { createBoard } from '../../../arcade/engine/dnd.js';
+import { runRounds, checkButton, explain, quizRound, realResult, transcript, playEvents, programLines } from '../../../arcade/engine/kit.js';
 import {
   CLOSE, P1, P1_PARTS, P1_BOARDS, P1_OWN, P1_SLIPS,
   P2, P2_LINES, P2_PC, P2_MISSIONS, P2_OWN, P2_SLIPS, runQuote,

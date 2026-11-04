@@ -1,7 +1,7 @@
 // A1 Squash the Copies — booklet section 2: the notice board pasted four times, then folded into ShowBanner.
-import { h, codeBlock, codeSpan, consolePanel, fb, shuffle, choiceSet, setMark, sfx, para } from '../ui.js';
-import { createBoard } from '../dnd.js';
-import { runRounds, checkButton, explain, outLines } from '../kit.js';
+import { h, codeBlock, codeSpan, consolePanel, fb, shuffle, choiceSet, setMark, sfx, para } from '../../../arcade/engine/ui.js';
+import { createBoard } from '../../../arcade/engine/dnd.js';
+import { runRounds, checkButton, explain, outLines } from '../../../arcade/engine/kit.js';
 import { PASTE, BANNER, NOTICES, BOARD_OUT } from '../data/a.js';
 
 export default {
