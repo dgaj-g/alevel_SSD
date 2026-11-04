@@ -136,7 +136,7 @@ const scripts = [
 ];
 
 // ---- the server
-const APIS = ['apiBoot', 'apiName', 'apiState', 'apiMark', 'apiAnswer', 'apiTwin', 'apiTwinMark', 'apiFlag', 'apiEval', 'apiPing', 'apiKv', 'apiCw', 'apiStaff'];
+const APIS = ['apiBoot', 'apiName', 'apiState', 'apiMark', 'apiAnswer', 'apiTwin', 'apiTwinMark', 'apiFlag', 'apiEval', 'apiPing', 'apiKv', 'apiCw', 'apiStaff', 'apiTheory'];
 const shim = `window.OLS_TRANSPORT = {
   call: function (fn, req) {
     return new Promise(function (resolve, reject) {
@@ -152,6 +152,14 @@ let tpl = need(path.join(A2, 'server', 'Code.gs.template'));
 tpl = swap('Code.gs.template', tpl, "SpreadsheetApp.create('A2 SSD - Archive')", "SpreadsheetApp.create('AS SSD - Archive')");
 tpl = tpl.replace(/OLS A2 SSD Platform/g, 'OLS AS SSD Platform');
 tpl = tpl.replace(/"A2 SSD - Archive"/g, '"AS SSD - Archive"');
+// the Theory side: scores come with the boot, staff ops go through apiStaff's gate, and deleting a class takes its theory records with it
+const THEORY = JSON.parse(need(path.join(AS, 'server', 'theory-games.json')));
+const theoryGs = need(path.join(AS, 'src', 'theory.gs'));
+tpl = swap('Code.gs.template', tpl, "rec: pupilView_(rec), cfg: classView_(readClass_(cls)), cw:", "rec: pupilView_(rec), cfg: classView_(readClass_(cls)), theory: thView_(cls, rec), cw:");
+tpl = swap('Code.gs.template', tpl, "  if (!realClass_(name)) return err_('unknown-class');\n  if (op === 'delete')", "  if (!realClass_(name)) return err_('unknown-class');\n  if (op.indexOf('theory') === 0) return thStaff_(op, name, req, email);\n  if (op === 'delete')");
+tpl = swap('Code.gs.template', tpl, "'s:' + name + ':', 'w:' + name + ':'];", "'s:' + name + ':', 'w:' + name + ':', 't:' + name + ':'];");
+tpl = swap('Code.gs.template', tpl, "      store.deleteProperty('cls:' + name);", "      store.deleteProperty('cls:' + name);\n      store.deleteProperty('now:' + name);");
+tpl += '\n\n' + theoryGs;
 const BUILD = CONTENT.BUILD + '-' + hashOf(css + index + scripts.map((s) => s[1]).join('\n') + tpl + JSON.stringify(CWMETA)).slice(0, 8);
 const salt = crypto.randomBytes(16).toString('hex');
 const hash = crypto.createHash('sha256').update(salt + crypto.randomBytes(32).toString('hex'), 'utf8').digest('hex');
@@ -161,7 +169,7 @@ if (/@@[A-Z_]+@@/.test(filled)) { console.error('Code.gs.template: unfilled plac
 const META = { papers: {}, order: [], twinOrder: {}, clusterTwins: {} };
 const code = asciiJs(['/* OLS AS SSD Platform - Code.gs - build ' + BUILD + ' - built by as/tools/build-as.js from the A2 template. Never commit. */',
   '/* AS has no SQL past papers: no answers, no judge. */\nvar A2PRIVATE = { answers: {}, worked: {}, expected: {} };',
-  'var A2META = ' + JSON.stringify(META) + ';', 'var CWMETA = ' + JSON.stringify(CWMETA) + ';', filled].join('\n\n'));
+  'var A2META = ' + JSON.stringify(META) + ';', 'var CWMETA = ' + JSON.stringify(CWMETA) + ';', 'var THEORY = ' + JSON.stringify(THEORY) + ';', filled].join('\n\n'));
 guardAscii('Code.gs', code);
 fs.mkdirSync(DEPLOY, { recursive: true, mode: 0o700 });
 fs.writeFileSync(path.join(DEPLOY, 'Code.gs'), code, { mode: 0o600 });

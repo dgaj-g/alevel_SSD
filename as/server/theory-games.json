@@ -1,0 +1,238 @@
+{
+ "methods": {
+  "parts": "ABCDEFGH",
+  "zones": [
+   {
+    "key": "A",
+    "title": "Why methods"
+   },
+   {
+    "key": "B",
+    "title": "In and out"
+   },
+   {
+    "key": "C",
+    "title": "How methods behave"
+   },
+   {
+    "key": "D",
+    "title": "The validated-input routine"
+   },
+   {
+    "key": "E",
+    "title": "Exam Room"
+   },
+   {
+    "key": "F",
+    "title": "Practicals"
+   },
+   {
+    "key": "G",
+    "title": "Definitions"
+   },
+   {
+    "key": "H",
+    "title": "Final Challenge"
+   }
+  ],
+  "games": [
+   {
+    "id": "a1",
+    "zone": "A",
+    "title": "Squash the Copies",
+    "cap": 200
+   },
+   {
+    "id": "a2",
+    "zone": "A",
+    "title": "Advantages Sort",
+    "cap": 200
+   },
+   {
+    "id": "a3",
+    "zone": "A",
+    "title": "Label the Header",
+    "cap": 200
+   },
+   {
+    "id": "a4",
+    "zone": "A",
+    "title": "Follow the Calls",
+    "cap": 200
+   },
+   {
+    "id": "b1",
+    "zone": "B",
+    "title": "Argument or Parameter?",
+    "cap": 200
+   },
+   {
+    "id": "b2",
+    "zone": "B",
+    "title": "Header Builder",
+    "cap": 200
+   },
+   {
+    "id": "b3",
+    "zone": "B",
+    "title": "Predict the Output",
+    "cap": 200
+   },
+   {
+    "id": "b4",
+    "zone": "B",
+    "title": "Calls Become Values",
+    "cap": 200
+   },
+   {
+    "id": "c1",
+    "zone": "C",
+    "title": "Swap Trace",
+    "cap": 200
+   },
+   {
+    "id": "c2",
+    "zone": "C",
+    "title": "Make the Swap Work",
+    "cap": 200
+   },
+   {
+    "id": "c3",
+    "zone": "C",
+    "title": "Which Version Runs?",
+    "cap": 200
+   },
+   {
+    "id": "c4",
+    "zone": "C",
+    "title": "Will It Build?",
+    "cap": 200
+   },
+   {
+    "id": "d1",
+    "zone": "D",
+    "title": "Build EnterNumber",
+    "cap": 200
+   },
+   {
+    "id": "d2",
+    "zone": "D",
+    "title": "Be the Examiner",
+    "cap": 200
+   },
+   {
+    "id": "d3",
+    "zone": "D",
+    "title": "Be the User",
+    "cap": 200
+   },
+   {
+    "id": "e1",
+    "zone": "E",
+    "title": "2015 Q2(a)",
+    "cap": 200
+   },
+   {
+    "id": "e2",
+    "zone": "E",
+    "title": "2014 Q2(a)",
+    "cap": 200
+   },
+   {
+    "id": "e3",
+    "zone": "E",
+    "title": "2014 Q2(b)",
+    "cap": 200
+   },
+   {
+    "id": "e4",
+    "zone": "E",
+    "title": "2014 Q2(d)",
+    "cap": 200
+   },
+   {
+    "id": "e5",
+    "zone": "E",
+    "title": "Specimen Q2(c)",
+    "cap": 200
+   },
+   {
+    "id": "e6",
+    "zone": "E",
+    "title": "2022 Q1(a)",
+    "cap": 200
+   },
+   {
+    "id": "e7",
+    "zone": "E",
+    "title": "2015 Q2(b)",
+    "cap": 200
+   },
+   {
+    "id": "e8",
+    "zone": "E",
+    "title": "2015 Q2(c)",
+    "cap": 200
+   },
+   {
+    "id": "f1",
+    "zone": "F",
+    "title": "P1 Notice Board",
+    "cap": 200
+   },
+   {
+    "id": "f2",
+    "zone": "F",
+    "title": "P2 Quote Machine",
+    "cap": 200
+   },
+   {
+    "id": "f3",
+    "zone": "F",
+    "title": "P3 Swap and Twins",
+    "cap": 200
+   },
+   {
+    "id": "f4",
+    "zone": "F",
+    "title": "P4 Order Desk",
+    "cap": 200
+   },
+   {
+    "id": "f5",
+    "zone": "F",
+    "title": "Bug Clinic",
+    "cap": 200
+   },
+   {
+    "id": "g1",
+    "zone": "G",
+    "title": "Definition Match",
+    "cap": 200
+   },
+   {
+    "id": "g2",
+    "zone": "G",
+    "title": "Missing Words",
+    "cap": 200
+   },
+   {
+    "id": "g3",
+    "zone": "G",
+    "title": "Quick-Fire Cards",
+    "cap": 200
+   },
+   {
+    "id": "h1",
+    "zone": "H",
+    "title": "Final Challenge",
+    "cap": 200
+   }
+  ]
+ },
+ "strings": {
+  "parts": "",
+  "zones": [],
+  "games": []
+ }
+}
