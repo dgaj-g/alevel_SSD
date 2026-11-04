@@ -52,7 +52,7 @@ window.Theory = (function () {
 
   // ---------- the Theory page ----------
   function card(k) {
-    const t = TG[k], parts = t.parts.length, games = t.games.length, open = openOf(k), s = sums(k);
+    const t = TG[k], parts = t.zones.length, games = t.games.length, open = openOf(k), s = sums(k);
     if (!open.length) return '<div class="th-card closed"><h2>' + h(topicName(k)) + '</h2><span class="line">' + h(T('theory.countShut', { games, parts })) + '</span><span class="stars">' + h(T('theory.stars', { stars: s.stars, max: s.max })) + '</span><span class="lock">' + h(T('theory.closed')) + '</span></div>';
     const next = carryOn(k);
     const label = !next ? T('theory.again') : s.played ? T('theory.carry', { game: gameName(next) }) : T('theory.start', { game: gameName(next) });

@@ -15,6 +15,6 @@ async function topic(rel) {
     games: GAMES.map((g) => ({ id: g.id, zone: g.zone.key, title: g.title, cap: g.cap || DEFAULT_CAP, ...(g.part ? { part: g.part } : {}) })),
   };
 }
-const out = { methods: await topic('methods/js/registry.js'), strings: { parts: '', zones: [], games: [] } };
+const out = { methods: await topic('methods/js/registry.js'), strings: await topic('strings/js/registry.js') };
 fs.writeFileSync(path.join(ROOT, 'as', 'server', 'theory-games.json'), JSON.stringify(out, null, 1) + '\n');
-console.log('theory-games.json: methods ' + out.methods.games.length + ' games, parts ' + out.methods.parts);
+console.log('theory-games.json: methods ' + out.methods.games.length + ' games, parts ' + out.methods.parts + '; strings ' + out.strings.games.length + ' games, parts ' + out.strings.parts);

@@ -1,0 +1,86 @@
+/* Topic 4 String manipulation — the same arcade at night. Accent: electric blue. */
+[hidden] { display: none !important; }
+:root {
+  --ink: #0B0716;
+  --ink2: #120A22;
+  --panel: #1A1030;
+  --panel2: #231742;
+  --panel3: #2D1F52;
+  --line: rgba(255, 255, 255, 0.10);
+  --line2: rgba(255, 255, 255, 0.18);
+  --text: #F7F2FF;
+  --muted: #C2B5E0;
+  --dim: #8D7FB3;
+  --mag: #60A5FA;
+  --mag-deep: #1D4ED8;
+  --mag-pale: #BFDBFE;
+  --cyan: #22D3EE;
+  --amber: #FBBF24;
+  --good: #A3E635;
+  --good-bg: rgba(163, 230, 53, 0.12);
+  --bad: #F87171;
+  --bad-bg: rgba(248, 113, 113, 0.12);
+  --zone: var(--mag);
+  --r: 14px;
+  --r-sm: 9px;
+  --display: "Bricolage Grotesque", system-ui, sans-serif;
+  --body: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  color-scheme: dark;
+}
+
+/* ---------- Topic 4: numbered boxes, the position map ---------- */
+.boxes { display: flex; gap: 5px; flex-wrap: wrap; margin: 8px 0 14px; }
+.sbox { width: 54px; min-height: 70px; border: 2px solid var(--line2); border-radius: 9px; background: var(--ink2); color: var(--text); font: 700 24px var(--mono); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 4px 0; }
+.sbox .ix { font: 500 13px var(--mono); color: var(--muted); }
+button.sbox { cursor: pointer; }
+.sbox.sel { border-color: var(--mag); background: rgba(96,165,250,.22); }
+.sbox.hi { border-color: var(--zone); background: rgba(255,255,255,.1); }
+.sbox.good { border-color: var(--good); background: var(--good-bg); }
+.sbox.wrong { border-color: var(--bad); background: var(--bad-bg); }
+.sbox.ghosted { border-style: dashed; border-color: var(--bad); color: var(--bad); }
+.pmap { display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); gap: 6px; margin: 8px 0 12px; }
+.pcell { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.pcell .slot { min-height: 96px; width: 100%; }
+.pcell .slot .chip { font-size: 14px; padding: 6px 8px; height: auto; white-space: normal; }
+.pcell .sbox { width: 100%; }
+.pmark { font-size: 15px; color: var(--muted); margin: 2px 0 0; }
+.ttable { width: 100%; border-collapse: collapse; }
+.ttable th, .ttable td { padding: 8px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: middle; }
+.ttable th { color: var(--muted); font-weight: 500; font-size: 15px; }
+.ttable code { font-family: var(--mono); }
+.ttable input { width: 100%; max-width: 110px; }
+.rowmark { display: inline-block; min-width: 18px; }
+.codebig { font: 700 26px var(--mono); padding: 12px 16px; background: var(--ink2); border: 1px solid var(--line2); border-radius: var(--r-sm); display: inline-block; margin: 4px 0 10px; }
+.tapline { cursor: pointer; }
+.lives { display: flex; gap: 6px; align-items: center; color: var(--bad); }
+@media (max-width: 700px) {
+  .sbox { width: 44px; min-height: 60px; font-size: 20px; }
+  .pmap { grid-template-columns: 1fr; }
+  .pcell { flex-direction: row; align-items: stretch; }
+  .pcell .sbox { width: 60px; flex: none; }
+  .pcell .slot { min-height: 56px; flex: 1; }
+  .ttable th, .ttable td { padding: 6px 4px; }
+}
+.tickgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; }
+.ticks { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.tick { min-height: 44px; border: 2px solid var(--line2); border-radius: 8px; background: var(--ink2); color: var(--muted); cursor: pointer; font-size: 13px; overflow: hidden; padding: 4px; }
+.tick code, .tick .code { font-size: 13px; white-space: normal; word-break: break-word; }
+.tick[aria-pressed="true"] { border-color: var(--mag); background: rgba(96,165,250,.28); color: var(--text); }
+.tick.right { border-color: var(--good); }
+.tick.wrong { border-color: var(--bad); background: var(--bad-bg); }
+.mapwrap { display: grid; gap: 8px; margin: 10px 0; }
+.lenbar { width: 100%; min-height: 46px; margin: 8px 0 2px; border: 2px dashed var(--line2); border-radius: 8px; padding: 4px 8px; display: flex; align-items: center; gap: 8px; }
+.bin { border: 2px dashed var(--line2); border-radius: 8px; padding: 8px; min-height: 60px; margin-top: 10px; }
+.bin h4 { margin: 0 0 6px; font-size: 14px; }
+.chipwhy { display: block; font-family: var(--sans, inherit); font-weight: 400; white-space: normal; }
+
+/* Every tap target at least 40 px tall. */
+.tog button { min-height: 42px; }
+.btn.small { min-height: 42px; }
+.embed-banner a, .banner a { display: inline-flex; align-items: center; min-height: 42px; }
+@media (max-width: 700px) { .bin + .tray { max-height: 34vh; overflow-y: auto; } }
+
+/* Code is shown exactly as it is typed: != stays two characters. */
+* { font-variant-ligatures: none; font-feature-settings: "liga" 0, "calt" 0; }
