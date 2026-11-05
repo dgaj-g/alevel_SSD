@@ -27,10 +27,10 @@ export async function runRounds(stage, api, rounds, opts = {}) {
     window.scrollTo(0, 0);
     const box = h('div');
     const foot = h('div', { class: 'actions' });
-    stage.append(
-      h('h2', { class: 'round-title' }, r.title, rounds.length > 1 ? h('span', { class: 'pill' }, `Round ${i + 1} of ${rounds.length}`) : null),
-      r.intro ? instr(r.intro, r.intro2) : null,
-      box, foot);
+    // Element.append(null) would print the word "null" on the page, so the intro is only added when there is one.
+    stage.append(h('h2', { class: 'round-title' }, r.title, rounds.length > 1 ? h('span', { class: 'pill' }, `Round ${i + 1} of ${rounds.length}`) : null));
+    if (r.intro) stage.append(instr(r.intro, r.intro2));
+    stage.append(box, foot);
     const ctx = {
       foot,
       get alive() { return api.alive; },
