@@ -29,3 +29,6 @@
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
   color-scheme: dark;
 }
+
+/* Code is shown exactly as it is typed: != stays two characters. */
+* { font-variant-ligatures: none; font-feature-settings: "liga" 0, "calt" 0; }
